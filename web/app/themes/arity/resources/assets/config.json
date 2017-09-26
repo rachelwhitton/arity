@@ -1,0 +1,44 @@
+{
+
+    "paths": {
+        "root": "../../../../"
+    },
+
+    "assets": {
+        "main": [
+            "./scripts/main.js",
+            "./styles/main.scss"
+        ],
+        "bootstrap": [
+            "./scripts/bootstrap.js",
+            "./styles/bootstrap.scss"
+        ],
+        "customizer": [
+            "./scripts/customizer.js"
+        ],
+        "editor": [
+            "./styles/editor.scss"
+        ]
+    },
+
+    "settings": {
+        "styleLint": false,
+        "browserSync": {
+            "host": "localhost",
+            "port": 8000,
+            "https": {
+                "key": "../../../../certs/arity.dev.key",
+                "cert": "../../../../certs/arity.dev.crt"
+            },
+            "open": false,
+            "files": [
+                "{app,resources/templates}/**/*.php"
+            ],
+            "online": false,
+            "snippetOptions": {
+                "whitelist": ["/wp-admin/admin-ajax.php"],
+                "blacklist": ["/wp-admin/**"]
+            }
+        }
+    }
+}

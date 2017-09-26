@@ -1,0 +1,15 @@
+# ----------------------------------------------------------------------------------------------
+# Git Attributes @see https://github.com/alexkaratarakis/gitattributes
+# ----------------------------------------------------------------------------------------------
+
+## AUTO-DETECT
+##   Handle line endings automatically for files detected as
+##   text and leave all files detected as binary untouched.
+##   This will handle all files NOT defined below.
+* text=auto
+
+/.gitattributes export-ignore
+/.editorconfig export-ignore
+/.travis.yml export-ignore
+/circle.yml export-ignore
+/phpcs.xml export-ignore

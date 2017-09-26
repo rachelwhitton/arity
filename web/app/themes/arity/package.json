@@ -1,0 +1,76 @@
+{
+    "name": "arity",
+    "version": "1.0.0-alpha.1",
+    "title": "Arity Wordpress Theme",
+    "description": "Arity Wordpress Theme created in 2017.",
+    "author": {
+        "name": "VSA Partners",
+        "url": "http://www.vsapartners.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://vsapartners.beanstalkapp.com/1274-009-05-arity-cms-wordpress"
+    },
+    "private": true,
+    "license": "Unlicensed",
+    "browserslist": [
+        "last 2 versions",
+        "android 4"
+    ],
+    "scripts": {
+        "watch": "gulp --gulpfile resources/assets/build/gulp/gulpfile.js && gulp watch --gulpfile resources/assets/build/gulp/gulpfile.js",
+        "dev": "gulp --gulpfile resources/assets/build/gulp/gulpfile.js",
+        "dist": "gulp --production --gulpfile resources/assets/build/gulp/gulpfile.js",
+        "dist-develop": "gulp --production --allowlint --gulpfile resources/assets/build/gulp/gulpfile.js",
+        "gulp": "gulp --gulpfile resources/assets/build/gulp/gulpfile.js -- "
+    },
+    "engines": {
+        "node": ">= 6.9.4"
+    },
+    "devDependencies": {
+        "access-sniff": "^3.0.1",
+        "babel-eslint": "^7.1.1",
+        "babel-preset-env": "^1.6.0",
+        "babel-preset-es2015": "^6.22.0",
+        "babelify": "^7.3.0",
+        "browser-sync": "~2.18.2",
+        "browserify": "^14.1.0",
+        "browserify-shim": "^3.8.13",
+        "del": "~2.2.2",
+        "eslint-plugin-import": "^2.7.0",
+        "gulp": "~3.9.1",
+        "gulp-autoprefixer": "~3.1.1",
+        "gulp-concat": "~2.6.1",
+        "gulp-cssnano": "~2.1.2",
+        "gulp-eslint": "^3.0.1",
+        "gulp-help": "~1.6.1",
+        "gulp-if": "~2.0.2",
+        "gulp-imagemin": "~3.1.1",
+        "gulp-newer": "^1.3.0",
+        "gulp-notify": "~3.0.0",
+        "gulp-phpcs": "~1.4.0",
+        "gulp-phpmd-plugin": "^1.1.4",
+        "gulp-plumber": "~1.1.0",
+        "gulp-sass": "~3.1.0",
+        "gulp-sass-glob": "^1.0.8",
+        "gulp-sourcemaps": "~2.4.1",
+        "gulp-stylelint": "^3.8.0",
+        "gulp-svg-sprite": "~1.3.6",
+        "gulp-svgmin": "~1.2.3",
+        "gulp-uglify": "~2.0.1",
+        "gulp-util": "~3.0.8",
+        "imagemin-pngquant": "~5.0.0",
+        "merge": "^1.2.0",
+        "merge-deep": "^3.0.0",
+        "merge-stream": "~1.0.1",
+        "prettyjson": "^1.2.1",
+        "psi": "^3.0.0",
+        "stylelint": "^7.6.0",
+        "stylelint-config-standard": "^16.0.0",
+        "vinyl-buffer": "^1.0.0",
+        "vinyl-source-stream": "^1.1.0"
+    },
+    "dependencies": {
+        "jquery": "3.2.1"
+    }
+}

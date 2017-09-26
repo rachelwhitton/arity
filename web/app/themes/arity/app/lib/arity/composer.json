@@ -1,0 +1,17 @@
+{
+    "name": "arity/foundation",
+    "description": "Foundation of the Arity WordPress Theme.",
+    "type": "wordpress-plugin",
+    "require": {
+        "php": ">=7.0"
+    },
+    "require-dev": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Arity\\": "src/Arity",
+            "ModuleBuilder\\": "src/ModuleBuilder"
+        }
+    }
+}

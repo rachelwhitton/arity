@@ -1,0 +1,34 @@
+{
+  "name": "arity/wordpress-theme",
+  "type": "wordpress-theme",
+  "autoload": {
+    "psr-4": {
+      "Arity\\": "app/lib/arity/src/Arity",
+      "ModuleBuilder\\": "app/lib/arity/src/ModuleBuilder"
+    }
+  },
+  "require": {
+    "php": ">=7.0",
+    "composer/installers": "~1.2.0",
+    "roots/soil": "^3.7",
+    "wordplate/plate": "^3.0",
+    "wordplate/acf": "^2.0"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^2.8.0",
+    "phpmd/phpmd" : "^2.6.0"
+  },
+  "scripts": {
+    "test": [
+      "vendor/bin/phpcs"
+    ]
+  },
+  "extra": {
+    "installer-paths": {
+      "app/lib/{$name}/": [
+        "type:wordpress-muplugin",
+        "type:wordpress-plugin"
+      ]
+    }
+  }
+}

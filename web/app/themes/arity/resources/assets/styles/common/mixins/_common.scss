@@ -1,0 +1,16 @@
+//---------------------------------------------------------------------
+// Mixins: Common
+//---------------------------------------------------------------------
+
+@mixin push--auto {
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+@mixin last-child-remove-margin {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

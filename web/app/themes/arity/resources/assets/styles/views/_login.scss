@@ -1,0 +1,24 @@
+body.login {
+  background: #f1f1f1;
+
+  h1 {
+    // Change logo to custom logo
+    // Adjust size as needed
+    a {
+      background-image: url('../img/logo-login.png');
+      -webkit-background-size: 125px;
+      background-size: 125px;
+      width: 125px;
+      height: 48px;
+    }
+  }
+
+  #nav {
+    text-align: center;
+  }
+
+  // We don't need this since we can't the logo to point back to the homepage
+  #backtoblog {
+    display: none;
+  }
+}
