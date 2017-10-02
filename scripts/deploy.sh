@@ -31,7 +31,7 @@ export COMPOSER_NO_INTERACTION=1
 COMPOSER=`which composer`
 
 echo -e "\nInvoking: $COMPOSER build-assets"
-$COMPOSER build-dev-assets
+$COMPOSER build-assets
 
 echo -e "\nInvoking: $COMPOSER build-theme-assets"
 $COMPOSER build-theme-assets
