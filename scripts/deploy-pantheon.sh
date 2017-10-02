@@ -120,7 +120,7 @@ echo
 echo "Removing Pantheon remote"
 git remote remove pantheon
 
-# git reset HEAD^
+git reset HEAD^
 
 echo
 echo "Using Terminus clear site cache"
