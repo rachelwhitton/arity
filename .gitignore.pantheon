@@ -4,12 +4,12 @@
 
 # Not used for Pantheon #
 ############
-*.env.*
+*.env
 *.lock
-*.htaccess
 
 # Wordpress Configuration Files #
 ############
+/.env.example
 /.gitattributes
 /tests/
 /config/certs/
@@ -43,6 +43,7 @@ web/wp-content/themes/arity/node_modules/*
 
 # WordPress #
 ############
+/web/.htaccess
 web/wp-config-local.php
 web/wp-cli.local.yml
 web/wp-content/uploads

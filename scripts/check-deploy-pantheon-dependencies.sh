@@ -40,12 +40,12 @@ composer global require -n "hirak/prestissimo:^0.3"
 # Terminus Plugins & Dependencies
 #===============================
 
-BUILD_TOOLS_VERSION=${BUILD_TOOLS_VERSION:-dev-master}
-
 # Check for terminus
 . ./scripts/check-install-terminus.sh
 
 INSTALL_TERMINUS_PLUGINS() {
+  # Build Tools
+  BUILD_TOOLS_VERSION=${BUILD_TOOLS_VERSION:-dev-master}
   composer create-project -n -d $HOME/.terminus/plugins pantheon-systems/terminus-build-tools-plugin:$BUILD_TOOLS_VERSION
 }
 
@@ -87,3 +87,4 @@ echo "user.name: $(git config --global user.name)"
 
 # Ignore file permissions.
 git config --global core.fileMode false
+git config --global core.safecrlf false
