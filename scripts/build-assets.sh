@@ -58,17 +58,9 @@ do
 	echo -e "\nRunning 'yarn install'"
   $YARN install
 
-  if [[ $BRANCH == 'master' ]]; then
-
-    # Run npm run dist
-  	echo -e "\nRunning 'npm run dist'"
-  	npm run dist
-  else
-
-    # Run npm run dist
-  	echo -e "\nRunning 'npm run dist-allow-lint-errors'"
-  	npm run dist-allow-lint-errors
-  fi
+  # Run npm run dist
+  echo -e "\nRunning 'npm run dist-allow-lint-errors'"
+  npm run dist-allow-lint-errors
 
 	# Change back again
 	echo -e "\nchanged directories back into:"
