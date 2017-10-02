@@ -5,7 +5,12 @@ set -o pipefail
 set -o nounset
 # set -o xtrace
 
-export BRANCH=`git name-rev --name-only HEAD`
+# Get current git branch
+GIT_BRANCH=$1
+if [[ -z "${GIT_BRANCH}" ]]; then
+  GIT_BRANCH=`git rev-parse --abbrev-ref HEAD`
+fi
+export GIT_BRANCH
 
 export COMMIT_PREV=$(git log --pretty=format:'%h %s' -n 1)
 
@@ -36,7 +41,7 @@ git -C $(pwd) reset HEAD
 # Remove any and all other git repos
 find . -type d -name ".git" -mindepth 2 -exec rm -rf {} +
 
-echo "Pushing code to ${TERMINUS_SITE}.${TERMINUS_ENV} using branch ${BRANCH}."
+echo "Pushing code to ${TERMINUS_SITE}.${TERMINUS_ENV} using branch ${GIT_BRANCH}."
 echo "Deploying lastest commit \"${COMMIT_PREV}\"."
 
 if [[ -n "${PANTHEON_GIT_REPO}" ]]; then
@@ -53,7 +58,7 @@ if [[ -n "$(git remote show | grep pantheon)" ]]; then
 fi
 
 git -C $(pwd) remote add pantheon ${GIT_REMOTE}
-git -C $(pwd) checkout -B ${BRANCH}
+git -C $(pwd) checkout -B ${GIT_BRANCH}
 
 git -C $(pwd) add --force -A .
 
@@ -76,7 +81,7 @@ git -C $(pwd) commit -q -m "Auto Deploy: ${COMMIT_PREV}"
 
 # $TERMINUS connection:set ${TERMINUS_SITE}.${TERMINUS_ENV} git
 
-git -C $(pwd) push --force -q pantheon ${BRANCH}
+git -C $(pwd) push --force -q pantheon ${GIT_BRANCH}
 
 # Reset these changes
 [ -f '.gitignore' ] && mv .gitignore .gitignore.pantheon

@@ -9,8 +9,6 @@ set -o nounset
 # Build assets with gulp
 #
 
-export BRANCH=`git name-rev --name-only HEAD`
-
 # Check for gulp
 GULP=`which gulp`
 if [ ! -x "$GULP" ]
