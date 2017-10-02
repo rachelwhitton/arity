@@ -19,7 +19,7 @@ find scripts/ -name "*.sh" -exec chmod +x {} \;
 [ -f '.env' ] && export $(egrep -v '^#' .env | xargs)
 
 # Check for uncommitted files
-if [[ -z `git diff-index --quiet HEAD` ]]; then
+if [[ ! -z `git diff-index --quiet HEAD` ]]; then
   echo "You have uncommitted changes. Commit your latest changes first.";
   exit 1
 fi
