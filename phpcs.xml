@@ -3,7 +3,7 @@
   <description>Arity Coding Standards</description>
 
   <!-- Scan all files in directory -->
-  <file>.</file>
+  <file>./web/wp-content/themes/</file>
 
   <!-- Scan only PHP files -->
   <arg name="extensions" value="php"/>
@@ -11,6 +11,10 @@
   <!-- Ignore WordPress and Composer dependencies -->
   <exclude-pattern>web/wp</exclude-pattern>
   <exclude-pattern>vendor/</exclude-pattern>
+  <exclude-pattern>web/wp-content/themes/index.php</exclude-pattern>
+  <exclude-pattern>*/vendor/*</exclude-pattern>
+  <exclude-pattern>*/node_modules/*</exclude-pattern>
+  <exclude-pattern>*/.git*/*</exclude-pattern>
 
   <!-- Show colors in console -->
   <arg value="-colors"/>

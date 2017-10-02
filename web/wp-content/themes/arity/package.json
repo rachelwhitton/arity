@@ -21,7 +21,7 @@
         "watch": "gulp --gulpfile resources/assets/build/gulp/gulpfile.js && gulp watch --gulpfile resources/assets/build/gulp/gulpfile.js",
         "dev": "gulp --gulpfile resources/assets/build/gulp/gulpfile.js",
         "dist": "gulp --production --gulpfile resources/assets/build/gulp/gulpfile.js",
-        "dist-develop": "gulp --production --allowlint --gulpfile resources/assets/build/gulp/gulpfile.js",
+        "dist-allow-lint-errors": "gulp --production --allowlint --gulpfile resources/assets/build/gulp/gulpfile.js",
         "gulp": "gulp --gulpfile resources/assets/build/gulp/gulpfile.js -- "
     },
     "engines": {

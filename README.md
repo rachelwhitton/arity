@@ -35,7 +35,7 @@ project/                  # → Root folder for the project.
 ├── config/               # → Wordpress configuration files.
 ├── phpcs.xml             # → PHP Codesniffer rules.
 ├── web/                  # → Docroot folder where index.php is located. Must be web for Pantheon hosting.
-    ├── app/              # → Wordpress wp-content folder but better since its called "app".
+    ├── wp-content/       # → Wordpress wp-content folder.
         ├── mu-plugins/   # → Wordpress "must-use" plugins.
         ├── plugins/      # → Wordpress plugins.
         ├── themes/       # → Wordpress themes.
@@ -79,7 +79,7 @@ Instead of having to migrate WP uploads from the dev environment to your local e
 
 ```
 RewriteEngine on
-RewriteCond %{REQUEST_URI} ^/app/uploads/[^\/]*/.*$
+RewriteCond %{REQUEST_URI} ^/wp-content/uploads/[^\/]*/.*$
 RewriteRule ^(.*)$ https://dev.site.arity.vsadev.com/$1 [QSA,L]
 ```
 

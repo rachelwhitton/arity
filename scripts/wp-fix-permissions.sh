@@ -32,9 +32,9 @@ echo "Permissions: Allow wordpress to manage wp-config.php (but prevent world ac
 sudo chgrp ${WS_GROUP} ${WP_ROOT}/wp-config.php
 sudo chmod 660 ${WP_ROOT}/wp-config.php # 660
 
-echo "Permissions: Allow wordpress to manage app"
-sudo find ${WP_ROOT}/app -not -path "*/node_modules/*" -exec chgrp ${WS_GROUP} {} \;
-sudo find ${WP_ROOT}/app -type d -not -path "*/node_modules/*" -exec chmod 775 {} \; # 775 or 777
-sudo find ${WP_ROOT}/app -type f -not -path "*/node_modules/*" -exec chmod 664 {} \; # 664 or 666
+echo "Permissions: Allow wordpress to manage wp-content"
+sudo find ${WP_ROOT}/wp-content -not -path "*/node_modules/*" -exec chgrp ${WS_GROUP} {} \;
+sudo find ${WP_ROOT}/wp-content -type d -not -path "*/node_modules/*" -exec chmod 775 {} \; # 775 or 777
+sudo find ${WP_ROOT}/wp-content -type f -not -path "*/node_modules/*" -exec chmod 664 {} \; # 664 or 666
 
 echo "Permissions: Repairing permissions finished"
