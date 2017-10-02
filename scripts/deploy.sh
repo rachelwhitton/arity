@@ -30,7 +30,7 @@ export COMPOSER_NO_INTERACTION=1
 # Install Composer dependencies
 COMPOSER=`which composer`
 
-echo -e "\nInvoking: $COMPOSER build-dev-assets"
+echo -e "\nInvoking: $COMPOSER build-assets"
 $COMPOSER build-dev-assets
 
 echo -e "\nInvoking: $COMPOSER build-theme-assets"
