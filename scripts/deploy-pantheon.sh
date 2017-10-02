@@ -19,14 +19,15 @@ find scripts/ -name "*.sh" -exec chmod +x {} \;
 [ -f '.env' ] && export $(egrep -v '^#' .env | xargs)
 
 # Check for uncommitted files
-git diff-index --quiet HEAD -- || echo "You have uncommitted changes. Commit your latest changes first.";
-git diff-index --quiet HEAD -- || exit
+if [[ -z `git diff-index --quiet HEAD` ]]; then
+  echo "You have uncommitted changes. Commit your latest changes first.";
+  exit 1
+fi
 
 # Install dependencies
 . ./scripts/check-deploy-pantheon-dependencies.sh
 
 echo "Git reset back to HEAD. This will reset last deploy build."
-[ -f ".git/index.lock" ] && rm -f .git/index.lock
 git -C $(pwd) reset HEAD
 
 # Build for deployment
