@@ -19,8 +19,8 @@ find scripts/ -name "*.sh" -exec chmod +x {} \;
 [ -f '.env' ] && export $(egrep -v '^#' .env | xargs)
 
 # Check for uncommitted files
-# git diff-index --quiet HEAD -- || echo "You have uncommitted changes. Commit your latest changes first.";
-# git diff-index --quiet HEAD -- || exit
+git diff-index --quiet HEAD -- || echo "You have uncommitted changes. Commit your latest changes first.";
+git diff-index --quiet HEAD -- || exit
 
 # Install dependencies
 . ./scripts/check-deploy-pantheon-dependencies.sh

@@ -68,13 +68,13 @@ touch $HOME/.ssh/config
 echo "StrictHostKeyChecking no" >> "$HOME/.ssh/config"
 
 if [[ -z "$(git config --global user.email)" ]]; then
-	if [[ -n "$GIT_EMAIL" ]]; then
+	if [[ -n "${GIT_EMAIL:-}" ]]; then
 		git config --global user.email "$GIT_EMAIL"
 	fi
 fi
 
 if [[ -z "$(git config --global user.name)" ]]; then
-	if [[ -n "$GIT_NAME" ]]; then
+	if [[ -n "${GIT_NAME:-}" ]]; then
 		git config --global user.name "$GIT_NAME"
 	fi
 fi

@@ -19,7 +19,7 @@ then
 	if [ ! -x "$TERMINUS" ]
 	then
 		echo Error: executable terminus not found on path
-		# exit 1
+		exit 1
 	else
 		echo Success: executable terminus was found on path. Installation was successful.
 	fi
