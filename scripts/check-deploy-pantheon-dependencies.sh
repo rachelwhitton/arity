@@ -38,6 +38,8 @@ composer global require -n "hirak/prestissimo:^0.3"
 # Terminus Plugins & Dependencies
 #===============================
 
+BUILD_TOOLS_VERSION=${BUILD_TOOLS_VERSION:-dev-master}
+
 # Check for terminus
 . ./scripts/check-install-terminus.sh
 
