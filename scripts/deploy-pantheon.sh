@@ -38,9 +38,14 @@ find . -type d -name ".git" -mindepth 2 -exec rm -rf {} +
 echo "Pushing code to ${TERMINUS_SITE}.${TERMINUS_ENV} using branch ${BRANCH}."
 echo "Deploying lastest commit \"${COMMIT_PREV}\"."
 
-GIT_REMOTE=`$TERMINUS connection:info ${TERMINUS_SITE}.${TERMINUS_ENV} --fields='Git Command' --format=string`
-GIT_REMOTE=`sed "s/git clone //g" <<<"$GIT_REMOTE"`
-GIT_REMOTE=${GIT_REMOTE%% *}
+if [[ -n "${PANTHEON_GIT_REPO}" ]]; then
+  GIT_REMOTE=$PANTHEON_GIT_REPO
+else
+  GIT_REMOTE=`$TERMINUS connection:info ${TERMINUS_SITE}.${TERMINUS_ENV} --fields='Git Command' --format=string`
+  GIT_REMOTE=`sed "s/git clone //g" <<<"$GIT_REMOTE"`
+  GIT_REMOTE=${GIT_REMOTE%% *}
+fi
+
 
 if [[ -n "$(git remote show | grep pantheon)" ]]; then
   git -C $(pwd) remote remove pantheon
@@ -68,7 +73,7 @@ git -C $(pwd) add --force .gitignore
 
 git -C $(pwd) commit -q -m "Auto Deploy: ${COMMIT_PREV}"
 
-$TERMINUS connection:set ${TERMINUS_SITE}.${TERMINUS_ENV} git
+# $TERMINUS connection:set ${TERMINUS_SITE}.${TERMINUS_ENV} git
 
 git -C $(pwd) push --force -q pantheon ${BRANCH}
 
@@ -78,7 +83,7 @@ mv .gitignore.tmp .gitignore
 
 git -C $(pwd) reset HEAD^
 
-$TERMINUS env:clear-cache ${TERMINUS_SITE}.${TERMINUS_ENV}
+# $TERMINUS env:clear-cache ${TERMINUS_SITE}.${TERMINUS_ENV}
 
 # terminus env:deploy ${TERMINUS_SITE}.test --sync-content --note="Deploy core and contrib updates" --cc
 
