@@ -6,7 +6,7 @@ set -o nounset
 # set -o xtrace
 
 # Get current git branch
-GIT_BRANCH=$1
+GIT_BRANCH=${1:-}
 if [[ -z "${GIT_BRANCH}" ]]; then
   GIT_BRANCH=`git rev-parse --abbrev-ref HEAD`
 fi
@@ -35,6 +35,10 @@ fi
 echo "Git reset back to HEAD. This will reset last deploy build."
 git -C $(pwd) reset HEAD
 
+echo
+echo "Building assets for deployment"
+echo
+
 # Build for deployment
 ./scripts/deploy.sh
 
@@ -54,21 +58,36 @@ fi
 
 
 if [[ -n "$(git remote show | grep pantheon)" ]]; then
+  echo
+  echo "Removing Pantheon remote"
   git -C $(pwd) remote remove pantheon
 fi
 
+echo
+echo "Adding Pantheon remote"
 git -C $(pwd) remote add pantheon ${GIT_REMOTE}
+
+echo
+echo "Switch to ${GIT_BRANCH} branch"
 git -C $(pwd) checkout -B ${GIT_BRANCH}
 
-git -C $(pwd) add --force -A .
+echo
+echo "Forcefully adding all files"
+git -C $(pwd) add --force --quiet -A .
 
 # Don't mess with this file
-git -C $(pwd) reset web/wp-content/uploads
-git -C $(pwd) rm -r --cached web/wp-content/uploads
+echo
+echo "Remove git tracked files that should really be ignored"
+echo "Removing web/wp-content/uploads from git tracked files"
+git -C $(pwd) reset --quiet web/wp-content/uploads
+git -C $(pwd) rm -r --cached --quiet web/wp-content/uploads
 
 # Remove files listed in .gitignore.pantheon from deployment
+[ -f '.gitignore.pantheon' ] && echo "Using .gitignore.pantheon to remove git tracked files"
 [ -f '.gitignore.pantheon' ] && git -C $(pwd) rm --cached --quiet $(git ls-files -i --exclude-from=.gitignore.pantheon)
 
+echo
+echo "Switching .gitignore and .git.pantheon for Pantheon deployment"
 git rm --cached --quiet .gitignore
 git rm --cached --quiet .gitignore.pantheon
 
@@ -77,19 +96,32 @@ git rm --cached --quiet .gitignore.pantheon
 
 git -C $(pwd) add --force .gitignore
 
+echo
+echo "Git files are ready for committing"
+echo
+
 git -C $(pwd) commit -q -m "Auto Deploy: ${COMMIT_PREV}"
 
-# $TERMINUS connection:set ${TERMINUS_SITE}.${TERMINUS_ENV} git
+echo
+echo "Using Terminus switch site connection to git"
+echo
+$TERMINUS connection:set ${TERMINUS_SITE}.${TERMINUS_ENV} git
 
+echo
+echo "Git push files changes to Pantheon git remote"
+echo
 git -C $(pwd) push --force -q pantheon ${GIT_BRANCH}
 
 # Reset these changes
 [ -f '.gitignore' ] && mv .gitignore .gitignore.pantheon
 [ -f '.gitignore.tmp' ] && mv .gitignore.tmp .gitignore
 
-git -C $(pwd) reset HEAD^
+# git -C $(pwd) reset HEAD^
 
-# $TERMINUS env:clear-cache ${TERMINUS_SITE}.${TERMINUS_ENV}
+echo
+echo "Using Terminus clear site cache"
+echo
+$TERMINUS env:clear-cache ${TERMINUS_SITE}.${TERMINUS_ENV}
 
 # terminus env:deploy ${TERMINUS_SITE}.test --sync-content --note="Deploy core and contrib updates" --cc
 

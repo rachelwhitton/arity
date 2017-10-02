@@ -6,7 +6,7 @@ set -o nounset
 # set -o xtrace
 
 # Get current git branch
-GIT_BRANCH=$1
+GIT_BRANCH=${1:-}
 if [[ -z "${GIT_BRANCH}" ]]; then
   GIT_BRANCH=`git rev-parse --abbrev-ref HEAD`
 fi
