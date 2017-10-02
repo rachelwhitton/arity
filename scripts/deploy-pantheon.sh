@@ -5,7 +5,7 @@ set -o pipefail
 set -o nounset
 # set -o xtrace
 
-export BRANCH=`git rev-parse --abbrev-ref HEAD`
+export BRANCH=`git name-rev --name-only HEAD`
 
 export COMMIT_PREV=$(git log --pretty=format:'%h %s' -n 1)
 
@@ -67,8 +67,8 @@ git -C $(pwd) rm -r --cached web/wp-content/uploads
 git rm --cached --quiet .gitignore
 git rm --cached --quiet .gitignore.pantheon
 
-mv .gitignore .gitignore.tmp
-mv .gitignore.pantheon .gitignore
+[ -f '.gitignore' ] && mv .gitignore .gitignore.tmp
+[ -f '.gitignore.pantheon' ] && mv .gitignore.pantheon .gitignore
 
 git -C $(pwd) add --force .gitignore
 
@@ -79,8 +79,8 @@ git -C $(pwd) commit -q -m "Auto Deploy: ${COMMIT_PREV}"
 git -C $(pwd) push --force -q pantheon ${BRANCH}
 
 # Reset these changes
-mv .gitignore .gitignore.pantheon
-mv .gitignore.tmp .gitignore
+[ -f '.gitignore' ] && mv .gitignore .gitignore.pantheon
+[ -f '.gitignore.tmp' ] && mv .gitignore.tmp .gitignore
 
 git -C $(pwd) reset HEAD^
 

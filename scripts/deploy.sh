@@ -5,7 +5,7 @@ set -o pipefail
 set -o nounset
 # set -o xtrace
 
-export BRANCH=`git rev-parse --abbrev-ref HEAD`
+export BRANCH=`git name-rev --name-only HEAD`
 
 # Check if we are in the right directory
 [ -e "web/wp-config.php" ] || { echo "Something's wrong"; exit; } # <-- detect that the directory is a wordpress root

@@ -9,7 +9,7 @@ set -o nounset
 # Build assets with gulp
 #
 
-export BRANCH=`git rev-parse --abbrev-ref HEAD`
+export BRANCH=`git name-rev --name-only HEAD`
 
 # Check for gulp
 GULP=`which gulp`
