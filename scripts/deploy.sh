@@ -16,9 +16,6 @@ find scripts/ -name "*.sh" -exec chmod +x {} \;
 # Add dotenv configs
 [ -f '.env' ] && export $(egrep -v '^#' .env | xargs)
 
-# Install dependencies
-./scripts/check-build-dependencies.sh
-
 # Check for composer.json file
 if [ ! -f "composer.json" ]
 then
