@@ -73,7 +73,7 @@ git -C $(pwd) checkout -B ${GIT_BRANCH}
 
 echo
 echo "Forcefully adding all files"
-git -C $(pwd) add --force --quiet -A .
+git -C $(pwd) add --force --ignore-errors -A .
 
 # Don't mess with this file
 echo
@@ -115,6 +115,10 @@ git -C $(pwd) push --force -q pantheon ${GIT_BRANCH}
 # Reset these changes
 [ -f '.gitignore' ] && mv .gitignore .gitignore.pantheon
 [ -f '.gitignore.tmp' ] && mv .gitignore.tmp .gitignore
+
+echo
+echo "Removing Pantheon remote"
+git -C $(pwd) remote remove pantheon
 
 # git -C $(pwd) reset HEAD^
 

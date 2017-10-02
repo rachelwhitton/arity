@@ -6,6 +6,7 @@
 ############
 *.env.*
 *.lock
+*.htaccess
 
 # Wordpress Configuration Files #
 ############
@@ -23,6 +24,7 @@
 
 # WordPress Theme #
 ############
+web/wp-content/themes/arity/.gitignore
 web/wp-content/themes/arity/.babelrc
 web/wp-content/themes/arity/.editorconfig
 web/wp-content/themes/arity/.eslintrc
@@ -35,7 +37,8 @@ web/wp-content/themes/arity/phpcs.xml
 web/wp-content/themes/arity/package.json
 web/wp-content/themes/arity/README.md
 web/wp-content/themes/arity/resources/assets
-web/wp-content/themes/arity/node_modules
+!web/wp-content/themes/arity/node_modules/
+web/wp-content/themes/arity/node_modules/*
 !web/wp-content/themes/arity/node_modules/jquery/
 
 # WordPress #
