@@ -31,6 +31,8 @@ export TERMINUS_ENV=${TERMINUS_ENV:-dev}
 # Check for composer
 ./scripts/check-install-composer.sh
 
+COMPOSER_ALLOW_XDEBUG=0
+
 # Enable Composer parallel downloads
 composer global require -n "hirak/prestissimo:^0.3"
 
