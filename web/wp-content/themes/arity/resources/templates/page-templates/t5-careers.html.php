@@ -11,6 +11,7 @@ namespace App\Theme;
   Since:              1.0.0
 */
 $hero = get_field('module__hero-b');
+$hero['classes'][] = 'no-image-overlay--';
 $GLOBALS['sub-footer'] = get_field('module__sub-footer');
 ?>
 

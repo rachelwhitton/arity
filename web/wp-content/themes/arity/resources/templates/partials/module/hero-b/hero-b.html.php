@@ -12,7 +12,7 @@ namespace App\Theme;
 */
 
 ?>
-<div <?php module_class('hero-b'); ?>>
+<div <?php module_class($data['classes']); ?>>
   <div class="hero-b__block">
     <div class="container">
     <?php if ($data['--settings_layout'] == 'one-column') : ?>
