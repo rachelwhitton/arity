@@ -28,7 +28,7 @@ namespace App\Theme;
   <div class="row">
     <div class="feature-content__subcol">
       <?php if (!empty($data['body_copy'])) : ?>
-        <div class="type6">
+        <div class="type4">
           <?= apply_filters('the_content', $data['body_copy']); ?>
         </div>
       <?php endif; ?>

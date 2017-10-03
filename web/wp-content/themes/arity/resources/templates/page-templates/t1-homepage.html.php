@@ -24,12 +24,13 @@ foreach ($acf_fields['t1__sections'] as $key => $section) {
 ?>
 <?php get_header(); ?>
 
+<?php
+  component('in-page-navigation', array(
+    'links' => $navigation
+  ));
+?>
+
 <div class="app__wrapper container">
-  <?php
-    component('in-page-navigation', array(
-      'links' => $navigation
-    ));
-  ?>
   <div class="row">
     <div class="app__home">
       <?php

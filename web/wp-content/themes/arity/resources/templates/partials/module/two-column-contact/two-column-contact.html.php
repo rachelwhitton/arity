@@ -19,7 +19,7 @@ namespace App\Theme;
     </div>
     <div class="body-two-column__col right--">
       <?php if (!empty($data['right_column_headline'])) : ?>
-        <div class="colors__text--white type6 hidden-lg-up"><?= $data['right_column_headline']; ?></div>
+        <div class="colors__text--white type4 hidden-lg-up"><?= $data['right_column_headline']; ?></div>
       <?php endif; ?>
       <?= $data['right_column_body_copy']; ?>
     </div>

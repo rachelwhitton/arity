@@ -14,7 +14,7 @@ namespace App\Theme;
   <div class="row">
     <div class="hero-block__left-col">
       <div class="hero-block__header"><?= $data['left_column_headline']; ?></div>
-      <div class="hero-block__p type6">
+      <div class="hero-block__p type4">
         <?= $data['left_column_body_copy']; ?>
       </div>
     </div>

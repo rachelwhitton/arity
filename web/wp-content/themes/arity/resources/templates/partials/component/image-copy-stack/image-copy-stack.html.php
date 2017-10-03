@@ -14,7 +14,7 @@ namespace App\Theme;
 ?>
 <div class="ar-component image-copy-stack">
   <?php if (!empty($data['headline'])) : ?>
-    <div class="image-copy-stack__headline type6">
+    <div class="image-copy-stack__headline type4">
       <?= $data['headline']; ?>
     </div>
   <?php endif; ?>
