@@ -10,7 +10,6 @@ namespace App\Theme;
   Last Updated:       08/01/2017
   Since:              1.0.0
 */
-
 ?>
 <div class="ar-component image-copy-stack">
   <?php if (!empty($data['headline'])) : ?>
@@ -29,6 +28,9 @@ namespace App\Theme;
     </div>
   <?php endif; ?>
   <?php if (!empty($data['cta'])) : ?>
-    <?php component('cta', $data['cta']); ?>
+    <?php
+      $data['cta']['classes'] = 'button--primary blue-button-- blue-hover-border';
+      component('cta', $data['cta']);
+    ?>
   <?php endif; ?>
 </div>
