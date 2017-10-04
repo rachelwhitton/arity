@@ -23,17 +23,14 @@
   RewriteRule ^$ wp/index.php [L]
 
   # Get rid of the silly submodule directory
-  RewriteRule ^/(wp) $1 [L,R=301]
+  # RewriteRule ^/(wp) $1 [L,R=301]
 
   # add a trailing slash to /wp-admin
   RewriteRule ^([_0-9a-zA-Z-]+/)?wp-admin$ $1wp-admin/ [R=301,L]
 
   # Rewrite any wordpress files to wp submodule, super important for Multisite Setup
-  RewriteRule ^([_0-9a-zA-Z-]+/)?(wp-(admin|includes).*) wp/$2 [L]
-  RewriteRule ^([_0-9a-zA-Z-]+/)?(.*\.php)$ wp/$2 [L]
-
-  # Resolve uploaded files
-  RewriteRule ^files/(.+) wp/wp-includes/ms-files.php?file=$1 [L]
+  # RewriteRule ^([_0-9a-zA-Z-]+/)?(wp-(admin|includes).*) wp/$2 [L]
+  # RewriteRule ^([_0-9a-zA-Z-]+/)?(.*\.php)$ wp/$2 [L]
 
   # Skip real files and directories before sending to Wordpress index
   RewriteCond %{REQUEST_FILENAME} !-f
