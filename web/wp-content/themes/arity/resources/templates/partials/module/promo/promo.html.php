@@ -14,6 +14,8 @@ namespace App\Theme;
 
 <div <?php module_class($data['classes']); ?>>
   <div class="row">
-    <?php component('capsule', $data); ?>
+    <div class="container">
+      <?php component('capsule', $data); ?>
+    </div>
   </div>
 </div>
