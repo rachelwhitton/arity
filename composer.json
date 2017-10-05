@@ -108,12 +108,6 @@
                 "package:wpackagist-plugin/wp-redis:object-cache.php"
             ]
         },
-        "wordpress-install-dir": "web/wp",
-        "build-env": {
-            "install-cms": [
-                "wp core install --title={site-name} --url={site-url} --admin_user={account-name} --admin_email={account-mail} --admin_password={account-pass}",
-                "wp option update permalink_structure '/%postname%/'"
-            ]
-        }
+        "wordpress-install-dir": "web/wp"
     }
 }

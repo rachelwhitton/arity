@@ -42,7 +42,7 @@ echo
 # Build for deployment
 ./scripts/deploy.sh
 
-# Remove any and all other git repos
+# Remove any and all other git repos. Pantheon can't handle them.
 find . -mindepth 2 -type d -name ".git" -exec rm -rf {} +
 
 echo "Pushing code to ${TERMINUS_SITE}.${TERMINUS_ENV} using branch ${GIT_BRANCH}."
@@ -85,6 +85,13 @@ git rm -r --cached --quiet web/wp-content/uploads
 # Remove files listed in .gitignore.pantheon from deployment
 [ -f '.gitignore.pantheon' ] && echo "Using .gitignore.pantheon to remove git tracked files"
 [ -f '.gitignore.pantheon' ] && git rm --cached --quiet $(git ls-files -ci --exclude-from=.gitignore.pantheon)
+
+echo
+echo
+echo "Stopping.."
+git status
+exit
+
 
 echo
 echo "Switching .gitignore and .git.pantheon for Pantheon deployment"

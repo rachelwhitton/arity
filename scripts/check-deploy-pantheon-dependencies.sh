@@ -10,17 +10,11 @@ find scripts/ -name "*.sh" -exec chmod +x {} \;
 # Add dotenv configs
 [ -f '.env' ] && export $(egrep -v '^#' .env | xargs)
 
-if [[ -z "${TERMINUS_TOKEN}" ]]; then
-  echo Error: Missing TERMINUS_TOKEN variable
-  exit 1
-fi
-
 if [[ -z "${TERMINUS_SITE}" ]]; then
   echo Error: Missing TERMINUS_SITE variable
   exit 1
 fi
 
-export TERMINUS_TOKEN
 export TERMINUS_SITE
 export TERMINUS_ENV=${TERMINUS_ENV:-dev}
 
@@ -37,33 +31,8 @@ COMPOSER_ALLOW_XDEBUG=0
 composer global require -n "hirak/prestissimo:^0.3"
 
 #===============================
-# Terminus Plugins & Dependencies
+# Server SSH/Git Config
 #===============================
-
-# Check for terminus
-. ./scripts/check-install-terminus.sh
-
-INSTALL_TERMINUS_PLUGINS() {
-  # Build Tools
-  BUILD_TOOLS_VERSION=${BUILD_TOOLS_VERSION:-dev-master}
-  composer create-project -n -d $HOME/.terminus/plugins pantheon-systems/terminus-build-tools-plugin:$BUILD_TOOLS_VERSION
-}
-
-# Create Terminus plugins directory and install plugins if needed
-if [ ! -d $HOME/.terminus/plugins ]
-then
-	mkdir -p $HOME/.terminus/plugins
-	INSTALL_TERMINUS_PLUGINS
-fi
-
-# Bail on errors
-set +ex
-
-# Make sure Terminus is installed
-$TERMINUS --version
-
-# Authenticate with Terminus
-$TERMINUS auth:login -n --machine-token="$TERMINUS_TOKEN"
 
 # Disable host checking
 touch $HOME/.ssh/config

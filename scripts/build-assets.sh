@@ -60,6 +60,11 @@ do
   echo -e "\nRunning 'npm run dist-allow-lint-errors'"
   npm run dist-allow-lint-errors
 
+  # Run yarn install production
+  # This removes dev node_modules and only leaves production requirred packages
+	echo -e "\nRunning 'yarn install'"
+  $YARN install --production=true
+
 	# Change back again
 	echo -e "\nchanged directories back into:"
 	cd -
