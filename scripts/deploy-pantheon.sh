@@ -119,7 +119,7 @@ git remote remove pantheon
 # Reset these changes
 echo
 echo "Reseting Git revisions"
-git reset --hard HEAD
+git reset --hard HEAD^
 
 echo
 echo "Using Terminus clear site cache"
