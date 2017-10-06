@@ -28,10 +28,6 @@
   # add a trailing slash to /wp-admin
   RewriteRule ^([_0-9a-zA-Z-]+/)?wp-admin$ $1wp-admin/ [R=301,L]
 
-  # Rewrite any wordpress files to wp submodule, super important for Multisite Setup
-  # RewriteRule ^([_0-9a-zA-Z-]+/)?(wp-(admin|includes).*) wp/$2 [L]
-  # RewriteRule ^([_0-9a-zA-Z-]+/)?(.*\.php)$ wp/$2 [L]
-
   # Skip real files and directories before sending to Wordpress index
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
