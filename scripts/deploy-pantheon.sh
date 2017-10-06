@@ -116,10 +116,13 @@ echo
 echo "Removing Pantheon remote"
 git remote remove pantheon
 
+[ -f '.gitignore' ] && mv .gitignore .gitignore.pantheon
+[ -f '.gitignore.tmp' ] && mv .gitignore.tmp .gitignore
+
 # Reset these changes
 echo
 echo "Reseting Git revisions"
-git reset --hard HEAD^
+git reset HEAD^
 
 echo
 echo "Using Terminus clear site cache"
