@@ -4,7 +4,6 @@
 
 # Not used for Pantheon #
 ############
-*.env
 *.lock
 
 # Wordpress Configuration Files #

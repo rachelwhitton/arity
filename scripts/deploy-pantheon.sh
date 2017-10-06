@@ -87,13 +87,6 @@ git rm -r --cached --quiet web/wp-content/uploads
 [ -f '.gitignore.pantheon' ] && git rm --cached --quiet $(git ls-files -ci --exclude-from=.gitignore.pantheon)
 
 echo
-echo
-echo "Stopping.."
-git status
-exit
-
-
-echo
 echo "Switching .gitignore and .git.pantheon for Pantheon deployment"
 git rm --cached --quiet .gitignore
 git rm --cached --quiet .gitignore.pantheon
@@ -112,27 +105,26 @@ git commit -q -m "Auto Deploy: ${COMMIT_PREV}"
 echo
 echo "Using Terminus switch site connection to git"
 echo
-$TERMINUS connection:set ${TERMINUS_SITE}.${TERMINUS_ENV} git
+# $TERMINUS connection:set ${TERMINUS_SITE}.${TERMINUS_ENV} git
 
 echo
 echo "Git push files changes to Pantheon git remote"
 echo
 git push --force -q pantheon ${GIT_BRANCH}
 
-# Reset these changes
-[ -f '.gitignore' ] && mv .gitignore .gitignore.pantheon
-[ -f '.gitignore.tmp' ] && mv .gitignore.tmp .gitignore
-
 echo
 echo "Removing Pantheon remote"
 git remote remove pantheon
 
-git reset HEAD^
+# Reset these changes
+echo
+echo "Reseting Git revisions"
+git reset --hard HEAD
 
 echo
 echo "Using Terminus clear site cache"
 echo
-$TERMINUS env:clear-cache ${TERMINUS_SITE}.${TERMINUS_ENV}
+# $TERMINUS env:clear-cache ${TERMINUS_SITE}.${TERMINUS_ENV}
 
 # terminus env:deploy ${TERMINUS_SITE}.test --sync-content --note="Deploy core and contrib updates" --cc
 
