@@ -34,7 +34,7 @@ endif;
 // For Pantheon test and live sites use production, all others environments use development
 if (! defined('WP_ENV')) {
     if (! in_array($_ENV['PANTHEON_ENVIRONMENT'], array( 'test', 'live' ))) {
-        define('WP_ENV', 'development');
+        define('WP_ENV', 'staging');
     } else {
         define('WP_ENV', 'production');
     }
