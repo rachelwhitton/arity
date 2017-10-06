@@ -32,6 +32,8 @@ fi
 # Install dependencies
 . ./scripts/check-deploy-pantheon-dependencies.sh
 
+exit
+
 echo "Git reset back to HEAD. This will reset last deploy build."
 git reset HEAD
 
