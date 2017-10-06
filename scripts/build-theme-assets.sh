@@ -36,7 +36,7 @@ do
 
 	# Run gulp
 	echo -e "\nRunning 'composer install'"
-  composer install --no-ansi --no-interaction --optimize-autoloader --no-progress
+  composer install --no-dev --no-ansi --no-interaction --optimize-autoloader --no-progress
 
 	# Change back again
 	echo -e "\nchanged directories back into:"
@@ -58,7 +58,7 @@ do
 
   # Run npm run dist
   echo -e "\nRunning 'npm run dist-allow-lint-errors'"
-  npm run dist-allow-lint-errors
+  npm run dist
 
   # Run yarn install production
   # This removes dev node_modules and only leaves production requirred packages

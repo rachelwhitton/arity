@@ -15,9 +15,6 @@
         "wordplate/acf": "^2.0"
     },
     "require-dev": {
-        "roave/security-advisories": "dev-master",
-        "squizlabs/php_codesniffer": "^2.9.0",
-        "phpmd/phpmd": "^2.6.0"
     },
     "scripts": {
         "build-assets": [
@@ -26,16 +23,11 @@
         "build-dev-assets": [
             "composer install --no-ansi --no-interaction --optimize-autoloader --no-progress"
         ],
-        "test": [
-            "@code-sniff"
-        ],
-        "code-sniff": [
-            "./vendor/bin/phpcs"
-        ]
+        "test": []
     },
     "extra": {
         "installer-paths": {
-            "app/lib/{$name}/": [
+            "app/plugins/{$name}/": [
                 "type:wordpress-muplugin",
                 "type:wordpress-plugin"
             ]

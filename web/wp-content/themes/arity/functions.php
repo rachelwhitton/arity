@@ -29,15 +29,15 @@ if (file_exists($composer = __DIR__ . '/vendor/autoload.php')) {
 }
 
 /**
- * Autoload libs
+ * Autoload plugins
  * @since 1.0.0
  * @return void
  *
- * Autoloads plugins/libs in <theme>/app/lib/
+ * Autoloads plugins/plugins in <theme>/app/plugin/
  * Similar to how Wordpress autoloads plugins
  */
-$libs = require_once __DIR__ . '/app/bootstrap/libs.php';
-foreach ($libs as $filename) {
+$plugins = require_once __DIR__ . '/app/bootstrap/plugins.php';
+foreach ($plugins as $filename) {
     if (file_exists($filename)) {
         require_once($filename);
     }
