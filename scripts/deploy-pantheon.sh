@@ -32,10 +32,12 @@ fi
 # Install dependencies
 . ./scripts/check-deploy-pantheon-dependencies.sh
 
-exit
-
 echo "Git reset back to HEAD. This will reset last deploy build."
 git reset HEAD
+
+echo
+echo "Switch to ${GIT_BRANCH} branch"
+git checkout -B ${GIT_BRANCH}
 
 echo
 echo "Building assets for deployment"
@@ -68,10 +70,6 @@ fi
 echo
 echo "Adding Pantheon remote"
 git remote add pantheon ${GIT_REMOTE}
-
-echo
-echo "Switch to ${GIT_BRANCH} branch"
-git checkout -B ${GIT_BRANCH}
 
 echo
 echo "Forcefully adding all files"
