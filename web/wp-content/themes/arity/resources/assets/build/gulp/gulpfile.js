@@ -52,12 +52,6 @@ require('./recipes/svg-sprite')(gulp, production);
 // Copy font files from assets to dist
 require('./recipes/fonts')(gulp);
 
-// Lint PHP files using ruleset.xml
-require('./recipes/php-lint')(gulp, allowlint, production);
-
-// Validate files using PHP Mess Dectector
-require('./recipes/php-md')(gulp);
-
 // Deletes the build folder entirely.
 require('./recipes/clean')(gulp);
 
@@ -69,13 +63,12 @@ require('./recipes/watch')(gulp, browserSync);
 
 // Generic build task. Use with '--production' for production builds
 gulp.task('build',
-  'Main build task. Runs styles, scripts, images, svgs, fonts and php:lint. Does not delete dist directory.', [
+  'Main build task. Runs styles, scripts, images, svgs and fonts. Does not delete dist directory.', [
     'images',
     'svgs',
     'styles',
     'scripts',
-    'fonts',
-    'php:lint'
+    'fonts'
   ]
 );
 

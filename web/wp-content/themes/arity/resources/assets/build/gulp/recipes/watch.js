@@ -9,7 +9,7 @@ module.exports = function (gulp, browserSync) {
 
   gulp.task(
     'watch',
-    'Watch SCSS, JS, SVG and PHP files. Uses browserSync via proxy.',
+    'Watch SCSS, JS, and SVG files. Uses browserSync via proxy.',
     function() {
       browserSync.init(settings.browserSync);
 
@@ -30,11 +30,6 @@ module.exports = function (gulp, browserSync) {
       gulp.watch(paths.assets + '/scripts/**/*.js', ['scripts']).on('change', function(file) {
         util.log('JS file changed: ' + file.path + '');
       });
-
-      // @todo - Only lint new file changes. Linting all php files takes a long time
-      // gulp.watch(['**/*.php', '!app/lib/**/*.php', '!node_modules/**/*.php', '!vendor/**/*.php'], ['php:lint']).on('change', function(file) {
-      //   util.log('PHP file changed: ' + file.path + '');
-      // });
     }
   );
 };
