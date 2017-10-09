@@ -246,6 +246,9 @@ add_action('body_class', function (array $classes) {
     if (is_single() || is_page() && !is_front_page()) {
         $viewName = basename(get_permalink());
         $classes[] = 'view--' . $viewName;
+    } else if(is_front_page()) {
+        $viewName = 'home';
+        $classes[] = 'view--' . $viewName;
     }
 
     // @todo - Why is there another get_permalink added without the view-- prefix?
