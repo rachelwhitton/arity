@@ -115,13 +115,13 @@ Since:              1.0.0
         <div class="leadgen-form-inner__row">
 
           <div class="col leadgen-form-inner__check-col">
-            <span class="radio-li"><input id="r1" name="00N1600000F4WrE" onchange="formValidator.onChange();" type="radio" value="Email"><label class="checkradio" for="r1"><span></span> Email</label>&nbsp;&nbsp;</span>
+            <span class="radio-li"><input checked="checked" id="r1" name="00N1600000F4WrE" onchange="formValidator.onChange();" type="radio" value="Email"><label class="checkradio" for="r1"><span></span> Email</label>&nbsp;&nbsp;</span>
           </div>
           <div class="col leadgen-form-inner__check-col">
             <span class="radio-li"><input id="r2" name="00N1600000F4WrE" onchange="formValidator.onChange();" type="radio" value="Phone"><label class="checkradio" for="r2"><span></span> Phone</label>&nbsp;&nbsp;</span>
           </div>
           <div class="col leadgen-form-inner__check-col">
-            <span class="radio-li"><input checked="yes" id="r3" name="00N1600000F4WrE" onchange="formValidator.onChange();" type="radio" value="No Preference"><label class="checkradio" for="r3"><span></span> No Preference</label>
+            <span class="radio-li"><input id="r3" name="00N1600000F4WrE" onchange="formValidator.onChange();" type="radio" value="No Preference"><label class="checkradio" for="r3"><span></span> No Preference</label>
             </span>
           </div>
         </div>
