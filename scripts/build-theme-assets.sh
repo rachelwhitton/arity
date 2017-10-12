@@ -25,6 +25,14 @@ then
 	exit 1
 fi
 
+# Check for npm
+NPM=`which npm`
+if [ ! -x "$NPM" ]
+then
+	echo Error: executable npm not found on path
+	exit 1
+fi
+
 # Look for composer.json
 echo -e "\nLooking for composer.json in themes directory.."
 FILE=composer.json
@@ -52,7 +60,7 @@ do
 	echo -e "\npackage.json found, changing directories into: ${d%/*}"
 	cd ${d%/*}
 
-	$YARN install phantomjs-prebuilt
+	$NPM install phantomjs-prebuilt
 
   # Run yarn install
 	echo -e "\nRunning 'yarn install'"
