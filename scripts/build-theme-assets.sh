@@ -52,6 +52,8 @@ do
 	echo -e "\npackage.json found, changing directories into: ${d%/*}"
 	cd ${d%/*}
 
+	$YARN install phantomjs-prebuilt
+
   # Run yarn install
 	echo -e "\nRunning 'yarn install'"
   $YARN install
