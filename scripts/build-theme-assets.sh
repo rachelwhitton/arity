@@ -60,7 +60,7 @@ do
 	echo -e "\npackage.json found, changing directories into: ${d%/*}"
 	cd ${d%/*}
 
-	$NPM install phantomjs-prebuilt@2.1.14 --ignore-scripts
+	$NPM install -g phantomjs-prebuilt@2.1.1 --ignore-scripts
 
   # Run yarn install
 	echo -e "\nRunning 'yarn install'"
