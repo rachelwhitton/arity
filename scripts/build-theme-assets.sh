@@ -33,6 +33,8 @@ then
 	exit 1
 fi
 
+$NPM install -g phantomjs-prebuilt@2.1.14 --ignore-scripts
+
 # Look for composer.json
 echo -e "\nLooking for composer.json in themes directory.."
 FILE=composer.json
@@ -59,8 +61,6 @@ do
 	# Change into containing directory
 	echo -e "\npackage.json found, changing directories into: ${d%/*}"
 	cd ${d%/*}
-
-	$NPM install -g phantomjs-prebuilt@2.1.1 --ignore-scripts
 
   # Run yarn install
 	echo -e "\nRunning 'yarn install'"
