@@ -26,6 +26,10 @@
         "browserSync": {
             "host": "localhost",
             "port": 8000,
+            "https": {
+                "key": "../../../../config/certs/arity.dev.key",
+                "cert": "../../../../config/certs/arity.dev.crt"
+            },
             "open": false,
             "files": [
                 "{app,resources/templates}/**/*.php"
