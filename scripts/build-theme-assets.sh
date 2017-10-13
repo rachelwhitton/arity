@@ -33,8 +33,6 @@ then
 	exit 1
 fi
 
-# $NPM install -g phantomjs-prebuilt@2.1.14 --ignore-scripts
-
 # Look for composer.json
 echo -e "\nLooking for composer.json in themes directory.."
 FILE=composer.json

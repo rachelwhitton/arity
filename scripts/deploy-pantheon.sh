@@ -102,9 +102,9 @@ echo
 
 git commit -q -m "Auto Deploy: ${COMMIT_PREV}"
 
-echo
-echo "Using Terminus switch site connection to git"
-echo
+# echo
+# echo "Using Terminus switch site connection to git"
+# echo
 # $TERMINUS connection:set ${TERMINUS_SITE}.${TERMINUS_ENV} git
 
 echo
@@ -124,9 +124,9 @@ echo
 echo "Reseting Git revisions"
 git reset HEAD^
 
-echo
-echo "Using Terminus clear site cache"
-echo
+# echo
+# echo "Using Terminus clear site cache"
+# echo
 # $TERMINUS env:clear-cache ${TERMINUS_SITE}.${TERMINUS_ENV}
 
 # terminus env:deploy ${TERMINUS_SITE}.test --sync-content --note="Deploy core and contrib updates" --cc
