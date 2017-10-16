@@ -25,6 +25,14 @@ then
 	exit 1
 fi
 
+# Check for npm
+NPM=`which npm`
+if [ ! -x "$NPM" ]
+then
+	echo Error: executable npm not found on path
+	exit 1
+fi
+
 # Look for composer.json
 echo -e "\nLooking for composer.json in themes directory.."
 FILE=composer.json
