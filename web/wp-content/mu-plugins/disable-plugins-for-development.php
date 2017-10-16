@@ -23,14 +23,15 @@ License:      MIT License
  * to "development" or "production" in each particular server/environment.
  */
 
-if (empty($_SERVER['WP_ENV']) || $_SERVER['WP_ENV'] == 'development') {
+if (!empty(WP_ENV) && WP_ENV == 'development') {
   $plugins = array(
-    'aryo-activity-log/aryo-activity-log.php',
     'w3-total-cache/w3-total-cache.php',
     'loginizer/loginizer.php',
     'wp-optimize/wp-optimize.php',
     'wordfence/wordfence.php',
     'wp-redis/wp-redis.php',
+    'login-lockdown/loginlockdown.php',
+    'wp-native-php-sessions/pantheon-sessions.php',
     'pantheon-hud/pantheon-hud.php',
     'pantheon-advanced-page-cache/pantheon-advanced-page-cache.php'
   );
