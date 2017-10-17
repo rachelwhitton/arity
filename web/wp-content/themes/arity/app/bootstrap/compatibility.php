@@ -31,22 +31,22 @@ if (! (
 /**
  * Ensure compatible version of PHP is used
  */
-// if (version_compare('7.0.0', phpversion(), '>=')) {
-//     Notices::error(
-//         __('You must be using PHP 7.0.0 or greater.'),
-//         __('Invalid PHP version')
-//     );
-//
-//     // We have a problems. Return negative status.
-//     return false;
-// }
+if (version_compare('7.0.0', phpversion(), '>=')) {
+    Notices::error(
+        __('You must be using PHP 7.0.0 or greater.'),
+        __('Invalid PHP version')
+    );
+
+    // We have a problems. Return negative status.
+    return false;
+}
 
 /**
  * Ensure compatible version of WordPress is used
  */
-if (version_compare('4.7.0', get_bloginfo('version'), '>=')) {
+if (version_compare('4.6.0', get_bloginfo('version'), '>=')) {
     Notices::error(
-        __('You must be using WordPress 4.7.0 or greater.'),
+        __('You must be using WordPress 4.6.0 or greater.'),
         __('Invalid WordPress version')
     );
 
