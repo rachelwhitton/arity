@@ -52,14 +52,15 @@ find . -mindepth 2 -type d -name ".git" -exec rm -rf {} +
 echo "Pushing code to ${TERMINUS_SITE}.${TERMINUS_ENV} using branch ${GIT_BRANCH}."
 echo "Deploying lastest commit \"${COMMIT_PREV}\"."
 
-if [[ -n "${PANTHEON_GIT_REPO}" ]]; then
+if [[ -n "${PANTHEON_GIT_REPO:-}" ]]; then
   GIT_REMOTE=$PANTHEON_GIT_REPO
 else
-  GIT_REMOTE=`$TERMINUS connection:info ${TERMINUS_SITE}.${TERMINUS_ENV} --fields='Git Command' --format=string`
-  GIT_REMOTE=`sed "s/git clone //g" <<<"$GIT_REMOTE"`
-  GIT_REMOTE=${GIT_REMOTE%% *}
+  if [[ ! -x "${TERMINUS}" ]]; then
+    echo Error: executable composer not found on path and missing PANTHEON_GIT_REPO variable
+    exit 1
+  fi
+  GIT_REMOTE=$(terminus connection:info ${TERMINUS_SITE}.${TERMINUS_ENV} --field=git_url)
 fi
-
 
 if [[ -n "$(git remote show | grep pantheon)" ]]; then
   echo
@@ -102,10 +103,12 @@ echo
 
 git commit -q -m "Auto Deploy: ${COMMIT_PREV}"
 
-# echo
-# echo "Using Terminus switch site connection to git"
-# echo
-# $TERMINUS connection:set ${TERMINUS_SITE}.${TERMINUS_ENV} git
+if [[ -x "${TERMINUS}" ]]; then
+  echo
+  echo "Using Terminus switch site connection to git"
+  echo
+  $TERMINUS connection:set ${TERMINUS_SITE}.${TERMINUS_ENV} git
+fi
 
 echo
 echo "Git push files changes to Pantheon git remote"
@@ -124,16 +127,12 @@ echo
 echo "Reseting Git revisions"
 git reset HEAD^
 
-# echo
-# echo "Using Terminus clear site cache"
-# echo
-# $TERMINUS env:clear-cache ${TERMINUS_SITE}.${TERMINUS_ENV}
-
-# terminus env:deploy ${TERMINUS_SITE}.test --sync-content --note="Deploy core and contrib updates" --cc
-
-#Clone database and files from Live into Dev
-# echo "Importing database and files from Live into Dev...";
-# terminus env:clone-content $SITE.live dev
+if [[ -x "${TERMINUS}" ]]; then
+  echo
+  echo "Using Terminus clear site cache"
+  echo
+  $TERMINUS env:clear-cache ${TERMINUS_SITE}.${TERMINUS_ENV}
+fi
 
 echo "Deployment success"
 exit

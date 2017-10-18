@@ -8,7 +8,7 @@
 find scripts/ -name "*.sh" -exec chmod +x {} \;
 
 # Check for composer
-. ./scripts/check-install-composer.sh
+. ./scripts/check-composer.sh
 
 # Check for node
-. ./scripts/check-install-node.sh
+. ./scripts/check-node.sh

@@ -13,4 +13,4 @@ else
 fi
 
 # Install global npm packages
-npm install --global gulp yarn
+npm install --global gulp grunt-cli yarn
