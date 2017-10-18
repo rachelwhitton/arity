@@ -19,8 +19,8 @@ Since:              1.0.0
         <h3><?= $data['headline']; ?></h3>
       <?php endif; ?>
 
-      <form id="app__form__form" name="app__form__form" class="leadgen-form-inner" action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
-        <input type=hidden name="oid" value="00Dc0000003vvzq">
+      <form id="app__form__form" name="app__form__form" class="leadgen-form-inner" action="<?= $data['form_url']; ?>" method="POST">
+        <input type=hidden name="oid" value="<?= $data['form_oid']; ?>">
         <input id="recordType" name="recordType" type="hidden" value="01216000000WeRH">
         <input name="lead_source" type="hidden" value="Web- All Other">
         <input name="retURL" type="hidden" value="http://test12345.force.com/aritylead/ArityWebLeadThankyou?Sender">

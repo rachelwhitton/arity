@@ -11,8 +11,10 @@ namespace App\Theme;
 */
 ?>
 <div class="ar-component lite-form">
-  <form id="form__sms" name="form__sms" class="lite-form-inner" action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
-    <input type=hidden name="oid" value="00Dc0000003vvzq">
+  <form id="form__sms" name="form__sms" class="lite-form-inner" action="<?= $data['form_url']; ?>" method="POST">
+
+    <input type=hidden name="oid" value="<?= $data['form_oid']; ?>">
+
     <input id="recordType" name="recordType" type="hidden" value="01216000000WeRH">
     <input name="lead_source" type="hidden" value="Web- Home Page">
     <input name="retURL" type="hidden" value="http://test12345.force.com/aritylead/ArityHomepageThankyou?Sender">
