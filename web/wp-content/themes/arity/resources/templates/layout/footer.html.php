@@ -10,7 +10,7 @@ namespace App\Theme;
       <div class="site-footer__col col1--">
         <a href="<?= home_url(); ?>">
           <svg class="site-footer__logo icon-svg" title="" role="img">
-            <use xlink:href="#arity-logo"/>
+            <use xlink:href="#arity-logo"></use>
           </svg>
         </a>
       </div>
@@ -19,7 +19,7 @@ namespace App\Theme;
         <p>Sign up for an account on the Arity developer portal and try our APIs.</p>
         <a href="https://developer.arity.com/" target="_blank" class="ar-element button button--footer">
           <svg class="site-footer__icon icon-svg" title="" role="img">
-            <use xlink:href="#link-external"/>
+            <use xlink:href="#link-external"></use>
           </svg> Visit the portal
         </a>
       </div>
@@ -28,7 +28,7 @@ namespace App\Theme;
         <p>Looking for more? Get in touch with an Arity representative.</p>
         <a href="mailto:media@arity.com" class="ar-element button button--footer">
           <svg class="site-footer__icon icon-svg" title="" role="img">
-            <use xlink:href="#link-email"/>
+            <use xlink:href="#link-email"></use>
           </svg> Press inquiries
         </a>
       </div>
@@ -39,14 +39,14 @@ namespace App\Theme;
             <li class="social-nav__item">
               <a class="social-nav__link linkedin--" href="http://linkedin.com/company/arity" target="_blank" aria-label="LinkedIn">
                 <svg class="site-footer__icon icon-svg" title="" role="img">
-                  <use xlink:href="#social-linkedin"/>
+                  <use xlink:href="#social-linkedin"></use>
                 </svg>
               </a>
             </li>
             <li class="social-nav__item">
               <a class="social-nav__link twitter--" href="http://twitter.com/arity" target="_blank" aria-label="Twitter">
                 <svg class="site-footer__icon icon-svg" title="" role="img">
-                  <use xlink:href="#social-twitter"/>
+                  <use xlink:href="#social-twitter"></use>
                 </svg>
               </a>
             </li>
@@ -58,7 +58,7 @@ namespace App\Theme;
       <div class="site-footer__col col5--">
         <a href="<?= home_url(); ?>">
           <svg class="site-footer__logo icon-svg" title="" role="img">
-            <use xlink:href="#arity-logo"/>
+            <use xlink:href="#arity-logo"></use>
           </svg>
         </a>
         <br />

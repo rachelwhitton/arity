@@ -14,7 +14,7 @@ namespace App\Theme;
   <a href="<?= home_url(); ?>" class="site-header__logo" aria-label="">
     <span class="sr-only"><?= get_bloginfo('name'); ?></span>
     <svg class="icon-svg" title="" role="img">
-            <use xlink:href="#arity-logo"/>
+            <use xlink:href="#arity-logo"></use>
     </svg>
   </a>
 

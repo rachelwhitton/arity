@@ -17,7 +17,7 @@ namespace App\Theme;
   <?php if (!empty('headline')) : ?>
     <div class="text-icon__icon">
       <svg class="icon-svg" title="" role="img">
-        <use xlink:href="#<?= $data['icon']; ?>"/>
+        <use xlink:href="#<?= $data['icon']; ?>"></use>
       </svg>
     </div>
   <?php endif; ?>

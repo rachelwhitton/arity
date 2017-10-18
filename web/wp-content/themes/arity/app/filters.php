@@ -427,7 +427,7 @@ add_filter('nav_menu_link_attributes', function ($atts, $item, $args) {
  */
 add_filter('walker_nav_menu_start_el', function ($item_output, $item, $depth, $args) {
     if (empty($item->is_last)) {
-        $item_output .= '<svg class="icon-svg" title="" role="img"><use xlink:href="#dot-divider"/></svg>';
+        $item_output .= '<svg class="icon-svg" title="" role="img"><use xlink:href="#dot-divider"></use></svg>';
     }
 
     return $item_output;

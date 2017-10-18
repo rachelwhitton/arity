@@ -35,7 +35,7 @@ namespace App\Theme;
     <div class="ar-element button card__button button--hover-icon">
       <span class="button__icon arrow-right--" role="presentation">
         <svg class="icon-svg" title="" role="img">
-            <use xlink:href="#arrow-right"/>
+            <use xlink:href="#arrow-right"></use>
         </svg>
       </span>
       <span class="button__label"><?= $data['cta']['title']; ?></span>

@@ -58,7 +58,7 @@ add_shortcode('link', function ($attr, $text_link) {
 
     // Link icon, if 'icon' is passed
     if (!empty($attr['icon'])) {
-        $link .= '<svg class="icon-svg" title="" role="img"><use xlink:href="#'.$attr['icon'].'"/></svg>';
+        $link .= '<svg class="icon-svg" title="" role="img"><use xlink:href="#'.$attr['icon'].'"></use></svg>';
     }
 
     // End link circle-bkg span
