@@ -41,9 +41,7 @@ namespace App\Theme;
     <div class="modal-content">
       <div class="modal-body">
         <div class="modal-body--left">
-          <svg class="icon-svg" title="" role="img">
-              <use xlink:href="#arity-allstate-logo"></use>
-          </svg>
+          <div class="logo logo--arity-allstate"></div>
         </div>
         <div class="modal-body--right">
           <p>Heads up: you’re about to be directed to the Allstate careers site. You’re still looking at Arity jobs, but because we were founded by Allstate, we share the same application system.</p>
