@@ -15,7 +15,7 @@ namespace App\Theme;
 <div <?php module_class('body-column body-two-column'); ?>>
   <div class="container">
     <?php if (!empty($data['headline'])) : ?>
-      <div class="type4 typeBold body-column__headline"><?= $data['headline']; ?></div>
+      <<?= $data['h_el']; ?> class="type4 typeBold body-column__headline"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
     <?php endif; ?>
     <div class="row">
       <div class="body-two-column__col left--">

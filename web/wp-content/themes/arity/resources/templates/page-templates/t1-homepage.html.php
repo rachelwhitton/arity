@@ -21,6 +21,8 @@ foreach ($acf_fields['t1__sections'] as $key => $section) {
   $navigation[$key]['label'] = $section['label'];
 }
 
+$GLOBALS['h1_used'] = false;
+
 ?>
 <?php get_header(); ?>
 

@@ -13,8 +13,8 @@ if (empty($data['classes'])) {
 }
 $data['classes'] = array_merge($classes, $data['classes']);
 
-if (empty($data['el'])) {
-  $data['el'] = 'div';
+if (empty($data['h_el'])) {
+  $data['h_el'] = 'h3';
 }
 
 return $data;

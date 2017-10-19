@@ -16,7 +16,7 @@ namespace App\Theme;
     <?php if (!empty($data['headline'])) : ?>
       <div class="row">
         <div class="contact-form-with-cta__col wide--">
-          <div class="type3 contact-form-with-cta__headline"><?= $data['headline']; ?></div>
+          <<?= $data['h_el']; ?> class="type3 contact-form-with-cta__headline"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
         </div>
       </div>
     <?php endif; ?>

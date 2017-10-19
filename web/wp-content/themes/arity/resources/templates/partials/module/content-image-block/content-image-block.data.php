@@ -14,4 +14,8 @@ if (!empty($data['layout'])) {
 
 $data['headline'] = App\Theme\wrapSymbols($data['headline']);
 
+if(empty($data['h_el'])) {
+  $data['h_el'] = 'h2';
+}
+
 return $data;

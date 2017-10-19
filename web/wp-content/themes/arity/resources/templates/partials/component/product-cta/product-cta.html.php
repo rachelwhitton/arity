@@ -13,7 +13,7 @@ namespace App\Theme;
 ?>
 <div <?php component_class('product-cta'); ?>>
   <?php if (!empty($data['headline'])) : ?>
-    <div class="type4 typeBold product-cta__headline"><?= $data['headline']; ?></div>
+    <<?= $data['h_el']; ?> class="type4 typeBold product-cta__headline"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
   <?php endif; ?>
   <?php if (!empty($data['body_copy'])) : ?>
     <div class="type0 product-cta__p">

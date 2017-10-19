@@ -13,11 +13,11 @@ namespace App\Theme;
 ?>
 <div <?php module_class('career-list'); ?>>
   <div class="container">
-    <div class="block_title">
-      Open Positions
-      <div class="block_jobCount"><span id="job_count">0</span> available positions</div>
+      <div class="block_title">
+        <<?= $data['h_el']; ?> class="career-list__headline">Open Positions</<?= $data['h_el']; ?>>
+        <div class="block_jobCount" aria-hidden="true"><span id="job_count">0</span> available positions</div>
+      </div>
     </div>
-  </div>
   <div class="container">
     <div id="careers_feed">
       <div class="careers-table__error">

@@ -15,9 +15,14 @@ namespace App\Theme;
 
 <div <?php component_class('text-icon-stack'); ?>>
   <?php if (!empty($data['headline'])) : ?>
-    <div class="type4 typeBold text-icon-stack__headline">
+    <<?= $data['h_el']; ?> class="type4 typeBold text-icon-stack__headline">
       <?= $data['headline']; ?>
-    </div>
+    </<?= $data['h_el']; ?>>
   <?php endif; ?>
+  <?php
+    foreach($data['stacks'] as $i=>$stack) {
+      $data['stacks'][$i]['component__text-w-icon']['h_el'] = updateElImportance($data['h_el'], 1);
+    }
+  ?>
   <?php the_partials($data['stacks']); ?>
 </div>

@@ -16,7 +16,8 @@ Since:              1.0.0
   <div class="feature-solution__inner">
     <div class="feature-solution__top">
       <?php element('eyebrow', [
-        'label' => $data['eyebrow']
+        'label' => $data['eyebrow'],
+        'h_el' => $data['h_el']
       ]); ?>
       <?php if (!empty($data['image_id'])) : ?>
         <?php element('image', [
@@ -25,7 +26,7 @@ Since:              1.0.0
         ]); ?>
       <?php endif; ?>
       <?php if (!empty($data['headline'])) : ?>
-        <div class="type3 feature-solution__headline"><?= $data['headline']; ?></div>
+        <<?= updateElImportance($data['h_el'], 1); ?> class="type3 feature-solution__headline"><?= $data['headline']; ?></<?= updateElImportance($data['h_el'], 1); ?>>
       <?php endif; ?>
     </div>
 

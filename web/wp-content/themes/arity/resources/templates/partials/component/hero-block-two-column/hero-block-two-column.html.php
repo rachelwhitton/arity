@@ -13,16 +13,19 @@ namespace App\Theme;
 <div <?php component_class('hero-block hero-block--two-col'); ?>>
   <div class="row">
     <div class="hero-block__left-col">
-      <div class="hero-block__header"><?= $data['left_column_headline']; ?></div>
+      <<?= $data['h_el']; ?> class="hero-block__header"><?= $data['left_column_headline']; ?></<?= $data['h_el']; ?>>
       <div class="hero-block__p type4">
         <?= $data['left_column_body_copy']; ?>
       </div>
     </div>
     <div class="hero-block__right-col">
-      <div class="type0 hero-block__cta-headline"><?= $data['right_column_headline']; ?></div>
+      <<?= updateElImportance($data['h_el'], 2); ?> class="type0 hero-block__cta-headline"><?= $data['right_column_headline']; ?></<?= updateElImportance($data['h_el'], 2); ?>>
       <?php $i=0; foreach ($data['right_column_links'] as $cta) : $i++; ?>
-        <?php if ($i != 1) : ?><br /><?php endif; ?>
-        <?php component('cta', $cta['link']); ?>
+        <p>
+          <?php element('button', array_merge($cta['link'], [
+            'classes' => 'button--primary blue-button--'
+          ])); ?>
+        </p>
       <?php endforeach; ?>
     </div>
   </div>

@@ -11,6 +11,14 @@ namespace App\Theme;
 */
 ?>
 <div class="ar-component lite-form">
+  <?php if (!empty($data['headline'])) : ?>
+    <div class="row">
+      <div class="col lite-form-inner__col">
+        <h3 class="lite-form__title type4"><?= $data['headline']; ?></h3>
+      </div>
+    </div>
+  <?php endif; ?>
+
   <form id="form__sms" name="form__sms" class="lite-form-inner" action="<?= $data['form_url']; ?>" method="POST">
 
     <input type=hidden name="oid" value="<?= $data['form_oid']; ?>">
@@ -25,14 +33,6 @@ namespace App\Theme;
           formValidator.onSuccess(token);
         };
     </script>
-
-    <?php if (!empty($data['headline'])) : ?>
-      <div class="row">
-        <div class="col lite-form-inner__col">
-          <div class="type4"><?= $data['headline']; ?></div>
-        </div>
-      </div>
-    <?php endif; ?>
 
     <div class="row">
       <div class="col lite-form-inner__col">

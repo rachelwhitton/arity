@@ -23,7 +23,7 @@ namespace App\Theme;
   <?php endif; ?>
   <div class="text-icon__point">
     <?php if (!empty('headline')) : ?>
-      <div class="text-icon__headline type0"><?= $data['headline']; ?></div>
+      <<?= $data['h_el']; ?> class="text-icon__headline type0"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
     <?php endif; ?>
     <?php if (!empty('body_copy')) : ?>
       <div class="text-icon__p">

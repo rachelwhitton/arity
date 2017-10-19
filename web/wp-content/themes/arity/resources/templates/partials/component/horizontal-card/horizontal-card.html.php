@@ -25,7 +25,7 @@ namespace App\Theme;
     <?php endif; ?>
     <div class="card__bottom">
       <?php if (!empty($data['subhead'])) : ?>
-        <h3 class="card__title"><?= $data['subhead']; ?></h3>
+        <<?= $data['h_el']; ?> class="card__title"><?= $data['subhead']; ?></<?= $data['h_el']; ?>>
       <?php endif; ?>
       <?= $data['body_copy']; ?>
     </div>

@@ -14,10 +14,10 @@ namespace App\Theme;
 ?>
 
 <?php foreach ($data['stats'] as $stat) : ?>
-  <div <?php component_class('product-stats'); ?>>
-    <div class="type2 product-stats__value<?php if (!empty($stat['stat_color'])) : ?> <?= $stat['stat_color'] ?>--<?php endif; ?>"><?= $stat['value_before']; ?><span id="product-stats__value_<?= $stat['value_id']; ?>" data-animstart="<?= $stat['value_start']; ?>" data-animvalue="<?= $stat['value']; ?>" data-animdecimal="<?= $stat['value_decimals']; ?>"><?= $stat['value']; ?></span><?= $stat['value_after']; ?></div>
-    <div class="type0 product-stats__p">
+  <<?= $data['h_el']; ?> <?php component_class('product-stats'); ?>>
+    <span class="type2 product-stats__value<?php if (!empty($stat['stat_color'])) : ?> <?= $stat['stat_color'] ?>--<?php endif; ?>"><?= $stat['value_before']; ?><span id="product-stats__value_<?= $stat['value_id']; ?>" data-animstart="<?= $stat['value_start']; ?>" data-animvalue="<?= $stat['value']; ?>" data-animdecimal="<?= $stat['value_decimals']; ?>"><?= $stat['value']; ?></span><?= $stat['value_after']; ?></span>
+    <span class="type0 product-stats__p">
       <?= $stat['text_below']; ?>
-    </div>
-  </div>
+    </span>
+  </<?= $data['h_el']; ?>>
 <?php endforeach; ?>

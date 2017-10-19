@@ -10,6 +10,10 @@ if (empty($data['body_copy'])) {
   return false;
 }
 
+if(empty($data['h_el'])) {
+  $data['h_el'] = 'h1';
+}
+
 // Classes
 $data['classes'][] = 'hero-a';
 

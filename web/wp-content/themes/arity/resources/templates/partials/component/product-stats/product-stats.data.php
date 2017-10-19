@@ -5,6 +5,10 @@ if (empty($data['stats'])) {
   return false;
 }
 
+if(empty($data['h_el'])) {
+  $data['h_el'] = 'h4';
+}
+
 // Loop through each value
 foreach ($data['stats'] as $key => $stat) {
   // Stat value is required

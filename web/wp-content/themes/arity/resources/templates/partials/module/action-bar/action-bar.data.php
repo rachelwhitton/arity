@@ -17,4 +17,8 @@ if ($data['right_headline'] || $data['right_content']) {
   $data['classes'][] = 'has-divider';
 }
 
+if(empty($data['h_el'])) {
+  $data['h_el'] = 'h2';
+}
+
 return $data;

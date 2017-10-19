@@ -15,7 +15,7 @@ namespace App\Theme;
   <div class="container">
     <div class="row">
       <div class="page-footnote__content">
-        <?= $data['body_copy']; ?>
+        <p><?= $data['body_copy']; ?></p>
       </div>
     </div>
   </div>

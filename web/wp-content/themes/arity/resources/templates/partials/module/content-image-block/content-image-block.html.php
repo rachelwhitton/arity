@@ -27,7 +27,7 @@ namespace App\Theme;
       <div class="content-image-block__col narrow--">
         <div class="content-image-block__col-group">
           <?php if (!empty($data['headline'])) : ?>
-            <div class="type3"><?= $data['headline']; ?></div>
+            <<?= $data['h_el']; ?> class="content-image-block__headline type3"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
           <?php endif; ?>
           <?php if (!empty($data['body_copy'])) : ?>
           <div class="type4">

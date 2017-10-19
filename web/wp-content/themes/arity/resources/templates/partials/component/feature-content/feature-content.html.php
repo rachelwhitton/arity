@@ -17,11 +17,11 @@ namespace App\Theme;
       <?php element('eyebrow', array(
         'classes' => 'eyebrow--teal',
         'label' => $data['eyebrow'],
-        // 'el' => 'h2' @todo This should be an h2 tag for SEO purposes
+        'h_el' => updateElImportance($data['h_el'], 1)
       )); ?>
       <?php if (!empty($data['headline'])) : ?>
         <?php // @todo This should be an h1 tag for SEO purposes ?>
-        <div class="feature-content__header"><?= $data['headline']; ?></div>
+        <<?= $data['h_el']; ?> class="feature-content__header"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
       <?php endif; ?>
     </div>
   </div>

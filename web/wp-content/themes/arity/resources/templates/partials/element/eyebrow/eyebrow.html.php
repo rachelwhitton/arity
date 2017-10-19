@@ -10,4 +10,4 @@ namespace App\Theme;
 */
 ?>
 
-<<?= $data['el']; ?> <?php element_class($data['classes']); ?>><?= $data['label'] ?></<?= $data['el']; ?>>
+<<?= $data['h_el']; ?> <?php element_class($data['classes']); ?>><?= $data['label'] ?></<?= $data['h_el']; ?>>

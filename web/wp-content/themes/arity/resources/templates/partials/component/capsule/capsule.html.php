@@ -12,12 +12,14 @@ namespace App\Theme;
 */
 ?>
 <div <?php component_class('capsule'); ?>>
-  <h3 class="capsule__header"><?= $data['headline']; ?></h3>
+  <<?= $data['h_el']; ?> class="capsule__header"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
   <div class="capsule__text">
     <?= apply_filters('the_content', $data['body_copy']); ?>
   </div>
-  <?php
-    $data['cta']['classes'] = array('button--primary');
-    element('button', $data['cta']);
-  ?>
+  <p>
+    <?php
+      $data['cta']['classes'] = array('button--primary');
+      element('button', $data['cta']);
+    ?>
+  </p>
 </div>

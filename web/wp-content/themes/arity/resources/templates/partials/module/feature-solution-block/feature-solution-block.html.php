@@ -15,7 +15,7 @@ namespace App\Theme;
 <div <?php module_class('feature-solution-block'); ?>>
   <div class="container">
     <?php if (!empty($data['headline'])) : ?>
-      <div class="type4 typeBold feature-solution-block__headline"><?= $data['headline']; ?></div>
+      <<?= $data['h_el']; ?> class="type4 typeBold feature-solution-block__headline"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
     <?php endif; ?>
     <div class="row">
       <?php foreach ($data['blocks'] as $block) : ?>

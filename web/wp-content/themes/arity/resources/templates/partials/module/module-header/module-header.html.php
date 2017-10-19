@@ -16,7 +16,7 @@ namespace App\Theme;
     <div class="row">
       <?php if (!empty($data['headline'])) : ?>
         <div class="type3 module-header__headline wide">
-          <?= $data['headline']; ?>
+          <<?= $data['h_el']; ?> class="module-header__headline-headline"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
         </div>
       <?php endif; ?>
     </div>

@@ -16,7 +16,7 @@ Since:              1.0.0
   <div class="container">
     <div class="leadgen-form__col">
       <?php if (!empty($data['headline'])) : ?>
-        <h3><?= $data['headline']; ?></h3>
+        <<?= $data['h_el']; ?> class="leadgen-form__title"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
       <?php endif; ?>
 
       <form id="app__form__form" name="app__form__form" class="leadgen-form-inner" action="<?= $data['form_url']; ?>" method="POST">

@@ -64,3 +64,11 @@ function wrapSymbols($content)
 
     return $content;
 }
+
+function updateElImportance(string $el, $interval = 0)
+{
+    preg_match_all('/^([^\d]+)(\d+)/', $el, $parts);
+    $el = $parts[1][0] . ($parts[2][0] + $interval);
+
+    return $el;
+}

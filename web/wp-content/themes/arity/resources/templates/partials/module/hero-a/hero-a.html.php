@@ -16,13 +16,15 @@ namespace App\Theme;
   <div class="container">
     <div class="row">
       <div class="hero-a__col left--">
-        <div class="type2 hero-a__title"><?= $data['headline']; ?></div>
+        <<?= $data['h_el']; ?> class="type2 hero-a__title"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
         <div class="hero-a__content type4"><?= apply_filters('the_content', $data['body_copy']); ?></div>
         <?php if (!empty($data['cta'])) : ?>
-          <?php
-            $data['cta']['classes'] = array('button--primary', 'blue-button--', 'scroll-to-form--');
-            element('button', $data['cta']);
-          ?>
+          <p>
+            <?php
+              $data['cta']['classes'] = array('button--primary', 'blue-button--', 'scroll-to-form--');
+              element('button', $data['cta']);
+            ?>
+          </p>
         <?php endif; ?>
       </div>
       <?php if (!empty($data['image_id'])) : ?>
