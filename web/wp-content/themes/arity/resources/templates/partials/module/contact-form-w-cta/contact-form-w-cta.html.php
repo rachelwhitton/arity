@@ -11,7 +11,7 @@ namespace App\Theme;
   Since:              1.0.0
 */
 ?>
-<div <?php module_class($data['classes']); ?>>
+<div <?php module_class($data['classes']); ?> id="contact">
   <div class="container">
     <?php if (!empty($data['headline'])) : ?>
       <div class="row">
