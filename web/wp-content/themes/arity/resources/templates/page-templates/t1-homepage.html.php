@@ -37,9 +37,9 @@ $GLOBALS['h1_used'] = false;
     <div class="app__home">
       <?php
         $i = 0;
-        foreach ($acf_fields['t1__sections'] as $key => $section) : ?>
-        <div data-scrim-trigger="<?php echo $i++; ?>">
-          <section id="<?= $section['id']; ?>" class="app__home__section">
+        foreach ($acf_fields['t1__sections'] as $key => $section) : $i++; ?>
+        <div data-scrim-trigger="<?php echo $i; ?>">
+          <section id="<?= $section['id']; ?>" class="app__home__section<?php if($i==1) : ?> --first<?php endif; ?>">
             <?php the_partials($section['modules']); ?>
           </section>
         </div>
