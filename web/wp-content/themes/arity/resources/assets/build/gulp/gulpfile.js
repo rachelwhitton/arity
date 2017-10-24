@@ -52,6 +52,9 @@ require('./recipes/svg-sprite')(gulp, production);
 // Copy font files from assets to dist
 require('./recipes/fonts')(gulp);
 
+// Copy static files from assets to dist
+require('./recipes/statics')(gulp);
+
 // Deletes the build folder entirely.
 require('./recipes/clean')(gulp);
 
@@ -68,7 +71,8 @@ gulp.task('build',
     'svgs',
     'styles',
     'scripts',
-    'fonts'
+    'fonts',
+    'statics'
   ]
 );
 

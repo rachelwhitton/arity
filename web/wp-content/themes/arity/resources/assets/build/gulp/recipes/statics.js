@@ -4,11 +4,11 @@ module.exports = function (gulp) {
   var config = gulp.config,
   paths = config.paths;
   gulp.task(
-    'fonts',
-    'Copy the fonts directory to dist.',
+    'statics',
+    'Copy the statics directory to dist.',
     function() {
-        gulp.src(paths.assets + '/fonts/*')
-        .pipe(gulp.dest(paths.dist + '/fonts'));
+        gulp.src(paths.assets + '/static/**/*')
+        .pipe(gulp.dest(paths.dist));
     }
   );
 };
