@@ -2,7 +2,6 @@
 namespace App\Theme;
 
 ?>
-
 <?php get_header() ?>
 
 <?php template('layout/content') ?>
