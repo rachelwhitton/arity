@@ -315,7 +315,7 @@ add_action('partial_class', function (array $classes) {
  * @return void
  */
 add_action('theme/head', function () {
-    $assets_folder = config('paths')['uri'] . '/' . config('directories')['assets'];
+    $assets_folder = config('paths')['uri'] . '/' . config('directories')['dist'];
 
     echo <<<EOD
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
