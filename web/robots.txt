@@ -7,4 +7,4 @@ Disallow: /wp/
 Disallow: /trackback/
 Disallow: /xmlrpc.php
 Disallow: /feed/
-Sitemap: https://www.arity.com/sitemap.xml
+Sitemap: https://www.arity.com/sitemap_index.xml
