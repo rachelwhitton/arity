@@ -190,6 +190,75 @@ add_action('wp_dashboard_setup', function () {
 
 /*
 |-----------------------------------------------------------------
+| Analytics
+|-----------------------------------------------------------------
+|
+| Configurations for Analytics.
+|
+*/
+
+/**
+ * Add Google Analytics.
+ * @since 1.0.0
+ * @return void
+ */
+$google_analytics_id = 'UA-90423861-1';
+$google_optimize_id = 'GTM-NXP3NJ2';
+add_action('wp_head', function () use ($google_analytics_id, $google_optimize_id) {
+
+    if( empty($google_analytics_id) ) {
+        return;
+    }
+
+    if( !empty(WP_ENV) && WP_ENV != 'production' ) {
+        return;
+    }
+
+    echo <<<EOD
+
+<!-- Google Analytics -->
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', '$google_analytics_id', 'auto');
+ga('send', 'pageview');
+
+// Google Optimize
+ga('require', '$google_optimize_id');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!-- End Google Analytics -->
+
+EOD;
+});
+
+/**
+ * Add Hot Jar Tracking Code.
+ * @since 1.0.0
+ * @return void
+ */
+$hotjar_tracking_code = '426469';
+add_action('wp_head', function () use($hotjar_tracking_code) {
+    if( empty($hotjar_tracking_code) ) {
+        return;
+    }
+
+    if( !empty(WP_ENV) && WP_ENV != 'production' ) {
+        return;
+    }
+
+    echo <<<EOD
+
+<!-- Hotjar Tracking Code for http://www.arity.com -->
+<script>
+(function(h,o,t,j,a,r){ h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)}; h._hjSettings={hjid:$hotjar_tracking_code,hjsv:5}; a=o.getElementsByTagName('head')[0]; r=o.createElement('script');r.async=1; r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv; a.appendChild(r); })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+<!-- End Hotjar Tracking Code -->
+
+EOD;
+});
+
+/*
+|-----------------------------------------------------------------
 | Login Configurations
 |-----------------------------------------------------------------
 |

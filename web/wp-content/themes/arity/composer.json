@@ -3,8 +3,8 @@
     "type": "wordpress-theme",
     "autoload": {
         "psr-4": {
-            "Arity\\": "app/lib/arity/src/Arity",
-            "ModuleBuilder\\": "app/lib/arity/src/ModuleBuilder"
+            "Arity\\": "app/plugins/arity/src/Arity",
+            "ModuleBuilder\\": "app/plugins/arity/src/ModuleBuilder"
         }
     },
     "require": {
