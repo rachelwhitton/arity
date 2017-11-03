@@ -31,6 +31,9 @@ if (defined('PANTHEON_BINDING')) :
     define('WP_TEMP_DIR', sprintf('/srv/bindings/%s/tmp', PANTHEON_BINDING));
 endif;
 
+echo $_ENV['PANTHEON_ENVIRONMENT'];
+exit;
+
 // For Pantheon test and live sites use production, all others environments use development
 if (!defined('WP_ENV')) {
     define('WP_ENV', 'production');
