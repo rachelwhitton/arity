@@ -217,13 +217,47 @@ add_action('wp_head', function () use ($google_analytics_id, $google_optimize_id
 
 <!-- Google Analytics -->
 <script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
 ga('create', '$google_analytics_id', 'auto');
 ga('send', 'pageview');
-
 </script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!-- End Google Analytics -->
+
+EOD;
+});
+
+/**
+ * Add Google Tag Manager.
+ * @since 1.0.0
+ * @return void
+ */
+$gtag_id = false;
+add_action('wp_head', function () use ($gtag_id) {
+
+    if( empty($gtag_id) ) {
+        return;
+    }
+
+    if( !empty(WP_ENV) && WP_ENV != 'production' ) {
+        return;
+    }
+
+    echo <<<EOD
+
+<!-- Google Tag Manager -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=$gtag_id"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', '$gtag_id');
+</script>
+<!-- End Google Tag Manager -->
 
 EOD;
 });
