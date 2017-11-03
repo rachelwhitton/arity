@@ -203,7 +203,6 @@ add_action('wp_dashboard_setup', function () {
  * @return void
  */
 $google_analytics_id = 'UA-90423861-1';
-$google_optimize_id = 'GTM-NXP3NJ2';
 add_action('wp_head', function () use ($google_analytics_id, $google_optimize_id) {
 
     if( empty($google_analytics_id) ) {
@@ -222,8 +221,6 @@ window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 ga('create', '$google_analytics_id', 'auto');
 ga('send', 'pageview');
 
-// Google Optimize
-ga('require', '$google_optimize_id');
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 <!-- End Google Analytics -->
@@ -248,11 +245,46 @@ add_action('wp_head', function () use($hotjar_tracking_code) {
 
     echo <<<EOD
 
-<!-- Hotjar Tracking Code for http://www.arity.com -->
+<!-- Hotjar -->
 <script>
 (function(h,o,t,j,a,r){ h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)}; h._hjSettings={hjid:$hotjar_tracking_code,hjsv:5}; a=o.getElementsByTagName('head')[0]; r=o.createElement('script');r.async=1; r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv; a.appendChild(r); })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
-<!-- End Hotjar Tracking Code -->
+<!-- End Hotjar -->
+
+EOD;
+});
+
+/**
+ * Add Adobe DTM Tracking Code.
+ * @since 1.0.0
+ * @return void
+ */
+$adobe_dtm_tracking_code = '0893390c40d93db48cc0d98a10c4fe9f90b72e2c';
+add_action('wp_head', function () use($adobe_dtm_tracking_code) {
+    if( !empty(WP_ENV) && WP_ENV != 'production' ) {
+        $adobe_dtm_tracking_code .= '-staging';
+    }
+
+    echo <<<EOD
+
+<!-- Adobe DTM -->
+<script src="//assets.adobedtm.com/b46e318d845250834eda10c5a20827c045a4d76f/satelliteLib-$$adobe_dtm_tracking_code.js"></script>
+<!-- End Adobe DTM -->
+
+EOD;
+});
+
+/**
+ * Add Adobe DTM Tracking Code for Footer.
+ * @since 1.0.0
+ * @return void
+ */
+add_action('wp_footer', function () {
+    echo <<<EOD
+
+<!-- Adobe DTM -->
+<script type="text/javascript">_satellite.pageBottom();</script>
+<!-- End Adobe DTM -->
 
 EOD;
 });

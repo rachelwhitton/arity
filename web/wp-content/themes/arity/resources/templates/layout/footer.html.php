@@ -41,7 +41,7 @@ namespace App\Theme;
         <nav class="social-nav" role="navigation">
           <ul class="navlist social-nav__list">
             <li class="social-nav__item">
-              <a class="social-nav__link linkedin--" href="https://linkedin.com/company/arity" target="_blank" aria-label="LinkedIn">
+              <a class="social-nav__link linkedin--" href="https://www.linkedin.com/company/arity" target="_blank" aria-label="LinkedIn">
                 <svg class="site-footer__icon icon-svg" title="" role="img">
                   <use xlink:href="#social-linkedin"></use>
                 </svg>
