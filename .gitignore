@@ -61,7 +61,15 @@ web/wp-content/plugins/*
 
 # WordPress mu-plugins
 !web/wp-content/mu-plugins/
-!web/wp-content/mu-plugins/*
+web/wp-content/mu-plugins/*
+!web/wp-content/mu-plugins/index.php
+!web/wp-content/mu-plugins/.gitkeep
+!web/wp-content/mu-plugins/bedrock-autoloader.php
+!web/wp-content/mu-plugins/disallow-indexing.php
+!web/wp-content/mu-plugins/register-theme-directory.php
+!web/wp-content/mu-plugins/pantheon/
+!web/wp-content/mu-plugins/pantheon.php
+!web/wp-content/mu-plugins/disable-htaccess-rewrite-rules.php
 
 # WordPress themes
 !web/wp-content/themes/
