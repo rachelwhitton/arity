@@ -21,6 +21,9 @@ find scripts/ -name "*.sh" -exec chmod +x {} \;
 # Add dotenv configs
 [ -f '.env' ] && export $(egrep -v '^#' .env | xargs)
 
+# Install dependencies
+./scripts/check-build-dependencies.sh
+
 # Check for composer.json file
 if [ ! -f "composer.json" ]
 then
@@ -33,10 +36,9 @@ export COMPOSER_DISCARD_CHANGES=1
 export COMPOSER_NO_INTERACTION=1
 
 # Install Composer dependencies
-COMPOSER=`which composer`
 
-echo -e "\nInvoking: $COMPOSER build-assets"
-$COMPOSER build-assets
+echo -e "\nInvoking: composer build-dev-assets"
+composer build-dev-assets
 
-echo -e "\nInvoking: $COMPOSER build-theme-assets"
-$COMPOSER build-theme-assets
+echo -e "\nInvoking: composer build-theme-assets"
+composer build-theme-assets

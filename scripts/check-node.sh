@@ -1,16 +1,27 @@
 #!/usr/bin/env bash
 
 # Check for composer
-export NODE=`which node`
+NODE=`which node`
 if [ ! -x "$NODE" ]
 then
-
-  echo Error: executable node not found on path
+  echo -e "\nError: executable node not found on path"
   exit 1
-
-else
-	echo Success: executable node was found on path. Nothing to install.
 fi
 
-# Install global npm packages
-npm install --global gulp grunt-cli yarn
+# Check for npm
+NPM=`which npm`
+if [ ! -x "$NPM" ]
+then
+  echo -e "\nError: executable npm not found on path"
+  echo -e "\nRunning 'npm install --global npm'"
+	npm install --global npm
+fi
+
+# Check for gulp
+GULP=`which gulp`
+if [ ! -x "$GULP" ]
+then
+	echo -e "\nError: executable gulp not found on path"
+  echo -e "\nRunning 'npm install --global gulp'"
+	npm install --global gulp
+fi

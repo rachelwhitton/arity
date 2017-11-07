@@ -15,7 +15,6 @@
 # | Wordpress                                                          |
 # ----------------------------------------------------------------------
 
-# BEGIN WordPress
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
@@ -37,4 +36,6 @@
   RewriteRule . wp/index.php [L]
 
 </IfModule>
+
+# BEGIN WordPress
 # END WordPress

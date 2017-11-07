@@ -29,13 +29,12 @@ export COMPOSER_DISCARD_CHANGES=1
 export COMPOSER_NO_INTERACTION=1
 
 # Install Composer dependencies
-COMPOSER=`which composer`
 
-echo -e "\nInvoking: $COMPOSER build-dev-assets"
-$COMPOSER build-dev-assets
+echo -e "\nInvoking: composer build-dev-assets"
+composer build-dev-assets
 
-echo -e "\nInvoking: $COMPOSER build-theme-assets"
-$COMPOSER build-theme-assets
+echo -e "\nInvoking: composer build-theme-assets"
+composer build-theme-assets
 
-echo -e "\nInvoking: $COMPOSER test"
-$COMPOSER test
+echo -e "\nInvoking: composer test"
+composer test

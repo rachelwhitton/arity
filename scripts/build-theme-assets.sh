@@ -9,30 +9,6 @@ set -o nounset
 # Build assets with gulp
 #
 
-# Check for gulp
-GULP=`which gulp`
-if [ ! -x "$GULP" ]
-then
-	echo Error: executable gulp not found on path
-	exit 1
-fi
-
-# Check for yarn
-YARN=`which yarn`
-if [ ! -x "$YARN" ]
-then
-	echo Error: executable yarn not found on path
-	exit 1
-fi
-
-# Check for npm
-NPM=`which npm`
-if [ ! -x "$NPM" ]
-then
-	echo Error: executable npm not found on path
-	exit 1
-fi
-
 # Look for composer.json
 echo -e "\nLooking for composer.json in themes directory.."
 FILE=composer.json
@@ -56,22 +32,30 @@ echo -e "\nLooking for package.json in themes directory..."
 FILE=package.json
 for d in `find ./web/wp-content/themes \( -name node_modules -or -name .git -or -name vendor \) -prune -o -name "$FILE" | grep "$FILE"`
 do
-	# Change into containing directory
+  # Change into containing directory
 	echo -e "\npackage.json found, changing directories into: ${d%/*}"
 	cd ${d%/*}
 
-  # Run yarn install
-	echo -e "\nRunning 'yarn install'"
-  $YARN install
+  # Run npm install
+	echo -e "\nRunning 'npm install'"
+  npm install
+
+  #
+  # Customize
+  #
 
   # Run npm run dist
   echo -e "\nRunning 'npm run dist-allow-lint-errors'"
-  npm run dist
+  npm run dist-allow-lint-errors
 
   # Run yarn install production
   # This removes dev node_modules and only leaves production requirred packages
-	echo -e "\nRunning 'yarn install'"
-  $YARN install --production=true
+	echo -e "\nRunning 'npm install --production=true'"
+  npm install --production=true
+
+  #
+  # End Customize
+  #
 
 	# Change back again
 	echo -e "\nchanged directories back into:"
