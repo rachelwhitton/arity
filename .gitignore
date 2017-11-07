@@ -55,7 +55,9 @@ web/wp-content/uploads/*
 
 # WordPress plugins
 !web/wp-content/plugins/
-!web/wp-content/plugins/*
+web/wp-content/plugins/*
+!web/wp-content/plugins/index.php
+!web/wp-content/plugins/.gitkeep
 
 # WordPress mu-plugins
 !web/wp-content/mu-plugins/
