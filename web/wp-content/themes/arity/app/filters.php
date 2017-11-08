@@ -203,7 +203,7 @@ add_action('wp_dashboard_setup', function () {
  * @return void
  */
 $google_analytics_id = 'UA-90423861-1';
-add_action('wp_head', function () use ($google_analytics_id, $google_optimize_id) {
+add_action('wp_head', function () use ($google_analytics_id) {
 
     if( empty($google_analytics_id) ) {
         return;
@@ -646,3 +646,27 @@ add_filter('acf/format_value/type=wysiwyg', function ($value) {
     $value = apply_filters('the_content', $value);
     return $value;
 }, 10, 3);
+
+/**
+ * Dynamically create a robots.txt file
+ * @since 1.0.0
+ * @param string $output
+ * @return string
+ */
+add_filter('robots_txt', function ($output) {
+    $sitemap = home_url('/sitemap.xml');
+
+    return <<<EOD
+# www.robotstxt.org/
+
+# Allow crawling of all content
+User-agent: *
+Disallow: /wp-admin/
+Disallow: /wp/
+Disallow: /trackback/
+Disallow: /xmlrpc.php
+Disallow: /feed/
+Sitemap: $sitemap
+EOD;
+
+}, 10,  2);

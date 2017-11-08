@@ -27,8 +27,8 @@
             "host": "localhost",
             "port": 8000,
             "https": {
-                "key": "../../../../config/certs/arity.dev.key",
-                "cert": "../../../../config/certs/arity.dev.crt"
+                "key": "../../../../config/certs/arity.localhost.key",
+                "cert": "../../../../config/certs/arity.localhost.crt"
             },
             "open": false,
             "files": [

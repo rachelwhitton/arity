@@ -17,11 +17,6 @@ find scripts/ -name "*.sh" -exec chmod +x {} \;
 # Check for composer
 ./scripts/check-composer.sh
 
-COMPOSER_ALLOW_XDEBUG=0
-
-# Enable Composer parallel downloads
-composer global require -n "hirak/prestissimo:^0.3"
-
 #===============================
 # Node Dependencies
 #===============================
