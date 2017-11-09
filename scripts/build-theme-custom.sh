@@ -20,8 +20,8 @@ if [[ -n "${_dist:-}" ]]; then
   npm run dist-allow-lint-errors
 
   # This removes dev node_modules and only leaves production requirred packages
-  echo -e "\nInvoking: 'npm install --production=true'"
-  npm install --production=true
+  echo -e "\nInvoking: 'npm install --only=production'"
+  npm install --only=production
 
 else
   # Run npm run dev

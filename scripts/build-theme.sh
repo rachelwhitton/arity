@@ -17,6 +17,13 @@ __file="${__dir}/$(basename "${BASH_SOURCE[0]}")"
 __base="$(basename ${__file} .sh)"
 __root="$(cd "$(dirname "${__dir}")" && pwd)" # <-- change this as it depends on your app
 
+# Get current git branch
+GIT_BRANCH=${1:-}
+if [[ -z "${GIT_BRANCH}" ]]; then
+  GIT_BRANCH=`git rev-parse --abbrev-ref HEAD`
+fi
+export GIT_BRANCH
+
 #
 # Build composer dependencies
 #
