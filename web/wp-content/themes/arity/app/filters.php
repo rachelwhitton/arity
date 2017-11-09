@@ -295,14 +295,18 @@ EOD;
  */
 $adobe_dtm_tracking_code = '0893390c40d93db48cc0d98a10c4fe9f90b72e2c';
 add_action('wp_head', function () use($adobe_dtm_tracking_code) {
-    if( !empty(WP_ENV) && WP_ENV != 'production' ) {
+    if( !empty(WP_ENV) && !in_array(WP_ENV, array('production','staging'))) {
+        return;
+    }
+
+    if( WP_ENV == 'staging' ) {
         $adobe_dtm_tracking_code .= '-staging';
     }
 
     echo <<<EOD
 
 <!-- Adobe DTM -->
-<script src="//assets.adobedtm.com/b46e318d845250834eda10c5a20827c045a4d76f/satelliteLib-$$adobe_dtm_tracking_code.js"></script>
+<script src="//assets.adobedtm.com/b46e318d845250834eda10c5a20827c045a4d76f/satelliteLib-$adobe_dtm_tracking_code.js"></script>
 <!-- End Adobe DTM -->
 
 EOD;
@@ -314,6 +318,10 @@ EOD;
  * @return void
  */
 add_action('wp_footer', function () {
+    if( !empty(WP_ENV) && !in_array(WP_ENV, array('production','staging'))) {
+        return;
+    }
+
     echo <<<EOD
 
 <!-- Adobe DTM -->
