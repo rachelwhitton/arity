@@ -15,6 +15,7 @@ set -o nounset
 find scripts/ -name "*.sh" -exec chmod +x {} \;
 
 # Accept arguments
+_args=$@
 while [ $# -ne 0 ]
 do
     arg="$1"
@@ -24,6 +25,9 @@ do
             ;;
         --dist)
             _dist=true
+            ;;
+        --install)
+            _install=true
             ;;
         *)
             ;;
@@ -40,23 +44,27 @@ echo -e "\nStart Build"
 # Check dependencies
 ./scripts/check-build-dependencies.sh
 
-echo -e "\nInvoking: composer build-assets"
-composer build-assets
+if [[ -z "${_skipTests:-}" ]]; then
 
-if [[ -n "${_dist:-}" ]]; then
-
-  echo -e "\nInvoking: composer build-theme-assets --dist"
-  composer build-theme-assets --dist
+  echo -e "\nInvoking: composer build-assets"
+  composer build-assets
 
 else
 
-  echo -e "\nInvoking: composer build-theme-assets"
-  composer build-theme-assets
-
+  echo -e "\nInvoking: composer build-assets-dist"
+  composer build-assets-dist
 fi
+
+echo -e "\nInvoking: composer build-theme-assets -- $_args"
+composer build-theme-assets -- $_args
 
 echo -e "\nBuild Success"
 echo -e "\n"
+
+if [[ ! -z "${_install:-}" ]]; then
+  # Check dependencies
+  ./scripts/wp-install.sh
+fi
 
 if [[ -z "${_skipTests:-}" ]]; then
 
@@ -65,5 +73,4 @@ if [[ -z "${_skipTests:-}" ]]; then
 
   echo -e "\nTesting Success"
   echo -e "\n"
-
 fi

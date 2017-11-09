@@ -1,14 +1,30 @@
 #!/usr/bin/env bash
 
-# Run npm run dev
-echo -e "\nRunning 'npm run dev'"
-npm run dev
+# Accept arguments
+while [ $# -ne 0 ]
+do
+    arg="$1"
+    case "$arg" in
+        --dist)
+            _dist=true
+            ;;
+        *)
+            ;;
+    esac
+    shift
+done
 
-# Run npm run dist
-# echo -e "\nRunning 'npm run dist-allow-lint-errors'"
-# npm run dist-allow-lint-errors
+if [[ -n "${_dist:-}" ]]; then
+  # Run npm run dist
+  echo -e "\nInvoking: 'npm run dist-allow-lint-errors'"
+  npm run dist-allow-lint-errors
 
-# Run yarn install production
-# This removes dev node_modules and only leaves production requirred packages
-# echo -e "\nRunning 'npm install --production=true'"
-# npm install --production=true
+  # This removes dev node_modules and only leaves production requirred packages
+  echo -e "\nInvoking: 'npm install --production=true'"
+  npm install --production=true
+
+else
+  # Run npm run dev
+  echo -e "\nInvoking: 'npm run dev'"
+  npm run dev
+fi

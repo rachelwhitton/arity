@@ -31,7 +31,7 @@ do
 	cd ${d%/*}
 
 	# Run composer install with --no-dev.
-	echo -e "\nRunning 'composer install'"
+	echo -e "\nInvoking: 'composer install'"
   composer install --no-dev --no-ansi --no-interaction --optimize-autoloader --no-progress
 
 	# Change back again
@@ -53,12 +53,12 @@ do
 	cd ${d%/*}
 
   # Run npm install
-	echo -e "\nRunning 'npm install'"
+	echo -e "\nInvoking: 'npm install'"
   npm install
 
   if [ -e "${__root}/scripts/build-theme-custom.sh" ]; then
     echo -e "\nFound custom theme build file"
-    ${__root}/scripts/build-theme-custom.sh
+    ${__root}/scripts/build-theme-custom.sh $@
   fi
 
 	# Change back again

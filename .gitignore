@@ -83,6 +83,7 @@ web/wp-content/mu-plugins/*
 !web/wp-content/plugins/wp-migrate-db-pro
 !web/wp-content/plugins/wp-migrate-db-pro-cli
 !web/wp-content/plugins/wp-migrate-db-pro-media-files
+!web/wp-content/mu-plugins/wp-migrate-db-pro-compatibility.php
 !web/wp-content/mu-plugins/disable-wp-admin.php
 !web/wp-content/mu-plugins/disable-plugins-for-development.php
 

@@ -9,5 +9,9 @@ Author URI:   https://www.vsapartners.com
 License:      MIT License
 */
 
+if ( defined( 'WP_CLI' ) && WP_CLI  ) {
+	return;
+}
+
 // Stop WordPress from modifying .htaccess permalink rules
-add_filter('flush_rewrite_rules_hard','__return_false');
+add_filter('flush_rewrite_rules_hard','__return_false', 10, 1 );
