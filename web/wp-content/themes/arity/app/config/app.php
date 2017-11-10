@@ -1,6 +1,16 @@
 <?php
 
+$pkg = json_decode(file_get_contents(get_template_directory() .'/package.json'));
+
 return [
+    /*
+    |--------------------------------------------------------------------------
+    | Theme General
+    |--------------------------------------------------------------------------
+    |
+    */
+    'version' => $pkg->version,
+    'patterns-version' => '1.0.0',
 
     /*
     |--------------------------------------------------------------------------
@@ -123,7 +133,7 @@ return [
     */
     'jquery' => [
         'use_cdn' => true,
-        'version' => '3.2.1',
+        'version' => !empty($pkg->dependencies->jquery) ? $pkg->dependencies->jquery : null,
         'local_fallback' => (str_replace(home_url(), '', get_template_directory_uri())) . '/node_modules/jquery/dist/jquery.min.js',
     ],
 ];

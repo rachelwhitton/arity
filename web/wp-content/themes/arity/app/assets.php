@@ -25,16 +25,16 @@ use function App\Theme\asset_path;
  */
 function register_stylesheets()
 {
-    $arity = "//patterns.arity.vsadev.com/1.0.0/css/style.css";
+    $arity = "//patterns.arity.vsadev.com/" . config('patterns-version') . "/css/style.css";
     if(!empty(WP_ENV) && WP_ENV == "staging") {
       $arity = "//patterns.arity.vsadev.com/latest/css/style.css";
     } else if(!empty(WP_ENV) && WP_ENV == "development") {
-      $arity = "//dev.patterns.arity.vsadev.com/css/style.css";
-      // $arity = "https://localhost:3000/css/style.css";
+      // $arity = "//dev.patterns.arity.vsadev.com/css/style.css";
+      $arity = "https://localhost:3000/css/style.css";
     }
 
     wp_enqueue_style('arity', $arity, null, null);
-    wp_enqueue_style('main', asset_path('css/main.css'), null, '1.0.0');
+    wp_enqueue_style('main', asset_path('css/main.css'), null, config('version'));
 }
 add_action('wp_enqueue_scripts', __namespace__ . '\\register_stylesheets');
 
@@ -60,16 +60,16 @@ add_action('wp_enqueue_scripts', __namespace__ . '\\register_vendor_scripts');
  */
 function register_scripts()
 {
-    $arity = "//patterns.arity.vsadev.com/1.0.0/js/arity.js";
+    $arity = "//patterns.arity.vsadev.com/" . config('patterns-version') . "/js/arity.js";
     if(!empty(WP_ENV) && WP_ENV == "staging") {
       $arity = "//patterns.arity.vsadev.com/latest/js/arity.js";
     } else if(!empty(WP_ENV) && WP_ENV == "development") {
-      $arity = "//dev.patterns.arity.vsadev.com/js/arity.js";
-      // $arity = "https://localhost:3000/js/arity.js";
+      // $arity = "//dev.patterns.arity.vsadev.com/js/arity.js";
+      $arity = "https://localhost:3000/js/arity.js";
     }
 
     wp_enqueue_script('arity', $arity, array( 'jquery', 'ScrollMagic-tweenMax', 'ScrollMagic', 'ScrollMagic-animation' ), null, true);
-    wp_enqueue_script('main', asset_path('js/main.js'), array( 'jquery' ), '1.0.0', true);
+    wp_enqueue_script('main', asset_path('js/main.js'), array( 'jquery' ), config('version'), true);
 }
 add_action('wp_enqueue_scripts', __namespace__ . '\\register_scripts');
 
@@ -145,7 +145,7 @@ function jquery_local_fallback($src, $handle = null)
 
     if ($handle === 'jquery') {
         // Check for jQuery local fallback in config
-        if (empty($jquery_fallback = config('jquery')['local_fallback'])) {
+        if (empty($jquery_fallback = config('jquery')['local_fallback']) || empty(config('jquery')['version'])) {
             // Didn't provide local fallback and requested an unknown version to WP
             if (config('jquery')['version']) {
                 return $src;
@@ -193,8 +193,8 @@ add_action('admin_init', __namespace__ . '\\register_editor_stylesheets');
  */
 function register_login_stylesheets()
 {
-    wp_enqueue_style('main', asset_path('css/main.css'), null, '1.0.0');
-    // wp_enqueue_script('main', asset_path('js/main.js'), null, '1.0.0', true);
+    wp_enqueue_style('main', asset_path('css/main.css'), null, config('version'));
+    // wp_enqueue_script('main', asset_path('js/main.js'), null, config('version'), true);
 }
 add_action('login_enqueue_scripts', __namespace__ . '\\register_login_stylesheets');
 
