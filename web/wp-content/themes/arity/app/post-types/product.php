@@ -19,17 +19,15 @@ add_action('init', function () {
         ),
         'description'         => '',
         'public'              => true,
-        'publicly_queryable'  => false,
-        'exclude_from_search' => true,
         'supports'            => array('title','revisions','page-attributes','excerpt','thumbnail'),
         'hierarchical'        => false,
-        'show_in_menu'        => 'edit.php?post_type=page',
+        'show_in_menu'        => true, // or use 'edit.php?post_type=page'
         'has_archive'         => false,
-        'rewrite'             => false,
+        'rewrite'             => array( 'slug' => 'product', 'with_front' => false ),
         'query_var'           => true,
         'can_export'          => true,
         'show_in_nav_menus'   => false,
-        'capability_type'     => 'page'
+        'capability_type'     => 'post'
         )
     );
 });

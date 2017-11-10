@@ -465,6 +465,8 @@ add_action('theme/head', function () {
   <meta name="format-detection" content="telephone=no">
 
   <!-- Favicon & App Icons -->
+  <link rel="shortcut icon" href="$assets_folder/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="$assets_folder/icons/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" sizes="57x57" href="$assets_folder/icons/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="$assets_folder/icons/apple-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="$assets_folder/icons/apple-icon-72x72.png">

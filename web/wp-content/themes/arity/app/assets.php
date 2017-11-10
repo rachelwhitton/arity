@@ -25,8 +25,16 @@ use function App\Theme\asset_path;
  */
 function register_stylesheets()
 {
-    wp_enqueue_style('arity', '//dev.patterns.arity.vsadev.com/css/style.css', null, '0.0.1');
-    wp_enqueue_style('main', asset_path('css/main.css'), null, '1.0.0-alpha.1');
+    $arity = "//patterns.arity.vsadev.com/1.0.0/css/style.css";
+    if(!empty(WP_ENV) && WP_ENV == "staging") {
+      $arity = "//patterns.arity.vsadev.com/latest/css/style.css";
+    } else if(!empty(WP_ENV) && WP_ENV == "development") {
+      $arity = "//dev.patterns.arity.vsadev.com/css/style.css";
+      // $arity = "https://localhost:3000/css/style.css";
+    }
+
+    wp_enqueue_style('arity', $arity, null, null);
+    wp_enqueue_style('main', asset_path('css/main.css'), null, '1.0.0');
 }
 add_action('wp_enqueue_scripts', __namespace__ . '\\register_stylesheets');
 
@@ -52,8 +60,16 @@ add_action('wp_enqueue_scripts', __namespace__ . '\\register_vendor_scripts');
  */
 function register_scripts()
 {
-    wp_enqueue_script('arity', '//dev.patterns.arity.vsadev.com/js/arity.js', array( 'jquery', 'ScrollMagic-tweenMax', 'ScrollMagic', 'ScrollMagic-animation' ), '0.0.1', true);
-    wp_enqueue_script('main', asset_path('js/main.js'), array( 'jquery' ), '1.0.0-alpha.1', true);
+    $arity = "//patterns.arity.vsadev.com/1.0.0/js/arity.js";
+    if(!empty(WP_ENV) && WP_ENV == "staging") {
+      $arity = "//patterns.arity.vsadev.com/latest/js/arity.js";
+    } else if(!empty(WP_ENV) && WP_ENV == "development") {
+      $arity = "//dev.patterns.arity.vsadev.com/js/arity.js";
+      // $arity = "https://localhost:3000/js/arity.js";
+    }
+
+    wp_enqueue_script('arity', $arity, array( 'jquery', 'ScrollMagic-tweenMax', 'ScrollMagic', 'ScrollMagic-animation' ), '0.0.1', true);
+    wp_enqueue_script('main', asset_path('js/main.js'), array( 'jquery' ), '1.0.0', true);
 }
 add_action('wp_enqueue_scripts', __namespace__ . '\\register_scripts');
 
@@ -177,8 +193,8 @@ add_action('admin_init', __namespace__ . '\\register_editor_stylesheets');
  */
 function register_login_stylesheets()
 {
-    wp_enqueue_style('main', asset_path('css/main.css'), null, '1.0.0-alpha.1');
-    // wp_enqueue_script('main', asset_path('js/main.js'), null, '1.0.0-alpha.1', true);
+    wp_enqueue_style('main', asset_path('css/main.css'), null, '1.0.0');
+    // wp_enqueue_script('main', asset_path('js/main.js'), null, '1.0.0', true);
 }
 add_action('login_enqueue_scripts', __namespace__ . '\\register_login_stylesheets');
 
