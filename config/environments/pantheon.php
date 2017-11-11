@@ -32,7 +32,7 @@ if (defined('PANTHEON_BINDING')) :
 endif;
 
 // Define WP_ENV
-if(!empty($_ENV['PANTHEON_ENVIRONMENT']) && $_ENV['PANTHEON_ENVIRONMENT'] == 'live') {
+if(!empty($_ENV['PANTHEON_ENVIRONMENT']) && in_array($_ENV['PANTHEON_ENVIRONMENT'], array('live','test'))) {
     define('WP_ENV', 'production');
 } else {
     define('WP_ENV', 'staging');
