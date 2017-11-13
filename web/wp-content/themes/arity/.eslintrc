@@ -2,7 +2,9 @@
   "root": true,
   "extends": "eslint:recommended",
   "globals": {
-    "wp": true
+    "wp": true,
+    "debug",
+    "ga"
   },
   "env": {
     "node": true,

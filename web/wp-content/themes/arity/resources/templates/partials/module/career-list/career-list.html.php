@@ -45,7 +45,7 @@ namespace App\Theme;
         </div>
         <div class="modal-body--right">
           <p>Heads up: you’re about to be directed to the Allstate careers site. You’re still looking at Arity jobs, but because we were founded by Allstate, we share the same application system.</p>
-          <a id="listing_href" href="#" target="_blank" class="ar-element button button--primary blue-button--" onclick="$('#careers_modal').modal('hide');">
+          <a id="listing_href" href="#" target="_blank" class="ar-element button button--primary blue-button--">
             <svg class="icon-svg" title="" role="img">
               <use xlink:href="#link-external"></use>
             </svg>

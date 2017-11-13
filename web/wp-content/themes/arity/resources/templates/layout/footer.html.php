@@ -8,7 +8,7 @@ namespace App\Theme;
 
     <div class="row">
       <div class="site-footer__col col1--">
-        <a href="<?= home_url(); ?>">
+        <a href="<?= home_url(); ?>" rel="home">
           <svg class="site-footer__logo icon-svg" title="" role="img">
             <use xlink:href="#arity-logo"></use>
           </svg>
@@ -60,7 +60,7 @@ namespace App\Theme;
     </div>
     <div class="row">
       <div class="site-footer__col col5--">
-        <a href="<?= home_url(); ?>">
+        <a href="<?= home_url(); ?>" rel="home">
           <svg class="site-footer__logo icon-svg" title="" role="img">
             <use xlink:href="#arity-logo"></use>
           </svg>
