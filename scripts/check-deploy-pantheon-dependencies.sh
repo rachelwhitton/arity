@@ -4,26 +4,6 @@
 # Check for project deploy dependencies
 #
 
-# Make sure .sh files in bin folder are executable
-find scripts/ -name "*.sh" -exec chmod +x {} \;
-
-# Add dotenv configs
-[ -f '.env' ] && export $(egrep -v '^#' .env | xargs)
-
-#===============================
-# Composer Dependencies
-#===============================
-
-# Check for composer
-./scripts/check-composer.sh
-
-#===============================
-# Node Dependencies
-#===============================
-
-# Check for node
-./scripts/check-node.sh
-
 #===============================
 # Terminus Plugins & Dependencies
 #===============================
