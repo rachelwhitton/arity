@@ -16,10 +16,12 @@ namespace App\Theme;
   <div class="capsule__text">
     <?= apply_filters('the_content', $data['body_copy']); ?>
   </div>
-  <p>
-    <?php
-      $data['cta']['classes'] = array('button--primary');
-      element('button', $data['cta']);
-    ?>
-  </p>
+  <?php if(!empty($data['cta'])) : ?>
+    <p>
+      <?php
+        $data['cta']['classes'] = array('button--primary');
+        element('button', $data['cta']);
+      ?>
+    </p>
+  <?php endif; ?>
 </div>
