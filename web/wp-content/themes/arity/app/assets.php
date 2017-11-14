@@ -59,7 +59,7 @@ add_action('wp_enqueue_scripts', __namespace__ . '\\register_vendor_scripts');
  */
 function register_scripts()
 {
-    $arity = "https:////patterns.arity.vsadev.com/" . config('patterns-version') . "/js/arity.js";
+    $arity = "https://patterns.arity.vsadev.com/" . config('patterns-version') . "/js/arity.js";
     if(!empty(WP_ENV) && WP_ENV == "staging") {
       $arity = "https://dev.patterns.arity.vsadev.com/js/arity.js";
     } else if(!empty(WP_ENV) && WP_ENV == "development") {
