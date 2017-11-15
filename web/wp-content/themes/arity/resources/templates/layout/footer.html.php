@@ -54,11 +54,20 @@ namespace App\Theme;
                 </svg>
               </a>
             </li>
-            <?php if(in_array(WP_ENV, array('development'))) : ?>
+            <?php if(in_array(WP_ENV, array('development','staging'))) : ?>
               <li class="social-nav__item">
                 <a class="social-nav__link instagram--" href="https://www.instagram.com/arityofficial/" target="_blank" aria-label="Instagram">
                   <svg class="site-footer__icon icon-svg" title="" role="img">
                     <use xlink:href="#social-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+            <?php endif; ?>
+            <?php if(in_array(WP_ENV, array('development','staging'))) : ?>
+              <li class="social-nav__item">
+                <a class="social-nav__link facebook--" href="https://www.facebook.com/ArityInt/" target="_blank" aria-label="Facebook">
+                  <svg class="site-footer__icon icon-svg" title="" role="img">
+                    <use xlink:href="#social-facebook"></use>
                   </svg>
                 </a>
               </li>
