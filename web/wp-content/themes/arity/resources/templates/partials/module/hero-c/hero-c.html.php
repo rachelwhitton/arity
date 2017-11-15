@@ -15,7 +15,7 @@ namespace App\Theme;
 <div <?php module_class('hero-c'); ?>>
   <div class="hero-c__block">
     <div class="container">
-      <<?= $data['h_el']; ?> class="hero-block__title type2"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
+      <<?= $data['h_el']; ?> class="hero-c__title type2"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
     </div>
   </div>
 </div>

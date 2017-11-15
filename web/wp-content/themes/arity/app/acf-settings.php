@@ -144,10 +144,12 @@ $module_builder->includeACFSettings('big-feature-block', 'module');
 $module_builder->includeACFSettings('body-one-column', 'module');
 $module_builder->includeACFSettings('body-two-column', 'module');
 $module_builder->includeACFSettings('contact-form-w-cta', 'module');
+$module_builder->includeACFSettings('contact-form', 'module');
 $module_builder->includeACFSettings('content-image-block', 'module');
 $module_builder->includeACFSettings('feature-solution-block', 'module');
 $module_builder->includeACFSettings('hero-a', 'module');
 $module_builder->includeACFSettings('hero-b', 'module');
+$module_builder->includeACFSettings('hero-d', 'module');
 $module_builder->includeACFSettings('horizontal-cards', 'module');
 $module_builder->includeACFSettings('lead-gen', 'module');
 $module_builder->includeACFSettings('page-footnote', 'module');
@@ -157,6 +159,7 @@ $module_builder->includeACFSettings('vertical-cards', 'module');
 $module_builder->includeACFSettings('module-header', 'module');
 $module_builder->includeACFSettings('career-list', 'module');
 $module_builder->includeACFSettings('action-bar', 'module');
+$module_builder->includeACFSettings('action-bar-w-bkg', 'module');
 $module_builder->includeACFSettings('sub-footer', 'module');
 
 
