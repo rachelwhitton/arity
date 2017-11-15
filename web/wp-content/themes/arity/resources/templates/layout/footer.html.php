@@ -54,6 +54,13 @@ namespace App\Theme;
                 </svg>
               </a>
             </li>
+            <li class="social-nav__item">
+              <a class="social-nav__link instagram--" href="https://www.instagram.com/arityofficial/" target="_blank" aria-label="Instagram">
+                <svg class="site-footer__icon icon-svg" title="" role="img">
+                  <use xlink:href="#social-instagram"></use>
+                </svg>
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
