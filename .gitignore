@@ -26,6 +26,7 @@ web/*
 !web/wp-cli.yml
 !web/wp-config.php
 !web/robots.txt
+!web/favicon.ico
 !web/.htaccess
 web/wp-config-local.php
 web/wp-cli.local.yml
