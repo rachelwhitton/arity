@@ -25,11 +25,7 @@ namespace App\Theme;
       <?php endif; ?>
     </div>
   </div>
-  <?php if(!empty($data['bkg_image_id'])) : ?>
-    <div class="hero-d__bkg">
-      <?php element('image', array(
-        'id' => $data['bkg_image_id']
-      )); ?>
-    </div>
+  <?php if(!empty($data['bkg_image'])) : ?>
+    <div class="action-bar-w-bkg__bkg" style="background-image:url('<?= $data['bkg_image']; ?>');"></div>
   <?php endif; ?>
 </div>
