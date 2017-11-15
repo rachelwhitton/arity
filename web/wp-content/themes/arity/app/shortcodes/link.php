@@ -25,6 +25,9 @@ add_shortcode('link', function ($attr, $text_link) {
 
     // Add link classes to attr classes array
     $attr['classes'][] = $link_class;
+    if (!empty($attr['icon'])) {
+        $attr['classes'][] = 'button button--link';
+    }
 
     // Pull in classes from shortcode, convert to array, merge array into attr classes
     $attr['class'] = isset($attr['class']) ? $attr['class'] : '';
@@ -33,6 +36,7 @@ add_shortcode('link', function ($attr, $text_link) {
 
     // Create <a> attributes
     $a_attrs_arr['href'] = isset($attr['href']) ? $attr['href'] : null;
+    $a_attrs_arr['role'] = isset($attr['role']) ? $attr['role'] : null;
     $a_attrs_arr['target'] = isset($attr['target']) ? $attr['target'] : null;
     $a_attrs_arr['title'] = isset($attr['title']) ? $attr['title'] : null;
     $a_attrs_arr['class'] = isset($attr['classes']) ? implode($attr['classes'], " ") : null;
