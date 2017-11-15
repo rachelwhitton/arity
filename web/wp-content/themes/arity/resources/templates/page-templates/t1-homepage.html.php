@@ -32,7 +32,7 @@ $GLOBALS['h1_used'] = false;
   ));
 ?>
 
-<div class="app__wrapper container">
+<div class="site-content app__wrapper container">
   <div class="row">
     <div class="app__home">
       <?php

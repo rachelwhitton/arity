@@ -50,8 +50,16 @@ export default {
      * Content Container Analytics
      */
 
-    $('.app__wrapper a[href*="//developer.arity.com"]').on('click', function() {
+    $('.site-content a[href*="//developer.arity.com"]').on('click', function() {
       analytics.globalEvent('event', 'Link', 'event_DevPortal', 'Developer Portal Link');
+    });
+
+    $('.site-content a[href*="instagram.com"]').on('click', function() {
+      analytics.globalEvent('event', 'Link', 'event_Instagram', 'Careers Instagram Link');
+    });
+
+    $('.site-content a[href*="shared-mobility.allstate.com"]').on('click', function() {
+      analytics.globalEvent('event', 'Link', 'event_DashboardLogin', 'Dashboard Login');
     });
   },
 };
