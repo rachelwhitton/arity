@@ -17,7 +17,7 @@ $hero = get_field('module__hero-b-two-column');
 <?php get_header(); ?>
 
 <?php do_action('theme/before_content') ?>
-<div>
+<div class="site-content">
   <?php module('hero-b', $hero); ?>
   <?php the_acf_content(); ?>
 </div>
