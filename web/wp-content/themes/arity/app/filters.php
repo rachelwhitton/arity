@@ -331,6 +331,52 @@ add_action('wp_footer', function () {
 EOD;
 });
 
+/**
+ * Add Quantcast Tag for Footer.
+ * @since 1.1.0
+ * @return void
+ */
+add_action('wp_footer', function () {
+
+    // Only for the home page
+    if( !is_front_page() ) {
+        return;
+    }
+
+    if( !empty(WP_ENV) && !in_array(WP_ENV, array('production','staging'))) {
+        return;
+    }
+
+    echo <<<EOD
+
+<!-- Start Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+ (function() {
+   var elem = document.createElement('script');
+   elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+   elem.async = true;
+   elem.type = "text/javascript";
+   var scpt = document.getElementsByTagName('script')[0];
+   scpt.parentNode.insertBefore(elem, scpt);
+  })();
+
+_qevents.push({qacct: "p-CT9p1As87v16a"});
+
+</script>
+<noscript>
+ <img src="//pixel.quantserve.com/pixel/p-CT9p1As87v16a.gif?labels=_fp.event.Default" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
+</noscript>
+<!-- End Quantcast tag -->
+
+<!-- Start Simplifi Tag -->
+<script async src='https://tag.simpli.fi/sifitag/cf95b860-a880-0135-3fd2-067f653fa718'></script>
+<!-- End Simplifi tag -->
+
+EOD;
+});
+
 /*
 |-----------------------------------------------------------------
 | Login Configurations

@@ -8,7 +8,6 @@ export default {
 
   },
   finalize() {
-
     /**
      * Site Header Analytics
      */
@@ -56,6 +55,10 @@ export default {
 
     $('.site-content a[href*="instagram.com"]').on('click', function() {
       analytics.globalEvent('event', 'Link', 'event_Instagram', 'Careers Instagram Link');
+    });
+
+    $('.site-content a[href*="google.com/maps"]').on('click', function() {
+      analytics.globalEvent('event', 'Link', 'event_GoogleMaps', 'Google Maps Link');
     });
 
     $('.site-content a[href*="shared-mobility.allstate.com"]').on('click', function() {
