@@ -64,5 +64,17 @@ export default {
     $('.site-content a[href*="shared-mobility.allstate.com"]').on('click', function() {
       analytics.globalEvent('event', 'Link', 'event_DashboardLogin', 'Dashboard Login');
     });
+
+    $('.site-content a[href*="adtrk.tw/7nKLw"]').on('click', function() {
+      analytics.globalEvent('event', 'Link', 'event_SanFranciscoOrdinance', 'San Francisco Ordinance');
+    });
+
+    $('.site-content a[href*="bca.lacity.org"]').on('click', function() {
+      analytics.globalEvent('event', 'Link', 'event_LosAngelesOrdinance', 'Los Angeles Ordinance');
+    });
+
+    $('.site-content a[href*="los-angeles-ordinance.pdf"]').on('click', function() {
+      analytics.globalEvent('event', 'Link', 'event_LosAngelesOrdinance', 'Los Angeles Ordinance');
+    });
   },
 };
