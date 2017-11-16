@@ -14,6 +14,11 @@ namespace App\Theme;
 ?>
 <div <?php module_class('contact-form'); ?>>
   <div class="container">
-    Contact Form
+    <div class="contact-form__indicates">
+      <span class="required">*</span> indicates required field
+    </div>
+    <div class="contact-form__wrap">
+      <?php component('form'); ?>
+    </div>
   </div>
 </div>

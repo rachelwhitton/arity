@@ -385,16 +385,17 @@ add_action('body_class', function (array $classes) {
         $classes[] = 'env--' . WP_ENV;
     }
 
-    // Add view class
-    if (is_single() || is_page() && !is_front_page()) {
-        $viewName = basename(get_permalink());
-        $classes[] = 'view--' . $viewName;
-    } else if(is_front_page()) {
-        $viewName = 'home';
-        $classes[] = 'view--' . $viewName;
+    // Add template name
+    if( !empty($template = get_current_template()) ) {
+        $template = str_replace(config('templates')['extension'], '', $template);
+        $template = str_replace('.php', '', $template);
+        $classes[] = 'template--' . $template;
     }
 
-    // @todo - Why is there another get_permalink added without the view-- prefix?
+    // Add post details
+    if ( isset( $post ) ) {
+        $classes[] = $post->post_type . '--' . $post->post_name;
+    }
 
     return array_filter($classes);
 });
@@ -680,3 +681,16 @@ Sitemap: $sitemap
 EOD;
 
 }, 10,  2);
+
+
+add_filter( 'template_include', function( $t ) {
+    $GLOBALS['current_page_template'] = basename($t);
+    return $t;
+}, 1000 );
+
+function get_current_template( ) {
+    if( !isset( $GLOBALS['current_page_template'] ) )
+        return false;
+    else
+        return $GLOBALS['current_page_template'];
+}

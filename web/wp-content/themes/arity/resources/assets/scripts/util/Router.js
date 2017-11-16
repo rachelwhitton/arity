@@ -29,7 +29,7 @@ export default class Router {
     // Fire page-specific init JS, and then finalize JS
     document.body.className
       .toLowerCase()
-      .replace(/view--/g, '')
+      .replace(/page--/g, '')
       .replace(/-/g, '_')
       .split(/\s+/)
       .map(camelCase)
