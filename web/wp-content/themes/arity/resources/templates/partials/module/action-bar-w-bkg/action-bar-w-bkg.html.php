@@ -16,7 +16,7 @@ namespace App\Theme;
   <div class="action-bar-w-bkg__block container">
     <div class="action-bar-w-bkg__row">
       <?php if (!empty($data['left_headline']) || !empty($data['left_content'])) : ?>
-        <div class="action-bar-w-bkg__left">
+        <div class="action-bar-w-bkg__content">
           <?php if (!empty($data['left_headline'])) : ?>
             <<?= $data['h_el']; ?> class="action-bar-w-bkg__headline"><?= $data['left_headline']; ?></<?= $data['h_el']; ?>>
           <?php endif; ?>

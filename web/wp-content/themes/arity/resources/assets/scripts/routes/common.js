@@ -76,5 +76,9 @@ export default {
     $('.site-content a[href*="los-angeles-ordinance.pdf"]').on('click', function() {
       analytics.globalEvent('event', 'Link', 'event_LosAngelesOrdinance', 'Los Angeles Ordinance');
     });
+
+    $('.site-content a[href*="iottechexpo.com"]').on('click', function() {
+      analytics.globalEvent('event', 'Link', 'event_IotTechExpo', 'Iot Tech Expo');
+    });
   },
 };
