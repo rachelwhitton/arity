@@ -16,7 +16,7 @@ namespace App\Theme;
   <div class="hero-d__block">
     <div class="container">
       <?php if(!empty($data['headline'])) : ?>
-        <<?= $data['h_el']; ?> class="hero-block__title type2"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
+        <<?= $data['h_el']; ?> class="hero-d__title"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
       <?php endif; ?>
       <?php if(!empty($data['text'])) : ?>
         <div class="hero-d__text">
