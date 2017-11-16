@@ -7,7 +7,7 @@ use function App\Theme\template;
 $content = '
 <p>Sorry, the page you are looking for does not exist. <br>Make a U-turn.</p>
 <p>
-  <a href="'. home_url() .'" class="ar-element button button--primary"><span class="button__label">Go home</span></a>
+  <a href="'. home_url('/') .'" class="ar-element button button--primary"><span class="button__label">Go home</span></a>
 </p>';
 ?>
 

@@ -392,7 +392,7 @@ EOD;
  * @return void
  */
 add_filter('login_headerurl', function () {
-    return home_url();
+    return home_url('/');
 });
 
 /**
