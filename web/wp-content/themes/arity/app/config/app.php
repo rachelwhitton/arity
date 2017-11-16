@@ -98,7 +98,8 @@ return [
         't2a-solutions-overview' => 'T2a - Solutions Overview',
         't2b-applications-overview' => 'T2b - Applications Overview',
         't3-product-detail' => 'T3 - Product Detail',
-        't5-careers' => 'T5 - Careers'
+        't5-careers' => 'T5 - Careers',
+        't6-contact' => 'T6 - Contact'
     ],
 
     /*

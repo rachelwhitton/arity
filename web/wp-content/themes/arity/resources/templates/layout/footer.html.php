@@ -8,7 +8,7 @@ namespace App\Theme;
 
     <div class="row">
       <div class="site-footer__col col1--">
-        <a href="<?= home_url(); ?>" rel="home">
+        <a href="<?= home_url('/'); ?>" rel="home">
           <svg class="site-footer__logo icon-svg" title="" role="img">
             <use xlink:href="#arity-logo"></use>
           </svg>
@@ -54,13 +54,27 @@ namespace App\Theme;
                 </svg>
               </a>
             </li>
+            <li class="social-nav__item">
+              <a class="social-nav__link instagram--" href="https://www.instagram.com/arityofficial/" target="_blank" aria-label="Instagram">
+                <svg class="site-footer__icon icon-svg" title="" role="img">
+                  <use xlink:href="#social-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-nav__item">
+              <a class="social-nav__link facebook--" href="https://www.facebook.com/ArityInt/" target="_blank" aria-label="Facebook">
+                <svg class="site-footer__icon icon-svg" title="" role="img">
+                  <use xlink:href="#social-facebook"></use>
+                </svg>
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
     </div>
     <div class="row">
       <div class="site-footer__col col5--">
-        <a href="<?= home_url(); ?>" rel="home">
+        <a href="<?= home_url('/'); ?>" rel="home">
           <svg class="site-footer__logo icon-svg" title="" role="img">
             <use xlink:href="#arity-logo"></use>
           </svg>

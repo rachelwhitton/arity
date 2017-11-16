@@ -11,7 +11,7 @@ namespace App\Theme;
 ?>
 
 <header class="app__header site-header" id="appHeader">
-  <a href="<?= home_url(); ?>" class="site-header__logo" aria-label="" rel="home">
+  <a href="<?= home_url('/'); ?>" class="site-header__logo" aria-label="" rel="home">
     <span class="sr-only"><?= get_bloginfo('name'); ?></span>
     <svg class="icon-svg" title="" role="img">
             <use xlink:href="#arity-logo"></use>

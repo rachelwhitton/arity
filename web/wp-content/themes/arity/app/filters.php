@@ -331,6 +331,52 @@ add_action('wp_footer', function () {
 EOD;
 });
 
+/**
+ * Add Quantcast Tag for Footer.
+ * @since 1.1.0
+ * @return void
+ */
+add_action('wp_footer', function () {
+
+    // Only for the home page
+    if( !is_front_page() ) {
+        return;
+    }
+
+    if( !empty(WP_ENV) && !in_array(WP_ENV, array('production','staging'))) {
+        return;
+    }
+
+    echo <<<EOD
+
+<!-- Start Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+ (function() {
+   var elem = document.createElement('script');
+   elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+   elem.async = true;
+   elem.type = "text/javascript";
+   var scpt = document.getElementsByTagName('script')[0];
+   scpt.parentNode.insertBefore(elem, scpt);
+  })();
+
+_qevents.push({qacct: "p-CT9p1As87v16a"});
+
+</script>
+<noscript>
+ <img src="//pixel.quantserve.com/pixel/p-CT9p1As87v16a.gif?labels=_fp.event.Default" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
+</noscript>
+<!-- End Quantcast tag -->
+
+<!-- Start Simplifi Tag -->
+<script async src='https://tag.simpli.fi/sifitag/cf95b860-a880-0135-3fd2-067f653fa718'></script>
+<!-- End Simplifi tag -->
+
+EOD;
+});
+
 /*
 |-----------------------------------------------------------------
 | Login Configurations
@@ -346,7 +392,7 @@ EOD;
  * @return void
  */
 add_filter('login_headerurl', function () {
-    return home_url();
+    return home_url('/');
 });
 
 /**
@@ -374,30 +420,40 @@ add_filter('login_headertitle', function () {
  * @param array $classes array of current classes on the body tag
  * @return array with updated classes
  */
-add_action('body_class', function (array $classes) {
+add_filter('body_class', function (array $classes, array $class=array()) {
     global $post;
 
-    // @todo - Clean up Wordpress body classes, instead of removing them all
     $classes = array();
+
+    if ( is_404() ) {
+        $classes[] = 'template--error404';
+    }
+
+    // Add post details
+    if ( isset( $post ) ) {
+        $classes[] = $post->post_type . '--' . $post->post_name;
+
+        // Add page template
+        if( in_array($post->post_type, array('page')) )
+        $template = get_post_meta( $post->ID, '_wp_page_template', true );
+        $classes[] = 'template--' . $template;
+    }
+
+    // Add classes add through body_class function
+    $classes = array_merge( $classes, $class );
+
+    if ( is_user_logged_in() )
+		$classes[] = 'logged-in';
 
     // Add environment class
     if (WP_ENV && WP_ENV != 'production') {
         $classes[] = 'env--' . WP_ENV;
     }
 
-    // Add view class
-    if (is_single() || is_page() && !is_front_page()) {
-        $viewName = basename(get_permalink());
-        $classes[] = 'view--' . $viewName;
-    } else if(is_front_page()) {
-        $viewName = 'home';
-        $classes[] = 'view--' . $viewName;
-    }
+    $classes = array_map( 'esc_attr', $classes );
 
-    // @todo - Why is there another get_permalink added without the view-- prefix?
-
-    return array_filter($classes);
-});
+    return array_unique( $classes );
+}, 15,  2);
 
 /**
  * Add module class

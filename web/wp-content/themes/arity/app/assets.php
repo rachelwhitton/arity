@@ -26,14 +26,16 @@ use function App\Theme\asset_path;
 function register_stylesheets()
 {
     $arity = "https://patterns.arity.vsadev.com/" . config('patterns-version') . "/css/style.css";
+    $arity_version = null;
     if(!empty(WP_ENV) && WP_ENV == "staging") {
       $arity = "https://dev.patterns.arity.vsadev.com/css/style.css";
+      $arity_version = time();
     } else if(!empty(WP_ENV) && WP_ENV == "development") {
       $arity = "https://localhost:3000/css/style.css";
     }
 
-    wp_enqueue_style('arity', $arity, null, null);
-    wp_enqueue_style('main', asset_path('css/main.css'), null, config('version'));
+    wp_enqueue_style('arity', $arity, null, $arity_version);
+    wp_enqueue_style('main', asset_path('css/main.css'), array('arity'), config('version'));
 }
 add_action('wp_enqueue_scripts', __namespace__ . '\\register_stylesheets');
 
@@ -60,14 +62,16 @@ add_action('wp_enqueue_scripts', __namespace__ . '\\register_vendor_scripts');
 function register_scripts()
 {
     $arity = "https://patterns.arity.vsadev.com/" . config('patterns-version') . "/js/arity.js";
+    $arity_version = null;
     if(!empty(WP_ENV) && WP_ENV == "staging") {
       $arity = "https://dev.patterns.arity.vsadev.com/js/arity.js";
+      $arity_version = time();
     } else if(!empty(WP_ENV) && WP_ENV == "development") {
       $arity = "https://localhost:3000/js/arity.js";
     }
 
-    wp_enqueue_script('arity', $arity, array( 'jquery', 'ScrollMagic-tweenMax', 'ScrollMagic', 'ScrollMagic-animation' ), null, true);
-    wp_enqueue_script('main', asset_path('js/main.js'), array( 'jquery' ), config('version'), true);
+    wp_enqueue_script('arity', $arity, array( 'jquery', 'ScrollMagic-tweenMax', 'ScrollMagic', 'ScrollMagic-animation' ), $arity_version, true);
+    wp_enqueue_script('main', asset_path('js/main.js'), array( 'jquery', 'arity' ), config('version'), true);
 }
 add_action('wp_enqueue_scripts', __namespace__ . '\\register_scripts');
 
