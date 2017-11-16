@@ -29,7 +29,7 @@ function register_stylesheets()
     $arity_version = null;
     if(!empty(WP_ENV) && WP_ENV == "staging") {
       $arity = "https://dev.patterns.arity.vsadev.com/css/style.css";
-      $arity_version = config('version');
+      $arity_version = time();
     } else if(!empty(WP_ENV) && WP_ENV == "development") {
       $arity = "https://localhost:3000/css/style.css";
     }
@@ -65,7 +65,7 @@ function register_scripts()
     $arity_version = null;
     if(!empty(WP_ENV) && WP_ENV == "staging") {
       $arity = "https://dev.patterns.arity.vsadev.com/js/arity.js";
-      $arity_version = config('version');
+      $arity_version = time();
     } else if(!empty(WP_ENV) && WP_ENV == "development") {
       $arity = "https://localhost:3000/js/arity.js";
     }
