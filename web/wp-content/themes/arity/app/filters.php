@@ -374,31 +374,40 @@ add_filter('login_headertitle', function () {
  * @param array $classes array of current classes on the body tag
  * @return array with updated classes
  */
-add_action('body_class', function (array $classes) {
+add_filter('body_class', function (array $classes, array $class=array()) {
     global $post;
 
-    // @todo - Clean up Wordpress body classes, instead of removing them all
     $classes = array();
+
+    if ( is_404() ) {
+        $classes[] = 'template--error404';
+    }
+
+    // Add post details
+    if ( isset( $post ) ) {
+        $classes[] = $post->post_type . '--' . $post->post_name;
+
+        // Add page template
+        if( in_array($post->post_type, array('page')) )
+        $template = get_post_meta( $post->ID, '_wp_page_template', true );
+        $classes[] = 'template--' . $template;
+    }
+
+    // Add classes add through body_class function
+    $classes = array_merge( $classes, $class );
+
+    if ( is_user_logged_in() )
+		$classes[] = 'logged-in';
 
     // Add environment class
     if (WP_ENV && WP_ENV != 'production') {
         $classes[] = 'env--' . WP_ENV;
     }
 
-    // Add template name
-    if( !empty($template = get_current_template()) ) {
-        $template = str_replace(config('templates')['extension'], '', $template);
-        $template = str_replace('.php', '', $template);
-        $classes[] = 'template--' . $template;
-    }
+    $classes = array_map( 'esc_attr', $classes );
 
-    // Add post details
-    if ( isset( $post ) ) {
-        $classes[] = $post->post_type . '--' . $post->post_name;
-    }
-
-    return array_filter($classes);
-});
+    return array_unique( $classes );
+}, 15,  2);
 
 /**
  * Add module class
@@ -681,16 +690,3 @@ Sitemap: $sitemap
 EOD;
 
 }, 10,  2);
-
-
-add_filter( 'template_include', function( $t ) {
-    $GLOBALS['current_page_template'] = basename($t);
-    return $t;
-}, 1000 );
-
-function get_current_template( ) {
-    if( !isset( $GLOBALS['current_page_template'] ) )
-        return false;
-    else
-        return $GLOBALS['current_page_template'];
-}
