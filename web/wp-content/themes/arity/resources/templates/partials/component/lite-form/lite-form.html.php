@@ -14,7 +14,7 @@ namespace App\Theme;
   <?php if (!empty($data['headline'])) : ?>
     <div class="row">
       <div class="col lite-form-inner__col">
-        <h3 class="lite-form__title type4"><?= $data['headline']; ?></h3>
+        <h3 class="lite-form__title type0"><?= $data['headline']; ?></h3>
       </div>
     </div>
   <?php endif; ?>

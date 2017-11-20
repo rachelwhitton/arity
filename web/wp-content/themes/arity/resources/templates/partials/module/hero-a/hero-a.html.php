@@ -17,7 +17,7 @@ namespace App\Theme;
     <div class="row">
       <div class="hero-a__col left--">
         <<?= $data['h_el']; ?> class="type2 hero-a__title"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
-        <div class="hero-a__content type4"><?= apply_filters('the_content', $data['body_copy']); ?></div>
+        <div class="hero-a__content type0"><?= apply_filters('the_content', $data['body_copy']); ?></div>
         <?php if (!empty($data['cta'])) : ?>
           <p>
             <?php

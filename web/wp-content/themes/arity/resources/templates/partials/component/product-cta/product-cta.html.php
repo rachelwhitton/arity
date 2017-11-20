@@ -13,10 +13,10 @@ namespace App\Theme;
 ?>
 <div <?php component_class('product-cta'); ?>>
   <?php if (!empty($data['headline'])) : ?>
-    <<?= $data['h_el']; ?> class="type4 typeBold product-cta__headline"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
+    <<?= $data['h_el']; ?> class="type0 typeBold product-cta__headline"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
   <?php endif; ?>
   <?php if (!empty($data['body_copy'])) : ?>
-    <div class="type0 product-cta__p">
+    <div class="type4 product-cta__p">
       <?= $data['body_copy']; ?>
     </div>
   <?php endif; ?>

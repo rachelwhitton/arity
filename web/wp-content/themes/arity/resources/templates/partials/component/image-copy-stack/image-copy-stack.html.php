@@ -13,7 +13,7 @@ namespace App\Theme;
 ?>
 <div class="ar-component image-copy-stack">
   <?php if (!empty($data['headline'])) : ?>
-    <<?= $data['h_el']; ?> class="image-copy-stack__headline type4">
+    <<?= $data['h_el']; ?> class="image-copy-stack__headline type0">
       <?= $data['headline']; ?>
     </<?= $data['h_el']; ?>>
   <?php endif; ?>
@@ -25,7 +25,7 @@ namespace App\Theme;
     </p>
   <?php endif; ?>
   <?php if (!empty($data['body_copy'])) : ?>
-    <div class="image-copy-stack__p type0">
+    <div class="image-copy-stack__p type4">
       <?= apply_filters('the_content', $data['body_copy']); ?>
     </div>
   <?php endif; ?>

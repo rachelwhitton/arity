@@ -56,7 +56,7 @@ namespace App\Theme;
     </div>
     <button type="button" class="close" data-dismiss="modal">
       <svg class="icon-svg" title="" role="img">
-          <use xlink:href="#modal-close"></use>
+          <use xlink:href="#close"></use>
       </svg>
     </button>
   </div>
