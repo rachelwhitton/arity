@@ -338,11 +338,6 @@ EOD;
  */
 add_action('wp_footer', function () {
 
-    // Only for the home page
-    if( !is_front_page() ) {
-        return;
-    }
-
     if( !empty(WP_ENV) && !in_array(WP_ENV, array('production','staging'))) {
         return;
     }
