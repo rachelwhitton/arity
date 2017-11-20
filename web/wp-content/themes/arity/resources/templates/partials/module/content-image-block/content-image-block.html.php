@@ -30,7 +30,7 @@ namespace App\Theme;
             <<?= $data['h_el']; ?> class="content-image-block__headline type3"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
           <?php endif; ?>
           <?php if (!empty($data['body_copy'])) : ?>
-          <div class="type4">
+          <div class="type0">
             <?= apply_filters('the_content', $data['body_copy']); ?>
           </div>
           <?php endif; ?>

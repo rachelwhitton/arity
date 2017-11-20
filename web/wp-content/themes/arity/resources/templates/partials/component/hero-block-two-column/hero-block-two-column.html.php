@@ -14,12 +14,12 @@ namespace App\Theme;
   <div class="row">
     <div class="hero-block__left-col">
       <<?= $data['h_el']; ?> class="hero-block__header"><?= $data['left_column_headline']; ?></<?= $data['h_el']; ?>>
-      <div class="hero-block__p type4">
+      <div class="hero-block__p type0">
         <?= $data['left_column_body_copy']; ?>
       </div>
     </div>
     <div class="hero-block__right-col">
-      <<?= updateElImportance($data['h_el'], 2); ?> class="type0 hero-block__cta-headline"><?= $data['right_column_headline']; ?></<?= updateElImportance($data['h_el'], 2); ?>>
+      <<?= updateElImportance($data['h_el'], 2); ?> class="hero-block__cta-headline"><?= $data['right_column_headline']; ?></<?= updateElImportance($data['h_el'], 2); ?>>
       <?php $i=0; foreach ($data['right_column_links'] as $cta) : $i++; ?>
         <p>
           <?php element('button', array_merge($cta['link'], [

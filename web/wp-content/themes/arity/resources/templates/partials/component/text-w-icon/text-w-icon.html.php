@@ -23,10 +23,10 @@ namespace App\Theme;
   <?php endif; ?>
   <div class="text-icon__point">
     <?php if (!empty('headline')) : ?>
-      <<?= $data['h_el']; ?> class="text-icon__headline type0"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
+      <<?= $data['h_el']; ?> class="text-icon__headline type4"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
     <?php endif; ?>
     <?php if (!empty('body_copy')) : ?>
-      <div class="text-icon__p">
+      <div class="text-icon__p type4">
         <?= apply_filters('the_content', $data['body_copy']); ?>
       </div>
     <?php endif; ?>

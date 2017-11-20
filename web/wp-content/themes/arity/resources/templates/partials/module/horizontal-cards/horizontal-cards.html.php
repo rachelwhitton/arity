@@ -14,7 +14,7 @@ namespace App\Theme;
   <?php if (!empty($data['headline'])) : ?>
     <div class="row">
       <div class="horizontal-cards__title">
-        <<?= $data['h_el']; ?> class="type4 colors__text--white"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
+        <<?= $data['h_el']; ?> class="type0 colors__text--white"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
       </div>
     </div>
   <?php endif; ?>

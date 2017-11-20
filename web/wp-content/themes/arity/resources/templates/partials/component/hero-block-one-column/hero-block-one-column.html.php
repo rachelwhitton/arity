@@ -12,7 +12,7 @@ namespace App\Theme;
 
 <div <?php component_class('hero-block'); ?>>
   <<?= $data['h_el']; ?> class="hero-block__header"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
-  <div class="hero-block__p type4">
+  <div class="hero-block__p type0">
     <?= apply_filters('the_content', $data['body_copy']); ?>
   </div>
 </div>

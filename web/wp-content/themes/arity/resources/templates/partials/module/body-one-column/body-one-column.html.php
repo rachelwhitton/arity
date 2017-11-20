@@ -15,7 +15,7 @@ namespace App\Theme;
 <div <?php module_class('body-column body-one-column'); ?>>
   <div class="container">
     <?php if (!empty($data['headline'])) : ?>
-      <<?= $data['h_el']; ?> class="type4 typeBold body-column__headline"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
+      <<?= $data['h_el']; ?> class="type0 typeBold body-column__headline"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
     <?php endif; ?>
     <div class="row">
       <div class="body-one-column__col default-styles">

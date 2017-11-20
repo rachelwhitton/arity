@@ -31,7 +31,7 @@ Since:              1.0.0
     </div>
 
     <?php if (!empty($data['body_copy'])) : ?>
-      <div class="feature-solution__p type4">
+      <div class="feature-solution__p type0">
         <?= apply_filters('the_content', $data['body_copy']); ?>
       </div>
     <?php endif; ?>
