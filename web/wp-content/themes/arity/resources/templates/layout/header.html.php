@@ -2,48 +2,46 @@
 namespace App\Theme;
 
 /*
-  Template Name:      Site Header
-  Template Type:      Module
-  Description:        This is the site header.
-  Last Updated:       08/01/2017
-  Since:              1.0.0
+  Template Name:      Site Header
+  Template Type:      Module
+  Description:        This is the site header v2.
+  Last Updated:       11/20/2017
+  Since:              1.2.0
+  Version:            2
 */
+
 ?>
-
-<header class="app__header site-header" id="appHeader">
-  <a href="<?= home_url('/'); ?>" class="site-header__logo" aria-label="" rel="home">
-    <span class="sr-only"><?= get_bloginfo('name'); ?></span>
-    <svg class="icon-svg" title="" role="img">
-            <use xlink:href="#arity-logo"></use>
-    </svg>
-  </a>
-
-  <a href="#" id="app-menu-control" class="site-header__menu-control" aria-controls="app-menu" aria-selected="false" aria-has-dropdown="true" aria-label="Open site menu" role="button"><span role="presentation"></span></a>
-
-    <?php
-      if (has_nav_menu('header_primary')) :
-    ?>
-      <nav id="app-menu" class="primary-navigation" role="navigation" aria-hidden="true">
-
-        <div class="primary-navigation-wrapper">
-
-          <?php
-          wp_nav_menu([
-            'menu'            => 'nav_menu',
-            'theme_location'  => 'header_primary',
-            'depth'           => 1,
-            'container'       => false,
-            'menu_class'      => 'primary-navigation__list navlist',
-            'menu_id'         => 'primary-navigation',
-            'items_wrap'      => '<ul class="%2$s"><li class="navlist__item--vertical navlist__item--title">Menu</li>%3$s</ul>',
-            'walker'          => new NavWalker()
-          ]);
-          ?>
-
-        </div>
-
-      </nav>
-    <?php
-      endif;
-    ?>
-</header>
+<div class="site-header">
+  <nav class="navbar" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="<?= home_url('/'); ?>" rel="home" title="Arity Homepage" class="navbar-brand">
+          <img src="<?= asset_path('img/logo-arity-white.svg'); ?>" alt="" class="navbar-logo">
+          <span class="sr-only"><?= get_bloginfo('name'); ?></span>
+        </a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <?php
+          if (has_nav_menu('header_primary')) :
+            wp_nav_menu([
+              'menu'            => 'nav_menu',
+              'theme_location'  => 'header_primary',
+              'depth'           => 1,
+              'container'       => false,
+              'menu_class'      => 'nav navbar-nav',
+              'menu_id'         => '',
+              'items_wrap'      => '<ul class="%2$s">%3$s</ul>',
+              'walker'          => new NavWalker()
+            ]);
+          endif;
+        ?>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+</div>

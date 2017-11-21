@@ -573,13 +573,9 @@ add_action('theme/after_body', function () {
  * Returning an empty array resets all silly wp navigation classes
  */
 add_filter('nav_menu_css_class', function ($classes, $item, $args) {
-    if (is_object($args->walker)) { // Filter if custom walker
-        $classes   = [];
-        $classes[] = $args->menu_id . '__item';
-        if ($args->menu_id === 'primary-navigation') {
-            $classes[] = 'navlist__item--vertical';
-        }
-    }
+    // if (is_object($args->walker)) { // Filter if custom walker
+    //     $classes   = [];
+    // }
     return $classes;
 }, 10, 4);
 
@@ -589,33 +585,10 @@ add_filter('nav_menu_css_class', function ($classes, $item, $args) {
  * @return $atts
  */
 add_filter('nav_menu_link_attributes', function ($atts, $item, $args) {
-    if (is_object($args->walker)) { // Filter if custom walker
-        $post = get_post($item->object_id);
-
-        $classes   = [];
-
-        $classes[] = $args->menu_id . '__link';
-
-        if ($item->current == 1 && strpos($item->url, '#') === false) {
-            $classes[] = 'current-page';
-        }
-
-        if ($item->current == 1 && strpos($item->url, '#') === false) {
-            $classes[] = 'current-page';
-        }
-
-        if ($item->current_item_parent == 1 && strpos($item->url, '#') === false) {
-            $classes[] = 'current-page';
-        }
-
-        $atts['class'] = implode(' ', $classes);
-
-        $atts['aria-selected'] = 'false';
-
-        if (strpos($item->url, '#') !== false) {
-            $atts['data-event-text'] = $item->title;
-        }
-    }
+    // if (is_object($args->walker)) { // Filter if custom walker
+    //     $post = get_post($item->object_id);
+    //     $classes   = [];
+    // }
     return $atts;
 }, 10, 3);
 
@@ -627,10 +600,6 @@ add_filter('nav_menu_link_attributes', function ($atts, $item, $args) {
  * Returns html string that includes <a> element
  */
 add_filter('walker_nav_menu_start_el', function ($item_output, $item, $depth, $args) {
-    if (empty($item->is_last)) {
-        $item_output .= '<svg class="icon-svg" title="" role="img"><use xlink:href="#dot-divider"></use></svg>';
-    }
-
     return $item_output;
 }, 10, 4);
 
