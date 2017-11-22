@@ -188,6 +188,30 @@ add_action('wp_dashboard_setup', function () {
     unset($wp_meta_boxes['dashboard']['normal']['core']['wpseo-dashboard-overview']);
 });
 
+/**
+ * Dynamically create a robots.txt file
+ * @since 1.0.0
+ * @param string $output
+ * @return string
+ */
+add_filter('robots_txt', function ($output) {
+    $sitemap = home_url('/sitemap.xml');
+
+    return <<<EOD
+# www.robotstxt.org/
+
+# Allow crawling of all content
+User-agent: *
+Disallow: /wp-admin/
+Disallow: /wp/
+Disallow: /trackback/
+Disallow: /xmlrpc.php
+Disallow: /feed/
+Sitemap: $sitemap
+EOD;
+
+}, 10,  2);
+
 /*
 |-----------------------------------------------------------------
 | Analytics
@@ -329,7 +353,7 @@ add_action('wp_footer', function () {
 <!-- End Adobe DTM -->
 
 EOD;
-});
+}, 100);
 
 /**
  * Add Quantcast Tag for Footer.
@@ -338,7 +362,7 @@ EOD;
  */
 add_action('wp_footer', function () {
 
-    if( !empty(WP_ENV) && !in_array(WP_ENV, array('production','staging'))) {
+    if( !empty(WP_ENV) && WP_ENV != 'production' ) {
         return;
     }
 
@@ -365,12 +389,161 @@ _qevents.push({qacct: "p-CT9p1As87v16a"});
 </noscript>
 <!-- End Quantcast tag -->
 
+EOD;
+}, 101);
+
+/**
+ * Add Simplifi Tag for Footer.
+ * @since 1.1.0
+ * @return void
+ */
+add_action('wp_footer', function () {
+
+    if( !empty(WP_ENV) && WP_ENV != 'production' ) {
+        return;
+    }
+
+    echo <<<EOD
+
 <!-- Start Simplifi Tag -->
 <script async src='https://tag.simpli.fi/sifitag/cf95b860-a880-0135-3fd2-067f653fa718'></script>
 <!-- End Simplifi tag -->
 
 EOD;
-});
+}, 101);
+
+/**
+ * Add DoubleClick global site tag to Head.
+ * @since 1.2.0
+ * @return void
+ */
+$doubleclick_floodlight_id = '8268350';
+add_action('wp_head', function () use($doubleclick_floodlight_id) {
+
+    if( !empty(WP_ENV) && WP_ENV != 'production' ) {
+        return;
+    }
+
+    echo <<<EOD
+
+<!--
+Start of global snippet: Please do not remove
+Place this snippet between the <head> and </head> tags on every page of your site.
+-->
+<!-- Global site tag (gtag.js) - DoubleClick -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=DC-$doubleclick_floodlight_id"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'DC-$doubleclick_floodlight_id');
+</script>
+<!-- End of global snippet: Please do not remove -->
+
+EOD;
+}, 90);
+
+/**
+ * Add DoubleClick event snippet to Head. Only for homepage.
+ * @since 1.2.0
+ * @return void
+ */
+add_action('wp_head', function () {
+
+    if( !empty(WP_ENV) && WP_ENV != 'production' ) {
+        return;
+    }
+
+    // Only homepage
+    if( !is_front_page() ) {
+        return;
+    }
+
+    echo <<<EOD
+
+<!--
+Event snippet for IoT_Conference_160x600 on https://www.arity.com: Please do not remove.
+Place this snippet on pages with events you’re tracking.
+Creation date: 11/20/2017
+-->
+<script>
+  gtag('event', 'conversion', {
+    'allow_custom_scripts': true,
+    'send_to': 'DC-8268350/arity0/iot_c001+standard'
+  });
+</script>
+<noscript>
+<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=arity0;cat=iot_c001;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=1?" width="1" height="1" alt=""/>
+</noscript>
+<!-- End of event snippet: Please do not remove -->
+
+<!--
+Event snippet for IoT_Conference_300x250 on https://www.arity.com: Please do not remove.
+Place this snippet on pages with events you’re tracking.
+Creation date: 11/20/2017
+-->
+<script>
+  gtag('event', 'conversion', {
+    'allow_custom_scripts': true,
+    'send_to': 'DC-8268350/arity0/iot_c000+standard'
+  });
+</script>
+<noscript>
+<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=arity0;cat=iot_c000;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=1?" width="1" height="1" alt=""/>
+</noscript>
+<!-- End of event snippet: Please do not remove -->
+
+<!--
+Event snippet for IoT_Conference_300x50 on https://www.arity.com: Please do not remove.
+Place this snippet on pages with events you’re tracking.
+Creation date: 11/20/2017
+-->
+<script>
+  gtag('event', 'conversion', {
+    'allow_custom_scripts': true,
+    'send_to': 'DC-8268350/arity0/iot_c00+standard'
+  });
+</script>
+<noscript>
+<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=arity0;cat=iot_c00;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=1?" width="1" height="1" alt=""/>
+</noscript>
+<!-- End of event snippet: Please do not remove -->
+
+<!--
+Event snippet for IoT_Conference_320x50 on https://www.arity.com: Please do not remove.
+Place this snippet on pages with events you’re tracking.
+Creation date: 11/20/2017
+-->
+<script>
+  gtag('event', 'conversion', {
+    'allow_custom_scripts': true,
+    'send_to': 'DC-8268350/arity0/iot_c002+standard'
+  });
+</script>
+<noscript>
+<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=arity0;cat=iot_c002;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=1?" width="1" height="1" alt=""/>
+</noscript>
+<!-- End of event snippet: Please do not remove -->
+
+<!--
+Event snippet for IoT_conference_728x90 on https://www.arity.com: Please do not remove.
+Place this snippet on pages with events you’re tracking.
+Creation date: 11/20/2017
+-->
+<script>
+  gtag('event', 'conversion', {
+    'allow_custom_scripts': true,
+    'send_to': 'DC-8268350/arity0/iot_c0+standard'
+  });
+</script>
+<noscript>
+<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=arity0;cat=iot_c0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=1?" width="1" height="1" alt=""/>
+</noscript>
+<!-- End of event snippet: Please do not remove -->
+
+EOD;
+}, 100);
 
 /*
 |-----------------------------------------------------------------
@@ -707,27 +880,3 @@ add_filter('acf/format_value/type=wysiwyg', function ($value) {
     $value = apply_filters('the_content', $value);
     return $value;
 }, 10, 3);
-
-/**
- * Dynamically create a robots.txt file
- * @since 1.0.0
- * @param string $output
- * @return string
- */
-add_filter('robots_txt', function ($output) {
-    $sitemap = home_url('/sitemap.xml');
-
-    return <<<EOD
-# www.robotstxt.org/
-
-# Allow crawling of all content
-User-agent: *
-Disallow: /wp-admin/
-Disallow: /wp/
-Disallow: /trackback/
-Disallow: /xmlrpc.php
-Disallow: /feed/
-Sitemap: $sitemap
-EOD;
-
-}, 10,  2);

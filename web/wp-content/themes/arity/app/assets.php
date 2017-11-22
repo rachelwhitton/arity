@@ -38,6 +38,7 @@ function register_stylesheets()
     wp_enqueue_style('main', asset_path('css/main.css'), array('arity'), config('version'));
 }
 add_action('wp_enqueue_scripts', __namespace__ . '\\register_stylesheets');
+// add_action( 'get_footer', __namespace__ . '\\register_stylesheets');
 
 /**
  * Registers vendor script files.
