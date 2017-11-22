@@ -32,12 +32,12 @@ namespace App\Theme;
             wp_nav_menu([
               'menu'            => 'nav_menu',
               'theme_location'  => 'header_primary',
-              'depth'           => 1,
+              'depth'           => 2,
               'container'       => false,
               'menu_class'      => 'nav navbar-nav',
               'menu_id'         => '',
               'items_wrap'      => '<ul class="%2$s">%3$s</ul>',
-              'walker'          => new NavWalker()
+              // 'walker'          => new NavWalker()
             ]);
           endif;
         ?>
