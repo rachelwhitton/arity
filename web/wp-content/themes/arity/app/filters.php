@@ -460,6 +460,9 @@ add_action('wp_head', function () {
         return;
     }
 
+    // Unique id for cache busting
+    $ord = time();
+
     echo <<<EOD
 
 <!--
@@ -474,7 +477,7 @@ Creation date: 11/20/2017
   });
 </script>
 <noscript>
-<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=arity0;cat=iot_c001;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=1?" width="1" height="1" alt=""/>
+<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=arity0;cat=iot_c001;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=$ord?" width="1" height="1" alt=""/>
 </noscript>
 <!-- End of event snippet: Please do not remove -->
 
@@ -490,7 +493,7 @@ Creation date: 11/20/2017
   });
 </script>
 <noscript>
-<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=arity0;cat=iot_c000;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=1?" width="1" height="1" alt=""/>
+<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=arity0;cat=iot_c000;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=$ord?" width="1" height="1" alt=""/>
 </noscript>
 <!-- End of event snippet: Please do not remove -->
 
@@ -506,7 +509,7 @@ Creation date: 11/20/2017
   });
 </script>
 <noscript>
-<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=arity0;cat=iot_c00;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=1?" width="1" height="1" alt=""/>
+<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=arity0;cat=iot_c00;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=$ord?" width="1" height="1" alt=""/>
 </noscript>
 <!-- End of event snippet: Please do not remove -->
 
@@ -522,7 +525,7 @@ Creation date: 11/20/2017
   });
 </script>
 <noscript>
-<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=arity0;cat=iot_c002;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=1?" width="1" height="1" alt=""/>
+<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=arity0;cat=iot_c002;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=$ord?" width="1" height="1" alt=""/>
 </noscript>
 <!-- End of event snippet: Please do not remove -->
 
@@ -538,7 +541,7 @@ Creation date: 11/20/2017
   });
 </script>
 <noscript>
-<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=arity0;cat=iot_c0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=1?" width="1" height="1" alt=""/>
+<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=arity0;cat=iot_c0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=$ord?" width="1" height="1" alt=""/>
 </noscript>
 <!-- End of event snippet: Please do not remove -->
 
