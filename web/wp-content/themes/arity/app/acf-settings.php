@@ -162,6 +162,15 @@ $module_builder->includeACFSettings('action-bar', 'module');
 $module_builder->includeACFSettings('action-bar-w-bkg', 'module');
 $module_builder->includeACFSettings('sub-footer', 'module');
 
+/*
+|--------------------------------------------------------------------------
+| Other Settings
+|--------------------------------------------------------------------------
+|
+*/
+$module_builder->buildModulesFieldGroup(array(
+    'page_template' => 't0-modules'
+));
 
 /*
 |--------------------------------------------------------------------------

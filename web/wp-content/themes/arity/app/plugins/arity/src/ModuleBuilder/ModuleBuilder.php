@@ -235,6 +235,72 @@ class ModuleBuilder
             include_once($file);
         }
     }
+
+    public function buildModulesFieldGroup(array $settings=array())
+    {
+        $layouts = [];
+        foreach($GLOBALS['acf']->local->temp_groups as $group) {
+            if(strpos($group['name'], 'module__') !== false) {
+                $title = str_replace('Module - ', '', $group['title']);
+                $layouts[] = [
+                    'label' => $title,
+                    'name' => $group['name'],
+                    'sub_fields' => [
+                        [
+                          'type' => 'clone',
+                          'label' => '',
+                          'name' => $group['name'],
+                          'key' => str_replace('group_', 'field_', $group['key']),
+                          'display' => 'seamless',
+                          'clone' => [
+                              $group['key']
+                          ]
+                        ]
+                    ]
+                ];
+            }
+        }
+
+        // Skip if there's no modules found
+        if (empty($layouts)) {
+            return;
+        }
+
+        // ACF Fields
+        $fields = [
+            acf_flexible_content([
+                'label' => '',
+                'name' => 'modules',
+                'key' => 'field_modules',
+                'instructions' => '',
+                'required' => 0,
+                'button_label' => 'Add Module',
+                'layouts' => $layouts
+            ])
+        ];
+
+        $location[] = acf_location('post_type', 'page');
+        if(isset($settings['page_template'])) {
+            $location[] = acf_location('page_template', $settings['page_template']);
+        }
+
+        // ACF Field Group
+        acf_field_group([
+            'title' => 'Content',
+            'name' => 'modules',
+            'key' => 'group_modules',
+            'fields' => $fields,
+            'location' => [
+                $location
+            ],
+            'hide_on_screen' => [
+                'the_content',
+                'custom_fields',
+                'format',
+                'featured_image'
+            ]
+        ]);
+    }
 }
 
 class ModuleBuilder_Partial

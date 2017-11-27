@@ -94,6 +94,7 @@ return [
     |
     */
     'pageTemplates' => [
+        't0-modules' => 'All Modules',
         't1-homepage' => 'T1 - Homepage',
         't2a-solutions-overview' => 'T2a - Solutions Overview',
         't2b-applications-overview' => 'T2b - Applications Overview',
