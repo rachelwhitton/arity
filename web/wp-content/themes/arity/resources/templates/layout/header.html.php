@@ -40,8 +40,7 @@ namespace App\Theme;
                 'container'       => false,
                 'menu_class'      => 'nav navbar-nav',
                 'menu_id'         => '',
-                'items_wrap'      => '<ul class="%2$s">%3$s</ul>',
-                // 'walker'          => new NavWalker()
+                'items_wrap'      => '<ul class="%2$s">%3$s</ul>'
               ]);
             endif;
 
