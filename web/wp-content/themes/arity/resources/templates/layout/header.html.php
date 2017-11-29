@@ -65,7 +65,7 @@ namespace App\Theme;
       <div class="dropmenu__arrow"></div>
       <div class="dropmenu__wrap">
         <div class="dropmenu__primary">
-          <a href="#" title="Learn more about Industries Solutions" tabindex="-1">
+          <a href="<?= home_url('industry-applications/'); ?>" title="Learn more about Industries Solutions" tabindex="-1">
             <p>See the ways we can shape transportation, together.</p>
             <p>
               <span class="button">
@@ -77,19 +77,19 @@ namespace App\Theme;
         </div>
         <div class="dropmenu__secondary">
           <div class="dropmenu__item">
-            <a href="#" title="Learn more about Shared Mobility" tabindex="-1">
+            <a href="<?= home_url('industry-applications/shared-mobility-solutions/'); ?>" title="Learn more about Shared Mobility" tabindex="-1">
               <h2>Shared Mobility</h2>
               <p>Recruit and incentivize top drivers, set smarter pricing strategies and accurately predict losses to maximize efficiency.</p>
             </a>
           </div>
           <div class="dropmenu__item">
-            <a href="#" title="Learn more about Automotive" tabindex="-1">
+            <a href="<?= home_url('industry-applications/automotive/'); ?>" title="Learn more about Automotive" tabindex="-1">
               <h2>Automotive</h2>
               <p>Predict and prevent accidents by leveraging historical data and real-time factors like weather and traffic.</p>
             </a>
           </div>
           <div class="dropmenu__item">
-            <a href="#" title="Learn more about Insurance" tabindex="-1">
+            <a href="<?= home_url('industry-applications/insurance/'); ?>" title="Learn more about Insurance" tabindex="-1">
               <h2>Insurance</h2>
               <p>Identify and retain preferred drivers, anticipate loss and price accurately with the most predictive measure of driving risk ever.</p>
             </a>
