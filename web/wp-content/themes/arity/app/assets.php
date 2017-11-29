@@ -17,6 +17,10 @@ namespace App\Theme;
 
 use function App\Theme\asset_path;
 
+function is_pantheon_dev() {
+    return (!empty($_ENV['PANTHEON_ENVIRONMENT']) && $_ENV['PANTHEON_ENVIRONMENT'] == 'dev');
+}
+
 /**
  * Registers theme stylesheet files.
  *
@@ -28,10 +32,13 @@ function register_stylesheets()
     $arity = "https://patterns.arity.vsadev.com/" . config('patterns-version') . "/css/style.css";
     $arity_version = null;
     if(!empty(WP_ENV) && WP_ENV == "staging") {
-      $arity = "https://dev.patterns.arity.vsadev.com/css/style.css";
-      $arity_version = time();
+        $arity = "https://dev.patterns.arity.vsadev.com/css/style.css";
+        if(is_pantheon_dev()) {
+            $arity = "https://patterns.arity.vsadev.com/latest/css/style.css";
+        }
+        $arity_version = time();
     } else if(!empty(WP_ENV) && WP_ENV == "development") {
-      $arity = "https://localhost:3000/css/style.css";
+        $arity = "https://localhost:3000/css/style.css";
     }
 
     wp_enqueue_style('arity', $arity, null, $arity_version);
@@ -64,10 +71,13 @@ function register_scripts()
     $arity = "https://patterns.arity.vsadev.com/" . config('patterns-version') . "/js/arity.js";
     $arity_version = null;
     if(!empty(WP_ENV) && WP_ENV == "staging") {
-      $arity = "https://dev.patterns.arity.vsadev.com/js/arity.js";
-      $arity_version = time();
+        $arity = "https://dev.patterns.arity.vsadev.com/js/arity.js";
+        if(is_pantheon_dev()) {
+            $arity = "https://patterns.arity.vsadev.com/latest/js/arity.js";
+        }
+        $arity_version = time();
     } else if(!empty(WP_ENV) && WP_ENV == "development") {
-      $arity = "https://localhost:3000/js/arity.js";
+        $arity = "https://localhost:3000/js/arity.js";
     }
 
     wp_enqueue_script('arity', $arity, array( 'jquery', 'ScrollMagic-tweenMax', 'ScrollMagic', 'ScrollMagic-animation' ), $arity_version, true);
