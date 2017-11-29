@@ -13,7 +13,7 @@ namespace App\Theme;
 
 ?>
 
-<div <?php component_class('icon-only-stack'); ?>>
+<div <?php component_class('icon-only-stack-right'); ?>>
   <?php if (!empty($data['headline'])) : ?>
     <<?= $data['h_el']; ?> class="type0 typeBold text-icon-stack__headline">
       <?= $data['headline']; ?>

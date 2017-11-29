@@ -132,6 +132,7 @@ $module_builder->includeACFSettings('product-cta', 'component');
 $module_builder->includeACFSettings('product-stats', 'component');
 $module_builder->includeACFSettings('text-icon-stack', 'component');
 $module_builder->includeACFSettings('icon-only-stack', 'component');
+$module_builder->includeACFSettings('icon-only-stack-right', 'component');
 $module_builder->includeACFSettings('text-w-icon', 'component');
 
 

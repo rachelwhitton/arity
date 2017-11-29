@@ -15,11 +15,14 @@ namespace App\Theme;
 <div <?php module_class('body-column icon-two-column'); ?>>
   <div class="container">
     <?php if (!empty($data['headline'])) : ?>
-      <<?= $data['h_el']; ?> class="type0 typeBold body-column__headline"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
+      <<?= $data['h_el']; ?> class="type0 typeBold body-column__headline icons-headline"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
     <?php endif; ?>
     <div class="row">
       <div class="body-two-column__col half--">
         <?php the_partials($data['left_column']); ?>
+      </div>
+      <div class="body-two-column__col half--">
+        <?php the_partials($data['right_column']); ?>
       </div>
     </div>
   </div>

@@ -48,6 +48,39 @@ $fields = [
           ]
         ]
       ]
+    ]),
+
+    acf_tab([
+      'label' => 'Right Column',
+      'name' => 'icon-two-column__right_column_tab',
+    ]),
+
+    // Left Column
+    acf_flexible_content([
+      'label' => '',
+      'name' => 'icon-two-column__right_column',
+      'key' => 'field_right_column',
+      'instructions' => '',
+      'required' => 0,
+      'button_label'    => 'Add Component',
+      'layouts' => [
+        [
+          'label' => 'Icon Only Stack Right',
+          'name' => 'component__icon-only-stack-right',
+          'sub_fields' => [
+            [
+              'type' => 'clone',
+              'label' => 'Icon Only Stack Right',
+              'name' => 'component__icon-only-stack-right',
+              'key' => 'field_component_icon-only-stack-right',
+              'display' => 'seamless',
+              'clone' => [
+                  'group_component_icon-only-stack-right'
+              ]
+            ]
+          ]
+        ]
+      ]
     ])
 
 ];
