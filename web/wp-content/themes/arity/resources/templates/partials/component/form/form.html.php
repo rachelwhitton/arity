@@ -16,7 +16,7 @@
 
   <div class="form-group required">
     <label class="form-group-label" for="first_name">First name</label>
-    <input type="text" class="form-control" name="first_name" id="first_name" placeholder="" required autofocus>
+    <input type="text" class="form-control" name="first_name" id="first_name" placeholder="" required>
     <div class="form-group-feedback"></div>
   </div>
 
