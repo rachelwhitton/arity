@@ -39,7 +39,7 @@ $fields = [
               'type' => 'clone',
               'label' => 'Icon Only Stack',
               'name' => 'component__icon-only-stack',
-              'key' => 'field_component_icon-only-stack',
+              'key' => 'field_component_left_icon-only-stack',
               'display' => 'seamless',
               'clone' => [
                   'group_component_icon-only-stack'
@@ -65,17 +65,17 @@ $fields = [
       'button_label'    => 'Add Component',
       'layouts' => [
         [
-          'label' => 'Icon Only Stack Right',
-          'name' => 'component__icon-only-stack-right',
+          'label' => 'Icon Only Stack',
+          'name' => 'component__icon-only-stack',
           'sub_fields' => [
             [
               'type' => 'clone',
-              'label' => 'Icon Only Stack Right',
-              'name' => 'component__icon-only-stack-right',
-              'key' => 'field_component_icon-only-stack-right',
+              'label' => 'Icon Only Stack',
+              'name' => 'component__icon-only-stack',
+              'key' => 'field_component_right_icon-only-stack',
               'display' => 'seamless',
               'clone' => [
-                  'group_component_icon-only-stack-right'
+                  'group_component_icon-only-stack'
               ]
             ]
           ]
