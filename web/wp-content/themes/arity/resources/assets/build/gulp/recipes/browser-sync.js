@@ -10,7 +10,7 @@ module.exports = function (gulp, browserSync) {
         port: settings.browserSync.port,
         open: false,
         proxy: settings.browserSync.proxy,
-        logLevel: "silent"
+        logLevel: "silent",
       });
     }
   );

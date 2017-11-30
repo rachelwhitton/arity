@@ -17,8 +17,8 @@ module.exports = function (gulp, production, allowlint) {
     }, {
       options: {
         'production': 'Fail on error.',
-        'allowlint': 'Do not fail on error, when used with --production.'
-      }
+        'allowlint': 'Do not fail on error, when used with --production.',
+      },
     }
   );
 };

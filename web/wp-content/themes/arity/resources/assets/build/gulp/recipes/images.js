@@ -17,7 +17,7 @@ module.exports = function (gulp, production) {
         .pipe(newer(paths.dist + '/img'))
         .pipe(imagemin({
           progressive: true,
-          use: [pngquant()]
+          use: [pngquant()],
         }))
         .pipe(gulp.dest(paths.dist + '/img'))
         .pipe(gulpif(!production, notify("Images task complete")));

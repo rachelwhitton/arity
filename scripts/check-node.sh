@@ -25,3 +25,12 @@ then
   echo -e "\nRunning 'npm install --global gulp'"
 	npm install --global gulp
 fi
+
+# Check for yarn
+YARN=`which yarn`
+if [ ! -x "$GULP" ]
+then
+	echo -e "\nError: executable yarn not found on path"
+  echo -e "\nRunning 'npm install --global yarn'"
+	npm install --global yarn
+fi

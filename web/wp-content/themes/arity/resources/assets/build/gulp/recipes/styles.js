@@ -58,7 +58,7 @@ module.exports = function (gulp, production, browserSync) {
               .pipe(concat(output))
               .pipe(gulpif(production, cssnano({safe: true})))
               .pipe(rename({
-                extname: '.css'
+                extname: '.css',
               }))
           );
         });
@@ -70,13 +70,13 @@ module.exports = function (gulp, production, browserSync) {
         .pipe(gulpif(!production, notify({
           "subtitle": "Task Complete",
           "message": "Styles task complete",
-          "onLast": true
+          "onLast": true,
         })))
         .pipe(browserSync.stream({match: '**/*.css'}));
     }, {
       options: {
-        'production': 'Minified without sourcemaps.'
-      }
+        'production': 'Minified without sourcemaps.',
+      },
     }
   );
 };

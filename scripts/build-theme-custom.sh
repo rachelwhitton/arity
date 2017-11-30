@@ -15,16 +15,16 @@ do
 done
 
 if [[ -n "${_dist:-}" ]]; then
-  # Run npm run dist
-  echo -e "\nInvoking: 'npm run dist-allow-lint-errors'"
-  npm run dist-allow-lint-errors
+  # Run yarn run dist
+  echo -e "\nInvoking: 'yarn run dist-allow-lint-errors'"
+  yarn run dist-allow-lint-errors
 
   # This removes dev node_modules and only leaves production requirred packages
   echo -e "\nInvoking: 'npm install --only=production'"
   npm install --only=production
 
 else
-  # Run npm run dev
-  echo -e "\nInvoking: 'npm run dev'"
-  npm run dev
+  # Run yarn run dev
+  echo -e "\nInvoking: 'yarn run dev'"
+  yarn run dev
 fi

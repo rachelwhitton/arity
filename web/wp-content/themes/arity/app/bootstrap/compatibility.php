@@ -72,7 +72,7 @@ if (!file_exists($composer = get_template_directory() . '/vendor/autoload.php'))
  */
 if (!is_admin() && !is_dir(get_template_directory() . '/dist')) {
     Notices::error(
-        __('/dist directory is missing. Try rebuilding your assets by running `npm run dev`.'),
+        __('/dist directory is missing. Try rebuilding your assets by running `yarn run dev`.'),
         __('Missing dist directory')
     );
 
