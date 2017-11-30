@@ -38,7 +38,7 @@ namespace App\Theme;
                 'theme_location'  => 'header_primary',
                 'depth'           => 2,
                 'menu_class'      => 'nav navbar__nav',
-                'submenu_class'   => 'navbar__nav__sub-menu collapsed',
+                'submenu_class'   => 'sub-menu navbar__nav__sub-menu collapsed',
 
               ]);
             endif;
