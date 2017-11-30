@@ -80,7 +80,7 @@ $ yarn
 ### Run dev gulp task
 
 ```
-$ npm run dev
+$ yarn run dev
 ```
 
 ### Log into Wordpress
@@ -93,7 +93,7 @@ Go to your local install /wp-admin to log in. This assumes you have access to an
 ### Watch task
 
 ```
-$ npm run watch
+$ yarn run watch
 ```
 
 ---

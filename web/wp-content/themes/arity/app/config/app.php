@@ -10,7 +10,7 @@ return [
     |
     */
     'version' => $pkg->version,
-    'patterns-version' => '1.1.1',
+    'patterns-version' => $pkg->config->arity,
 
     /*
     |--------------------------------------------------------------------------

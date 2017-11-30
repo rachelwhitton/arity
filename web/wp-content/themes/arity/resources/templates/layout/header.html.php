@@ -37,10 +37,9 @@ namespace App\Theme;
                 'menu'            => 'nav_menu',
                 'theme_location'  => 'header_primary',
                 'depth'           => 2,
-                'container'       => false,
                 'menu_class'      => 'nav navbar__nav',
-                'menu_id'         => '',
-                'items_wrap'      => '<ul class="%2$s">%3$s</ul>'
+                'submenu_class'   => 'navbar__nav__sub-menu collapsed',
+
               ]);
             endif;
 
@@ -49,10 +48,10 @@ namespace App\Theme;
             $last_nav_item = end($nav_items);
             $last_nav_item->post_slug = sanitize_title($last_nav_item->title);
           ?>
-          <div class="navbar__toolbar-bottom" aria-hidden="true">
+          <div class="navbar__toolbar-bottom" tabindex="-1" aria-hidden="true">
             <ul role="menubar" class="nav">
               <li class="menu-item menu-<?= $last_nav_item->post_slug; ?>">
-                <a href="<?= $last_nav_item->url; ?>" role="menuitem"><?= $last_nav_item->title; ?></a>
+                <a href="<?= $last_nav_item->url; ?>" role="menuitem" tabindex="-1"><?= $last_nav_item->title; ?></a>
               </li>
             </ul>
           </div>

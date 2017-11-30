@@ -541,7 +541,7 @@ add_action('theme/head', function () {
   <meta name="msapplication-TileImage" content="$assets_folder/icons/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 EOD;
-});
+}, 10);
 
 /**
  * Theme After Body
@@ -549,99 +549,11 @@ EOD;
  * @return void
  */
 add_action('theme/after_body', function () {
-    // echo <<<EOD
-//   <div class="sr-only" id="_top"></div>
-//   <div class="sr-only" id="_skipToMain"><a href="#main" class="jumplink">Skip to the main content</a></div>
-//
-// EOD;
-});
+    echo <<<EOD
+  <div class="sr-only" id="_top"></div>
+  <div class="sr-only" id="_skipToMain"><a href="#main" class="jumplink">Skip to the main content</a></div>
 
-/*
-|-----------------------------------------------------------------
-| Navigation
-|-----------------------------------------------------------------
-|
-| Filters to update navigation without using a WP Nav Walker
-|
-*/
-
-/**
- * Reset nav menu classes
- * @since 1.0.0
- * @return Array
- *
- * Returning an empty array resets all silly wp navigation classes
- */
-add_filter('nav_menu_css_class', function ($classes, $item, $args) {
-    // if (is_object($args->walker)) { // Filter if custom walker
-    //     $classes   = [];
-    // }
-    return $classes;
-}, 10, 4);
-
-/**
- * navMenuLinkAttributes
- * @since 1.0.0
- * @return $atts
- */
-add_filter('nav_menu_link_attributes', function ($atts, $item, $args) {
-    // if (is_object($args->walker)) { // Filter if custom walker
-    //     $post = get_post($item->object_id);
-    //     $classes   = [];
-    // }
-    return $atts;
-}, 10, 3);
-
-/**
- * Nav Menu Element
- * @since 1.0.0
- * @return String $item_output
- *
- * Returns html string that includes <a> element
- */
-add_filter('walker_nav_menu_start_el', function ($item_output, $item, $depth, $args) {
-    return $item_output;
-}, 10, 4);
-
-/**
- * Nav Menu Item Id
- * @since 1.0.0
- * @return String $item_output
- */
-add_filter('nav_menu_item_id', function ($menu_item_item_id, $item, $args, $depth) {
-    // Don't return an id
-    return null;
-}, 10, 4);
-
-/**
- * Nav Menu Item Title
- * @since 1.0.0
- * @return $title
- *
- * Returns <a> display text
- */
-add_filter('nav_menu_item_title', function ($title) {
-    return $title;
-}, 10, 3);
-
-/**
- * Nav Menu Objects
- * @since 1.0.0
- * @return Array $items
- *
- * Returns array of Nav Menu Objects
- */
-add_filter('wp_nav_menu_objects', function ($items) {
-    // Check make sure full url is used
-    foreach ($items as $item) {
-        if (strpos($item->url, '/') === 0) {
-            $item->url = home_url() . $item->url;
-        }
-    }
-
-    $items[1]->is_first = true;
-    $items[count($items)]->is_last = true;
-    return $items;
+EOD;
 });
 
 

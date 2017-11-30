@@ -38,9 +38,7 @@ if (file_exists($composer = __DIR__ . '/vendor/autoload.php')) {
  */
 $plugins = require_once __DIR__ . '/app/bootstrap/plugins.php';
 foreach ($plugins as $filename) {
-    if (file_exists($filename)) {
-        require_once($filename);
-    }
+    require_once $filename;
 }
 
 // Before running we need to check if everything is in place.

@@ -16,7 +16,7 @@ module.exports = merge({
         root: rootPath,
         assets: path.resolve(rootPath, 'resources/assets'),
         dist: path.resolve(rootPath, 'dist'),
-        external: /node_modules|bower_components/
+        external: /node_modules|bower_components/,
     },
 
     /**
@@ -36,7 +36,7 @@ module.exports = merge({
         css: { filename: 'css/[name].css' },
         font: { filename: 'fonts/[name].[ext]' },
         image: { filename: 'images/[name].[ext]' },
-        javascript: { filename: 'js/[name].js' }
+        javascript: { filename: 'js/[name].js' },
     },
 
     /**
@@ -57,6 +57,6 @@ module.exports = merge({
     settings: {
         sourceMaps: true,
         styleLint: true,
-        browserSync: require('./browser-sync.json')
-    }
+        browserSync: require('./browser-sync.json'),
+    },
 }, config)

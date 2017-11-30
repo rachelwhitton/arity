@@ -69,22 +69,3 @@ add_action('after_setup_theme', function () {
         load_theme_textdomain(config('textdomain'), "{$paths['directory']}/{$directories['languages']}");
     }
 });
-
-/**
- * Autoload required php files
- * @since 1.0.0
- * @return void
- *
- * Add or remove files to the array as needed.
- */
-array_map(function ($dir) {
-    foreach (glob(__DIR__."/{$dir}/*.php") as $filename) {
-        require_once $filename;
-    }
-}, [
-    "customize",
-    "shortcodes",
-    "widgets",
-    "theme-settings",
-    "post-types"
-]);
