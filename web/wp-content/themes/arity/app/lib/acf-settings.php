@@ -131,6 +131,7 @@ $module_builder->includeACFSettings('vertical-card', 'component');
 $module_builder->includeACFSettings('product-cta', 'component');
 $module_builder->includeACFSettings('product-stats', 'component');
 $module_builder->includeACFSettings('text-icon-stack', 'component');
+$module_builder->includeACFSettings('icon-only-stack', 'component');
 $module_builder->includeACFSettings('text-w-icon', 'component');
 
 
@@ -161,6 +162,7 @@ $module_builder->includeACFSettings('career-list', 'module');
 $module_builder->includeACFSettings('action-bar', 'module');
 $module_builder->includeACFSettings('action-bar-w-bkg', 'module');
 $module_builder->includeACFSettings('sub-footer', 'module');
+$module_builder->includeACFSettings('icon-two-column', 'module');
 
 /*
 |--------------------------------------------------------------------------
