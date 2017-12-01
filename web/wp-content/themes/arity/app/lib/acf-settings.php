@@ -142,6 +142,7 @@ $module_builder->includeACFSettings('text-w-icon', 'component');
 |
 */
 $module_builder->includeACFSettings('big-feature-block', 'module');
+$module_builder->includeACFSettings('body-intro', 'module');
 $module_builder->includeACFSettings('body-one-column', 'module');
 $module_builder->includeACFSettings('body-two-column', 'module');
 $module_builder->includeACFSettings('contact-form-w-cta', 'module');
