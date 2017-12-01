@@ -59,40 +59,39 @@ namespace App\Theme;
       </div><!--/.nav__collapse -->
     </div>
   </nav>
+
+  <?php
+    $nav_items[0]->description = '<p>See the ways we can shape transportation, together.</p>';
+    $nav_items[1]->description = '<p>Recruit and incentivize top drivers, set smarter pricing strategies and accurately predict losses to maximize efficiency.</p>';
+    $nav_items[2]->description = '<p>Predict and prevent accidents by leveraging historical data and real-time factors like weather and traffic.</p>';
+    $nav_items[3]->description = '<p>Identify and retain preferred drivers, anticipate loss and price accurately with the most predictive measure of driving risk ever.</p>';
+  ?>
+
   <div class="dropmenu" data-menu-item="industries" tabindex="-1" aria-hidden="true">
     <div class="dropmenu__container">
       <div class="dropmenu__arrow"></div>
       <div class="dropmenu__wrap">
         <div class="dropmenu__primary">
-          <a href="<?= home_url('industry-applications/'); ?>" title="Learn more about Industries Solutions" tabindex="-1">
-            <p>See the ways we can shape transportation, together.</p>
+          <a href="<?= $nav_items[0]->url; ?>" title="Learn more about <?= $nav_items[0]->title; ?>" tabindex="-1">
+            <?= $nav_items[0]->description; ?>
             <p>
               <span class="button">
-                <span class="button__label">View all industries</span>
+                <span class="button__label">View all <?= strtolower($nav_items[0]->title); ?></span>
                 <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#caret"></use></svg>
               </span>
             </p>
           </a>
         </div>
         <div class="dropmenu__secondary">
-          <div class="dropmenu__item">
-            <a href="<?= home_url('industry-applications/shared-mobility-solutions/'); ?>" title="Learn more about Shared Mobility" tabindex="-1">
-              <h2>Shared Mobility <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#caret"></use></svg></h2>
-              <p>Recruit and incentivize top drivers, set smarter pricing strategies and accurately predict losses to maximize efficiency.</p>
-            </a>
-          </div>
-          <div class="dropmenu__item">
-            <a href="<?= home_url('industry-applications/automotive/'); ?>" title="Learn more about Automotive" tabindex="-1">
-              <h2>Automotive <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#caret"></use></svg></h2>
-              <p>Predict and prevent accidents by leveraging historical data and real-time factors like weather and traffic.</p>
-            </a>
-          </div>
-          <div class="dropmenu__item">
-            <a href="<?= home_url('industry-applications/insurance/'); ?>" title="Learn more about Insurance" tabindex="-1">
-              <h2>Insurance <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#caret"></use></svg></h2>
-              <p>Identify and retain preferred drivers, anticipate loss and price accurately with the most predictive measure of driving risk ever.</p>
-            </a>
-          </div>
+          <?php foreach ($nav_items as $nav_item) : ?>
+            <?php if($nav_item->menu_item_parent != $nav_items[0]->ID) { continue; } ?>
+            <div class="dropmenu__item">
+              <a href="<?= $nav_item->url; ?>" title="Learn more about <?= $nav_item->title; ?>" tabindex="-1">
+                <h2><?= $nav_item->title; ?> <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#caret"></use></svg></h2>
+                <?= $nav_item->description; ?>
+              </a>
+            </div>
+          <?php endforeach; ?>
         </div>
       </div>
     </div>
