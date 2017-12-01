@@ -160,6 +160,7 @@ $module_builder->includeACFSettings('vertical-cards', 'module');
 $module_builder->includeACFSettings('module-header', 'module');
 $module_builder->includeACFSettings('career-list', 'module');
 $module_builder->includeACFSettings('action-bar', 'module');
+$module_builder->includeACFSettings('action-bar-one-col-cta', 'module');
 $module_builder->includeACFSettings('action-bar-w-bkg', 'module');
 $module_builder->includeACFSettings('sub-footer', 'module');
 $module_builder->includeACFSettings('icon-two-column', 'module');
