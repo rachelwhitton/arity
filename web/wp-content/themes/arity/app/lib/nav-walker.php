@@ -161,6 +161,11 @@ add_filter('nav_menu_css_class', function ($classes, $item, $args = array()) {
         return $items;
     }
 
+    $is_active = in_array('current-menu-item', $item->classes);
+    $is_parent = in_array('current-menu-parent', $item->classes);
+    $is_ancestor = in_array('current-menu-ancestor', $item->classes);
+    $has_children = in_array('menu-item-has-children', $item->classes);
+
     // Reset classes
     $classes = array();
 
@@ -173,23 +178,19 @@ add_filter('nav_menu_css_class', function ($classes, $item, $args = array()) {
     $slug = sanitize_title($item->title);
     $classes[] = 'menu-' . $slug;
 
-    if(!empty($item->current)) {
+    if($is_active) {
         $classes[] = 'menu-item-is-current';
     }
 
-    if(!empty($item->current_item_parent)) {
-        // var_dump($item->current_item_parent);
-        // var_dump($item);
-        // exit;
-        // $classes[] = 'menu-item-is-parent';
+    if($is_parent) {
+        $classes[] = 'menu-item-is-parent';
     }
 
-    // if(!empty($item->current_item_ancestor)) {
-    //     $classes[] = 'menu-item-is-ancestor';
-    // }
+    if($is_active) {
+        $is_ancestor[] = 'menu-item-is-ancestor';
+    }
 
-    // If item has children, add 'menu-item-has-children'
-    if(!empty($item->has_children)) {
+    if($has_children) {
         $classes[] = 'menu-item-has-children';
     }
 
