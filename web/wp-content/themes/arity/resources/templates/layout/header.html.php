@@ -69,7 +69,7 @@ namespace App\Theme;
             <p>
               <span class="button">
                 <span class="button__label">View all industries</span>
-                <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#caret"></use></svg>
+                <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right-short"></use></svg>
               </span>
             </p>
           </a>
@@ -77,19 +77,19 @@ namespace App\Theme;
         <div class="dropmenu__secondary">
           <div class="dropmenu__item">
             <a href="<?= home_url('industry-applications/shared-mobility-solutions/'); ?>" title="Learn more about Shared Mobility" tabindex="-1">
-              <h2>Shared Mobility <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#caret"></use></svg></h2>
+              <h2>Shared Mobility <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right-short"></use></svg></h2>
               <p>Recruit and incentivize top drivers, set smarter pricing strategies and accurately predict losses to maximize efficiency.</p>
             </a>
           </div>
           <div class="dropmenu__item">
             <a href="<?= home_url('industry-applications/automotive/'); ?>" title="Learn more about Automotive" tabindex="-1">
-              <h2>Automotive <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#caret"></use></svg></h2>
+              <h2>Automotive <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right-short"></use></svg></h2>
               <p>Predict and prevent accidents by leveraging historical data and real-time factors like weather and traffic.</p>
             </a>
           </div>
           <div class="dropmenu__item">
             <a href="<?= home_url('industry-applications/insurance/'); ?>" title="Learn more about Insurance" tabindex="-1">
-              <h2>Insurance <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#caret"></use></svg></h2>
+              <h2>Insurance <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right-short"></use></svg></h2>
               <p>Identify and retain preferred drivers, anticipate loss and price accurately with the most predictive measure of driving risk ever.</p>
             </a>
           </div>
