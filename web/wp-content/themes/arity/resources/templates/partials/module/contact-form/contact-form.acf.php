@@ -15,7 +15,7 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Lead Gen',
+    'title' => 'Module - Contact Form',
     'name' => 'module__contact-form',
     'key' => 'group_module_contact-form',
     'fields' => $fields,
