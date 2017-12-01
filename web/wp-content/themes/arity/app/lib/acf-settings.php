@@ -119,7 +119,6 @@ $acf_choices_icon = [
     'mobility-prequal' => 'Mobility PreQual',
     'mobility-score' => 'Mobility Score',
     'mobility-analytics-report' => 'Mobility Analytics Report',
-
     'accident-prevention' => 'Accident Prevention',
     'navigation' => 'Navigation',
     'safe-alerts' => 'Safe Alerts',
