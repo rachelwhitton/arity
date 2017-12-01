@@ -173,20 +173,23 @@ add_filter('nav_menu_css_class', function ($classes, $item, $args = array()) {
     $slug = sanitize_title($item->title);
     $classes[] = 'menu-' . $slug;
 
-    if($item->current) {
+    if(!empty($item->current)) {
         $classes[] = 'menu-item-is-current';
     }
 
-    if($item->current_item_ancestor) {
-        $classes[] = 'menu-item-is-ancestor';
+    if(!empty($item->current_item_parent)) {
+        // var_dump($item->current_item_parent);
+        // var_dump($item);
+        // exit;
+        // $classes[] = 'menu-item-is-parent';
     }
 
-    if($item->current_item_parent) {
-        $classes[] = 'menu-item-is-parent';
-    }
+    // if(!empty($item->current_item_ancestor)) {
+    //     $classes[] = 'menu-item-is-ancestor';
+    // }
 
     // If item has children, add 'menu-item-has-children'
-    if($item->has_children) {
+    if(!empty($item->has_children)) {
         $classes[] = 'menu-item-has-children';
     }
 
