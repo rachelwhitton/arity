@@ -266,6 +266,12 @@ class ModuleBuilder
             return;
         }
 
+        // Sort Layouts
+        usort($layouts, function($a, $b)
+        {
+            return strcmp($a['label'], $b['label']);
+        });
+
         // ACF Fields
         $fields = [
             acf_flexible_content([

@@ -104,6 +104,9 @@ $acf_choices_color = [
     'blue' => 'Blue'
 ];
 
+// Sort
+array_multisort($acf_choices_color);
+
 /**
  * Helper for ACF icon choices.
  */
@@ -115,9 +118,15 @@ $acf_choices_icon = [
     'solutions' => 'Solutions',
     'mobility-prequal' => 'Mobility PreQual',
     'mobility-score' => 'Mobility Score',
-    'mobility-analytics-report' => 'Mobility Analytics Report'
+    'mobility-analytics-report' => 'Mobility Analytics Report',
+    'accident-prediction' => 'Accident Prediction',
+    'navigation' => 'Navigation',
+    'safe-alerts' => 'Safe Alerts',
+    'vehicle-systems' => 'Vehicle Systems',
 ];
 
+// Sort
+array_multisort($acf_choices_icon);
 
 /*
 |--------------------------------------------------------------------------
