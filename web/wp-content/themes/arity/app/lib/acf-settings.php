@@ -104,6 +104,12 @@ $acf_choices_color = [
     'blue' => 'Blue'
 ];
 
+// Sort
+usort($acf_choices_color, function($a, $b)
+{
+    return strcmp($a, $b);
+});
+
 /**
  * Helper for ACF icon choices.
  */
@@ -123,6 +129,11 @@ $acf_choices_icon = [
     'vehicle-systems' => 'Vehicle Systems',
 ];
 
+// Sort
+usort($acf_choices_icon, function($a, $b)
+{
+    return strcmp($a, $b);
+});
 
 /*
 |--------------------------------------------------------------------------
