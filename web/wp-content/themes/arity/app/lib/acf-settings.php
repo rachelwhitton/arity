@@ -105,10 +105,7 @@ $acf_choices_color = [
 ];
 
 // Sort
-usort($acf_choices_color, function($a, $b)
-{
-    return strcmp($a, $b);
-});
+array_multisort($acf_choices_color);
 
 /**
  * Helper for ACF icon choices.
@@ -130,10 +127,7 @@ $acf_choices_icon = [
 ];
 
 // Sort
-usort($acf_choices_icon, function($a, $b)
-{
-    return strcmp($a, $b);
-});
+array_multisort($acf_choices_icon);
 
 /*
 |--------------------------------------------------------------------------
