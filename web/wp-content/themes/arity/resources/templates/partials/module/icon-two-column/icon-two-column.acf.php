@@ -17,6 +17,7 @@ $fields = [
       ),
     ]),
 
+    // Left Tab
     acf_tab([
       'label' => 'Left Column',
       'name' => 'icon-two-column__left_column_tab',
@@ -50,12 +51,13 @@ $fields = [
       ]
     ]),
 
+    // Right Tab
     acf_tab([
       'label' => 'Right Column',
       'name' => 'icon-two-column__right_column_tab',
     ]),
 
-    // Left Column
+    // Right Column
     acf_flexible_content([
       'label' => '',
       'name' => 'icon-two-column__right_column',

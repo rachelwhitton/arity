@@ -157,6 +157,7 @@ $module_builder->includeACFSettings('page-footnote', 'module');
 $module_builder->includeACFSettings('promo', 'module');
 $module_builder->includeACFSettings('two-column-contact', 'module');
 $module_builder->includeACFSettings('vertical-cards', 'module');
+$module_builder->includeACFSettings('vertical-cards-block', 'module');
 $module_builder->includeACFSettings('module-header', 'module');
 $module_builder->includeACFSettings('career-list', 'module');
 $module_builder->includeACFSettings('action-bar', 'module');

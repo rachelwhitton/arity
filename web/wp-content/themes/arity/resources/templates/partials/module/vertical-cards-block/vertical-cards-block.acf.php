@@ -7,7 +7,7 @@ $fields = [
     // Headline
     acf_text([
       'label' => 'Headline',
-      'name' => 'vertical-cards__headline',
+      'name' => 'vertical-cards-block__headline',
       'instructions' => '',
       'required' => 0,
       'maxlength' => '',
@@ -16,7 +16,7 @@ $fields = [
     // Vertical Card
     acf_repeater([
       'label' => '',
-      'name' => 'vertical-cards__cards',
+      'name' => 'vertical-cards-block__cards',
       'sub_fields' => [
         [
           // Headline
@@ -38,9 +38,9 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Vertical Cards',
-    'name' => 'module__vertical-cards',
-    'key' => 'group_module_vertical-cards',
+    'title' => 'Module - Vertical Cards Block',
+    'name' => 'module__vertical-cards-block',
+    'key' => 'group_module_vertical-cards-block',
     'fields' => $fields,
     'location' => [
         [

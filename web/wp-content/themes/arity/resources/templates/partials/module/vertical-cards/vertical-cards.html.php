@@ -5,7 +5,7 @@ namespace App\Theme;
   Template Name:      Vertical Cards
   Template Type:      Module
   Description:        A row of vertical cards.
-  Last Updated:       08/02/2017
+  Last Updated:       12/01/2017
   Since:              1.0.0
 */
 
