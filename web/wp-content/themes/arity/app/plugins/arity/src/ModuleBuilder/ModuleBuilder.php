@@ -292,7 +292,7 @@ class ModuleBuilder
 
         // ACF Field Group
         acf_field_group([
-            'title' => 'Content',
+            'title' => 'Module Builder',
             'name' => 'modules',
             'key' => 'group_modules',
             'fields' => $fields,
