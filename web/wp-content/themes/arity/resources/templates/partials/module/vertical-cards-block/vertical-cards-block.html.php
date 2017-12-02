@@ -15,7 +15,7 @@ namespace App\Theme;
     <div class="vertical-cards-block__content">
       <?php if (!empty($data['headline'])) : ?>
         <div class="row">
-          <div class="vertical-cards__title">
+          <div class="vertical-cards__title boldTitle">
             <<?= $data['h_el']; ?> class="type0 colors__text--white"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
           </div>
         </div>
