@@ -4,11 +4,11 @@ namespace App\Theme;
 ?>
 <?php
 /*
-  Template Name:      1 Column Body
+  Template Name:      1 Column Body Intro
   Template Type:      Module
-  Description:        Body block with one column
-  Last Updated:       09/15/2017
-  Since:              1.0.0
+  Description:        Body Intro block with one column
+  Last Updated:       12/02/2017
+  Since:              1.2.0-alpha.1
 */
 
 ?>

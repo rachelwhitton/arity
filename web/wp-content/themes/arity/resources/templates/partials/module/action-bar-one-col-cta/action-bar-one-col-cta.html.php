@@ -4,11 +4,11 @@ namespace App\Theme;
 ?>
 <?php
 /*
-  Template Name:      Action Bar
+  Template Name:      Action Bar One Column CTA
   Template Type:      Module
-  Description:        Full width bar with side-by-side links
-  Last Updated:       09/15/2017
-  Since:              1.0.0
+  Description:        Full width bar with centered content and CTA
+  Last Updated:       12/01/2017
+  Since:              1.2.0-alpha.1
 */
 
 ?>
