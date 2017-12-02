@@ -23,7 +23,7 @@ $fields = [
       'name' => 'vertical-card__cta',
       'key' => 'field_cta',
       'instructions' => '',
-      'required' => 1,
+      'required' => 0,
       'wrapper' => array (
         'width' => '33',
       ),

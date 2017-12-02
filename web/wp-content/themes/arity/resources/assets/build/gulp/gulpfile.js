@@ -24,7 +24,7 @@ gulp.src = function() {
       errorHandler: function(err) {
         notify.onError("Error: " + err.toString())(err);
         this.emit('end');
-      }
+      },
     })));
 };
 
@@ -72,7 +72,7 @@ gulp.task('build',
     'styles',
     'scripts',
     'fonts',
-    'statics'
+    'statics',
   ]
 );
 

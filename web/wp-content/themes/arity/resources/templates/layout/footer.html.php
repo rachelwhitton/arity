@@ -90,11 +90,8 @@ namespace App\Theme;
               wp_nav_menu([
                 'menu'            => 'nav_menu',
                 'theme_location'  => 'footer_copyright',
-                'depth'           => 1,
-                'container'       => false,
                 'menu_class'      => '',
-                'menu_id'         => '',
-                'items_wrap'      => '<ul class="%2$s">%3$s</ul>',
+                'menu_role'       => ''
               ]);
             ?>
           <?php

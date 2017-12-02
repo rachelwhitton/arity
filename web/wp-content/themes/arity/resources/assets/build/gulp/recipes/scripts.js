@@ -51,7 +51,7 @@ module.exports = function (gulp, production, browserSync) {
 
           var bundler = browserify({
             entries: inputs,
-            debug: false
+            debug: false,
           });
 
           merged.add(
@@ -64,12 +64,12 @@ module.exports = function (gulp, production, browserSync) {
               .pipe(sourcemaps.init({loadMaps: true}))
               .pipe(gulpif(production, uglify({
                 compress: {
-                  drop_console: true
-                }
+                  drop_console: true,
+                },
               })))
               .pipe(sourcemaps.write('.', {sourceRoot: paths.assets + '/scripts'}))
               .pipe(rename({
-                extname: '.js'
+                extname: '.js',
               }))
               .pipe(gulp.dest(paths.dist + '/js'))
             );
@@ -79,14 +79,14 @@ module.exports = function (gulp, production, browserSync) {
       .pipe(gulpif(!production, notify({
         "subtitle": "Task Complete",
         "message": "Scripts task complete",
-        "onLast": true
+        "onLast": true,
       })))
       .on('finish', browserSync.reload);
 
     }, {
       options: {
-        'production': 'Minified without sourcemaps.'
-      }
+        'production': 'Minified without sourcemaps.',
+      },
     }
   );
 };

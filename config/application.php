@@ -126,6 +126,17 @@ defined('EMPTY_TRASH_DAYS') || define('EMPTY_TRASH_DAYS', env('EMPTY_TRASH_DAYS'
 defined('WP_POST_REVISIONS') || define('WP_POST_REVISIONS', env('WP_POST_REVISIONS') ?: 5);
 
 /**
+ * Redis Config
+ */
+define('WP_CACHE_KEY_SALT', md5( DB_NAME . $table_prefix . __FILE__ ) );
+$redis_server = array(
+    'host'     => env('REDIS_HOST') ?: '127.0.0.1',
+    'port'     => env('REDIS_PORT') ?: 6379,
+    'auth'     => env('REDIS_AUTH') ?: '',
+    'database' => env('REDIS_DB') ?: WP_CACHE_KEY_SALT // Use a unique value to prevent multiple site conflics
+);
+
+/**
  * Custom Settings
  */
 defined('DISALLOW_FILE_MODS') || define('DISALLOW_FILE_MODS', env('DISALLOW_FILE_MODS') ?: false);

@@ -1,6 +1,6 @@
 {
     "name": "arity",
-    "version": "1.1.6",
+    "version": "1.2.0-alpha.1",
     "title": "Arity Wordpress Theme",
     "description": "Arity Wordpress Theme created in 2017.",
     "author": {
@@ -9,7 +9,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://vsapartners.beanstalkapp.com/1274-009-05-arity-cms-wordpress"
+        "url": "https://vsapartners.beanstalkapp.com/1274-009-05-arity-cms"
     },
     "private": true,
     "license": "Unlicensed",
@@ -19,16 +19,23 @@
     ],
     "scripts": {
         "watch": "gulp --gulpfile resources/assets/build/gulp/gulpfile.js && gulp watch --gulpfile resources/assets/build/gulp/gulpfile.js",
+        "start": "gulp --gulpfile resources/assets/build/gulp/gulpfile.js && gulp watch --gulpfile resources/assets/build/gulp/gulpfile.js",
         "dev": "gulp --gulpfile resources/assets/build/gulp/gulpfile.js",
+        "build": "gulp --gulpfile resources/assets/build/gulp/gulpfile.js",
         "dist": "gulp --production --gulpfile resources/assets/build/gulp/gulpfile.js",
+        "build:production": "gulp --production --gulpfile resources/assets/build/gulp/gulpfile.js",
         "dist-allow-lint-errors": "gulp --production --allowlint --gulpfile resources/assets/build/gulp/gulpfile.js",
+        "lint": "npm run -s lint:scripts && npm run -s lint:styles",
+        "lint:scripts": "eslint resources/assets/scripts resources/assets/build",
+        "lint:styles": "stylelint \"resources/assets/styles/**/*.{css,sass,scss,sss,less}\"",
+        "test": "npm run -s lint",
         "gulp": "gulp --gulpfile resources/assets/build/gulp/gulpfile.js -- "
     },
     "engines": {
         "node": ">= 6.9.4"
     },
     "config": {
-        "arity": "1.1.0"
+        "arity": "1.1.1"
     },
     "devDependencies": {
         "access-sniff": "^3.0.1",

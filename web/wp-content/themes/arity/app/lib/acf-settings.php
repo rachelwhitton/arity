@@ -104,6 +104,9 @@ $acf_choices_color = [
     'blue' => 'Blue'
 ];
 
+// Sort
+array_multisort($acf_choices_color);
+
 /**
  * Helper for ACF icon choices.
  */
@@ -115,9 +118,15 @@ $acf_choices_icon = [
     'solutions' => 'Solutions',
     'mobility-prequal' => 'Mobility PreQual',
     'mobility-score' => 'Mobility Score',
-    'mobility-analytics-report' => 'Mobility Analytics Report'
+    'mobility-analytics-report' => 'Mobility Analytics Report',
+    'accident-prediction' => 'Accident Prediction',
+    'navigation' => 'Navigation',
+    'safe-alerts' => 'Safe Alerts',
+    'vehicle-systems' => 'Vehicle Systems',
 ];
 
+// Sort
+array_multisort($acf_choices_icon);
 
 /*
 |--------------------------------------------------------------------------
@@ -131,6 +140,7 @@ $module_builder->includeACFSettings('vertical-card', 'component');
 $module_builder->includeACFSettings('product-cta', 'component');
 $module_builder->includeACFSettings('product-stats', 'component');
 $module_builder->includeACFSettings('text-icon-stack', 'component');
+$module_builder->includeACFSettings('icon-only-stack', 'component');
 $module_builder->includeACFSettings('text-w-icon', 'component');
 
 
@@ -141,6 +151,7 @@ $module_builder->includeACFSettings('text-w-icon', 'component');
 |
 */
 $module_builder->includeACFSettings('big-feature-block', 'module');
+$module_builder->includeACFSettings('body-intro', 'module');
 $module_builder->includeACFSettings('body-one-column', 'module');
 $module_builder->includeACFSettings('body-two-column', 'module');
 $module_builder->includeACFSettings('contact-form-w-cta', 'module');
@@ -156,12 +167,24 @@ $module_builder->includeACFSettings('page-footnote', 'module');
 $module_builder->includeACFSettings('promo', 'module');
 $module_builder->includeACFSettings('two-column-contact', 'module');
 $module_builder->includeACFSettings('vertical-cards', 'module');
+$module_builder->includeACFSettings('vertical-cards-block', 'module');
 $module_builder->includeACFSettings('module-header', 'module');
 $module_builder->includeACFSettings('career-list', 'module');
 $module_builder->includeACFSettings('action-bar', 'module');
+$module_builder->includeACFSettings('action-bar-one-col-cta', 'module');
 $module_builder->includeACFSettings('action-bar-w-bkg', 'module');
 $module_builder->includeACFSettings('sub-footer', 'module');
+$module_builder->includeACFSettings('icon-two-column', 'module');
 
+/*
+|--------------------------------------------------------------------------
+| Other Settings
+|--------------------------------------------------------------------------
+|
+*/
+$module_builder->buildModulesFieldGroup(array(
+    'page_template' => 't0-modules'
+));
 
 /*
 |--------------------------------------------------------------------------

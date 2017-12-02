@@ -59,9 +59,9 @@ do
 	echo -e "\npackage.json found, changing directories into: ${d%/*}"
 	cd ${d%/*}
 
-  # Run npm install
-	echo -e "\nInvoking: 'npm install'"
-  npm install
+  # Run yarn
+	echo -e "\nInvoking: 'yarn'"
+  yarn
 
   if [ -e "${__root}/scripts/build-theme-custom.sh" ]; then
     echo -e "\nFound custom theme build file"

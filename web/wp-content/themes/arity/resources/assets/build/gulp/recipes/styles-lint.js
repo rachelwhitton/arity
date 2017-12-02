@@ -14,17 +14,20 @@ module.exports = function (gulp, production, allowlint) {
         .pipe(stylelint({
           syntax: 'scss',
           reporters: [
-            {formatter: 'string', console: true}
-          ]
+            {
+              formatter: 'string',
+              console: true,
+            },
+          ],
         }))
         .pipe(gulpif(production, gulpif(allowlint, stylelint({
-          failAfterError: false
+          failAfterError: false,
         }))));
     }, {
       options: {
         'production': 'Fail on error.',
-        'allowlint': 'Do not fail on error, when used with --production.'
-      }
+        'allowlint': 'Do not fail on error, when used with --production.',
+      },
     }
   );
 };
