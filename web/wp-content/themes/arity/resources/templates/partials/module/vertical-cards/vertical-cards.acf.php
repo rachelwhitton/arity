@@ -29,7 +29,7 @@ $fields = [
           ]
         ]
       ],
-      'min'         => 2,
+      'min'         => 1,
       'max'         => 10,
       'layout'      => 'block',
             'button_label'  => 'Add Vertical Card',
