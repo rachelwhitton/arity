@@ -18,7 +18,7 @@ namespace App\Theme;
       <<?= $data['h_el']; ?> class="type0 typeBold body-column__headline icons-headline"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
     <?php endif; ?>
     <div class="row">
-      <div class="body-two-column__col half--">
+      <div class="body-two-column__col half-stack--">
         <?php the_partials($data['left_column']); ?>
       </div>
       <div class="body-two-column__col half--">
