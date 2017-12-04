@@ -40,6 +40,7 @@ Since:              1.0.0
       if (!empty($data['cta'])) :
         $data['cta']['classes'][] = 'button--primary';
         $data['cta']['classes'][] = 'blue-button--';
+        $data['cta']['classes'][] = 'blue-hover-border';
     ?>
       <p>
         <?php element('button', $data['cta']); ?>
