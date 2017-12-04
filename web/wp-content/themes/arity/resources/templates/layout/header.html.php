@@ -87,7 +87,7 @@ namespace App\Theme;
       <div class="dropmenu__arrow"></div>
       <div class="dropmenu__wrap">
         <div class="dropmenu__primary">
-          <a href="<?= $nav_items[0]->url; ?>" title="Learn more about <?= $nav_items[0]->title; ?>" tabindex="-1">
+          <a href="<?= $nav_items[0]->url; ?>" title="Learn more about <?= $nav_items[0]->title; ?>" tabindex="-1" aria-label="<?= $nav_items[0]->title; ?>">
             <?= $nav_items[0]->description; ?>
             <p>
               <span class="button">
@@ -101,7 +101,7 @@ namespace App\Theme;
           <?php foreach ($nav_items as $nav_item) : ?>
             <?php if($nav_item->menu_item_parent != $nav_items[0]->ID) { continue; } ?>
             <div class="dropmenu__item">
-              <a href="<?= $nav_item->url; ?>" title="Learn more about <?= $nav_item->title; ?>" tabindex="-1">
+              <a href="<?= $nav_item->url; ?>" title="Learn more about <?= $nav_item->title; ?>" tabindex="-1" aria-label="<?= $nav_item->title; ?>">
                 <h2><?= $nav_item->title; ?> <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#caret"></use></svg></h2>
                 <?= $nav_item->description; ?>
               </a>

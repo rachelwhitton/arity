@@ -8,13 +8,6 @@ export default {
 
   },
   finalize() {
-    /**
-     * Site Header Analytics
-     */
-
-    $('.site-header a[rel="home"]').on('click', function() {
-      analytics.globalEvent('event', 'Link', 'event_headerID', 'Header Logo');
-    });
 
     /**
      * Site Footer Analytics
@@ -50,35 +43,35 @@ export default {
      */
 
     $('.site-content a[href*="//developer.arity.com"]').on('click', function() {
-      analytics.globalEvent('event', 'Link', 'event_DevPortal', 'Developer Portal Link');
+      analytics.globalEvent('event', 'Body - Link', 'event_ClickedLink', 'Developer Portal clickthrough');
     });
 
     $('.site-content a[href*="instagram.com"]').on('click', function() {
-      analytics.globalEvent('event', 'Link', 'event_Instagram', 'Careers Instagram Link');
+      analytics.globalEvent('event', 'Body - Link', 'event_ClickedLink', 'Careers Instagram clickthrough');
     });
 
     $('.site-content a[href*="google.com/maps"]').on('click', function() {
-      analytics.globalEvent('event', 'Link', 'event_GoogleMaps', 'Google Maps Link');
+      analytics.globalEvent('event', 'Body - Link', 'event_ClickedLink', 'Google Maps clickthrough');
     });
 
     $('.site-content a[href*="shared-mobility.allstate.com"]').on('click', function() {
-      analytics.globalEvent('event', 'Link', 'event_DashboardLogin', 'Dashboard Login');
+      analytics.globalEvent('event', 'Body - Link', 'event_ClickedLink', 'Dashboard Login clickthrough');
     });
 
     $('.site-content a[href*="adtrk.tw/7nKLw"]').on('click', function() {
-      analytics.globalEvent('event', 'Link', 'event_SanFranciscoOrdinance', 'San Francisco Ordinance');
+      analytics.globalEvent('event', 'Body - Link', 'event_ClickedLink', 'San Francisco Ordinance clickthrough');
     });
 
     $('.site-content a[href*="bca.lacity.org"]').on('click', function() {
-      analytics.globalEvent('event', 'Link', 'event_LosAngelesOrdinance', 'Los Angeles Ordinance');
+      analytics.globalEvent('event', 'Body - Link', 'event_ClickedLink', 'Los Angeles Ordinance clickthrough');
     });
 
     $('.site-content a[href*="los-angeles-ordinance.pdf"]').on('click', function() {
-      analytics.globalEvent('event', 'Link', 'event_LosAngelesOrdinance', 'Los Angeles Ordinance');
+      analytics.globalEvent('event', 'Body - Link', 'event_ClickedLink', 'Los Angeles Ordinance clickthrough');
     });
 
     $('.site-content a[href*="iottechexpo.com"]').on('click', function() {
-      analytics.globalEvent('event', 'Link', 'event_IotTechExpo', 'Iot Tech Expo');
+      analytics.globalEvent('event', 'Body - Link', 'event_ClickedLink', 'Events Pill - 2017 IoT Expo Link clickthrough');
     });
   },
 };
