@@ -21,7 +21,7 @@ namespace App\Theme;
         </div>
       <?php endif; ?>
       <div class="container">
-        <div class="row center">
+        <div class="row body-eight-column-centered">
           <?php foreach ($data['cards'] as $card) : ?>
             <div class="vertical-cards__col">
               <?php the_partial($card); ?>
