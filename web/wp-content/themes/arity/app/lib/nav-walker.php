@@ -158,7 +158,7 @@ add_filter('nav_menu_css_class', function ($classes, $item, $args = array()) {
 
     // Don't mess with other walkers
     if(empty($args->is_walker)) {
-        return $items;
+        return $classes;
     }
 
     $is_active = in_array('current-menu-item', $item->classes);
