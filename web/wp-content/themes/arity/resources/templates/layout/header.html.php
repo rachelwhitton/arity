@@ -39,7 +39,6 @@ namespace App\Theme;
                 'depth'           => 2,
                 'menu_class'      => 'nav navbar__nav',
                 'submenu_class'   => 'sub-menu navbar__nav__sub-menu collapsed',
-
               ]);
             endif;
 
@@ -67,13 +66,13 @@ namespace App\Theme;
           $nav_items[$i]->description = '<p>See the ways we can shape transportation, together.</p>';
           break;
         case 'shared mobility':
-          $nav_items[$i]->description = '<p>Recruit and incentivize top drivers, set smarter pricing strategies and accurately predict losses to maximize efficiency.</p>';
+          $nav_items[$i]->description = '<p>Recruit and incentivize top drivers, set smarter pricing strategies and more accurately predict losses to maximize efficiency.</p>';
           break;
         case 'automotive':
-          $nav_items[$i]->description = '<p>Predict and prevent accidents by leveraging historical data and real-time factors like weather and traffic.</p>';
+          $nav_items[$i]->description = '<p>Predict and reduce accident risk by leveraging historical data and real-time factors like weather and traffic.</p>';
           break;
         case 'insurance':
-          $nav_items[$i]->description = '<p>Identify and retain preferred drivers, anticipate loss and price accurately with the most predictive measure of driving risk ever.</p>';
+          $nav_items[$i]->description = '<p>Identify and retain preferred drivers, anticipate loss and price more accurately with our most predictive measure of driving risk.</p>';
           break;
 
         default:
@@ -87,7 +86,7 @@ namespace App\Theme;
       <div class="dropmenu__arrow"></div>
       <div class="dropmenu__wrap">
         <div class="dropmenu__primary">
-          <a href="<?= $nav_items[0]->url; ?>" title="Learn more about <?= $nav_items[0]->title; ?>" tabindex="-1">
+          <a href="<?= $nav_items[0]->url; ?>" title="Learn more about <?= $nav_items[0]->title; ?>" tabindex="-1" aria-label="<?= $nav_items[0]->title; ?>">
             <?= $nav_items[0]->description; ?>
             <p>
               <span class="button">
@@ -101,7 +100,7 @@ namespace App\Theme;
           <?php foreach ($nav_items as $nav_item) : ?>
             <?php if($nav_item->menu_item_parent != $nav_items[0]->ID) { continue; } ?>
             <div class="dropmenu__item">
-              <a href="<?= $nav_item->url; ?>" title="Learn more about <?= $nav_item->title; ?>" tabindex="-1">
+              <a href="<?= $nav_item->url; ?>" title="Learn more about <?= $nav_item->title; ?>" tabindex="-1" aria-label="<?= $nav_item->title; ?>">
                 <h2><?= $nav_item->title; ?> <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#caret"></use></svg></h2>
                 <?= $nav_item->description; ?>
               </a>
