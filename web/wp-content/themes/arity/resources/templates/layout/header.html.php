@@ -39,7 +39,6 @@ namespace App\Theme;
                 'depth'           => 2,
                 'menu_class'      => 'nav navbar__nav',
                 'submenu_class'   => 'sub-menu navbar__nav__sub-menu collapsed',
-
               ]);
             endif;
 
