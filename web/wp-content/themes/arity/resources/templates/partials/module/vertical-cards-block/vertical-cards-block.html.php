@@ -20,12 +20,14 @@ namespace App\Theme;
           </div>
         </div>
       <?php endif; ?>
-      <div class="row center">
-        <?php foreach ($data['cards'] as $card) : ?>
-          <div class="vertical-cards__col">
-            <?php the_partial($card); ?>
-          </div>
-        <?php endforeach; ?>
+      <div class="container">
+        <div class="row body-eight-column-centered">
+          <?php foreach ($data['cards'] as $card) : ?>
+            <div class="vertical-cards__col">
+              <?php the_partial($card); ?>
+            </div>
+          <?php endforeach; ?>
+        </div>
       </div>
     </div>
   </div>

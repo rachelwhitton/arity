@@ -21,7 +21,7 @@ namespace App\Theme;
       <div class="body-two-column__col half-stack--">
         <?php the_partials($data['left_column']); ?>
       </div>
-      <div class="body-two-column__col half--">
+      <div class="body-two-column__col half-stack--">
         <?php the_partials($data['right_column']); ?>
       </div>
     </div>

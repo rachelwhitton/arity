@@ -66,13 +66,13 @@ namespace App\Theme;
           $nav_items[$i]->description = '<p>See the ways we can shape transportation, together.</p>';
           break;
         case 'shared mobility':
-          $nav_items[$i]->description = '<p>Recruit and incentivize top drivers, set smarter pricing strategies and accurately predict losses to maximize efficiency.</p>';
+          $nav_items[$i]->description = '<p>Recruit and incentivize top drivers, set smarter pricing strategies and more accurately predict losses to maximize efficiency.</p>';
           break;
         case 'automotive':
-          $nav_items[$i]->description = '<p>Predict and prevent accidents by leveraging historical data and real-time factors like weather and traffic.</p>';
+          $nav_items[$i]->description = '<p>Predict and reduce accident risk by leveraging historical data and real-time factors like weather and traffic.</p>';
           break;
         case 'insurance':
-          $nav_items[$i]->description = '<p>Identify and retain preferred drivers, anticipate loss and price accurately with the most predictive measure of driving risk ever.</p>';
+          $nav_items[$i]->description = '<p>Identify and retain preferred drivers, anticipate loss and price more accurately with our most predictive measure of driving risk.</p>';
           break;
 
         default:
