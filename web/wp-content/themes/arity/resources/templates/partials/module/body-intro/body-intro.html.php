@@ -7,8 +7,8 @@ namespace App\Theme;
   Template Name:      1 Column Body Intro
   Template Type:      Module
   Description:        Body Intro block with one column
-  Last Updated:       12/02/2017
-  Since:              1.2.0-alpha.1
+  Last Updated:       12/05/2017
+  Since:              1.2.0
 */
 
 ?>
@@ -22,10 +22,5 @@ namespace App\Theme;
         <?= apply_filters('the_content', $data['content']); ?>
       </div>
     </div>
-  </div>
-</div>
-<div <?php module_class('body-intro__line'); ?>>
-  <div class="container line-container">
-    <div class="line"></div>
   </div>
 </div>
