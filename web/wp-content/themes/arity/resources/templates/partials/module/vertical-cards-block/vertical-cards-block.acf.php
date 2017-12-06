@@ -22,10 +22,10 @@ $fields = [
           // Headline
           'type' => 'clone',
           'label' => 'Vertical Card',
-          'name' => 'component__vertical-card-stack',
+          'name' => 'component__vertical-card',
           'display' => 'group',
           'clone' => [
-              'group_component_vertical-card-stack'
+              'group_component_vertical-card'
           ]
         ]
       ],

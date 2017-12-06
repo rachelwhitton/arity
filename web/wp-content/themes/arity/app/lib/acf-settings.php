@@ -137,7 +137,6 @@ array_multisort($acf_choices_icon);
 $module_builder->includeACFSettings('feature-solution', 'component');
 $module_builder->includeACFSettings('horizontal-card', 'component');
 $module_builder->includeACFSettings('vertical-card', 'component');
-$module_builder->includeACFSettings('vertical-card-stack', 'component');
 $module_builder->includeACFSettings('product-cta', 'component');
 $module_builder->includeACFSettings('product-stats', 'component');
 $module_builder->includeACFSettings('text-icon-stack', 'component');
