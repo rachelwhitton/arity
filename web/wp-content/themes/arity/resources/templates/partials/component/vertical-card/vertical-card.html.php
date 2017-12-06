@@ -23,7 +23,11 @@ namespace App\Theme;
           )); ?>
         </div>
       <?php endif; ?>
-      <div class="card__bottom">
+      <?php if ($data['button_style'] == 'blue') : ?>
+        <div class="card__bottom blue-link-padding">
+      <?php else : ?>
+        <div class="card__bottom">
+      <?php endif; ?>
         <?php if (!empty($data['subhead'])) : ?>
           <h3 class="card__title"><?= $data['subhead']; ?></h3>
         <?php endif; ?>
