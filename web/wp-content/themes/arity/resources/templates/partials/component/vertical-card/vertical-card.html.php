@@ -10,7 +10,7 @@ namespace App\Theme;
 */
 
 ?>
-<?php if (!empty($data['cta'])) : ?>
+<?php if (!empty($data['cta']) && $data['button_style'] == 'yellow' ) : ?>
 <a href="<?= $data['cta']['url']; ?>"<?php if (!empty($data['cta']['target'])) : ?> target="<?= $data['cta']['target']; ?>"<?php endif; ?> <?php component_class('card card--vertical'); ?>>
   <?php else : ?>
   <div <?php component_class('card card--vertical'); ?>>
