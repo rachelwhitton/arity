@@ -28,10 +28,20 @@ namespace App\Theme;
         <h3 class="card__title"><?= $data['subhead']; ?></h3>
       <?php endif; ?>
       <?= $data['body_copy']; ?>
+      <?php if (!empty($data['cta']) && $data['button'] == 'blue') : ?>
+        <div class="ar-element button card__button stack__link button--link">
+          <span class="button__icon arrow-right--" role="presentation">
+            <svg class="icon-svg" title="" role="img">
+                <use xlink:href="#arrow-right"></use>
+            </svg>
+          </span>
+          <span class="button__label"><?= $data['cta']['title']; ?></span>
+        </div>
+      <?php endif; ?>
     </div>
   </div>
 
-  <?php if (!empty($data['cta'])) : ?>
+  <?php if (!empty($data['cta']) && $data['button'] == 'yellow') : ?>
     <div class="ar-element button card__button button--hover-icon">
       <span class="button__icon arrow-right--" role="presentation">
         <svg class="icon-svg" title="" role="img">

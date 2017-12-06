@@ -43,6 +43,26 @@ $fields = [
       )
     ]),
 
+    // Button Style
+    acf_select([
+      'label' => 'Button Style',
+      'name' => 'vertical-card-stack__button',
+      'key' => 'field_button',
+      'instructions' => '',
+      'required' => 0,
+      'maxlength' => '',
+      'allow_null' => 0,
+      'ui' => 1,
+      'wrapper' => array (
+        'width' => '33',
+      ),
+      'default_value' => 'blue',
+      'choices' => [
+        'blue' => 'Blue Link',
+        'yellow' => 'Yellow Hover Button'
+      ]
+    ]),
+
     // Textarea
     acf_textarea([
       'label' => 'Body Copy',
@@ -51,7 +71,7 @@ $fields = [
       'instructions' => '',
       'required' => 1,
       'new_lines' => 'wpautop'
-    ]),
+    ])
 ];
 
 // ACF Field Group
