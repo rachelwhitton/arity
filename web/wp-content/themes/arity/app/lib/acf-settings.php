@@ -112,16 +112,20 @@ array_multisort($acf_choices_color);
  */
 global $acf_choices_icon;
 $acf_choices_icon = [
+    'driver-safety' => 'Driver Safety',
     'driving-engine-sdk' => 'Driving Engine SDK',
     'driving-behavior' => 'Driving Behavior',
     'driving-score' => 'Driving Score',
     'solutions' => 'Solutions',
+    'mobile-sensors' => 'Mobile Sensors',
     'mobility-prequal' => 'Mobility PreQual',
     'mobility-score' => 'Mobility Score',
     'mobility-analytics-report' => 'Mobility Analytics Report',
     'accident-prediction' => 'Accident Prediction',
     'navigation' => 'Navigation',
     'safe-alerts' => 'Safe Alerts',
+    'save-money' => 'Save Money',
+    'speedy' => 'Speedy',
     'vehicle-systems' => 'Vehicle Systems',
 ];
 
