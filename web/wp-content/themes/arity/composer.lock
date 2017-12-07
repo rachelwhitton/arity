@@ -537,16 +537,16 @@
         },
         {
             "name": "symfony/translation",
-            "version": "v3.3.10",
+            "version": "v3.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "409bf229cd552bf7e3faa8ab7e3980b07672073f"
+                "reference": "e05b0a5996ad7a35ba3a19ffad8b72c9daa64dfa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/409bf229cd552bf7e3faa8ab7e3980b07672073f",
-                "reference": "409bf229cd552bf7e3faa8ab7e3980b07672073f",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/e05b0a5996ad7a35ba3a19ffad8b72c9daa64dfa",
+                "reference": "e05b0a5996ad7a35ba3a19ffad8b72c9daa64dfa",
                 "shasum": ""
             },
             "require": {
@@ -555,13 +555,16 @@
             },
             "conflict": {
                 "symfony/config": "<2.8",
-                "symfony/yaml": "<3.3"
+                "symfony/dependency-injection": "<3.4",
+                "symfony/yaml": "<3.4"
             },
             "require-dev": {
                 "psr/log": "~1.0",
-                "symfony/config": "~2.8|~3.0",
-                "symfony/intl": "^2.8.18|^3.2.5",
-                "symfony/yaml": "~3.3"
+                "symfony/config": "~2.8|~3.0|~4.0",
+                "symfony/dependency-injection": "~3.4|~4.0",
+                "symfony/finder": "~2.8|~3.0|~4.0",
+                "symfony/intl": "^2.8.18|^3.2.5|~4.0",
+                "symfony/yaml": "~3.4|~4.0"
             },
             "suggest": {
                 "psr/log": "To use logging capability in translator",
@@ -571,7 +574,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.3-dev"
+                    "dev-master": "3.4-dev"
                 }
             },
             "autoload": {
@@ -598,7 +601,7 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
-            "time": "2017-10-02T06:42:24+00:00"
+            "time": "2017-11-27T14:23:00+00:00"
         },
         {
             "name": "wordplate/acf",
@@ -664,26 +667,25 @@
         },
         {
             "name": "wordplate/plate",
-            "version": "3.0.1",
+            "version": "3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wordplate/plate.git",
-                "reference": "29b99b4c45f9f097aa5aeb59e94e1be458f63c78"
+                "reference": "0a8332b0629264c8dfac7f510e51f3dbd38ab7d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wordplate/plate/zipball/29b99b4c45f9f097aa5aeb59e94e1be458f63c78",
-                "reference": "29b99b4c45f9f097aa5aeb59e94e1be458f63c78",
+                "url": "https://api.github.com/repos/wordplate/plate/zipball/0a8332b0629264c8dfac7f510e51f3dbd38ab7d8",
+                "reference": "0a8332b0629264c8dfac7f510e51f3dbd38ab7d8",
                 "shasum": ""
             },
             "require": {
-                "illuminate/support": "^5.4",
                 "php": "^7.0"
             },
             "type": "wordpress-plugin",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0-dev"
+                    "dev-master": "3.1-dev"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -709,7 +711,7 @@
                 "wordplate",
                 "wordpress"
             ],
-            "time": "2017-05-03T14:04:55+00:00"
+            "time": "2017-11-10T09:12:16+00:00"
         }
     ],
     "packages-dev": [],

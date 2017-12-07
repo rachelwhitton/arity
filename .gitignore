@@ -81,7 +81,6 @@ web/wp-content/mu-plugins/*
 # Custom Development for Wordpress Files
 # Add Wordpress plugins that require files to be checked into the repo
 # ----------------------------------------------------------------------------------------------
-!web/wp-content/plugins/advanced-custom-fields-pro
 !web/wp-content/plugins/wp-migrate-db-pro
 !web/wp-content/plugins/wp-migrate-db-pro-cli
 !web/wp-content/plugins/wp-migrate-db-pro-media-files
