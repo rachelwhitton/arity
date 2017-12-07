@@ -38,20 +38,36 @@
     <input type="tel" class="form-control" name="phone" id="phone" placeholder="">
     <div class="form-control-feedback" data-error="invalid">Please enter a valid phone</div>
 
-    <div class="form-check form-check-inline hidden-conditional" id="preferred-method" aria-hidden="true">
-      <label class="form-check-label">I prefer you to:</label>
-      <label class="form-check-label">
-        <input class="form-check-input" type="radio" name="00N3B000001I8ya" id="00N3B000001I8ya_1" value="Phone" tabindex="-1"> call me
-      </label>
-      <label class="form-check-label">
-        <input class="form-check-input" type="radio" name="00N3B000001I8ya" id="00N3B000001I8ya_2" value="Email" checked="checked" tabindex="-1"> email me
-      </label>
+    <?php
+      $preferred_id = '00Nf4000009v5NO';
+      if(!empty(WP_ENV) && WP_ENV != 'production') {
+        // Testing
+        $preferred_id = '00N3B000001I8ya';
+      }
+    ?>
+    <div class="form-conditional" aria-hidden="true" data-conditional="phone" data-conditional-logic="not-empty">
+      <div class="form-group form-group--inline">
+        <label class="form-group-label">I prefer you to:</label>
+        <label class="form-group-label" for="<?= $preferred_id; ?>_1">
+          <input class="form-control conditional-check-when-not-empty" type="radio" name="<?= $preferred_id; ?>" id="<?= $preferred_id; ?>_1" value="Phone" tabindex="-1"> call me
+        </label>
+        <label class="form-group-label" for="<?= $preferred_id; ?>_2">
+          <input class="form-control conditional-check-when-empty" type="radio" name="<?= $preferred_id; ?>" id="<?= $preferred_id; ?>_2" value="Email" checked="checked" tabindex="-1"> email me
+        </label>
+      </div>
     </div>
   </div>
 
+  <?php
+    $industry_id = '00Nf4000009v5NK';
+    if(!empty(WP_ENV) && WP_ENV != 'production') {
+      // Testing
+      $industry_id = '00N3B000001I8yV';
+    }
+  ?>
   <div class="form-group">
-    <label class="form-group-label" for="00N3B000001I8yV">What industry do you work in?</label>
-    <select class="form-control custom-select" name="00N3B000001I8yV" id="00N3B000001I8yV">
+    <label class="form-group-label" for="<?=$industry_id; ?>">What industry do you work in?</label>
+    <select class="form-control custom-select" name="<?=$industry_id; ?>" id="<?=$industry_id; ?>">
       <option value="">Select an industry</option>
       <option value="Insurance">Insurance</option>
       <option value="OEM">OEM</option>
@@ -64,8 +80,8 @@
   </div>
 
   <div class="form-group">
-    <label class="form-group-label" for="comments">Comments</label>
-    <textarea class="form-control" name="comments" id="comments" rows="3"></textarea>
+    <label class="form-group-label" for="description">Comments</label>
+    <textarea class="form-control" name="description" id="description" rows="3"></textarea>
   </div>
 
   <button type="submit" class="btn btn-primary">Submit</button>
