@@ -1,10 +1,3 @@
-<?php if(!empty($data['is_salesforce'])) : ?>
-<script src="https://www.google.com/recaptcha/api.js"></script>
-<script>
- function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500);
-</script>
-<?php endif; ?>
-
 <form action="<?= $data['form_url']; ?>" method="POST">
 
   <?php if(!empty($data['is_salesforce'])) : ?>
@@ -14,20 +7,25 @@
     <input type="hidden" name="lead_source" id="lead_source" value="Arity.com">
   <?php endif; ?>
 
-  <div class="form-group required">
+  <div class="form-group form-group--required">
     <label class="form-group-label" for="first_name">First name</label>
     <input type="text" class="form-control" name="first_name" id="first_name" placeholder="" required>
-    <div class="form-group-feedback"></div>
+    <div class="form-control-feedback" data-error="required">Please enter first name</div>
+    <div class="form-control-feedback" data-error="invalid">Please enter a valid first name</div>
   </div>
 
-  <div class="form-group required">
+  <div class="form-group form-group--required">
     <label class="form-group-label" for="last_name">Last name</label>
     <input type="text" class="form-control" name="last_name" id="last_name" placeholder="" required>
+    <div class="form-control-feedback" data-error="required">Please enter last name</div>
+    <div class="form-control-feedback" data-error="invalid">Please enter a valid last name</div>
   </div>
 
-  <div class="form-group required">
+  <div class="form-group form-group--required">
     <label class="form-group-label" for="email">Email</label>
     <input type="email" class="form-control" name="email" id="email" placeholder="" required>
+    <div class="form-control-feedback" data-error="required">Please enter email</div>
+    <div class="form-control-feedback" data-error="invalid">Please enter a valid email</div>
   </div>
 
   <div class="form-group">
@@ -38,6 +36,7 @@
   <div class="form-group">
     <label class="form-group-label" for="phone">Phone</label>
     <input type="tel" class="form-control" name="phone" id="phone" placeholder="">
+    <div class="form-control-feedback" data-error="invalid">Please enter a valid phone</div>
 
     <div class="form-check form-check-inline hidden-conditional" id="preferred-method" aria-hidden="true">
       <label class="form-check-label">I prefer you to:</label>
@@ -72,7 +71,6 @@
   <button type="submit" class="btn btn-primary">Submit</button>
 
   <?php if(!empty($data['use_captcha'])) : ?>
-    <div class="g-recaptcha" data-sitekey="6LemsC8UAAAAABhmM91zrsD0Paw7Uxa2MFChpoKY"></div>
-    <?php /* <div class="g-recaptcha" data-sitekey="6LemsC8UAAAAABhmM91zrsD0Paw7Uxa2MFChpoKY" data-size="invisible" data-badge="inline"></div> */ ?>
+    <div class="g-recaptcha" data-size="invisible" data-badge="inline"></div>
   <?php endif; ?>
 </form>
