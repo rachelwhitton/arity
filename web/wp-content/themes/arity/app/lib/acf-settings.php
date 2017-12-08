@@ -138,8 +138,7 @@ array_multisort($acf_choices_icon);
 |--------------------------------------------------------------------------
 |
 */
-$module_builder->includeACFSettings('accordion-category', 'component');
-$module_builder->includeACFSettings('accordion-category-item', 'component');
+$module_builder->includeACFSettings('accordion-item', 'component');
 $module_builder->includeACFSettings('feature-solution', 'component');
 $module_builder->includeACFSettings('horizontal-card', 'component');
 $module_builder->includeACFSettings('vertical-card', 'component');

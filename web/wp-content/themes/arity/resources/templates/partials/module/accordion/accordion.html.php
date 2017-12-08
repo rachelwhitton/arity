@@ -1,6 +1,5 @@
 <?php
 namespace App\Theme;
-
 ?>
 <?php
 /*
@@ -11,4 +10,15 @@ namespace App\Theme;
   Since:              1.2.2
 */
 ?>
-<h1>Accordion Module</h1>
+<div class="accordion-wrapper">
+  <div class="container accordion-container">
+    <div id="accordion" class="accordion" role="tablist">
+      <?php if (!empty($data['headline'])) : ?>
+        <<?= $data['h_el']; ?> class="accordion-header"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
+      <?php endif; ?>
+      <?php foreach ($data['items'] as $item) : ?>
+        <?php the_partial($item); ?>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</div>

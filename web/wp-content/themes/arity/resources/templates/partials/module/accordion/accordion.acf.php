@@ -19,23 +19,23 @@ $fields = [
   // Vertical Card
   acf_repeater([
     'label' => '',
-    'name' => 'accordion__categories',
+    'name' => 'accordion__items',
     'sub_fields' => [
       [
         // Headline
         'type' => 'clone',
-        'label' => 'Accordion Category',
-        'name' => 'component__accordion-category',
+        'label' => 'Accordion Item',
+        'name' => 'component__accordion-item',
         'display' => 'group',
         'clone' => [
-          'group_component_accordion-category'
+          'group_component_accordion-item'
         ]
       ]
     ],
-    'min'         => 2,
+    'min'         => 1,
     'max'         => 10,
     'layout'      => 'block',
-    'button_label'  => 'Add Accordion Category',
+    'button_label'  => 'Add Accordion Item',
   ])
 ];
 
