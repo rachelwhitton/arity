@@ -16,9 +16,11 @@ namespace App\Theme;
       <?php if (!empty($data['headline'])) : ?>
         <<?= $data['h_el']; ?> class="accordion-header"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
       <?php endif; ?>
-      <?php foreach ($data['items'] as $item) : ?>
-        <?php the_partial($item); ?>
-      <?php endforeach; ?>
+      <div class="items-wrapper">
+        <?php foreach ($data['items'] as $item) : ?>
+          <?php the_partial($item); ?>
+        <?php endforeach; ?>
+      </div>
     </div>
   </div>
 </div>
