@@ -19,6 +19,20 @@ namespace App\Theme;
         <div class="action-bar__left">
           <<?= $data['h_el']; ?> class="action-bar__headline"><?= $data['left_headline']; ?></<?= $data['h_el']; ?>>
           <?= $data['left_content']; ?>
+          <?php if (!empty($data['left_cta'])) : ?>
+            <div class="show-mobile">
+              <p>
+                <a class="block_link" href="mailto:<?= $data['left_cta']['url']; ?>"<?php if (!empty($data['left_cta']['target'])) : ?> target="<?= $data['left_cta']['target']; ?>"<?php endif; ?>>
+                    <span class="button--circle blue-bg--">
+                      <svg class="icon-svg" title="" role="img">
+                          <use xlink:href="#link-email"></use>
+                      </svg>
+                    </span>
+                  <span class="block_link__text"><?= $data['left_cta']['url']; ?></span>
+                </a>
+              </p>
+            </div>
+          <?php endif; ?>
         </div>
       <?php endif; ?>
       <?php if (!empty($data['right_headline']) || !empty($data['right_content'])) : ?>

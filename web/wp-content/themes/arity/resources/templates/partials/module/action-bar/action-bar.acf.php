@@ -36,6 +36,18 @@ $fields = [
     ),
   ]),
 
+  // Left Email CTA
+  acf_link([
+    'label' => 'Email CTA Link',
+    'name' => 'action-bar__left_cta',
+    'key' => 'field_cta',
+    'instructions' => '',
+    'required' => 0,
+    'wrapper' => array (
+      'width' => '33',
+    ),
+  ]),
+
   // Center Tab
   acf_tab([
     'label' => 'Center Column',
