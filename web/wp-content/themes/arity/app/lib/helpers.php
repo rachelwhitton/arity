@@ -72,3 +72,21 @@ function updateElImportance(string $el, $interval = 0)
 
     return $el;
 }
+
+
+/**
+ * Detects whether a link belongs to this site or not
+ *
+ * @param  String $url Url string
+ * @return Boolean
+ */
+function detect_outbound_link($url) {
+	if (empty($url)) { return false; }
+	$outbound = true;
+
+	if (is_string($url) && $url[0] == "/" && $url[1] != "/") { $outbound = false; }
+	if ($url == "#" || !@$url ) { $outbound = false; }
+	if (strstr($url, get_site_url())) { $outbound = false;}
+
+	return $outbound;
+}
