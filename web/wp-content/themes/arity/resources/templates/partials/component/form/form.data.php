@@ -3,8 +3,8 @@
 // Production
 if(empty($data['form_url'])) {
   $data['is_salesforce'] = true;
-  $data['form_url'] = 'https://login.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8';
-  $data['form_oid'] = '00DG0000000jDz6';
+  $data['form_url'] = 'https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8';
+  $data['form_oid'] = '00Df4000001TyK5';
 
   // Set return url
   global $wp;

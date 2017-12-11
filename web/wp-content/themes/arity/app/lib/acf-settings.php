@@ -138,6 +138,7 @@ array_multisort($acf_choices_icon);
 |--------------------------------------------------------------------------
 |
 */
+$module_builder->includeACFSettings('accordion-item', 'component');
 $module_builder->includeACFSettings('feature-solution', 'component');
 $module_builder->includeACFSettings('horizontal-card', 'component');
 $module_builder->includeACFSettings('vertical-card', 'component');
@@ -154,6 +155,7 @@ $module_builder->includeACFSettings('text-w-icon', 'component');
 |--------------------------------------------------------------------------
 |
 */
+$module_builder->includeACFSettings('accordion', 'module');
 $module_builder->includeACFSettings('big-feature-block', 'module');
 $module_builder->includeACFSettings('body-intro', 'module');
 $module_builder->includeACFSettings('body-one-column', 'module');
