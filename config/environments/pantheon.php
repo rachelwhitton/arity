@@ -10,8 +10,10 @@ define('DB_PASSWORD', $_ENV['DB_PASSWORD']);
 /** MySQL hostname; on Pantheon this includes a specific port number. */
 define('DB_HOST', $_ENV['DB_HOST'] . ':' . $_ENV['DB_PORT']);
 
-// Pantheon needs this
-define('REDIS_DB', 0);
+// Pantheon uses env variables for Redis
+define('REDIS_HOST', $_ENV['CACHE_HOST']);
+define('REDIS_PORT', $_ENV['CACHE_PORT']);
+define('REDIS_AUTH', $_ENV['CACHE_PASSWORD']);
 
 // ** Authentication Unique Keys and Salts. ** //
 define('AUTH_KEY', $_ENV['AUTH_KEY']);
@@ -22,6 +24,9 @@ define('AUTH_SALT', $_ENV['AUTH_SALT']);
 define('SECURE_AUTH_SALT', $_ENV['SECURE_AUTH_SALT']);
 define('LOGGED_IN_SALT', $_ENV['LOGGED_IN_SALT']);
 define('NONCE_SALT', $_ENV['NONCE_SALT']);
+
+
+defined('FORCE_SSL_ADMIN') || define('FORCE_SSL_ADMIN', env('FORCE_SSL_ADMIN') ?: true);
 
 // ** Ewww Image Optimization Settings. ** //
 define('EWWW_IMAGE_OPTIMIZER_RELATIVE', true);

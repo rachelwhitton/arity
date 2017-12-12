@@ -134,5 +134,10 @@ if [[ -x "${TERMINUS}" ]]; then
   $TERMINUS env:clear-cache ${TERMINUS_SITE}.${TERMINUS_ENV}
 fi
 
+# Log out of terminus
+echo
+echo "Logging out of terminus"
+$TERMINUS auth:logout
+
 echo "Deployment success"
 exit
