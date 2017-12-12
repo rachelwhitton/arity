@@ -5,7 +5,7 @@ namespace App\Theme;
   Template Name:      Accordion Item
   Template Type:      Component
   Description:        A component that is part of the accordion component. Headline and Text body.
-  Last Updated:       12/07/2017
+  Last Updated:       12/12/2017
   Since:              1.2.2
 */
 
@@ -19,7 +19,7 @@ namespace App\Theme;
           <<?= $data['h_el']; ?> class="item-title"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
         </div>
         <div class="ar-element button--plus-minus-toggle">
-          <svg class="icon-svg plus-minus" role="img" width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <svg class="icon-svg plus-minus" role="img" width="24px" height="24px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g id="Page-1" stroke="none" stroke-width="1">
               <g id="plus">
                 <g id="Layer_1" transform="translate(11.000000, 0.000000)">
