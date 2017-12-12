@@ -166,6 +166,7 @@ $module_builder->includeACFSettings('content-image-block', 'module');
 $module_builder->includeACFSettings('feature-solution-block', 'module');
 $module_builder->includeACFSettings('hero-a', 'module');
 $module_builder->includeACFSettings('hero-b', 'module');
+$module_builder->includeACFSettings('hero-c', 'module');
 $module_builder->includeACFSettings('hero-d', 'module');
 $module_builder->includeACFSettings('horizontal-cards', 'module');
 $module_builder->includeACFSettings('lead-gen', 'module');

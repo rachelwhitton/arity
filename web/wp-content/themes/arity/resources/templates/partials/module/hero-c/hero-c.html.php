@@ -16,6 +16,11 @@ namespace App\Theme;
   <div class="hero-c__block">
     <div class="container">
       <<?= $data['h_el']; ?> class="hero-c__title type2"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
+      <?php if(!empty($data['text'])) : ?>
+        <div class="hero-c__text">
+          <?= $data['text']; ?>
+        </div>
+      <?php endif; ?>
     </div>
   </div>
 </div>
