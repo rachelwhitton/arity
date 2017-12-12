@@ -129,11 +129,15 @@ defined('WP_POST_REVISIONS') || define('WP_POST_REVISIONS', env('WP_POST_REVISIO
  * Redis Config
  */
 define('WP_CACHE_KEY_SALT', md5( DB_NAME . $table_prefix . __FILE__ ) );
+defined('REDIS_HOST') || define('REDIS_HOST', env('REDIS_HOST') ?: '127.0.0.1');
+defined('REDIS_PORT') || define('REDIS_PORT', env('REDIS_PORT') ?: 6379);
+defined('REDIS_AUTH') || define('REDIS_AUTH', env('REDIS_AUTH') ?: '');
+defined('REDIS_DB') || define('REDIS_DB', env('REDIS_DB') ?: WP_CACHE_KEY_SALT);
 $redis_server = array(
-    'host'     => env('REDIS_HOST') ?: '127.0.0.1',
-    'port'     => env('REDIS_PORT') ?: 6379,
-    'auth'     => env('REDIS_AUTH') ?: '',
-    'database' => env('REDIS_DB') ?: WP_CACHE_KEY_SALT // Use a unique value to prevent multiple site conflics
+    'host'     => REDIS_HOST,
+    'port'     => REDIS_PORT,
+    'auth'     => REDIS_AUTH,
+    'database' => REDIS_DB
 );
 
 /**

@@ -10,6 +10,9 @@ define('DB_PASSWORD', $_ENV['DB_PASSWORD']);
 /** MySQL hostname; on Pantheon this includes a specific port number. */
 define('DB_HOST', $_ENV['DB_HOST'] . ':' . $_ENV['DB_PORT']);
 
+// Pantheon needs this
+define('REDIS_DB', 0);
+
 // ** Authentication Unique Keys and Salts. ** //
 define('AUTH_KEY', $_ENV['AUTH_KEY']);
 define('SECURE_AUTH_KEY', $_ENV['SECURE_AUTH_KEY']);
