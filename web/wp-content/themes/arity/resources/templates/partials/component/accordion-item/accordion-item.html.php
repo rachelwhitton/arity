@@ -5,7 +5,7 @@ namespace App\Theme;
   Template Name:      Accordion Item
   Template Type:      Component
   Description:        A component that is part of the accordion component. Headline and Text body.
-  Last Updated:       12/07/2017
+  Last Updated:       12/12/2017
   Since:              1.2.2
 */
 
