@@ -56,10 +56,10 @@ class Video
         }
 
 
-        $this->setProvider();
+        // $this->setProvider();
         // $this->setIframeAttributes($atts);
 
-        var_dump($this);
+        // var_dump($this);
         return $this;
     }
 

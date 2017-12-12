@@ -14,10 +14,6 @@ namespace App\Theme;
 
 <div <?php module_class('video'); ?>>
   <div class="container">
-    <?php
-      the_video($data['url']);
-      // $video = new \Video\Video($data['url']);
-      // echo $video->getOutput();
-    ?>
+    <?php the_video($data['url']); ?>
   </div>
 </div>
