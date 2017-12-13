@@ -6,7 +6,7 @@ export default {
     var $siteContent = $('.site-content');
     $('.body-intro', $siteContent).first().attr('id', 'features');
     $('.accordion-wrapper', $siteContent).first().attr('id', 'faq');
-    $('.action-bar', $siteContent).first().attr('id', 'support');
+    $('.action-bar-one-col-cta', $siteContent).first().attr('id', 'support');
   },
   finalize() {
   },
