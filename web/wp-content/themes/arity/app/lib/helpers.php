@@ -72,3 +72,17 @@ function updateElImportance(string $el, $interval = 0)
 
     return $el;
 }
+
+function isLinkEmail($url)
+{
+    return (strtolower(substr($url, 0, 7)) == 'mailto:');
+}
+
+function isLinkExternal($url)
+{
+    if(substr($url, 0, 1) == '/') {
+        return false;
+    }
+
+    return (strpos($url, home_url()) === false);
+}

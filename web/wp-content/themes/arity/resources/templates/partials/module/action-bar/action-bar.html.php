@@ -19,16 +19,28 @@ namespace App\Theme;
         <div class="action-bar__left">
           <<?= $data['h_el']; ?> class="action-bar__headline"><?= $data['left_headline']; ?></<?= $data['h_el']; ?>>
           <?= $data['left_content']; ?>
-          <?php if (!empty($data['left_cta'])) : ?>
+          <?php
+            if (!empty($cta = $data['left_cta'])) :
+
+              if(!empty($cta['target'])) {
+                $cta['icon'] = 'external';
+              }
+
+              if(isLinkEmail($cta['url'])) {
+                $cta['icon'] = 'email';
+              }
+          ?>
             <div class="show-mobile">
               <p>
-                <a class="block_link" href="mailto:<?= $data['left_cta']['url']; ?>"<?php if (!empty($data['left_cta']['target'])) : ?> target="<?= $data['left_cta']['target']; ?>"<?php endif; ?>>
+                <a class="block_link" href="<?= $cta['url']; ?>"<?php if (!empty($cta['target'])) : ?> target="<?= $cta['target']; ?>"<?php endif; ?>>
+                  <?php if(!empty($cta['icon'])) : ?>
                     <span class="button--circle blue-bg--">
                       <svg class="icon-svg" title="" role="img">
-                          <use xlink:href="#email"></use>
+                          <use xlink:href="#<?= $cta['icon']; ?>"></use>
                       </svg>
                     </span>
-                  <span class="block_link__text"><?= $data['left_cta']['url']; ?></span>
+                  <?php endif; ?>
+                  <span class="block_link__text"><?= $cta['title']; ?></span>
                 </a>
               </p>
             </div>
