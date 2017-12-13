@@ -22,6 +22,11 @@ namespace App\Theme;
               </div>
             </div>
           <?php endif; ?>
+          <p>
+            <a href="<?= home_url('contact/'); ?>" class="button--primary button ar-element">
+                <span class="button__label">Get in touch</span>
+            </a>
+          </p>
         </div>
       <?php else : ?>
         <?php component('lite-form', [
