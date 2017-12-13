@@ -77,7 +77,12 @@ class NavWalker extends \Walker_Nav_Menu
 		$class_names = join( ' ', apply_filters( 'nav_menu_submenu_css_class', $classes, $args, $depth ) );
 		$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
 
-		$output .= "{$n}{$indent}<ul$class_names role=\"menu\" aria-label=\"{$args->current_item_parent}\" tabindex=\"-1\" aria-hidden=\"true\">{$n}";
+        $current_item_parent = '';
+        if(!empty($args->current_item_parent)) {
+            $current_item_parent = $args->current_item_parent;
+        }
+
+		$output .= "{$n}{$indent}<ul$class_names role=\"menu\" aria-label=\"{$current_item_parent}\" tabindex=\"-1\" aria-hidden=\"true\">{$n}";
 	}
 }
 
@@ -342,8 +347,15 @@ add_filter('nav_menu_submenu_css_class', function ($classes, $args = array()) {
  */
 add_filter('nav_menu_item_args', function ($args = array(), $item) {
 
+    // Don't mess with other walkers
+    if(empty($args->is_walker)) {
+        return $args;
+    }
+
     // This is used for the submenu label
-    $args->current_item_parent = $item->title;
+    if(!empty($item->has_children)) {
+        $args->current_item_parent = $item->title;
+    }
 
     return $args;
 }, 10, 2);
