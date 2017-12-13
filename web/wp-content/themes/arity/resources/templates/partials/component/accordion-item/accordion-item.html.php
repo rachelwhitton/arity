@@ -5,7 +5,7 @@ namespace App\Theme;
   Template Name:      Accordion Item
   Template Type:      Component
   Description:        A component that is part of the accordion component. Headline and Text body.
-  Last Updated:       12/12/2017
+  Last Updated:       12/13/2017
   Since:              1.2.2
 */
 
@@ -23,7 +23,7 @@ namespace App\Theme;
             <g id="Page-1" stroke="none" stroke-width="1">
               <g id="plus">
                 <g id="Layer_1" transform="translate(11.000000, 0.000000)">
-                  <rect id="Rectangle-path" x="0" y="0" width="3" height="26" rx="1.5"></rect>
+                  <rect id="Rectangle-path" x="0.5" y="0" width="3" height="26" rx="1.5"></rect>
                 </g>
                 <g id="Layer_2" transform="translate(0.000000, 11.000000)">
                   <rect id="Rectangle-path" x="0" y="0" width="26" height="3" rx="1.5"></rect>
