@@ -19,7 +19,7 @@ namespace App\Theme;
         <div class="action-bar-one-col-cta__content">
           <<?= $data['h_el']; ?> class="action-bar-one-col-cta__headline"><?= $data['center_headline']; ?></<?= $data['h_el']; ?>>
           <?= $data['center_content']; ?>
-          <?php $i=0; foreach ($data['center_links'] as $cta) : $i++; ?>
+          <?php $i=0; foreach ($data['center_links'] as $cta) : $i++; if(empty($cta['link'])) continue; ?>
             <p>
               <?php element('button', array_merge($cta['link'], [
                 'classes' => 'button--primary white-blue-border-button--'
