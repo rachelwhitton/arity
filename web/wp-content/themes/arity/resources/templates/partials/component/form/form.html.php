@@ -1,7 +1,9 @@
 <form action="<?= $data['form_url']; ?>" method="POST">
 
   <?php if(!empty($data['is_salesforce'])) : ?>
+    <?php if(!empty($data['use_captcha'])) : ?>
     <input type=hidden name='captcha_settings' value='{"keyname":"Arity_reCAPTCHA","fallback":"true","orgId":"<?= $data['form_oid']; ?>","ts":""}'>
+    <?php endif; ?>
     <input type=hidden name="oid" value="<?= $data['form_oid']; ?>">
     <input type=hidden name="retURL" value="<?= $data['form_return_url']; ?>">
     <input type="hidden" name="lead_source" id="lead_source" value="Arity.com">

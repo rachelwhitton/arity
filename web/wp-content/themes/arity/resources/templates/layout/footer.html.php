@@ -20,20 +20,27 @@ namespace App\Theme;
         <p>
         <a href="https://developer.arity.com/" target="_blank" class="ar-element button button--footer">
           <svg class="site-footer__icon icon-svg" title="" role="img">
-            <use xlink:href="#link-external"></use>
+            <use xlink:href="#external"></use>
           </svg> Visit the portal
         </a>
         </p>
       </div>
       <div class="site-footer__col col3--">
         <h2 class="site-footer__header">Press</h2>
-        <p>Looking for more? Get in touch with an Arity representative.</p>
+        <p>Get in touch with an Arity rep or visit our newsroom.</p>
         <p>
         <a href="mailto:media@arity.com" class="ar-element button button--footer">
           <svg class="site-footer__icon icon-svg" title="" role="img">
-            <use xlink:href="#link-email"></use>
+            <use xlink:href="#email"></use>
           </svg> Press inquiries
         </a>
+        <?php if( !empty(WP_ENV) && in_array(WP_ENV, array('development','staging'))) : ?>
+          <a href="<?= home_url('newsroom/'); ?>" class="ar-element button button--footer">
+            <svg class="site-footer__icon icon-svg" title="" role="img">
+              <use xlink:href="#news"></use>
+            </svg> Newsroom
+          </a>
+        <?php endif; ?>
         </p>
       </div>
       <div class="site-footer__col col4--">

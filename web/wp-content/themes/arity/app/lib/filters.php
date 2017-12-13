@@ -764,3 +764,34 @@ add_filter('acf/format_value/type=wysiwyg', function ($value) {
     $value = apply_filters('the_content', $value);
     return $value;
 }, 10, 3);
+
+add_filter('template_redirect', function() {
+    if(is_admin()) {
+        return;
+    }
+
+    global $post;
+
+    if(!empty($post) && $post->post_name == 'route-report') {
+        $GLOBALS['THEME_SITE_HEADER_LITE'] = array(
+            'menu' => array(
+                'items' => [
+                    array(
+                        'label' => 'Features'
+                    ),
+                    array(
+                        'label' => 'FAQ'
+                    ),
+                    array(
+                        'label' => 'Support'
+                    )
+                ]
+            ),
+            'brand' => array(
+                'href' => false,
+                'name' => 'Route Report',
+                'logo' => asset_path('img/logo-route-report-white.png')
+            )
+        );
+    }
+});

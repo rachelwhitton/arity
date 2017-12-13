@@ -21,7 +21,7 @@ if [[ -n "${_dist:-}" ]]; then
 
   # This removes dev node_modules and only leaves production requirred packages
   echo -e "\nInvoking: 'npm install --only=production'"
-  npm install --only=production
+  yarn install --only=production
 
 else
   # Run yarn run dev
