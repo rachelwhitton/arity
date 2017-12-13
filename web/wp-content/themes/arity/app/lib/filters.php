@@ -766,9 +766,13 @@ add_filter('acf/format_value/type=wysiwyg', function ($value) {
 }, 10, 3);
 
 add_filter('template_redirect', function() {
+    if(is_admin()) {
+        return;
+    }
+
     global $post;
 
-    if($post->post_name == 'route-report') {
+    if(!empty($post) && $post->post_name == 'route-report') {
         $GLOBALS['THEME_SITE_HEADER_LITE'] = array(
             'menu' => array(
                 'items' => [
