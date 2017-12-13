@@ -30,8 +30,8 @@ if(!isset($data['brand']['rel']) && $data['brand']['href'] == home_url('/')) {
   $data['brand']['rel'] = get_bloginfo('name') . " Homepage";
 }
 
-if(!isset($data['brand']['tagline'])) {
-  $data['brand']['tagline'] = get_bloginfo('name');
+if(!isset($data['brand']['name'])) {
+  $data['brand']['name'] = get_bloginfo('name');
 }
 
 if(!isset($data['brand']['logo'])) {
@@ -49,7 +49,7 @@ if(!isset($data['brand']['logo'])) {
           <div class="navbar__brand">
         <?php endif; ?>
           <?php if(!empty($data['brand']['logo'])) : ?><img src="<?= $data['brand']['logo']; ?>" alt="" class="navbar__logo"><?php endif; ?>
-          <?php if(!empty($data['brand']['tagline'])) : ?><span class="sr-only"><?= $data['brand']['tagline']; ?></span><?php endif; ?>
+          <?php if(!empty($data['brand']['name'])) : ?><span class="sr-only"><?= $data['brand']['name']; ?></span><?php endif; ?>
           <?php if(!empty($data['brand']['href'])) : ?>
             </a>
           <?php else : ?>

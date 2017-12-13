@@ -789,6 +789,7 @@ add_filter('template_redirect', function() {
             ),
             'brand' => array(
                 'href' => false,
+                'name' => 'Route Report',
                 'logo' => asset_path('img/logo-route-report-white.png')
             )
         );
