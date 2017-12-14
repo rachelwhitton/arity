@@ -770,28 +770,27 @@ add_filter('template_redirect', function() {
         return;
     }
 
-    global $post;
+    // Determine if should show header lite
+    if(!empty(get_field('enable_header_lite')) ) {
 
-    if(!empty($post) && $post->post_name == 'route-report') {
+        // Define Logo
+        if(!empty($logo = get_field('header_lite_brand_logo'))) {
+            $logo = home_url() . wp_get_attachment_image_src($logo, 'full')[0];
+        }
+
+        // Define Header Lite data
         $GLOBALS['THEME_SITE_HEADER_LITE'] = array(
-            'menu' => array(
-                'items' => [
-                    array(
-                        'label' => 'Features'
-                    ),
-                    array(
-                        'label' => 'FAQ'
-                    ),
-                    array(
-                        'label' => 'Support'
-                    )
-                ]
-            ),
+            'menu' => get_field('header_lite_menu_items'),
             'brand' => array(
-                'href' => false,
-                'name' => 'Route Report',
-                'logo' => asset_path('img/logo-route-report-white.png')
+                'link' => get_field('header_lite_brand_link'),
+                'name' => get_field('header_lite_brand_name'),
+                'logo' => $logo
             )
         );
+    }
+
+    // Determine if should show footer lite
+    if(!empty(get_field('enable_footer_lite')) ) {
+        $GLOBALS['THEME_SITE_FOOTER_LITE'] = true;
     }
 });
