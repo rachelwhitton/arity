@@ -12,7 +12,7 @@ namespace App\Theme;
           <span>|</span>
           <ul class="">
             <li class="__item menu-item menu-privacy-policy">
-              <a href="#" class="__link" aria-selected="false">Privacy Policy</a>
+              <a href="/privacy/" class="__link" aria-selected="false">Privacy Policy</a>
             </li>
           </ul>
         </small>
