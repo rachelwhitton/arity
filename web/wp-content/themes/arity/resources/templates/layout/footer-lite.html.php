@@ -7,7 +7,15 @@ namespace App\Theme;
   <div class="container">
     <div class="row">
       <div class="site-footer-generic-copy">
-        <p>SMALL FOOTER INFO</p>
+        <small class="site-footer-generic__copyright">
+          <span>© 2017 Arity, LLC. All rights reserved.</span>
+          <span>|</span>
+          <ul class="">
+            <li class="__item menu-item menu-privacy-policy">
+              <a href="#" class="__link" aria-selected="false">Privacy Policy</a>
+            </li>
+          </ul>
+        </small>
       </div>
     </div>
   </div>
