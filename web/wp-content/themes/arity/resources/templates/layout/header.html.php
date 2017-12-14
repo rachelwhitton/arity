@@ -64,7 +64,7 @@ $last_nav_item->post_slug = sanitize_title($last_nav_item->title);
       <div class="dropmenu__wrap">
         <div class="dropmenu__primary">
           <a href="<?= $nav_items[0]->url; ?>" title="Learn more about <?= $nav_items[0]->title; ?>" tabindex="-1" aria-label="<?= $nav_items[0]->title; ?>">
-            <p><?= $nav_items[0]->description; ?></p>
+            <?php if(!empty($nav_items[0]->description)) : ?><p><?= $nav_items[0]->description; ?></p><?php endif; ?>
             <p>
               <span class="button">
                 <span class="button__label">View all <?= strtolower($nav_items[0]->title); ?></span>
@@ -79,7 +79,7 @@ $last_nav_item->post_slug = sanitize_title($last_nav_item->title);
             <div class="dropmenu__item">
               <a href="<?= $nav_item->url; ?>" title="Learn more about <?= $nav_item->title; ?>" tabindex="-1" aria-label="<?= $nav_item->title; ?>">
                 <h2><?= $nav_item->title; ?> <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#caret"></use></svg></h2>
-                <p><?= $nav_item->description; ?></p>
+                <?php if(!empty($nav_item->description)) : ?><p><?= $nav_item->description; ?></p><?php endif; ?>
               </a>
             </div>
           <?php endforeach; ?>
