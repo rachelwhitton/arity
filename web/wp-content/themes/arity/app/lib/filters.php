@@ -793,5 +793,13 @@ add_filter('template_redirect', function() {
                 'logo' => asset_path('img/logo-route-report-white.png')
             )
         );
+
+        $GLOBALS['THEME_SITE_FOOTER_LITE'] = array(
+            'brand' => array(
+                'href' => false,
+                'name' => 'Route Report',
+                'logo' => asset_path('img/logo-route-report-white.png')
+            )
+        );
     }
 });
