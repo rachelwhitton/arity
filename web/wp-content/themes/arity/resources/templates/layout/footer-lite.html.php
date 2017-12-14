@@ -8,20 +8,24 @@ namespace App\Theme;
     <div class="row">
       <div class="site-footer-generic-copy">
         <small class="site-footer-generic__copyright">
-          <span>© 2017 Arity, LLC. All rights reserved.</span>
+          <span><?= do_shortcode('[copyright]'); ?></span>
           <span>|</span>
-          <ul class="">
-            <li class="__item menu-item menu-privacy-policy">
-              <a href="/privacy/" class="__link" aria-selected="false">Privacy Policy</a>
-            </li>
-          </ul>
+          <?php
+            if (has_nav_menu('footer_copyright')) :
+          ?>
+            <?php
+              wp_nav_menu([
+                'menu'            => 'nav_menu',
+                'theme_location'  => 'footer_copyright',
+                'menu_class'      => '',
+                'menu_role'       => ''
+              ]);
+            ?>
+          <?php
+            endif;
+          ?>
         </small>
       </div>
     </div>
   </div>
 </footer>
-<?php
-  if (!empty($GLOBALS['sub-footer'])) {
-    module('sub-footer', $GLOBALS['sub-footer']);
-  }
-?>
