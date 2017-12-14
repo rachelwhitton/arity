@@ -12,3 +12,8 @@ namespace App\Theme;
     </div>
   </div>
 </footer>
+<?php
+  if (!empty($GLOBALS['sub-footer'])) {
+    module('sub-footer', $GLOBALS['sub-footer']);
+  }
+?>
