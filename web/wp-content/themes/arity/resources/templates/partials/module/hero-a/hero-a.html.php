@@ -21,7 +21,11 @@ namespace App\Theme;
         <?php if (!empty($data['cta'])) : ?>
           <p>
             <?php
-              $data['cta']['classes'] = array('button--primary', 'blue-button--', 'scroll-to-form--');
+              if( !empty(WP_ENV) && in_array(WP_ENV, array('development','staging'))) { // @todo @flag newsroom
+                $data['cta']['classes'] = array('button--primary', 'blue-button--');
+              } else {
+                $data['cta']['classes'] = array('button--primary', 'blue-button--', 'scroll-to-form--');
+              }
               element('button', $data['cta']);
             ?>
           </p>
