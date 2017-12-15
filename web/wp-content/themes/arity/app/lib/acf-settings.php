@@ -127,6 +127,7 @@ $acf_choices_icon = [
     'save-money' => 'Save Money',
     'speedy' => 'Speedy',
     'vehicle-systems' => 'Vehicle Systems',
+    'person-focus' => 'Person Focus',
 ];
 
 // Sort
@@ -162,6 +163,7 @@ $module_builder->includeACFSettings('body-one-column', 'module');
 $module_builder->includeACFSettings('body-two-column', 'module');
 $module_builder->includeACFSettings('contact-form-w-cta', 'module');
 $module_builder->includeACFSettings('contact-form', 'module');
+$module_builder->includeACFSettings('email-form', 'module');
 $module_builder->includeACFSettings('content-image-block', 'module');
 $module_builder->includeACFSettings('feature-solution-block', 'module');
 $module_builder->includeACFSettings('hero-a', 'module');
@@ -183,6 +185,7 @@ $module_builder->includeACFSettings('action-bar-w-bkg', 'module');
 $module_builder->includeACFSettings('sub-footer', 'module');
 $module_builder->includeACFSettings('icon-two-column', 'module');
 $module_builder->includeACFSettings('horizontal-rule', 'module');
+$module_builder->includeACFSettings('video', 'module');
 
 /*
 |--------------------------------------------------------------------------

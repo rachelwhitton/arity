@@ -34,7 +34,7 @@ namespace App\Theme;
             <use xlink:href="#email"></use>
           </svg> Press inquiries
         </a>
-        <?php if( !empty(WP_ENV) && in_array(WP_ENV, array('development','staging'))) : ?>
+        <?php if( !empty(WP_ENV) && in_array(WP_ENV, array('development','staging'))) : // @todo @flag newsroom ?>
           <a href="<?= home_url('newsroom/'); ?>" class="ar-element button button--footer">
             <svg class="site-footer__icon icon-svg" title="" role="img">
               <use xlink:href="#news"></use>

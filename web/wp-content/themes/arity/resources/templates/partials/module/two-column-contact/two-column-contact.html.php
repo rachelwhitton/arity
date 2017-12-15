@@ -13,7 +13,7 @@ namespace App\Theme;
 <div <?php module_class('body-two-column body-two-column--contact'); ?>>
   <div class="row">
     <div class="body-two-column__col left--">
-      <?php if( !empty(WP_ENV) && in_array(WP_ENV, array('development','staging'))) : ?>
+      <?php if( !empty(WP_ENV) && in_array(WP_ENV, array('development','staging'))) : // @todo @flag contact-form ?>
         <div class="ar-component lite-form">
           <?php if (!empty($data['left_column_headline'])) : ?>
             <div class="row">

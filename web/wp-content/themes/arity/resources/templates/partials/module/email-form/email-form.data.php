@@ -18,6 +18,6 @@ if(empty($data['form_url'])) {
   }
 }
 
-$data['use_captcha'] = true;
+$data['use_captcha'] = false;
 
 return $data;
