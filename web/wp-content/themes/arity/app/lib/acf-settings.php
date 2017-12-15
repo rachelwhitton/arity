@@ -127,6 +127,7 @@ $acf_choices_icon = [
     'save-money' => 'Save Money',
     'speedy' => 'Speedy',
     'vehicle-systems' => 'Vehicle Systems',
+    'person-focus' => 'Person Focus',
 ];
 
 // Sort
