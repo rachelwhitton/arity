@@ -80,7 +80,13 @@ function isLinkEmail($url)
 
 function isLinkExternal($url)
 {
-    if(substr($url, 0, 1) == '/') {
+    if (empty($url) || !is_string($url)) { return false; }
+
+    if($url[0] == "/" && $url[1] != "/") {
+        return false;
+    }
+
+    if($url[0] == "#") {
         return false;
     }
 

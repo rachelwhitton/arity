@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "aa7e105511fb558b2afbf2db981db555",
+    "content-hash": "9e38e7a20db931bd6bc2a2b4108a58be",
     "packages": [
         {
             "name": "composer/installers",
@@ -430,6 +430,46 @@
                 "simple-cache"
             ],
             "time": "2017-01-02T13:31:39+00:00"
+        },
+        {
+            "name": "ricardofiorani/php-video-url-parser",
+            "version": "v0.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ricardofiorani/php-video-url-parser.git",
+                "reference": "4b2a2e1a9be302ba132cbff0a866f4a8fd0dddd5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ricardofiorani/php-video-url-parser/zipball/4b2a2e1a9be302ba132cbff0a866f4a8fd0dddd5",
+                "reference": "4b2a2e1a9be302ba132cbff0a866f4a8fd0dddd5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "fabpot/php-cs-fixer": ">= 1.0",
+                "phpunit/phpunit": "^4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "RicardoFiorani\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ricardo Fiorani",
+                    "email": "ricardo.fiorani@gmail.com"
+                }
+            ],
+            "description": "PHP Video URL Parser is a simple video url parser.",
+            "time": "2016-03-17T17:30:40+00:00"
         },
         {
             "name": "roots/soil",

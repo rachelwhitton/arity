@@ -1,6 +1,5 @@
 <?php
 namespace App\Theme;
-use Video\Video;
 
 ?>
 <?php
@@ -15,7 +14,7 @@ use Video\Video;
 <div <?php module_class('video-module'); ?>>
   <div class="container">
     <figure class="video-wrapper">
-      <?php // the_video($data['url']); ?>
+      <?php the_video($data['url']); ?>
     </figure>
   </div>
 </div>
