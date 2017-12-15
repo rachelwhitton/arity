@@ -33,10 +33,13 @@ class Video
      */
     private $provider_patterns = array(
         'vimeo' => [
+            '#(https?://vimeo.com)/([0-9]+)#i',
             '#(https?://vimeo.com)/([0-9]+)#i'
         ],
         'youtube' => [
-            '#(https?://vimeo.com)/([0-9]+)#i'
+            '#(https?://www.youtube.com)/watch?v=([0-9]+)#i',
+            '#(https?://www.youtube.com)/embed/([0-9]+)#i',
+            '#(https?://youtu.be)/([0-9]+)#i'
         ]
     );
 
