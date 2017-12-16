@@ -11,7 +11,11 @@ namespace App\Theme;
 */
 ?>
 
+<?php if ($data['bkg_color'] == 'blue') : ?>
+<div class="ar-module email-form email-blue-bg">
+<?php else : ?>
 <div class="ar-module email-form">
+<?php endif; ?>
   <div class="container">
     <div class="email-only-container">
       <form action="<?= $data['form_url']; ?>" method="POST">
@@ -26,7 +30,11 @@ namespace App\Theme;
           </div>
         </div>
         <div class="email-only-button-group">
+          <?php if ($data['bkg_color'] == 'blue') : ?>
+          <button type="submit" class="button button--primary inverse-- email-only-button--">Submit</button>
+          <?php else : ?>
           <button type="submit" class="button button--primary white-blue-button-- email-only-button--">Submit</button>
+          <?php endif; ?>
         </div>
       </form>
     </div>
