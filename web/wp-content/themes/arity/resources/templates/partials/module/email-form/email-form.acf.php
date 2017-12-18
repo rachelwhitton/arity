@@ -17,6 +17,30 @@ $fields = [
         ),
     ]),
 
+    acf_tab([
+        'label' => 'Options',
+        'name' => 'email-form__options_tab',
+      ]),
+  
+      acf_select([
+        'label' => 'Background Color',
+        'name' => 'email-form__bkg_color',
+        'key' => 'field_bkg_color',
+        'instructions' => '',
+        'required' => 0,
+        'maxlength' => '',
+        'allow_null' => 1,
+        'ui' => 1,
+        'wrapper' => array (
+          'width' => '25',
+        ),
+        'default_value' => 'white',
+        'choices' => [
+          'white' => 'White Background',
+          'blue' => 'Blue Background'
+        ]
+    ])
+
 ];
 
 // ACF Field Group
