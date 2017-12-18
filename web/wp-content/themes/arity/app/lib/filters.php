@@ -765,6 +765,22 @@ add_filter('acf/format_value/type=wysiwyg', function ($value) {
     return $value;
 }, 10, 3);
 
+/**
+ * Apply filter to ACF link fields
+ * @since 1.0.0
+ * @return string $value
+ */
+add_filter('acf/format_value/type=link', function ($link) {
+
+    // Stop html tags from showing
+    if(!empty($link['title'])) {
+        $link['title'] = str_replace('&lt;', '<', $link['title']);
+        $link['title'] = str_replace('&gt;', '>', $link['title']);
+    }
+
+    return $link;
+}, 10, 3);
+
 add_filter('template_redirect', function() {
     if(is_admin()) {
         return;
