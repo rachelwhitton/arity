@@ -20,9 +20,9 @@ if (! defined('ABSPATH')) {
  *
  * @return \Video
  */
-function video($id, $provider='', $atts=array())
+function video($id, $atts=array())
 {
-    return new Video($id, $provider, $atts);
+    return new Video($id, $atts);
 }
 
 /**
@@ -34,9 +34,9 @@ function video($id, $provider='', $atts=array())
  *
  * @return string html output
  */
-function get_video($id, $provider='', $atts=array())
+function get_video($id, $atts=array())
 {
-    return video($id, $provider, $atts)->getOutput();
+    return video($id, $atts)->output();
 }
 
 /**
@@ -48,7 +48,7 @@ function get_video($id, $provider='', $atts=array())
  *
  * @return void
  */
-function the_video($id, $provider='', $atts=array())
+function the_video($id, $atts=array())
 {
-    echo get_video($id, $provider, $atts);
+    echo get_video($id, $atts);
 }
