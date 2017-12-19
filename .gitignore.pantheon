@@ -11,8 +11,11 @@
 /.env.example
 /.gitattributes
 /tests/
+/tests/*
 /config/certs/
+/config/certs/*
 /scripts/
+/scripts/*
 /.editorconfig
 /composer.json
 /composer.lock

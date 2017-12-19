@@ -15,6 +15,11 @@ define('REDIS_HOST', $_ENV['CACHE_HOST']);
 define('REDIS_PORT', $_ENV['CACHE_PORT']);
 define('REDIS_AUTH', $_ENV['CACHE_PASSWORD']);
 
+// Set cache to true if Redis is enabled
+if( !empty($_ENV['CACHE_HOST']) && !empty($_ENV['CACHE_PORT']) && !empty($_ENV['CACHE_PASSWORD']) ) {
+    defined('ENABLE_CACHE') || define('ENABLE_CACHE', env('ENABLE_CACHE') ?: true);
+}
+
 // ** Authentication Unique Keys and Salts. ** //
 define('AUTH_KEY', $_ENV['AUTH_KEY']);
 define('SECURE_AUTH_KEY', $_ENV['SECURE_AUTH_KEY']);

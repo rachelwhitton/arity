@@ -8,7 +8,7 @@ $fields = [
     acf_text([
       'label' => 'Video Url',
       'name' => 'video__url',
-      'instructions' => 'Ex. https://vimeo.com/8733915 or https://player.vimeo.com/video/8733915',
+      'instructions' => 'Supports Vimeo or Youtube',
       'required' => 1,
       'maxlength' => '',
       'wrapper' => array (
