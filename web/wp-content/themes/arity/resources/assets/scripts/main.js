@@ -6,6 +6,7 @@ import Router from './util/Router';
 import common from './routes/common';
 import home from './routes/home';
 import routeReportInfo from './routes/route-report-info';
+import ces2018 from './routes/ces2018';
 
 /**
  * Populate Router instance with DOM routes
@@ -14,9 +15,10 @@ import routeReportInfo from './routes/route-report-info';
 const routes = new Router({
   /** All pages */
   common,
-  /** Home page */
+  /** Specific Pages */
   home,
   routeReportInfo,
+  ces2018,
 });
 
 /** Load Events */
