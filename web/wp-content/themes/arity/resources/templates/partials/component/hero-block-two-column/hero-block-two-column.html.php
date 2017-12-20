@@ -19,6 +19,9 @@ namespace App\Theme;
       </div>
     </div>
     <div class="hero-block__right-col">
+      <?php if(!empty($data['--settings_right-column-vertical-alignment']) && $data['--settings_right-column-vertical-alignment'] == 'middle') : ?>
+        <div class="align-vertical-middle">
+      <?php endif; ?>
       <<?= updateElImportance($data['h_el'], 2); ?> class="hero-block__cta-headline"><?= $data['right_column_headline']; ?></<?= updateElImportance($data['h_el'], 2); ?>>
       <?php $i=0; foreach ($data['right_column_links'] as $cta) : $i++; ?>
         <p>
@@ -27,6 +30,9 @@ namespace App\Theme;
           ])); ?>
         </p>
       <?php endforeach; ?>
+      <?php if(!empty($data['--settings_right-column-vertical-alignment']) && $data['--settings_right-column-vertical-alignment'] == 'middle') : ?>
+        </div>
+      <?php endif; ?>
     </div>
   </div>
 </div>
