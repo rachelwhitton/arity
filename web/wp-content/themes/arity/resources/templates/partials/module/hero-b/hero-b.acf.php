@@ -163,7 +163,41 @@ $fields = [
       'max'         => 2,
       'layout'      => 'block',
             'button_label'  => 'Add Link',
-    ])
+    ]),
+
+    // Two Column Tab for Left Column
+    acf_tab([
+      'label' => 'Options',
+      'name' => 'hero-b__options_tab',
+      'conditional_logic' => [
+        [
+          [
+            'name' => 'hero-b__--settings_layout',
+            'operator' => '==',
+            'value' => 'two-column'
+          ]
+        ]
+      ]
+    ]),
+
+    acf_select([
+      'label' => 'Right Column Vertical Alignment',
+      'name' => 'hero-b__--settings_right-column-vertical-alignment',
+      'key' => 'field_--settings_right_column_vertical_alignment',
+      'instructions' => '',
+      'required' => 0,
+      'maxlength' => '',
+      'allow_null' => 0,
+      'ui' => 1,
+      'wrapper' => array (
+        'width' => '25',
+      ),
+      'default_value' => 'top',
+      'choices' => [
+        'top' => 'Top',
+        'middle' => 'Middle'
+      ]
+  ])
 ];
 
 // ACF Field Group
