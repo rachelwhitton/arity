@@ -18,15 +18,26 @@ add_shortcode('link', function ($attr, $text_link) {
     // Define default link class
     $link_class = 'link';
 
-    // Define link class if type if passed
-    if (!empty($attr['type'])) {
-        $link_class = $attr['type'].'_link';
-    }
+    // Check for custom classes
+    if(!empty($attr['class'])) {
+        $link_class = '';
 
-    // Add link classes to attr classes array
-    $attr['classes'][] = $link_class;
-    if (empty($attr['type']) && !empty($attr['icon'])) {
-        $attr['classes'][] = 'button button--link';
+        // Convert from string to array
+        $attr['classes'] = explode(" ", $attr['class']);
+        $attr['classes'][] = 'button';
+        unset($attr['class']);
+    } else {
+
+        // Define link class if type if passed
+        if (!empty($attr['type'])) {
+            $link_class = $attr['type'].'_link';
+        }
+
+        // Add link classes to attr classes array
+        $attr['classes'][] = $link_class;
+        if (empty($attr['type']) && !empty($attr['icon'])) {
+            $attr['classes'][] = 'button button--link';
+        }
     }
 
     // Pull in classes from shortcode, convert to array, merge array into attr classes
