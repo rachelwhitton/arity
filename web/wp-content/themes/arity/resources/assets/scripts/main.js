@@ -5,6 +5,7 @@
 import Router from './util/Router';
 import common from './routes/common';
 import home from './routes/home';
+import contact from './routes/contact';
 import routeReportInfo from './routes/route-report-info';
 import ces2018 from './routes/ces2018';
 
@@ -19,6 +20,7 @@ const routes = new Router({
   home,
   routeReportInfo,
   ces2018,
+  contact,
 });
 
 /** Load Events */

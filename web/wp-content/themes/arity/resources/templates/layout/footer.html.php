@@ -29,18 +29,16 @@ namespace App\Theme;
         <h2 class="site-footer__header">Press</h2>
         <p>Get in touch with an Arity rep or visit our newsroom.</p>
         <p>
-        <a href="mailto:media@arity.com" class="ar-element button button--footer">
-          <svg class="site-footer__icon icon-svg" title="" role="img">
-            <use xlink:href="#email"></use>
-          </svg> Press inquiries
-        </a>
-        <?php if( !empty(WP_ENV) && in_array(WP_ENV, array('development','staging'))) : // @todo @flag newsroom ?>
+          <a href="mailto:media@arity.com" class="ar-element button button--footer">
+            <svg class="site-footer__icon icon-svg" title="" role="img">
+              <use xlink:href="#email"></use>
+            </svg> Press inquiries
+          </a>
           <a href="<?= home_url('newsroom/'); ?>" class="ar-element button button--footer">
             <svg class="site-footer__icon icon-svg" title="" role="img">
               <use xlink:href="#news"></use>
             </svg> Newsroom
           </a>
-        <?php endif; ?>
         </p>
       </div>
       <div class="site-footer__col col4--">
