@@ -12,4 +12,8 @@ if (!empty($data['target']) && $data['target'] == '_blank') {
   $data['icon'] = 'external';
 }
 
+if(!empty($data['icon'])) {
+  $data['classes'][] = 'has-icon--';
+}
+
 return $data;
