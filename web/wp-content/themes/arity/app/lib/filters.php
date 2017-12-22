@@ -227,7 +227,7 @@ EOD;
  * @return void
  */
 $google_analytics_id = 'UA-90423861-1';
-add_action('wp_head', function () use ($google_analytics_id) {
+add_action('theme/after_wphead', function () use ($google_analytics_id) {
 
     if( empty($google_analytics_id) ) {
         return;
@@ -260,7 +260,7 @@ EOD;
  * @return void
  */
 $gtag_id = false;
-add_action('wp_head', function () use ($gtag_id) {
+add_action('theme/after_wphead', function () use ($gtag_id) {
 
     if( empty($gtag_id) ) {
         return;
@@ -291,8 +291,9 @@ EOD;
  * @since 1.0.0
  * @return void
  */
-$hotjar_tracking_code = '426469';
-add_action('wp_head', function () use($hotjar_tracking_code) {
+// $hotjar_tracking_code = '426469';
+$hotjar_tracking_code = false;
+add_action('theme/after_wphead', function () use($hotjar_tracking_code) {
     if( empty($hotjar_tracking_code) ) {
         return;
     }
@@ -318,7 +319,7 @@ EOD;
  * @return void
  */
 $adobe_dtm_tracking_code = '0893390c40d93db48cc0d98a10c4fe9f90b72e2c';
-add_action('wp_head', function () use($adobe_dtm_tracking_code) {
+add_action('theme/after_wphead', function () use($adobe_dtm_tracking_code) {
     if( !empty(WP_ENV) && !in_array(WP_ENV, array('production','staging'))) {
         return;
     }
@@ -341,7 +342,7 @@ EOD;
  * @since 1.0.0
  * @return void
  */
-add_action('wp_footer', function () {
+add_action('theme/after_wpfooter', function () {
     if( !empty(WP_ENV) && !in_array(WP_ENV, array('production','staging'))) {
         return;
     }
@@ -360,7 +361,7 @@ EOD;
  * @since 1.1.0
  * @return void
  */
-add_action('wp_footer', function () {
+add_action('theme/after_wphead', function () {
 
     if( !empty(WP_ENV) && WP_ENV != 'production' ) {
         return;
@@ -397,7 +398,7 @@ EOD;
  * @since 1.1.0
  * @return void
  */
-add_action('wp_footer', function () {
+add_action('theme/after_wpfooter', function () {
 
     if( !empty(WP_ENV) && WP_ENV != 'production' ) {
         return;
@@ -418,7 +419,7 @@ EOD;
  * @return void
  */
 $doubleclick_floodlight_id = '8268350';
-add_action('wp_head', function () use($doubleclick_floodlight_id) {
+add_action('theme/after_wphead', function () use($doubleclick_floodlight_id) {
 
     if( !empty(WP_ENV) && WP_ENV != 'production' ) {
         return;
@@ -426,6 +427,7 @@ add_action('wp_head', function () use($doubleclick_floodlight_id) {
 
     echo <<<EOD
 
+<!-- Start DoubleClick -->
 <!--
 Start of global snippet: Please do not remove
 Place this snippet between the <head> and </head> tags on every page of your site.
@@ -440,16 +442,51 @@ Place this snippet between the <head> and </head> tags on every page of your sit
   gtag('config', 'DC-$doubleclick_floodlight_id');
 </script>
 <!-- End of global snippet: Please do not remove -->
+<!-- End DoubleClick -->
 
 EOD;
 }, 90);
 
 /**
- * Add DoubleClick event snippet to Head. Only for homepage.
+ * Add netmining global site tag to Footer.
  * @since 1.2.0
  * @return void
  */
-add_action('wp_head', function () {
+$enable_netmining = true;
+add_action('theme/after_wpfooter', function () use($enable_netmining) {
+
+    if( !empty(WP_ENV) && WP_ENV != 'production' ) {
+        return;
+    }
+
+    if(empty($enable_netmining)) {
+        return;
+    }
+
+    echo <<<EOD
+
+<!-- Start Netmining -->
+<script type='text/javascript'>
+(function(){
+var Data = {}
+,i=Data,d=document,u=encodeURIComponent,x=z='',j=d.createElement('script'),
+r=d.referrer,s=d.getElementsByTagName('script')[0];j.type='text/javascript';
+j.async=!0;r&&r.split(/[/:?]/)[3]!=d.location.hostname&&(i.ref=r);for(y in i)
+x+='&'+y+'='+u(i[y]);j.src='//arity.netmng.com/'
++'?aid=5441&siclientid='+x;s.parentNode.insertBefore(j,s);
+})();
+</script>
+<!-- End Netmining -->
+
+EOD;
+}, 91);
+
+/**
+ * Add DoubleClick event snippet to right after <body> tag. Only for homepage.
+ * @since 1.2.0
+ * @return void
+ */
+add_action('theme/after_body', function () {
 
     if( !empty(WP_ENV) && WP_ENV != 'production' ) {
         return;
@@ -466,84 +503,77 @@ add_action('wp_head', function () {
     echo <<<EOD
 
 <!--
-Event snippet for IoT_Conference_160x600 on https://www.arity.com: Please do not remove.
-Place this snippet on pages with events you’re tracking.
-Creation date: 11/20/2017
+Start of DoubleClick Floodlight Tag: Please do not remove
+Activity name of this tag: Homepage Counter_FL
+URL of the webpage where the tag is expected to be placed: https://www.arity.com
+This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+Creation Date: 12/20/2017
 -->
-<script>
-  gtag('event', 'conversion', {
-    'allow_custom_scripts': true,
-    'send_to': 'DC-8268350/arity0/iot_c001+standard'
-  });
+<script type="text/javascript">
+var axel = Math.random() + "";
+var a = axel * 10000000000000;
+document.write('<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=fl;cat=homep0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=' + a + '?" width="1" height="1" alt=""/>');
 </script>
 <noscript>
-<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=arity0;cat=iot_c001;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=$ord?" width="1" height="1" alt=""/>
+<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=fl;cat=homep0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=$ord?" width="1" height="1" alt=""/>
 </noscript>
-<!-- End of event snippet: Please do not remove -->
+<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+
+EOD;
+}, 100);
+
+/**
+ * Add DoubleClick event snippet to right after <body> tag. Only for CES page.
+ * @since 1.2.0
+ * @return void
+ */
+add_action('theme/after_body', function () {
+
+    if( !empty(WP_ENV) && WP_ENV != 'production' ) {
+        return;
+    }
+
+    // Only homepage
+    if( !is_page('ces-2018') && !is_page('ces2018') ) {
+        return;
+    }
+
+    // Unique id for cache busting
+    $ord = time();
+
+    echo <<<EOD
 
 <!--
-Event snippet for IoT_Conference_300x250 on https://www.arity.com: Please do not remove.
-Place this snippet on pages with events you’re tracking.
-Creation date: 11/20/2017
+Start of DoubleClick Floodlight Tag: Please do not remove
+Activity name of this tag: CES Homepage Counter
+URL of the webpage where the tag is expected to be placed: https://www.arity.com/ces2018/
+This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+Creation Date: 12/20/2017
 -->
-<script>
-  gtag('event', 'conversion', {
-    'allow_custom_scripts': true,
-    'send_to': 'DC-8268350/arity0/iot_c000+standard'
-  });
+<script type="text/javascript">
+var axel = Math.random() + "";
+var a = axel * 10000000000000;
+document.write('<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=fl;cat=cesho0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=' + a + '?" width="1" height="1" alt=""/>');
 </script>
 <noscript>
-<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=arity0;cat=iot_c000;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=$ord?" width="1" height="1" alt=""/>
+<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=fl;cat=cesho0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=$ord?" width="1" height="1" alt=""/>
 </noscript>
-<!-- End of event snippet: Please do not remove -->
+<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
 
-<!--
-Event snippet for IoT_Conference_300x50 on https://www.arity.com: Please do not remove.
-Place this snippet on pages with events you’re tracking.
-Creation date: 11/20/2017
--->
-<script>
-  gtag('event', 'conversion', {
-    'allow_custom_scripts': true,
-    'send_to': 'DC-8268350/arity0/iot_c00+standard'
-  });
+<!-- Start Netmining Conversion -->
+<script type='text/javascript'>
+(function(){
+var Conversion = {};
+,i=Conversion,d=document,u=encodeURIComponent,x=z='',j=d.createElement('script'),
+r=d.referrer,s=d.getElementsByTagName('script')[0];j.type='text/javascript';
+j.async=!0;r&&r.split(/[/:?]/)[3]!=d.location.hostname&&(i.ref=r);for(y in i)
+x+='&'+y+'='+u(i[y]);j.src='//arity.netmng.com/conv/'
++'?aid=5441&siclientid=&cpid=306616898'+x;s.parentNode.insertBefore(j,s);
+})();
 </script>
-<noscript>
-<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=arity0;cat=iot_c00;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=$ord?" width="1" height="1" alt=""/>
-</noscript>
-<!-- End of event snippet: Please do not remove -->
+<!-- End Netmining Conversion -->
 
-<!--
-Event snippet for IoT_Conference_320x50 on https://www.arity.com: Please do not remove.
-Place this snippet on pages with events you’re tracking.
-Creation date: 11/20/2017
--->
-<script>
-  gtag('event', 'conversion', {
-    'allow_custom_scripts': true,
-    'send_to': 'DC-8268350/arity0/iot_c002+standard'
-  });
-</script>
-<noscript>
-<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=arity0;cat=iot_c002;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=$ord?" width="1" height="1" alt=""/>
-</noscript>
-<!-- End of event snippet: Please do not remove -->
-
-<!--
-Event snippet for IoT_conference_728x90 on https://www.arity.com: Please do not remove.
-Place this snippet on pages with events you’re tracking.
-Creation date: 11/20/2017
--->
-<script>
-  gtag('event', 'conversion', {
-    'allow_custom_scripts': true,
-    'send_to': 'DC-8268350/arity0/iot_c0+standard'
-  });
-</script>
-<noscript>
-<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=arity0;cat=iot_c0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=$ord?" width="1" height="1" alt=""/>
-</noscript>
-<!-- End of event snippet: Please do not remove -->
+EOD;
 
 EOD;
 }, 100);
@@ -684,7 +714,7 @@ add_action('partial_class', function (array $classes) {
  * @since 1.0.0
  * @return void
  */
-add_action('theme/head', function () {
+add_action('theme/before_wphead', function () {
     $assets_folder = config('paths')['uri'] . '/' . config('directories')['dist'];
 
     echo <<<EOD
@@ -725,7 +755,7 @@ add_action('theme/after_body', function () {
   <div class="sr-only" id="_skipToMain"><a href="#main" class="jumplink">Skip to the main content</a></div>
 
 EOD;
-});
+}, 10);
 
 
 /*
@@ -813,7 +843,7 @@ add_filter('template_redirect', function() {
 
 });
 
-add_filter('theme/after_footer', function() {
+add_filter('before_wpfooter', function() {
     if(is_admin()) {
         return;
     }
