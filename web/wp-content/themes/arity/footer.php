@@ -14,9 +14,8 @@ use function App\Theme\template;
         template('layout/footer');
     }
 ?>
-<?php do_action('theme/after_footer') ?>
-
+<?php do_action('theme/before_wpfooter') ?>
     <?php wp_footer(); ?>
-
+    <?php do_action('theme/after_wpfooter') ?>
   </body>
 </html>
