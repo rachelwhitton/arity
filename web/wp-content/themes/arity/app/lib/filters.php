@@ -259,7 +259,7 @@ EOD;
  * @since 1.0.0
  * @return void
  */
-$gtag_id = false;
+$gtag_id = 'GTM-KH6GQ88';
 add_action('theme/after_wphead', function () use ($gtag_id) {
 
     if( empty($gtag_id) ) {
@@ -273,15 +273,37 @@ add_action('theme/after_wphead', function () use ($gtag_id) {
     echo <<<EOD
 
 <!-- Google Tag Manager -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=$gtag_id"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments)};
-  gtag('js', new Date());
-
-  gtag('config', '$gtag_id');
-</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','$gtag_id');</script>
 <!-- End Google Tag Manager -->
+
+EOD;
+});
+
+/**
+ * Add Google Tag Manager.
+ * @since 1.0.0
+ * @return void
+ */
+add_action('theme/after_body', function () use ($gtag_id) {
+
+    if( empty($gtag_id) ) {
+        return;
+    }
+
+    if( !empty(WP_ENV) && WP_ENV != 'production' ) {
+        return;
+    }
+
+    echo <<<EOD
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=$gtag_id"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 EOD;
 });
