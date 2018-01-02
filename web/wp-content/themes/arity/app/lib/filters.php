@@ -386,7 +386,7 @@ _qevents.push({qacct: "p-CT9p1As87v16a"});
 
 </script>
 <noscript>
- <img src="//pixel.quantserve.com/pixel/p-CT9p1As87v16a.gif?labels=_fp.event.Default" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
+ <img src="//pixel.quantserve.com/pixel/p-CT9p1As87v16a.gif?labels=_fp.event.Default" style="display: none;" border="0" height="1" width="1" alt="Quantcast" class="sr-only" />
 </noscript>
 <!-- End Quantcast tag -->
 
@@ -512,10 +512,10 @@ Creation Date: 12/20/2017
 <script type="text/javascript">
 var axel = Math.random() + "";
 var a = axel * 10000000000000;
-document.write('<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=fl;cat=homep0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=' + a + '?" width="1" height="1" alt=""/>');
+document.write('<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=fl;cat=homep0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=' + a + '?" width="1" height="1" alt="" class="sr-only" />');
 </script>
 <noscript>
-<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=fl;cat=homep0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=$ord?" width="1" height="1" alt=""/>
+<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=fl;cat=homep0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=$ord?" width="1" height="1" alt="" class="sr-only" />
 </noscript>
 <!-- End of DoubleClick Floodlight Tag: Please do not remove -->
 
@@ -553,10 +553,10 @@ Creation Date: 12/20/2017
 <script type="text/javascript">
 var axel = Math.random() + "";
 var a = axel * 10000000000000;
-document.write('<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=fl;cat=cesho0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=' + a + '?" width="1" height="1" alt=""/>');
+document.write('<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=fl;cat=cesho0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=' + a + '?" width="1" height="1" alt="" class="sr-only" />');
 </script>
 <noscript>
-<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=fl;cat=cesho0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=$ord?" width="1" height="1" alt=""/>
+<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=fl;cat=cesho0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=$ord?" width="1" height="1" alt="" class="sr-only" />
 </noscript>
 <!-- End of DoubleClick Floodlight Tag: Please do not remove -->
 
@@ -575,7 +575,6 @@ x+='&'+y+'='+u(i[y]);j.src='//arity.netmng.com/conv/'
 
 EOD;
 
-EOD;
 }, 100);
 
 /*
