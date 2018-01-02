@@ -1,5 +1,5 @@
 /** import external dependencies */
-import $ from 'jquery';
+// import $ from 'jquery';
 
 export default {
   init() {
