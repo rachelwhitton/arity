@@ -864,7 +864,7 @@ add_filter('template_redirect', function() {
 
 });
 
-add_filter('before_wpfooter', function() {
+add_filter('theme/before_wpfooter', function() {
     if(is_admin()) {
         return;
     }
