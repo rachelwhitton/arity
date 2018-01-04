@@ -45,6 +45,8 @@ namespace App\Theme;
           <div class="form-control-feedback" data-error="invalid">Please enter a valid email</div>
         </div>
 
+        <input type="hidden" id="company" maxlength="40" name="company" size="20" type="text" value="CES Tradeshow [Astronaut Product Update]"/>
+
         <div class="btn-group">
           <button type="submit" class="button button--primary white-blue-button--">Submit</button>
         </div>
