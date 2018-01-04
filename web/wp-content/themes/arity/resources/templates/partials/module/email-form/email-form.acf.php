@@ -10,6 +10,19 @@ $fields = [
         'name' => 'email-form__headline',
         'key' => 'field_headline',
         'instructions' => '',
+        'required' => 1,
+        'maxlength' => '',
+        'wrapper' => array (
+        'width' => '100',
+        ),
+    ]),
+
+    // Content
+    acf_wysiwyg([
+        'label' => 'Content',
+        'name' => 'email-form__content',
+        'key' => 'field_content',
+        'instructions' => '',
         'required' => 0,
         'maxlength' => '',
         'wrapper' => array (
@@ -21,7 +34,7 @@ $fields = [
         'label' => 'Options',
         'name' => 'email-form__options_tab',
       ]),
-  
+
       acf_select([
         'label' => 'Background Color',
         'name' => 'email-form__bkg_color',

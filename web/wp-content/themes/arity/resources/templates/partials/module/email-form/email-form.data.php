@@ -20,4 +20,11 @@ if(empty($data['form_url'])) {
 
 $data['use_captcha'] = false;
 
+// Classes
+$data['classes'][] = 'email-form';
+
+if(!empty($data['bkg_color'])) {
+  $data['classes'][] = 'email-form--bkg-dark';
+}
+
 return $data;
