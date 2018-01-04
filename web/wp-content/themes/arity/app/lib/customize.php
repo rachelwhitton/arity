@@ -137,7 +137,8 @@ add_action('after_setup_theme', function () {
     /**
      * Add custom footer message
      */
-    add_theme_support('plate-footer', 'Thank you for creating with VSA Partners.');
+    $details = 'Using '.config('title').' v'.config('version').' ('.WP_ENV.').';
+    add_theme_support('plate-footer', 'Thank you for creating with VSA Partners. '.$details);
 
     /**
      * Enable features from Soil when plugin is activated
