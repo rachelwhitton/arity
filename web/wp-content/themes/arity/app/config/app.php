@@ -9,6 +9,8 @@ return [
     |--------------------------------------------------------------------------
     |
     */
+    'name' => $pkg->name,
+    'title' => $pkg->title,
     'version' => $pkg->version,
     'patterns-version' => $pkg->config->arity,
 

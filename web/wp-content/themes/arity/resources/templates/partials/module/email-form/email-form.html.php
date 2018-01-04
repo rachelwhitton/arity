@@ -6,33 +6,49 @@ namespace App\Theme;
   Template Name:      Email Form
   Template Type:      Module
   Description:        Email-only form with option to choose two colors.
-  Last Updated:       12/15/2017
-  Since:              1.2.7
+  Last Updated:       01/03/2018
+  Since:              1.4.0
 */
 ?>
 
-<?php if ($data['bkg_color'] == 'blue') : ?>
-<div class="ar-module email-form email-blue-bg">
-<?php else : ?>
-<div class="ar-module email-form">
-<?php endif; ?>
+<div <?php module_class($data['classes']); ?>>
   <div class="container">
-    <div class="email-only-container">
+    <?php if (!empty($data['headline'])) : ?>
+    <div class="email-form__title">
+      <h3 class="email-form__title__headline"><?= $data['headline']; ?></h3>
+    </div>
+    <?php endif; ?>
+    <div class="email-form__content">
+      <?= apply_filters('the_content', $data['content']); ?>
+    </div>
+
+    <div class="email-form__form">
       <form action="<?= $data['form_url']; ?>" method="POST">
+        <div class="form-group form-group--required">
+          <label class="form-group-label" for="first_name">First name</label>
+          <input type="text" class="form-control" name="first_name" id="first_name" autocapitalize="words" placeholder="" required>
+          <div class="form-control-feedback" data-error="required">Please enter first name</div>
+          <div class="form-control-feedback" data-error="invalid">Please enter a valid first name</div>
+        </div>
 
         <div class="form-group form-group--required">
-          <?php if (!empty($data['headline'])) : ?>
-            <label class="form-group-label" for="email"><?= $data['headline']; ?></label>
-          <?php endif; ?>
-          <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email address">
+          <label class="form-group-label" for="last_name">Last name</label>
+          <input type="text" class="form-control" name="last_name" id="last_name" autocapitalize="words" placeholder="" required>
+          <div class="form-control-feedback" data-error="required">Please enter last name</div>
+          <div class="form-control-feedback" data-error="invalid">Please enter a valid last name</div>
+        </div>
+
+        <div class="form-group form-group--required">
+          <label class="form-group-label" for="email">Email</label>
+          <input type="email" class="form-control" name="email" id="email" placeholder="" required>
+          <div class="form-control-feedback" data-error="required">Please enter email</div>
           <div class="form-control-feedback" data-error="invalid">Please enter a valid email</div>
         </div>
-        <div class="email-only-button-group">
-          <?php if ($data['bkg_color'] == 'blue') : ?>
-          <button type="submit" class="button button--primary inverse-- email-only-button--">Submit</button>
-          <?php else : ?>
-          <button type="submit" class="button button--primary white-blue-button-- email-only-button--">Submit</button>
-          <?php endif; ?>
+
+        <input type="hidden" id="company" maxlength="40" name="company" size="20" type="text" value="CES Tradeshow [Astronaut Product Update]"/>
+
+        <div class="btn-group">
+          <button type="submit" class="button button--primary white-blue-button--">Submit</button>
         </div>
       </form>
     </div>
