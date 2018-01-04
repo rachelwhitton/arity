@@ -111,6 +111,22 @@ $fields = [
               ]
             ]
           ]
+        ],
+        [
+          'label' => 'Column Image',
+          'name' => 'element__image',
+          'sub_fields' => [
+            [
+              'type' => 'image',
+              'label' => 'Image',
+              'name' => 'element__image',
+              'key' => 'field_element__image',
+              'display' => 'seamless',
+              'clone' => [
+                  'group_element_image'
+              ]
+            ]
+          ]
         ]
       ]
     ])
