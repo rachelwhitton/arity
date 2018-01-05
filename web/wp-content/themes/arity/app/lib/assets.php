@@ -29,7 +29,7 @@ function is_pantheon_dev() {
  */
 function register_stylesheets()
 {
-    $arity = "https://patterns.arity.vsadev.com/" . config('patterns-version') . "/css/style.css";
+    $arity = "/wp-content/themes/arity/dist/patterns/" . config('patterns-version') . "/css/style.css";
     $arity_version = null;
     if(!empty(WP_ENV) && WP_ENV == "staging") {
         $arity = "https://dev.patterns.arity.vsadev.com/css/style.css";
@@ -69,7 +69,7 @@ add_action('wp_enqueue_scripts', __namespace__ . '\\register_vendor_scripts');
  */
 function register_scripts()
 {
-    $arity = "https://patterns.arity.vsadev.com/" . config('patterns-version') . "/js/arity.js";
+    $arity = "/wp-content/themes/arity/dist/patterns/" . config('patterns-version') . "/js/arity.js";
     $arity_version = null;
     if(!empty(WP_ENV) && WP_ENV == "staging") {
         $arity = "https://dev.patterns.arity.vsadev.com/js/arity.js";
