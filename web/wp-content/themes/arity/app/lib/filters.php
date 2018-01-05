@@ -916,11 +916,9 @@ add_filter('theme/before_wpfooter', function() {
 
     global $post;
 
-    if(strpos($post->post_name, 'astronaut') == false ) {
+    if(strpos($post->post_name, 'astronaut') === false ) {
         return;
     }
-
-    $home_url = home_url('/');
 
     echo <<<EOD
 <div id="emailform_modal" class="modal" role="dialog">
