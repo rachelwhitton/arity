@@ -1,0 +1,36 @@
+<?php
+/*
+  Template Name:      Vertical Cards Block
+  Template Type:      Module
+  Description:        A row of vertical cards in a blue background block.
+  Last Updated:       12/06/2017
+  Since:              1.2.1
+*/
+?>
+
+  <div class="vertical-cards-block">
+    <div class="vertical-cards-block__row">
+      <div class="vertical-cards-block__content">
+        <div class="row">
+          <div class="vertical-cards__title boldTitle">
+            <h2 class="type0 colors__text--white">
+              Explore our capabilities:
+            </h2>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row body-eight-column-centered">
+            <div class="vertical-cards__col">
+              {{> components-vertical-card }}
+            </div>
+            <div class="vertical-cards__col">
+              {{> components-vertical-card }}
+            </div>
+            <div class="vertical-cards__col">
+              {{> components-vertical-card }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
