@@ -916,8 +916,7 @@ add_filter('theme/before_wpfooter', function() {
 
     global $post;
 
-    echo '<div style="display:hidden;">'.$post->post_name.'</div>';
-    if(strpos($post->post_name, 'astronaut') == false ) {
+    if(strpos($post->post_name, 'astronaut') === false ) {
         return;
     }
 
