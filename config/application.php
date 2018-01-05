@@ -128,7 +128,7 @@ defined('WP_POST_REVISIONS') || define('WP_POST_REVISIONS', env('WP_POST_REVISIO
 /**
  * Redis Config
  */
-define('WP_CACHE_KEY_SALT', md5( DB_NAME . $table_prefix . __FILE__ ) );
+defined('WP_CACHE_KEY_SALT') || define('WP_CACHE_KEY_SALT', md5( DB_NAME . $table_prefix . __FILE__ ));
 defined('REDIS_HOST') || define('REDIS_HOST', env('REDIS_HOST') ?: '127.0.0.1');
 defined('REDIS_PORT') || define('REDIS_PORT', env('REDIS_PORT') ?: 6379);
 defined('REDIS_AUTH') || define('REDIS_AUTH', env('REDIS_AUTH') ?: '');
