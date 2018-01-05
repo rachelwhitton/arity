@@ -4,7 +4,7 @@
 if(empty($data['form_url'])) {
   $data['is_salesforce'] = true;
   $data['form_url'] = 'https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8';
-  $data['form_oid'] = '00Df4000001TyK5';
+  $data['form_oid'] = '';
 
   // Set return url
   global $wp;
@@ -14,7 +14,7 @@ if(empty($data['form_url'])) {
   // Testing
   if(!empty(WP_ENV) && WP_ENV != 'production') {
     $data['form_url'] = 'https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8';
-    $data['form_oid'] = '00D2F0000008zeT';
+    $data['form_oid'] = '00DW0000008xyd5';
   }
 }
 
