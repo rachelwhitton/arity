@@ -908,3 +908,45 @@ add_filter('theme/before_wpfooter', function() {
 EOD;
 
 });
+
+add_filter('theme/before_wpfooter', function() {
+    if(is_admin()) {
+        return;
+    }
+
+    global $post;
+
+    if(strpos($post->post_name, 'astronaut') == false ) {
+        return;
+    }
+
+    $home_url = home_url('/');
+
+    echo <<<EOD
+<div id="emailform_modal" class="modal" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-body">
+          <div class="modal-body--left">
+            <div class="align-vertical-middle">
+              <h2>Thank You</h2>
+            </div>
+          </div>
+        <div class="modal-body--right">
+          <p>We'll send you an update as it becomes available.</p>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="close" data-dismiss="modal">
+      <svg class="icon-svg" title="" role="img">
+          <use xlink:href="#close"></use>
+      </svg>
+    </button>
+  </div>
+
+</div>
+EOD;
+
+});
