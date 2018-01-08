@@ -920,6 +920,8 @@ add_filter('theme/before_wpfooter', function() {
         return;
     }
 
+    $url = get_permalink($post->ID);
+
     echo <<<EOD
 <div id="emailform_modal" class="modal" role="dialog">
   <div class="modal-dialog modal-lg">
@@ -933,7 +935,10 @@ add_filter('theme/before_wpfooter', function() {
             </div>
           </div>
         <div class="modal-body--right">
-          <p>We'll send you an update as it becomes available.</p>
+          <p>You're all set.</p>
+          <a href="$url" class="ar-element button button--primary blue-button--">
+            <span class="button__label">Ok</span>
+          </a>
         </div>
       </div>
     </div>
