@@ -871,7 +871,7 @@ add_filter('theme/before_wpfooter', function() {
 
     global $post;
 
-    if($post->post_name != 'contact') {
+    if(empty($post) || empty($post->post_name) || $post->post_name != 'contact') {
         return;
     }
 
@@ -916,7 +916,7 @@ add_filter('theme/before_wpfooter', function() {
 
     global $post;
 
-    if(strpos($post->post_name, 'astronaut') === false ) {
+    if(empty($post) || empty($post->post_name) || strpos($post->post_name, 'astronaut') === false ) {
         return;
     }
 
