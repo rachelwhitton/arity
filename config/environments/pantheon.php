@@ -14,8 +14,8 @@ define('DB_HOST', $_ENV['DB_HOST'] . ':' . $_ENV['DB_PORT']);
 define('REDIS_HOST', $_ENV['CACHE_HOST']);
 define('REDIS_PORT', $_ENV['CACHE_PORT']);
 define('REDIS_AUTH', $_ENV['CACHE_PASSWORD']);
-define('REDIS_DB', 0); // @todo troubleshooting redis-fix
-define('WP_CACHE_KEY_SALT', ''); // @todo troubleshooting redis-fix
+define('REDIS_DB', 0);
+define('WP_CACHE_KEY_SALT', '');
 
 // Set cache to true if Redis is enabled
 if( !empty($_ENV['CACHE_HOST']) && !empty($_ENV['CACHE_PORT']) && !empty($_ENV['CACHE_PASSWORD']) ) {
