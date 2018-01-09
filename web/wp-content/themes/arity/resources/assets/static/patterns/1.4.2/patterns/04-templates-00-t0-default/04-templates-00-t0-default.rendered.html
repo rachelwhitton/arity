@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html class="">
+
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../css/style.css?1515183636755" media="all" />
+  <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1515183636755" media="all" />
+
+  <!-- Favicon & App Icons -->
+  <link rel="shortcut icon" href="../../icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="../../icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="../../icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../../icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../../icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../../icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../../icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../../icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../../icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../../icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../../icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../icons/favicon-16x16.png">
+  <link rel="manifest" href="../../icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="../../icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+  <!-- never cache patterns -->
+  <meta http-equiv="cache-control" content="max-age=0" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="expires" content="0" />
+  <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+  <meta http-equiv="pragma" content="no-cache" />
+
+  <link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1515183636755" media="all">
+  <link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1515183636755" media="all" />
+
+  <!-- End Pattern Lab -->
+
+</head>
+
+<body class="">
+  <?php
+/*
+  Template Name:      T0 Default
+  Template Type:      Template
+  Description:        This is a T0 Default
+  Last Updated:       09/15/2017
+  Since:              1.0.0
+*/
+?>
+
+    <?php
+/*
+  Template Name:      Site Header
+  Template Type:      Module
+  Description:        This is the site header v2.
+  Last Updated:       11/20/2017
+  Since:              1.2.0
+  Version:            2
+*/
+?>
+      <div class="site-header">
+        <nav class="navbar" role="navigation">
+          <div class="container">
+            <div class="navbar__header">
+              <a role="menuitem" class="navbar__brand" href="#" rel="home" title="Arity Homepage">
+          <img src="../../images/logo-arity-white.svg" alt="" class="navbar__logo">
+          <span class="sr-only">Arity</span>
+        </a>
+              <button type="button" role="button" class="navbar__toggle collapsed" data-toggle="collapsed" data-target="#navbar" aria-expanded="false" aria-controls="navbar" aria-hidden="true">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="navbar__toggle__box">
+            <span class="navbar__toggle__inner"></span>
+          </span>
+        </button>
+            </div>
+            <div id="navbar" class="navbar__collapse collapsed">
+              <div class="navbar__collapse-wrapper">
+                <div class="navbar__nav-title" aria-hidden="true" hidden>
+                  <span>Menu</span>
+                </div>
+                <ul role="menubar" class="nav navbar__nav">
+                  <li class="menu-item-is-current menu-item menu-item-has-children menu-industries">
+                    <a href="#" role="menuitem" data-toggle="collapsed" aria-haspopup="true" aria-expanded="false" aria-activedescendant="true" tabindex="0">Industries</a>
+                    <ul role="menu" aria-label="Industries" class="sub-menu navbar__nav__sub-menu collapsed" tabindex="-1" aria-hidden="true">
+                      <li class="menu-item menu-automotive">
+                        <a href="#" role="menuitem" tabindex="-1">Automotive</a>
+                      </li>
+                      <li class="menu-item menu-insurance">
+                        <a href="#" role="menuitem" tabindex="-1">Insurance</a>
+                      </li>
+                      <li class="menu-item menu-shared-mobility">
+                        <a href="#" role="menuitem" tabindex="-1">Shared Mobility</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="menu-item menu-understand-your-drivers">
+                    <a href="#" role="menuitem" tabindex="-1">Understand Your Drivers</a>
+                  </li>
+                  <li class="menu-item menu-join-the-team">
+                    <a href="#" role="menuitem" tabindex="-1">Join the team</a>
+                  </li>
+                  <li class="menu-item menu-get-in-touch">
+                    <a href="#" role="menuitem" tabindex="-1">Get in touch</a>
+                  </li>
+                </ul>
+                <div class="navbar__toolbar-bottom" tabindex="-1" aria-hidden="true">
+                  <ul role="menubar" class="nav">
+                    <li class="menu-item menu-get-in-touch">
+                      <a href="#" role="menuitem" tabindex="-1">Get in touch</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!--/.nav-collapse-wrapper -->
+            </div>
+            <!--/.nav-collapse -->
+          </div>
+        </nav>
+        <div class="dropmenu" data-menu-item="industries" tabindex="-1" aria-hidden="true">
+          <div class="dropmenu__container">
+            <div class="dropmenu__arrow"></div>
+            <div class="dropmenu__wrap">
+              <div class="dropmenu__primary">
+                <a href="#" title="Learn more about Industries Solutions" tabindex="-1" aria-label="Industries">
+                  <p>See the ways we can shape transportation, together.</p>
+                  <p>
+                    <span class="button">
+                <span class="button__label">View all industries</span>
+                    <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#caret"></use></svg>
+                    </span>
+                  </p>
+                </a>
+              </div>
+              <div class="dropmenu__secondary">
+                <div class="dropmenu__item">
+                  <a href="#" title="Learn more about Shared Mobility" tabindex="-1" aria-label="Shared Mobility">
+                    <h2>Shared Mobility <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#caret"></use></svg></h2>
+                    <p>Recruit and incentivize top drivers, set smarter pricing strategies and accurately predict losses to maximize efficiency.</p>
+                  </a>
+                </div>
+                <div class="dropmenu__item">
+                  <a href="#" title="Learn more about Automotive" tabindex="-1" aria-label="Automotive">
+                    <h2>Automotive <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#caret"></use></svg></h2>
+                    <p>Predict and prevent accidents by leveraging historical data and real-time factors like weather and traffic.</p>
+                  </a>
+                </div>
+                <div class="dropmenu__item">
+                  <a href="#" title="Learn more about Insurance" tabindex="-1" aria-label="Insurance">
+                    <h2>Insurance <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#caret"></use></svg></h2>
+                    <p>Identify and retain preferred drivers, anticipate loss and price accurately with the most predictive measure of driving risk ever.</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="site-content">
+        <?php
+/*
+  Template Name:      Hero C - Generic
+  Template Type:      Module
+  Description:        Hero module with solid background and title
+  Last Updated:       08/01/2017
+  Since:              1.0.0
+*/
+?>
+          <div class="ar-module hero-c">
+            <div class="hero-c__block">
+              <div class="container">
+                <h1 class="hero-c__title type2">Some Title</h1>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="body-column body-one-column">
+            <div class="container">
+              <div class="row">
+                <div class="body-one-column__col default-styles">
+
+
+                  <h1>Header One</h1>
+
+                  <p>Lorem ipsum <em>emphasised text</em> dolor sit amet, <strong>strong text</strong> consectetur adipisicing elit, <abbr title="">abbreviated text</abbr> sed do eiusmod tempor
+                    <acronym title="">acronym text</acronym> incididunt ut labore et dolore magna aliqua. Ut
+                    <q>quoted text</q> enim ad minim veniam, quis nostrud exercitation <a href="/">link text</a> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute <del>deleted text</del>
+                    <ins>inserted text</ins> irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat <code>code text</code> cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum.</p>
+
+                  <blockquote>
+                    <p>Blockquote. Velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+                  </blockquote>
+
+                  <p><cite><a href="/">Cite author with link text</a></cite>, 2008</p>
+
+                  <h2>Header 2</h2>
+
+                  <p>Extended paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                  <ol>
+                    <li>Ordered list</li>
+                    <li>Item 2 Consectetur adipisicing elit</li>
+                    <li>Item 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+                    <li>Item 4</li>
+                    <li>Item 5</li>
+                  </ol>
+
+                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                  <h3>Header 3</h3>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                  <ul>
+                    <li>Unordered list</li>
+                    <li>Consectetur adipisicing elit</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+                    <li>Item</li>
+                    <li>Item</li>
+                    <li>Item</li>
+                  </ul>
+
+                  <p>Lorem ipsum dolor sit amet,consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                  <pre><code>pre and code pair{
+          display:block;
+          line-height:1.833em;
+          border-top:0.083em solid #200;
+          }</code></pre>
+
+                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                  <h4>Header 4</h4>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                  <dl>
+                    <dt>Definition list</dt>
+                    <dd>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</dd>
+                    <dt>Lorem ipsum dolor sit amet</dt>
+                    <dd>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</dd>
+                    <dt>Lorem ipsum dolor sit amet</dt>
+                    <dd>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</dd>
+                    <dt>Lorem ipsum dolor sit amet</dt>
+                    <dd>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</dd>
+                  </dl>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                  <table summary="Table summary">
+                    <caption>Table Caption</caption>
+                    <thead>
+                      <tr>
+                        <th>Header</th>
+                        <th>Header</th>
+                        <th>Header</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Content</td>
+                        <td>1</td>
+                        <td>a</td>
+                      </tr>
+                      <tr>
+                        <td>Content</td>
+                        <td>2</td>
+                        <td>b</td>
+                      </tr>
+                      <tr>
+                        <td>Content</td>
+                        <td>3</td>
+                        <td>c</td>
+                      </tr>
+                      <tr>
+                        <td>Content</td>
+                        <td>4</td>
+                        <td>d</td>
+                      </tr>
+                      <tr>
+                        <td>Content</td>
+                        <td>5</td>
+                        <td>e</td>
+                      </tr>
+                      <tr>
+                        <td>Content</td>
+                        <td>6</td>
+                        <td>f</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <address>Author text</address>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <?php
+/*
+  Template Name:      Site Footer
+  Template Type:      Module
+  Description:        This is the site footer.
+  Last Updated:       08/01/2017
+  Since:              1.0.0
+*/
+?>
+        <footer class="site-footer">
+          <div class="container">
+
+            <div class="row">
+              <div class="site-footer__col col1--">
+                <a href="index.html">
+            <svg class="site-footer__logo icon-svg" title="" role="img">
+                <use xlink:href="#arity-logo"></use>
+            </svg>
+          </a>
+              </div>
+              <div class="site-footer__col col2--">
+                <h2 class="site-footer__header">Developer portal</h2>
+                <p>Sign up for an account on the Arity developer portal and try our APIs.</p>
+                <p>
+                  <a href="https://developer.arity.com/" target="_blank" class="ar-element button button--footer">
+            <svg class="site-footer__icon icon-svg" title="" role="img">
+                  <use xlink:href="#external"></use>
+              </svg> Visit the portal
+          </a>
+                </p>
+              </div>
+              <div class="site-footer__col col3--">
+                <h2 class="site-footer__header">Press</h2>
+                <p>Looking for more? Get in touch with an Arity representative.</p>
+                <p>
+                  <a href="mailto:media@arity.com" class="ar-element button button--footer">
+            <svg class="site-footer__icon icon-svg" title="" role="img">
+                  <use xlink:href="#email"></use>
+              </svg> Press inquiries
+          </a>
+                  <a href="#" class="ar-element button button--footer">
+            <svg class="site-footer__icon icon-svg" title="" role="img">
+                  <use xlink:href="#news"></use>
+              </svg> Newsroom
+          </a>
+                </p>
+              </div>
+              <div class="site-footer__col col4--">
+                <h2 class="site-footer__header">Follow us</h2>
+                <nav class="social-nav" role="navigation">
+                  <ul class="navlist social-nav__list">
+                    <li class="social-nav__item">
+                      <a class="social-nav__link linkedin--" href="http://linkedin.com/company/arity" target="_blank" aria-label="LinkedIn">
+                    <svg class="site-footer__icon icon-svg" title="" role="img">
+                        <use xlink:href="#social-linkedin"></use>
+                    </svg>
+                  </a>
+                    </li>
+                    <li class="social-nav__item">
+                      <a class="social-nav__link twitter--" href="http://twitter.com/arity" target="_blank" aria-label="Twitter">
+                    <svg class="site-footer__icon icon-svg" title="" role="img">
+                        <use xlink:href="#social-twitter"></use>
+                    </svg>
+                  </a>
+                    </li>
+                    <li class="social-nav__item">
+                      <a class="social-nav__link instagram--" href="https://www.instagram.com/arityofficial/" target="_blank" aria-label="Instagram">
+                    <svg class="site-footer__icon icon-svg" title="" role="img">
+                        <use xlink:href="#social-instagram"></use>
+                    </svg>
+                  </a>
+                    </li>
+                    <li class="social-nav__item">
+                      <a class="social-nav__link facebook--" href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+                    <svg class="site-footer__icon icon-svg" title="" role="img">
+                        <use xlink:href="#social-facebook"></use>
+                    </svg>
+                  </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="row">
+              <div class="site-footer__col col5--">
+                <a href="index.html"><svg class="site-footer__logo icon-svg" title="" role="img">
+                <use xlink:href="#arity-logo"></use>
+            </svg>
+          </a>
+                <br />
+
+                <small class="site-footer__copyright">
+            <span>© 2017 Arity, LLC. All rights reserved.</span>
+            <span>|</span>
+            <ul class="">
+              <li class="__item menu-item menu-privacy-policy">
+                <a href="#" class="__link" aria-selected="false">Privacy Policy</a>
+              </li>
+            </ul>
+          </small>
+              </div>
+            </div>
+          </div>
+          </div>
+        </footer>
+
+
+        <!--DO NOT REMOVE-->
+        <script type="text/json" id="sg-pattern-data-footer" class="sg-pattern-data">
+          {
+            "cssEnabled": false,
+            "patternLineageExists": true,
+            "patternLineages": [{
+              "lineagePattern": "modules-site-header",
+              "lineagePath": "../../patterns/03-modules-00-site-header/03-modules-00-site-header.rendered.html"
+            }, {
+              "lineagePattern": "modules-hero-c-generic",
+              "lineagePath": "../../patterns/03-modules-08-hero-c-generic/03-modules-08-hero-c-generic.rendered.html"
+            }, {
+              "lineagePattern": "modules-site-footer",
+              "lineagePath": "../../patterns/03-modules-15-site-footer/03-modules-15-site-footer.rendered.html"
+            }],
+            "lineage": [{
+              "lineagePattern": "modules-site-header",
+              "lineagePath": "../../patterns/03-modules-00-site-header/03-modules-00-site-header.rendered.html"
+            }, {
+              "lineagePattern": "modules-hero-c-generic",
+              "lineagePath": "../../patterns/03-modules-08-hero-c-generic/03-modules-08-hero-c-generic.rendered.html"
+            }, {
+              "lineagePattern": "modules-site-footer",
+              "lineagePath": "../../patterns/03-modules-15-site-footer/03-modules-15-site-footer.rendered.html"
+            }],
+            "patternLineageRExists": false,
+            "patternLineagesR": [],
+            "lineageR": [],
+            "patternLineageEExists": true,
+            "patternDesc": "",
+            "patternBreadcrumb": {
+              "patternType": "templates"
+            },
+            "patternExtension": "mustache",
+            "patternName": "T0 Default",
+            "patternPartial": "templates-t0-default",
+            "patternState": "",
+            "patternEngineName": "mustache",
+            "extraOutput": {}
+          }
+        </script>
+
+        <script>
+          /*!
+           * scriptLoader - v0.1
+           *
+           * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+           * Licensed under the MIT license
+           *
+           */
+
+          var scriptLoader = {
+
+            run: function(js, cb, target) {
+              var s = document.getElementById(target + '-' + cb);
+              for (var i = 0; i < js.length; i++) {
+                var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+                var c = document.createElement('script');
+                c.src = '../../' + src + '?' + cb;
+                if (typeof js[i] != 'string') {
+                  if (js[i].dep !== undefined) {
+                    c.onload = function(dep, cb, target) {
+                      return function() {
+                        scriptLoader.run(dep, cb, target);
+                      }
+                    }(js[i].dep, cb, target);
+                  }
+                }
+                s.parentNode.insertBefore(c, s);
+              }
+            }
+
+          }
+        </script>
+
+        <script id="pl-js-polyfill-insert-1515183636755">
+          (function() {
+            if (self != top) {
+              var cb = '1515183636755';
+              var js = [];
+              if (typeof document !== 'undefined' && !('classList' in document.documentElement)) {
+                js.push('styleguide/bower_components/classList.min.js');
+              }
+              scriptLoader.run(js, cb, 'pl-js-polyfill-insert');
+            }
+          })();
+        </script>
+
+        <script id="pl-js-insert-1515183636755">
+          (function() {
+            if (self != top) {
+              var cb = '1515183636755';
+              var js = [{
+                'src': 'styleguide/bower_components/jwerty.min.js',
+                'dep': ['styleguide/js/patternlab-pattern.min.js']
+              }];
+              scriptLoader.run(js, cb, 'pl-js-insert');
+            }
+          })();
+        </script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+        <script type="text/javascript" src="../../js/arity.js?1515183636755"></script>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/svg4everybody/2.1.9/svg4everybody.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/svg4everybody/2.1.9/svg4everybody.legacy.min.js"></script>
+        <script>
+          svg4everybody(); // run it now or whenever you are ready
+        </script>
+
+        <script type="text/javascript" src="../../js/arity-patternlab.js?1515183636755"></script>
+
+</body>
+
+</html>
