@@ -1,0 +1,544 @@
+<?php
+/*
+  Template Name:      T3 Product Detail
+  Template Type:      Template
+  Description:        This is a T3 Product Detail - (i.e., Product Pages - Shared Mobility Solutions)
+  Last Updated:       08/03/2017
+  Since:              1.0.0
+*/
+?>
+
+  <?php
+/*
+  Template Name:      Site Header
+  Template Type:      Module
+  Description:        This is the site header v2.
+  Last Updated:       11/20/2017
+  Since:              1.2.0
+  Version:            2
+*/
+?>
+    <div class="site-header">
+      <nav class="navbar" role="navigation">
+        <div class="container">
+          <div class="navbar__header">
+            <a role="menuitem" class="navbar__brand" href="#" rel="home" title="Arity Homepage">
+          <img src="../../images/logo-arity-white.svg" alt="" class="navbar__logo">
+          <span class="sr-only">Arity</span>
+        </a>
+            <button type="button" role="button" class="navbar__toggle collapsed" data-toggle="collapsed" data-target="#navbar" aria-expanded="false" aria-controls="navbar" aria-hidden="true">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="navbar__toggle__box">
+            <span class="navbar__toggle__inner"></span>
+          </span>
+        </button>
+          </div>
+          <div id="navbar" class="navbar__collapse collapsed">
+            <div class="navbar__collapse-wrapper">
+              <div class="navbar__nav-title" aria-hidden="true" hidden>
+                <span>Menu</span>
+              </div>
+              <ul role="menubar" class="nav navbar__nav">
+                <li class="menu-item-is-current menu-item menu-item-has-children menu-industries">
+                  <a href="#" role="menuitem" data-toggle="collapsed" aria-haspopup="true" aria-expanded="false" aria-activedescendant="true" tabindex="0">Industries</a>
+                  <ul role="menu" aria-label="Industries" class="sub-menu navbar__nav__sub-menu collapsed" tabindex="-1" aria-hidden="true">
+                    <li class="menu-item menu-automotive">
+                      <a href="#" role="menuitem" tabindex="-1">Automotive</a>
+                    </li>
+                    <li class="menu-item menu-insurance">
+                      <a href="#" role="menuitem" tabindex="-1">Insurance</a>
+                    </li>
+                    <li class="menu-item menu-shared-mobility">
+                      <a href="#" role="menuitem" tabindex="-1">Shared Mobility</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item menu-understand-your-drivers">
+                  <a href="#" role="menuitem" tabindex="-1">Understand Your Drivers</a>
+                </li>
+                <li class="menu-item menu-join-the-team">
+                  <a href="#" role="menuitem" tabindex="-1">Join the team</a>
+                </li>
+                <li class="menu-item menu-get-in-touch">
+                  <a href="#" role="menuitem" tabindex="-1">Get in touch</a>
+                </li>
+              </ul>
+              <div class="navbar__toolbar-bottom" tabindex="-1" aria-hidden="true">
+                <ul role="menubar" class="nav">
+                  <li class="menu-item menu-get-in-touch">
+                    <a href="#" role="menuitem" tabindex="-1">Get in touch</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!--/.nav-collapse-wrapper -->
+          </div>
+          <!--/.nav-collapse -->
+        </div>
+      </nav>
+      <div class="dropmenu" data-menu-item="industries" tabindex="-1" aria-hidden="true">
+        <div class="dropmenu__container">
+          <div class="dropmenu__arrow"></div>
+          <div class="dropmenu__wrap">
+            <div class="dropmenu__primary">
+              <a href="#" title="Learn more about Industries Solutions" tabindex="-1" aria-label="Industries">
+                <p>See the ways we can shape transportation, together.</p>
+                <p>
+                  <span class="button">
+                <span class="button__label">View all industries</span>
+                  <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#caret"></use></svg>
+                  </span>
+                </p>
+              </a>
+            </div>
+            <div class="dropmenu__secondary">
+              <div class="dropmenu__item">
+                <a href="#" title="Learn more about Shared Mobility" tabindex="-1" aria-label="Shared Mobility">
+                  <h2>Shared Mobility <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#caret"></use></svg></h2>
+                  <p>Recruit and incentivize top drivers, set smarter pricing strategies and accurately predict losses to maximize efficiency.</p>
+                </a>
+              </div>
+              <div class="dropmenu__item">
+                <a href="#" title="Learn more about Automotive" tabindex="-1" aria-label="Automotive">
+                  <h2>Automotive <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#caret"></use></svg></h2>
+                  <p>Predict and prevent accidents by leveraging historical data and real-time factors like weather and traffic.</p>
+                </a>
+              </div>
+              <div class="dropmenu__item">
+                <a href="#" title="Learn more about Insurance" tabindex="-1" aria-label="Insurance">
+                  <h2>Insurance <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#caret"></use></svg></h2>
+                  <p>Identify and retain preferred drivers, anticipate loss and price accurately with the most predictive measure of driving risk ever.</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-content">
+      <?php
+/*
+  Template Name:      Hero B - 2 Column
+  Template Type:      Module
+  Description:        Hero module with background image and blue block - Two Columns
+  Last Updated:       08/01/2017
+  Since:              1.0.0
+*/
+?>
+        <div class="ar-module hero-b">
+          <div class="hero-b__block">
+            <div class="container">
+              <?php
+/*
+  Template Name:      Hero Block Two Column
+  Template Type:      Component
+  Description:        Two column content block within the "Hero B" type module
+  Last Updated:       08/02/2017
+  Since:              1.0.0
+*/
+?>
+                <div class="ar-component hero-block hero-block--two-col">
+                  <div class="row">
+                    <div class="hero-block__left-col">
+                      <h1 class="hero-block__header">Shared Mobility Solutions</h1>
+                      <div class="hero-block__p type0">
+                        <p>
+                          Accelerate your shared mobility program with our cutting-edge fleet management solutions.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="hero-block__right-col">
+                      <h3 class="hero-block__cta-headline">Access the customer dashboard or visit the developer portal.</h3>
+                      <p>
+                        <a href="#" class="ar-element button button--primary blue-button--">
+        <svg class="icon-svg" title="" role="img">
+            <use xlink:href="#external"></use>
+        </svg>
+        <span class="button__label">
+           Customer Login
+        </span>
+      </a>
+                      </p>
+                      <p>
+                        <a href="#" class="ar-element button button--primary blue-button--">
+          <svg class="icon-svg" title="" role="img">
+              <use xlink:href="#external"></use>
+          </svg>
+          <span class="button__label">Visit the Dev Portal</span>
+      </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+            </div>
+          </div>
+          <?php
+/*
+  Template Name:      Hero Image
+  Template Type:      Component
+  Description:        Full bleed, absolutely placed hero image for "Hero B" pages
+  Last Updated:       08/01/2017
+  Since:              1.0.0
+*/
+?>
+            <div class="ar-component hero-image"></div>
+            <div class="hero-image__overlay">
+              <div class="overlay-inner"></div>
+            </div>
+
+        </div>
+
+        <?php
+/*
+  Template Name:      Feature Content
+  Template Type:      Component
+  Description:        Eyebrown, Headline, Copy, CTA Stack
+  Last Updated:       08/01/2017
+  Since:              1.0.0
+*/
+?>
+          <div class="ar-component module-header">
+            <div class="container">
+              <div class="row">
+                <div class="type3 module-header__headline  wide">
+                  <h2 class="module-header__headline-headline">Bring more efficiency to your driver performance, fleet tracking and vehicle management programs.</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <?php
+/*
+  Template Name:      Content and Image Block
+  Template Type:      Module
+  Description:        Product or feature highlight ("River")
+  Last Updated:       08/01/2017
+  Since:              1.0.0
+*/
+?>
+            <div>
+
+              <div class="ar-module content-image-block">
+                <div class="container">
+                  <div class="row">
+                    <div class="content-image-block__col wide-- content-image-block__img-box">
+                      <img class="img-shadow" src="../../images/screenshot_1.png">
+                    </div>
+                    <div class="content-image-block__col narrow--">
+                      <div class="content-image-block__col-group">
+                        <h2 class="content-image-block__headline type3">Arity PreQual<sup>℠</sup></h2>
+                        <div class="content-image-block__content type0">
+                          <p>Know more during the screening process by analyzing a driver’s background information to measure relative risk and project potential losses.</p>
+                        </div>
+                        <p>
+                          <a class="blue-link content-image-block__arrow-link" href="#form__sms">
+                  <svg class="icon-svg" title="" role="img">
+                    <use xlink:href="#arrow-right"></use>
+                  </svg> Want to see Arity PreQual in action?<br>Contact us for more information.</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ar-module content-image-block">
+                <div class="container">
+                  <div class="row">
+                    <div class="content-image-block__col wide-- content-image-block__img-box">
+                      <img class="img-shadow" src="../../images/screenshot_1.png">
+                    </div>
+                    <div class="content-image-block__col narrow--">
+                      <div class="content-image-block__col-group">
+                        <h2 class="content-image-block__headline type3">Arity PreQual<sup>℠</sup></h2>
+                        <div class="content-image-block__content type0">
+                          <p>Know more during the screening process by analyzing a driver’s background information to measure relative risk and project potential losses.</p>
+                        </div>
+                        <p>
+                          <a class="blue-link content-image-block__arrow-link" href="#form__sms">
+                  <svg class="icon-svg" title="" role="img">
+                <use xlink:href="#arrow-right"></use>
+              </svg> Want to see Arity PreQual in action?<br>Contact us for more information.
+                </a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="ar-module content-image-block">
+                <div class="container">
+                  <div class="row">
+                    <div class="content-image-block__col wide-- content-image-block__img-box">
+                      <img class="img-shadow" src="../../images/screenshot_1.png">
+                    </div>
+                    <div class="content-image-block__col narrow--">
+                      <div class="content-image-block__col-group">
+                        <h2 class="content-image-block__headline type3">Arity PreQual<sup>℠</sup></h2>
+                        <div class="content-image-block__content type0">
+                          <p>Know more during the screening process by analyzing a driver’s background information to measure relative risk and project potential losses.</p>
+                        </div>
+                        <p>
+                          <a class="blue-link content-image-block__arrow-link" href="#form__sms">
+                  <svg class="icon-svg" title="" role="img">
+                  <use xlink:href="#arrow-right"></use>
+              </svg> Want to see Arity PreQual in action?<br>Contact us for more information.</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <?php
+/*
+  Template Name:      Contact Form and CTA
+  Template Type:      Module
+  Description:        Page block with two columns - Contact Form on left - Stacked CTA on Right
+  Last Updated:       08/03/2017
+  Since:              1.0.0
+*/
+?>
+
+              <div class="ar-module contact-form-with-cta">
+                <div class="container">
+                  <div class="row">
+                    <div class="contact-form-with-cta__col wide--">
+                      <h2 class="type3 contact-form-with-cta__headline">Contact us for more information or start building right away.</h2>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="contact-form-with-cta__col contact-form-with-cta__col--right">
+                      <?php
+/*
+  Template Name:      Image/Copy Stack
+  Template Type:      Component
+  Description:        Headline, image, copy, cta stack
+  Last Updated:       08/01/2017
+  Since:              1.0.0
+*/
+?>
+                        <div class="ar-component image-copy-stack">
+                          <h3 class="image-copy-stack__headline type0">
+                            <!-- Developer? Start building -->
+                            Customize it
+                          </h3>
+                          <p><img src="http://placehold.it/860x400" /></p>
+                          <div class="image-copy-stack__p type4">
+                            <!-- Our technology is designed to help you understand and predict driving risk on an individual basis. It’s exactly what you need to identify, manage and retain the drivers that fit your business. -->
+                            <p>Visit the Arity developer portal for access to our SDK, APIs, docs, and support.</p>
+                          </div>
+                          <p>
+                            <a href="#" class="ar-element button button--primary blue-button-- blue-hover-border">
+        <svg class="icon-svg" title="" role="img">
+            <use xlink:href="#arrow-right"></use>
+        </svg>
+        <span class="button__label">Learn more</span>
+    </a>
+                          </p>
+                        </div>
+
+                    </div>
+                    <div class="contact-form-with-cta__col contact-form-with-cta__col--left">
+                      <?php
+/*
+  Template Name:      Lite Form
+  Template Type:      Component
+  Description:        Small contact form with only a few fields
+  Last Updated:       08/03/2017
+  Since:              1.0.0
+*/
+?>
+                        <div class="ar-component lite-form">
+                          <div class="row">
+                            <div class="col lite-form__col">
+                              <h3 class="lite-form__title type0">Get in touch</h3>
+                            </div>
+                          </div>
+
+                          <!-- <form id="form__sms" name="form__sms" class="lite-form-inner"> -->
+                          <form id="form__sms" name="form__sms" class="lite-form-inner" action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+                            <input type=hidden name="oid" value="00Dc0000003vvzq">
+                            <input id="recordType" name="recordType" type="hidden" value="01216000000WeRH">
+                            <input name="lead_source" type="hidden" value="Web- Home Page">
+                            <input name="retURL" type="hidden" value="http://test12345.force.com/aritylead/ArityHomepageThankyou?Sender">
+                            <input name="debug" type="hidden" value="0">
+
+                            <script>
+                              var onRecaptchaSuccess = function(token) {
+                                formValidator.onSuccess(token);
+                              };
+                            </script>
+
+                            <div class="row">
+                              <div class="col lite-form-inner__col">
+                                <label for="first_name">First Name
+                      <span class="required">*</span>&nbsp;&nbsp;
+                      <span class="required" id="first_name_required" style="display:none;color:#FA364A;float:right;font-size:14px">Please enter first name</span>
+                      <span class="required" id="first_name_valid" style="display:none;color:#FA364A;float:right; font-size:14px;">Please enter a valid first name</span>
+                    </label>
+                                <input id="first_name" maxlength="40" name="first_name" onkeyup="formValidator.onChange();" size="20" type="text">
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col lite-form-inner__col">
+                                <label for="last_name">Last Name
+                        <span class="required">*</span>&nbsp;&nbsp;
+                        <span class="required" id="last_name_required" style="display:none;color:#FA364A;float:right;font-size:14px">Please enter last name</span>
+                        <span class="required" id="last_name_valid" style="display:none;color:#FA364A;float:right; font-size:14px;">Please enter a valid last name</span>
+                    </label>
+                                <input id="last_name" maxlength="80" name="last_name" onkeyup="formValidator.onChange();" size="20" type="text"><br>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col lite-form-inner__col">
+                                <label for="email">Email
+              <span class="required">*</span>&nbsp;&nbsp;
+              <span class="required" id="email_required" style="display:none;color:#FA364A;float:right;font-size:14px">Please enter email</span>
+              <span class="required" id="email_valid" style="display:none;color:#FA364A;float:right;font-size:14px">Please enter a valid email</span>
+          </label>
+                                <input id="email" maxlength="80" name="email" onkeyup="formValidator.onChange();" size="20" type="text"><br>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col lite-form-inner__col">
+                                <label for="phone">Phone&nbsp;&nbsp;<span class="required" id="phone_required" style="display:none;color:#FA364A;float:right; font-size:14px;">Phone is required when preferred method is set to phone</span><span class="required" id="phone_valid" style="display:none;color:#FA364A;float:right;font-size:14px">Please enter a valid phone</span></label>
+                                <input id="phone" maxlength="40" name="phone" onkeyup="formValidator.onChange();" size="20" type="text"><br>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col lite-form-inner__col">
+                                <label for="phone">I'm interested in:</label>
+                                <textarea id="00N1600000F4WrS" name="00N1600000F4WrS" rows="3" type="text" wrap="soft"></textarea><br>
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col lite-form-inner__col">
+                                <button id='submit_btn' class="ar-element button button--primary blue-button-- blue-hover-border">Submit</button>
+                                <br />
+                                <br />
+                                <div id='recaptcha' class="g-recaptcha" data-sitekey="6LemsC8UAAAAABhmM91zrsD0Paw7Uxa2MFChpoKY" data-callback="onRecaptchaSuccess" data-size="invisible" data-badge="inline"></div>
+                              </div>
+                            </div>
+                          </form>
+
+                        </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+    </div>
+    <?php
+/*
+  Template Name:      Site Footer
+  Template Type:      Module
+  Description:        This is the site footer.
+  Last Updated:       08/01/2017
+  Since:              1.0.0
+*/
+?>
+      <footer class="site-footer">
+        <div class="container">
+
+          <div class="row">
+            <div class="site-footer__col col1--">
+              <a href="index.html">
+            <svg class="site-footer__logo icon-svg" title="" role="img">
+                <use xlink:href="#arity-logo"></use>
+            </svg>
+          </a>
+            </div>
+            <div class="site-footer__col col2--">
+              <h2 class="site-footer__header">Developer portal</h2>
+              <p>Sign up for an account on the Arity developer portal and try our APIs.</p>
+              <p>
+                <a href="https://developer.arity.com/" target="_blank" class="ar-element button button--footer">
+            <svg class="site-footer__icon icon-svg" title="" role="img">
+                  <use xlink:href="#external"></use>
+              </svg> Visit the portal
+          </a>
+              </p>
+            </div>
+            <div class="site-footer__col col3--">
+              <h2 class="site-footer__header">Press</h2>
+              <p>Looking for more? Get in touch with an Arity representative.</p>
+              <p>
+                <a href="mailto:media@arity.com" class="ar-element button button--footer">
+            <svg class="site-footer__icon icon-svg" title="" role="img">
+                  <use xlink:href="#email"></use>
+              </svg> Press inquiries
+          </a>
+                <a href="#" class="ar-element button button--footer">
+            <svg class="site-footer__icon icon-svg" title="" role="img">
+                  <use xlink:href="#news"></use>
+              </svg> Newsroom
+          </a>
+              </p>
+            </div>
+            <div class="site-footer__col col4--">
+              <h2 class="site-footer__header">Follow us</h2>
+              <nav class="social-nav" role="navigation">
+                <ul class="navlist social-nav__list">
+                  <li class="social-nav__item">
+                    <a class="social-nav__link linkedin--" href="http://linkedin.com/company/arity" target="_blank" aria-label="LinkedIn">
+                    <svg class="site-footer__icon icon-svg" title="" role="img">
+                        <use xlink:href="#social-linkedin"></use>
+                    </svg>
+                  </a>
+                  </li>
+                  <li class="social-nav__item">
+                    <a class="social-nav__link twitter--" href="http://twitter.com/arity" target="_blank" aria-label="Twitter">
+                    <svg class="site-footer__icon icon-svg" title="" role="img">
+                        <use xlink:href="#social-twitter"></use>
+                    </svg>
+                  </a>
+                  </li>
+                  <li class="social-nav__item">
+                    <a class="social-nav__link instagram--" href="https://www.instagram.com/arityofficial/" target="_blank" aria-label="Instagram">
+                    <svg class="site-footer__icon icon-svg" title="" role="img">
+                        <use xlink:href="#social-instagram"></use>
+                    </svg>
+                  </a>
+                  </li>
+                  <li class="social-nav__item">
+                    <a class="social-nav__link facebook--" href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+                    <svg class="site-footer__icon icon-svg" title="" role="img">
+                        <use xlink:href="#social-facebook"></use>
+                    </svg>
+                  </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="row">
+            <div class="site-footer__col col5--">
+              <a href="index.html"><svg class="site-footer__logo icon-svg" title="" role="img">
+                <use xlink:href="#arity-logo"></use>
+            </svg>
+          </a>
+              <br />
+
+              <small class="site-footer__copyright">
+            <span>© 2017 Arity, LLC. All rights reserved.</span>
+            <span>|</span>
+            <ul class="">
+              <li class="__item menu-item menu-privacy-policy">
+                <a href="#" class="__link" aria-selected="false">Privacy Policy</a>
+              </li>
+            </ul>
+          </small>
+            </div>
+          </div>
+        </div>
+        </div>
+      </footer>

@@ -1,0 +1,26 @@
+<?php
+/*
+  Template Name:      Email Form
+  Template Type:      Module
+  Description:        Email-only form (not required email field)
+  Last Updated:       12/15/2017
+  Since:              1.2.7
+*/
+?>
+  <div class="ar-module email-form email-blue-bg">
+    <div class="container">
+      <div class="email-only-container">
+        <form action="#" method="POST">
+          <div class="form-group form-group--required">
+            <label class="form-group-label" for="email">Headline email capture.</label>
+            <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email address">
+            <div class="form-control-feedback" data-error="invalid">Please enter a valid email</div>
+          </div>
+          <div class="email-only-button-group">
+            <!-- <button type="submit" class="button button--primary white-blue-button-- email-only-button--">Submit</button> -->
+            <button type="submit" class="button button--primary inverse-- email-only-button--">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

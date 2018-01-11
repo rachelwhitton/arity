@@ -1,0 +1,43 @@
+<?php
+/*
+  Template Name:      T6 Contact
+  Template Type:      Template
+  Description:        This is a T6 Contact
+  Last Updated:       11/04/2017
+  Since:              1.1.0
+*/
+?>
+
+  {{> modules-site-header }}
+  <div class="site-content template--t6-contact">
+    {{> modules-hero-d }} {{> modules-contact-form }} {{> modules-action-bar-w-bkg }}
+  </div>
+  {{> modules-site-footer }}
+
+  <div id="thankyou_modal" class="modal" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="modal-body--left">
+            <div class="align-vertical-middle">
+              <h2>Thanks!</h2>
+            </div>
+          </div>
+          <div class="modal-body--right">
+            <p>Your request has been submitted and someone will get back to you shortly.</p>
+            <a href="$home_url" class="ar-element button button--primary blue-button--">
+            <span class="button__label">Return to homepage</span>
+          </a>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="close" data-dismiss="modal">
+      <svg class="icon-svg" title="" role="img">
+          <use xlink:href="#close"></use>
+      </svg>
+    </button>
+    </div>
+
+  </div>

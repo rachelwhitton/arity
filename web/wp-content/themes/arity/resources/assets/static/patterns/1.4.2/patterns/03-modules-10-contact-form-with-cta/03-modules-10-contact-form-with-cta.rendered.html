@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html class="">
+
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../css/style.css?1515183636755" media="all" />
+  <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1515183636755" media="all" />
+
+  <!-- Favicon & App Icons -->
+  <link rel="shortcut icon" href="../../icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="../../icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="../../icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../../icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../../icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../../icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../../icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../../icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../../icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../../icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../../icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../icons/favicon-16x16.png">
+  <link rel="manifest" href="../../icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="../../icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+  <!-- never cache patterns -->
+  <meta http-equiv="cache-control" content="max-age=0" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="expires" content="0" />
+  <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+  <meta http-equiv="pragma" content="no-cache" />
+
+  <link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1515183636755" media="all">
+  <link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1515183636755" media="all" />
+
+  <!-- End Pattern Lab -->
+
+</head>
+
+<body class="">
+
+  <?php
+/*
+  Template Name:      Contact Form and CTA
+  Template Type:      Module
+  Description:        Page block with two columns - Contact Form on left - Stacked CTA on Right
+  Last Updated:       08/03/2017
+  Since:              1.0.0
+*/
+?>
+
+    <div class="ar-module contact-form-with-cta">
+      <div class="container">
+        <div class="row">
+          <div class="contact-form-with-cta__col wide--">
+            <h2 class="type3 contact-form-with-cta__headline">Contact us for more information or start building right away.</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="contact-form-with-cta__col contact-form-with-cta__col--right">
+            <?php
+/*
+  Template Name:      Image/Copy Stack
+  Template Type:      Component
+  Description:        Headline, image, copy, cta stack
+  Last Updated:       08/01/2017
+  Since:              1.0.0
+*/
+?>
+              <div class="ar-component image-copy-stack">
+                <h3 class="image-copy-stack__headline type0">
+                  <!-- Developer? Start building -->
+                  Customize it
+                </h3>
+                <p><img src="http://placehold.it/860x400" /></p>
+                <div class="image-copy-stack__p type4">
+                  <!-- Our technology is designed to help you understand and predict driving risk on an individual basis. It’s exactly what you need to identify, manage and retain the drivers that fit your business. -->
+                  <p>Visit the Arity developer portal for access to our SDK, APIs, docs, and support.</p>
+                </div>
+                <p>
+                  <a href="#" class="ar-element button button--primary blue-button-- blue-hover-border">
+        <svg class="icon-svg" title="" role="img">
+            <use xlink:href="#arrow-right"></use>
+        </svg>
+        <span class="button__label">Learn more</span>
+    </a>
+                </p>
+              </div>
+
+          </div>
+          <div class="contact-form-with-cta__col contact-form-with-cta__col--left">
+            <?php
+/*
+  Template Name:      Lite Form
+  Template Type:      Component
+  Description:        Small contact form with only a few fields
+  Last Updated:       08/03/2017
+  Since:              1.0.0
+*/
+?>
+              <div class="ar-component lite-form">
+                <div class="row">
+                  <div class="col lite-form__col">
+                    <h3 class="lite-form__title type0">Get in touch</h3>
+                  </div>
+                </div>
+
+                <!-- <form id="form__sms" name="form__sms" class="lite-form-inner"> -->
+                <form id="form__sms" name="form__sms" class="lite-form-inner" action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+                  <input type=hidden name="oid" value="00Dc0000003vvzq">
+                  <input id="recordType" name="recordType" type="hidden" value="01216000000WeRH">
+                  <input name="lead_source" type="hidden" value="Web- Home Page">
+                  <input name="retURL" type="hidden" value="http://test12345.force.com/aritylead/ArityHomepageThankyou?Sender">
+                  <input name="debug" type="hidden" value="0">
+
+                  <script>
+                    var onRecaptchaSuccess = function(token) {
+                      formValidator.onSuccess(token);
+                    };
+                  </script>
+
+                  <div class="row">
+                    <div class="col lite-form-inner__col">
+                      <label for="first_name">First Name
+                      <span class="required">*</span>&nbsp;&nbsp;
+                      <span class="required" id="first_name_required" style="display:none;color:#FA364A;float:right;font-size:14px">Please enter first name</span>
+                      <span class="required" id="first_name_valid" style="display:none;color:#FA364A;float:right; font-size:14px;">Please enter a valid first name</span>
+                    </label>
+                      <input id="first_name" maxlength="40" name="first_name" onkeyup="formValidator.onChange();" size="20" type="text">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col lite-form-inner__col">
+                      <label for="last_name">Last Name
+                        <span class="required">*</span>&nbsp;&nbsp;
+                        <span class="required" id="last_name_required" style="display:none;color:#FA364A;float:right;font-size:14px">Please enter last name</span>
+                        <span class="required" id="last_name_valid" style="display:none;color:#FA364A;float:right; font-size:14px;">Please enter a valid last name</span>
+                    </label>
+                      <input id="last_name" maxlength="80" name="last_name" onkeyup="formValidator.onChange();" size="20" type="text"><br>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col lite-form-inner__col">
+                      <label for="email">Email
+              <span class="required">*</span>&nbsp;&nbsp;
+              <span class="required" id="email_required" style="display:none;color:#FA364A;float:right;font-size:14px">Please enter email</span>
+              <span class="required" id="email_valid" style="display:none;color:#FA364A;float:right;font-size:14px">Please enter a valid email</span>
+          </label>
+                      <input id="email" maxlength="80" name="email" onkeyup="formValidator.onChange();" size="20" type="text"><br>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col lite-form-inner__col">
+                      <label for="phone">Phone&nbsp;&nbsp;<span class="required" id="phone_required" style="display:none;color:#FA364A;float:right; font-size:14px;">Phone is required when preferred method is set to phone</span><span class="required" id="phone_valid" style="display:none;color:#FA364A;float:right;font-size:14px">Please enter a valid phone</span></label>
+                      <input id="phone" maxlength="40" name="phone" onkeyup="formValidator.onChange();" size="20" type="text"><br>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col lite-form-inner__col">
+                      <label for="phone">I'm interested in:</label>
+                      <textarea id="00N1600000F4WrS" name="00N1600000F4WrS" rows="3" type="text" wrap="soft"></textarea><br>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col lite-form-inner__col">
+                      <button id='submit_btn' class="ar-element button button--primary blue-button-- blue-hover-border">Submit</button>
+                      <br />
+                      <br />
+                      <div id='recaptcha' class="g-recaptcha" data-sitekey="6LemsC8UAAAAABhmM91zrsD0Paw7Uxa2MFChpoKY" data-callback="onRecaptchaSuccess" data-size="invisible" data-badge="inline"></div>
+                    </div>
+                  </div>
+                </form>
+
+              </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--DO NOT REMOVE-->
+    <script type="text/json" id="sg-pattern-data-footer" class="sg-pattern-data">
+      {
+        "cssEnabled": false,
+        "patternLineageExists": true,
+        "patternLineages": [{
+          "lineagePattern": "components-image-copy-stack",
+          "lineagePath": "../../patterns/02-components-08-image-copy-stack/02-components-08-image-copy-stack.rendered.html"
+        }, {
+          "lineagePattern": "components-lite-form",
+          "lineagePath": "../../patterns/02-components-06-lite-form/02-components-06-lite-form.rendered.html"
+        }],
+        "lineage": [{
+          "lineagePattern": "components-image-copy-stack",
+          "lineagePath": "../../patterns/02-components-08-image-copy-stack/02-components-08-image-copy-stack.rendered.html"
+        }, {
+          "lineagePattern": "components-lite-form",
+          "lineagePath": "../../patterns/02-components-06-lite-form/02-components-06-lite-form.rendered.html"
+        }],
+        "patternLineageRExists": true,
+        "patternLineagesR": [{
+          "lineagePattern": "templates-t3-product-detail",
+          "lineagePath": "../../patterns/04-templates-03-t3-product-detail/04-templates-03-t3-product-detail.rendered.html"
+        }],
+        "lineageR": [{
+          "lineagePattern": "templates-t3-product-detail",
+          "lineagePath": "../../patterns/04-templates-03-t3-product-detail/04-templates-03-t3-product-detail.rendered.html"
+        }],
+        "patternLineageEExists": true,
+        "patternDesc": "",
+        "patternBreadcrumb": {
+          "patternType": "modules"
+        },
+        "patternExtension": "mustache",
+        "patternName": "Contact Form With Cta",
+        "patternPartial": "modules-contact-form-with-cta",
+        "patternState": "",
+        "patternEngineName": "mustache",
+        "extraOutput": {}
+      }
+    </script>
+
+    <script>
+      /*!
+       * scriptLoader - v0.1
+       *
+       * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+       * Licensed under the MIT license
+       *
+       */
+
+      var scriptLoader = {
+
+        run: function(js, cb, target) {
+          var s = document.getElementById(target + '-' + cb);
+          for (var i = 0; i < js.length; i++) {
+            var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+            var c = document.createElement('script');
+            c.src = '../../' + src + '?' + cb;
+            if (typeof js[i] != 'string') {
+              if (js[i].dep !== undefined) {
+                c.onload = function(dep, cb, target) {
+                  return function() {
+                    scriptLoader.run(dep, cb, target);
+                  }
+                }(js[i].dep, cb, target);
+              }
+            }
+            s.parentNode.insertBefore(c, s);
+          }
+        }
+
+      }
+    </script>
+
+    <script id="pl-js-polyfill-insert-1515183636755">
+      (function() {
+        if (self != top) {
+          var cb = '1515183636755';
+          var js = [];
+          if (typeof document !== 'undefined' && !('classList' in document.documentElement)) {
+            js.push('styleguide/bower_components/classList.min.js');
+          }
+          scriptLoader.run(js, cb, 'pl-js-polyfill-insert');
+        }
+      })();
+    </script>
+
+    <script id="pl-js-insert-1515183636755">
+      (function() {
+        if (self != top) {
+          var cb = '1515183636755';
+          var js = [{
+            'src': 'styleguide/bower_components/jwerty.min.js',
+            'dep': ['styleguide/js/patternlab-pattern.min.js']
+          }];
+          scriptLoader.run(js, cb, 'pl-js-insert');
+        }
+      })();
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+    <script type="text/javascript" src="../../js/arity.js?1515183636755"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/svg4everybody/2.1.9/svg4everybody.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/svg4everybody/2.1.9/svg4everybody.legacy.min.js"></script>
+    <script>
+      svg4everybody(); // run it now or whenever you are ready
+    </script>
+
+    <script type="text/javascript" src="../../js/arity-patternlab.js?1515183636755"></script>
+
+</body>
+
+</html>
