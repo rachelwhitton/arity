@@ -778,6 +778,37 @@ add_action('theme/after_body', function () {
 EOD;
 }, 10);
 
+/**
+ * imageLazyLoading
+ * @see  - https://github.com/aFarkas/lazysizes
+ * @since 1.5.0
+ * @return void
+ */
+add_filter('wp_get_attachment_image_attributes', function($attr, $attachment, $size) {
+    if( !empty($attr['class']) && strpos($attr['class'], 'lazyload') !== false ) {
+
+      // Change src
+      $attr['data-src'] = $attr['src'];
+      $attr['src'] = '';
+
+      // Uncomment if you want to load a blank pixel, but base64 strings do not use browser caching well
+      // $attr['src'] = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
+
+      // Change srcset
+      if( !empty($attr['srcset']) ) {
+        $attr['data-srcset'] = $attr['srcset'];
+        $attr['srcset'] = null;
+      }
+
+      // Change sizes
+      if( !empty($attr['sizes']) ) {
+        $attr['data-sizes'] = 'auto';
+      }
+    }
+
+    return $attr;
+}, 10, 3);
+
 
 /*
 |-----------------------------------------------------------------
