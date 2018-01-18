@@ -82,6 +82,7 @@ function register_scripts()
     }
 
     wp_enqueue_script('arity', $arity, array( 'jquery', 'ScrollMagic-tweenMax', 'ScrollMagic', 'ScrollMagic-animation' ), $arity_version, true);
+    wp_enqueue_script('lazysizes', asset_path('js/lazysizes.js'), '4.0.1', true);
     wp_enqueue_script('main', asset_path('js/main.js'), array( 'jquery', 'arity' ), config('version'), true);
 }
 add_action('wp_enqueue_scripts', __namespace__ . '\\register_scripts');

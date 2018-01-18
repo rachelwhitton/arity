@@ -156,3 +156,44 @@ add_action('after_setup_theme', function () {
     // Add Image Sizes
     addImageSizes();
 });
+
+add_action('wp_head', function() {
+  ?>
+  <script type="text/javascript">
+    window.lazySizesConfig = window.lazySizesConfig || {};
+    window.lazySizesConfig.init = false;
+  </script>
+  <?php
+});
+
+add_action('wp_footer', function() {
+  ?>
+  <script type="text/javascript">
+    if (typeof window.lazySizes !== 'undefined') {
+      var images = document.querySelectorAll('img');
+
+      images.forEach(function(img) {
+        var src = img.getAttribute('src');
+        var srcset = img.getAttribute('srcset');
+        var sizes = img.getAttribute('sizes');
+
+        img.classList.add('lazyload');
+
+        img.removeAttribute('src');
+        img.removeAttribute('srcset');
+        img.removeAttribute('sizes');
+
+        img.setAttribute('data-src', src);
+        if (srcset) {
+          img.setAttribute('data-srcset', srcset);
+        }
+        if (sizes) {
+          img.setAttribute('data-sizes', sizes || 'auto');
+        }
+      });
+      lazySizes.init();
+    }
+
+  </script>
+  <?php
+});
