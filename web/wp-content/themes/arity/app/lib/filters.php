@@ -653,7 +653,7 @@ add_filter('body_class', function (array $classes, array $class=array()) {
 
     // Add post details
     if ( isset( $post ) ) {
-        $classes[] = 'post ' . $post->post_type . '--' . $post->post_name;
+        $classes[] = $post->post_type . ' ' . $post->post_type . '--' . $post->post_name;
 
         // Add page template
         if( in_array($post->post_type, array('page')) ) {
