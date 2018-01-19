@@ -80,7 +80,7 @@ function createParentDirectory($file) {
   $path = dirname($file);
 
   if(!file_exists($path)) {
-    mkdir($path, 0777, true);
+    //mkdir($path, 0777, true);
   }
 
   if(!is_dir($path)) {
