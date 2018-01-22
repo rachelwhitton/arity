@@ -653,12 +653,13 @@ add_filter('body_class', function (array $classes, array $class=array()) {
 
     // Add post details
     if ( isset( $post ) ) {
-        $classes[] = $post->post_type . '--' . $post->post_name;
+        $classes[] = $post->post_type . ' ' . $post->post_type . '--' . $post->post_name;
 
         // Add page template
-        if( in_array($post->post_type, array('page')) )
-        $template = get_post_meta( $post->ID, '_wp_page_template', true );
-        $classes[] = 'template--' . $template;
+        if( in_array($post->post_type, array('page')) ) {
+          $template = get_post_meta( $post->ID, '_wp_page_template', true );
+          $classes[] = 'template--' . $template;
+        }
     }
 
     // Add classes add through body_class function
