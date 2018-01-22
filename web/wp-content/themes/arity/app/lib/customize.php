@@ -77,7 +77,7 @@ add_action('after_setup_theme', function () {
         'linktargetdiv',
         'linkxfndiv',
         'postcustom',
-        'postexcerpt',
+        //'postexcerpt',
         'revisionsdiv',
         'slugdiv',
         'sqpt-meta-tags',
@@ -91,7 +91,7 @@ add_action('after_setup_theme', function () {
      */
     add_theme_support('plate-tabs', [
         'help',
-        'screen-options'
+        //'screen-options'
     ]);
 
     /**
