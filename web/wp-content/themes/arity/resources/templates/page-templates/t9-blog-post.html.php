@@ -24,13 +24,16 @@ $category_name = yoast_get_primary_term('category', $post);
         while ( have_posts() ) : the_post();
       ?>
       <div class="blog-post__content">
-        <div class="row">
-          <?php the_post_thumbnail(); ?>
-          <div class="blog-post__header">
-            <a href="/insights/category/<?php echo strtolower($category_name) ?>"><?php echo $category_name ?></a>
-            <?php the_date('F Y', '<span class="date">', '</span>'); ?>
-            10 min read
+        <div class="blog-post__header">
+          <div class="blog-post__image">
+            <?php the_post_thumbnail(); ?>
+          </div>
+          <div class="blog-post__inner">
+            <div class="blog-post__cat">
+              <a href="/insights/category/<?php echo strtolower($category_name) ?>"><?php echo $category_name ?></a>
+            </div>
             <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+            <em><?php the_author(); echo ' &middot; '; the_date('F Y', '<span class="date">', '</span>'); ?> &middot; 10 min read</em>
           </div>
         </div>
         <div class="blog-post__col">
@@ -49,7 +52,7 @@ $category_name = yoast_get_primary_term('category', $post);
 
               $author = [];
               echo $author['description'] = get_the_author_meta( 'user_description' );
-              echo $author['display_name'] = get_the_author_meta( 'display_name' );
+              //echo $author['display_name'] = get_the_author_meta( 'display_name' );
               echo $author['display_image'] =  get_avatar( get_the_author_meta( 'ID' ) , 245 );
               ?>
             </div>

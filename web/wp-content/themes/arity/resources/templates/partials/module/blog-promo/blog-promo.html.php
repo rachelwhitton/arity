@@ -29,9 +29,9 @@ namespace App\Theme;
             <div class="blog-card__cat">
               <a href="/insights/category/<?php echo strtolower($item->primary_term) ?>"><?php echo $item->primary_term ?></a>
             </div>
-            <?php the_title( '<h1 class="blog-card__title">', '</h1>' ); ?>
+            <h1 class="blog-card__title"><?php echo $item->post_title; ?></h1>
             <div class="blog-card__excerpt">
-             <?php the_excerpt(); ?>
+             <p><?php echo $item->post_excerpt;?></p>
             </div>
             <div class="blog-card__date">
               <?php echo get_the_date('F Y'); ?>
