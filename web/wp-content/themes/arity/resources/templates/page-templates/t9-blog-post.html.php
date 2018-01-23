@@ -12,6 +12,7 @@ namespace App\Theme;
 */
 //$related['posts'] = get_field('related_posts');
 $category_name = yoast_get_primary_term('category', $post);
+$author = [];
 ?>
 
 <?php get_header(); ?>
@@ -45,17 +46,15 @@ $category_name = yoast_get_primary_term('category', $post);
               <?php the_content();?>
             </div>
           </div>
-          <div class="row">
-            <div class="blog-post__author-col">
-              <?php
-              echo "by "; the_author();
-
-              $author = [];
-              echo $author['description'] = get_the_author_meta( 'user_description' );
-              //echo $author['display_name'] = get_the_author_meta( 'display_name' );
-              echo $author['display_image'] =  get_avatar( get_the_author_meta( 'ID' ) , 245 );
-              ?>
+          <div class="blog-post__author-col">
+            <div class="avatar_col">
+                <?php echo $author['display_image'] =  get_avatar( get_the_author_meta( 'ID' ) , 245 ); ?>
             </div>
+            <?php
+            echo "by "; the_author();
+            echo $author['description'] = get_the_author_meta( 'user_description' );
+            //echo $author['display_name'] = get_the_author_meta( 'display_name' );
+            ?>
           </div>
         </div>
       </div>
