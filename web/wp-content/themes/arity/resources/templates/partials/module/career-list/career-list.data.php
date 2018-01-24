@@ -11,6 +11,7 @@ $feed = get_rss('https://jobsearch.allstate.com/Rss/All/Search/jobtitle/arity/')
 if(!empty($feed['channel']['item'])) {
   $data['feed'] = $feed['channel']['item'];
 
+  // CleanUp Item Data
   foreach($data['feed'] as $i=>$item) {
 
     // Remove Arity prefix
@@ -24,7 +25,7 @@ if(!empty($feed['channel']['item'])) {
   }
 
   // Sort by alphabetical
-  $data['feed'] = usort($data['feed'], function($a, $b) {
+  usort($data['feed'], function($a, $b) {
     if ($a['title'] == $b['title']) {
         return 0;
     }

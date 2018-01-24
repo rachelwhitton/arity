@@ -20,10 +20,10 @@ namespace App\Theme;
   <div class="container">
     <div id="careers_feed" data-disable-feed>
       <?php
-        if(!empty($data['feed'])) :
-          foreach($data['feed'] as $item) {
+        if(!empty($data['feed']) && is_array($data['feed'])) :
+          foreach($data['feed'] as $item) :
             component('careers-list-item', $item);
-          }
+          endforeach;
         else :
       ?>
       <div class="careers-table__error">
