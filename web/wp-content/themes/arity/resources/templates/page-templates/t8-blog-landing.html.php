@@ -90,18 +90,22 @@ $postlist = get_posts( $args );
     ?>
 
     <div class="blog-card__col col-4">
-      <div class="blog-card__image">
-        <?php if (has_post_thumbnail()) : ?>
-            <?php the_post_thumbnail( 'post-thumbnail' ); ?>
-        <?php else : ?>
-          <div class="blog-card__filler-img"></div>
-        <?php endif ?>
-      </div>
+      <a href="<?php echo get_permalink(); ?>">
+        <div class="blog-card__image">
+          <?php if (has_post_thumbnail()) : ?>
+              <?php the_post_thumbnail( 'post-thumbnail' ); ?>
+          <?php else : ?>
+            <div class="blog-card__filler-img"></div>
+          <?php endif ?>
+        </div>
+      </a>
       <div class="blog-card__inner">
         <div class="blog-card__cat">
           <a href="/insights/category/<?php echo strtolower($category_name) ?>"><?php echo $category_name ?></a>
         </div>
-        <?php the_title( '<h1 class="blog-card__title">', '</h1>' ); ?>
+        <a href="<?php echo get_permalink(); ?>">
+          <?php the_title( '<h1 class="blog-card__title">', '</h1>' ); ?>
+        </a>
         <div class="blog-card__excerpt">
          <?php the_excerpt(); ?>
         </div>
