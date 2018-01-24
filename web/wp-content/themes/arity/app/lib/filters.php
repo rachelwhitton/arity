@@ -864,6 +864,12 @@ add_filter('acf/format_value/type=link', function ($link) {
     return $link;
 }, 10, 3);
 
+add_filter( 'acf/fields/post_object/query', function ( $args ) {
+    $args['orderby'] = 'date';
+    $args['order'] = 'DESC';
+    return $args;
+}, 10, 3);
+
 add_filter('template_redirect', function() {
     if(is_admin()) {
         return;
