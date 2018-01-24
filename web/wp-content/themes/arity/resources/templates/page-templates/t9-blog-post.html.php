@@ -53,6 +53,7 @@ $author = [];
             <?php
             echo "by "; the_author();
             echo $author['description'] = get_the_author_meta( 'user_description' );
+            echo $author['twitter'] =  get_the_author_meta( 'twitter' );
             //echo $author['display_name'] = get_the_author_meta( 'display_name' );
             ?>
           </div>
