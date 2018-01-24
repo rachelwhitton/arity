@@ -166,10 +166,17 @@ add_filter('nav_menu_css_class', function ($classes, $item, $args = array()) {
         return $classes;
     }
 
+    global $post;
+
     $is_active = in_array('current-menu-item', $item->classes);
     $is_parent = in_array('current-menu-parent', $item->classes);
     $is_ancestor = in_array('current-menu-ancestor', $item->classes);
     $has_children = in_array('menu-item-has-children', $item->classes);
+
+    // Set the blog to be active for wp 'posts'
+    if($item->post_name == 'blog' && isset( $post ) && $post->post_type == 'post') {
+        $is_active = true;
+    }
 
     // Reset classes
     $classes = array();
@@ -191,8 +198,8 @@ add_filter('nav_menu_css_class', function ($classes, $item, $args = array()) {
         $classes[] = 'menu-item-is-parent';
     }
 
-    if($is_active) {
-        $is_ancestor[] = 'menu-item-is-ancestor';
+    if($is_ancestor) {
+        $classes[] = 'menu-item-is-ancestor';
     }
 
     if($has_children) {
