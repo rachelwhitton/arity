@@ -12,6 +12,7 @@ namespace App\Theme;
 */
 //$related['posts'] = get_field('related_posts');
 $category_name = yoast_get_primary_term('category', $post);
+$author = [];
 ?>
 
 <?php get_header(); ?>
@@ -24,35 +25,36 @@ $category_name = yoast_get_primary_term('category', $post);
         while ( have_posts() ) : the_post();
       ?>
       <div class="blog-post__content">
-        <div class="blog-post__col">
-          <div class="row">
-            <div class="blog-post__header">
-              <a href="/insights/category/<?php echo strtolower($category_name) ?>"><?php echo $category_name ?></a>
-              <?php the_date('F Y', '<span class="date">', '</span>'); ?>
-              10 min read
-              <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-            </div>
-          </div>
-          <div class="row">
+        <div class="blog-post__header">
+          <div class="blog-post__image">
             <?php the_post_thumbnail(); ?>
           </div>
-          <div class="row">
-            <div class="blog-post__author-col">
-              <?php
-              echo "by "; the_author();
-
-              $author = [];
-              echo $author['description'] = get_the_author_meta( 'user_description' );
-              echo $author['display_name'] = get_the_author_meta( 'display_name' );
-              echo $author['display_image'] =  get_avatar( get_the_author_meta( 'ID' ) , 245 );
-              ?>
+          <div class="blog-post__inner">
+            <div class="blog-post__cat">
+              <a href="/insights/category/<?php echo strtolower($category_name) ?>"><?php echo $category_name ?></a>
             </div>
+            <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+            <em><?php the_author(); echo ' &middot; '; the_date('F Y', '<span class="date">', '</span>'); ?> &middot; 10 min read</em>
+          </div>
+        </div>
+        <div class="blog-post__col">
+          <div class="row">
             <div class="blog-post__excerpt-col">
               <?php the_excerpt();?>
             </div>
             <div class="blog-post__content-col">
               <?php the_content();?>
             </div>
+          </div>
+          <div class="blog-post__author-col">
+            <div class="avatar_col">
+                <?php echo $author['display_image'] =  get_avatar( get_the_author_meta( 'ID' ) , 245 ); ?>
+            </div>
+            <?php
+            echo "by "; the_author();
+            echo $author['description'] = get_the_author_meta( 'user_description' );
+            //echo $author['display_name'] = get_the_author_meta( 'display_name' );
+            ?>
           </div>
         </div>
       </div>
