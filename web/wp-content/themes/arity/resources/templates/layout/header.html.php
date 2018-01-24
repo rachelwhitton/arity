@@ -20,7 +20,9 @@ $last_nav_item->post_slug = sanitize_title($last_nav_item->title);
     <div class="container">
       <div class="navbar__header">
         <a role="menuitem" class="navbar__brand" href="<?= home_url('/'); ?>" rel="home" title="Arity Homepage">
-          <img src="<?= asset_path('img/logo-arity-white.svg'); ?>" alt="" class="navbar__logo">
+          <svg class="site-header__logo icon-svg" title="" role="img">
+            <use xlink:href="#arity-logo"></use>
+          </svg>
           <span class="sr-only"><?= get_bloginfo('name'); ?></span>
         </a>
         <button type="button" role="button" class="navbar__toggle collapsed" data-toggle="collapsed" data-target="#navbar" aria-expanded="false" aria-controls="navbar" aria-hidden="true">
