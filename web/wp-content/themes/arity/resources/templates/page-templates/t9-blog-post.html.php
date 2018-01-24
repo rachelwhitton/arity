@@ -51,9 +51,11 @@ $author = [];
                 <?php echo $author['display_image'] =  get_avatar( get_the_author_meta( 'ID' ) , 245 ); ?>
             </div>
             <?php
-            echo "by "; the_author();
+            echo "by "; the_author(); ?>
+            <?php the_author_meta('twitter'); ?>
+            <?php
             echo $author['description'] = get_the_author_meta( 'user_description' );
-            echo $author['twitter'] =  get_the_author_meta( 'twitter' );
+            //echo $author['twitter'] =  get_the_author_meta( 'twitter' );
             //echo $author['display_name'] = get_the_author_meta( 'display_name' );
             ?>
           </div>
