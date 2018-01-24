@@ -50,9 +50,10 @@ $author = [];
             <div class="avatar_col">
                 <?php echo $author['display_image'] =  get_avatar( get_the_author_meta( 'ID' ) , 245 ); ?>
             </div>
-            <?php
-            echo "by "; the_author(); ?>
-            <?php the_author_meta('twitter'); ?>
+            <div class="">
+              <?php echo "by "; the_author(); ?>
+              <a href="https://twitter.com/<?php the_author_meta('twitter'); ?>">@<?php the_author_meta('twitter'); ?></a>
+            </div>
             <?php
             echo $author['description'] = get_the_author_meta( 'user_description' );
             //echo $author['twitter'] =  get_the_author_meta( 'twitter' );
