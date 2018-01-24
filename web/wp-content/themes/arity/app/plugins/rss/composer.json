@@ -1,0 +1,16 @@
+{
+    "name": "rss",
+    "description": "Rss class",
+    "type": "wordpress-plugin",
+    "require": {
+        "php": ">=7.0"
+    },
+    "require-dev": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Rss\\": "src/Rss"
+        }
+    }
+}
