@@ -2095,6 +2095,11 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
     init: function init() {
       $(function () {
         $('.card__inner').matchHeight();
+
+        // fire again on delay just to be sure
+        setTimeout(function () {
+          $('.card__inner').matchHeight();
+        }.bind(this), 2000);
       });
     }
   };
