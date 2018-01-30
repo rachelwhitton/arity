@@ -15,7 +15,7 @@ namespace App\Theme;
   <div class="row">
     <div class="feature-content__subcol">
       <?php element('eyebrow', array(
-        'classes' => 'eyebrow--teal',
+        'classes' => 'eyebrow--homepage-teal',
         'label' => $data['eyebrow'],
         'h_el' => updateElImportance($data['h_el'], 1)
       )); ?>
