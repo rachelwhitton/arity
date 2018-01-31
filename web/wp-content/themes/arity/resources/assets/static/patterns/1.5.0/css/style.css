@@ -5838,12 +5838,20 @@ html.disable-scroll body {
   background: #00B0B9 !important;
 }
 
+.colors__text--homepage-teal {
+  color: #00DCE6 !important;
+}
+
+.colors__bg--homepage-teal {
+  background: #00DCE6 !important;
+}
+
 .colors__text--purple {
-  color: #8860ED !important;
+  color: #7D51EB !important;
 }
 
 .colors__bg--purple {
-  background: #8860ED !important;
+  background: #7D51EB !important;
 }
 
 .colors__text--red {
@@ -6577,8 +6585,12 @@ img {
   color: #00B0B9 !important;
 }
 
+.ar-element.eyebrow--homepage-teal {
+  color: #00DCE6 !important;
+}
+
 .ar-element.eyebrow--purple {
-  color: #8860ED !important;
+  color: #7D51EB !important;
 }
 
 .ar-element.eyebrow--red {
@@ -7224,7 +7236,7 @@ img {
 }
 
 .feature-solution__top .eyebrow {
-  color: #00B0B9;
+  color: #7D51EB;
 }
 
 .feature-solution__p {
