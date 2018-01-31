@@ -36,7 +36,7 @@ namespace App\Theme;
             <div class="blog-card__date">
               <?php echo get_the_date('F Y'); ?>
             </div>
-            <div class="">5 min read</div>
+            <div class=""><?= do_shortcode('[ttr id='.$item->ID.']'); ?></div>
           </div>
         </div>
       <?php endforeach; ?>

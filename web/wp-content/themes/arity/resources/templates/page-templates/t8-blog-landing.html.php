@@ -26,7 +26,7 @@ namespace App\Theme;
 
   $featured = get_field('featured_blog_post');
   $post = $featured;
-  setup_postdata( $post ); 
+  setup_postdata( $post );
 
   $category_name = yoast_get_primary_term('category', $post);
 ?>
@@ -54,6 +54,9 @@ namespace App\Theme;
         <div class="blog-card__date">
           <?php the_date('F d, Y'); ?>
         </div>
+        <div class="blog-card__read">
+          <?= do_shortcode('[ttr]'); ?>
+        </div>
       </div>
     </div>
   </div>
@@ -74,11 +77,11 @@ wp_reset_postdata();
 <?php
 
 global $post;
-$args = array( 
+$args = array(
   'posts_per_page' => 12,
   'exclude' => $feature_id
 );
-$postlist = get_posts( $args ); 
+$postlist = get_posts( $args );
 
 ?>
 
@@ -117,6 +120,9 @@ $postlist = get_posts( $args );
         <div class="blog-card__date">
           <?php the_date('F d, Y', '<div class="date">', '</div>'); ?>
         </div>
+        <div class="blog-card__read">
+          <?= do_shortcode('[ttr]'); ?>
+        </div>
       </div>
     </div>
 
@@ -126,7 +132,7 @@ $postlist = get_posts( $args );
 
       endforeach; // End of the loop.
     ?>
-  
+
   </div><!-- /row -->
 
 </div> <!-- /container -->
