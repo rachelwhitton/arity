@@ -6,11 +6,15 @@ if(empty($data['h_el'])) {
 }
 
 $data['feed'] = false;
+$data['feed_cached'] = false;
 
 $feed = get_rss('https://jobsearch.allstate.com/Rss/All/Search/jobtitle/arity/');
+
 if(!empty($feed['channel']['item'])) {
+
   $data['feed'] = $feed['channel']['item'];
 
+  // CleanUp Item Data
   foreach($data['feed'] as $i=>$item) {
 
     // Remove Arity prefix
@@ -24,14 +28,20 @@ if(!empty($feed['channel']['item'])) {
   }
 
   // Sort by alphabetical
-  $data['feed'] = usort($data['feed'], function($a, $b) {
+  usort($data['feed'], function($a, $b) {
     if ($a['title'] == $b['title']) {
         return 0;
     }
     return ($a['title'] < $b['title']) ? -1 : 1;
   });
 
+  // Add Feed Count
   $data['feedCount'] = count($data['feed']);
+
+  // Add Cached Date
+  if(!empty($feed['_cached'])) {
+    $data['feed_cached'] = $feed['_cached'];
+  }
 }
 
 return $data;

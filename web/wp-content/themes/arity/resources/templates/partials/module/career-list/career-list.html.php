@@ -20,10 +20,13 @@ namespace App\Theme;
   <div class="container">
     <div id="careers_feed" data-disable-feed>
       <?php
-        if(!empty($data['feed'])) :
-          foreach($data['feed'] as $item) {
-            component('careers-list-item', $item);
+        if(!empty($data['feed']) && is_array($data['feed'])) :
+          if(!empty($data['feed_cached'])) {
+            echo '<!-- RSS Cached ' . $data['feed_cached'] . ' -->';
           }
+          foreach($data['feed'] as $item) :
+            component('careers-list-item', $item);
+          endforeach;
         else :
       ?>
       <div class="careers-table__error">

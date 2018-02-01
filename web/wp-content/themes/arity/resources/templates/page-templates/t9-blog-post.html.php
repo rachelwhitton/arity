@@ -34,7 +34,7 @@ $author = [];
               <a href="/insights/category/<?php echo strtolower($category_name) ?>"><?php echo $category_name ?></a>
             </div>
             <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-            <em><?php the_author(); echo ' &middot; '; the_date('F Y', '<span class="date">', '</span>'); ?> &middot; 10 min read</em>
+            <em><?php the_author(); echo ' &middot; '; the_date('F Y', '<span class="date">', '</span>'); ?> &middot; <?= do_shortcode('[ttr]'); ?></em>
           </div>
         </div>
         <div class="blog-post__col">
@@ -78,5 +78,5 @@ $author = [];
 
 </div>
 <?php do_action('theme/after_content') ?>
-
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a6f42f0b4c9f84d"></script>
 <?php get_footer(); ?>

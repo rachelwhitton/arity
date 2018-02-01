@@ -20,11 +20,18 @@ class Rss
     protected $data;
 
     /**
-     * Rss data.
+     * Rss cache expires (in hours).
      *
      * @var string
      */
     private $cache_expires = 1;
+
+    /**
+     * Rss cache key prefix
+     *
+     * @var string
+     */
+    private $cache_key_prefix = 'rss_cache:';
 
     /**
      * Construct rss.
@@ -36,10 +43,11 @@ class Rss
     public function __construct($url='')
     {
         $this->setUrl($url);
-        if(empty($contents = $this->fetchCached($url))) {
+        if(empty($contents = $this->getCached(urlencode($url)))) {
             $contents = $this->fetch($url);
             $contents = $this->validate($contents);
             $contents = $this->cleanup($contents);
+            $this->setCached($contents, urlencode($url));
         }
         $this->setData($contents);
         return $this;
@@ -48,7 +56,7 @@ class Rss
     /**
      * Returns Rss data output
      *
-     * @return object
+     * @return object $data
      */
     public function output()
     {
@@ -57,21 +65,41 @@ class Rss
     }
 
     /**
-     * Fetches cached content from a URL
+     * Returns cached content from a URL using transient cache
      *
-     * @return string|false
+     * @param string $key
+     *
+     * @return object|false $data
      */
-    private function fetchCached($url)
+    private function getCached($key='')
     {
-        // HOUR_IN_SECONDS
-        // $content.= '<!-- cached: '.date('Y-m-d H:i:s').'-->';
-        return false;
+        if(empty($data = get_transient( $this->cache_key_prefix . $key ))) {
+            return false;
+        }
+
+        return $data;
+    }
+
+    /**
+     * Sets cached data using transient cache
+     *
+     * @param object $data
+     *
+     * @return self
+     */
+    private function setCached($data, $key='') {
+        $data['_cached'] = date('Y-m-d H:i:s');
+        $this->cache = set_transient( $this->cache_key_prefix . $key, $data, ($this->cache_expires * HOUR_IN_SECONDS) );
+
+        return $this;
     }
 
     /**
      * Fetches content from a URL via curl
      *
-     * @return string
+     * @param string $url
+     *
+     * @return string $content
      */
     private function fetch($url)
     {
@@ -87,7 +115,7 @@ class Rss
     /**
      * Returns Rss url
      *
-     * @return object $url
+     * @return string $url
      */
     private function getUrl() {
         return $this->url;
@@ -95,6 +123,8 @@ class Rss
 
     /**
      * Sets Rss url
+     *
+     * @param string $url
      *
      * @return self
      */
@@ -117,6 +147,8 @@ class Rss
     /**
      * Sets Rss data
      *
+     * @param object $data
+     *
      * @return self
      */
     private function setData($data) {
@@ -131,7 +163,7 @@ class Rss
      *
      * @param string $xml
      *
-     * @return string
+     * @return string $xml
      */
     private function cleanup($xml) {
         // Trim Spaces

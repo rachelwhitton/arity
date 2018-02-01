@@ -26,7 +26,7 @@ namespace App\Theme;
 
   $featured = get_field('featured_blog_post');
   $post = $featured;
-  setup_postdata( $post ); 
+  setup_postdata( $post );
 
   $category_name = yoast_get_primary_term('category', $post);
 ?>
@@ -54,6 +54,9 @@ namespace App\Theme;
         <div class="blog-card__date">
           <?php the_date('F d, Y'); ?>
         </div>
+        <div class="blog-card__read">
+          <?= do_shortcode('[ttr]'); ?>
+        </div>
       </div>
     </div>
   </div>
@@ -75,8 +78,9 @@ global $wp_query, $paged;
 
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
-$args = array( 
-  'post-type' => 'post',
+
+global $post;
+$args = array(
   'posts_per_page' => 12,
   'paged' => $paged,
   'post__not_in' => array($feature_id)
@@ -84,8 +88,6 @@ $args = array(
 
 $wp_query = new \WP_Query( $args );
 //$posts = $query->posts; 
-
-
 
 ?>
 
@@ -128,6 +130,9 @@ $wp_query = new \WP_Query( $args );
         <div class="blog-card__date">
           <?php the_date('F d, Y', '<div class="date">', '</div>'); ?>
         </div>
+        <div class="blog-card__read">
+          <?= do_shortcode('[ttr]'); ?>
+        </div>
       </div>
     </div>
 
@@ -137,7 +142,7 @@ $wp_query = new \WP_Query( $args );
 
       endwhile; // End of the loop.
     ?>
-  
+
   </div><!-- /row -->
 
   <?php
