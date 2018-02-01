@@ -60,7 +60,7 @@ namespace App\Theme;
 </div>
 
 <?php
-  $feature_id[] = get_the_id();
+  $feature_id = get_the_id();
 
 
 wp_reset_postdata();
@@ -69,36 +69,47 @@ wp_reset_postdata();
 
 <div class="container">
 
-
-
 <?php
 
-global $post;
+global $wp_query, $paged;
+
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
 $args = array( 
+  'post-type' => 'post',
   'posts_per_page' => 12,
-  'exclude' => $feature_id
+  'paged' => $paged,
+  'post__not_in' => array($feature_id)
 );
-$postlist = get_posts( $args ); 
+
+$wp_query = new \WP_Query( $args );
+//$posts = $query->posts; 
+
+
 
 ?>
 
   <div class="row">
+    <?php if ( $wp_query->have_posts() ) : ?>
 
     <?php
     /* Start the Loop */
     $rowCount = 0;
-    foreach ( $postlist as $post ) :
-      setup_postdata( $post );
+    while ( $wp_query->have_posts() ) :
+      $wp_query->the_post();
 
       $category_name = yoast_get_primary_term('category', $post);
 
     ?>
 
-    <div class="blog-card__col col-4">
+    <div class="blog-card__col">
       <a href="<?php echo get_permalink(); ?>">
         <div class="blog-card__image">
           <?php if (has_post_thumbnail()) : ?>
-              <?php the_post_thumbnail( 'post-thumbnail' ); ?>
+              <?php
+                $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+                echo '<div class="blog-card__bg-image" style="background: url('. $url.') no-repeat center center; background-size: cover;"></div>';
+              ?>
           <?php else : ?>
             <div class="blog-card__filler-img"></div>
           <?php endif ?>
@@ -106,7 +117,7 @@ $postlist = get_posts( $args );
       </a>
       <div class="blog-card__inner">
         <div class="blog-card__cat">
-          <a href="/insights/category/<?php echo strtolower($category_name) ?>"><?php echo $category_name ?></a>
+          <span><?php echo $category_name ?></span>
         </div>
         <a href="<?php echo get_permalink(); ?>">
           <?php the_title( '<h1 class="blog-card__title">', '</h1>' ); ?>
@@ -122,12 +133,81 @@ $postlist = get_posts( $args );
 
     <?php
       $rowCount++;
-      if ($rowCount % 3 == 0 && $rowCount != count($postlist) ) echo '</div><div class="row">';
+      //if ($rowCount % 3 == 0 && $rowCount != count($postlist) ) echo '</div><div class="row">';
 
-      endforeach; // End of the loop.
+      endwhile; // End of the loop.
     ?>
   
   </div><!-- /row -->
+
+  <?php
+    // start pagination 
+    $total = $wp_query->max_num_pages;
+    if ( $total > 1 ) {
+      // get the current page
+      if ( !$current_page = get_query_var('paged') ){
+        $current_page = 1;
+      }  
+
+      $links = paginate_links(array(
+        'type' => 'array'
+      ));
+  ?>
+  <div class="blog-pagination">
+    <div class="blog-pagination__inner">
+      <?php if( get_previous_posts_link() ) : ?>
+        <div class="blog-pagination__arrow-link prev-link">
+          <?php previous_posts_link( '<svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#caret"></use></svg>' ); ?>
+        </div>
+      <?php else : ?>
+        <div class="blog-pagination__arrow-link prev-link no-posts">
+          <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#caret"></use></svg>
+        </div>
+      <?php endif; ?>
+
+      <div class="blog-pagination__page-selector">
+        Page 
+        <select id="blog-pagination">
+            <?php
+
+            foreach ( $links as $pgl ) {
+                //Skip Prev and Next.
+                if(strpos($pgl, 'class="prev') || strpos($pgl, 'class="next')){
+                    continue;
+                }
+                $option = str_replace('<a','<option',$pgl);
+                $option = str_replace('<span','<option id="current" selected ',$option);
+                $option = str_replace('a>','option>',$option);
+                $option = str_replace('span>','option>',$option);
+                $option = str_replace('href','value',$option);
+                $option = str_replace('current"','" id="current" selected',$option);
+
+                echo $option;
+            }
+            ?>
+        </select>
+        of 
+        <a href="/blog/page/<?php echo $total; ?>"><?php echo $total; ?></a>
+      </div>
+
+      <?php if( get_next_posts_link() ) : ?>
+        <div class="blog-pagination__arrow-link next-link">
+          <?php next_posts_link( '<svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#caret"></use></svg>' ); ?>
+        </div>
+      <?php else : ?>
+        <div class="blog-pagination__arrow-link next-link no-posts">
+          <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#caret"></use></svg>
+        </div>
+      <?php endif; ?>
+    </div>
+  </div>
+
+  <?php
+    } 
+    // end pagination
+  ?>
+
+  <?php endif; ?>
 
 </div> <!-- /container -->
 </div> <!-- /site-content -->
