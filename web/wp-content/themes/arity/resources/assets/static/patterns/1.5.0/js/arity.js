@@ -407,25 +407,26 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
     * Function that calls both the Google Analytics & Omniture event code
     */
     globalEvent: function globalEvent(hitType, eventCategory, eventAction, eventLabel) {
-
-      debug("---------------------------");
-      debug("analytics.globalEvent()");
-      debug('hitType: ', hitType);
-      debug('eventCategory: ', eventCategory);
-      debug('eventAction: ', eventAction);
-      debug('eventLabel: ', eventLabel);
-      debug("---------------------------");
-
-      if (!app.env('production') || typeof ga == 'undefined') {
-        return;
-      }
-
-      ga('send', {
-        hitType: hitType,
-        eventCategory: eventCategory,
-        eventAction: eventAction,
-        eventLabel: eventLabel
-      });
+      // NOTE tracking has been moved to GTM
+      // debug("---------------------------");
+      // debug("analytics.globalEvent()");
+      // debug('hitType: ', hitType);
+      // debug('eventCategory: ', eventCategory);
+      // debug('eventAction: ', eventAction);
+      // debug('eventLabel: ', eventLabel);
+      // debug("---------------------------");
+      //
+      // if(!app.env('production') || typeof ga == 'undefined') {
+      //   return;
+      // }
+      //
+      // ga('send', {
+      // 	hitType: hitType,
+      // 	eventCategory: eventCategory,
+      // 	eventAction: eventAction,
+      // 	eventLabel: eventLabel
+      // });
+      return;
     }
   };
 
@@ -538,7 +539,7 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
           var careerPositionTitle = false;
 
           $('#careers_modal #listing_href').on('click', function (ev) {
-            analytics.globalEvent('event', 'Link', 'event_careersLink', 'Link to Allstate Career: ' + careerPositionTitle);
+            //analytics.globalEvent('event', 'Link', 'event_careersLink', 'Link to Allstate Career: ' + careerPositionTitle);
             $('#careers_modal').modal('hide');
           });
 
@@ -551,7 +552,7 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
               $('#listing_href').attr('href', currLink);
               modalHasBeenShown = true;
             } else {
-              analytics.globalEvent('event', 'Link', 'event_careersLink', 'Link to Allstate Career: ' + careerPositionTitle);
+              //analytics.globalEvent('event', 'Link', 'event_careersLink', 'Link to Allstate Career: ' + careerPositionTitle);
               $('#careers_modal').modal('hide');
             }
           });
@@ -1479,7 +1480,7 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
       debug('formValidator.onSubmit: Success');
       var form = $(".leadgen-form form").add('.lite-form form');
       var leadSource = $('input[name="lead_source"]', form) ? $('input[name="lead_source"]', form).attr('value') : "";
-      analytics.globalEvent('event', 'Form', 'form_submit', leadSource + "Form Submit");
+      //analytics.globalEvent('event', 'Form', 'form_submit', leadSource + "Form Submit");
       form.submit();
     }
   };
@@ -1524,7 +1525,7 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
       this.initDropmenus();
       this.navbarInit();
       this.addBackdrop();
-      this.analytics();
+      //this.analytics();
     },
     eventListeners: function eventListeners() {
       $('a', this.$el).on('click.siteHeaderLink', this.onLinkClick.bind(this));
@@ -1988,102 +1989,93 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
       // Move Arrow
       $dropmenuArrow.css({ left: settings.left + "px" });
     },
-    analytics: function (_analytics) {
-      function analytics() {
-        return _analytics.apply(this, arguments);
-      }
-
-      analytics.toString = function () {
-        return _analytics.toString();
-      };
-
-      return analytics;
-    }(function () {
-      var linkClicked = false;
-
-      // Logo
-      $('a[rel="home"]', this.$el).on('click', function () {
-        analytics.globalEvent('event', 'Navigation', 'event_headerID', 'Header Logo');
-      });
-
-      $('.navbar__nav a', this.$el).each(function (i, el) {
-        var $el = $(el);
-        $el.on('click', function (evt) {
-
-          var $el = $(evt.currentTarget),
-              label = $el.attr('aria-label') || $el.text(),
-              parentLabel = '';
-
-          // Menu Links
-          var $parent = $el.parent('li');
-          if ($parent.length && $parent.is('.menu-item-has-children')) {
-            if (!this.isNavbarOpen()) {
-              linkClicked = true;
-              analytics.globalEvent('event', 'Navigation', 'event_ClickedNavLink', label + ' Dropdown -  Label clickthrough');
-            }
-          } else if ($parent.length && $parent.parent().is('.sub-menu')) {
-            parentLabel = $el.parents('.menu-item-has-children').find('a').first().text();
-            if (label === parentLabel) {
-              label = 'Overview';
-            }
-            linkClicked = true;
-            analytics.globalEvent('event', 'Navigation', 'event_ClickedNavLink', parentLabel + ' Dropdown - ' + label + ' clickthrough');
-          } else if ($parent.length && $parent.is('.menu-item:last-child')) {
-            linkClicked = true;
-            analytics.globalEvent('event', 'Navigation', 'event_ClickCTA', 'Navigation - ' + label + ' CTA clickthrough');
-          } else if ($parent.length && $parent.is('.menu-item')) {
-            linkClicked = true;
-            analytics.globalEvent('event', 'Navigation', 'event_ClickedNavLink', 'Navigation - ' + label + ' Clickthrough');
-          }
-
-          // Dropdown
-          var $dropdown = $el.parents('.dropmenu');
-          if ($dropdown.length) {
-            parentLabel = $el.parents('.menu-item-has-children').find('a').first().text();
-            if (label === parentLabel) {
-              label = 'Overview';
-            }
-            linkClicked = true;
-            analytics.globalEvent('event', 'Navigation', 'event_ClickedNavLink', parentLabel + ' Dropdown - ' + label + ' clickthrough');
-          }
-        }.bind(this));
-      }.bind(this));
-
-      $('.navbar__toolbar-bottom a', this.$el).each(function (i, el) {
-        var $el = $(el);
-        $el.on('click', function (evt) {
-
-          var $el = $(evt.currentTarget),
-              label = $el.attr('aria-label') || $el.text();
-
-          linkClicked = true;
-          analytics.globalEvent('event', 'Navigation', 'event_ClickCTA', 'Navigation - ' + label + ' CTA clickthrough');
-        });
-      });
-
-      $('.navbar__nav .menu-item-has-children', this.$el).each(function (i, el) {
-        var $el = $(el);
-        $el.on('dropmenuOpen', function (evt) {
-
-          var $el = $(evt.currentTarget),
-              label = $el.find('a').first().attr('aria-label') || $el.find('a').first().text();
-
-          if (!linkClicked) {
-            analytics.globalEvent('event', 'Navigation', 'event_HoverNavLabel', label + ' Nav Label - hover');
-          }
-        });
-      });
-
-      $(window).on('navbarOpen', function () {
-        analytics.globalEvent('event', 'Navigation', 'event_ExposedNav', 'Open Menu');
-      });
-
-      $(window).on('navbarClose', function () {
-        if (!linkClicked) {
-          analytics.globalEvent('event', 'Navigation', 'event_ExposedNav', 'Close Menu');
-        }
-      });
-    })
+    analytics: function analytics() {
+      // NOTE moving to GTM
+      // var linkClicked = false;
+      // 
+      //  // Logo
+      // $('a[rel="home"]', this.$el).on('click', function() {
+      //   analytics.globalEvent('event', 'Navigation', 'event_headerID', 'Header Logo');
+      // });
+      //
+      // $('.navbar__nav a', this.$el).each(function(i, el) {
+      //   var $el = $(el);
+      //   $el.on('click', function(evt) {
+      //
+      //     var $el = $(evt.currentTarget),
+      //       label = $el.attr('aria-label') || $el.text(),
+      //       parentLabel = '';
+      //
+      //     // Menu Links
+      //     var $parent = $el.parent('li');
+      //     if($parent.length && $parent.is('.menu-item-has-children')) {
+      //       if(!this.isNavbarOpen()) {
+      //         linkClicked = true;
+      //         analytics.globalEvent('event', 'Navigation', 'event_ClickedNavLink', label + ' Dropdown -  Label clickthrough');
+      //       }
+      //     } else if($parent.length && $parent.parent().is('.sub-menu')) {
+      //       parentLabel = $el.parents('.menu-item-has-children').find('a').first().text();
+      //       if(label === parentLabel) {
+      //         label = 'Overview';
+      //       }
+      //       linkClicked = true;
+      //       analytics.globalEvent('event', 'Navigation', 'event_ClickedNavLink', parentLabel + ' Dropdown - ' + label + ' clickthrough');
+      //     } else if($parent.length && $parent.is('.menu-item:last-child')) {
+      //       linkClicked = true;
+      //       analytics.globalEvent('event', 'Navigation', 'event_ClickCTA', 'Navigation - ' + label + ' CTA clickthrough');
+      //     } else if($parent.length && $parent.is('.menu-item')) {
+      //       linkClicked = true;
+      //       analytics.globalEvent('event', 'Navigation', 'event_ClickedNavLink', 'Navigation - ' + label + ' Clickthrough');
+      //     }
+      //
+      //     // Dropdown
+      //     var $dropdown = $el.parents('.dropmenu');
+      //     if($dropdown.length) {
+      //       parentLabel = $el.parents('.menu-item-has-children').find('a').first().text();
+      //       if(label === parentLabel) {
+      //         label = 'Overview';
+      //       }
+      //       linkClicked = true;
+      //       analytics.globalEvent('event', 'Navigation', 'event_ClickedNavLink', parentLabel + ' Dropdown - ' + label + ' clickthrough');
+      //     }
+      //   }.bind(this));
+      // }.bind(this));
+      //
+      // $('.navbar__toolbar-bottom a', this.$el).each(function(i, el) {
+      //   var $el = $(el);
+      //   $el.on('click', function(evt) {
+      //
+      //     var $el = $(evt.currentTarget),
+      //       label = $el.attr('aria-label') || $el.text();
+      //
+      //     linkClicked = true;
+      //     analytics.globalEvent('event', 'Navigation', 'event_ClickCTA', 'Navigation - ' + label + ' CTA clickthrough');
+      //   });
+      // });
+      //
+      // $('.navbar__nav .menu-item-has-children', this.$el).each(function(i, el) {
+      //   var $el = $(el);
+      //   $el.on('dropmenuOpen', function(evt) {
+      //
+      //     var $el = $(evt.currentTarget),
+      //       label = $el.find('a').first().attr('aria-label') || $el.find('a').first().text();
+      //
+      //     if(!linkClicked) {
+      //       analytics.globalEvent( 'event', 'Navigation', 'event_HoverNavLabel', label + ' Nav Label - hover' );
+      //     }
+      //   });
+      // });
+      //
+      // $(window).on('navbarOpen', function() {
+      //   analytics.globalEvent( 'event', 'Navigation', 'event_ExposedNav', 'Open Menu' );
+      // });
+      //
+      // $(window).on('navbarClose', function() {
+      //   if(!linkClicked) {
+      //     analytics.globalEvent( 'event', 'Navigation', 'event_ExposedNav', 'Close Menu' );
+      //   }
+      // });
+    }
   };
 
   window.mainNavigation = mainNavigation;
@@ -2273,8 +2265,9 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
         scroll.options.scrollOffset = scrollOffset;
         event.preventDefault();
 
-        var linkTargetTitle = $(el).text();
-        analytics.globalEvent('event', 'Side Navigation', 'navDots', linkTargetTitle);
+        // NOTE tracking has been moved to GTM
+        // var linkTargetTitle = $(el).text();
+        // analytics.globalEvent('event', 'Side Navigation', 'navDots', linkTargetTitle);
       });
     },
     addScene: function addScene(el) {
