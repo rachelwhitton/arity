@@ -1,3 +1,7 @@
+/**
+ * arity-patterns - Pattern lab project for Arity's design system.
+ * @version v1.5.1 w/ hotfixes from future versions applied
+ */
 @charset "UTF-8";
 /*!
  * Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com)
@@ -5834,12 +5838,20 @@ html.disable-scroll body {
   background: #00B0B9 !important;
 }
 
+.colors__text--homepage-teal {
+  color: #00DCE6 !important;
+}
+
+.colors__bg--homepage-teal {
+  background: #00DCE6 !important;
+}
+
 .colors__text--purple {
-  color: #8860ED !important;
+  color: #7D51EB !important;
 }
 
 .colors__bg--purple {
-  background: #8860ED !important;
+  background: #7D51EB !important;
 }
 
 .colors__text--red {
@@ -6573,8 +6585,12 @@ img {
   color: #00B0B9 !important;
 }
 
+.ar-element.eyebrow--homepage-teal {
+  color: #00DCE6 !important;
+}
+
 .ar-element.eyebrow--purple {
-  color: #8860ED !important;
+  color: #7D51EB !important;
 }
 
 .ar-element.eyebrow--red {
@@ -7220,7 +7236,7 @@ img {
 }
 
 .feature-solution__top .eyebrow {
-  color: #00B0B9;
+  color: #7D51EB;
 }
 
 .feature-solution__p {
@@ -9673,9 +9689,18 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
 
 .site-footer__col.col2-- {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 66.66667%;
-          flex: 0 0 66.66667%;
-  max-width: 66.66667%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 480px) {
+  .site-footer__col.col2-- {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 66.66667%;
+            flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+  }
 }
 
 @media screen and (min-width: 961px) {
@@ -9700,9 +9725,18 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
 
 .site-footer__col.col3-- {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 66.66667%;
-          flex: 0 0 66.66667%;
-  max-width: 66.66667%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 480px) {
+  .site-footer__col.col3-- {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 66.66667%;
+            flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+  }
 }
 
 @media screen and (min-width: 961px) {
@@ -9721,6 +9755,14 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
             flex: 0 0 29.16667%;
     max-width: 29.16667%;
   }
+}
+
+.site-footer__col.col3-- .button {
+  margin-bottom: 16px;
+}
+
+.site-footer__col.col3-- .button:last-child {
+  margin-bottom: 0;
 }
 
 .site-footer__col.col4-- {
