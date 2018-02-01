@@ -35,6 +35,7 @@ namespace App\Theme;
           </div>
           <?php endif; ?>
           <?php if (!empty($data['cta'])) : ?>
+          <?php $data['cta']['analytics'] = $data['headline']; ?>
           <p>
             <?php element('button', array_merge($data['cta'], [
               'classes' => 'blue-link content-image-block__arrow-link' ,
