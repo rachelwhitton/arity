@@ -40,25 +40,25 @@ namespace App\Theme;
 
 <div class="container">
   <div class="row">
-    <div class="col-8">
-      <div class="feature-card__inner">
-        <div class="blog-card__cat">
-          <a href="/insights/category/<?php echo strtolower($category_name) ?>"><?php echo $category_name ?></a>
-        </div>
-        <a href="<?php echo get_permalink(); ?>">
-          <?php the_title('<h1 class="feature-card__title">','</h1>'); ?>
-        </a>
-        <div class="blog-card__excerpt">
-         <?php the_excerpt(); ?>
-        </div>
-        <div class="blog-card__date">
-          <?php the_date('F d, Y'); ?>
-        </div>
-        <div class="blog-card__read">
-          <?= do_shortcode('[ttr]'); ?>
-        </div>
+
+    <div class="feature-card__inner">
+      <div class="blog-card__cat">
+        <a href="/insights/category/<?php echo strtolower($category_name) ?>"><?php echo $category_name ?></a>
+      </div>
+      <a class="blog-card__link" href="<?php echo get_permalink(); ?>">
+        <?php the_title('<h1 class="feature-card__title">','</h1>'); ?>
+      </a>
+      <div class="blog-card__excerpt">
+       <?php the_excerpt(); ?>
+      </div>
+      <div class="blog-card__date">
+        <?php the_date('F d, Y'); ?>
+      </div>
+      <div class="blog-card__read">
+        <?= do_shortcode('[ttr]'); ?>
       </div>
     </div>
+
   </div>
 </div>
 
@@ -121,17 +121,19 @@ $wp_query = new \WP_Query( $args );
         <div class="blog-card__cat">
           <span><?php echo $category_name ?></span>
         </div>
-        <a href="<?php echo get_permalink(); ?>">
-          <?php the_title( '<h1 class="blog-card__title">', '</h1>' ); ?>
+        <a class="blog-card__link" href="<?php echo get_permalink(); ?>">
+          <?php the_title( '<h2 class="blog-card__title">', '</h2>' ); ?>
         </a>
         <div class="blog-card__excerpt">
          <?php the_excerpt(); ?>
         </div>
-        <div class="blog-card__date">
-          <?php the_date('F d, Y', '<div class="date">', '</div>'); ?>
-        </div>
-        <div class="blog-card__read">
-          <?= do_shortcode('[ttr]'); ?>
+        <div class="blog-card__stats">
+          <div class="blog-card__date">
+            <?php echo get_the_date(); ?>
+          </div>
+          <div class="blog-card__read">
+            <?= do_shortcode('[ttr]'); ?>
+          </div>
         </div>
       </div>
     </div>
