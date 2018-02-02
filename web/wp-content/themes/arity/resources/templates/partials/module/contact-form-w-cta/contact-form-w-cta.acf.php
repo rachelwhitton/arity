@@ -132,7 +132,7 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Contact Form w/ CTA',
+    'title' => 'Module - Form :: Contact w/ CTA',
     'name' => 'module__contact-form-w-cta',
     'key' => 'group_module_contact-form-w-cta',
     'fields' => $fields,

@@ -58,7 +58,7 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Email Form',
+    'title' => 'Module - Form :: Smart City',
     'name' => 'module__smart-city-form',
     'key' => 'group_module_smart-city-form',
     'fields' => $fields,
