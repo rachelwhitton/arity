@@ -39,7 +39,8 @@ namespace App\Theme;
                   <use xlink:href="#arrow-right"></use>
               </svg>
             </span>
-            <a href="<?= $data['cta']['url']; ?>"<?php if (!empty($data['cta']['target'])) : ?> target="<?= $data['cta']['target']; ?>"<?php endif; ?>>
+            <a href="<?= $data['cta']['url']; ?>"<?php if (!empty($data['cta']['target'])) : ?> target="<?= $data['cta']['target']; ?>"<?php endif; ?>
+              data-analytics="<?= $data['subhead']; ?>">
               <span class="button__label"><?= $data['cta']['title']; ?></span>
             </a>
           </div>
