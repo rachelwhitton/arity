@@ -7,7 +7,7 @@ $fields = [
     // Headline
     acf_text([
         'label' => 'Headline',
-        'name' => 'email-form__headline',
+        'name' => 'smart-city-form__headline',
         'key' => 'field_headline',
         'instructions' => '',
         'required' => 1,
@@ -20,7 +20,7 @@ $fields = [
     // Content
     acf_wysiwyg([
         'label' => 'Content',
-        'name' => 'email-form__content',
+        'name' => 'smart-city-form__content',
         'key' => 'field_content',
         'instructions' => '',
         'required' => 0,
@@ -32,12 +32,12 @@ $fields = [
 
     acf_tab([
         'label' => 'Options',
-        'name' => 'email-form__options_tab',
+        'name' => 'smart-city-form__options_tab',
       ]),
 
       acf_select([
         'label' => 'Background Color',
-        'name' => 'email-form__bkg_color',
+        'name' => 'smart-city-form__bkg_color',
         'key' => 'field_bkg_color',
         'instructions' => '',
         'required' => 0,
@@ -58,9 +58,9 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Form :: Email ',
-    'name' => 'module__email-form',
-    'key' => 'group_module_email-form',
+    'title' => 'Module - Form :: Smart City',
+    'name' => 'module__smart-city-form',
+    'key' => 'group_module_smart-city-form',
     'fields' => $fields,
     'location' => [
         [
