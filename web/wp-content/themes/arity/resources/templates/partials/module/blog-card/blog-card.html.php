@@ -18,7 +18,7 @@ namespace App\Theme;
   </a>
   <div class="blog-card__inner">
     <div class="blog-card__cat">
-      <span><?php echo $category_name ?></span>
+      <span><?php echo $data ?></span>
     </div>
     <a class="blog-card__link" href="<?php echo get_permalink(); ?>">
       <?php the_title( '<h2 class="blog-card__title">', '</h2>' ); ?>
