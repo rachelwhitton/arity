@@ -34,7 +34,7 @@ $author = [];
               <a href="/insights/category/<?php echo strtolower($category_name) ?>"><?php echo $category_name ?></a>
             </div>
             <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-            <em><?php the_author(); echo ' &middot; '; the_date('F Y', '<span class="date">', '</span>'); ?> &middot; <?= do_shortcode('[ttr]'); ?></em>
+            <div class="blog-post__stats"><?php the_author(); echo ' &middot; '; the_date('F Y', '<span class="date">', '</span>'); ?> &middot; <?= do_shortcode('[ttr]'); ?></em>
           </div>
         </div>
         <div class="blog-post__col">

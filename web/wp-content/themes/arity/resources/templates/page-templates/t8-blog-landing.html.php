@@ -108,8 +108,6 @@ $wp_query = new \WP_Query( $args );
     while ( $wp_query->have_posts() ) :
       $wp_query->the_post();
 
-      $category_name = yoast_get_primary_term('category', $post);
-
     ?>
 
     <?php module('blog-card'); ?>
