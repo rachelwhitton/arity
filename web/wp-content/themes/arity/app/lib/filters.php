@@ -213,6 +213,24 @@ EOD;
 }, 10,  2);
 
 /*
+Avatar replace
+*/
+
+add_filter( 'avatar_defaults', function($avatar_defaults) {
+    $avatar = get_option('avatar_default');
+    
+    $new_avatar_url = get_template_directory_uri() . '/resources/assets/images/profile_image.jpg';
+
+    if( $avatar != $new_avatar_url )
+    {
+        update_option( 'avatar_default', $new_avatar_url );
+    }
+
+    $avatar_defaults[ $new_avatar_url ] = 'Default Avatar';
+    return $avatar_defaults;
+});
+
+/*
 |-----------------------------------------------------------------
 | Analytics
 |-----------------------------------------------------------------
