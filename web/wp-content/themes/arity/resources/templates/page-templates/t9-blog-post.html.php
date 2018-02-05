@@ -26,15 +26,21 @@ $author = [];
       ?>
       <div class="blog-post__content">
         <div class="blog-post__header">
-          <div class="blog-post__image">
-            <?php the_post_thumbnail(); ?>
-          </div>
-          <div class="blog-post__inner">
-            <div class="blog-post__cat">
-              <a href="/insights/category/<?php echo strtolower($category_name) ?>"><?php echo $category_name ?></a>
+          <div class="row">
+            <div class="blog-post__image">
+              <?php the_post_thumbnail(); ?>
+
+              <div class="blog-post__bg"></div>
             </div>
-            <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-            <div class="blog-post__stats"><?php the_author(); echo ' &middot; '; the_date('F Y', '<span class="date">', '</span>'); ?> &middot; <?= do_shortcode('[ttr]'); ?></em>
+          </div>
+          <div class="row">
+            <div class="blog-post__inner">
+              <div class="blog-post__cat">
+                <a href="/insights/category/<?php echo strtolower($category_name) ?>"><?php echo $category_name ?></a>
+              </div>
+              <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+              <div class="blog-post__stats"><?php the_author(); echo ' &middot; '; the_date('F Y', '<span class="date">', '</span>'); ?> &middot; <?= do_shortcode('[ttr]'); ?></em>
+            </div>
           </div>
         </div>
         <div class="blog-post__col">
@@ -46,19 +52,21 @@ $author = [];
               <?php the_content();?>
             </div>
           </div>
-          <div class="blog-post__author-col">
-            <div class="avatar_col">
-                <?php echo $author['display_image'] =  get_avatar( get_the_author_meta( 'ID' ) , 245 ); ?>
+          <div class="row">
+            <div class="blog-post__author-col">
+              <div class="avatar_col">
+                  <?php echo $author['display_image'] =  get_avatar( get_the_author_meta( 'ID' ) , 245 ); ?>
+              </div>
+              <div class="blog-post__author-info">
+                <span class="author-name"><?php the_author(); ?> </span>         
+                <a href="https://twitter.com/<?php the_author_meta('twitter'); ?>"><?php the_author_meta('twitter'); ?></a>
+                <br/>
+                <?php
+                  echo $author['description'] = get_the_author_meta( 'user_description' );
+                ?>
+              </div>
+              
             </div>
-            <div class="">
-              <?php echo "by "; the_author(); ?>
-              <a href="https://twitter.com/<?php the_author_meta('twitter'); ?>">@<?php the_author_meta('twitter'); ?></a>
-            </div>
-            <?php
-            echo $author['description'] = get_the_author_meta( 'user_description' );
-            //echo $author['twitter'] =  get_the_author_meta( 'twitter' );
-            //echo $author['display_name'] = get_the_author_meta( 'display_name' );
-            ?>
           </div>
         </div>
       </div>
