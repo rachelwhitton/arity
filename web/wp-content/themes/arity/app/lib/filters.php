@@ -908,7 +908,7 @@ add_filter('theme/before_wpfooter', function() {
 
     global $post;
 
-    if(empty($post) || empty($post->post_name) || $post->post_name != 'contact') {
+    if(empty($post) || empty($post->post_name) || !in_array($post->post_name, ['contact','smart-cities'])) {
         return;
     }
 
