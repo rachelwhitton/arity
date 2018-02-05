@@ -59,7 +59,7 @@ $author = [];
               </div>
               <div class="blog-post__author-info">
                 <span class="author-name"><?php the_author(); ?> </span>         
-                <a href="https://twitter.com/<?php the_author_meta('twitter'); ?>"><?php the_author_meta('twitter'); ?></a>
+                <a href="https://twitter.com/<?php the_author_meta('twitter'); ?>">@<?php the_author_meta('twitter'); ?></a>
                 <br/>
                 <?php
                   echo $author['description'] = get_the_author_meta( 'user_description' );
