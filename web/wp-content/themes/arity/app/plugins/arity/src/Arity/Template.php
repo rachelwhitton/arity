@@ -1,4 +1,4 @@
-<?php
+cleanUpData<?php
 
 namespace Arity;
 
@@ -391,15 +391,7 @@ class Template
         }
 
         // Strip parts from the array keys
-        if(!empty($data) && $this->isPartial()) {
-            $cleaned = array();
-            foreach($data as $key=>$value) {
-                $key = $this->stripPartialType($key);
-                $key = $this->stripPartialName($key);
-                $cleaned[$key] = $value;
-            }
-            $data = $cleaned;
-        }
+        $data = $this->stripPrefixes($data);
 
         // Check for data file, if exists use as data mixin.
         $extension = $this->config['templates']['extension'];
@@ -412,6 +404,22 @@ class Template
         // if(!empty($data['classes']) && is_array($data['classes'])) {
         //     $data['classes'] = join(' ', $data['classes']);
         // }
+
+        return $data;
+    }
+
+    public function stripPrefixes($data)
+    {
+        // Strip parts from the array keys
+        if(!empty($data) && $this->isPartial()) {
+            $cleaned = array();
+            foreach($data as $key=>$value) {
+                $key = $this->stripPartialType($key);
+                $key = $this->stripPartialName($key);
+                $cleaned[$key] = $value;
+            }
+            $data = $cleaned;
+        }
 
         return $data;
     }
