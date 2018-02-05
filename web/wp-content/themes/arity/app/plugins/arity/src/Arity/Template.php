@@ -1,4 +1,4 @@
-cleanUpData<?php
+<?php
 
 namespace Arity;
 
