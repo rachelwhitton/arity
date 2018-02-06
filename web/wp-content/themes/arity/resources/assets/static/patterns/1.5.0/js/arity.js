@@ -1046,11 +1046,15 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
     },
     validateField: function validateField(field) {
       var $field = $(field),
-          val = $field.val().trim(),
+          val = $field.val(),
           valid = {
         success: true,
         el: $field[0]
       };
+
+      if (val.length && typeof val === 'string') {
+        val = val.trim();
+      }
 
       // Validate Required
       if ($field.attr('required') || $field.hasClass('required')) {
@@ -1126,8 +1130,14 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
       return re.test(phone);
     },
     validateSelect: function validateSelect(el) {
-      var $el = $(el);
-      if (!$el.val().trim().length) {
+      var $el = $(el),
+          val = $el.val();
+
+      if (val.length && typeof val === 'string') {
+        val = val.trim();
+      }
+      // This could be a string or an array
+      if (!val.length) {
         $el.addClass('invalid');
       } else {
         $el.removeClass('invalid');
