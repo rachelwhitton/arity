@@ -7236,7 +7236,7 @@ img {
 }
 
 .feature-solution__top .eyebrow {
-  color: #7D51EB;
+  color: #63727E;
 }
 
 .feature-solution__p {
@@ -9733,6 +9733,14 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
             flex: 0 0 29.16667%;
     max-width: 29.16667%;
   }
+}
+
+.site-footer__col.col3-- .button {
+  margin-bottom: 16px;
+}
+
+.site-footer__col.col3-- .button:last-child {
+  margin-bottom: 0;
 }
 
 .site-footer__col.col4-- {
