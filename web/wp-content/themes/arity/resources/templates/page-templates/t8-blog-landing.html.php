@@ -18,7 +18,7 @@ namespace App\Theme;
 <div class="site-content">
 
   <div class="blog-header">
-    <h1>Title of the blog</h1>
+    <h1><?php echo get_the_title(); ?></h1>
     <div class="blog-brand">a blog by <span>Arity</span></div>
   </div>
 
