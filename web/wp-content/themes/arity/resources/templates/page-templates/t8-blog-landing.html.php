@@ -142,7 +142,9 @@ $wp_query = new \WP_Query( $args );
         </div>
       <?php else : ?>
         <div class="blog-pagination__arrow-link prev-link no-posts">
-          <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#caret"></use></svg>
+          <div class="rotate">
+            <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#caret"></use></svg>
+          </div>
         </div>
       <?php endif; ?>
 
