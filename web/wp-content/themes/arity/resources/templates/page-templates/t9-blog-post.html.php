@@ -54,16 +54,26 @@ $author = [];
           </div>
           <div class="row">
             <div class="blog-post__author-col">
-              <div class="avatar_col">
-                  <?php echo $author['display_image'] =  get_avatar( get_the_author_meta( 'ID' ) , 245 ); ?>
-              </div>
-              <div class="blog-post__author-info">
-                <span class="author-name"><?php the_author(); ?> </span>         
-                <a href="https://twitter.com/<?php the_author_meta('twitter'); ?>">@<?php the_author_meta('twitter'); ?></a>
-                <br/>
-                <?php
-                  echo $author['description'] = get_the_author_meta( 'user_description' );
-                ?>
+              <div class="blog-post__author-inner">
+                <div class="avatar_col">
+                    <?php echo $author['display_image'] =  get_avatar( get_the_author_meta( 'ID' ) , 245 ); ?>
+                </div>
+                <div class="blog-post__author-info">
+                  <span class="author-name"><?php the_author(); ?> </span>    
+                   
+                  <?php 
+                    if(get_the_author_meta('twitter')) :
+                  ?>
+
+                    <a href="https://twitter.com/<?php the_author_meta('twitter'); ?>">@<?php the_author_meta('twitter'); ?></a>
+
+                  <?php endif; ?>
+                  
+                  <br/>
+                  <?php
+                    echo $author['description'] = get_the_author_meta( 'user_description' );
+                  ?>
+                </div>
               </div>
               
             </div>
