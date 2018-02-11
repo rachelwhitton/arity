@@ -61,18 +61,19 @@ $author = [];
                 <div class="blog-post__author-info">
                   <span class="author-name"><?php the_author(); ?> </span>    
                    
-                  <?php 
-                    if(get_the_author_meta('twitter')) :
-                  ?>
+                  <?php if(get_the_author_meta('twitter')) : ?>
 
-                    <a href="https://twitter.com/<?php the_author_meta('twitter'); ?>">@<?php the_author_meta('twitter'); ?></a>
+                    <a class="author-twitter" href="https://twitter.com/<?php the_author_meta('twitter'); ?>">@<?php the_author_meta('twitter'); ?></a>
 
                   <?php endif; ?>
                   
-                  <br/>
-                  <?php
-                    echo $author['description'] = get_the_author_meta( 'user_description' );
-                  ?>
+                  <?php if(get_the_author_meta('twitter')) : ?>
+                    <div class="author-description">
+                    <?php
+                      echo $author['description'] = get_the_author_meta( 'user_description' );
+                    ?>
+                    </div>
+                  <?php endif; ?>
                 </div>
               </div>
               
