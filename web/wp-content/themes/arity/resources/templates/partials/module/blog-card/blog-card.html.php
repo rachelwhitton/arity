@@ -32,9 +32,7 @@ $category_name = yoast_get_primary_term('category', $post);
       <div class="blog-card__date">
         <?php echo get_the_date(); ?>
       </div>
-      <div class="blog-card__read">
-        <?= do_shortcode('[ttr]'); ?>
-      </div>
+      <div class="blog-card__read"><?= do_shortcode('[ttr]'); ?></div>
     </div>
   </div>
 </div>
