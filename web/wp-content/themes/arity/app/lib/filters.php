@@ -648,10 +648,6 @@ add_filter('body_class', function (array $classes, array $class=array()) {
 
     $classes = array();
 
-    if ( is_404() ) {
-        $classes[] = 'template--error404';
-    }
-
     // Add post details
     if ( isset( $post ) ) {
         $classes[] = $post->post_type . ' ' . $post->post_type . '--' . $post->post_name;
@@ -665,6 +661,11 @@ add_filter('body_class', function (array $classes, array $class=array()) {
     // Add classes add through body_class function
     $classes = array_merge( $classes, $class );
 
+    if ( is_404() ) {
+        $classes = array();
+        $classes[] = 'template--error404';
+    }
+    
     if ( is_user_logged_in() )
 		$classes[] = 'logged-in';
 
