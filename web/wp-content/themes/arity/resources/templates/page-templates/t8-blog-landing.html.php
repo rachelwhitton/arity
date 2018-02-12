@@ -60,9 +60,7 @@ namespace App\Theme;
       <div class="blog-card__date">
         <?php the_date('F d, Y'); ?>
       </div>
-      <div class="blog-card__read">
-        <?= do_shortcode('[ttr]'); ?>
-      </div>
+      <div class="blog-card__read"><?= do_shortcode('[ttr]'); ?></div>
     </div>
 
   </div>
