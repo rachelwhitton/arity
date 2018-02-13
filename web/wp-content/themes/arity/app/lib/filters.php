@@ -909,7 +909,7 @@ add_filter('theme/before_wpfooter', function() {
 
     global $post;
 
-    if(empty($post) || empty($post->post_name) || !in_array($post->post_name, ['contact','smart-cities'])) {
+    if(empty($post) || empty($post->post_name) || !in_array($post->post_name, ['contact','smart-cities','mobility-planning'])) {
         return;
     }
 
