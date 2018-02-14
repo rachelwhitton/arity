@@ -29,6 +29,7 @@ namespace App\Theme;
   setup_postdata( $post );
 
   $category_name = yoast_get_primary_term('category', $post);
+  $abstract = get_field('abstract');
 ?>
 
 <?php 
@@ -55,7 +56,7 @@ namespace App\Theme;
         <?php the_title('<h1 class="feature-card__title">','</h1>'); ?>
       </a>
       <div class="blog-card__excerpt">
-       <?php the_excerpt(); ?>
+       <?php echo $abstract; ?>
       </div>
       <div class="blog-card__date">
         <?php the_date('F d, Y'); ?>
