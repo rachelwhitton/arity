@@ -29,6 +29,7 @@ namespace App\Theme;
   setup_postdata( $post );
 
   $category_name = yoast_get_primary_term('category', $post);
+  $abstract = get_field('abstract');
 ?>
 
 <?php 
@@ -55,14 +56,12 @@ namespace App\Theme;
         <?php the_title('<h1 class="feature-card__title">','</h1>'); ?>
       </a>
       <div class="blog-card__excerpt">
-       <?php the_excerpt(); ?>
+       <?php echo $abstract; ?>
       </div>
       <div class="blog-card__date">
         <?php the_date('F d, Y'); ?>
       </div>
-      <div class="blog-card__read">
-        <?= do_shortcode('[ttr]'); ?>
-      </div>
+      <div class="blog-card__read"><?= do_shortcode('[ttr]'); ?></div>
     </div>
 
   </div>
@@ -142,7 +141,9 @@ $wp_query = new \WP_Query( $args );
         </div>
       <?php else : ?>
         <div class="blog-pagination__arrow-link prev-link no-posts">
-          <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#caret"></use></svg>
+          <div class="rotate">
+            <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#caret"></use></svg>
+          </div>
         </div>
       <?php endif; ?>
 

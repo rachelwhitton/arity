@@ -26,15 +26,18 @@ $category_name = yoast_get_primary_term('category', $post);
       <?php the_title( '<h2 class="blog-card__title">', '</h2>' ); ?>
     </a>
     <div class="blog-card__excerpt">
-     <?php the_excerpt(); ?>
+     <?php // the_excerpt(); ?>
+     <?php
+
+        $abstract = get_field('abstract');
+        echo $abstract;
+        ?>
     </div>
     <div class="blog-card__stats">
       <div class="blog-card__date">
         <?php echo get_the_date(); ?>
       </div>
-      <div class="blog-card__read">
-        <?= do_shortcode('[ttr]'); ?>
-      </div>
+      <div class="blog-card__read"><?= do_shortcode('[ttr]'); ?></div>
     </div>
   </div>
 </div>
