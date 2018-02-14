@@ -28,7 +28,8 @@ namespace App\Theme;
            	 <h1 class="blog-card__title"><?php echo $item->post_title; ?></h1>
            	</a>
             <div class="blog-card__excerpt">
-             <p><?php echo $item->post_excerpt;?></p>
+             <p><?php // echo $item->post_excerpt;?></p>
+             <?php echo $item->abstract ?>
             </div>
             <div class="blog-card__date">
               <?php echo get_the_date('F Y'); ?>
