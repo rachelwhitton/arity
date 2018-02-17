@@ -992,3 +992,16 @@ add_filter('theme/before_wpfooter', function() {
 EOD;
 
 });
+
+
+// custom WYSIWYG filter
+add_filter( 'acf/fields/wysiwyg/toolbars' , function( $toolbars )
+{
+    // Add a new toolbar called "Simple"
+    $toolbars['Simple' ] = array();
+    $toolbars['Simple' ][1] = array('bold' , 'italic' , 'link' , 'bullist' , 'numlist' );
+
+    // return $toolbars - IMPORTANT!
+    return $toolbars;
+});
+

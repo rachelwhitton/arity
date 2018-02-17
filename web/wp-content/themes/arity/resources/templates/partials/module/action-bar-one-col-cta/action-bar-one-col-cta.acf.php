@@ -28,7 +28,6 @@ $fields = [
     'label' => 'Content',
     'name' => 'action-bar-one-col-cta__center_content',
     'key' => 'field_center_content',
-    'instructions' => '',
     'required' => 0,
     'maxlength' => '',
     'wrapper' => array (
