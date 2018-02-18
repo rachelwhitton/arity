@@ -1005,3 +1005,20 @@ add_filter( 'acf/fields/wysiwyg/toolbars' , function( $toolbars )
     return $toolbars;
 });
 
+//hidden screen options
+add_filter( 'default_hidden_meta_boxes', function ( $hidden, $screen ) {
+    
+    $hide_these = array( 
+        'postexcerpt',
+    );
+    
+  return array_merge( $hidden, $hide_these );
+}, 10, 2 );
+
+//Add Instructions to Featured Image Box
+add_filter( 'admin_post_thumbnail_html', function ( $html ) {
+
+    return $html .= '<i>Suggested image size 2400 × 948</i>';
+
+});
+
