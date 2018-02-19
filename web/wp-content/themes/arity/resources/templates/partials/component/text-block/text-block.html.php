@@ -7,12 +7,12 @@ namespace App\Theme;
   Template Name:      Text Block Module
   Template Type:      Module
   Description:        Basic text block module
-  Last Updated:       09/15/2017
-  Since:              1.0.0
+  Last Updated:       02/15/2018
+  Since:              1.6.0
 */
 
 ?>
-<div <?php module_class('text-block'); ?>>
+<div <?php component_class('text-block'); ?>>
   <div class="text-block__block <?= $data['--settings_alignment']; ?>">
     <div class="container">
       <?php if(!empty($data['eyebrow'])) : ?>
@@ -30,7 +30,13 @@ namespace App\Theme;
       <?php endif; ?>
 
       <div class="text-block__text">
-        <?= $data['content']; ?>
+        <?php if(!empty($data['content'])) : ?>
+          <?= $data['content']; ?>
+        <?php endif; ?>
+
+        <?php if(!empty($data['content-center'])) : ?>
+          <?= $data['content-center']; ?>
+        <?php endif; ?>
       </div>
       
     </div>

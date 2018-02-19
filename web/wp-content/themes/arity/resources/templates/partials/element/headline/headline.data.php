@@ -5,7 +5,7 @@ if (empty($data['classes'])) {
 }
 
 if (empty($data['h-size'])) {
-  $data['h-size'] = 'h1';
+  $data['h-size'] = 'h3';
 }
 
 return $data;

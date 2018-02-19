@@ -997,9 +997,13 @@ EOD;
 // custom WYSIWYG filter
 add_filter( 'acf/fields/wysiwyg/toolbars' , function( $toolbars )
 {
-    // Add a new toolbar called "Simple"
+    // Simple toolbar with basic text formatting
     $toolbars['Simple' ] = array();
     $toolbars['Simple' ][1] = array('bold' , 'italic' , 'link' , 'bullist' , 'numlist' );
+
+    // Toolbar for centered text blocks
+    $toolbars['Center' ] = array();
+    $toolbars['Center' ][1] = array('bold' , 'italic' , 'link' );
 
     // return $toolbars - IMPORTANT!
     return $toolbars;

@@ -18,7 +18,7 @@ $fields = [
       'wrapper' => array (
         'width' => '50',
       ),
-      'default_value' => 'left-align',
+      'default_value' => 'layout__left-align',
       'choices' => [
         'layout__left-align' => 'Left Align',
         'layout__center-align' => 'Center Align',
@@ -67,8 +67,8 @@ $fields = [
       ),
       'default_value' => 'h1',
       'choices' => [
-        'h1' => 'Large (h1)',
-        'h2' => 'Medium (h2)',
+        'h2' => 'Large (h2)',
+        'h3' => 'Medium (h3)',
       ]
     ]),
 
@@ -78,22 +78,54 @@ $fields = [
       'name' => 'text-block__content',
       'key' => 'field_content',
       'instructions' => '',
-      'tabs' => 'visual',
       'toolbar' => 'simple',
       'media_upload' => 0,
       'required' => 1,
       'maxlength' => '',
       'wrapper' => array (
         'width' => '100',
-      )
+      ), 
+      'conditional_logic' => [
+        [
+          [
+            'name' => 'text-block__--settings_alignment',
+            'operator' => '==',
+            'value' => 'layout__left-align'
+          ]
+        ]
+      ]
+    ]),
+
+    // Text
+    acf_wysiwyg([
+      'label' => 'Content',
+      'name' => 'text-block__content-center',
+      'key' => 'field_content-center',
+      'instructions' => '',
+      'toolbar' => 'center',
+      'media_upload' => 0,
+      'required' => 1,
+      'maxlength' => '',
+      'wrapper' => array (
+        'width' => '100',
+      ), 
+      'conditional_logic' => [
+        [
+          [
+            'name' => 'text-block__--settings_alignment',
+            'operator' => '==',
+            'value' => 'layout__center-align'
+          ]
+        ]
+      ]
     ]),
 ];
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Text Block',
-    'name' => 'module__text-block',
-    'key' => 'group_module_text-block',
+    'title' => 'Component - Text Block',
+    'name' => 'component__text-block',
+    'key' => 'group_component_text-block',
     'fields' => $fields,
     'location' => [
         [

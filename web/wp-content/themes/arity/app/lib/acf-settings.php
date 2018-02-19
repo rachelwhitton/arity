@@ -148,6 +148,7 @@ $module_builder->includeACFSettings('product-stats', 'component');
 $module_builder->includeACFSettings('text-icon-stack', 'component');
 $module_builder->includeACFSettings('icon-only-stack', 'component');
 $module_builder->includeACFSettings('text-w-icon', 'component');
+$module_builder->includeACFSettings('text-block', 'component');
 
 
 /*
@@ -161,6 +162,7 @@ $module_builder->includeACFSettings('big-feature-block', 'module');
 $module_builder->includeACFSettings('body-intro', 'module');
 $module_builder->includeACFSettings('body-one-column', 'module');
 $module_builder->includeACFSettings('body-two-column', 'module');
+$module_builder->includeACFSettings('body-inset-ten-col', 'module');
 $module_builder->includeACFSettings('contact-form-w-cta', 'module');
 $module_builder->includeACFSettings('contact-form', 'module');
 $module_builder->includeACFSettings('email-form', 'module');
@@ -187,7 +189,6 @@ $module_builder->includeACFSettings('sub-footer', 'module');
 $module_builder->includeACFSettings('icon-two-column', 'module');
 $module_builder->includeACFSettings('horizontal-rule', 'module');
 $module_builder->includeACFSettings('video', 'module');
-$module_builder->includeACFSettings('text-block', 'module');
 
 /*
 |--------------------------------------------------------------------------
