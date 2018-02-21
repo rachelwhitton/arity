@@ -65,7 +65,7 @@ $fields = [
       'wrapper' => array (
         'width' => '33',
       ),
-      'default_value' => 'h1',
+      'default_value' => 'h3',
       'choices' => [
         'h2' => 'Large (h2)',
         'h3' => 'Medium (h3)',
