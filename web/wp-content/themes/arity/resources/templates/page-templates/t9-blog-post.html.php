@@ -12,6 +12,7 @@ namespace App\Theme;
 */
 //$related['posts'] = get_field('related_posts');
 $category_name = yoast_get_primary_term('category', $post);
+$abstract = get_field('abstract');
 $author = [];
 ?>
 
@@ -46,7 +47,7 @@ $author = [];
         <div class="blog-post__col">
           <div class="row">
             <div class="blog-post__excerpt-col">
-              <?php the_excerpt();?>
+              <?php echo $abstract; ?>
             </div>
             <div class="blog-post__content-col">
               <?php the_content();?>
