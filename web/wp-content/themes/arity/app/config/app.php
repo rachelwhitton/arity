@@ -103,7 +103,8 @@ return [
         't3-product-detail' => 'T3 - Product Detail',
         't5-careers' => 'T5 - Careers',
         't6-contact' => 'T6 - Contact',
-        't8-blog-landing' => 'T8 - Blog Landing'
+        't8-blog-landing' => 'T8 - Blog Landing',
+        't11-homepage' => 'T11 - New Homepage'
     ],
 
     /*
