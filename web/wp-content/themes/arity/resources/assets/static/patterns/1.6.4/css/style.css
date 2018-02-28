@@ -14175,14 +14175,6 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   }
 }
 
-.vertical-cards-block__content a {
-  color: #FFFFFF;
-}
-
-.vertical-cards-block__content a:hover {
-  color: #011C2C;
-}
-
 .blog-header {
   text-align: center;
   margin-top: 10px;
