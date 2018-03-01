@@ -6141,7 +6141,12 @@ body {
 }
 
 .blog-pagination__page-selector a {
+  color: #0070D6;
   margin: 0 10px;
+}
+
+.blog-pagination__page-selector a:hover {
+  color: #011C2C;
 }
 
 .blog-pagination__page-selector select {
@@ -6632,12 +6637,12 @@ a {
 }
 
 a:hover {
-  color: #011C2C;
+  color: #0070D6;
 }
 
 @media (hover: none) {
   a.hover, a:active {
-    color: #011C2C;
+    color: #0070D6;
   }
 }
 
@@ -6910,6 +6915,14 @@ img {
 
 .card--vertical .card__button.button--link .button__icon {
   margin-right: 0;
+}
+
+.card--vertical .card__button.button--link a {
+  color: #0070D6;
+}
+
+.card--vertical .card__button.button--link a:hover {
+  color: #011C2C;
 }
 
 .card--vertical .card__button.button--link [class^="icon-"] {
@@ -7537,6 +7550,14 @@ img {
 
 .text-block__text p {
   margin-top: 0;
+}
+
+.text-block a {
+  color: #0070D6;
+}
+
+.text-block a:hover {
+  color: #011C2C;
 }
 
 .hero-block {
@@ -13969,7 +13990,7 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
 }
 
 .sub-footer__disclaimer a:hover {
-  text-decoration: underline;
+  color: #011C2C;
 }
 
 .error-content {
@@ -14286,6 +14307,11 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   text-transform: uppercase;
 }
 
+.feature-card__link:hover,
+.blog-card__link:hover {
+  color: #0070D6;
+}
+
 .feature-card__link:hover h1, .feature-card__link:hover h2,
 .blog-card__link:hover h1,
 .blog-card__link:hover h2 {
@@ -14293,6 +14319,10 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
 }
 
 @media (hover: none) {
+  .feature-card__link:hover,
+  .blog-card__link:hover {
+    color: #011C2C;
+  }
   .feature-card__link:hover h1, .feature-card__link:hover h2,
   .blog-card__link:hover h1,
   .blog-card__link:hover h2 {
@@ -14503,6 +14533,14 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
 .blog-post img {
   width: 100%;
   height: auto;
+}
+
+.blog-post a {
+  color: #0070D6;
+}
+
+.blog-post a:hover {
+  color: #011C2C;
 }
 
 .blog-post h1 {
