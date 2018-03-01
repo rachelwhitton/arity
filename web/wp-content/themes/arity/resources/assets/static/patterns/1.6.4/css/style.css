@@ -6777,7 +6777,7 @@ img {
 }
 
 .capsule {
-  background: rgba(118, 134, 147, 0.3);
+  background: #011C2C;
   text-align: center;
   padding: 30px 40px;
   border-radius: 0;
@@ -6837,6 +6837,10 @@ img {
 
 .capsule p:last-child {
   margin: 0;
+}
+
+.page--home .capsule {
+  background: rgba(118, 134, 147, 0.3);
 }
 
 .card {
@@ -10295,10 +10299,6 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   padding-bottom: 0;
 }
 
-.promo--light .capsule {
-  background: #768693;
-}
-
 .promo--dark {
   background: #011C2C;
   padding-top: 70px;
@@ -12353,6 +12353,7 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
 }
 
 .body-two-column--contact .body-two-column__col.right-- a {
+  font-weight: normal;
   color: #FFFFFF !important;
 }
 
