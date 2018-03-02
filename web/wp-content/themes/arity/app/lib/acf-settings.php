@@ -163,6 +163,7 @@ $module_builder->includeACFSettings('body-intro', 'module');
 $module_builder->includeACFSettings('body-one-column', 'module');
 $module_builder->includeACFSettings('body-two-column', 'module');
 $module_builder->includeACFSettings('body-inset-ten-col', 'module');
+$module_builder->includeACFSettings('blog-teaser', 'module');
 $module_builder->includeACFSettings('contact-form-w-cta', 'module');
 $module_builder->includeACFSettings('contact-form', 'module');
 $module_builder->includeACFSettings('email-form', 'module');
