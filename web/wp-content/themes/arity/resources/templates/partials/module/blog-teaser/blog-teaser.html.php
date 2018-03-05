@@ -15,10 +15,16 @@ $wp_query = new \WP_Query( $args );
   <div class="row">
     <div class="blog-teaser__intro">
       <?php if (!empty($data['eyebrow'])) : ?>
-        <h4 class="blog-teaser__eyebrow"><?= $data['eyebrow']; ?></h4>
+        <?php element('eyebrow', array(
+          'classes' => 'eyebrow',
+          'label' => $data['eyebrow']
+        )); ?>
       <?php endif; ?>
       <?php if (!empty($data['headline'])) : ?>
-        <h2 class="blog-teaser__header"><?= $data['headline']; ?></h2>
+        <?php element('headline', array(
+              'classes' => 'blog-teaser__title',
+              'headline' => $data['headline']
+            )); ?>
       <?php endif; ?>
     </div>
   </div>
