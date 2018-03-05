@@ -81,8 +81,13 @@ wp_reset_postdata();
 
 <?php
 $promo_set = false;
-if (get_field('module__promo')) {
-  $promo = get_field('module__promo'); 
+if (get_field('module__promo_area')) {
+  $promo_area = get_field('module__promo_area'); 
+  $promo = array(
+    'headline' => $promo_area[0]['promo__headline'],
+    'body_copy' => $promo_area[0]['promo__body_copy'],
+    'cta' => $promo_area[0]['promo__cta']
+  );
   $promo_set = true;
 
   add_action('pre_get_posts',function( $query ) {

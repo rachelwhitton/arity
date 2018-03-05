@@ -11,7 +11,7 @@ $fields = [
       'key' => 'field_subhead',
       'instructions' => '',
       'required' => 0,
-      'maxlength' => '',
+      'maxlength' => 70,
       'wrapper' => array (
         'width' => '33',
       ),
@@ -23,6 +23,7 @@ $fields = [
       'name' => 'card__body_copy',
       'key' => 'field_body_copy',
       'instructions' => '',
+      'maxlength' => 190,
       'required' => 1,
       'new_lines' => 'wpautop'
     ]),

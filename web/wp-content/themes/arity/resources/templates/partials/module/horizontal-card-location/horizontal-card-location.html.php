@@ -21,6 +21,12 @@ namespace App\Theme;
               <?php template('partials/element/image/image', array(
                 'id' => $data['image_id']
               )); ?>
+
+              <a href="<?= $data['link']; ?>" target="_blank" class="address__marker  colors__text--white" role="presentation" title="">
+                <svg class="icon-svg" title="" role="img"><use xlink:href="#map-marker"/></svg>
+                <br>
+                <span class="address__linktext"> <?= $data['location']; ?> </span>
+              </a>
             </div>
           <?php endif; ?>
           <div class="card__bottom">

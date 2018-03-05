@@ -7,7 +7,7 @@ $fields = [
     // Eyebrow
     acf_text([
       'label' => 'Eyebrow',
-      'name' => 'horizontal-card-split__eyebrow',
+      'name' => 'horizontal-card-location__eyebrow',
       'key' => 'field_eyebrow',
       'instructions' => '',
       'required' => 0,
@@ -20,7 +20,7 @@ $fields = [
     // Headline
     acf_text([
       'label' => 'Headline',
-      'name' => 'horizontal-card-split__headline',
+      'name' => 'horizontal-card-location__headline',
       'instructions' => '',
       'required' => 1,
       'maxlength' => '',
@@ -29,7 +29,7 @@ $fields = [
     // Textarea
     acf_textarea([
       'label' => 'Body Copy',
-      'name' => 'horizontal-card-split__body-copy',
+      'name' => 'horizontal-card-location__body-copy',
       'key' => 'field_body_copy',
       'instructions' => '',
       'required' => 0,
@@ -39,7 +39,7 @@ $fields = [
     // CTA
     acf_link([
       'label' => 'CTA Button',
-      'name' => 'horizontal-card-split__cta',
+      'name' => 'horizontal-card-location__cta',
       'key' => 'field_cta',
       'instructions' => '',
       'required' => 1,
@@ -48,10 +48,11 @@ $fields = [
       ),
     ]),
 
+
     // Image
     acf_image([
       'label' => 'Image',
-      'name' => 'horizontal-card-split__image_id',
+      'name' => 'horizontal-card-location__image_id',
       'key' => 'field_image',
       'return_format' => 'id',
       'instructions' => '',
@@ -62,11 +63,10 @@ $fields = [
       )
     ]),
 
-
     // Split Background Top
     acf_select([
       'label' => 'Background Color -- Top',
-      'name' => 'horizontal-card-split__bg-color_top',
+      'name' => 'horizontal-card-location__bg-color_top',
       'key' => 'field_bg-color_top',
       'instructions' => '',
       'required' => 0,
@@ -87,7 +87,7 @@ $fields = [
     // Split Background Top
     acf_select([
       'label' => 'Background Color -- Bottom',
-      'name' => 'horizontal-card-split__bg-color_bot',
+      'name' => 'horizontal-card-location__bg-color_bot',
       'key' => 'field_bg-color_bot',
       'instructions' => '',
       'required' => 0,
@@ -104,13 +104,37 @@ $fields = [
         '#011C2C' => 'Dark Blue'
       ]
     ]),
+
+    // Location Link
+    acf_text([
+      'label' => 'Location Link',
+      'name' => 'horizontal-card-location__link',
+      'instructions' => '',
+      'required' => 1,
+      'maxlength' => '',
+      'wrapper' => array (
+        'width' => '50',
+      )
+    ]),
+
+    // Location Link
+    acf_text([
+      'label' => 'Location Text',
+      'name' => 'horizontal-card-location__location',
+      'instructions' => '',
+      'required' => 1,
+      'maxlength' => '',
+      'wrapper' => array (
+        'width' => '50',
+      )
+    ]),
 ];
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Horizontal Card Split',
-    'name' => 'module__horizontal-card-split',
-    'key' => 'group_module_horizontal-card-split',
+    'title' => 'Module - Horizontal Card Location',
+    'name' => 'module__horizontal-card-location',
+    'key' => 'group_module_horizontal-card-location',
     'fields' => $fields,
     'location' => [
         [
