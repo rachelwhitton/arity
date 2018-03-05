@@ -7570,6 +7570,19 @@ img {
   color: #E2EF1C;
 }
 
+.hero-block a:hover {
+  color: #FFFFFF;
+}
+
+@media (hover: none) {
+  .hero-block a:hover {
+    color: #E2EF1C;
+  }
+  .hero-block a.active, .hero-block a:active {
+    color: #FFFFFF;
+  }
+}
+
 @media screen and (min-width: 480px) {
   .hero-block {
     padding: 55px 42px 25px;
@@ -8518,7 +8531,7 @@ form .email-only-button-group {
 
 .cookie-banner .cookie-banner__message a {
   font-weight: bold;
-  color: #0070D6;
+  color: #E2EF1C;
 }
 
 .cookie-banner .cookie-banner__message a:hover {
@@ -8527,7 +8540,7 @@ form .email-only-button-group {
 
 @media (hover: none) {
   .cookie-banner .cookie-banner__message a:hover {
-    color: #0070D6;
+    color: #E2EF1C;
   }
   .cookie-banner .cookie-banner__message a.active, .cookie-banner .cookie-banner__message a:active {
     color: #FFFFFF;
