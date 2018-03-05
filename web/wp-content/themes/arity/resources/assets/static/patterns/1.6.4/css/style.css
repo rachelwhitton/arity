@@ -7566,6 +7566,10 @@ img {
   padding: 120px 20px 34px;
 }
 
+.hero-block a {
+  color: #E2EF1C;
+}
+
 @media screen and (min-width: 480px) {
   .hero-block {
     padding: 55px 42px 25px;
