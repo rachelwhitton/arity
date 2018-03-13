@@ -4,6 +4,19 @@ namespace App\Theme;
 // ACF Fields
 $fields = [
 
+    // Eyebrow
+    acf_text([
+      'label' => 'Eyebrow',
+      'name' => 'promo-section__eyebrow',
+      'key' => 'field_eyebrow',
+      'instructions' => '',
+      'required' => 0,
+      'maxlength' => '',
+      'wrapper' => array (
+        'width' => '50',
+      )
+    ]),
+
     // Headline
     acf_text([
       'label' => 'Headline',
@@ -68,11 +81,11 @@ $fields = [
       'wrapper' => array (
         'width' => '25',
       ),
-      'default_value' => '#FFFFFF',
+      'default_value' => 'white',
       'choices' => [
-        '#FFFFFF' => 'White',
-        '#F7F7F7' => 'Light Gray',
-        '#011C2C' => 'Dark Blue'
+        'bg-white' => 'White',
+        'bg-gray' => 'Light Gray',
+        'bg-darkblue' => 'Dark Blue'
       ]
     ]),
 

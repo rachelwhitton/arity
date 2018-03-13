@@ -13,7 +13,7 @@ namespace App\Theme;
 
 ?>
 
-<div <?php module_class('promo-section'); ?> style="background-color:<?= $data['bkg_color']; ?>">
+<div <?php module_class($data['classes']); ?>>
   <div class="container">
     <div class="row">
       <?php if (!empty($data['image_id'])) : ?>
@@ -25,6 +25,13 @@ namespace App\Theme;
       <?php endif; ?>
       <div class="promo-section__col narrow--">
         <div class="promo-section__col-group">
+          <?php if(!empty($data['eyebrow'])) : ?>
+            <?php element('eyebrow', array(
+              'classes' => 'eyebrow',
+              'label' => $data['eyebrow']
+            )); ?>
+          <?php endif; ?>
+          
           <?php if (!empty($data['headline'])) : ?>
             <?php element('headline', array(
             'classes' => 'promo-section__title',
@@ -40,8 +47,7 @@ namespace App\Theme;
           <?php $data['cta']['analytics'] = $data['headline']; ?>
           <p>
             <?php element('button', array_merge($data['cta'], [
-              'classes' => 'button--primary promo-section__arrow-link' ,
-              'icon' => 'arrow-right'
+              'classes' => 'button--primary'
             ])); ?>
           </p>
           <?php endif; ?>
