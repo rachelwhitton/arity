@@ -188,7 +188,6 @@ $module_builder->includeACFSettings('vertical-cards-block', 'module');
 $module_builder->includeACFSettings('cards-block-split', 'module');
 $module_builder->includeACFSettings('highlights', 'module');
 $module_builder->includeACFSettings('horizontal-card-split', 'module');
-$module_builder->includeACFSettings('horizontal-card-location', 'module');
 $module_builder->includeACFSettings('module-header', 'module');
 $module_builder->includeACFSettings('career-list', 'module');
 $module_builder->includeACFSettings('action-bar', 'module');

@@ -17,10 +17,16 @@ namespace App\Theme;
   <div class="container">
     <div class="row">
       <?php if (!empty($data['image_id'])) : ?>
-        <div class="promo-section__col wide-- content-image-block__img-box">
+        <div class="promo-section__col wide-- promo-section__img-box">
           <?php element('image', [
             'id' => $data['image_id']
           ]); ?>
+
+          <?php if (!empty($data['location_toggle'])) : ?>
+          <a href="<?= $data['location-link']; ?>" target="_blank" class="address__block" role="presentation" title="">
+            <span class="address__linktext"> <?= $data['location']; ?> </span>
+          </a>
+          <?php endif; ?>
         </div>
       <?php endif; ?>
       <div class="promo-section__col narrow--">
@@ -31,7 +37,7 @@ namespace App\Theme;
               'label' => $data['eyebrow']
             )); ?>
           <?php endif; ?>
-          
+
           <?php if (!empty($data['headline'])) : ?>
             <?php element('headline', array(
             'classes' => 'promo-section__title',

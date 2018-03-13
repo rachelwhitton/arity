@@ -4,6 +4,11 @@ namespace App\Theme;
 // ACF Fields
 $fields = [
 
+    acf_tab([
+      'label' => 'Content',
+      'name' => 'promo-section__content_tab',
+    ]),
+
     // Eyebrow
     acf_text([
       'label' => 'Eyebrow',
@@ -87,6 +92,63 @@ $fields = [
         'bg-gray' => 'Light Gray',
         'bg-darkblue' => 'Dark Blue'
       ]
+    ]),
+
+     // Location Link
+    acf_text([
+      'label' => 'Location Link',
+      'name' => 'promo-section__location-link',
+      'instructions' => '',
+      'required' => 1,
+      'maxlength' => '',
+      'wrapper' => array (
+        'width' => '50',
+      ),
+      'conditional_logic' => [
+        [
+          [
+            'name' => 'promo-section__location_toggle',
+            'operator' => '==',
+            'value' => 1
+          ]
+        ]
+      ]
+    ]),
+
+    // Location Link
+    acf_text([
+      'label' => 'Location Text',
+      'name' => 'promo-section__location',
+      'instructions' => '',
+      'required' => 1,
+      'maxlength' => '',
+      'wrapper' => array (
+        'width' => '50',
+      ),
+      'conditional_logic' => [
+        [
+          [
+            'name' => 'promo-section__location_toggle',
+            'operator' => '==',
+            'value' => 1
+          ]
+        ]
+      ]
+    ]),
+
+    acf_tab([
+      'label' => 'Options',
+      'name' => 'promo-section__options_tab',
+    ]),
+
+    acf_true_false([
+      'label' => 'Toggle location block',
+      'name' => 'promo-section__location_toggle',
+      'key' => 'field_location_toggle',
+      'ui' => 1,
+      'message' => 'Enable location link block on image',
+      'ui_on_text' => 'On',
+      'ui_off_text' => 'Off'
     ]),
 
 ];
