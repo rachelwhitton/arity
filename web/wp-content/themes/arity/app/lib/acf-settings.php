@@ -182,6 +182,7 @@ $module_builder->includeACFSettings('page-footnote', 'module');
 $module_builder->includeACFSettings('promo', 'module');
 $module_builder->includeACFSettings('promo-strip', 'module');
 $module_builder->includeACFSettings('promo-section', 'module');
+$module_builder->includeACFSettings('location-section', 'module');
 $module_builder->includeACFSettings('two-column-contact', 'module');
 $module_builder->includeACFSettings('vertical-cards', 'module');
 $module_builder->includeACFSettings('vertical-cards-block', 'module');

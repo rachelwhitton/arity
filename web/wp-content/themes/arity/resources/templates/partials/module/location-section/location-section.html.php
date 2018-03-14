@@ -4,10 +4,10 @@ namespace App\Theme;
 ?>
 <?php
 /*
-  Template Name:      Promo Section
+  Template Name:      Location Section
   Template Type:      Module
-  Description:        Product or feature highlight ("River")
-  Last Updated:       02/28/2018
+  Description:        Location module (based off promo section)
+  Last Updated:       03/14/2018
   Since:              1.6.4
 */
 
@@ -16,15 +16,8 @@ namespace App\Theme;
 <div <?php module_class($data['classes']); ?>>
   <div class="container">
     <div class="row">
-      <?php if (!empty($data['image_id'])) : ?>
-        <div class="promo-section__col wide-- promo-section__img-box">
-          <?php element('image', [
-            'id' => $data['image_id']
-          ]); ?>
-        </div>
-      <?php endif; ?>
-      <div class="promo-section__col narrow--">
-        <div class="promo-section__col-group">
+      <div class="location-section__col narrow--">
+        <div class="location-section__col-group">
           <?php if(!empty($data['eyebrow'])) : ?>
             <?php element('eyebrow', array(
               'classes' => 'eyebrow',
@@ -34,7 +27,7 @@ namespace App\Theme;
 
           <?php if (!empty($data['headline'])) : ?>
             <?php element('headline', array(
-            'classes' => 'promo-section__title',
+            'classes' => 'location-section__title',
             'headline' => $data['headline']
           )); ?>
           <?php endif; ?>
@@ -45,14 +38,24 @@ namespace App\Theme;
           <?php endif; ?>
           <?php if (!empty($data['cta'])) : ?>
           <?php $data['cta']['analytics'] = $data['headline']; ?>
-          <p>
-            <?php element('button', array_merge($data['cta'], [
+          <?php element('button', array_merge($data['cta'], [
               'classes' => 'button--primary'
             ])); ?>
-          </p>
           <?php endif; ?>
         </div>
       </div>
+
+      <?php if (!empty($data['image_id'])) : ?>
+        <div class="location-section__col wide-- location-section__img-box">
+          <?php element('image', [
+            'id' => $data['image_id']
+          ]); ?>
+
+          <a href="<?= $data['location-link']; ?>" target="_blank" class="address__block" role="presentation" title="">
+            <span class="address__linktext"> <?= $data['location']; ?> </span>
+          </a>
+        </div>
+      <?php endif; ?>
     </div>
   </div>
 </div>

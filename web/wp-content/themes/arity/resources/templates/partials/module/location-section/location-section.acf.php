@@ -7,7 +7,7 @@ $fields = [
     // Eyebrow
     acf_text([
       'label' => 'Eyebrow',
-      'name' => 'promo-section__eyebrow',
+      'name' => 'location-section__eyebrow',
       'key' => 'field_eyebrow',
       'instructions' => '',
       'required' => 0,
@@ -20,7 +20,7 @@ $fields = [
     // Headline
     acf_text([
       'label' => 'Headline',
-      'name' => 'promo-section__headline',
+      'name' => 'location-section__headline',
       'key' => 'field_headline',
       'instructions' => '',
       'required' => 0,
@@ -33,7 +33,7 @@ $fields = [
     // Round Image
     acf_image([
       'label' => 'Image',
-      'name' => 'promo-section__image_id',
+      'name' => 'location-section__image_id',
       'key' => 'field_image',
       'return_format' => 'id',
       'instructions' => '',
@@ -47,7 +47,7 @@ $fields = [
     // Body Copy
     acf_textarea([
       'label' => 'Body Copy',
-      'name' => 'promo-section__body_copy',
+      'name' => 'location-section__body_copy',
       'key' => 'field_body_copy',
       'instructions' => '',
       'required' => 1,
@@ -60,7 +60,7 @@ $fields = [
     // CTA
     acf_link([
       'label' => 'CTA Button',
-      'name' => 'promo-section__cta',
+      'name' => 'location-section__cta',
       'key' => 'field_cta',
       'instructions' => '',
       'required' => 0,
@@ -71,7 +71,7 @@ $fields = [
 
     acf_select([
       'label' => 'Background Color',
-      'name' => 'promo-section__bkg_color',
+      'name' => 'location-section__bkg_color',
       'key' => 'field_bkg_color',
       'instructions' => '',
       'required' => 0,
@@ -89,13 +89,38 @@ $fields = [
       ]
     ]),
 
+     // Location Link
+    acf_text([
+      'label' => 'Location Link',
+      'name' => 'location-section__location-link',
+      'instructions' => '',
+      'required' => 1,
+      'maxlength' => '',
+      'wrapper' => array (
+        'width' => '50',
+      )
+    ]),
+
+    // Location Link
+    acf_text([
+      'label' => 'Location Text',
+      'name' => 'location-section__location',
+      'instructions' => '',
+      'required' => 1,
+      'maxlength' => '',
+      'wrapper' => array (
+        'width' => '50',
+      )
+    ]),
+
+
 ];
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Promo Section',
-    'name' => 'module__promo-section',
-    'key' => 'group_module_promo-section',
+    'title' => 'Module - Location Section',
+    'name' => 'module__location-section',
+    'key' => 'group_module_location-section',
     'fields' => $fields,
     'location' => [
         [
