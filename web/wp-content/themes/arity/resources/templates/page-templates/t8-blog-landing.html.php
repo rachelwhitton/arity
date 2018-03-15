@@ -80,6 +80,46 @@ wp_reset_postdata();
 <div class="container">
 
 <?php
+$promo_set = false;
+if (get_field('module__promo_area')) {
+  $promo_area = get_field('module__promo_area'); 
+  $promo = array(
+    'headline' => $promo_area[0]['promo__headline'],
+    'body_copy' => $promo_area[0]['promo__body_copy'],
+    'cta' => $promo_area[0]['promo__cta']
+  );
+  $promo_set = true;
+
+  add_action('pre_get_posts',function( $query ) {
+
+    if (!is_admin()) {
+      $ppp = get_option('posts_per_page');  // MAKE SURE TO SET THIS IN WP BACKEND TO 12
+      $offset = -1;
+      if (!$query->is_paged()) {
+        $query->set('posts_per_page',$offset + $ppp);
+      } else {
+        $offset = $offset + ( ($query->query_vars['paged']-1) * $ppp );
+        $query->set('posts_per_page',$ppp);
+        $query->set('offset',$offset);
+      }
+    }
+  });
+
+  add_filter( 'found_posts', function( $found_posts, $query ) {
+      if (!is_admin() ) {
+        if (!$query->is_paged()) {
+          $found_posts = $found_posts - 2;
+        } else {
+          $found_posts = $found_posts + 1;
+        }
+      }
+      return $found_posts;
+  }, 10, 2 );
+
+}
+?>
+
+<?php
 
 global $wp_query, $paged;
 
@@ -114,6 +154,14 @@ $wp_query = new \WP_Query( $args );
     <?php
       $rowCount++;
       //if ($rowCount % 3 == 0 && $rowCount != count($postlist) ) echo '</div><div class="row">';
+
+      if ($rowCount == 2 && $promo_set && $paged == 1) {
+        echo '<div class="blog-card__col">';
+        
+        module('promo', $promo);
+
+        echo '</div>';
+      }
 
       endwhile; // End of the loop.
     ?>
