@@ -5,7 +5,7 @@ namespace App\Theme;
 <div class="module blog-teaser">
 <div class="container">
   <div class="row">
-    <div class="blog-teaser__intro">
+    <div class="blog-teaser__intro anim-ready">
       <?php if (!empty($data['eyebrow'])) : ?>
         <?php element('eyebrow', array(
           'classes' => 'eyebrow',
