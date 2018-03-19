@@ -14,7 +14,7 @@ namespace App\Theme;
   <?php if (!empty($data['headline'])) : ?>
     <div class="container">
       <div class="row">
-        <div class="cards-block-split__header">
+        <div class="cards-block-split__header anim-ready">
           <?php if(!empty($data['eyebrow'])) : ?>
             <?php element('eyebrow', array(
               'classes' => 'eyebrow',
@@ -40,8 +40,10 @@ namespace App\Theme;
   <?php endif; ?>
   <div class="container">
     <div class="row">
+      <?php $count = 0; ?>
       <?php foreach ($data['cards'] as $card) : ?>
-        <div class="cards-block-split__col">
+        <?php $count++; ?>
+        <div class="cards-block-split__col anim-ready anim-block-<?php echo $count; ?>">
           <?php the_partial($card); ?>
         </div>
       <?php endforeach; ?>

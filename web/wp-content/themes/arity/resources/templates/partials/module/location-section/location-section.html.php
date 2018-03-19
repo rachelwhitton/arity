@@ -16,7 +16,7 @@ namespace App\Theme;
 <div <?php module_class($data['classes']); ?>>
   <div class="container">
     <div class="row">
-      <div class="location-section__col narrow--">
+      <div class="location-section__col anim-ready anim-block-1 narrow--">
         <div class="location-section__col-group">
           <?php if(!empty($data['eyebrow'])) : ?>
             <?php element('eyebrow', array(
@@ -46,7 +46,7 @@ namespace App\Theme;
       </div>
 
       <?php if (!empty($data['image_id'])) : ?>
-        <div class="location-section__col wide-- location-section__img-box">
+        <div class="location-section__col anim-ready anim-block-2 wide-- location-section__img-box">
           <?php element('image', [
             'id' => $data['image_id']
           ]); ?>
