@@ -170,6 +170,7 @@ $module_builder->includeACFSettings('contact-form-w-cta', 'module');
 $module_builder->includeACFSettings('contact-form', 'module');
 $module_builder->includeACFSettings('email-form', 'module');
 $module_builder->includeACFSettings('smart-city-form', 'module');
+$module_builder->includeACFSettings('generic-form-container', 'module');
 $module_builder->includeACFSettings('content-image-block', 'module');
 $module_builder->includeACFSettings('feature-solution-block', 'module');
 $module_builder->includeACFSettings('hero-a', 'module');
