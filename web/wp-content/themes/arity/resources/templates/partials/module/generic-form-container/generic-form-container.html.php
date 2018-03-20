@@ -1,6 +1,5 @@
 <?php
 namespace App\Theme;
-var_dump($data);
 ?>
 <?php
 /*
