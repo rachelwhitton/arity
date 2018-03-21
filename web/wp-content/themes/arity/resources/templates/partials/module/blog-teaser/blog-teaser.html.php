@@ -5,7 +5,7 @@ namespace App\Theme;
 <div class="module blog-teaser">
 <div class="container">
   <div class="row">
-    <div class="blog-teaser__intro">
+    <div class="blog-teaser__intro anim-ready">
       <?php if (!empty($data['eyebrow'])) : ?>
         <?php element('eyebrow', array(
           'classes' => 'eyebrow',
@@ -21,6 +21,7 @@ namespace App\Theme;
     </div>
   </div>
 
+<div class="row">
 
   <?php
     $page = get_page_by_path("blog");
@@ -39,9 +40,7 @@ namespace App\Theme;
           'post__not_in' => array($feature_id)
         );
 
-        echo '<div class="row">';
         component('teaser-blog-card');
-        echo '</div><!-- /row -->';
     }
   ?>
 
@@ -49,7 +48,6 @@ namespace App\Theme;
     $wp_query = new \WP_Query( $args );
   ?>
 
-  <div class="row">
     <?php if ( $wp_query->have_posts() ) : ?>
 
     <?php

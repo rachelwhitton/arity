@@ -3,7 +3,7 @@
 namespace App\Theme;
 ?>
 
-<div class="module teaser-blog-card">
+<div class="module teaser-blog-card anim-ready">
   <div class="row">
   <div class="teaser-blog-card__col">
     <div class="teaser-blog-card__inner">

@@ -14,7 +14,7 @@ namespace App\Theme;
   <?php if (!empty($data['headline'])) : ?>
     <div class="container">
       <div class="row">
-        <div class="highlights__header">
+        <div class="highlights__header anim-ready">
           <?php if(!empty($data['eyebrow'])) : ?>
             <?php element('eyebrow', array(
               'classes' => 'eyebrow',
@@ -44,6 +44,7 @@ namespace App\Theme;
         $blockCount = 0; 
         $classes = 'col-md-6';
         $break = 2;
+        $count = 0;
 
         foreach ( $data['highlight-block'] as $block ) {
           $blockCount++;
@@ -85,7 +86,8 @@ namespace App\Theme;
         }
       ?>
       <?php foreach ($data['highlight-block'] as $block) : ?>
-        <div class="highlights__col <?php echo $classes; ?>">
+        <?php $count++; ?>
+        <div class="highlights__col anim-ready anim-block-<?php echo $count; ?> <?php echo $classes; ?>">
           <?php the_partial($block); ?>
         </div>
       <?php endforeach; ?>
