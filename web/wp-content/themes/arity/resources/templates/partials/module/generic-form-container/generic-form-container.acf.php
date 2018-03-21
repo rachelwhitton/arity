@@ -40,7 +40,7 @@ $fields = [
       'layouts' => [
 
         [
-          'label' => 'Form Long',
+          'label' => 'Long Form',
           'name' => 'component__generic-form-long',
           'sub_fields' => [
             [
@@ -56,7 +56,7 @@ $fields = [
           ]
         ],
         [
-          'label' => 'Form Short',
+          'label' => 'Short Form',
           'name' => 'component__generic-form-short',
           'sub_fields' => [
             [
