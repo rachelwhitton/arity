@@ -92,7 +92,7 @@ namespace App\Theme;
 #loader li:nth-child(6) {
   top: 18px;
   animation: sequence6 10s ease-in-out infinite 3s;
-  background: url("../dots.png") repeat 16px -4px;
+  background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots.png") repeat 16px -4px;
   background-size: 116px;
 }
 /* #loader li:nth-child(7) {
@@ -102,7 +102,7 @@ namespace App\Theme;
 #loader li:nth-child(8) {
   top: 118px;
   animation: sequence8 10s ease-in-out infinite 4s;
-  background: url("../dots.png") repeat 16px -4px;
+  background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots.png") repeat 16px -4px;
   background-size: 116px;
 }
 /* #loader li:nth-child(9) {
@@ -133,7 +133,7 @@ namespace App\Theme;
   top: 418px;
   animation: sequence4 10s ease-in-out infinite 4.4s;
   background-color: rgba(118,134,147,0.2);
-  background: url("../dots.png") repeat 16px -4px;
+  background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots.png") repeat 16px -4px;
   background-size: 116px;
 }
 /* #loader li:nth-child(15) {
@@ -187,7 +187,7 @@ namespace App\Theme;
   top: 468px;
   width: 18px;
   animation: sequence4 10s ease-in-out infinite 8.6s;
-  background: url("../dots.png") repeat 16px -4px;
+  background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots.png") repeat 16px -4px;
   background-size: 116px;
 }
 /* #loader li:nth-child(25) {
@@ -208,7 +208,7 @@ namespace App\Theme;
   right: 0;
   top: 68px;
   animation: bsequence2 10s ease-in-out infinite 0.1s;
-  background: url("../dots.png") repeat 16px -4px;
+  background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots.png") repeat 16px -4px;
   background-size: 116px;
 }
 #loader li:nth-child(28) {
@@ -228,7 +228,7 @@ namespace App\Theme;
   right: 0;
   top: 468px;
   animation: bsequence1 10s ease-in-out infinite 1.5s;
-  background: url("../dots.png") repeat 16px -4px;
+  background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots.png") repeat 16px -4px;
   background-size: 116px;
 }
 
@@ -262,14 +262,14 @@ namespace App\Theme;
   right: 0;
   top: 218px;
   animation: bsequence2 10s ease-in-out infinite 1.6s;
-  background: url("../dots.png") repeat 16px -4px;
+  background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots.png") repeat 16px -4px;
   background-size: 116px;
 }
 
 /* #loader li:nth-child(36) {
   top: 18px;
   animation: bsequence7 10s ease-in-out infinite 8.7s;
-  background: url("../dots.png") repeat 16px -4px;
+  background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots.png") repeat 16px -4px;
   background-size: 116px;
 } */
 
@@ -287,14 +287,14 @@ namespace App\Theme;
   top: 468px;
   animation: bsequence2 10s ease-in-out infinite 5.7s;
   background-color: rgba(118,134,147,0.2);
-  background: url("../dots.png") repeat 16px -4px;
+  background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots.png") repeat 16px -4px;
   background-size: 116px;
 } */
 #loader li:nth-child(40) {
   top: 418px;
   animation: bsequence7 10s ease-in-out infinite 3s;
   background-color: rgba(118,134,147,0.2);
-  background: url("../dots.png") repeat 16px -4px;
+  background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots.png") repeat 16px -4px;
   background-size: 116px;
 }
 #loader li:nth-child(41) {
@@ -324,7 +324,7 @@ namespace App\Theme;
 /* #loader li:nth-child(46) {
   top: 618px;
   animation: sequence6 10s ease-in-out infinite 3s;
-  background: url("../dots.png") repeat 16px -4px;
+  background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots.png") repeat 16px -4px;
   background-size: 116px;
 }
 #loader li:nth-child(47) {
