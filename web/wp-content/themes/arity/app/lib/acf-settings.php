@@ -178,6 +178,7 @@ $module_builder->includeACFSettings('hero-a', 'module');
 $module_builder->includeACFSettings('hero-b', 'module');
 $module_builder->includeACFSettings('hero-c', 'module');
 $module_builder->includeACFSettings('hero-d', 'module');
+$module_builder->includeACFSettings('hero-g-test', 'module');
 $module_builder->includeACFSettings('horizontal-cards', 'module');
 $module_builder->includeACFSettings('lead-gen', 'module');
 $module_builder->includeACFSettings('page-footnote', 'module');
