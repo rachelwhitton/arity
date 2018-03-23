@@ -30,15 +30,6 @@ namespace App\Theme;
 
 <div class="email-form__form">
   <form action="<?= $data['form_url']; ?>" method="POST">
-    <?php if(!empty($data['is_salesforce'])) : ?>
-      <input type="hidden" name="oid" value="<?= $form_oid; ?>">
-      <input type="hidden" name="retURL" value="<?= $data['form_return_url']; ?>">
-      <input type="hidden" name="lead_source" value="Arity.com" id="lead_source" />
-
-      <select style="visibility:hidden" id="lead_source" name="lead_source">
-        <option selected value="Conference / Trade Show"/>
-      </select><br>
-    <?php endif; ?>
 
     <div class="form-group form-group-1 form-group--required">
       <label class="form-group-label" for="input_first_name">First name</label>
@@ -687,6 +678,16 @@ namespace App\Theme;
     <div class="btn-group">
       <button type="submit" class="button button--primary white-blue-button--">Submit</button>
     </div>
+
+    <?php if(!empty($data['is_salesforce'])) : ?>
+      <input type="hidden" name="oid" value="<?= $form_oid; ?>">
+      <input type="hidden" name="retURL" value="<?= $data['form_return_url']; ?>">
+      <input type="hidden" name="lead_source" value="Arity.com" id="lead_source" />
+
+      <select style="visibility:hidden" id="lead_source" name="lead_source">
+        <option selected value="Conference / Trade Show"/>
+      </select><br>
+    <?php endif; ?>
 
     <?php if(!empty($data['use_captcha'])) : ?>
       <div class="g-recaptcha" data-size="invisible" data-badge="inline"></div>
