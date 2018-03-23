@@ -4,34 +4,15 @@ namespace App\Theme;
 // ACF Fields
 $fields = [
 
-    // Headline
-    acf_text([
-        'label' => 'Headline',
-        'name' => 'generic-form-container__headline',
-        'key' => 'field_headline',
-        'instructions' => '',
-        'required' => 1,
-        'maxlength' => '',
-        'wrapper' => array (
-        'width' => '100',
-        ),
-    ]),
-
-    // Content
-    acf_wysiwyg([
-        'label' => 'Description',
-        'name' => 'generic-form-container__description',
-        'key' => 'field_content',
-        'instructions' => '',
-        'required' => 0,
-        'maxlength' => '',
-        'wrapper' => array (
-        'width' => '100',
-        ),
+    acf_message([
+      'label' => 'Headless Form Container',
+      'name' => 'headless-form-container__form_placeholder',
+      'key' => 'field_form_placeholder',
+      'message' => '',
     ]),
     acf_flexible_content([
       'label' => '',
-      'name' => 'generic-form-container__content',
+      'name' => 'headless-form-container__content',
       'key' => 'field_content',
       'instructions' => '',
       'required' => 0,
@@ -123,14 +104,13 @@ $fields = [
       ]
     ])
 
-
 ];
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Form Container',
-    'name' => 'module__generic-form-container',
-    'key' => 'group_module_generic-form-container',
+    'title' => 'Module - Headless Form Container',
+    'name' => 'module__headless-form-container',
+    'key' => 'group_module_headless-form-container',
     'fields' => $fields,
     'location' => [
         [
