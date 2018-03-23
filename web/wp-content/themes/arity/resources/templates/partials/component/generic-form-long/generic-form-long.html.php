@@ -28,7 +28,7 @@ namespace App\Theme;
 
 ?>
 
-<div class="email-form__form">
+<div class="contact-form__wrap">
   <form action="<?= $data['form_url']; ?>" method="POST">
 
     <div class="form-group form-group-1 form-group--required">
