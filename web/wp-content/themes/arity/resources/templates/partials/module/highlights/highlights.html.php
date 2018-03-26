@@ -43,7 +43,6 @@ namespace App\Theme;
       <?php 
         $blockCount = 0; 
         $classes = 'col-md-6';
-        $break = 2;
         $count = 0;
 
         foreach ( $data['highlight-block'] as $block ) {
@@ -53,35 +52,27 @@ namespace App\Theme;
         switch ($blockCount) {
           case 2:
             $classes = "col-md-6";
-            $break = 2;
             break;
           case 3: 
             $classes = "col-md-4";
-            $break = 3;
             break;
           case 4: 
             $classes = "col-md-6 col-lg-3";
-            $break = 4;
             break;
           case 5: 
             $classes = "col-md-4";
-            $break = 3;
             break;
           case 6: 
             $classes = "col-md-4";
-            $break = 3;
             break;
           case 7: 
             $classes = "col-md-6 col-lg-3";
-            $break = 3;
             break;
           case 8: 
             $classes = "col-md-4 col-lg-3";
-            $break = 3;
             break;
           default: 
             $classes = "col-md-6";
-            $break = 2;
             break;
         }
       ?>

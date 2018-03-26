@@ -40,10 +40,46 @@ namespace App\Theme;
   <?php endif; ?>
   <div class="container">
     <div class="row">
-      <?php $count = 0; ?>
+      <?php 
+        $blockCount = 0; 
+        $classes = 'col-md-6';
+        $count = 0;
+
+        foreach ( $data['cards'] as $card ) {
+          $blockCount++;
+        }
+
+        switch ($blockCount) {
+          case 2:
+            $classes = "col-lg-6";
+            break;
+          case 3: 
+            $classes = "col-lg-4";
+            break;
+          case 4: 
+            $classes = "col-lg-6";
+            break;
+          case 5: 
+            $classes = "col-lg-4";
+            break;
+          case 6: 
+            $classes = "col-lg-4";
+            break;
+          case 7: 
+            $classes = "col-lg-6";
+            break;
+          case 8: 
+            $classes = "col-lg-6";
+            break;
+          default: 
+            $classes = "col-lg-6";
+            break;
+        }
+      ?>
+
       <?php foreach ($data['cards'] as $card) : ?>
         <?php $count++; ?>
-        <div class="cards-block-split__col anim-ready anim-block-<?php echo $count; ?>">
+        <div class="cards-block-split__col anim-ready anim-block-<?php echo $count; ?> <?php echo $classes; ?>">
           <?php the_partial($card); ?>
         </div>
       <?php endforeach; ?>

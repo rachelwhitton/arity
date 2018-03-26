@@ -57,8 +57,8 @@ $fields = [
           ]
         ]
       ],
-      'min'         => 3,
-      'max'         => 3,
+      'min'         => 2,
+      'max'         => 8,
       'layout'      => 'block',
             'button_label'  => 'Add Card',
     ]),
