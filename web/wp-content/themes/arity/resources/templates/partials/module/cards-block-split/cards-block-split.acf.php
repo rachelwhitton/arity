@@ -108,7 +108,7 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Cards Block Split',
+    'title' => 'Module - Card Block Short',
     'name' => 'module__cards-block-split',
     'key' => 'group_module_cards-block-split',
     'fields' => $fields,
