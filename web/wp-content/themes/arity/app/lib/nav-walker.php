@@ -174,7 +174,7 @@ add_filter('nav_menu_css_class', function ($classes, $item, $args = array()) {
     $has_children = in_array('menu-item-has-children', $item->classes);
 
     // Set the blog to be active for wp 'posts'
-    if($item->post_name == 'blog' && isset( $post ) && $post->post_type == 'post') {
+    if($item->post_name == 'move' && isset( $post ) && $post->post_type == 'post') {
         $is_active = true;
     }
 
