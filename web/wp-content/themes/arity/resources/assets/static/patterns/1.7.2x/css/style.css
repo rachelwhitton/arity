@@ -1,6 +1,6 @@
 /**
  * arity-patterns - Pattern lab project for Arity's design system.
- * @version v1.7.2
+ * @version v1.7.1
  */
 @charset "UTF-8";
 /*!
@@ -9270,11 +9270,9 @@ form .email-only-button-group {
 }
 
 .page--blog .site-header.animate-in a .site-header__logo,
-.page--move .site-header.animate-in a .site-header__logo,
 .post .site-header.animate-in a .site-header__logo,
 .page--home-v2 .site-header.animate-in a .site-header__logo,
 .page--home-v3 .site-header.animate-in a .site-header__logo, .page--blog .site-header.drop-open a .site-header__logo,
-.page--move .site-header.drop-open a .site-header__logo,
 .post .site-header.drop-open a .site-header__logo,
 .page--home-v2 .site-header.drop-open a .site-header__logo,
 .page--home-v3 .site-header.drop-open a .site-header__logo {
@@ -9282,11 +9280,9 @@ form .email-only-button-group {
 }
 
 .page--blog .site-header.animate-in .navbar__nav a[role=menuitem],
-.page--move .site-header.animate-in .navbar__nav a[role=menuitem],
 .post .site-header.animate-in .navbar__nav a[role=menuitem],
 .page--home-v2 .site-header.animate-in .navbar__nav a[role=menuitem],
 .page--home-v3 .site-header.animate-in .navbar__nav a[role=menuitem], .page--blog .site-header.drop-open .navbar__nav a[role=menuitem],
-.page--move .site-header.drop-open .navbar__nav a[role=menuitem],
 .post .site-header.drop-open .navbar__nav a[role=menuitem],
 .page--home-v2 .site-header.drop-open .navbar__nav a[role=menuitem],
 .page--home-v3 .site-header.drop-open .navbar__nav a[role=menuitem] {
@@ -9294,11 +9290,9 @@ form .email-only-button-group {
 }
 
 .page--blog .site-header.animate-in .navbar__nav a[role=menuitem]:hover,
-.page--move .site-header.animate-in .navbar__nav a[role=menuitem]:hover,
 .post .site-header.animate-in .navbar__nav a[role=menuitem]:hover,
 .page--home-v2 .site-header.animate-in .navbar__nav a[role=menuitem]:hover,
 .page--home-v3 .site-header.animate-in .navbar__nav a[role=menuitem]:hover, .page--blog .site-header.drop-open .navbar__nav a[role=menuitem]:hover,
-.page--move .site-header.drop-open .navbar__nav a[role=menuitem]:hover,
 .post .site-header.drop-open .navbar__nav a[role=menuitem]:hover,
 .page--home-v2 .site-header.drop-open .navbar__nav a[role=menuitem]:hover,
 .page--home-v3 .site-header.drop-open .navbar__nav a[role=menuitem]:hover {
@@ -9306,9 +9300,6 @@ form .email-only-button-group {
 }
 
 .page--blog .site-header.animate-in .navbar__toggle__inner, .page--blog .site-header.animate-in .navbar__toggle__inner::before, .page--blog .site-header.animate-in .navbar__toggle__inner::after,
-.page--move .site-header.animate-in .navbar__toggle__inner,
-.page--move .site-header.animate-in .navbar__toggle__inner::before,
-.page--move .site-header.animate-in .navbar__toggle__inner::after,
 .post .site-header.animate-in .navbar__toggle__inner,
 .post .site-header.animate-in .navbar__toggle__inner::before,
 .post .site-header.animate-in .navbar__toggle__inner::after,
@@ -9318,9 +9309,6 @@ form .email-only-button-group {
 .page--home-v3 .site-header.animate-in .navbar__toggle__inner,
 .page--home-v3 .site-header.animate-in .navbar__toggle__inner::before,
 .page--home-v3 .site-header.animate-in .navbar__toggle__inner::after, .page--blog .site-header.drop-open .navbar__toggle__inner, .page--blog .site-header.drop-open .navbar__toggle__inner::before, .page--blog .site-header.drop-open .navbar__toggle__inner::after,
-.page--move .site-header.drop-open .navbar__toggle__inner,
-.page--move .site-header.drop-open .navbar__toggle__inner::before,
-.page--move .site-header.drop-open .navbar__toggle__inner::after,
 .post .site-header.drop-open .navbar__toggle__inner,
 .post .site-header.drop-open .navbar__toggle__inner::before,
 .post .site-header.drop-open .navbar__toggle__inner::after,
@@ -9334,12 +9322,9 @@ form .email-only-button-group {
 }
 
 .page--blog .site-header.animate-in .navbar__nav .menu-item-is-current > a,
-.page--move .site-header.animate-in .navbar__nav .menu-item-is-current > a,
 .post .site-header.animate-in .navbar__nav .menu-item-is-current > a,
 .page--home-v2 .site-header.animate-in .navbar__nav .menu-item-is-current > a,
 .page--home-v3 .site-header.animate-in .navbar__nav .menu-item-is-current > a, .page--blog
-.site-header.animate-in .navbar__nav .menu-item-is-parent > a,
-.page--move
 .site-header.animate-in .navbar__nav .menu-item-is-parent > a,
 .post
 .site-header.animate-in .navbar__nav .menu-item-is-parent > a,
@@ -9347,12 +9332,9 @@ form .email-only-button-group {
 .site-header.animate-in .navbar__nav .menu-item-is-parent > a,
 .page--home-v3
 .site-header.animate-in .navbar__nav .menu-item-is-parent > a, .page--blog .site-header.drop-open .navbar__nav .menu-item-is-current > a,
-.page--move .site-header.drop-open .navbar__nav .menu-item-is-current > a,
 .post .site-header.drop-open .navbar__nav .menu-item-is-current > a,
 .page--home-v2 .site-header.drop-open .navbar__nav .menu-item-is-current > a,
 .page--home-v3 .site-header.drop-open .navbar__nav .menu-item-is-current > a, .page--blog
-.site-header.drop-open .navbar__nav .menu-item-is-parent > a,
-.page--move
 .site-header.drop-open .navbar__nav .menu-item-is-parent > a,
 .post
 .site-header.drop-open .navbar__nav .menu-item-is-parent > a,
@@ -9364,11 +9346,9 @@ form .email-only-button-group {
 }
 
 .page--blog .site-header.animate-in .navbar__nav li.menu-get-in-touch a:hover,
-.page--move .site-header.animate-in .navbar__nav li.menu-get-in-touch a:hover,
 .post .site-header.animate-in .navbar__nav li.menu-get-in-touch a:hover,
 .page--home-v2 .site-header.animate-in .navbar__nav li.menu-get-in-touch a:hover,
 .page--home-v3 .site-header.animate-in .navbar__nav li.menu-get-in-touch a:hover, .page--blog .site-header.drop-open .navbar__nav li.menu-get-in-touch a:hover,
-.page--move .site-header.drop-open .navbar__nav li.menu-get-in-touch a:hover,
 .post .site-header.drop-open .navbar__nav li.menu-get-in-touch a:hover,
 .page--home-v2 .site-header.drop-open .navbar__nav li.menu-get-in-touch a:hover,
 .page--home-v3 .site-header.drop-open .navbar__nav li.menu-get-in-touch a:hover {
@@ -9379,11 +9359,9 @@ form .email-only-button-group {
 
 @media (hover: none) {
   .page--blog .site-header.animate-in .navbar__nav li.menu-get-in-touch a:hover,
-  .page--move .site-header.animate-in .navbar__nav li.menu-get-in-touch a:hover,
   .post .site-header.animate-in .navbar__nav li.menu-get-in-touch a:hover,
   .page--home-v2 .site-header.animate-in .navbar__nav li.menu-get-in-touch a:hover,
   .page--home-v3 .site-header.animate-in .navbar__nav li.menu-get-in-touch a:hover, .page--blog .site-header.drop-open .navbar__nav li.menu-get-in-touch a:hover,
-  .page--move .site-header.drop-open .navbar__nav li.menu-get-in-touch a:hover,
   .post .site-header.drop-open .navbar__nav li.menu-get-in-touch a:hover,
   .page--home-v2 .site-header.drop-open .navbar__nav li.menu-get-in-touch a:hover,
   .page--home-v3 .site-header.drop-open .navbar__nav li.menu-get-in-touch a:hover {
@@ -9392,16 +9370,12 @@ form .email-only-button-group {
     border: 2px solid #0070D6;
   }
   .page--blog .site-header.animate-in .navbar__nav li.menu-get-in-touch a.active, .page--blog .site-header.animate-in .navbar__nav li.menu-get-in-touch a:active,
-  .page--move .site-header.animate-in .navbar__nav li.menu-get-in-touch a.active,
-  .page--move .site-header.animate-in .navbar__nav li.menu-get-in-touch a:active,
   .post .site-header.animate-in .navbar__nav li.menu-get-in-touch a.active,
   .post .site-header.animate-in .navbar__nav li.menu-get-in-touch a:active,
   .page--home-v2 .site-header.animate-in .navbar__nav li.menu-get-in-touch a.active,
   .page--home-v2 .site-header.animate-in .navbar__nav li.menu-get-in-touch a:active,
   .page--home-v3 .site-header.animate-in .navbar__nav li.menu-get-in-touch a.active,
   .page--home-v3 .site-header.animate-in .navbar__nav li.menu-get-in-touch a:active, .page--blog .site-header.drop-open .navbar__nav li.menu-get-in-touch a.active, .page--blog .site-header.drop-open .navbar__nav li.menu-get-in-touch a:active,
-  .page--move .site-header.drop-open .navbar__nav li.menu-get-in-touch a.active,
-  .page--move .site-header.drop-open .navbar__nav li.menu-get-in-touch a:active,
   .post .site-header.drop-open .navbar__nav li.menu-get-in-touch a.active,
   .post .site-header.drop-open .navbar__nav li.menu-get-in-touch a:active,
   .page--home-v2 .site-header.drop-open .navbar__nav li.menu-get-in-touch a.active,
@@ -9415,7 +9389,6 @@ form .email-only-button-group {
 }
 
 .page--blog .site-header a .site-header__logo,
-.page--move .site-header a .site-header__logo,
 .post .site-header a .site-header__logo,
 .page--home-v2 .site-header a .site-header__logo,
 .page--home-v3 .site-header a .site-header__logo {
@@ -9524,14 +9497,12 @@ form .email-only-button-group {
 
 @media screen and (min-width: 961px) {
   .page--blog .site-header .navbar__nav a:hover,
-  .page--move .site-header .navbar__nav a:hover,
   .post .site-header .navbar__nav a:hover,
   .page--home-v2 .site-header .navbar__nav a:hover,
   .page--home-v3 .site-header .navbar__nav a:hover {
     color: #0070D6;
   }
   .page--blog .site-header .navbar__nav a:hover .icon-svg,
-  .page--move .site-header .navbar__nav a:hover .icon-svg,
   .post .site-header .navbar__nav a:hover .icon-svg,
   .page--home-v2 .site-header .navbar__nav a:hover .icon-svg,
   .page--home-v3 .site-header .navbar__nav a:hover .icon-svg {
@@ -9572,11 +9543,9 @@ form .email-only-button-group {
 
 @media screen and (min-width: 961px) {
   .page--blog .site-header .navbar__nav li.menu-item-is-current > a,
-  .page--move .site-header .navbar__nav li.menu-item-is-current > a,
   .post .site-header .navbar__nav li.menu-item-is-current > a,
   .page--home-v2 .site-header .navbar__nav li.menu-item-is-current > a,
   .page--home-v3 .site-header .navbar__nav li.menu-item-is-current > a, .page--blog .site-header .navbar__nav li.menu-item-is-parent > a,
-  .page--move .site-header .navbar__nav li.menu-item-is-parent > a,
   .post .site-header .navbar__nav li.menu-item-is-parent > a,
   .page--home-v2 .site-header .navbar__nav li.menu-item-is-parent > a,
   .page--home-v3 .site-header .navbar__nav li.menu-item-is-parent > a {
@@ -9590,21 +9559,18 @@ form .email-only-button-group {
 
 @media screen and (min-width: 961px) {
   .page--blog .site-header .navbar__nav a[role=menuitem],
-  .page--move .site-header .navbar__nav a[role=menuitem],
   .post .site-header .navbar__nav a[role=menuitem],
   .page--home-v2 .site-header .navbar__nav a[role=menuitem],
   .page--home-v3 .site-header .navbar__nav a[role=menuitem] {
     color: #011C2C;
   }
   .page--blog .site-header .navbar__nav a[role=menuitem]:hover,
-  .page--move .site-header .navbar__nav a[role=menuitem]:hover,
   .post .site-header .navbar__nav a[role=menuitem]:hover,
   .page--home-v2 .site-header .navbar__nav a[role=menuitem]:hover,
   .page--home-v3 .site-header .navbar__nav a[role=menuitem]:hover {
     color: #0070D6;
   }
   .page--blog .site-header .navbar__nav a[role=menuitem]:hover .icon-svg,
-  .page--move .site-header .navbar__nav a[role=menuitem]:hover .icon-svg,
   .post .site-header .navbar__nav a[role=menuitem]:hover .icon-svg,
   .page--home-v2 .site-header .navbar__nav a[role=menuitem]:hover .icon-svg,
   .page--home-v3 .site-header .navbar__nav a[role=menuitem]:hover .icon-svg {
@@ -9642,12 +9608,9 @@ form .email-only-button-group {
 }
 
 .page--blog .site-header .navbar__nav > li.menu-get-in-touch a,
-.page--move .site-header .navbar__nav > li.menu-get-in-touch a,
 .post .site-header .navbar__nav > li.menu-get-in-touch a,
 .page--home-v2 .site-header .navbar__nav > li.menu-get-in-touch a,
 .page--home-v3 .site-header .navbar__nav > li.menu-get-in-touch a, .page--blog
-.site-header .navbar__toolbar-bottom a,
-.page--move
 .site-header .navbar__toolbar-bottom a,
 .post
 .site-header .navbar__toolbar-bottom a,
@@ -9660,12 +9623,9 @@ form .email-only-button-group {
 }
 
 .page--blog .site-header .navbar__nav > li.menu-get-in-touch a:hover,
-.page--move .site-header .navbar__nav > li.menu-get-in-touch a:hover,
 .post .site-header .navbar__nav > li.menu-get-in-touch a:hover,
 .page--home-v2 .site-header .navbar__nav > li.menu-get-in-touch a:hover,
 .page--home-v3 .site-header .navbar__nav > li.menu-get-in-touch a:hover, .page--blog
-.site-header .navbar__toolbar-bottom a:hover,
-.page--move
 .site-header .navbar__toolbar-bottom a:hover,
 .post
 .site-header .navbar__toolbar-bottom a:hover,
@@ -9678,12 +9638,9 @@ form .email-only-button-group {
 
 @media (hover: none) {
   .page--blog .site-header .navbar__nav > li.menu-get-in-touch a:hover,
-  .page--move .site-header .navbar__nav > li.menu-get-in-touch a:hover,
   .post .site-header .navbar__nav > li.menu-get-in-touch a:hover,
   .page--home-v2 .site-header .navbar__nav > li.menu-get-in-touch a:hover,
   .page--home-v3 .site-header .navbar__nav > li.menu-get-in-touch a:hover, .page--blog
-  .site-header .navbar__toolbar-bottom a:hover,
-  .page--move
   .site-header .navbar__toolbar-bottom a:hover,
   .post
   .site-header .navbar__toolbar-bottom a:hover,
@@ -10278,9 +10235,6 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
 }
 
 .page--blog .site-header .navbar__toggle__inner, .page--blog .site-header .navbar__toggle__inner::before, .page--blog .site-header .navbar__toggle__inner::after,
-.page--move .site-header .navbar__toggle__inner,
-.page--move .site-header .navbar__toggle__inner::before,
-.page--move .site-header .navbar__toggle__inner::after,
 .post .site-header .navbar__toggle__inner,
 .post .site-header .navbar__toggle__inner::before,
 .post .site-header .navbar__toggle__inner::after,
@@ -10330,9 +10284,6 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
 }
 
 .page--blog .site-header .navbar__toggle.is-active .navbar__toggle__inner, .page--blog .site-header .navbar__toggle.is-active .navbar__toggle__inner::before, .page--blog .site-header .navbar__toggle.is-active .navbar__toggle__inner::after,
-.page--move .site-header .navbar__toggle.is-active .navbar__toggle__inner,
-.page--move .site-header .navbar__toggle.is-active .navbar__toggle__inner::before,
-.page--move .site-header .navbar__toggle.is-active .navbar__toggle__inner::after,
 .post .site-header .navbar__toggle.is-active .navbar__toggle__inner,
 .post .site-header .navbar__toggle.is-active .navbar__toggle__inner::before,
 .post .site-header .navbar__toggle.is-active .navbar__toggle__inner::after,
