@@ -24,7 +24,7 @@ namespace App\Theme;
 <div class="row">
 
   <?php
-    $page = get_page_by_path("blog");
+    $page = get_page_by_path("move");
     $feature_id = 0;
     $args = array(
       'posts_per_page' => 3

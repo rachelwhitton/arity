@@ -217,7 +217,7 @@ $wp_query = new \WP_Query( $args );
             ?>
         </select>
         of 
-        <a href="/blog/page/<?php echo $total; ?>"><?php echo $total; ?></a>
+        <a href="/move/page/<?php echo $total; ?>"><?php echo $total; ?></a>
       </div>
 
       <?php if( get_next_posts_link() ) : ?>
