@@ -19,10 +19,17 @@ namespace App\Theme;
 
 ?>
 
-<div class="contact-form__wrap">
+<div class="generic-form__wrap generic-form__form">
   <form action="<?= $data['form_url']; ?>" method="POST">
 
-    <div class="form-group form-group-3 form-group--required">
+    <div class="form-group form-group-1 form-group--required">
+      <label class="form-group-label" for="input_first_name">First name</label>
+      <input type="text" class="form-control" name="first_name" id="input_first_name" placeholder="" required>
+      <div class="form-control-feedback" data-error="required">Please enter first name</div>
+      <div class="form-control-feedback" data-error="invalid">Please enter a valid name</div>
+    </div>
+
+    <div class="form-group form-group-2 form-group--required">
       <label class="form-group-label" for="input_last_name">Last name</label>
       <input type="text" class="form-control" name="last_name" id="input_last_name" placeholder="" required>
       <div class="form-control-feedback" data-error="required">Please enter last name</div>

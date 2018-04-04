@@ -28,7 +28,7 @@ namespace App\Theme;
 
 ?>
 
-<div class="contact-form__wrap">
+<div class="generic-form__wrap generic-form__form">
   <form action="<?= $data['form_url']; ?>" method="POST">
 
     <div class="form-group form-group-1 form-group--required">
@@ -670,8 +670,8 @@ namespace App\Theme;
         <option value="Insurance">Insurance</option>
         <option value="OEM">OEM</option>
         <option value="Shared Mobility">Shared Mobility</option>
-        <option value="Other">Other</option>
         <option value="Smart Cities">Smart Cities</option>
+        <option value="Other">Other</option>
       </select>
     </div>
 
