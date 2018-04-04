@@ -60,15 +60,15 @@ $author = [];
                     <?php echo $author['display_image'] =  get_avatar( get_the_author_meta( 'ID' ) , 245 ); ?>
                 </div>
                 <div class="blog-post__author-info">
-                  <span class="author-name"><?php the_author(); ?> </span>    
-                   
+                  <span class="author-name"><?php the_author(); ?> </span>
+
                   <?php if(get_the_author_meta('twitter')) : ?>
 
                     <a class="author-twitter" href="https://twitter.com/<?php the_author_meta('twitter'); ?>">@<?php the_author_meta('twitter'); ?></a>
 
                   <?php endif; ?>
-                  
-                  <?php if(get_the_author_meta('twitter')) : ?>
+
+                  <?php if(get_the_author_meta('user_description')) : ?>
                     <div class="author-description">
                     <?php
                       echo $author['description'] = get_the_author_meta( 'user_description' );
@@ -77,7 +77,7 @@ $author = [];
                   <?php endif; ?>
                 </div>
               </div>
-              
+
             </div>
           </div>
         </div>
