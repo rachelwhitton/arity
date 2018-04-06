@@ -15,7 +15,7 @@ if(empty($data['h_el'])) {
 }
 
 // Classes
-$data['classes'][] = 'hero-a';
+$data['classes'][] = 'hero-a anim-ready';
 
 if (empty($data['image_id'])) {
   $data['classes'][] = 'hero-a--wo-image';

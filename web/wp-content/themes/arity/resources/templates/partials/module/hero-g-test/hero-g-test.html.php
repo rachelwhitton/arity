@@ -61,6 +61,8 @@ namespace App\Theme;
   background-color: rgba(118,134,147,0.05);
   /* bottom: 0; */
   border-radius: 18px;
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation-fill-mode: forwards;
 }
 
 .right li {
@@ -68,305 +70,180 @@ namespace App\Theme;
   right: 0;
 }
 
-#loader li:nth-child(1) {
-  top: 18px;
-  animation: sequence1 10s ease-in-out infinite 1s;
+.animate #loader li:nth-child(1) {
+  top: 518px;
+  animation: sequence1 4s ease-in-out 1 1s;
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation-fill-mode: forwards;
 }
-/* #loader li:nth-child(2) {
-  top: 68px;
-  animation: sequence2 10s ease-in-out infinite 1.4s;
-} */
-/* #loader li:nth-child(3) {
-  top: 118px;
-  animation: sequence3 10s ease-in-out infinite 1.8s;
-} */
-#loader li:nth-child(4) {
+
+.animate #loader li:nth-child(2) {
   top: 168px;
-  animation: sequence4 10s ease-in-out infinite 2.2s;
+  animation: sequence4 4s ease-in-out 1 2.2s;
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation-fill-mode: forwards;
 }
-/* #loader li:nth-child(5) {
-  top: 218px;
-  animation: sequence5 10s ease-in-out infinite 2.4s;
-} */
 
-#loader li:nth-child(6) {
-  top: 18px;
-  animation: sequence6 10s ease-in-out infinite 3s;
+.animate #loader li:nth-child(3) {
+  top: 518px;
+  animation: sequence6 4s ease-in-out 1 1s;
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation-fill-mode: forwards;
   background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots.png") repeat 16px -4px;
   background-size: 116px;
 }
-/* #loader li:nth-child(7) {
-  top: 68px;
-  animation: sequence7 10s ease-in-out infinite 2s;
-} */
-#loader li:nth-child(8) {
+
+.animate #loader li:nth-child(4) {
   top: 118px;
-  animation: sequence8 10s ease-in-out infinite 4s;
+  animation: sequence8 4s ease-in-out 1 2s;
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation-fill-mode: forwards;
   background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots.png") repeat 16px -4px;
   background-size: 116px;
 }
-/* #loader li:nth-child(9) {
-  top: 168px;
-  animation: sequence9 10s ease-in-out infinite 2s;
-} */
-#loader li:nth-child(10) {
+
+.animate #loader li:nth-child(5) {
   top: 218px;
-  animation: sequence10 10s ease-in-out infinite 3s;
+  animation: sequence10 4s ease-in-out 1 3s;
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation-fill-mode: forwards;
 }
 
-#loader li:nth-child(11) {
+.animate #loader li:nth-child(6) {
   top: 268px;
-  animation: sequence1 10s ease-in-out infinite 1.1s;
+  animation: sequence1 4s ease-in-out 1 1.1s;
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation-fill-mode: forwards;
   background-color: rgba(118,134,147,0.2);
 }
-/* #loader li:nth-child(12) {
-  top: 68px;
-  animation: sequence2 10s ease-in-out infinite 0.8s;
-  background-color: rgba(118,134,147,0.2);
-} */
-/* #loader li:nth-child(13) {
-  top: 468px;
-  animation: sequence3 10s ease-in-out infinite 0.5s;
-  background-color: rgba(118,134,147,0.2);
-} */
-#loader li:nth-child(14) {
+
+.animate #loader li:nth-child(7) {
   top: 418px;
-  animation: sequence4 10s ease-in-out infinite 4.4s;
+  animation: sequence4 4s ease-in-out 1 2.4s;
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation-fill-mode: forwards;
   background-color: rgba(118,134,147,0.2);
   background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots.png") repeat 16px -4px;
   background-size: 116px;
 }
-/* #loader li:nth-child(15) {
-  top: 418px;
-  animation: sequence5 10s ease-in-out infinite 1.4s;
-  background-color: rgba(118,134,147,0.2);
-} */
 
-#loader li:nth-child(16) {
+
+.animate #loader li:nth-child(8) {
   top: 268px;
-  animation: sequence6 10s ease-in-out 3s;
+  animation: sequence6 4s ease-in-out 1 3s;
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation-fill-mode: forwards;
   background-color: rgba(118,134,147,0.2);
 }
-#loader li:nth-child(17) {
+.animate #loader li:nth-child(9) {
   top: 368px;
-  animation: sequence7 10s ease-in-out 5.1s;
+  animation: sequence7 4s ease-in-out 1 1.1s;
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation-fill-mode: forwards;
   background-color: rgba(118,134,147,0.2);
 }
-/* #loader li:nth-child(18) {
-  top: 168px;
-  animation: sequence8 10s ease-in-out 7.8s;
-  background-color: rgba(118,134,147,0.2);
-} */
-#loader li:nth-child(19) {
-  top: 318px;
-  animation: sequence9 10s ease-in-out 1.4s;
-  background-color: rgba(118,134,147,0.2);
-}
-/* #loader li:nth-child(20) {
-  top: 318px;
-  animation: sequence10 10s ease-in-out 6.2s;
-  background-color: rgba(118,134,147,0.2);
-} */
 
-#loader li:nth-child(21) {
-  top: 18px;
-  width: 18px;
-  animation: sequence1 10s ease-in-out infinite 3.3s;
+.animate #loader li:nth-child(10) {
+  top: 318px;
+  animation: sequence9 4s ease-in-out 1 1.4s;
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation-fill-mode: forwards;
+  background-color: rgba(118,134,147,0.2);
 }
-/* #loader li:nth-child(22) {
-  top: 368px;
+
+
+.animate #loader li:nth-child(11) {
+  top: 518px;
   width: 18px;
-  animation: sequence2 10s ease-in-out infinite 6.1s;
-} */
-#loader li:nth-child(23) {
+  animation: sequence1 4s ease-in-out 1 3.3s;
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation-fill-mode: forwards;
+}
+
+.animate #loader li:nth-child(12) {
   top: 118px;
   width: 18px;
-  animation: sequence3 10s ease-in-out infinite 7.4s;
+  animation: sequence3 4s ease-in-out 1 2.4s;
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation-fill-mode: forwards;
 }
-#loader li:nth-child(24) {
-  top: 468px;
+.animate #loader li:nth-child(13) {
+  top: 518px;
   width: 18px;
-  animation: sequence4 10s ease-in-out infinite 8.6s;
+  animation: sequence4 4s ease-in-out 1 3.6s;
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation-fill-mode: forwards;
   background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots.png") repeat 16px -4px;
   background-size: 116px;
 }
-/* #loader li:nth-child(25) {
-  top: 218px;
-  width: 18px;
-  animation: sequence5 10s ease-in-out infinite 9.7s;
-} */
 
 
-#loader li:nth-child(26) {
+.animate #loader li:nth-child(14) {
   left: auto;
   right: 0;
-  top: 18px;
-  animation: bsequence1 10s ease-in-out infinite 1s;
+  top: 518px;
+  animation: bsequence1 4s ease-in-out 1 1s;
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation-fill-mode: forwards;
 }
-/* #loader li:nth-child(27) {
-  left: auto;
-  right: 0;
-  top: 68px;
-  animation: bsequence2 10s ease-in-out infinite 0.1s;
-  background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots.png") repeat 16px -4px;
-  background-size: 116px;
-}
-#loader li:nth-child(28) {
-  left: auto;
-  right: 0;
-  top: 118px;
-  animation: bsequence7 10s ease-in-out infinite 0.6s;
-} */
-/* #loader li:nth-child(29) {
-  left: auto;
-  right: 0;
-  top: 168px;
-  animation: bsequence8 10s ease-in-out infinite 1s;
-} */
-#loader li:nth-child(30) {
+
+.animate #loader li:nth-child(15) {
   left: auto;
   right: 0;
   top: 468px;
-  animation: bsequence1 10s ease-in-out infinite 1.5s;
+  animation: bsequence2 4s ease-in-out 1 1.5s;
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation-fill-mode: forwards;
   background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots.png") repeat 16px -4px;
   background-size: 116px;
 }
 
 
-#loader li:nth-child(31) {
+.animate #loader li:nth-child(16) {
   left: auto;
   right: 0;
-  top: 18px;
-  animation: bsequence2 10s ease-in-out infinite 2s;
+  top: 518px;
+  animation: bsequence2 4s ease-in-out 1 2s;
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation-fill-mode: forwards;
 }
-/* #loader li:nth-child(32) {
-  left: auto;
-  right: 0;
-  top: 68px;
-  animation: bsequence7 10s ease-in-out infinite 2.2s;
-} */
-#loader li:nth-child(33) {
+
+.animate #loader li:nth-child(17) {
   left: auto;
   right: 0;
   top: 118px;
-  animation: bsequence8 10s ease-in-out infinite 1.3s;
+  animation: bsequence8 4s ease-in-out 1 1.3s;
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation-fill-mode: forwards;
 }
-/* #loader li:nth-child(34) {
-  left: auto;
-  right: 0;
-  top: 168px;
-  animation: bsequence1 10s ease-in-out infinite 1.5s;
-} */
-#loader li:nth-child(35) {
+
+.animate #loader li:nth-child(18) {
   left: auto;
   right: 0;
   top: 218px;
-  animation: bsequence2 10s ease-in-out infinite 1.6s;
+  animation: bsequence2 4s ease-in-out 1 1.6s;
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation-fill-mode: forwards;
   background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots.png") repeat 16px -4px;
   background-size: 116px;
 }
 
-/* #loader li:nth-child(36) {
-  top: 18px;
-  animation: bsequence7 10s ease-in-out infinite 8.7s;
-  background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots.png") repeat 16px -4px;
-  background-size: 116px;
-} */
 
-#loader li:nth-child(37) {
+
+.animate #loader li:nth-child(19) {
   top: 268px;
-  animation: bsequence8 10s ease-in-out infinite 7.8s;
+  animation: bsequence8 4s ease-in-out 1 2.8s;
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation-fill-mode: forwards;
   background-color: rgba(118,134,147,0.2);
 }
-#loader li:nth-child(38) {
+.animate #loader li:nth-child(20) {
   top: 468px;
-  animation: bsequence1 10s ease-in-out infinite 6.5s;
+  animation: bsequence1 4s ease-in-out 1 1.5s;
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation-fill-mode: forwards;
   background-color: rgba(118,134,147,0.2);
 }
-/* #loader li:nth-child(39) {
-  top: 468px;
-  animation: bsequence2 10s ease-in-out infinite 5.7s;
-  background-color: rgba(118,134,147,0.2);
-  background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots.png") repeat 16px -4px;
-  background-size: 116px;
-} */
-#loader li:nth-child(40) {
-  top: 418px;
-  animation: bsequence7 10s ease-in-out infinite 3s;
-  background-color: rgba(118,134,147,0.2);
-  background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots.png") repeat 16px -4px;
-  background-size: 116px;
-}
-#loader li:nth-child(41) {
-  top: 418px;
-  animation: bsequence8 10s ease-in-out infinite 2.3s;
-  background-color: rgba(118,134,147,0.2);
-}
-/*  */
-
-/* #loader li:nth-child(42) {
-  top: 468px;
-  animation: sequence2 10s ease-in-out infinite 1.4s;
-} */
-#loader li:nth-child(43) {
-  top: 518px;
-  animation: sequence3 10s ease-in-out infinite 1.8s;
-}
-/* #loader li:nth-child(44) {
-  top: 568px;
-  animation: sequence4 10s ease-in-out infinite 2.2s;
-} */
-#loader li:nth-child(45) {
-  top: 618px;
-  animation: sequence5 10s ease-in-out infinite 2.4s;
-}
-
-/* #loader li:nth-child(46) {
-  top: 618px;
-  animation: sequence6 10s ease-in-out infinite 3s;
-  background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots.png") repeat 16px -4px;
-  background-size: 116px;
-}
-#loader li:nth-child(47) {
-  top: 468px;
-  animation: sequence7 10s ease-in-out infinite 2s;
-} */
-#loader li:nth-child(48) {
-  top: 518px;
-  animation: sequence8 10s ease-in-out infinite 4s;
-}
-#loader li:nth-child(49) {
-  top: 568px;
-  animation: sequence9 10s ease-in-out infinite 2s;
-}
-/* #loader li:nth-child(50) {
-  top: 518px;
-  animation: sequence10 10s ease-in-out infinite 3s;
-} */
-
-#loader li:nth-child(51) {
-  top: 418px;
-  animation: sequence9 10s ease-in-out 3s;
-  background-color: rgba(118,134,147,0.2);
-}
-
-#loader li:nth-child(51) {
-  top: 618px;
-  animation: sequence4 10s ease-in-out 4s;
-  background-color: rgba(118,134,147,0.2);
-}
-
-/* #loader li:nth-child(53) {
-  top: 518px;
-  animation: sequence9 10s ease-in-out 5s;
-  background-color: rgba(118,134,147,0.2);
-} */
-
-/* #loader li {
-  left: 800px !important;
-  right: auto !important;
-  width: 120px !important;
-} */
 
 
   @keyframes sequence1 {
@@ -374,16 +251,8 @@ namespace App\Theme;
     left: 0%;
     width: 46px;
   }
-  40%{
-    left: 20%;
-    width: 46px;
-  }
-  60%{
-    left: 90%;
-    width: 46px;
-  }
-  100% {
-    left: 130%;
+  100%{
+    left: 30%;
     width: 46px;
   }
 }
@@ -393,16 +262,8 @@ namespace App\Theme;
     right: 0%;
     width: 46px;
   }
-  40%{
-    right: 20%;
-    width: 46px;
-  }
-  60%{
+  100%{
     right: 40%;
-    width: 46px;
-  }
-  100% {
-    right: 130%;
     width: 46px;
   }
 }
@@ -412,16 +273,8 @@ namespace App\Theme;
     left: 0%;
     width: 122px;
   }
-  25% {
-    left: 10%;
-    width: 122px;
-  }
-  75% {
-    left: 40%;
-    width: 122px;
-  }
   100% {
-    left: 130%;
+    left: 40%;
     width: 122px;
   }
 }
@@ -431,16 +284,8 @@ namespace App\Theme;
     left: 0%;
     width: 60px;
   }
-  25% {
-    left: 40%;
-    width: 60px;
-  }
-  75% {
-    left: 50%;
-    width: 60px;
-  }
   100% {
-    left: 130%;
+    left: 50%;
     width: 60px;
   }
 }
@@ -450,13 +295,9 @@ namespace App\Theme;
     left: 0%;
     width: 80px;
   }
-  50% {
+  100% {
     left: 30%;
     width: 80px;
-  }
-  100% {
-    width: 80px;
-    left: 130%;
   }
 }
 @keyframes sequence4 {
@@ -464,13 +305,9 @@ namespace App\Theme;
     left: 0%;
     width: 150px;
   }
-  50% {
-    left:85%;
-    width: 150px;
-  }
   100% {
+    left:25%;
     width: 150px;
-    left: 130%;
   }
 }
 @keyframes sequence5 {
@@ -478,12 +315,8 @@ namespace App\Theme;
     left: 0%;
     width: 18px;
   }
-  50% {
-    left: 80%;
-    width: 18px;
-  }
   100% {
-    left: 130%;
+    left: 80%;
     width: 18px;
   }
 }
@@ -493,16 +326,8 @@ namespace App\Theme;
     left: 0%;
     width: 60px;
   }
-  40%{
-    left: 10%;
-    width: 60px;
-  }
-  60%{
+  100%{
     left: 55%;
-    width: 60px;
-  }
-  100% {
-    left: 130%;
     width: 60px;
   }
 }
@@ -512,15 +337,8 @@ namespace App\Theme;
     right: 0%;
     width: 42px;
   }
-  40%{
-    right: 10%;
-  }
-  60%{
+  100%{
     right: 45%;
-  }
-  100% {
-    right: 130%;
-    width: 42px;
   }
 }
 
@@ -529,16 +347,8 @@ namespace App\Theme;
     left: 0%;
     width: 122px;
   }
-  25% {
-    left: 15%;
-    width: 122px;
-  }
-  75% {
-    left: 48%;
-    width: 122px;
-  }
   100% {
-    left: 130%;
+    left: 48%;
     width: 122px;
   }
 }
@@ -548,16 +358,8 @@ namespace App\Theme;
     left: 0%;
     width: 122px;
   }
-  25% {
-    left: 28%;
-    width: 122px;
-  }
-  75% {
-    left: 55%;
-    width: 122px;
-  }
   100% {
-    left: 130%;
+    left: 55%;
     width: 122px;
   }
 }
@@ -567,13 +369,9 @@ namespace App\Theme;
     left: 0%;
     width: 42px;
   }
-  50% {
+  100% {
     left: 33%;
     width: 42px;
-  }
-  100% {
-    width: 42px;
-    left: 130%;
   }
 }
 @keyframes sequence9 {
@@ -581,13 +379,9 @@ namespace App\Theme;
     left: 0%;
     width: 100px;
   }
-  50% {
+  100% {
     left:64%;
     width: 100px;
-  }
-  100% {
-    width: 100px;
-    left: 130%;
   }
 }
 @keyframes sequence10 {
@@ -595,12 +389,8 @@ namespace App\Theme;
     left: 0%;
     width: 18px;
   }
-  50% {
-    left: 72%;
-    width: 18px;
-  }
   100% {
-    left: 130%;
+    left: 72%;
     width: 18px;
   }
 }
@@ -608,42 +398,6 @@ namespace App\Theme;
   </style>
   <div id="loader">
   <ul>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-
     <li></li>
     <li></li>
     <li></li>
