@@ -15,10 +15,15 @@ namespace App\Theme;
 <div <?php module_class($data['classes']); ?>>
   <style>
 
-  .hero-a {
-    position: relative;
-    background-image: none !important;
-  }
+#loader {
+  display: none;
+}
+
+.hero-a {
+  position: relative;
+  background-image: none !important;
+}
+  @media screen and (min-width: 481px) {
 
   .hero-a__col.left-- {
    background-image: -webkit-linear-gradient(left, rgba(238,238,238,0.00) 0%, #f7f7f7 20%, #f7f7f7 25%, rgba(255,255,255,0.00) 90%);
@@ -27,6 +32,7 @@ namespace App\Theme;
   }
 
 #loader {
+  display: block;
   position: relative;
   position: absolute;
   height: 650px;
@@ -61,8 +67,10 @@ namespace App\Theme;
 
 
 .animate #loader li:nth-child(1) {
-  top: 518px;
-  animation: sequence1 1.7s ease 1 0s;
+  top: 468px;
+  left: auto;
+  right: 0;
+  animation: bsequence2 1.7s ease 1 0s;
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
 }
@@ -79,17 +87,19 @@ namespace App\Theme;
   animation: sequence11 1.7s ease 1 0s;
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
-  background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots.png") repeat 16px -4px;
+  background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
   background-size: 116px;
+  opacity: 0.8;
 }
 
 .animate #loader li:nth-child(4) {
-  top: 118px;
+  top: 68px;
   animation: sequence8 1.7s ease 1 1s;
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
-  background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots.png") repeat 16px -4px;
+  background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
   background-size: 116px;
+  opacity: 0.8;
 }
 
 .animate #loader li:nth-child(5) {
@@ -105,6 +115,7 @@ namespace App\Theme;
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
   background-color: rgba(118,134,147,0.2);
+  display: none;
 }
 
 .animate #loader li:nth-child(7) {
@@ -113,8 +124,9 @@ namespace App\Theme;
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
   background-color: rgba(118,134,147,0.2);
-  background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots.png") repeat 16px -4px;
+  background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
   background-size: 116px;
+  opacity: 0.8;
 }
 
 
@@ -124,13 +136,27 @@ namespace App\Theme;
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
   background-color: rgba(118,134,147,0.2);
+  background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
+  background-size: 116px;
+  opacity: 0.8;
 }
 .animate #loader li:nth-child(9) {
-  top: 368px;
+  /* top: 368px;
   animation: sequence7 1.7s ease 1 0.1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  background-color: rgba(118,134,147,0.2); */
+
+  top: 268px;
+  animation: sequence15 1.7s ease 1 0.1s;
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
   background-color: rgba(118,134,147,0.2);
+  background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
+  background-size: 116px;
+  opacity: 0.8;
+  transform: translateX(50px);
+  display: none;
 }
 
 .animate #loader li:nth-child(10) {
@@ -151,7 +177,7 @@ namespace App\Theme;
 }
 
 .animate #loader li:nth-child(12) {
-  top: 118px;
+  top: 68px;
   width: 18px;
   animation: sequence3 1.7s ease 1 0.8s;
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
@@ -163,8 +189,9 @@ namespace App\Theme;
   animation: sequence4 1.7s ease 1 0.6s;
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
-  background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots.png") repeat 16px -4px;
+  background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
   background-size: 116px;
+  opacity: 0.8;
 }
 
 
@@ -184,8 +211,9 @@ namespace App\Theme;
   animation: sequence7 1.7s ease 1 0.5s;
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
-  background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots.png") repeat 16px -4px;
-  background-size: 116px;
+  /* background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
+  background-size: 116px; */
+  opacity: 0.8;
 }
 
 
@@ -214,8 +242,9 @@ namespace App\Theme;
   animation: bsequence2 1.7s ease 1 0.6s;
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
-  background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots.png") repeat 16px -4px;
+  background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
   background-size: 116px;
+  opacity: 0.8;
 }
 
 .animate #loader li:nth-child(19) {
@@ -251,15 +280,17 @@ namespace App\Theme;
   opacity: 0 !important; */
 }
 
+}
+
 
 @keyframes sequence1 {
   0% {
     left: 10%;
-    width: 46px;
+    /* width: 46px; */
   }
   100%{
     left: 30%;
-    width: 46px;
+    /* width: 46px; */
     opacity: 1;
   }
 }
@@ -267,11 +298,11 @@ namespace App\Theme;
 @keyframes bsequence1 {
   0% {
     right: 25%;
-    width: 46px;
+    width: 80px;
   }
   100%{
     right: 52%;
-    width: 46px;
+    width: 80px;
     opacity: 1;
   }
 }
@@ -363,7 +394,7 @@ namespace App\Theme;
     width: 18px;
   }
   100% {
-    left: 48%;
+    left: 49%;
     width: 18px;
     opacity: 1;
   }
@@ -384,11 +415,11 @@ namespace App\Theme;
 @keyframes sequence8 {
   0% {
     left: 10%;
-    width: 45px;
+    width: 95px;
   }
   100% {
     left: 33%;
-    width: 45px;
+    width: 95px;
     opacity: 1;
   }
 }
@@ -483,6 +514,18 @@ namespace App\Theme;
     left: 90%;
     width: 100px;
     opacity: 1;
+  }
+}
+
+@keyframes sequence15 {
+  0% {
+    left: 72%;
+    width: 118px;
+  }
+  100% {
+    left: 79%;
+    opacity: 1;
+    width: 118px;
   }
 }
 
