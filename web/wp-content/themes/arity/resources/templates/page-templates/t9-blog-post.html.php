@@ -19,7 +19,7 @@ $author = [];
 <?php get_header(); ?>
 
 <?php do_action('theme/before_content') ?>
-<div class="site-content">
+<div id="main" class="site-content">
   <div class="container">
     <div class="blog-post newco-insights-category-<?php echo strtolower($category_name) ?>">
       <?php /* Start the Loop */

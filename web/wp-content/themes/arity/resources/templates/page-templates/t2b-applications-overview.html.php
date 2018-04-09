@@ -17,7 +17,7 @@ $hero = get_field('module__hero-a');
 <?php get_header(); ?>
 
 <?php do_action('theme/before_content') ?>
-<div class="site-content">
+<div id="main" class="site-content">
   <?php module('hero-a', $hero); ?>
   <?php the_acf_content(); ?>
 </div>

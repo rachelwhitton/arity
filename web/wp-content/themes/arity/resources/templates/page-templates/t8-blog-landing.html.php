@@ -15,7 +15,7 @@ namespace App\Theme;
 <?php get_header(); ?>
 
 <?php do_action('theme/before_content') ?>
-<div class="site-content">
+<div id="main" class="site-content">
 
   <div class="blog-header">
     <h1><?php echo get_the_title(); ?></h1>
