@@ -56,7 +56,6 @@ namespace App\Theme;
   left: 0;
   top: 0;
   opacity: 0;
-
 }
 
 .right li {
@@ -84,27 +83,25 @@ namespace App\Theme;
 
 .animate #loader li:nth-child(3) {
   top: 518px;
-  animation: sequence11 1.7s ease 1 0s;
+  animation: sequence11 1.7s ease-in 1 0s;
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
   background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
   background-size: 116px;
-  opacity: 0.8;
 }
 
 .animate #loader li:nth-child(4) {
   top: 68px;
-  animation: sequence8 1.7s ease 1 1s;
+  animation: sequence8 1.7s ease-in-out 1 1s;
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
   background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
   background-size: 116px;
-  opacity: 0.8;
 }
 
 .animate #loader li:nth-child(5) {
   top: 218px;
-  animation: sequence10 1.7s ease 1 0.5s;
+  animation: sequence10 1.7s ease-out 1 0.5s;
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
 }
@@ -126,7 +123,6 @@ namespace App\Theme;
   background-color: rgba(118,134,147,0.2);
   background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
   background-size: 116px;
-  opacity: 0.8;
 }
 
 
@@ -138,7 +134,6 @@ namespace App\Theme;
   background-color: rgba(118,134,147,0.2);
   background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
   background-size: 116px;
-  opacity: 0.8;
 }
 .animate #loader li:nth-child(9) {
   /* top: 368px;
@@ -154,7 +149,6 @@ namespace App\Theme;
   background-color: rgba(118,134,147,0.2);
   background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
   background-size: 116px;
-  opacity: 0.8;
   transform: translateX(50px);
   display: none;
 }
@@ -191,7 +185,6 @@ namespace App\Theme;
   animation-fill-mode: forwards;
   background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
   background-size: 116px;
-  opacity: 0.8;
 }
 
 
@@ -208,12 +201,11 @@ namespace App\Theme;
   /* left: auto;
   right: 0; */
   top: 468px;
-  animation: sequence7 1.7s ease 1 0.5s;
+  animation: sequence7 1.7s ease-in 1 0.5s;
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
   /* background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
   background-size: 116px; */
-  opacity: 0.8;
 }
 
 
@@ -244,7 +236,6 @@ namespace App\Theme;
   animation-fill-mode: forwards;
   background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
   background-size: 116px;
-  opacity: 0.8;
 }
 
 .animate #loader li:nth-child(19) {
@@ -287,6 +278,7 @@ namespace App\Theme;
   0% {
     left: 10%;
     /* width: 46px; */
+    opacity: 0;
   }
   100%{
     left: 30%;
@@ -297,8 +289,14 @@ namespace App\Theme;
 
 @keyframes bsequence1 {
   0% {
-    right: 25%;
+    right: 40%;
     width: 80px;
+    opacity: 0;
+  }
+  50% {
+    right: 50%;
+    width: 80px;
+    opacity: 1;
   }
   100%{
     right: 52%;
@@ -311,6 +309,7 @@ namespace App\Theme;
   0% {
     left: 30%;
     width: 122px;
+    opacity: 0;
   }
   100% {
     left: 40%;
@@ -323,6 +322,7 @@ namespace App\Theme;
   0% {
     right: 50%;
     width: 60px;
+    opacity: 0;
   }
   100% {
     right: 88%;
@@ -335,6 +335,7 @@ namespace App\Theme;
   0% {
     left: 10%;
     width: 80px;
+    opacity: 0;
   }
   100% {
     left: 30%;
@@ -346,6 +347,7 @@ namespace App\Theme;
   0% {
     left: 8%;
     width: 150px;
+    opacity: 0;
   }
   100% {
     left: 18%;
@@ -357,6 +359,7 @@ namespace App\Theme;
   0% {
     left: 30%;
     width: 18px;
+    opacity: 0;
   }
   100% {
     left: 80%;
@@ -369,6 +372,7 @@ namespace App\Theme;
   0% {
     left: 35%;
     width: 60px;
+    opacity: 0;
   }
   100%{
     left: 55%;
@@ -381,6 +385,7 @@ namespace App\Theme;
   0% {
     right: 10%;
     width: 42px;
+    opacity: 0;
   }
   100%{
     right: 45%;
@@ -392,6 +397,12 @@ namespace App\Theme;
   0% {
     left: 30%;
     width: 18px;
+    opacity: 0;
+  }
+  50% {
+    left: 35%;
+    width: 18px;
+    opacity: 1;
   }
   100% {
     left: 49%;
@@ -404,6 +415,7 @@ namespace App\Theme;
   0% {
     right: -10%;
     width: 122px;
+    opacity: 0;
   }
   100% {
     right: 15%;
@@ -416,17 +428,24 @@ namespace App\Theme;
   0% {
     left: 10%;
     width: 95px;
+    opacity: 0;
+  }
+  50% {
+    left: 20%;
+    width: 95px;
   }
   100% {
     left: 33%;
     width: 95px;
     opacity: 1;
+
   }
 }
 @keyframes sequence9 {
   0% {
     left: 85%;
     width: 100px;
+    opacity: 0;
   }
   100% {
     left: 95%;
@@ -438,6 +457,7 @@ namespace App\Theme;
   0% {
     right: 85%;
     width: 100px;
+    opacity: 0;
   }
   100% {
     right: 95%;
@@ -449,6 +469,12 @@ namespace App\Theme;
   0% {
     left: -10%;
     width: 18px;
+    opacity: 0;
+  }
+  50% {
+    left: 15%;
+    width: 18px;
+    opacity: 1;
   }
   100% {
     left: 16%;
@@ -461,6 +487,12 @@ namespace App\Theme;
   0% {
     left: 60%;
     width: 60px;
+    opacity: 0;
+  }
+  80%{
+    left: 75%;
+    width: 60px;
+    opacity: 1;
   }
   100%{
     left: 85%;
@@ -473,6 +505,7 @@ namespace App\Theme;
   0% {
     right: -10%;
     width: 46px;
+    opacity: 0;
   }
   100%{
     right: 10%;
@@ -485,6 +518,7 @@ namespace App\Theme;
   0% {
     left: 65%;
     width: 60px;
+    opacity: 0;
   }
   100% {
     left: 80%;
@@ -497,6 +531,7 @@ namespace App\Theme;
   0% {
     right: 65%;
     width: 60px;
+    opacity: 0;
   }
   100% {
     right: 80%;
@@ -509,6 +544,7 @@ namespace App\Theme;
   0% {
     left: 80%;
     width: 100px;
+    opacity: 0;
   }
   100% {
     left: 90%;
@@ -521,6 +557,7 @@ namespace App\Theme;
   0% {
     left: 72%;
     width: 118px;
+    opacity: 0;
   }
   100% {
     left: 79%;
