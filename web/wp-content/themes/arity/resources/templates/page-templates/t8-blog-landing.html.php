@@ -50,7 +50,7 @@ namespace App\Theme;
 
     <div class="feature-card__inner">
       <div class="blog-card__cat">
-        <a href="/insights/category/<?php echo strtolower($category_name) ?>"><?php echo $category_name ?></a>
+        <span><?php echo $category_name; ?></span>
       </div>
       <a class="blog-card__link" href="<?php echo get_permalink(); ?>">
         <?php the_title('<h1 class="feature-card__title">','</h1>'); ?>
