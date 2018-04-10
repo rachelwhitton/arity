@@ -270,11 +270,11 @@ add_filter('nav_menu_link_attributes', function ($atts, $item, $args = array()) 
     $atts['role'] = 'menuitem';
 
     // Change tabindex
-    if(empty($item->is_first)) {
-        $atts['tabindex'] = '-1';
-    } else {
-        $atts['tabindex'] = '0';
-    }
+    // if(empty($item->is_first)) {
+    //     $atts['tabindex'] = '-1';
+    // } else {
+    //     $atts['tabindex'] = '0';
+    // }
 
     // Change tabindex
     if($item->current) {
