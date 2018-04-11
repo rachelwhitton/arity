@@ -43,7 +43,7 @@ function register_stylesheets()
 
     wp_enqueue_style('arity', $arity, null, $arity_version);
     wp_enqueue_style('main', asset_path('css/main.css'), array('arity'), config('version'));
-    wp_enqueue_style('roboto', 'https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i', false );
+    wp_enqueue_style('roboto', 'https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i', false );
 }
 add_action('wp_enqueue_scripts', __namespace__ . '\\register_stylesheets');
 // add_action( 'get_footer', __namespace__ . '\\register_stylesheets');
