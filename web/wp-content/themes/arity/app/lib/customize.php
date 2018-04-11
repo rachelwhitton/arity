@@ -65,7 +65,7 @@ add_action('after_setup_theme', function () {
     /**
      * Set custom permalink structure.
      */
-    add_theme_support('plate-permalink', 'blog/%postname%/');
+    add_theme_support('plate-permalink', 'move/%postname%/');
 
     /**
      * Remove meta boxes in post editor.

@@ -19,7 +19,7 @@ $author = [];
 <?php get_header(); ?>
 
 <?php do_action('theme/before_content') ?>
-<div class="site-content">
+<div id="main" class="site-content">
   <div class="container">
     <div class="blog-post newco-insights-category-<?php echo strtolower($category_name) ?>">
       <?php /* Start the Loop */
@@ -37,7 +37,7 @@ $author = [];
           <div class="row">
             <div class="blog-post__inner">
               <div class="blog-post__cat">
-                <a href="/insights/category/<?php echo strtolower($category_name) ?>"><?php echo $category_name ?></a>
+                <span><?php echo $category_name ?></span>
               </div>
               <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
               <div class="blog-post__stats"><?php the_author(); echo ' &middot; '; the_date('F Y', '<span class="date">', '</span>'); ?> &middot; <?= do_shortcode('[ttr]'); ?></em>
@@ -60,15 +60,15 @@ $author = [];
                     <?php echo $author['display_image'] =  get_avatar( get_the_author_meta( 'ID' ) , 245 ); ?>
                 </div>
                 <div class="blog-post__author-info">
-                  <span class="author-name"><?php the_author(); ?> </span>    
-                   
+                  <span class="author-name"><?php the_author(); ?> </span>
+
                   <?php if(get_the_author_meta('twitter')) : ?>
 
                     <a class="author-twitter" href="https://twitter.com/<?php the_author_meta('twitter'); ?>">@<?php the_author_meta('twitter'); ?></a>
 
                   <?php endif; ?>
-                  
-                  <?php if(get_the_author_meta('twitter')) : ?>
+
+                  <?php if(get_the_author_meta('user_description')) : ?>
                     <div class="author-description">
                     <?php
                       echo $author['description'] = get_the_author_meta( 'user_description' );
@@ -77,7 +77,7 @@ $author = [];
                   <?php endif; ?>
                 </div>
               </div>
-              
+
             </div>
           </div>
         </div>

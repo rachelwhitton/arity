@@ -15,7 +15,7 @@ namespace App\Theme;
 <?php get_header(); ?>
 
 <?php do_action('theme/before_content') ?>
-<div class="site-content">
+<div id="main" class="site-content">
 
   <div class="blog-header">
     <h1><?php echo get_the_title(); ?></h1>
@@ -50,7 +50,7 @@ namespace App\Theme;
 
     <div class="feature-card__inner">
       <div class="blog-card__cat">
-        <a href="/insights/category/<?php echo strtolower($category_name) ?>"><?php echo $category_name ?></a>
+        <span><?php echo $category_name; ?></span>
       </div>
       <a class="blog-card__link" href="<?php echo get_permalink(); ?>">
         <?php the_title('<h1 class="feature-card__title">','</h1>'); ?>
@@ -78,6 +78,46 @@ wp_reset_postdata();
 ?>
 
 <div class="container">
+
+<?php
+$promo_set = false;
+if (get_field('module__promo_area')) {
+  $promo_area = get_field('module__promo_area'); 
+  $promo = array(
+    'headline' => $promo_area[0]['promo__headline'],
+    'body_copy' => $promo_area[0]['promo__body_copy'],
+    'cta' => $promo_area[0]['promo__cta']
+  );
+  $promo_set = true;
+
+  add_action('pre_get_posts',function( $query ) {
+
+    if (!is_admin()) {
+      $ppp = get_option('posts_per_page');  // MAKE SURE TO SET THIS IN WP BACKEND TO 12
+      $offset = -1;
+      if (!$query->is_paged()) {
+        $query->set('posts_per_page',$offset + $ppp);
+      } else {
+        $offset = $offset + ( ($query->query_vars['paged']-1) * $ppp );
+        $query->set('posts_per_page',$ppp);
+        $query->set('offset',$offset);
+      }
+    }
+  });
+
+  add_filter( 'found_posts', function( $found_posts, $query ) {
+      if (!is_admin() ) {
+        if (!$query->is_paged()) {
+          $found_posts = $found_posts - 2;
+        } else {
+          $found_posts = $found_posts + 1;
+        }
+      }
+      return $found_posts;
+  }, 10, 2 );
+
+}
+?>
 
 <?php
 
@@ -114,6 +154,14 @@ $wp_query = new \WP_Query( $args );
     <?php
       $rowCount++;
       //if ($rowCount % 3 == 0 && $rowCount != count($postlist) ) echo '</div><div class="row">';
+
+      if ($rowCount == 2 && $promo_set && $paged == 1) {
+        echo '<div class="blog-card__col">';
+        
+        module('promo', $promo);
+
+        echo '</div>';
+      }
 
       endwhile; // End of the loop.
     ?>
@@ -169,7 +217,7 @@ $wp_query = new \WP_Query( $args );
             ?>
         </select>
         of 
-        <a href="/blog/page/<?php echo $total; ?>"><?php echo $total; ?></a>
+        <a href="/move/page/<?php echo $total; ?>"><?php echo $total; ?></a>
       </div>
 
       <?php if( get_next_posts_link() ) : ?>
