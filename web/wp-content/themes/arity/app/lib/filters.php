@@ -931,7 +931,7 @@ add_filter('theme/before_wpfooter', function() {
           <div class="modal-body--left">
             <div class="align-vertical-middle">
               <h2>Thanks!</h2>
-              <p>Thank you for getting in touch.</p>
+              <!-- <p>Thank you for getting in touch.</p> -->
             </div>
           </div>
         <div class="modal-body--right">
