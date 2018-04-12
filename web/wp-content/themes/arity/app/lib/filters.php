@@ -910,11 +910,16 @@ add_filter('theme/before_wpfooter', function() {
 
     global $post;
 
-    if(empty($post) || empty($post->post_name) || !in_array($post->post_name, ['contact','smart-cities','mobility-planning'])) {
+    // if(empty($post) || empty($post->post_name) || !in_array($post->post_name, ['contact','smart-cities','mobility-planning'])) {
+    //     return;
+    // }
+
+    if(empty($post) || empty($post->post_name)) {
         return;
     }
 
     $home_url = home_url('/');
+    $url = get_permalink($post->ID);
 
     echo <<<EOD
 <div id="thankyou_modal" class="modal" role="dialog">
@@ -926,12 +931,16 @@ add_filter('theme/before_wpfooter', function() {
           <div class="modal-body--left">
             <div class="align-vertical-middle">
               <h2>Thanks!</h2>
+              <p>Thank you for getting in touch.</p>
             </div>
           </div>
         <div class="modal-body--right">
-          <p>Your request has been submitted and someone will get back to you shortly.</p>
-          <a href="$home_url" class="ar-element button button--primary blue-button--">
+          <p>Your request has been submitted and an Arity employee will be in touch soon.</p>
+          <!-- <a href="$home_url" class="ar-element button button--primary blue-button--">
             <span class="button__label">Return to homepage</span>
+          </a> -->
+          <a href="$url" class="ar-element button button--primary blue-button--">
+            <span class="button__label">Ok</span>
           </a>
         </div>
       </div>

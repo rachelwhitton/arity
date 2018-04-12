@@ -69,21 +69,21 @@ namespace App\Theme;
   top: 468px;
   left: auto;
   right: 0;
-  animation: bsequence2 1.7s ease 1 0s;
+  animation: bsequence2 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0s;
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
 }
 
 .animate #loader li:nth-child(2) {
   top: 168px;
-  animation: sequence4 1.7s ease 1 0.8s;
+  animation: sequence4 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0.8s;
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
 }
 
 .animate #loader li:nth-child(3) {
   top: 518px;
-  animation: sequence11 1.7s ease-in 1 0s;
+  animation: sequence11 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0s;
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
   background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
@@ -92,7 +92,8 @@ namespace App\Theme;
 
 .animate #loader li:nth-child(4) {
   top: 68px;
-  animation: sequence8 1.7s ease-in-out 1 1s;
+  animation: sequence8 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 1.5s;
+  /* animation: sequence8 1.4s cubic-bezier(1, 0.27, 0.25, 1) 1 1s; */
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
   background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
@@ -101,23 +102,22 @@ namespace App\Theme;
 
 .animate #loader li:nth-child(5) {
   top: 218px;
-  animation: sequence10 1.7s ease-out 1 0.5s;
+  animation: sequence10 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0.5s;
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
 }
 
 .animate #loader li:nth-child(6) {
-  top: 268px;
-  animation: sequence12 1.7s ease 1 0.1s;
+  top: 318px;
+  animation: sequence12 1.4s cubic-bezier(1, 0.27, 0.25, 1) 1 1s;
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
   background-color: rgba(118,134,147,0.2);
-  display: none;
 }
 
 .animate #loader li:nth-child(7) {
   top: 418px;
-  animation: sequence14 1.7s ease 1 1s;
+  animation: sequence14 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 1s;
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
   background-color: rgba(118,134,147,0.2);
@@ -127,8 +127,8 @@ namespace App\Theme;
 
 
 .animate #loader li:nth-child(8) {
-  top: 268px;
-  animation: sequence6 1.7s ease 1 0.8s;
+  top: 318px;
+  animation: sequence6 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0.8s;
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
   background-color: rgba(118,134,147,0.2);
@@ -137,13 +137,13 @@ namespace App\Theme;
 }
 .animate #loader li:nth-child(9) {
   /* top: 368px;
-  animation: sequence7 1.7s ease 1 0.1s;
+  animation: sequence7 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0.1s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   background-color: rgba(118,134,147,0.2); */
 
   top: 268px;
-  animation: sequence15 1.7s ease 1 0.1s;
+  animation: sequence15 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0.1s;
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
   background-color: rgba(118,134,147,0.2);
@@ -155,7 +155,7 @@ namespace App\Theme;
 
 .animate #loader li:nth-child(10) {
   top: 318px;
-  animation: sequence9 1.7s ease 1 0.4s;
+  animation: sequence9 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0.4s;
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
   background-color: rgba(118,134,147,0.2);
@@ -165,7 +165,7 @@ namespace App\Theme;
 .animate #loader li:nth-child(11) {
   top: 518px;
   width: 18px;
-  animation: sequence1 1.7s ease 1 0.3s;
+  animation: sequence1 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0.3s;
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
 }
@@ -173,14 +173,14 @@ namespace App\Theme;
 .animate #loader li:nth-child(12) {
   top: 68px;
   width: 18px;
-  animation: sequence3 1.7s ease 1 0.8s;
+  animation: sequence3 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0.8s;
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
 }
 .animate #loader li:nth-child(13) {
   top: 518px;
   width: 18px;
-  animation: sequence4 1.7s ease 1 0.6s;
+  animation: sequence4 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0.6s;
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
   background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
@@ -192,7 +192,7 @@ namespace App\Theme;
   left: auto;
   right: 0;
   top: 518px;
-  animation: bsequence11 1.7s ease 1 0s;
+  animation: bsequence11 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0s;
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
 }
@@ -201,7 +201,7 @@ namespace App\Theme;
   /* left: auto;
   right: 0; */
   top: 468px;
-  animation: sequence7 1.7s ease-in 1 0.5s;
+  animation: sequence7 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0.5s;
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
   /* background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
@@ -213,7 +213,7 @@ namespace App\Theme;
   left: auto;
   right: 0;
   top: 518px;
-  animation: bsequence12 1.7s ease 1 1s;
+  animation: bsequence12 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 1s;
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
 }
@@ -222,7 +222,7 @@ namespace App\Theme;
   left: auto;
   right: 0;
   top: 118px;
-  animation: bsequence8 1.7s ease 1 0.3s;
+  animation: bsequence8 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0.3s;
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
 }
@@ -231,7 +231,7 @@ namespace App\Theme;
   left: auto;
   right: 0;
   top: 218px;
-  animation: bsequence2 1.7s ease 1 0.6s;
+  animation: bsequence2 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0.6s;
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
   background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
@@ -242,7 +242,7 @@ namespace App\Theme;
   top: 268px;
   left: auto;
   right: 0;
-  animation: bsequence9 1.7s ease 1 0.8s;
+  animation: bsequence9 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0.8s;
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
   background-color: rgba(118,134,147,0.2);
@@ -251,21 +251,21 @@ namespace App\Theme;
   top: 468px;
   left: auto;
   right: 0;
-  animation: bsequence1 1.7s ease 1 0.5s;
+  animation: bsequence1 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0.5s;
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
   background-color: rgba(118,134,147,0.2);
 }
 
 .booyah #loader li {
-  animation: rsequence1 3s ease 1 0s !important;
+  animation: rsequence1 3s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0s !important;
   /* transform: translateX(-100px);
   transition: all 0.3s;
   opacity: 0 !important; */
 }
 
 .booyah .right li {
-  animation: rsequence2 3s ease 1 0s !important;
+  animation: rsequence2 3s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0s !important;
   /* transform: translateX(100px);
   transition: all 3s;
   opacity: 0 !important; */
@@ -293,11 +293,11 @@ namespace App\Theme;
     width: 80px;
     opacity: 0;
   }
-  50% {
+  /* 50% {
     right: 50%;
     width: 80px;
     opacity: 1;
-  }
+  } */
   100%{
     right: 52%;
     width: 80px;
@@ -399,11 +399,11 @@ namespace App\Theme;
     width: 18px;
     opacity: 0;
   }
-  50% {
+  /* 50% {
     left: 35%;
     width: 18px;
     opacity: 1;
-  }
+  } */
   100% {
     left: 49%;
     width: 18px;
@@ -426,14 +426,14 @@ namespace App\Theme;
 
 @keyframes sequence8 {
   0% {
-    left: 10%;
+    left: 20%;
     width: 95px;
     opacity: 0;
   }
-  50% {
+  /* 50% {
     left: 20%;
     width: 95px;
-  }
+  } */
   100% {
     left: 33%;
     width: 95px;
@@ -489,11 +489,11 @@ namespace App\Theme;
     width: 60px;
     opacity: 0;
   }
-  80%{
+  /* 80%{
     left: 75%;
     width: 60px;
     opacity: 1;
-  }
+  } */
   100%{
     left: 85%;
     width: 60px;
@@ -516,14 +516,14 @@ namespace App\Theme;
 
 @keyframes sequence12 {
   0% {
-    left: 65%;
-    width: 60px;
+    left: 70%;
+    width: 18px;
     opacity: 0;
   }
   100% {
-    left: 80%;
-    width: 60px;
-    opacity: 1;
+    left: 60%;
+    width: 18px;
+    opacity: 0.5;
   }
 }
 
