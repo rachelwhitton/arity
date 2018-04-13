@@ -15601,63 +15601,6 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   margin: 0;
 }
 
-.page-footnote {
-  margin-bottom: 10px;
-  font-size: 12px;
-  line-height: 1.25;
-  color: #63727E;
-  font-style: italic;
-}
-
-.page-footnote__content {
-  position: relative;
-  width: 100%;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
-  max-width: 100%;
-}
-
-@media (min-width: 480px) {
-  .page-footnote__content {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
-
-@media (min-width: 768px) {
-  .page-footnote__content {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
-
-@media (min-width: 961px) {
-  .page-footnote__content {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .page-footnote__content {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .page-footnote__content {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 62.5%;
-            flex: 0 0 62.5%;
-    max-width: 62.5%;
-  }
-}
-
 .career-list {
   margin-top: 55px;
 }
