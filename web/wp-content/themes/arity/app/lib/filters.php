@@ -665,7 +665,7 @@ add_filter('body_class', function (array $classes, array $class=array()) {
         $classes = array();
         $classes[] = 'template--error404';
     }
-    
+
     if ( is_user_logged_in() )
 		$classes[] = 'logged-in';
 
@@ -910,10 +910,6 @@ add_filter('theme/before_wpfooter', function() {
 
     global $post;
 
-    // if(empty($post) || empty($post->post_name) || !in_array($post->post_name, ['contact','smart-cities','mobility-planning'])) {
-    //     return;
-    // }
-
     if(empty($post) || empty($post->post_name)) {
         return;
     }
@@ -921,40 +917,66 @@ add_filter('theme/before_wpfooter', function() {
     $home_url = home_url('/');
     $url = get_permalink($post->ID);
 
-    echo <<<EOD
-<div id="thankyou_modal" class="modal" role="dialog">
-  <div class="modal-dialog modal-lg">
+    if(!in_array($post->post_name, ['contact','smart-cities','mobility-planning'])) {
+echo <<<EOD
+      <div id="thankyou_modal" class="modal" role="dialog">
+        <div class="modal-dialog modal-lg">
 
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-body">
-          <div class="modal-body--left">
-            <div class="align-vertical-middle">
-              <h2>Thanks!</h2>
-              <!-- <p>Thank you for getting in touch.</p> -->
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-body">
+              <div class="modal-body--left">
+                <div class="align-vertical-middle">
+                  <h2>Thanks!</h2>
+                </div>
+              </div>
+            <div class="modal-body--right">
+              <p>Your request has been submitted and an Arity employee will be in touch soon.</p>
+              <a href="$url" class="ar-element button button--primary blue-button--">
+                <span class="button__label">Ok</span>
+              </a>
             </div>
           </div>
-        <div class="modal-body--right">
-          <p>Your request has been submitted and an Arity employee will be in touch soon.</p>
-          <!-- <a href="$home_url" class="ar-element button button--primary blue-button--">
-            <span class="button__label">Return to homepage</span>
-          </a> -->
-          <a href="$url" class="ar-element button button--primary blue-button--">
-            <span class="button__label">Ok</span>
-          </a>
+        </div>
+        <button type="button" class="close" data-dismiss="modal">
+          <svg class="icon-svg" title="" role="img">
+              <use xlink:href="#close"></use>
+          </svg>
+        </button>
         </div>
       </div>
-    </div>
-    <button type="button" class="close" data-dismiss="modal">
-      <svg class="icon-svg" title="" role="img">
-          <use xlink:href="#close"></use>
-      </svg>
-    </button>
-  </div>
-
-</div>
 EOD;
+    }else{
+echo <<<EOD
+      <div id="thankyou_modal" class="modal" role="dialog">
+        <div class="modal-dialog modal-lg">
 
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-body--left">
+                  <div class="align-vertical-middle">
+                    <h2>Thanks!</h2>
+                  </div>
+                </div>
+              <div class="modal-body--right">
+                <p>Your request has been submitted and someone will get back to you shortly.</p>
+                <a href="$home_url" class="ar-element button button--primary blue-button--">
+                  <span class="button__label">Return to homepage</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="close" data-dismiss="modal">
+            <svg class="icon-svg" title="" role="img">
+                <use xlink:href="#close"></use>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+EOD;
+    }
 });
 
 add_filter('theme/before_wpfooter', function() {
@@ -1020,11 +1042,11 @@ add_filter( 'acf/fields/wysiwyg/toolbars' , function( $toolbars )
 
 //hidden screen options
 add_filter( 'default_hidden_meta_boxes', function ( $hidden, $screen ) {
-    
-    $hide_these = array( 
+
+    $hide_these = array(
         'postexcerpt',
     );
-    
+
   return array_merge( $hidden, $hide_these );
 }, 10, 2 );
 
@@ -1034,4 +1056,3 @@ add_filter( 'admin_post_thumbnail_html', function ( $html ) {
     return $html .= '<i>Suggested image size 2400 × 948</i>';
 
 });
-
