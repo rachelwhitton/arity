@@ -917,7 +917,7 @@ add_filter('theme/before_wpfooter', function() {
     $home_url = home_url('/');
     $url = get_permalink($post->ID);
 
-    if(!in_array($post->post_name, ['contact','smart-cities','mobility-planning'])) {
+    if(!in_array($post->post_name, ['contact','smart-cities','mobility-planning','astronaut'])) {
 echo <<<EOD
       <div id="thankyou_modal" class="modal" role="dialog">
         <div class="modal-dialog modal-lg">
@@ -945,6 +945,36 @@ echo <<<EOD
         </button>
         </div>
       </div>
+EOD;
+}else if(in_array($post->post_name, ['astronaut'])){
+echo <<<EOD
+  <div id="emailform_modal" class="modal" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body">
+            <div class="modal-body--left">
+              <div class="align-vertical-middle">
+                <h2>Thank You</h2>
+              </div>
+            </div>
+          <div class="modal-body--right">
+            <p>You're all set.</p>
+            <a href="$url" class="ar-element button button--primary blue-button--">
+              <span class="button__label">Ok</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="close" data-dismiss="modal">
+        <svg class="icon-svg" title="" role="img">
+            <use xlink:href="#close"></use>
+        </svg>
+      </button>
+    </div>
+
+  </div>
 EOD;
     }else{
 echo <<<EOD
@@ -978,52 +1008,6 @@ echo <<<EOD
 EOD;
     }
 });
-
-add_filter('theme/before_wpfooter', function() {
-    if(is_admin()) {
-        return;
-    }
-
-    global $post;
-
-    if(empty($post) || empty($post->post_name) || strpos($post->post_name, 'astronaut') === false ) {
-        return;
-    }
-
-    $url = get_permalink($post->ID);
-
-    echo <<<EOD
-<div id="emailform_modal" class="modal" role="dialog">
-  <div class="modal-dialog modal-lg">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-body">
-          <div class="modal-body--left">
-            <div class="align-vertical-middle">
-              <h2>Thank You</h2>
-            </div>
-          </div>
-        <div class="modal-body--right">
-          <p>You're all set.</p>
-          <a href="$url" class="ar-element button button--primary blue-button--">
-            <span class="button__label">Ok</span>
-          </a>
-        </div>
-      </div>
-    </div>
-    <button type="button" class="close" data-dismiss="modal">
-      <svg class="icon-svg" title="" role="img">
-          <use xlink:href="#close"></use>
-      </svg>
-    </button>
-  </div>
-
-</div>
-EOD;
-
-});
-
 
 // custom WYSIWYG filter
 add_filter( 'acf/fields/wysiwyg/toolbars' , function( $toolbars )
