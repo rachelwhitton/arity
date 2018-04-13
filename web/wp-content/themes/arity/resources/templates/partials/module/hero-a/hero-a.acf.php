@@ -51,6 +51,19 @@ $fields = [
         'width' => '50',
       ),
     ]),
+
+    acf_checkbox([
+      'label' => 'Homepage Animation',
+      'name' => 'hero-a__animation',
+      'instructions' => 'Do you want the Arity branding animated on the homepage? <br/> (This will replace the static image with animated dots and dashes.)',
+      'choices' => [
+        '1' => 'Yes'
+      ],
+      'return_format' => 'id',
+      'wrapper' => array (
+        'width' => '50',
+      ),
+    ]),
 ];
 
 // ACF Field Group
