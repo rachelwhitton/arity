@@ -160,16 +160,10 @@ $module_builder->includeACFSettings('text-block', 'component');
 |
 */
 $module_builder->includeACFSettings('accordion', 'module');
-$module_builder->includeACFSettings('big-feature-block', 'module');
-$module_builder->includeACFSettings('body-intro', 'module');
 $module_builder->includeACFSettings('body-one-column', 'module');
 $module_builder->includeACFSettings('body-two-column', 'module');
 $module_builder->includeACFSettings('body-inset-ten-col', 'module');
 $module_builder->includeACFSettings('blog-teaser', 'module');
-$module_builder->includeACFSettings('contact-form-w-cta', 'module');
-$module_builder->includeACFSettings('contact-form', 'module');
-$module_builder->includeACFSettings('email-form', 'module');
-$module_builder->includeACFSettings('smart-city-form', 'module');
 $module_builder->includeACFSettings('generic-form-container', 'module');
 $module_builder->includeACFSettings('headless-form-container', 'module');
 $module_builder->includeACFSettings('content-image-block', 'module');
@@ -178,10 +172,7 @@ $module_builder->includeACFSettings('hero-a', 'module');
 $module_builder->includeACFSettings('hero-b', 'module');
 $module_builder->includeACFSettings('hero-c', 'module');
 $module_builder->includeACFSettings('hero-d', 'module');
-$module_builder->includeACFSettings('hero-g-test', 'module');
-$module_builder->includeACFSettings('horizontal-cards', 'module');
 $module_builder->includeACFSettings('lead-gen', 'module');
-$module_builder->includeACFSettings('page-footnote', 'module');
 $module_builder->includeACFSettings('promo', 'module');
 $module_builder->includeACFSettings('promo-strip', 'module');
 $module_builder->includeACFSettings('promo-section', 'module');
@@ -201,6 +192,17 @@ $module_builder->includeACFSettings('sub-footer', 'module');
 $module_builder->includeACFSettings('icon-two-column', 'module');
 $module_builder->includeACFSettings('horizontal-rule', 'module');
 $module_builder->includeACFSettings('video', 'module');
+
+//archived Modules
+// $module_builder->includeACFSettings('body-intro', 'module');
+// $module_builder->includeACFSettings('hero-g-test', 'module');
+// $module_builder->includeACFSettings('page-footnote', 'module');
+// $module_builder->includeACFSettings('contact-form-w-cta', 'module');
+// $module_builder->includeACFSettings('contact-form', 'module');
+// $module_builder->includeACFSettings('email-form', 'module');
+// $module_builder->includeACFSettings('smart-city-form', 'module');
+// $module_builder->includeACFSettings('horizontal-cards', 'module');
+// $module_builder->includeACFSettings('big-feature-block', 'module');
 
 /*
 |--------------------------------------------------------------------------
