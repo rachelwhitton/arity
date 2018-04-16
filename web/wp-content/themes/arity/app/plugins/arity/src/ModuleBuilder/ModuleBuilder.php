@@ -230,14 +230,11 @@ class ModuleBuilder
         global $post;
 
         // Get fields with cache
-        if(!$this->cache_expires || empty($acf_fields = $this->getCache())) {
+        if(is_preview() || !$this->cache_expires || empty($acf_fields = $this->getCache())) {
             // Get Fields without cache
             if (empty($acf_fields = get_fields())) {
                 return false;
             }
-
-            // After getting fields data, store it in cache
-            $this->setCache($acf_fields);
         }
 
 
@@ -267,7 +264,9 @@ class ModuleBuilder
     private function cacheBusting()
     {
         add_filter('save_post', function($post_ID) {
-            // delete_post_meta( $post_ID, $this->cache_key );
+            // If this is just a revision, don't do a thing.
+        	if ( wp_is_post_revision( $post_ID ) )
+        		return;
 
             if (function_exists('get_fields') && !empty($acf_fields = get_fields($post_ID))) {
                 // After getting fields data, store it in cache
