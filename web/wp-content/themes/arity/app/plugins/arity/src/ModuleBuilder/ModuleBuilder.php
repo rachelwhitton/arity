@@ -160,8 +160,6 @@ class ModuleBuilder
             $acf_fields = $acf_fields['modules'];
         }
 
-        $this->currentPageTemplate = $this->getCurrentPageTemplate();
-
         $partials = array();
 
         // For each field, create a partial object
@@ -206,19 +204,6 @@ class ModuleBuilder
         foreach($partials as $partial) {
             $partial->render();
         }
-    }
-
-    /**
-     * Returns current page template
-     *
-     * @return string $page_template
-     */
-    private function getCurrentPageTemplate()
-    {
-        $page_template = get_page_template_slug();
-        $page_template = strstr($page_template, '-', true);
-
-        return $page_template;
     }
 
     private function getFields()
