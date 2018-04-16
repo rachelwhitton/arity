@@ -80,11 +80,11 @@ $fields = [
       'instructions' => '',
       'toolbar' => 'simple',
       'media_upload' => 0,
-      'required' => 1,
+      'required' => 0,
       'maxlength' => '',
       'wrapper' => array (
         'width' => '100',
-      ), 
+      ),
       'conditional_logic' => [
         [
           [
@@ -104,11 +104,11 @@ $fields = [
       'instructions' => '',
       'toolbar' => 'center',
       'media_upload' => 0,
-      'required' => 1,
+      'required' => 0,
       'maxlength' => '',
       'wrapper' => array (
         'width' => '100',
-      ), 
+      ),
       'conditional_logic' => [
         [
           [
