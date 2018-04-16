@@ -39,7 +39,7 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Body Inset 10 Cols',
+    'title' => 'Module - Text: Standard',
     'name' => 'module__body-inset-ten-col',
     'key' => 'group_module_body-inset-ten-col',
     'fields' => $fields,

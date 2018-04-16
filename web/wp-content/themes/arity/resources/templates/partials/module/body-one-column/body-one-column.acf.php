@@ -34,7 +34,7 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Body One Column',
+    'title' => 'Module - Text: Advanced',
     'name' => 'module__body-one-column',
     'key' => 'group_module_body-one-column',
     'fields' => $fields,
