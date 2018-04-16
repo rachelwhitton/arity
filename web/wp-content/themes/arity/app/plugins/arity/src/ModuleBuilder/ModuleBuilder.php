@@ -11,6 +11,20 @@ use Arity\Exception\FileNotFoundException;
 class ModuleBuilder
 {
     /**
+     * Cache Key
+     *
+     * @var string
+     */
+    private $cache_key = '_acf_cache';
+
+    /**
+     * Cache expires (in hours).
+     *
+     * @var string
+     */
+    private $cache_expires = 48;
+
+    /**
      * Theme config instance.
      *
      * @var array
@@ -91,6 +105,9 @@ class ModuleBuilder
 
         // Define acf settings extension
         $this->acfExt = !empty($this->config['acf']['extension']) ? $this->config['acf']['extension'] : '.php';
+
+        // Remove Cache on Post Update
+        $this->cacheBusting();
     }
 
     /**
@@ -131,15 +148,7 @@ class ModuleBuilder
             return $this->partials;
         }
 
-        if (!function_exists('get_fields')) {
-            return false;
-        }
-
-        if (empty($acf_fields = get_fields())) {
-            return false;
-        }
-
-        if (empty($this->currentPageTemplate = $this->getCurrentPageTemplate())) {
+        if (empty($acf_fields = $this->getFields())) {
             return false;
         }
 
@@ -150,6 +159,8 @@ class ModuleBuilder
         if(!empty($acf_fields['modules'])) {
             $acf_fields = $acf_fields['modules'];
         }
+
+        $this->currentPageTemplate = $this->getCurrentPageTemplate();
 
         $partials = array();
 
@@ -208,6 +219,61 @@ class ModuleBuilder
         $page_template = strstr($page_template, '-', true);
 
         return $page_template;
+    }
+
+    private function getFields()
+    {
+        if (!function_exists('get_fields')) {
+            return false;
+        }
+
+        global $post;
+
+        // Get fields with cache
+        if(!$this->cache_expires || empty($acf_fields = $this->getCache())) {
+            // Get Fields without cache
+            if (empty($acf_fields = get_fields())) {
+                return false;
+            }
+
+            // After getting fields data, store it in cache
+            $this->setCache($acf_fields);
+        }
+
+
+        return $acf_fields;
+    }
+
+    private function getCache()
+    {
+        global $post;
+        $cache = get_post_meta( $post->ID, $this->cache_key, true );
+        if ( empty( $cache ) || $cache['expires'] < time() ) {
+            return false;
+        }
+        return $cache['data'];
+    }
+
+    private function setCache($data)
+    {
+        global $post;
+        $cache = array(
+            'expires' => time() + $this->cache_expires * HOUR_IN_SECONDS,
+            'data' => $data,
+        );
+        update_post_meta( $post->ID, $this->cache_key, $cache );
+    }
+
+    private function cacheBusting()
+    {
+        add_filter('save_post', function($post_ID) {
+            // delete_post_meta( $post_ID, $this->cache_key );
+
+            if (function_exists('get_fields') && !empty($acf_fields = get_fields($post_ID))) {
+                // After getting fields data, store it in cache
+                $this->setCache($acf_fields);
+            }
+        }, 10, 1);
     }
 
     /**

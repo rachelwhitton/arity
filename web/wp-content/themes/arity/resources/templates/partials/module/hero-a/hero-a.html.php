@@ -1,6 +1,5 @@
 <?php
 namespace App\Theme;
-
 ?>
 <?php
 /*
@@ -13,9 +12,37 @@ namespace App\Theme;
 
 ?>
 <div <?php module_class($data['classes']); ?>>
+<?php if ($data['animation']) : ?>
+  <ul id="loader">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+<?php endif; ?>
+
   <div class="container">
     <div class="row">
-      <div class="hero-a__col left--">
+      <div class="hero-a__col anim-ready left--">
         <<?= $data['h_el']; ?> class="type2 hero-a__title"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
         <div class="hero-a__content type0"><?= apply_filters('the_content', $data['body_copy']); ?></div>
         <?php if (!empty($data['cta'])) : ?>

@@ -142,7 +142,7 @@ class PageTemplates
         global $post;
 
         // Return template if post is empty
-        if (! $post) {
+        if (! $post || is_search()) {
             return $template;
         }
 

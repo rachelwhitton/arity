@@ -58,7 +58,7 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Email Form',
+    'title' => 'Module - Form :: Email ',
     'name' => 'module__email-form',
     'key' => 'group_module_email-form',
     'fields' => $fields,

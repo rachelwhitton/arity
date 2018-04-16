@@ -23,4 +23,10 @@ if (empty($data['image_id'])) {
   $data['classes'][] = 'hero-a--image';
 }
 
+if (!empty($data['animation'])) {
+  $data['classes'][] = 'anim-ready';
+  $data['classes'][] = 'anim-reverse';
+  $data['animation'] = true;
+}
+
 return $data;

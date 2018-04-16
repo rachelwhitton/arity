@@ -1,0 +1,48 @@
+<?php
+/*
+  Template Name:      Home Page
+  Template Type:      Template
+  Description:        This is the Home Page
+  Last Updated:       08/04/2017
+  Since:              1.0.0
+*/
+?>
+  <div class="template--t1-homepage">
+
+    {{> modules-site-header }} {{> components-in-page-navigation }}
+    <div class="site-content app__wrapper container">
+      <div class="row">
+        <div class="app__home">
+          <section id="solutions" class="app__home__section --first">
+            {{> modules-big-feature-block}} {{> modules-vertical-cards }} {{> modules-promo-no-bg }}
+          </section>
+          <div data-scrim-trigger="1">
+            <section id="applications" class="app__home__section">
+              {{> modules-big-feature-block}} {{> modules-horizontal-cards }}
+            </section>
+          </div>
+          <div data-scrim-trigger="2">
+            <section id="careers" class="app__home__section">
+              {{> modules-big-feature-block}}
+            </section>
+          </div>
+          <div data-scrim-trigger="3">
+            <section id="contact" class="app__home__section">
+              {{> modules-big-feature-block}} {{> modules-two-column-contact }}
+            </section>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    {{> modules-site-footer }}
+
+
+    <div id="scrim" class="scrim" role="presentation">
+      <div class="scrim__panel" data-scrim-panel="1"></div>
+      <div class="scrim__panel" data-scrim-panel="2"></div>
+      <div class="scrim__panel" data-scrim-panel="3"></div>
+      <div class="scrim__panel" data-scrim-panel="4"></div>
+    </div>
+
+  </div>

@@ -29,15 +29,20 @@ namespace App\Theme;
         <h2 class="site-footer__header">Press</h2>
         <p>Get in touch with an Arity rep or visit our newsroom.</p>
         <p>
-          <a href="mailto:media@arity.com" class="ar-element button button--footer">
+          <a href="mailto:media@arity.com" target="_blank" class="ar-element button button--footer">
             <svg class="site-footer__icon icon-svg" title="" role="img">
               <use xlink:href="#email"></use>
-            </svg> Press inquiries
+            </svg> Email press inquiries
+          </a>
+          <a href="https://www.arity.com/wp-content/uploads/2018/04/arity-press-kit.zip" class="ar-element button button--footer">
+            <svg class="site-footer__icon icon-svg" title="" role="img">
+              <use xlink:href="#download"></use>
+            </svg> Download the press kit
           </a>
           <a href="<?= home_url('newsroom/'); ?>" class="ar-element button button--footer">
             <svg class="site-footer__icon icon-svg" title="" role="img">
               <use xlink:href="#news"></use>
-            </svg> Newsroom
+            </svg> Visit the Newsroom
           </a>
         </p>
       </div>

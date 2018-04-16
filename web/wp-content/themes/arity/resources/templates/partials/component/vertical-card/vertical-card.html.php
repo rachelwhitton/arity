@@ -33,13 +33,14 @@ namespace App\Theme;
         <?php endif; ?>
         <?= $data['body_copy']; ?>
         <?php if (!empty($data['cta']) && $data['button_style'] == 'blue') : ?>
-          <div class="ar-element button card__button stack__link button--link">
-            <span class="button__icon arrow-right--" role="presentation">
-              <svg class="icon-svg" title="" role="img">
-                  <use xlink:href="#arrow-right"></use>
-              </svg>
-            </span>
-            <a href="<?= $data['cta']['url']; ?>"<?php if (!empty($data['cta']['target'])) : ?> target="<?= $data['cta']['target']; ?>"<?php endif; ?>>
+          <div class="ar-element card__button stack__link">
+            <a class="button button--link" href="<?= $data['cta']['url']; ?>"<?php if (!empty($data['cta']['target'])) : ?> target="<?= $data['cta']['target']; ?>"<?php endif; ?>
+              data-analytics="<?= $data['subhead']; ?>">
+              <span class="button__icon arrow-right--" role="presentation">
+                <svg class="icon-svg" title="" role="img">
+                    <use xlink:href="#arrow-right"></use>
+                </svg>
+              </span>
               <span class="button__label"><?= $data['cta']['title']; ?></span>
             </a>
           </div>
@@ -49,11 +50,11 @@ namespace App\Theme;
 
     <?php if (!empty($data['cta']) && $data['button_style'] == 'yellow') : ?>
       <div class="ar-element button card__button button--hover-icon">
-      <span class="button__icon arrow-right--" role="presentation">
-        <svg class="icon-svg" title="" role="img">
-            <use xlink:href="#arrow-right"></use>
-        </svg>
-      </span>
+        <span class="button__icon arrow-right--" role="presentation">
+          <svg class="icon-svg" title="" role="img">
+              <use xlink:href="#arrow-right"></use>
+          </svg>
+        </span>
         <span class="button__label"><?= $data['cta']['title']; ?></span>
       </div>
     <?php endif; ?>

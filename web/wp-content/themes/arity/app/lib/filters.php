@@ -212,6 +212,7 @@ EOD;
 
 }, 10,  2);
 
+
 /*
 |-----------------------------------------------------------------
 | Analytics
@@ -647,22 +648,23 @@ add_filter('body_class', function (array $classes, array $class=array()) {
 
     $classes = array();
 
-    if ( is_404() ) {
-        $classes[] = 'template--error404';
-    }
-
     // Add post details
     if ( isset( $post ) ) {
-        $classes[] = $post->post_type . '--' . $post->post_name;
+        $classes[] = $post->post_type . ' ' . $post->post_type . '--' . $post->post_name;
 
         // Add page template
-        if( in_array($post->post_type, array('page')) )
-        $template = get_post_meta( $post->ID, '_wp_page_template', true );
-        $classes[] = 'template--' . $template;
+        if( in_array($post->post_type, array('page')) && !empty($template = get_post_meta( $post->ID, '_wp_page_template', true )) ) {
+            $classes[] = 'template--' . $template;
+        }
     }
 
     // Add classes add through body_class function
     $classes = array_merge( $classes, $class );
+
+    if ( is_404() ) {
+        $classes = array();
+        $classes[] = 'template--error404';
+    }
 
     if ( is_user_logged_in() )
 		$classes[] = 'logged-in';
@@ -778,6 +780,37 @@ add_action('theme/after_body', function () {
 EOD;
 }, 10);
 
+/**
+ * imageLazyLoading
+ * @see  - https://github.com/aFarkas/lazysizes
+ * @since 1.5.0
+ * @return void
+ */
+add_filter('wp_get_attachment_image_attributes', function($attr, $attachment, $size) {
+    if( !empty($attr['class']) && strpos($attr['class'], 'lazyload') !== false ) {
+
+      // Change src
+      $attr['data-src'] = $attr['src'];
+      $attr['src'] = '';
+
+      // Uncomment if you want to load a blank pixel, but base64 strings do not use browser caching well
+      // $attr['src'] = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
+
+      // Change srcset
+      if( !empty($attr['srcset']) ) {
+        $attr['data-srcset'] = $attr['srcset'];
+        $attr['srcset'] = null;
+      }
+
+      // Change sizes
+      if( !empty($attr['sizes']) ) {
+        $attr['data-sizes'] = 'auto';
+      }
+    }
+
+    return $attr;
+}, 10, 3);
+
 
 /*
 |-----------------------------------------------------------------
@@ -832,6 +865,12 @@ add_filter('acf/format_value/type=link', function ($link) {
     return $link;
 }, 10, 3);
 
+add_filter( 'acf/fields/post_object/query', function ( $args ) {
+    $args['orderby'] = 'date';
+    $args['order'] = 'DESC';
+    return $args;
+}, 10, 3);
+
 add_filter('template_redirect', function() {
     if(is_admin()) {
         return;
@@ -871,85 +910,133 @@ add_filter('theme/before_wpfooter', function() {
 
     global $post;
 
-    if(empty($post) || empty($post->post_name) || $post->post_name != 'contact') {
+    if(empty($post) || empty($post->post_name)) {
         return;
     }
 
     $home_url = home_url('/');
-
-    echo <<<EOD
-<div id="thankyou_modal" class="modal" role="dialog">
-  <div class="modal-dialog modal-lg">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-body">
-          <div class="modal-body--left">
-            <div class="align-vertical-middle">
-              <h2>Thanks!</h2>
-            </div>
-          </div>
-        <div class="modal-body--right">
-          <p>Your request has been submitted and someone will get back to you shortly.</p>
-          <a href="$home_url" class="ar-element button button--primary blue-button--">
-            <span class="button__label">Return to homepage</span>
-          </a>
-        </div>
-      </div>
-    </div>
-    <button type="button" class="close" data-dismiss="modal">
-      <svg class="icon-svg" title="" role="img">
-          <use xlink:href="#close"></use>
-      </svg>
-    </button>
-  </div>
-
-</div>
-EOD;
-
-});
-
-add_filter('theme/before_wpfooter', function() {
-    if(is_admin()) {
-        return;
-    }
-
-    global $post;
-
-    if(empty($post) || empty($post->post_name) || strpos($post->post_name, 'astronaut') === false ) {
-        return;
-    }
-
     $url = get_permalink($post->ID);
 
-    echo <<<EOD
-<div id="emailform_modal" class="modal" role="dialog">
-  <div class="modal-dialog modal-lg">
+    if(!in_array($post->post_name, ['contact','smart-cities','mobility-planning','astronaut'])) {
+echo <<<EOD
+      <div id="thankyou_modal" class="modal" role="dialog">
+        <div class="modal-dialog modal-lg">
 
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-body">
-          <div class="modal-body--left">
-            <div class="align-vertical-middle">
-              <h2>Thank You</h2>
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-body">
+              <div class="modal-body--left">
+                <div class="align-vertical-middle">
+                  <h2>Thanks!</h2>
+                </div>
+              </div>
+            <div class="modal-body--right">
+              <p>Your request has been submitted and an Arity employee will be in touch soon.</p>
+              <a href="$url" class="ar-element button button--primary blue-button--">
+                <span class="button__label">Ok</span>
+              </a>
             </div>
           </div>
-        <div class="modal-body--right">
-          <p>You're all set.</p>
-          <a href="$url" class="ar-element button button--primary blue-button--">
-            <span class="button__label">Ok</span>
-          </a>
+        </div>
+        <button type="button" class="close" data-dismiss="modal">
+          <svg class="icon-svg" title="" role="img">
+              <use xlink:href="#close"></use>
+          </svg>
+        </button>
         </div>
       </div>
-    </div>
-    <button type="button" class="close" data-dismiss="modal">
-      <svg class="icon-svg" title="" role="img">
-          <use xlink:href="#close"></use>
-      </svg>
-    </button>
-  </div>
-
-</div>
 EOD;
+}else if(in_array($post->post_name, ['astronaut'])){
+echo <<<EOD
+  <div id="emailform_modal" class="modal" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body">
+            <div class="modal-body--left">
+              <div class="align-vertical-middle">
+                <h2>Thank You</h2>
+              </div>
+            </div>
+          <div class="modal-body--right">
+            <p>You're all set.</p>
+            <a href="$url" class="ar-element button button--primary blue-button--">
+              <span class="button__label">Ok</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="close" data-dismiss="modal">
+        <svg class="icon-svg" title="" role="img">
+            <use xlink:href="#close"></use>
+        </svg>
+      </button>
+    </div>
+
+  </div>
+EOD;
+    }else{
+echo <<<EOD
+      <div id="thankyou_modal" class="modal" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-body--left">
+                  <div class="align-vertical-middle">
+                    <h2>Thanks!</h2>
+                  </div>
+                </div>
+              <div class="modal-body--right">
+                <p>Your request has been submitted and someone will get back to you shortly.</p>
+                <a href="$home_url" class="ar-element button button--primary blue-button--">
+                  <span class="button__label">Return to homepage</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="close" data-dismiss="modal">
+            <svg class="icon-svg" title="" role="img">
+                <use xlink:href="#close"></use>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+EOD;
+    }
+});
+
+// custom WYSIWYG filter
+add_filter( 'acf/fields/wysiwyg/toolbars' , function( $toolbars )
+{
+    // Simple toolbar with basic text formatting
+    $toolbars['Simple' ] = array();
+    $toolbars['Simple' ][1] = array('bold' , 'italic' , 'link' , 'bullist' , 'numlist' );
+
+    // Toolbar for centered text blocks
+    $toolbars['Center' ] = array();
+    $toolbars['Center' ][1] = array('bold' , 'italic' , 'link' );
+
+    // return $toolbars - IMPORTANT!
+    return $toolbars;
+});
+
+//hidden screen options
+add_filter( 'default_hidden_meta_boxes', function ( $hidden, $screen ) {
+
+    $hide_these = array(
+        'postexcerpt',
+    );
+
+  return array_merge( $hidden, $hide_these );
+}, 10, 2 );
+
+//Add Instructions to Featured Image Box
+add_filter( 'admin_post_thumbnail_html', function ( $html ) {
+
+    return $html .= '<i>Suggested image size 2400 × 948</i>';
 
 });

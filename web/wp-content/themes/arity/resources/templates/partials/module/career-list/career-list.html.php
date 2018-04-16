@@ -1,6 +1,5 @@
 <?php
 namespace App\Theme;
-
 ?>
 <?php
 /*
@@ -13,13 +12,23 @@ namespace App\Theme;
 ?>
 <div <?php module_class('career-list'); ?>>
   <div class="container">
-      <div class="block_title">
-        <<?= $data['h_el']; ?> class="career-list__headline">Open Positions</<?= $data['h_el']; ?>>
-        <div class="block_jobCount" aria-hidden="true"><span id="job_count">0</span> available positions</div>
-      </div>
+    <div class="block_title">
+      <<?= $data['h_el']; ?> class="career-list__headline">Open Positions</<?= $data['h_el']; ?>>
+      <div class="block_jobCount" aria-hidden="true"><span id="job_count"><?= $data['feedCount']; ?></span> available positions</div>
     </div>
+  </div>
   <div class="container">
-    <div id="careers_feed">
+    <div id="careers_feed" data-disable-feed>
+      <?php
+        if(!empty($data['feed']) && is_array($data['feed'])) :
+          if(!empty($data['feed_cached'])) {
+            echo '<!-- RSS Cached ' . $data['feed_cached'] . ' -->';
+          }
+          foreach($data['feed'] as $item) :
+            component('careers-list-item', $item);
+          endforeach;
+        else :
+      ?>
       <div class="careers-table__error">
         <div class="error_icon">
           <svg class="icon-svg" title="" role="img">
@@ -30,6 +39,7 @@ namespace App\Theme;
           We're sorry, we can't pull in current job listings at this time. But you can still view them on our <a style="color: #006BF9" href="https://jobsearch.allstate.com/ListJobs/All/Search/jobtitle/arity/" target="_blank">listings site</a>.
         </div>
       </div>
+      <?php endif; ?>
     </div>
   </div>
 </div>
