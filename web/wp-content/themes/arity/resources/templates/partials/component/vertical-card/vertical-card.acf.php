@@ -44,24 +44,24 @@ $fields = [
     ]),
 
     // Button Style
-    acf_select([
-      'label' => 'Button Style',
-      'name' => 'vertical-card__button_style',
-      'key' => 'field_button_style',
-      'instructions' => '',
-      'required' => 0,
-      'maxlength' => '',
-      'allow_null' => 0,
-      'ui' => 1,
-      'wrapper' => array (
-        'width' => '33',
-      ),
-      'default_value' => 'yellow',
-      'choices' => [
-        'blue' => 'Blue Link',
-        'yellow' => 'Yellow Hover Button'
-      ]
-    ]),
+    // acf_select([
+    //   'label' => 'Button Style',
+    //   'name' => 'vertical-card__button_style',
+    //   'key' => 'field_button_style',
+    //   'instructions' => '',
+    //   'required' => 0,
+    //   'maxlength' => '',
+    //   'allow_null' => 0,
+    //   'ui' => 1,
+    //   'wrapper' => array (
+    //     'width' => '33',
+    //   ),
+    //   'default_value' => 'yellow',
+    //   'choices' => [
+    //     'blue' => 'Blue Link',
+    //     'yellow' => 'Yellow Hover Button'
+    //   ]
+    // ]),
 
     // Textarea
     acf_textarea([
