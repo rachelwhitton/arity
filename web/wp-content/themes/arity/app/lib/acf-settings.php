@@ -176,7 +176,6 @@ $module_builder->includeACFSettings('promo', 'module');
 $module_builder->includeACFSettings('promo-strip', 'module');
 $module_builder->includeACFSettings('promo-section', 'module');
 $module_builder->includeACFSettings('location-section', 'module');
-$module_builder->includeACFSettings('vertical-cards', 'module');
 $module_builder->includeACFSettings('vertical-cards-block', 'module');
 $module_builder->includeACFSettings('cards-block-split', 'module');
 $module_builder->includeACFSettings('highlights', 'module');
@@ -203,6 +202,7 @@ $module_builder->includeACFSettings('video', 'module');
 // $module_builder->includeACFSettings('big-feature-block', 'module');
 // $module_builder->includeACFSettings('two-column-contact', 'module');
 // $module_builder->includeACFSettings('lead-gen', 'module');
+// $module_builder->includeACFSettings('vertical-cards', 'module');
 
 /*
 |--------------------------------------------------------------------------
