@@ -13416,66 +13416,6 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   }
 }
 
-.big-feature-block {
-  color: #FFFFFF;
-  margin-bottom: 0;
-}
-
-.big-feature-block .row {
-  position: relative;
-}
-
-.big-feature-block__col {
-  position: relative;
-  width: 100%;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
-  max-width: 100%;
-}
-
-@media (min-width: 480px) {
-  .big-feature-block__col {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
-
-@media (min-width: 768px) {
-  .big-feature-block__col {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
-
-@media (min-width: 961px) {
-  .big-feature-block__col {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .big-feature-block__col {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
-
-.big-feature-block__container {
-  position: relative;
-  padding-top: 80px;
-}
-
-@media screen and (max-width: 960px) {
-  .big-feature-block__container {
-    padding-top: 0px;
-  }
-}
-
 .leadgen-form-inner,
 .lite-form-inner {
   font-size: 18px;
@@ -14088,33 +14028,6 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
 
 .generic-form__form .btn-group {
   text-align: center;
-}
-
-.leadgen-form {
-  color: white;
-  background: #011C2C;
-}
-
-.leadgen-form input {
-  color: white;
-}
-
-.leadgen-form__title {
-  font-size: 1.17em;
-  margin-top: 0;
-  margin-bottom: 20px;
-}
-
-.leadgen-form__col {
-  padding-top: 33px;
-  padding-bottom: 56px;
-}
-
-@media screen and (min-width: 961px) {
-  .leadgen-form__col {
-    padding-top: 77px;
-    padding-bottom: 96px;
-  }
 }
 
 .lite-form__row {
