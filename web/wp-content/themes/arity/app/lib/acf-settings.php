@@ -172,7 +172,6 @@ $module_builder->includeACFSettings('hero-a', 'module');
 $module_builder->includeACFSettings('hero-b', 'module');
 $module_builder->includeACFSettings('hero-c', 'module');
 $module_builder->includeACFSettings('hero-d', 'module');
-$module_builder->includeACFSettings('lead-gen', 'module');
 $module_builder->includeACFSettings('promo', 'module');
 $module_builder->includeACFSettings('promo-strip', 'module');
 $module_builder->includeACFSettings('promo-section', 'module');
@@ -203,6 +202,7 @@ $module_builder->includeACFSettings('video', 'module');
 // $module_builder->includeACFSettings('horizontal-cards', 'module');
 // $module_builder->includeACFSettings('big-feature-block', 'module');
 // $module_builder->includeACFSettings('two-column-contact', 'module');
+// $module_builder->includeACFSettings('lead-gen', 'module');
 
 /*
 |--------------------------------------------------------------------------
