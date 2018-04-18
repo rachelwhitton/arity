@@ -17,7 +17,7 @@ $fields = [
     'default_value' => 'layout__full-bg',
     'choices' => [
       'layout__full-bg' => 'Full Background',
-      'layout__half-bg' => 'Half and Half Background (Remove Padding)',
+      'layout__half-bg' => 'Split Background',
     ]
   ]),
 
