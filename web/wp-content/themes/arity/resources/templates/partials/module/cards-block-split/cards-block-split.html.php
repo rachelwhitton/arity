@@ -8,9 +8,8 @@ namespace App\Theme;
   Last Updated:       12/01/2017
   Since:              1.6.4
 */
-
 ?>
-<div <?php module_class('cards-block-split'); ?> style="background-color: <?= $data['bg-color_top']; ?>">
+<div <?php module_class($data['classes']); ?>>
   <?php if (!empty($data['headline'])) : ?>
     <div class="container">
       <div class="row">
@@ -40,8 +39,8 @@ namespace App\Theme;
   <?php endif; ?>
   <div class="container">
     <div class="row">
-      <?php 
-        $blockCount = 0; 
+      <?php
+        $blockCount = 0;
         $classes = 'col-md-6';
         $count = 0;
 
@@ -53,25 +52,25 @@ namespace App\Theme;
           case 2:
             $classes = "col-lg-6";
             break;
-          case 3: 
+          case 3:
             $classes = "col-lg-4";
             break;
-          case 4: 
+          case 4:
             $classes = "col-lg-6";
             break;
-          case 5: 
+          case 5:
             $classes = "col-lg-4";
             break;
-          case 6: 
+          case 6:
             $classes = "col-lg-4";
             break;
-          case 7: 
+          case 7:
             $classes = "col-lg-6";
             break;
-          case 8: 
+          case 8:
             $classes = "col-lg-6";
             break;
-          default: 
+          default:
             $classes = "col-lg-6";
             break;
         }
@@ -85,6 +84,7 @@ namespace App\Theme;
       <?php endforeach; ?>
     </div>
   </div>
-
-  <div class="split-bg__bottom" style="background-color: <?= $data['bg-color_bot']; ?>"></div>
+  <?php if($data['--settings_alignment']=="layout__half-bg") : ?>
+    <div <?php module_class($data['bottom-classes']); ?>></div>
+  <?php endif; ?>
 </div>

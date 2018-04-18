@@ -16929,13 +16929,51 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
 
 .cards-block-split {
   margin-bottom: 0;
-  padding: 64px 0 0;
+  padding: 64px 0 64px;
   position: relative;
 }
 
 @media screen and (min-width: 768px) {
   .cards-block-split {
-    padding-top: 96px;
+    padding: 96px 0 96px;
+  }
+}
+
+.cards-block-split--half-bg {
+  padding-bottom: 0;
+}
+
+.cards-block-split--white-bg {
+  background-color: #FFFFFF;
+}
+
+.cards-block-split--light-gray-bg {
+  background-color: #F7F7F7;
+}
+
+.cards-block-split--dark-blue-bg {
+  background-color: #011C2C;
+}
+
+.cards-block-split--dark-blue-bg .eyebrow {
+  color: #FFFFFF;
+}
+
+.cards-block-split--dark-blue-bg .cards-block-split__title {
+  color: #FFFFFF;
+}
+
+.cards-block-split--dark-blue-bg .cards-block-split__subhead {
+  color: #FFFFFF;
+}
+
+.cards-block-split--dark-blue-bg .cards-block-split__subhead a {
+  color: #E2EF1C;
+}
+
+@media (hover: hover) {
+  .cards-block-split--dark-blue-bg .cards-block-split__subhead a:hover {
+    color: #FFFFFF;
   }
 }
 
@@ -17070,6 +17108,18 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
 
 .cards-block-split .split-bg__bottom {
   height: 100px;
+}
+
+.cards-block-split .split-bg__bottom--white-bg {
+  background-color: #FFFFFF;
+}
+
+.cards-block-split .split-bg__bottom--light-gray-bg {
+  background-color: #F7F7F7;
+}
+
+.cards-block-split .split-bg__bottom--dark-blue-bg {
+  background-color: #011C2C;
 }
 
 @media screen and (min-width: 768px) {
