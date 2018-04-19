@@ -17281,6 +17281,15 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   }
 }
 
+.highlights .button {
+  margin-top: 12px;
+}
+
+.highlights .button svg {
+  width: 16px;
+  top: 2px;
+}
+
 .horizontal-card-split {
   margin-bottom: 0;
   padding: 0;
