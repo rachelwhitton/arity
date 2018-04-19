@@ -41,6 +41,15 @@ $fields = [
       'required' => 0,
       'new_lines' => 'wpautop'
     ]),
+
+    // CTA
+    acf_link([
+      'label' => 'CTA Button',
+      'name' => 'highlight-block__cta',
+      'key' => 'field_cta',
+      'instructions' => '',
+      'required' => 0
+    ]),
 ];
 
 // ACF Field Group
