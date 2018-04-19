@@ -202,7 +202,7 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Hero B',
+    'title' => 'Module - Hero: Concise',
     'name' => 'module__hero-b',
     'key' => 'group_module_hero-b',
     'fields' => $fields,

@@ -48,7 +48,7 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Hero D',
+    'title' => 'Module - Hero: Overlapped',
     'name' => 'module__hero-d',
     'key' => 'group_module_hero-d',
     'fields' => $fields,

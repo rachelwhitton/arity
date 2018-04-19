@@ -68,7 +68,7 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Hero A',
+    'title' => 'Module - Hero: Elaborated',
     'name' => 'module__hero-a',
     'key' => 'group_module_hero-a',
     'fields' => $fields,

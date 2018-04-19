@@ -114,7 +114,7 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Action Bar',
+    'title' => 'Module - Action Bar: 2 column',
     'name' => 'module__action-bar',
     'key' => 'group_module_action-bar',
     'fields' => $fields,
