@@ -34,10 +34,7 @@ $fields = [
       'name' => 'card__cta',
       'key' => 'field_cta',
       'instructions' => '',
-      'required' => 0,
-      'wrapper' => array (
-        'width' => '33',
-      ),
+      'required' => 0
     ]),
 ];
 
