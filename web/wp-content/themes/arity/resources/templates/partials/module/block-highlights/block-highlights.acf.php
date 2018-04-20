@@ -21,6 +21,18 @@ $fields = [
       ]
     ]),
 
+    // Headline
+    acf_text([
+      'label' => 'Headline',
+      'name' => 'block-highlights__headline',
+      'instructions' => 'Recommended character count max: 100',
+      'required' => 1,
+      'maxlength' => '',
+      'wrapper' => array (
+        'width' => '50',
+      )
+    ]),
+
     // Eyebrow
     acf_text([
       'label' => 'Eyebrow',
@@ -28,18 +40,6 @@ $fields = [
       'key' => 'field_eyebrow',
       'instructions' => 'Recommended character count max: 42',
       'required' => 0,
-      'maxlength' => '',
-      'wrapper' => array (
-        'width' => '50',
-      )
-    ]),
-
-    // Headline
-    acf_text([
-      'label' => 'Headline',
-      'name' => 'block-highlights__headline',
-      'instructions' => 'Recommended character count max: 100',
-      'required' => 1,
       'maxlength' => '',
       'wrapper' => array (
         'width' => '50',

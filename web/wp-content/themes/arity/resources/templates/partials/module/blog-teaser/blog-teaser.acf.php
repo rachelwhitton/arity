@@ -34,7 +34,7 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Blog Teaser',
+    'title' => 'Module - Block: Blog teaser',
     'name' => 'module__blog-teaser',
     'key' => 'group_module_blog-teaser',
     'fields' => $fields,

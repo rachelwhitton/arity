@@ -9,12 +9,9 @@ $fields = [
       'label' => 'Subhead',
       'name' => 'card__subhead',
       'key' => 'field_subhead',
-      'instructions' => '',
+      'instructions' => 'Recommended max character count: 50<br/> We recommend making the headline as short as possible so the copy below is not pushed down.',
       'required' => 0,
       'maxlength' => 70,
-      'wrapper' => array (
-        'width' => '33',
-      ),
     ]),
 
     // Textarea
