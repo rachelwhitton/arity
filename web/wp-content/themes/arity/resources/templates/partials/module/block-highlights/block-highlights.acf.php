@@ -3,13 +3,30 @@ namespace App\Theme;
 
 // ACF Fields
 $fields = [
+    // Full Background Color
+    acf_select([
+      'label' => 'Background Color',
+      'name' => 'block-highlights__bg-color',
+      'key' => 'field_bg-color',
+      'instructions' => '',
+      'required' => 0,
+      'maxlength' => '',
+      'allow_null' => 0,
+      'ui' => 1,
+      'default_value' => 'block-highlights--white-bg',
+      'choices' => [
+        'block-highlights--white-bg' => 'White',
+        'block-highlights--light-gray-bg' => 'Light Gray',
+        'block-highlights--navy-bg' => 'Navy'
+      ]
+    ]),
 
     // Eyebrow
     acf_text([
       'label' => 'Eyebrow',
       'name' => 'block-highlights__eyebrow',
       'key' => 'field_eyebrow',
-      'instructions' => '',
+      'instructions' => 'Recommended character count max: 42',
       'required' => 0,
       'maxlength' => '',
       'wrapper' => array (
@@ -21,9 +38,12 @@ $fields = [
     acf_text([
       'label' => 'Headline',
       'name' => 'block-highlights__headline',
-      'instructions' => '',
+      'instructions' => 'Recommended character count max: 100',
       'required' => 1,
       'maxlength' => '',
+      'wrapper' => array (
+        'width' => '50',
+      )
     ]),
 
     // Text
@@ -31,7 +51,7 @@ $fields = [
       'label' => 'Subhead',
       'name' => 'block-highlights__subhead',
       'key' => 'field_subhead',
-      'instructions' => '',
+      'instructions' => 'Recommended character count max: 210',
       'toolbar' => 'center',
       'media_upload' => 0,
       'required' => 0,
@@ -39,27 +59,6 @@ $fields = [
       'wrapper' => array (
         'width' => '100',
       ),
-    ]),
-
-    // Full Background Color
-    acf_select([
-      'label' => 'Background Color',
-      'name' => 'block-highlights__bg-color',
-      'key' => 'field_bg-color',
-      'instructions' => '',
-      'required' => 0,
-      'maxlength' => '',
-      'allow_null' => 0,
-      'ui' => 1,
-      'wrapper' => array (
-        'width' => '50',
-      ),
-      'default_value' => 'block-highlights--white-bg',
-      'choices' => [
-        'block-highlights--white-bg' => 'White',
-        'block-highlights--light-gray-bg' => 'Light Gray',
-        'block-highlights--navy-bg' => 'Navy'
-      ]
     ]),
 
     // Vertical Card
@@ -81,7 +80,7 @@ $fields = [
       'min'         => 2,
       'max'         => 8,
       'layout'      => 'block',
-            'button_label'  => 'Add Highlight',
+      'button_label'  => 'Add Highlight',
     ]),
 ];
 

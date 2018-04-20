@@ -30,7 +30,7 @@ $fields = [
       'label' => 'Eyebrow',
       'name' => 'text-block__eyebrow',
       'key' => 'field_eyebrow',
-      'instructions' => '',
+      'instructions' => 'Recommended character count max: 42',
       'required' => 0,
       'maxlength' => '',
       'wrapper' => array (
@@ -43,7 +43,7 @@ $fields = [
       'label' => 'Headline',
       'name' => 'text-block__headline',
       'key' => 'field_headline',
-      'instructions' => '',
+      'instructions' => 'Recommended character count max: 52',
       'required' => 0,
       'maxlength' => '',
       'wrapper' => array (
@@ -61,7 +61,6 @@ $fields = [
       'maxlength' => '',
       'allow_null' => 0,
       'ui' => 1,
-
       'wrapper' => array (
         'width' => '33',
       ),
