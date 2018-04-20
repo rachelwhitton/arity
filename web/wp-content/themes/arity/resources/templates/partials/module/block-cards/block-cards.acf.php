@@ -7,8 +7,8 @@ $fields = [
   // Layout
   acf_select([
     'label' => 'Layout',
-    'name' => 'cards-block-split__--settings_alignment',
-    'key' => 'cards-block-split_--settings_alignment',
+    'name' => 'block-cards__--settings_alignment',
+    'key' => 'block-cards_--settings_alignment',
     'instructions' => '',
     'required' => 0,
     'maxlength' => '',
@@ -24,7 +24,7 @@ $fields = [
   // Split Background Top
   acf_select([
     'label' => 'Background Color -- Top',
-    'name' => 'cards-block-split__bg-color_top',
+    'name' => 'block-cards__bg-color_top',
     'key' => 'field_bg-color_top',
     'instructions' => '',
     'required' => 0,
@@ -34,16 +34,16 @@ $fields = [
     'wrapper' => array (
       'width' => '50',
     ),
-    'default_value' => 'White',
+    'default_value' => 'block-cards--white-bg',
     'choices' => [
-      'cards-block-split--white-bg' => 'White',
-      'cards-block-split--light-gray-bg' => 'Light Gray',
-      'cards-block-split--dark-blue-bg' => 'Dark Blue'
+      'block-cards--white-bg' => 'White',
+      'block-cards--light-gray-bg' => 'Light Gray',
+      'block-cards--navy-bg' => 'Navy'
     ],
     'conditional_logic' => [
       [
         [
-          'name' => 'cards-block-split__--settings_alignment',
+          'name' => 'block-cards__--settings_alignment',
           'operator' => '==',
           'value' => 'layout__half-bg'
         ]
@@ -54,7 +54,7 @@ $fields = [
   // Split Background Top
   acf_select([
     'label' => 'Background Color -- Bottom',
-    'name' => 'cards-block-split__bg-color_bot',
+    'name' => 'block-cards__bg-color_bot',
     'key' => 'field_bg-color_bot',
     'instructions' => '',
     'required' => 0,
@@ -64,16 +64,16 @@ $fields = [
     'wrapper' => array (
       'width' => '50',
     ),
-    'default_value' => 'Light Gray',
+    'default_value' => 'split-bg__bottom--light-gray-bg',
     'choices' => [
       'split-bg__bottom--white-bg' => 'White',
       'split-bg__bottom--light-gray-bg' => 'Light Gray',
-      'split-bg__bottom--dark-blue-bg' => 'Dark Blue'
+      'split-bg__bottom--navy-bg' => 'Navy'
     ],
     'conditional_logic' => [
       [
         [
-          'name' => 'cards-block-split__--settings_alignment',
+          'name' => 'block-cards__--settings_alignment',
           'operator' => '==',
           'value' => 'layout__half-bg'
         ]
@@ -84,7 +84,7 @@ $fields = [
   // Full Background Color
   acf_select([
     'label' => 'Background Color',
-    'name' => 'cards-block-split__bg-color',
+    'name' => 'block-cards__bg-color',
     'key' => 'field_bg-color',
     'instructions' => '',
     'required' => 0,
@@ -94,16 +94,16 @@ $fields = [
     'wrapper' => array (
       'width' => '50',
     ),
-    'default_value' => 'cards-block-split--light-gray-bg',
+    'default_value' => 'block-cards--light-gray-bg',
     'choices' => [
-      'cards-block-split--white-bg' => 'White',
-      'cards-block-split--light-gray-bg' => 'Light Gray',
-      'cards-block-split--dark-blue-bg' => 'Dark Blue'
+      'block-cards--white-bg' => 'White',
+      'block-cards--light-gray-bg' => 'Light Gray',
+      'block-cards--navy-bg' => 'Navy'
     ],
     'conditional_logic' => [
       [
         [
-          'name' => 'cards-block-split__--settings_alignment',
+          'name' => 'block-cards__--settings_alignment',
           'operator' => '==',
           'value' => 'layout__full-bg'
         ]
@@ -114,7 +114,7 @@ $fields = [
     // Eyebrow
     acf_text([
       'label' => 'Eyebrow',
-      'name' => 'cards-block-split__eyebrow',
+      'name' => 'block-cards__eyebrow',
       'key' => 'field_eyebrow',
       'instructions' => '',
       'required' => 0,
@@ -124,7 +124,7 @@ $fields = [
     // Headline
     acf_text([
       'label' => 'Headline',
-      'name' => 'cards-block-split__headline',
+      'name' => 'block-cards__headline',
       'instructions' => '',
       'required' => 1,
       'maxlength' => '',
@@ -133,7 +133,7 @@ $fields = [
     // Text
     acf_wysiwyg([
       'label' => 'Subhead',
-      'name' => 'cards-block-split__subhead',
+      'name' => 'block-cards__subhead',
       'key' => 'field_subhead',
       'instructions' => '',
       'toolbar' => 'center',
@@ -148,7 +148,7 @@ $fields = [
     // Vertical Card
     acf_repeater([
       'label' => '',
-      'name' => 'cards-block-split__cards',
+      'name' => 'block-cards__cards',
       'sub_fields' => [
         [
           // Headline
@@ -171,9 +171,9 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Block: Cards (OLD)',
-    'name' => 'module__cards-block-split',
-    'key' => 'group_module_cards-block-split',
+    'title' => 'Module - Block: Cards',
+    'name' => 'module__block-cards',
+    'key' => 'group_module_block-cards',
     'fields' => $fields,
     'location' => [
         [

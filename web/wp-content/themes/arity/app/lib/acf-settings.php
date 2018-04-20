@@ -177,8 +177,13 @@ $module_builder->includeACFSettings('promo-strip', 'module');
 $module_builder->includeACFSettings('promo-section', 'module');
 $module_builder->includeACFSettings('location-section', 'module');
 $module_builder->includeACFSettings('vertical-cards-block', 'module');
+
+$module_builder->includeACFSettings('block-cards', 'module');
 $module_builder->includeACFSettings('cards-block-split', 'module');
+
+$module_builder->includeACFSettings('block-highlights', 'module');
 $module_builder->includeACFSettings('highlights', 'module');
+
 $module_builder->includeACFSettings('horizontal-card-split', 'module');
 $module_builder->includeACFSettings('module-header', 'module');
 $module_builder->includeACFSettings('career-list', 'module');
