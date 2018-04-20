@@ -25,6 +25,26 @@ $fields = [
       ]
     ]),
 
+    // Headline Size
+    acf_select([
+      'label' => 'Headline Size',
+      'name' => 'text-block__h-size',
+      'key' => 'text-block_h-size',
+      'instructions' => '',
+      'required' => 0,
+      'maxlength' => '',
+      'allow_null' => 0,
+      'ui' => 1,
+      'wrapper' => array (
+        'width' => '50',
+      ),
+      'default_value' => 'h3',
+      'choices' => [
+        'h2' => 'Large (h2)',
+        'h3' => 'Medium (h3)',
+      ]
+    ]),
+
     // Eyebrow
     acf_text([
       'label' => 'Eyebrow',
@@ -34,7 +54,7 @@ $fields = [
       'required' => 0,
       'maxlength' => '',
       'wrapper' => array (
-        'width' => '50',
+        'width' => '33',
       )
     ]),
 
@@ -51,25 +71,7 @@ $fields = [
       )
     ]),
 
-    // Headline Size
-    acf_select([
-      'label' => 'Headline Size',
-      'name' => 'text-block__h-size',
-      'key' => 'text-block_h-size',
-      'instructions' => '',
-      'required' => 0,
-      'maxlength' => '',
-      'allow_null' => 0,
-      'ui' => 1,
-      'wrapper' => array (
-        'width' => '33',
-      ),
-      'default_value' => 'h3',
-      'choices' => [
-        'h2' => 'Large (h2)',
-        'h3' => 'Medium (h3)',
-      ]
-    ]),
+
 
     // Text
     acf_wysiwyg([
