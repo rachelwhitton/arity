@@ -11,7 +11,7 @@ namespace App\Theme;
 
 ?>
 
-  <div <?php component_class('highlight-block'); ?>>
+  <div <?php component_class($data['classes']); ?>>
     <div class="block__inner">
         <?php if ( !empty($data['image_id']) ) : ?>
           <div class="block__icon">
