@@ -135,7 +135,7 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Body Two Column',
+    'title' => 'Module - Block: 2 column : sidebar',
     'name' => 'module__body-two-column',
     'key' => 'group_module_body-two-column',
     'fields' => $fields,
