@@ -102,6 +102,24 @@ $fields = [
       ]
     ]),
 
+    acf_select([
+      'label' => '"Module" Headline Alignment',
+      'name' => 'content-image-block__headline-alignment',
+      'key' => 'field_headline-alignment',
+      'instructions' => '',
+      'required' => 0,
+      'maxlength' => '',
+      'allow_null' => 1,
+      'ui' => 1,
+      'wrapper' => array (
+        'width' => '25',
+      ),
+      'choices' => [
+        'left' => 'Left',
+        'center' => 'Centered'
+      ]
+    ]),
+
     // Headline
     acf_text([
       'label' => '"Module" Headline',
