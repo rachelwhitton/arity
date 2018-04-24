@@ -8,7 +8,7 @@ $fields = [
     acf_text([
       'label' => 'Headline',
       'name' => 'vertical-cards-block__headline',
-      'instructions' => '',
+      'instructions' => 'Recommended max character count: 70',
       'required' => 0,
       'maxlength' => '',
     ]),
@@ -38,7 +38,7 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Vertical Cards Block',
+    'title' => 'Module - Block: Cards: Image',
     'name' => 'module__vertical-cards-block',
     'key' => 'group_module_vertical-cards-block',
     'fields' => $fields,

@@ -4,17 +4,41 @@ namespace App\Theme;
 // ACF Fields
 $fields = [
 
+    // Image
+    acf_image([
+      'label' => 'Image',
+      'name' => 'vertical-card__image_id',
+      'key' => 'field_image',
+      'return_format' => 'id',
+      'instructions' => 'Recommended image size: 736 x 400 px',
+      'required' => 1,
+      'preview_size'  => 'thumbnail',
+      // 'wrapper' => array (
+      //   'width' => '33',
+      // )
+    ]),
+
     // Subhead
     acf_text([
       'label' => 'Subhead',
       'name' => 'vertical-card__subhead',
       'key' => 'field_subhead',
-      'instructions' => '',
+      'instructions' => 'Recommended max character count: 54',
       'required' => 0,
       'maxlength' => '',
-      'wrapper' => array (
-        'width' => '33',
-      ),
+      // 'wrapper' => array (
+      //   'width' => '33',
+      // ),
+    ]),
+
+    // Textarea
+    acf_textarea([
+      'label' => 'Body Copy',
+      'name' => 'vertical-card__body_copy',
+      'key' => 'field_body_copy',
+      'instructions' => 'Recommended max character count: 130',
+      'required' => 1,
+      'new_lines' => 'wpautop'
     ]),
 
     // CTA
@@ -22,26 +46,14 @@ $fields = [
       'label' => 'CTA Button',
       'name' => 'vertical-card__cta',
       'key' => 'field_cta',
-      'instructions' => '',
+      'instructions' => 'Recommended max character count: 60',
       'required' => 0,
       'wrapper' => array (
         'width' => '33',
       ),
     ]),
 
-    // Image
-    acf_image([
-      'label' => 'Image',
-      'name' => 'vertical-card__image_id',
-      'key' => 'field_image',
-      'return_format' => 'id',
-      'instructions' => '',
-      'required' => 1,
-      'preview_size'  => 'thumbnail',
-      'wrapper' => array (
-        'width' => '33',
-      )
-    ]),
+
 
     // Button Style
     // acf_select([
@@ -63,15 +75,7 @@ $fields = [
     //   ]
     // ]),
 
-    // Textarea
-    acf_textarea([
-      'label' => 'Body Copy',
-      'name' => 'vertical-card__body_copy',
-      'key' => 'field_body_copy',
-      'instructions' => '',
-      'required' => 1,
-      'new_lines' => 'wpautop'
-    ]),
+
 ];
 
 // ACF Field Group
