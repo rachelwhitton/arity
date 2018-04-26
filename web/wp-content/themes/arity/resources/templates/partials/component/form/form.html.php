@@ -64,9 +64,9 @@
       $industry_id = '00N3B000001I8yV';
     }
   ?>
-  <div class="form-group">
+  <div class="form-group form-group--required">
     <label class="form-group-label" for="input_<?=$industry_id; ?>">What industry do you work in?</label>
-    <select class="form-control custom-select" name="<?=$industry_id; ?>" id="input_<?=$industry_id; ?>">
+    <select class="form-control custom-select" name="<?=$industry_id; ?>" id="input_<?=$industry_id; ?>" required>
       <option value="">Select an industry</option>
       <option value="Insurance">Insurance</option>
       <option value="OEM">OEM</option>
@@ -76,6 +76,7 @@
       <option value="Government">Government</option>
       <option value="Other">Other</option>
     </select>
+    <div class="form-control-feedback" data-error="required">Please make a selection</div>
   </div>
 
   <div class="form-group">
