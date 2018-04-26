@@ -6,7 +6,7 @@ $fields = [
 
     acf_tab([
       'label' => 'Content',
-      'name' => 'content-image-block__content_tab',
+      'name' => 'hero-a__content_tab',
     ]),
 
     // Headline
@@ -59,7 +59,7 @@ $fields = [
 
     acf_tab([
       'label' => 'Options',
-      'name' => 'content-image-block__options_tab',
+      'name' => 'hero-a__options_tab',
     ]),
 
     acf_radio([

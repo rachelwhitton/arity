@@ -4,11 +4,16 @@ namespace App\Theme;
 // ACF Fields
 $fields = [
 
+    acf_tab([
+      'label' => 'Content',
+      'name' => 'promo__content_tab',
+    ]),
+
     // Headline
     acf_text([
       'label' => 'Headline',
       'name' => 'promo__headline',
-      'instructions' => '',
+      'instructions' => 'Recommended character count max: 100',
       'required' => 1,
       'maxlength' => '',
       'wrapper' => array (
@@ -20,7 +25,7 @@ $fields = [
     acf_text([
       'label' => 'Date / Location',
       'name' => 'promo__location',
-      'instructions' => '',
+      'instructions' => 'Recommended character count max: 100',
       'required' => 0,
       'maxlength' => '',
       'wrapper' => array (
@@ -32,7 +37,7 @@ $fields = [
     acf_textarea([
       'label' => 'Body Copy',
       'name' => 'promo__body_copy',
-      'instructions' => '',
+      'instructions' => 'Recommended character count max: 200',
       'required' => 1,
       'new_lines' => 'wpautop',
       'maxlength' => '',
@@ -42,9 +47,29 @@ $fields = [
     acf_link([
       'label' => 'CTA Button',
       'name' => 'promo__cta',
-      'instructions' => '',
+      'instructions' => 'Recommended character count max: 30',
       'required' => 0,
       'maxlength' => '',
+      'wrapper' => array (
+        'width' => '50',
+      ),
+    ]),
+
+    acf_tab([
+      'label' => 'Options',
+      'name' => 'promo__options_tab',
+    ]),
+
+    acf_radio([
+      'label' => 'Extra Module Padding',
+      'name' => 'promo__padding',
+      'instructions' => 'Enable this setting when you need extra space between modules.',
+      'default_value' => '0',
+      'choices' => [
+        '1' => 'Enabled',
+        '0' => 'Disabled (default)'
+      ],
+      // 'return_format' => 'id',
       'wrapper' => array (
         'width' => '50',
       ),
@@ -54,7 +79,7 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Promo',
+    'title' => 'Module - Promo: Wide',
     'name' => 'module__promo',
     'key' => 'group_module_promo',
     'fields' => $fields,
