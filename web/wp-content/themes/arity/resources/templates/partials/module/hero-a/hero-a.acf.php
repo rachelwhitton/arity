@@ -14,7 +14,7 @@ $fields = [
       'label' => 'Headline',
       'name' => 'hero-a__headline',
       'key' => 'field_headline',
-      'instructions' => 'Recommended character count max: 100 <br/><br/>HOMEPAGE: limit characters to 60',
+      'instructions' => 'Recommended character count max: 100 <br/>For homepage: limit characters to 60',
       'required' => 1,
       'maxlength' => '',
       'wrapper' => array (
@@ -28,7 +28,7 @@ $fields = [
       'name' => 'hero-a__image_id',
       'key' => 'field_image',
       'return_format' => 'id',
-      'instructions' => 'Suggested image size: 890 x 890 px<br/><br/>HOMEPAGE: Suggested Image size: 940 x 600* px<br/>*The copy will determine where the image is cut off. Make the image shorter or taller to achieve different effects.',
+      'instructions' => 'Suggested image size: 890 x 890 px<br/>For homepage: suggested Image size: 940 x 600 px<br/>Note: The copy will determine where the image is cut off. Make the image shorter or taller to achieve different effects.',
       'required' => 0,
       'preview_size'  => 'thumbnail',
       'wrapper' => array (
@@ -76,14 +76,16 @@ $fields = [
       ),
     ]),
 
-    acf_checkbox([
-      'label' => 'Homepage Animation',
+    acf_radio([
+      'label' => 'Animation (Homepage only)',
       'name' => 'hero-a__animation',
-      'instructions' => 'Do you want the Arity branding animated on the homepage? <br/> (This will replace the static image with animated dots and dashes.)',
+      'instructions' => '(This will replace the static image with animated dots and dashes.)',
+      'default_value' => '1',
       'choices' => [
-        '1' => 'Yes'
+        '1' => 'Enabled',
+        '0' => 'Disabled (default)'
       ],
-      'return_format' => 'id',
+      // 'return_format' => 'id',
       'wrapper' => array (
         'width' => '50',
       ),
