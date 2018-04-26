@@ -16,6 +16,18 @@ $fields = [
       )
     ]),
 
+    // Location
+    acf_text([
+      'label' => 'Date / Location',
+      'name' => 'promo__location',
+      'instructions' => '',
+      'required' => 0,
+      'maxlength' => '',
+      'wrapper' => array (
+        'width' => '100',
+      )
+    ]),
+
     // Body Copy
     acf_textarea([
       'label' => 'Body Copy',
