@@ -38,6 +38,10 @@ add_shortcode('link', function ($attr, $text_link) {
         if (empty($attr['type']) && !empty($attr['icon'])) {
             $attr['classes'][] = 'button button--link';
         }
+
+        if (!empty($attr['type']) && !empty($attr['icon'])) {
+            $attr['classes'][] = $attr['type'].'_link__icon';
+        }
     }
 
     // Pull in classes from shortcode, convert to array, merge array into attr classes
