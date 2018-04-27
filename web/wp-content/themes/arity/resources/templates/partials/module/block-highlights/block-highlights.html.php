@@ -79,7 +79,7 @@ namespace App\Theme;
       <?php foreach ($data['highlight-block'] as $block) : ?>
         <?php $block['component__highlight-block']['highlight-block__classes'] = $data['highlights-classes']; ?>
         <?php $count++;?>
-        <div class="highlights__col anim-ready anim-block-<?php echo $count; ?> <?php echo $classes; ?>">
+        <div class="block-highlights__col anim-ready anim-block-<?php echo $count; ?> <?php echo $classes; ?>">
           <?php the_partial($block); ?>
         </div>
       <?php endforeach; ?>
