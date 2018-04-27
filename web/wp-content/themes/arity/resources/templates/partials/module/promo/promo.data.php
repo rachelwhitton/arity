@@ -2,7 +2,7 @@
 
 $data['classes'][] = 'promo';
 
-if($data['padding']){
+if(!empty($data['padding'])){
   $data['classes'][] = 'promo--padding';
 }
 

@@ -78,6 +78,7 @@ $fields = [
       'wrapper' => array (
         'width' => '25',
       ),
+      'default_value' => 'right',
       'choices' => [
         'left' => 'Image Left, Content Right',
         'right' => 'Image Right, Content Left'
@@ -96,6 +97,7 @@ $fields = [
       'wrapper' => array (
         'width' => '25',
       ),
+      'default_value' => 'white',
       'choices' => [
         'white' => 'White',
         'lightgray' => 'Light Gray'
@@ -114,6 +116,7 @@ $fields = [
       'wrapper' => array (
         'width' => '25',
       ),
+      'default_value' => 'center',
       'choices' => [
         'left' => 'Left',
         'center' => 'Centered'

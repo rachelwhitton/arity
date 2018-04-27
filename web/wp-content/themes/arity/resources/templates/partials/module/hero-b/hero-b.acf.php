@@ -21,7 +21,7 @@ $fields = [
     acf_radio([
       'label' => 'Dot Dash Overlay',
       'name' => 'hero-b__dotted',
-      'instructions' => 'Do you want the dot dash branding over your image?',
+      'instructions' => '',
       'choices' => [
         '1' => 'Enabled (default)',
         '0' => 'Disabled'
@@ -192,7 +192,7 @@ $fields = [
       ),
       'default_value' => 'top',
       'choices' => [
-        'top' => 'Top',
+        'top' => 'Top (default)',
         'middle' => 'Middle'
       ]
   ]),
