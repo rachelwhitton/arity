@@ -60,21 +60,18 @@ $fields = [
       'name' => 'promo__options_tab',
     ]),
 
-    acf_radio([
+    acf_checkbox([
       'label' => 'Extra Module Padding',
       'name' => 'promo__padding',
-      'instructions' => 'Enable this setting when you need extra space between modules.',
-      'default_value' => '0',
+      'instructions' => 'Do you need some space between modules? (Disabled by default)',
       'choices' => [
-        '1' => 'Enabled',
-        '0' => 'Disabled (default)'
+        'top' => 'Yes, top padding &uarr;',
+        'bottom' => 'Yes, bottom padding &darr;'
       ],
-      // 'return_format' => 'id',
       'wrapper' => array (
         'width' => '50',
       ),
     ]),
-
 ];
 
 // ACF Field Group
