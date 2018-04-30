@@ -31,8 +31,10 @@ namespace App\Theme;
         </div>
         <div class="promo__right-col">
           <?php
-            $data['cta']['classes'] = array('button button--primary transparent-white-border-button--');
-            element('button', $data['cta']);
+            if (!empty($data['cta'])) {
+              $data['cta']['classes'] = array('button button--primary transparent-white-border-button--');
+              element('button', $data['cta']);
+            }
           ?>
         </div>
       </div>

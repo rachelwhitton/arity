@@ -31,7 +31,7 @@ if($data['dotted'] || empty($data['image_id'])){
 }
 
 if (!empty($data['animation'])) {
-  $data['classes'][] = 'anim-ready';
+  $data['classes'][] = 'dots-anim-ready';
   $data['classes'][] = 'anim-reverse';
   $data['animation'] = true;
 }
