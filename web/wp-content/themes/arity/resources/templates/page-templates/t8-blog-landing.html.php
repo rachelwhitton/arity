@@ -85,6 +85,7 @@ if (get_field('module__promo_area')) {
   $promo_area = get_field('module__promo_area');
   $promo = array(
     'headline' => $promo_area[0]['promo__headline'],
+    'location' => $promo_area[0]['promo__location'],
     'body_copy' => $promo_area[0]['promo__body_copy'],
     'cta' => $promo_area[0]['promo__cta']
   );
