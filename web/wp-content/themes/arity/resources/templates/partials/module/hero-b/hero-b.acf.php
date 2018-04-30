@@ -201,6 +201,7 @@ $fields = [
     acf_repeater([
       'label' => '',
       'name' => 'hero-b__right_column_links',
+      'instructions' => 'If using more than one CTA, try to use similar character counts to prevent odd button sizing.',
       'sub_fields' => [
         [
           // Headline
