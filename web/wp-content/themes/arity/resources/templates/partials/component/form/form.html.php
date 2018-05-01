@@ -76,7 +76,7 @@
       <option value="Government">Government</option>
       <option value="Other">Other</option>
     </select>
-    <div class="form-control-feedback" data-error="required">Please make a selection</div>
+    <div class="form-control-feedback" data-error="required">Please select an industry</div>
   </div>
 
   <div class="form-group">
