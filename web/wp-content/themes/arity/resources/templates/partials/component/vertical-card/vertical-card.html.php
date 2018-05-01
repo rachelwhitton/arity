@@ -47,7 +47,7 @@ namespace App\Theme;
                     <use xlink:href="#<?= $data['cta']['icon']; ?>"></use>
                 </svg>
               </span>
-              <span class="button__label"><?= $data['cta']['title']; ?></span>
+              <span class="button__label <?= $data['cta']['icon']; ?>--"><?= $data['cta']['title']; ?></span>
             </a>
           </div>
         <?php endif; ?>
