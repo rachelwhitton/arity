@@ -239,10 +239,21 @@ class ModuleBuilder
     private function setCache($data)
     {
         global $post;
+
+        if(empty($post) || empty($post->ID)) {
+            return;
+        }
+
+        $expires = false;
+        if(!empty($this->cache_expires)) {
+            $expires = time() + $this->cache_expires * HOUR_IN_SECONDS;
+        }
+
         $cache = array(
-            'expires' => time() + $this->cache_expires * HOUR_IN_SECONDS,
+            'expires' => $expires,
             'data' => $data,
         );
+
         update_post_meta( $post->ID, $this->cache_key, $cache );
     }
 
