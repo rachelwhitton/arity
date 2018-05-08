@@ -25,10 +25,9 @@ namespace App\Theme;
               <span><?php echo $item->primary_term ?></span>
             </div>
             <a class="blog-card__link" href="<?php echo get_permalink($item->ID); ?>">
-           	 <h1 class="blog-card__title"><?php echo $item->post_title; ?></h1>
+           	 <div class="blog-card__title"><?php echo $item->post_title; ?></div>
            	</a>
             <div class="blog-card__excerpt">
-             <p><?php // echo $item->post_excerpt;?></p>
              <?php echo $item->abstract ?>
             </div>
             <div class="blog-card__date">

@@ -12,6 +12,10 @@ if (!empty($data['layout'])) {
   $data['classes'][] = 'content-image-block--'.$data['layout'];
 }
 
+if (empty($data['headline-alignment'])) {
+  $data['headline-alignment'] = '';
+}
+
 $data['headline'] = App\Theme\wrapSymbols($data['headline']);
 
 if(empty($data['h_el'])) {

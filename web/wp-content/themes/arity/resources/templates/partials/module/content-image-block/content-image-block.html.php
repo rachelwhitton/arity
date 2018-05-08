@@ -14,6 +14,33 @@ namespace App\Theme;
 ?>
 
 <div <?php module_class($data['classes']); ?>>
+  <?php if (!empty($data['module-headline'])) : ?>
+    <div class="container">
+      <div class="row">
+        <div <?php module_class($data['headline-alignment']); ?>>
+          <?php if(!empty($data['eyebrow'])) : ?>
+            <?php element('eyebrow', array(
+              'classes' => 'eyebrow',
+              'label' => $data['eyebrow']
+            )); ?>
+          <?php endif; ?>
+
+          <?php if (!empty($data['module-headline'])) : ?>
+            <?php element('headline', array(
+            'classes' => 'content-image-block__title',
+            'headline' => $data['module-headline']
+          )); ?>
+          <?php endif; ?>
+
+          <?php if(!empty($data['subhead'])) : ?>
+            <div class="block-highlights__subhead">
+              <?= $data['subhead']; ?>
+            </div>
+          <?php endif; ?>
+        </div>
+      </div>
+    </div>
+  <?php endif; ?>
   <div class="container">
     <div class="row">
       <?php if (!empty($data['image_id'])) : ?>

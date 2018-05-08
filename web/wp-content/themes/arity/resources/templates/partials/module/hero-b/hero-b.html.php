@@ -10,7 +10,6 @@ namespace App\Theme;
   Last Updated:       08/01/2017
   Since:              1.0.0
 */
-
 ?>
 <div <?php module_class($data['classes']); ?>>
   <div class="hero-b__block">
@@ -23,6 +22,7 @@ namespace App\Theme;
     </div>
   </div>
   <?php component('hero-image', [
-    'image_id' => $data['image_id']
+    'image_id' => $data['image_id'],
+    'overlay' => $data['dotted']
   ]); ?>
 </div>

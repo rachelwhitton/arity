@@ -12,7 +12,7 @@ namespace App\Theme;
 */
 
 ?>
-<div <?php module_class('body-column body-inset-ten-col'); ?>>
+<div <?php module_class('body-column body-inset-ten-col text-module-standard'); ?>>
   <div class="container">
     <div class="row">
       <div class="body-inset-ten-col__col">

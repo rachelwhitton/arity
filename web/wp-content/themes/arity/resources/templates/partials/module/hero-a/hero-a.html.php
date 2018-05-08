@@ -12,33 +12,15 @@ namespace App\Theme;
 
 ?>
 <div <?php module_class($data['classes']); ?>>
-<?php if ($data['animation']) : ?>
-  <ul id="loader">
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
 
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
-<?php endif; ?>
+  <?php if ($data['animation']) : ?>
+    <ul id="loader">
+      <li></li><li></li><li></li><li></li><li></li>
+      <li></li><li></li><li></li><li></li><li></li>
+      <li></li><li></li><li></li><li></li><li></li>
+      <li></li><li></li><li></li><li></li><li></li>
+    </ul>
+  <?php endif; ?>
 
   <div class="container">
     <div class="row">

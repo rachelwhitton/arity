@@ -59,7 +59,7 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Action Bar One Column CTA',
+    'title' => 'Module - Action Bar',
     'name' => 'module__action-bar-one-col-cta',
     'key' => 'group_module_action-bar-one-col-cta',
     'fields' => $fields,

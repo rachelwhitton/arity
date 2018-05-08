@@ -39,8 +39,8 @@ $author = [];
               <div class="blog-post__cat">
                 <span><?php echo $category_name ?></span>
               </div>
-              <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-              <div class="blog-post__stats"><?php the_author(); echo ' &middot; '; the_date('F Y', '<span class="date">', '</span>'); ?> &middot; <?= do_shortcode('[ttr]'); ?></em>
+              <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?><?php  ?>
+              <div class="blog-post__stats"><?php the_author(); echo ' &middot; '; echo get_the_date();?> &middot; <?= do_shortcode('[ttr]'); ?></em>
             </div>
           </div>
         </div>

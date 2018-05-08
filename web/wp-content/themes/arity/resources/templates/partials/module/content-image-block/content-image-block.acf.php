@@ -14,7 +14,7 @@ $fields = [
       'label' => 'Headline',
       'name' => 'content-image-block__headline',
       'key' => 'field_headline',
-      'instructions' => '',
+      'instructions' => 'Recommended character count max: 60',
       'required' => 0,
       'maxlength' => '',
       'wrapper' => array (
@@ -28,7 +28,7 @@ $fields = [
       'name' => 'content-image-block__image_id',
       'key' => 'field_image',
       'return_format' => 'id',
-      'instructions' => '',
+      'instructions' => 'Suggested image size: 1444 x 780 px ',
       'required' => 1,
       'preview_size'  => 'thumbnail',
       'wrapper' => array (
@@ -41,7 +41,7 @@ $fields = [
       'label' => 'Body Copy',
       'name' => 'content-image-block__body_copy',
       'key' => 'field_body_copy',
-      'instructions' => '',
+      'instructions' => 'Recommended character count max: 300',
       'required' => 1,
       'new_lines' => 'wpautop',
       'wrapper' => array (
@@ -54,7 +54,7 @@ $fields = [
       'label' => 'CTA Button',
       'name' => 'content-image-block__cta',
       'key' => 'field_cta',
-      'instructions' => '',
+      'instructions' => 'Recommended character count max: 80',
       'required' => 0,
       'wrapper' => array (
         'width' => '50',
@@ -78,6 +78,7 @@ $fields = [
       'wrapper' => array (
         'width' => '25',
       ),
+      'default_value' => 'right',
       'choices' => [
         'left' => 'Image Left, Content Right',
         'right' => 'Image Right, Content Left'
@@ -96,17 +97,47 @@ $fields = [
       'wrapper' => array (
         'width' => '25',
       ),
+      'default_value' => 'white',
       'choices' => [
         'white' => 'White',
         'lightgray' => 'Light Gray'
       ]
     ]),
 
+    acf_select([
+      'label' => '"Module" Headline Alignment',
+      'name' => 'content-image-block__headline-alignment',
+      'key' => 'field_headline-alignment',
+      'instructions' => '',
+      'required' => 0,
+      'maxlength' => '',
+      'allow_null' => 1,
+      'ui' => 1,
+      'wrapper' => array (
+        'width' => '25',
+      ),
+      'default_value' => 'center',
+      'choices' => [
+        'left' => 'Left',
+        'center' => 'Centered'
+      ]
+    ]),
+
+    // Headline
+    acf_text([
+      'label' => '"Module" Headline',
+      'name' => 'content-image-block__module-headline',
+      'key' => 'field_module-headline',
+      'instructions' => 'Recommended character count max: 100',
+      'required' => 0,
+      'maxlength' => '',
+    ]),
+
 ];
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Content Image Block',
+    'title' => 'Module - Block: 2 column',
     'name' => 'module__content-image-block',
     'key' => 'group_module_content-image-block',
     'fields' => $fields,

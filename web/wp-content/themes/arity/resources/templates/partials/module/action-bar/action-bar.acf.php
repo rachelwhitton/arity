@@ -38,10 +38,10 @@ $fields = [
 
   // Left Email CTA
   acf_link([
-    'label' => 'Email CTA Link',
+    'label' => 'CTA Link (Email or External)',
     'name' => 'action-bar__left_cta',
     'key' => 'field_cta',
-    'instructions' => '',
+    'instructions' => 'Recommended character count max: 30',
     'required' => 0,
     'wrapper' => array (
       'width' => '33',
@@ -59,7 +59,7 @@ $fields = [
     'label' => 'Headline',
     'name' => 'action-bar__center_headline',
     'key' => 'field_center_headline',
-    'instructions' => '',
+    'instructions' => 'Recommended character count max: 70',
     'required' => 0,
     'maxlength' => '',
     'wrapper' => array (
@@ -72,7 +72,7 @@ $fields = [
     'label' => 'Content',
     'name' => 'action-bar__center_content',
     'key' => 'field_center_content',
-    'instructions' => '',
+    'instructions' => 'Recommended character count max: 200',
     'required' => 0,
     'maxlength' => '',
     'wrapper' => array (
@@ -90,7 +90,7 @@ $fields = [
     'label' => 'Headline',
     'name' => 'action-bar__right_headline',
     'key' => 'field_right_headline',
-    'instructions' => '',
+    'instructions' => 'Recommended character count max: 70',
     'required' => 0,
     'maxlength' => '',
     'wrapper' => array (
@@ -103,7 +103,7 @@ $fields = [
     'label' => 'Content',
     'name' => 'action-bar__right_content',
     'key' => 'field_right_content',
-    'instructions' => '',
+    'instructions' => 'Recommended character count max: 200',
     'required' => 0,
     'maxlength' => '',
     'wrapper' => array (
@@ -114,7 +114,7 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Action Bar',
+    'title' => 'Module - Action Bar: 2 column',
     'name' => 'module__action-bar',
     'key' => 'group_module_action-bar',
     'fields' => $fields,

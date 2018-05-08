@@ -15,10 +15,12 @@ Since:              1.0.0
 <div <?php component_class('feature-solution'); ?>>
   <div class="feature-solution__inner">
     <div class="feature-solution__top">
-      <?php element('eyebrow', [
-        'label' => $data['eyebrow'],
-        'h_el' => $data['h_el']
-      ]); ?>
+      <?php if (!empty($data['eyebrow'])) : ?>
+        <?php element('eyebrow', [
+          'label' => $data['eyebrow'],
+          'h_el' => $data['h_el']
+        ]); ?>
+      <?php endif; ?>
       <?php if (!empty($data['image_id'])) : ?>
         <?php element('image', [
           'classes' => 'feature-solution__icon',

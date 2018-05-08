@@ -10,12 +10,26 @@ $fields = [
       'name' => 'hero-b__image_id',
       'key' => 'field_image',
       'return_format' => 'id',
-      'instructions' => '',
+      'instructions' => 'Recommended image size: 2400 x 940 px',
       'required' => 1,
       'preview_size'  => 'thumbnail',
       'wrapper' => array (
         'width' => '50',
       )
+    ]),
+
+    acf_radio([
+      'label' => 'Dot Dash Overlay',
+      'name' => 'hero-b__dotted',
+      'instructions' => '',
+      'choices' => [
+        '1' => 'Enabled (default)',
+        '0' => 'Disabled'
+      ],
+      // 'return_format' => 'id',
+      'wrapper' => array (
+        'width' => '50',
+      ),
     ]),
 
     // Layout
@@ -28,11 +42,10 @@ $fields = [
       'maxlength' => '',
       'allow_null' => 0,
       'ui' => 1,
-
-      'wrapper' => array (
-        'width' => '50',
-      ),
-      'default_value' => 'two-column',
+      // 'wrapper' => array (
+      //   'width' => '50',
+      // ),
+      'default_value' => 'one-column',
       'choices' => [
         'one-column' => 'One Column',
         'two-column' => 'Two Column',
@@ -44,8 +57,8 @@ $fields = [
       'label' => 'Headline',
       'name' => 'hero-b__headline',
       'key' => 'field_headline',
-      'instructions' => '',
-      'required' => 0,
+      'instructions' => 'Recommended character count max: 54',
+      'required' => 1,
       'maxlength' => '',
       'wrapper' => array (
         'width' => '100',
@@ -65,9 +78,30 @@ $fields = [
     acf_textarea([
       'label' => 'Body Copy',
       'name' => 'hero-b__body_copy',
-      'instructions' => '',
+      'instructions' => 'Recommended character count max: 330',
       'required' => 1,
       'new_lines' => 'wpautop',
+      'conditional_logic' => [
+        [
+          [
+            'name' => 'hero-b__--settings_layout',
+            'operator' => '==',
+            'value' => 'one-column'
+          ]
+        ]
+      ]
+    ]),
+
+    // CTA
+    acf_link([
+      'label' => 'CTA Button',
+      'name' => 'hero-b__cta',
+      'instructions' => 'Recommended character count max: 30',
+      'required' => 0,
+      'maxlength' => '',
+      'wrapper' => array (
+        'width' => '50',
+      ),
       'conditional_logic' => [
         [
           [
@@ -99,8 +133,8 @@ $fields = [
       'label' => 'Headline',
       'name' => 'hero-b__left_column_headline',
       'key' => 'field_left_column_headline',
-      'instructions' => '',
-      'required' => 0,
+      'instructions' => 'Recommended character count max: 54',
+      'required' => 1,
       'maxlength' => '',
       'wrapper' => array (
         'width' => '100',
@@ -111,7 +145,7 @@ $fields = [
     acf_textarea([
       'label' => 'Body Copy',
       'name' => 'hero-b__left_column_body_copy',
-      'instructions' => '',
+      'instructions' => 'Recommended character count max: 280',
       'required' => 1,
       'new_lines' => 'wpautop'
     ]),
@@ -136,73 +170,59 @@ $fields = [
       'label' => 'Headline',
       'name' => 'hero-b__right_column_headline',
       'key' => 'field_headline',
-      'instructions' => '',
+      'instructions' => 'Recommended character count max: 100',
       'required' => 0,
       'maxlength' => '',
       'wrapper' => array (
-        'width' => '100',
+        'width' => '66',
       ),
-    ]),
-
-    // Right Column CTA Repeater
-    acf_repeater([
-      'label' => '',
-      'name' => 'hero-b__right_column_links',
-      'sub_fields' => [
-        [
-          // Headline
-          'type' => 'link',
-          'label' => 'CTA Button',
-          'name' => 'link',
-          'instructions' => '',
-          'required' => 0,
-          'maxlength' => ''
-        ]
-      ],
-      'min'         => 1,
-      'max'         => 2,
-      'layout'      => 'block',
-            'button_label'  => 'Add Link',
-    ]),
-
-    // Two Column Tab for Left Column
-    acf_tab([
-      'label' => 'Options',
-      'name' => 'hero-b__options_tab',
-      'conditional_logic' => [
-        [
-          [
-            'name' => 'hero-b__--settings_layout',
-            'operator' => '==',
-            'value' => 'two-column'
-          ]
-        ]
-      ]
     ]),
 
     acf_select([
       'label' => 'Right Column Vertical Alignment',
       'name' => 'hero-b__--settings_right-column-vertical-alignment',
       'key' => 'field_--settings_right_column_vertical_alignment',
-      'instructions' => '',
+      'instructions' => '&nbsp;',
       'required' => 0,
       'maxlength' => '',
       'allow_null' => 0,
       'ui' => 1,
       'wrapper' => array (
-        'width' => '25',
+        'width' => '33',
       ),
       'default_value' => 'top',
       'choices' => [
-        'top' => 'Top',
+        'top' => 'Top (default)',
         'middle' => 'Middle'
       ]
-  ])
+  ]),
+
+    // Right Column CTA Repeater
+    acf_repeater([
+      'label' => '',
+      'name' => 'hero-b__right_column_links',
+      'instructions' => 'If using more than one CTA, try to use similar character counts to prevent odd button sizing.',
+      'sub_fields' => [
+        [
+          // Headline
+          'type' => 'link',
+          'label' => 'CTA Button',
+          'name' => 'link',
+          'instructions' => 'Recommended character count max: 30',
+          'required' => 1,
+          'maxlength' => ''
+        ]
+      ],
+      'min'         => 1,
+      'max'         => 2,
+      'layout'      => 'block',
+      'button_label'  => 'Add Link',
+    ]),
 ];
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Hero B',
+    'title' => 'Module - Hero: Concise',
     'name' => 'module__hero-b',
     'key' => 'group_module_hero-b',
     'fields' => $fields,

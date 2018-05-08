@@ -421,184 +421,184 @@ EOD;
  * @since 1.1.0
  * @return void
  */
-add_action('theme/after_wpfooter', function () {
-
-    if( !empty(WP_ENV) && WP_ENV != 'production' ) {
-        return;
-    }
-
-    echo <<<EOD
-
-<!-- Start Simplifi Tag -->
-<script async src='https://tag.simpli.fi/sifitag/cf95b860-a880-0135-3fd2-067f653fa718'></script>
-<!-- End Simplifi tag -->
-
-EOD;
-}, 101);
+// add_action('theme/after_wpfooter', function () {
+//
+//     if( !empty(WP_ENV) && WP_ENV != 'production' ) {
+//         return;
+//     }
+//
+//     echo <<<EOD
+//
+// <!-- Start Simplifi Tag -->
+// <script async src='https://tag.simpli.fi/sifitag/cf95b860-a880-0135-3fd2-067f653fa718'></script>
+// <!-- End Simplifi tag -->
+//
+// EOD;
+// }, 101);
 
 /**
  * Add DoubleClick global site tag to Head.
  * @since 1.2.0
  * @return void
  */
-$doubleclick_floodlight_id = '8268350';
-add_action('theme/after_wphead', function () use($doubleclick_floodlight_id) {
-
-    if( !empty(WP_ENV) && WP_ENV != 'production' ) {
-        return;
-    }
-
-    echo <<<EOD
-
-<!-- Start DoubleClick -->
-<!--
-Start of global snippet: Please do not remove
-Place this snippet between the <head> and </head> tags on every page of your site.
--->
-<!-- Global site tag (gtag.js) - DoubleClick -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=DC-$doubleclick_floodlight_id"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'DC-$doubleclick_floodlight_id');
-</script>
-<!-- End of global snippet: Please do not remove -->
-<!-- End DoubleClick -->
-
-EOD;
-}, 90);
+// $doubleclick_floodlight_id = '8268350';
+// add_action('theme/after_wphead', function () use($doubleclick_floodlight_id) {
+//
+//     if( !empty(WP_ENV) && WP_ENV != 'production' ) {
+//         return;
+//     }
+//
+//     echo <<<EOD
+//
+// <!-- Start DoubleClick -->
+// <!--
+// Start of global snippet: Please do not remove
+// Place this snippet between the <head> and </head> tags on every page of your site.
+// -->
+// <!-- Global site tag (gtag.js) - DoubleClick -->
+// <script async src="https://www.googletagmanager.com/gtag/js?id=DC-$doubleclick_floodlight_id"></script>
+// <script>
+//   window.dataLayer = window.dataLayer || [];
+//   function gtag(){dataLayer.push(arguments);}
+//   gtag('js', new Date());
+//
+//   gtag('config', 'DC-$doubleclick_floodlight_id');
+// </script>
+// <!-- End of global snippet: Please do not remove -->
+// <!-- End DoubleClick -->
+//
+// EOD;
+// }, 90);
 
 /**
  * Add netmining global site tag to Footer.
  * @since 1.2.0
  * @return void
  */
-$enable_netmining = true;
-add_action('theme/after_wpfooter', function () use($enable_netmining) {
-
-    if( !empty(WP_ENV) && WP_ENV != 'production' ) {
-        return;
-    }
-
-    if(empty($enable_netmining)) {
-        return;
-    }
-
-    echo <<<EOD
-
-<!-- Start Netmining -->
-<script type='text/javascript'>
-(function(){
-var Data = {}
-,i=Data,d=document,u=encodeURIComponent,x=z='',j=d.createElement('script'),
-r=d.referrer,s=d.getElementsByTagName('script')[0];j.type='text/javascript';
-j.async=!0;r&&r.split(/[/:?]/)[3]!=d.location.hostname&&(i.ref=r);for(y in i)
-x+='&'+y+'='+u(i[y]);j.src='//arity.netmng.com/'
-+'?aid=5441&siclientid='+x;s.parentNode.insertBefore(j,s);
-})();
-</script>
-<!-- End Netmining -->
-
-EOD;
-}, 91);
+// $enable_netmining = false;
+// add_action('theme/after_wpfooter', function () use($enable_netmining) {
+//
+//     if( !empty(WP_ENV) && WP_ENV != 'production' ) {
+//         return;
+//     }
+//
+//     if(empty($enable_netmining)) {
+//         return;
+//     }
+//
+//     echo <<<EOD
+//
+// <!-- Start Netmining -->
+// <script type='text/javascript'>
+// (function(){
+// var Data = {}
+// ,i=Data,d=document,u=encodeURIComponent,x=z='',j=d.createElement('script'),
+// r=d.referrer,s=d.getElementsByTagName('script')[0];j.type='text/javascript';
+// j.async=!0;r&&r.split(/[/:?]/)[3]!=d.location.hostname&&(i.ref=r);for(y in i)
+// x+='&'+y+'='+u(i[y]);j.src='//arity.netmng.com/'
+// +'?aid=5441&siclientid='+x;s.parentNode.insertBefore(j,s);
+// })();
+// </script>
+// <!-- End Netmining -->
+//
+// EOD;
+// }, 91);
 
 /**
  * Add DoubleClick event snippet to right after <body> tag. Only for homepage.
  * @since 1.2.0
  * @return void
  */
-add_action('theme/after_body', function () {
-
-    if( !empty(WP_ENV) && WP_ENV != 'production' ) {
-        return;
-    }
-
-    // Only homepage
-    if( !is_front_page() ) {
-        return;
-    }
-
-    // Unique id for cache busting
-    $ord = time();
-
-    echo <<<EOD
-
-<!--
-Start of DoubleClick Floodlight Tag: Please do not remove
-Activity name of this tag: Homepage Counter_FL
-URL of the webpage where the tag is expected to be placed: https://www.arity.com
-This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
-Creation Date: 12/20/2017
--->
-<script type="text/javascript">
-var axel = Math.random() + "";
-var a = axel * 10000000000000;
-document.write('<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=fl;cat=homep0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=' + a + '?" width="1" height="1" alt="" class="sr-only" />');
-</script>
-<noscript>
-<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=fl;cat=homep0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=$ord?" width="1" height="1" alt="" class="sr-only" />
-</noscript>
-<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
-
-EOD;
-}, 100);
+// add_action('theme/after_body', function () {
+//
+//     if( !empty(WP_ENV) && WP_ENV != 'production' ) {
+//         return;
+//     }
+//
+//     // Only homepage
+//     if( !is_front_page() ) {
+//         return;
+//     }
+//
+//     // Unique id for cache busting
+//     $ord = time();
+//
+//     echo <<<EOD
+//
+// <!--
+// Start of DoubleClick Floodlight Tag: Please do not remove
+// Activity name of this tag: Homepage Counter_FL
+// URL of the webpage where the tag is expected to be placed: https://www.arity.com
+// This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+// Creation Date: 12/20/2017
+// -->
+// <script type="text/javascript">
+// var axel = Math.random() + "";
+// var a = axel * 10000000000000;
+// document.write('<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=fl;cat=homep0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=' + a + '?" width="1" height="1" alt="" class="sr-only" />');
+// </script>
+// <noscript>
+// <img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=fl;cat=homep0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=$ord?" width="1" height="1" alt="" class="sr-only" />
+// </noscript>
+// <!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+//
+// EOD;
+// }, 100);
 
 /**
  * Add DoubleClick event snippet to right after <body> tag. Only for CES page.
  * @since 1.2.0
  * @return void
  */
-add_action('theme/after_body', function () {
-
-    if( !empty(WP_ENV) && WP_ENV != 'production' ) {
-        return;
-    }
-
-    // Only homepage
-    if( !is_page('ces-2018') && !is_page('ces2018') ) {
-        return;
-    }
-
-    // Unique id for cache busting
-    $ord = time();
-
-    echo <<<EOD
-
-<!--
-Start of DoubleClick Floodlight Tag: Please do not remove
-Activity name of this tag: CES Homepage Counter
-URL of the webpage where the tag is expected to be placed: https://www.arity.com/ces2018/
-This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
-Creation Date: 12/20/2017
--->
-<script type="text/javascript">
-var axel = Math.random() + "";
-var a = axel * 10000000000000;
-document.write('<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=fl;cat=cesho0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=' + a + '?" width="1" height="1" alt="" class="sr-only" />');
-</script>
-<noscript>
-<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=fl;cat=cesho0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=$ord?" width="1" height="1" alt="" class="sr-only" />
-</noscript>
-<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
-
-<!-- Start Netmining Conversion -->
-<script type='text/javascript'>
-(function(){
-var Conversion = {};
-,i=Conversion,d=document,u=encodeURIComponent,x=z='',j=d.createElement('script'),
-r=d.referrer,s=d.getElementsByTagName('script')[0];j.type='text/javascript';
-j.async=!0;r&&r.split(/[/:?]/)[3]!=d.location.hostname&&(i.ref=r);for(y in i)
-x+='&'+y+'='+u(i[y]);j.src='//arity.netmng.com/conv/'
-+'?aid=5441&siclientid=&cpid=306616898'+x;s.parentNode.insertBefore(j,s);
-})();
-</script>
-<!-- End Netmining Conversion -->
-
-EOD;
-
-}, 100);
+// add_action('theme/after_body', function () {
+//
+//     if( !empty(WP_ENV) && WP_ENV != 'production' ) {
+//         return;
+//     }
+//
+//     // Only homepage
+//     if( !is_page('ces-2018') && !is_page('ces2018') ) {
+//         return;
+//     }
+//
+//     // Unique id for cache busting
+//     $ord = time();
+//
+//     echo <<<EOD
+//
+// <!--
+// Start of DoubleClick Floodlight Tag: Please do not remove
+// Activity name of this tag: CES Homepage Counter
+// URL of the webpage where the tag is expected to be placed: https://www.arity.com/ces2018/
+// This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+// Creation Date: 12/20/2017
+// -->
+// <script type="text/javascript">
+// var axel = Math.random() + "";
+// var a = axel * 10000000000000;
+// document.write('<img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=fl;cat=cesho0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=' + a + '?" width="1" height="1" alt="" class="sr-only" />');
+// </script>
+// <noscript>
+// <img src="https://ad.doubleclick.net/ddm/activity/src=8268350;type=fl;cat=cesho0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=$ord?" width="1" height="1" alt="" class="sr-only" />
+// </noscript>
+// <!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+//
+// <!-- Start Netmining Conversion -->
+// <script type='text/javascript'>
+// (function(){
+// var Conversion = {};
+// ,i=Conversion,d=document,u=encodeURIComponent,x=z='',j=d.createElement('script'),
+// r=d.referrer,s=d.getElementsByTagName('script')[0];j.type='text/javascript';
+// j.async=!0;r&&r.split(/[/:?]/)[3]!=d.location.hostname&&(i.ref=r);for(y in i)
+// x+='&'+y+'='+u(i[y]);j.src='//arity.netmng.com/conv/'
+// +'?aid=5441&siclientid=&cpid=306616898'+x;s.parentNode.insertBefore(j,s);
+// })();
+// </script>
+// <!-- End Netmining Conversion -->
+//
+// EOD;
+//
+// }, 100);
 
 /*
 |-----------------------------------------------------------------

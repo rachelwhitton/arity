@@ -10,7 +10,7 @@ $fields = [
       'name' => 'highlight-block__image_id',
       'key' => 'field_image',
       'return_format' => 'id',
-      'instructions' => '',
+      'instructions' => 'Suggested image size: 192 x 192px',
       'required' => 1,
       'preview_size'  => 'thumbnail',
       'wrapper' => array (
@@ -23,7 +23,7 @@ $fields = [
       'label' => 'Subhead',
       'name' => 'highlight-block__subhead',
       'key' => 'field_subhead',
-      'instructions' => '',
+      'instructions' => 'Recommended max character count: 45<br/> Ideally this would wrap no more than twice on any device.',
       'required' => 1,
       'maxlength' => 70,
       'wrapper' => array (
@@ -36,10 +36,19 @@ $fields = [
       'label' => 'Body Copy',
       'name' => 'highlight-block__body_copy',
       'key' => 'field_body_copy',
-      'instructions' => '',
+      'instructions' => 'Recommended max character count: 140<br/> Because copy here is center-aligned, try to keep it as short as possible.',
       'maxlength' => 190,
       'required' => 0,
       'new_lines' => 'wpautop'
+    ]),
+
+    // CTA
+    acf_link([
+      'label' => 'CTA Button',
+      'name' => 'highlight-block__cta',
+      'key' => 'field_cta',
+      'instructions' => '',
+      'required' => 0
     ]),
 ];
 

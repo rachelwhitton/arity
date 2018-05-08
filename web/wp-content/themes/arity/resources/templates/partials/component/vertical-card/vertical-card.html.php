@@ -8,7 +8,6 @@ namespace App\Theme;
   Last Updated:       12/06/2017
   Since:              1.2.1
 */
-
 ?>
 <?php if (!empty($data['cta']) && $data['button_style'] == 'yellow') : ?>
 <a href="<?= $data['cta']['url']; ?>"<?php if (!empty($data['cta']['target'])) : ?> target="<?= $data['cta']['target']; ?>"<?php endif; ?> <?php component_class('card card--vertical'); ?>>
@@ -33,15 +32,22 @@ namespace App\Theme;
         <?php endif; ?>
         <?= $data['body_copy']; ?>
         <?php if (!empty($data['cta']) && $data['button_style'] == 'blue') : ?>
+          <?php
+              if(!empty($data['cta']['target'])) {
+                $data['cta']['icon'] = 'external';
+              }else{
+                $data['cta']['icon'] = 'arrow-right';
+              }
+          ?>
           <div class="ar-element card__button stack__link">
             <a class="button button--link" href="<?= $data['cta']['url']; ?>"<?php if (!empty($data['cta']['target'])) : ?> target="<?= $data['cta']['target']; ?>"<?php endif; ?>
               data-analytics="<?= $data['subhead']; ?>">
-              <span class="button__icon arrow-right--" role="presentation">
+              <span class="button__icon <?= $data['cta']['icon']; ?>--" role="presentation">
                 <svg class="icon-svg" title="" role="img">
-                    <use xlink:href="#arrow-right"></use>
+                    <use xlink:href="#<?= $data['cta']['icon']; ?>"></use>
                 </svg>
               </span>
-              <span class="button__label"><?= $data['cta']['title']; ?></span>
+              <span class="button__label <?= $data['cta']['icon']; ?>--"><?= $data['cta']['title']; ?></span>
             </a>
           </div>
         <?php endif; ?>

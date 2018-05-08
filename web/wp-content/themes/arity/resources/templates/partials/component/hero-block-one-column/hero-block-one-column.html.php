@@ -14,5 +14,12 @@ namespace App\Theme;
   <<?= $data['h_el']; ?> class="hero-block__header"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
   <div class="hero-block__p type0">
     <?= apply_filters('the_content', $data['body_copy']); ?>
+    <?php if(!empty($data['cta'])) : ?>
+    <p>
+      <?php element('button', array_merge($data['cta'], [
+        'classes' => 'button--primary blue-button--'
+      ])); ?>
+    </p>
+    <?php endif; ?>
   </div>
 </div>

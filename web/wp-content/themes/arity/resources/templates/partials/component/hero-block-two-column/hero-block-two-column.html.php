@@ -23,13 +23,15 @@ namespace App\Theme;
         <div class="align-vertical-middle">
       <?php endif; ?>
       <<?= updateElImportance($data['h_el'], 2); ?> class="hero-block__cta-headline"><?= $data['right_column_headline']; ?></<?= updateElImportance($data['h_el'], 2); ?>>
-      <?php $i=0; foreach ($data['right_column_links'] as $cta) : $i++; ?>
-        <p>
-          <?php element('button', array_merge($cta['link'], [
-            'classes' => 'button--primary blue-button--'
-          ])); ?>
-        </p>
-      <?php endforeach; ?>
+      <?php if(!empty($data['right_column_links'])) : ?>
+        <?php $i=0; foreach ($data['right_column_links'] as $cta) : $i++; ?>
+          <p>
+            <?php element('button', array_merge($cta['link'], [
+              'classes' => 'button--primary blue-button--'
+            ])); ?>
+          </p>
+        <?php endforeach; ?>
+      <?php endif; ?>
       <?php if(!empty($data['--settings_right-column-vertical-alignment']) && $data['--settings_right-column-vertical-alignment'] == 'middle') : ?>
         </div>
       <?php endif; ?>

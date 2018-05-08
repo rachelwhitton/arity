@@ -32,9 +32,9 @@ namespace App\Theme;
           ?>
             <div class="show-mobile">
               <p>
-                <a class="block_link" href="<?= $cta['url']; ?>"<?php if (!empty($cta['target'])) : ?> target="<?= $cta['target']; ?>"<?php endif; ?>>
+                <a class="button block_link <?php if (!empty($cta['icon']) && $cta['icon'] != 'external') : ?>block_link__icon <?php endif; ?>" href="<?= $cta['url']; ?>"<?php if (!empty($cta['target'])) : ?> target="<?= $cta['target']; ?>"<?php endif; ?>>
                   <?php if(!empty($cta['icon'])) : ?>
-                    <span class="button--circle blue-bg--">
+                    <span class="icon-svg <?php if ($cta['icon'] !== 'external') { echo 'button--circle blue-bg--';} else {echo 'action-bar-icon';}?>">
                       <svg class="icon-svg" title="" role="img">
                           <use xlink:href="#<?= $cta['icon']; ?>"></use>
                       </svg>

@@ -48,7 +48,7 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Action Bar w/ Background',
+    'title' => 'Module - Action Bar: Image',
     'name' => 'module__action-bar-w-bkg',
     'key' => 'group_module_action-bar-w-bkg',
     'fields' => $fields,

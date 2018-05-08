@@ -11,4 +11,7 @@ namespace App\Theme;
 */
 ?>
 <div <?php component_class('hero-image'); ?><?php if (!empty($data['background-image'])) : ?> style="background-image: url(<?= $data['background-image']; ?>);"<?php endif; ?>></div>
-<div class="hero-image__overlay"><div class="overlay-inner"></div></div>
+
+<?php if ($data['overlay']) : ?>
+  <div class="hero-image__overlay"><div class="overlay-inner"></div></div>
+<?php endif; ?>

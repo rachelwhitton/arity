@@ -18,7 +18,7 @@ function ttr($atts) {
     $word_count = str_word_count( strip_tags( get_post_field( 'post_content', get_the_ID() ) ) );
   }
 
-  $ttr = floor(($word_count+$excerpt_count) / 200);
+  $ttr = floor(($word_count+$excerpt_count) / 150);
   $ttr = $ttr < 1 ? 1 : $ttr;
    return sprintf(
       __( '%s min read', 'text-domain' ), $ttr

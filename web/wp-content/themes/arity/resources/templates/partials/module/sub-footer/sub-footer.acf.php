@@ -19,7 +19,7 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Sub Footer',
+    'title' => 'Module - Text: Subfooter',
     'name' => 'module__sub-footer',
     'key' => 'group_module_sub-footer',
     'fields' => $fields,

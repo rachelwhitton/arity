@@ -12058,7 +12058,7 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
     -webkit-animation-fill-mode: forwards;
     /* Safari 4.0 - 8.0 */
     animation-fill-mode: forwards;
-    background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
+    background: url("https://www.arity.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
     background-size: 116px;
   }
   .animate #loader li:nth-child(4) {
@@ -12069,7 +12069,7 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
     -webkit-animation-fill-mode: forwards;
     /* Safari 4.0 - 8.0 */
     animation-fill-mode: forwards;
-    background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
+    background: url("https://www.arity.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
     background-size: 116px;
   }
   .animate #loader li:nth-child(5) {
@@ -12097,7 +12097,7 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
     /* Safari 4.0 - 8.0 */
     animation-fill-mode: forwards;
     background-color: rgba(118, 134, 147, 0.2);
-    background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
+    background: url("https://www.arity.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
     background-size: 116px;
   }
   .animate #loader li:nth-child(8) {
@@ -12108,7 +12108,7 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
     /* Safari 4.0 - 8.0 */
     animation-fill-mode: forwards;
     background-color: rgba(118, 134, 147, 0.2);
-    background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
+    background: url("https://www.arity.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
     background-size: 116px;
   }
   .animate #loader li:nth-child(9) {
@@ -12124,7 +12124,7 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
     /* Safari 4.0 - 8.0 */
     animation-fill-mode: forwards;
     background-color: rgba(118, 134, 147, 0.2);
-    background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
+    background: url("https://www.arity.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
     background-size: 116px;
     -webkit-transform: translateX(50px);
             transform: translateX(50px);
@@ -12165,7 +12165,7 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
     -webkit-animation-fill-mode: forwards;
     /* Safari 4.0 - 8.0 */
     animation-fill-mode: forwards;
-    background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
+    background: url("https://www.arity.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
     background-size: 116px;
   }
   .animate #loader li:nth-child(14) {
@@ -12187,7 +12187,7 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
     -webkit-animation-fill-mode: forwards;
     /* Safari 4.0 - 8.0 */
     animation-fill-mode: forwards;
-    /* background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
+    /* background: url("https://www.arity.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
     background-size: 116px; */
   }
   .animate #loader li:nth-child(16) {
@@ -12219,7 +12219,7 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
     -webkit-animation-fill-mode: forwards;
     /* Safari 4.0 - 8.0 */
     animation-fill-mode: forwards;
-    background: url("https://dev.site.arity.vsadev.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
+    background: url("https://www.arity.com/wp-content/themes/arity/dist/img/dots_60.png") repeat 16px -4px;
     background-size: 116px;
   }
   .animate #loader li:nth-child(19) {
@@ -15599,63 +15599,6 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
 
 .module-header__headline-headline {
   margin: 0;
-}
-
-.page-footnote {
-  margin-bottom: 10px;
-  font-size: 12px;
-  line-height: 1.25;
-  color: #63727E;
-  font-style: italic;
-}
-
-.page-footnote__content {
-  position: relative;
-  width: 100%;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
-  max-width: 100%;
-}
-
-@media (min-width: 480px) {
-  .page-footnote__content {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
-
-@media (min-width: 768px) {
-  .page-footnote__content {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
-
-@media (min-width: 961px) {
-  .page-footnote__content {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .page-footnote__content {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .page-footnote__content {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 62.5%;
-            flex: 0 0 62.5%;
-    max-width: 62.5%;
-  }
 }
 
 .career-list {

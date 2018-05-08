@@ -25,32 +25,6 @@ $fields = [
       ]
     ]),
 
-    // Eyebrow
-    acf_text([
-      'label' => 'Eyebrow',
-      'name' => 'text-block__eyebrow',
-      'key' => 'field_eyebrow',
-      'instructions' => '',
-      'required' => 0,
-      'maxlength' => '',
-      'wrapper' => array (
-        'width' => '50',
-      )
-    ]),
-
-    // Headline
-    acf_text([
-      'label' => 'Headline',
-      'name' => 'text-block__headline',
-      'key' => 'field_headline',
-      'instructions' => '',
-      'required' => 0,
-      'maxlength' => '',
-      'wrapper' => array (
-        'width' => '66',
-      )
-    ]),
-
     // Headline Size
     acf_select([
       'label' => 'Headline Size',
@@ -61,9 +35,8 @@ $fields = [
       'maxlength' => '',
       'allow_null' => 0,
       'ui' => 1,
-
       'wrapper' => array (
-        'width' => '33',
+        'width' => '50',
       ),
       'default_value' => 'h3',
       'choices' => [
@@ -71,6 +44,34 @@ $fields = [
         'h3' => 'Medium (h3)',
       ]
     ]),
+
+    // Eyebrow
+    acf_text([
+      'label' => 'Eyebrow',
+      'name' => 'text-block__eyebrow',
+      'key' => 'field_eyebrow',
+      'instructions' => 'Recommended character count max: 42',
+      'required' => 0,
+      'maxlength' => '',
+      'wrapper' => array (
+        'width' => '33',
+      )
+    ]),
+
+    // Headline
+    acf_text([
+      'label' => 'Headline',
+      'name' => 'text-block__headline',
+      'key' => 'field_headline',
+      'instructions' => 'Recommended character count max: 52',
+      'required' => 0,
+      'maxlength' => '',
+      'wrapper' => array (
+        'width' => '66',
+      )
+    ]),
+
+
 
     // Text
     acf_wysiwyg([
@@ -80,11 +81,11 @@ $fields = [
       'instructions' => '',
       'toolbar' => 'simple',
       'media_upload' => 0,
-      'required' => 1,
+      'required' => 0,
       'maxlength' => '',
       'wrapper' => array (
         'width' => '100',
-      ), 
+      ),
       'conditional_logic' => [
         [
           [
@@ -104,11 +105,11 @@ $fields = [
       'instructions' => '',
       'toolbar' => 'center',
       'media_upload' => 0,
-      'required' => 1,
+      'required' => 0,
       'maxlength' => '',
       'wrapper' => array (
         'width' => '100',
-      ), 
+      ),
       'conditional_logic' => [
         [
           [

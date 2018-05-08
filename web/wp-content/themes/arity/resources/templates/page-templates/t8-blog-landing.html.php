@@ -32,7 +32,7 @@ namespace App\Theme;
   $abstract = get_field('abstract');
 ?>
 
-<?php 
+<?php
   $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
   if ( $paged == 1) :
@@ -59,7 +59,7 @@ namespace App\Theme;
        <?php echo $abstract; ?>
       </div>
       <div class="blog-card__date">
-        <?php the_date('F d, Y'); ?>
+        <?php echo get_the_date(); ?>
       </div>
       <div class="blog-card__read"><?= do_shortcode('[ttr]'); ?></div>
     </div>
@@ -82,9 +82,10 @@ wp_reset_postdata();
 <?php
 $promo_set = false;
 if (get_field('module__promo_area')) {
-  $promo_area = get_field('module__promo_area'); 
+  $promo_area = get_field('module__promo_area');
   $promo = array(
     'headline' => $promo_area[0]['promo__headline'],
+    'location' => $promo_area[0]['promo__location'],
     'body_copy' => $promo_area[0]['promo__body_copy'],
     'cta' => $promo_area[0]['promo__cta']
   );
@@ -134,7 +135,7 @@ $args = array(
 );
 
 $wp_query = new \WP_Query( $args );
-//$posts = $query->posts; 
+//$posts = $query->posts;
 
 ?>
 
@@ -157,7 +158,7 @@ $wp_query = new \WP_Query( $args );
 
       if ($rowCount == 2 && $promo_set && $paged == 1) {
         echo '<div class="blog-card__col">';
-        
+
         module('promo', $promo);
 
         echo '</div>';
@@ -169,13 +170,13 @@ $wp_query = new \WP_Query( $args );
   </div><!-- /row -->
 
   <?php
-    // start pagination 
+    // start pagination
     $total = $wp_query->max_num_pages;
     if ( $total > 1 ) {
       // get the current page
       if ( !$current_page = get_query_var('paged') ){
         $current_page = 1;
-      }  
+      }
 
       $links = paginate_links(array(
         'type' => 'array'
@@ -196,7 +197,7 @@ $wp_query = new \WP_Query( $args );
       <?php endif; ?>
 
       <div class="blog-pagination__page-selector">
-        Page 
+        Page
         <select id="blog-pagination">
             <?php
 
@@ -216,7 +217,7 @@ $wp_query = new \WP_Query( $args );
             }
             ?>
         </select>
-        of 
+        of
         <a href="/move/page/<?php echo $total; ?>"><?php echo $total; ?></a>
       </div>
 
@@ -233,7 +234,7 @@ $wp_query = new \WP_Query( $args );
   </div>
 
   <?php
-    } 
+    }
     // end pagination
   ?>
 

@@ -104,7 +104,8 @@ return [
         't5-careers' => 'T5 - Careers',
         't6-contact' => 'T6 - Contact',
         't8-blog-landing' => 'T8 - Blog Landing',
-        't11-new-homepage' => 'T11 - New Homepage'
+        't11-new-homepage' => 'T11 - New Homepage',
+        't20-campaign-landing' => 'T20 - Campaign Landing'
     ],
 
     /*
