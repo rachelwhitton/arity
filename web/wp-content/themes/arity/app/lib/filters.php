@@ -897,7 +897,10 @@ add_filter('template_redirect', function() {
 
     // Determine if should show footer lite
     if(!empty(get_field('enable_footer_lite')) ) {
-        $GLOBALS['THEME_SITE_FOOTER_LITE'] = true;
+        //$GLOBALS['THEME_SITE_FOOTER_LITE'] = true;
+        $GLOBALS['THEME_SITE_FOOTER_LITE'] = array(
+            'menu' => get_field('footer_lite_menu_items')
+        );
     }
 
 
