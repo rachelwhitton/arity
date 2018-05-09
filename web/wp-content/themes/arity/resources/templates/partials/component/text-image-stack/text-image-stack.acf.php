@@ -7,7 +7,7 @@ $fields = [
     // Headline
     acf_text([
       'label' => 'Headline',
-      'name' => 'text-icon-stack__headline',
+      'name' => 'text-image-stack__headline',
       'key' => 'field_headline',
       'instructions' => 'Recommended character count max: 100',
       'required' => 0,
@@ -20,31 +20,31 @@ $fields = [
     // Icon Stack
     acf_repeater([
       'label' => '',
-      'name' => 'text-icon-stack__stacks',
+      'name' => 'text-image-stack__stacks',
       'sub_fields' => [
         [
           // Headline
           'type' => 'clone',
           'label' => '',
-          'name' => 'component__text-w-icon',
+          'name' => 'component__text-w-image',
           'display' => 'group',
           'clone' => [
-              'group_component_text-w-icon'
+              'group_component_text-w-image'
           ]
         ]
       ],
       'min'         => 1,
       'max'         => 100,
       'layout'      => 'block',
-            'button_label'  => 'Add Icon Stack',
+            'button_label'  => 'Add Image Stack',
     ])
 ];
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Component - Text Icon Stack',
-    'name' => 'component__text-icon-stack',
-    'key' => 'group_component_text-icon-stack',
+    'title' => 'Component - Text Image Stack',
+    'name' => 'component__text-image-stack',
+    'key' => 'group_component_text-image-stack',
     'fields' => $fields,
     'location' => [
         [

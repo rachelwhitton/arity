@@ -4,19 +4,19 @@ namespace App\Theme;
 ?>
 <?php
 /*
-  Template Name:      Text with Icon
+  Template Name:      Text with Image
   Template Type:      Component
-  Description:        Text with icon floated to the left
-  Last Updated:       08/03/2017
-  Since:              1.0.0
+  Description:        Text with image floated to the left
+  Last Updated:       05/10/2018
+  Since:              1.9.0
 */
 ?>
 <div <?php component_class('text-icon'); ?>>
-  <?php if (!empty('headline')) : ?>
-    <div class="text-icon__icon">
-      <svg class="icon-svg" title="" role="img">
-        <use xlink:href="#<?= $data['icon']; ?>"></use>
-      </svg>
+  <?php if (!empty($data['image_id'])) : ?>
+    <div class="text-icon__image">
+      <?php element('image', [
+        'id' => $data['image_id']
+      ]); ?>
     </div>
   <?php endif; ?>
   <div class="text-icon__point">

@@ -33,7 +33,39 @@ $fields = [
       'button_label'    => 'Add Component',
       'layouts' => [
         [
-          'label' => 'Icon Only Stack',
+          'label' => 'Text Image Stack',
+          'name' => 'component__text-image-stack',
+          'sub_fields' => [
+            [
+              'type' => 'clone',
+              'label' => 'Text Image Stack',
+              'name' => 'component__text-image-stack',
+              'key' => 'field_component_left_text-image-stack',
+              'display' => 'seamless',
+              'clone' => [
+                  'group_component_text-image-stack'
+              ]
+            ]
+          ]
+        ],
+        [
+          'label' => 'Text Icon Stack',
+          'name' => 'component__text-icon-stack',
+          'sub_fields' => [
+            [
+              'type' => 'clone',
+              'label' => 'Text Icon Stack',
+              'name' => 'component__text-icon-stack',
+              'key' => 'field_component_left_text-icon-stack',
+              'display' => 'seamless',
+              'clone' => [
+                  'group_component_text-icon-stack'
+              ]
+            ]
+          ]
+        ],
+        [
+          'label' => 'Icon Only Stack (Deprecated DO NOT USE)',
           'name' => 'component__icon-only-stack',
           'sub_fields' => [
             [
@@ -67,7 +99,39 @@ $fields = [
       'button_label'    => 'Add Component',
       'layouts' => [
         [
-          'label' => 'Icon Only Stack',
+          'label' => 'Text Image Stack',
+          'name' => 'component__text-image-stack',
+          'sub_fields' => [
+            [
+              'type' => 'clone',
+              'label' => 'Text Image Stack',
+              'name' => 'component__text-image-stack',
+              'key' => 'field_component_right_text-image-stack',
+              'display' => 'seamless',
+              'clone' => [
+                  'group_component_text-image-stack'
+              ]
+            ]
+          ]
+        ],
+        [
+          'label' => 'Text Icon Stack',
+          'name' => 'component__text-icon-stack',
+          'sub_fields' => [
+            [
+              'type' => 'clone',
+              'label' => 'Text Icon Stack',
+              'name' => 'component__text-icon-stack',
+              'key' => 'field_component_right_text-icon-stack',
+              'display' => 'seamless',
+              'clone' => [
+                  'group_component_text-icon-stack'
+              ]
+            ]
+          ]
+        ],
+        [
+          'label' => 'Icon Only Stack (Deprecated DO NOT USE)',
           'name' => 'component__icon-only-stack',
           'sub_fields' => [
             [

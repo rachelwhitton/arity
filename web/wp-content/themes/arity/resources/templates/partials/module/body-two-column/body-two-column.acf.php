@@ -48,6 +48,22 @@ $fields = [
           ]
         ],
         [
+          'label' => 'Text Image Stack',
+          'name' => 'component__text-image-stack',
+          'sub_fields' => [
+            [
+              'type' => 'clone',
+              'label' => 'Text Image Stack',
+              'name' => 'component__text-image-stack',
+              'key' => 'field_component_text-image-stack',
+              'display' => 'seamless',
+              'clone' => [
+                  'group_component_text-image-stack'
+              ]
+            ]
+          ]
+        ],
+        [
           'label' => 'Text Icon Stack',
           'name' => 'component__text-icon-stack',
           'sub_fields' => [
@@ -120,6 +136,7 @@ $fields = [
               'type' => 'image',
               'label' => 'Image',
               'name' => 'element__image',
+              'instructions' => 'Suggested image size: 700 x 400 px',
               'key' => 'field_element__image',
               'display' => 'seamless',
               'clone' => [

@@ -29,7 +29,7 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Component - Icon Only Stack',
+    'title' => 'Component - Icon Only Stack (Deprecated DO NOT USE)',
     'name' => 'component__icon-only-stack',
     'key' => 'group_component_icon-only-stack',
     'fields' => $fields,

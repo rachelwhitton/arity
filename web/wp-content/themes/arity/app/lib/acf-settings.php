@@ -148,10 +148,13 @@ $module_builder->includeACFSettings('highlight-block', 'component');
 $module_builder->includeACFSettings('product-cta', 'component');
 $module_builder->includeACFSettings('product-stats', 'component');
 $module_builder->includeACFSettings('text-icon-stack', 'component');
-$module_builder->includeACFSettings('icon-only-stack', 'component');
+$module_builder->includeACFSettings('text-image-stack', 'component');
 $module_builder->includeACFSettings('text-w-icon', 'component');
+$module_builder->includeACFSettings('text-w-image', 'component');
 $module_builder->includeACFSettings('text-block', 'component');
 
+//to be archived Components
+$module_builder->includeACFSettings('icon-only-stack', 'component');
 
 /*
 |--------------------------------------------------------------------------
