@@ -10,7 +10,7 @@ namespace App\Theme;
   Since:              1.2.2
 */
 ?>
-<div class="accordion-wrapper">
+<div id="accordion-wrapper" class="accordion-wrapper">
   <div class="container accordion-container">
     <div id="accordion" class="accordion" role="tablist">
       <?php if (!empty($data['headline'])) : ?>

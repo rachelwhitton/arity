@@ -12,7 +12,7 @@ namespace App\Theme;
 */
 
 ?>
-<div <?php module_class($data['classes']); ?>>
+<div id="action-bar-w-bkg" <?php module_class($data['classes']); ?>>
   <div class="action-bar-w-bkg__block container">
     <div class="action-bar-w-bkg__row">
       <?php if (!empty($data['left_headline']) || !empty($data['left_content'])) : ?>
