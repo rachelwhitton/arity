@@ -112,22 +112,22 @@ array_multisort($acf_choices_color);
  */
 global $acf_choices_icon;
 $acf_choices_icon = [
-    'driver-safety' => 'Driver Safety',
-    'driving-engine-sdk' => 'Driving Engine SDK',
-    'driving-behavior' => 'Driving Behavior',
-    'driving-score' => 'Driving Score',
-    'solutions' => 'Solutions',
-    'mobile-sensors' => 'Mobile Sensors',
-    'mobility-prequal' => 'Mobility PreQual',
-    'mobility-score' => 'Mobility Score',
-    'mobility-analytics-report' => 'Mobility Analytics Report',
-    'accident-prediction' => 'Accident Prediction',
-    'navigation' => 'Navigation',
-    'safe-alerts' => 'Safe Alerts',
-    'save-money' => 'Save Money',
-    'speedy' => 'Speedy',
-    'vehicle-systems' => 'Vehicle Systems',
+    'safe-alerts' => 'Alert Triangle',
+    'accident-prediction' => 'Car Accident',
+    'speedy' => 'Car SpeedBehavior',
+    'driving-engine-sdk' => 'Device BarChart',
+    'mobile-sensors' => 'Device Sensors',
+    'save-money' => 'Dollar Sign',
+    'driver-safety' => 'Person Shield',
     'person-focus' => 'Person Focus',
+    'solutions' => 'System Circle',
+    'mobility-analytics-report' => 'System Connections',
+    'vehicle-systems' => 'System Spokes',
+    'driving-behavior' => 'Swerve Arrow',
+    'navigation' => 'Navigation Pin',
+    'mobility-prequal' => 'Checkboxes (Mobility PreQual)',
+    'mobility-score' => 'Speedometer (Mobility Score)',
+    'driving-score' => 'Tag (Driving Score)',
 ];
 
 // Sort
