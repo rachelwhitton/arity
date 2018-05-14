@@ -28,6 +28,7 @@ web/*
 !web/robots.txt
 !web/favicon.ico
 !web/.htaccess
+!web/9asu71n2faky32gz4pa345svvw6n47.html
 web/wp-config-local.php
 web/wp-cli.local.yml
 web/wp
