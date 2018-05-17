@@ -7607,6 +7607,17 @@ a.blue-link:focus [class^="icon-"] {
   clear: both;
 }
 
+.text-icon__image {
+  float: left;
+  width: 60px;
+  height: 60px;
+}
+
+.text-icon__image img {
+  max-width: 60px;
+  height: auto;
+}
+
 .text-icon__icon {
   float: left;
   width: 60px;
@@ -7634,6 +7645,10 @@ a.blue-link:focus [class^="icon-"] {
 .text-icon__p {
   margin-top: 0;
   color: #63727E;
+}
+
+.text-icon p {
+  margin-top: 0.5em;
 }
 
 .text-icon p:last-child {
