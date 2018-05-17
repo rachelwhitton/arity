@@ -1039,7 +1039,18 @@ add_filter( 'default_hidden_meta_boxes', function ( $hidden, $screen ) {
 
 //Add Instructions to Featured Image Box
 add_filter( 'admin_post_thumbnail_html', function ( $html ) {
-
     return $html .= '<i>Suggested image size 2400 × 948</i>';
+});
 
+
+add_action( 'edit_form_top', function( $post ) {
+  if($post->post_type == 'post') {
+    echo '<br/><h1 style="font-size: 20px;">Post Title</h1><i>Recommended max character count: 100</i>';
+  }
+});
+
+add_action( 'edit_form_after_title', function( $post ) {
+  if($post->post_type == 'post') {
+    echo '<br/><h1 style="font-size: 20px;">Post Body</h1>';
+  }
 });
