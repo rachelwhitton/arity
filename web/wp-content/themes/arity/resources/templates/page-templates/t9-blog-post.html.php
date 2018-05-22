@@ -14,6 +14,15 @@ namespace App\Theme;
 $category_name = yoast_get_primary_term('category', $post);
 $abstract = get_field('abstract');
 $author = [];
+$blauthor = get_field('author_boo');
+if($blauthor){
+  $blost = get_post($blauthor);
+  $bloouthor = get_fields($blauthor);
+  $author['author-name'] = $blost->post_title;
+  $author['description'] = $bloouthor['author_boo']['biography'];
+  $author['twitter'] = $bloouthor['author_boo']['twitter'];
+  $author['display_image'] = $bloouthor['author_boo']['image'];
+}
 ?>
 
 <?php get_header(); ?>
@@ -24,6 +33,13 @@ $author = [];
     <div class="blog-post newco-insights-category-<?php echo strtolower($category_name) ?>">
       <?php /* Start the Loop */
         while ( have_posts() ) : the_post();
+
+        if(empty($blauthor)){
+          $author['author-name'] = get_the_author();
+          $author['description'] = get_the_author_meta( 'user_description' );
+          $author['twitter'] = get_the_author_meta('twitter');
+          $author['display_image'] = get_avatar( get_the_author_meta( 'ID' ) , 245 );
+        }
       ?>
       <div class="blog-post__content">
         <div class="blog-post__header">
@@ -40,7 +56,7 @@ $author = [];
                 <span><?php echo $category_name ?></span>
               </div>
               <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?><?php  ?>
-              <div class="blog-post__stats"><?php the_author(); echo ' &middot; '; echo get_the_date();?> &middot; <?= do_shortcode('[ttr]'); ?></em>
+              <div class="blog-post__stats"><?php echo $author['author-name']; echo ' &middot; '; echo get_the_date();?> &middot; <?= do_shortcode('[ttr]'); ?></em>
             </div>
           </div>
         </div>
@@ -55,29 +71,7 @@ $author = [];
           </div>
           <div class="row">
             <div class="blog-post__author-col">
-              <div class="blog-post__author-inner">
-                <div class="avatar_col">
-                    <?php echo $author['display_image'] =  get_avatar( get_the_author_meta( 'ID' ) , 245 ); ?>
-                </div>
-                <div class="blog-post__author-info">
-                  <span class="author-name"><?php the_author(); ?> </span>
-
-                  <?php if(get_the_author_meta('twitter')) : ?>
-
-                    <a class="author-twitter" href="https://twitter.com/<?php the_author_meta('twitter'); ?>">@<?php the_author_meta('twitter'); ?></a>
-
-                  <?php endif; ?>
-
-                  <?php if(get_the_author_meta('user_description')) : ?>
-                    <div class="author-description">
-                    <?php
-                      echo $author['description'] = get_the_author_meta( 'user_description' );
-                    ?>
-                    </div>
-                  <?php endif; ?>
-                </div>
-              </div>
-
+              <?php module('blog-author', $author);?>
             </div>
           </div>
         </div>
