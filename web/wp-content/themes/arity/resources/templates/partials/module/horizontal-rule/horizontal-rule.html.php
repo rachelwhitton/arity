@@ -12,7 +12,7 @@ namespace App\Theme;
 */
 
 ?>
-<div <?php module_class('horizontal-rule'); ?>>
+<div <?php module_class('horizontal-rule ar-module--no-margin'); ?>>
   <div class="container line-container">
     <div class="line"></div>
   </div>
