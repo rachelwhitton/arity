@@ -9,6 +9,23 @@ $fields = [
       'name' => 'content-image-block__content_tab',
     ]),
 
+    // Layout
+    acf_select([
+      'label' => 'Layout',
+      'name' => 'content-image-block__content-chooser',
+      'key' => 'content-image-block_content-chooser',
+      'instructions' => '',
+      'required' => 0,
+      'maxlength' => '',
+      'allow_null' => 0,
+      'ui' => 1,
+      'default_value' => 'layout__image',
+      'choices' => [
+        'layout__image' => 'Image Content',
+        'layout__video' => 'Video Content',
+      ]
+    ]),
+
     // Headline
     acf_text([
       'label' => 'Headline',
@@ -22,7 +39,7 @@ $fields = [
       ),
     ]),
 
-    // Round Image
+    // Image
     acf_image([
       'label' => 'Image',
       'name' => 'content-image-block__image_id',
@@ -31,9 +48,39 @@ $fields = [
       'instructions' => 'Suggested image size: 1444 x 780 px ',
       'required' => 1,
       'preview_size'  => 'thumbnail',
+      'conditional_logic' => [
+        [
+          [
+            'name' => 'content-image-block__content-chooser',
+            'operator' => '==',
+            'value' => 'layout__image'
+          ]
+        ]
+      ],
       'wrapper' => array (
         'width' => '50',
       ),
+    ]),
+
+    // Video Url
+    acf_text([
+      'label' => 'Video Url',
+      'name' => 'content-image-block__url',
+      'instructions' => 'Supports Vimeo or Youtube',
+      'required' => 1,
+      'maxlength' => '',
+      'conditional_logic' => [
+        [
+          [
+            'name' => 'content-image-block__content-chooser',
+            'operator' => '==',
+            'value' => 'layout__video'
+          ]
+        ]
+      ],
+      'wrapper' => array (
+        'width' => '50',
+      )
     ]),
 
     // Body Copy
