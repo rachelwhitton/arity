@@ -12,7 +12,7 @@ namespace App\Theme;
 */
 
 ?>
-<div <?php module_class('hero-d'); ?>>
+<div <?php module_class('hero-d ar-module--no-margin'); ?>>
   <div class="hero-d__block">
     <div class="container">
       <?php if(!empty($data['headline'])) : ?>

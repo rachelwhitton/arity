@@ -36,4 +36,6 @@ if (!empty($data['animation'])) {
   $data['animation'] = true;
 }
 
+$data['classes'][] = 'ar-module--no-margin';
+
 return $data;
