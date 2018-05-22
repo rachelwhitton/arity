@@ -12,6 +12,7 @@ if (empty($data['left_headline']) &&
 
 $data['classes'][] = 'action-bar';
 $data['classes'][] = 'colors__bg--blue';
+$data['classes'][] = 'ar-module--no-margin';
 
 if ($data['right_headline'] || $data['right_content']) {
   $data['classes'][] = 'has-divider';

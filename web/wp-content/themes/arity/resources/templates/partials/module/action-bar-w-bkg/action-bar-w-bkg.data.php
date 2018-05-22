@@ -7,6 +7,7 @@ if (empty($data['left_headline']) &&
 }
 
 $data['classes'][] = 'action-bar-w-bkg';
+$data['classes'][] = 'ar-module--no-margin';
 
 if(empty($data['h_el'])) {
   $data['h_el'] = 'h2';

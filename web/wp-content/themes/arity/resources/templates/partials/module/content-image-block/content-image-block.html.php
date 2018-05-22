@@ -17,7 +17,7 @@ namespace App\Theme;
   <?php if (!empty($data['module-headline'])) : ?>
     <div class="container">
       <div class="row">
-        <div <?php module_class($data['headline-alignment']); ?>>
+        <div class="<?= $data['headline-alignment']; ?>">
           <?php if(!empty($data['eyebrow'])) : ?>
             <?php element('eyebrow', array(
               'classes' => 'eyebrow',
