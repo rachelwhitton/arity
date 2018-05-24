@@ -11,8 +11,8 @@ namespace App\Theme;
         	<a href="<?php echo get_permalink($item->ID); ?>">
 	      		<div class="blog-card__image">
 	            <?php if (get_the_post_thumbnail($item->ID )) : ?>
-	                <?php
-			            $url = wp_get_attachment_url( get_post_thumbnail_id($item->ID) );
+	              <?php
+                  $url = wp_get_attachment_image_src( get_post_thumbnail_id($item->ID), $size = 'blog_thumb')[0];
 			            echo '<div class="blog-card__bg-image" style="background: url('. $url.') no-repeat center center; background-size: cover;"></div>';
 			          ?>
 	            <?php else : ?>
