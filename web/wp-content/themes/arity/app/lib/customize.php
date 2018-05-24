@@ -46,7 +46,7 @@ add_action('widgets_init', function () {
 function addImageSizes()
 {
     // add_image_size( 'largest', 1920, 1200 );
-    // add_image_size( 'small', 400, 400 );
+    add_image_size( 'blog_thumb', 880, 400 );
 }
 
 /**

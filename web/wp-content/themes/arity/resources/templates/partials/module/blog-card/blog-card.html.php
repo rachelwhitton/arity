@@ -10,7 +10,7 @@ $category_name = yoast_get_primary_term('category', $post);
     <div class="blog-card__image">
       <?php if (has_post_thumbnail()) : ?>
           <?php
-            $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+            $url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), $size = 'blog_thumb')[0];
             echo '<div class="blog-card__bg-image" style="background: url('. $url.') no-repeat center center; background-size: cover;"></div>';
           ?>
       <?php else : ?>
