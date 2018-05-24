@@ -82,14 +82,13 @@ if($blauthor){
     </div>
   </div>
 
-    <div class="blog-post__related-content">
-      <h2 class="blog-post__related-content-header">You Might Also Like</h2>
-      <?php
-
-        $related['posts'] = get_field('related_posts');
-        module('blog-promo', $related);
-        ?>
-    </div>
+  <div class="blog-post__related-content">
+    <h2 class="blog-post__related-content-header">You Might Also Like</h2>
+    <?php
+      $related['posts'] = get_field('related_posts');
+      module('blog-promo', $related);
+    ?>
+  </div>
 
 </div>
 <?php do_action('theme/after_content') ?>
