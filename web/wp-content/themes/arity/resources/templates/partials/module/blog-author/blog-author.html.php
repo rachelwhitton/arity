@@ -3,7 +3,7 @@
 namespace App\Theme;
 ?>
 
-<div class="blog-post__author-inner">
+<div class="blog-author blog-post__author-inner">
   <div class="avatar_col">
     <?php if(is_int ($data['display_image'])) : ?>
       <?php element('image', [
