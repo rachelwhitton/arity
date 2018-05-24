@@ -14,14 +14,14 @@ namespace App\Theme;
 $category_name = yoast_get_primary_term('category', $post);
 $abstract = get_field('abstract');
 $author = [];
-$blauthor = get_field('author_boo');
+$blauthor = get_field('author_override');
 if($blauthor){
   $blost = get_post($blauthor);
   $bloouthor = get_fields($blauthor);
   $author['author-name'] = $blost->post_title;
-  $author['description'] = $bloouthor['author_boo']['biography'];
-  $author['twitter'] = $bloouthor['author_boo']['twitter'];
-  $author['display_image'] = $bloouthor['author_boo']['image'];
+  $author['description'] = $bloouthor['author']['biography'];
+  $author['twitter'] = $bloouthor['author']['twitter'];
+  $author['display_image'] = $bloouthor['author']['image'];
 }
 ?>
 
