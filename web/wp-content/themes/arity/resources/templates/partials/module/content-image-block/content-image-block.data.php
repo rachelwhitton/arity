@@ -1,6 +1,7 @@
 <?php
 
 $data['classes'][] = 'content-image-block';
+$data['classes'][] = 'block-two-column';
 
 // Background Color Class
 if (!empty($data['bkg_color'])) {

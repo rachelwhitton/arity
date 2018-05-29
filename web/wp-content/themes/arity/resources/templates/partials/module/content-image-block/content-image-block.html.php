@@ -10,14 +10,13 @@ namespace App\Theme;
   Last Updated:       08/01/2017
   Since:              1.0.0
 */
-
 ?>
 
 <div <?php module_class($data['classes']); ?>>
   <?php if (!empty($data['module-headline'])) : ?>
     <div class="container">
       <div class="row">
-        <div <?php module_class($data['headline-alignment']); ?>>
+        <div class="<?= $data['headline-alignment']; ?>">
           <?php if(!empty($data['eyebrow'])) : ?>
             <?php element('eyebrow', array(
               'classes' => 'eyebrow',
@@ -43,12 +42,19 @@ namespace App\Theme;
   <?php endif; ?>
   <div class="container">
     <div class="row">
-      <?php if (!empty($data['image_id'])) : ?>
+      <?php if (!empty($data['image_id']) && $data['content-chooser'] == "layout__image") : ?>
         <div class="content-image-block__col wide-- content-image-block__img-box">
           <?php element('image', [
             'id' => $data['image_id'],
             'classes' => 'img-shadow'
           ]); ?>
+        </div>
+      <?php endif; ?>
+      <?php if (!empty($data['url']) && $data['content-chooser'] == "layout__video") : ?>
+        <div class="content-image-block__col wide-- content-image-block__img-box">
+          <figure class="video-wrapper">
+            <?php the_video($data['url']); ?>
+          </figure>
         </div>
       <?php endif; ?>
       <div class="content-image-block__col narrow--">
