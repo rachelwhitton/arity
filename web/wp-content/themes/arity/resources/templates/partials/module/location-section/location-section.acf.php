@@ -30,6 +30,19 @@ $fields = [
       ),
     ]),
 
+    // Body Copy
+    acf_textarea([
+      'label' => 'Body Copy',
+      'name' => 'location-section__body_copy',
+      'key' => 'field_body_copy',
+      'instructions' => '',
+      'required' => 1,
+      'new_lines' => 'wpautop',
+      'wrapper' => array (
+        'width' => '100',
+      ),
+    ]),
+
     // Round Image
     acf_image([
       'label' => 'Image',
@@ -41,19 +54,6 @@ $fields = [
       'preview_size'  => 'thumbnail',
       'wrapper' => array (
         'width' => '50',
-      ),
-    ]),
-
-    // Body Copy
-    acf_textarea([
-      'label' => 'Body Copy',
-      'name' => 'location-section__body_copy',
-      'key' => 'field_body_copy',
-      'instructions' => '',
-      'required' => 1,
-      'new_lines' => 'wpautop',
-      'wrapper' => array (
-        'width' => '100',
       ),
     ]),
 

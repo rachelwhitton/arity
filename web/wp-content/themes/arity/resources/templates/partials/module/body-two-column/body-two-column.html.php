@@ -12,7 +12,7 @@ namespace App\Theme;
 */
 
 ?>
-<div id="body-two-column" <?php module_class('body-column body-two-column'); ?>>
+<div id="body-two-column" <?php module_class('body-column body-two-column body-two-column-sidebar'); ?>>
   <div class="container">
     <?php if (!empty($data['headline'])) : ?>
       <<?= $data['h_el']; ?> class="type0 typeBold body-column__headline"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
