@@ -11,7 +11,7 @@ $fields = [
 
     // Layout
     acf_select([
-      'label' => 'Layout',
+      'label' => 'Media type',
       'name' => 'content-image-block__content-chooser',
       'key' => 'content-image-block_content-chooser',
       'instructions' => '',
@@ -21,8 +21,8 @@ $fields = [
       'ui' => 1,
       'default_value' => 'layout__image',
       'choices' => [
-        'layout__image' => 'Image Content',
-        'layout__video' => 'Video Content',
+        'layout__image' => 'Image',
+        'layout__video' => 'Video',
       ]
     ]),
 
