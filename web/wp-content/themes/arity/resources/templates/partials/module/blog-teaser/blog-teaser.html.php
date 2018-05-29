@@ -2,67 +2,67 @@
 
 namespace App\Theme;
 ?>
-<div class="module blog-teaser">
-<div class="container">
-  <div class="row">
-    <div class="blog-teaser__intro anim-ready">
-      <?php if (!empty($data['eyebrow'])) : ?>
-        <?php element('eyebrow', array(
-          'classes' => 'eyebrow',
-          'label' => $data['eyebrow']
-        )); ?>
-      <?php endif; ?>
-      <?php if (!empty($data['headline'])) : ?>
-        <?php element('headline', array(
-              'classes' => 'blog-teaser__title',
-              'headline' => $data['headline']
-            )); ?>
-      <?php endif; ?>
+<div class="ar-module blog-teaser">
+  <div class="container">
+
+    <div class="row">
+      <div class="blog-teaser__intro anim-ready">
+        <?php if (!empty($data['eyebrow'])) : ?>
+          <?php element('eyebrow', array(
+            'classes' => 'eyebrow',
+            'label' => $data['eyebrow']
+          )); ?>
+        <?php endif; ?>
+        <?php if (!empty($data['headline'])) : ?>
+          <?php element('headline', array(
+            'classes' => 'blog-teaser__title',
+            'headline' => $data['headline']
+          )); ?>
+        <?php endif; ?>
+      </div>
     </div>
-  </div>
 
-<div class="row">
-
-  <?php
-    $page = get_page_by_path("move");
-    $feature_id = 0;
-    $args = array(
-      'posts_per_page' => 3
-    );
-    if ($page) {
-        $test = get_field('featured_blog_post', $page->ID);//747);
-        $feature_id = $test->ID;
-        $post = $test;
-        setup_postdata( $post );
-
+    <div class="row">
+      <?php
+        $page = get_page_by_path("move");
+        $feature_id = 0;
         $args = array(
-          'posts_per_page' => 2,
-          'post__not_in' => array($feature_id)
+          'posts_per_page' => 3
         );
+        if ($page) {
+            $test = get_field('featured_blog_post', $page->ID);//747);
+            $feature_id = $test->ID;
+            $post = $test;
+            setup_postdata( $post );
 
-        component('teaser-blog-card');
-    }
-  ?>
+            $args = array(
+              'posts_per_page' => 2,
+              'post__not_in' => array($feature_id)
+            );
 
-  <?php
-    $wp_query = new \WP_Query( $args );
-  ?>
+            component('teaser-blog-card');
+        }
+      ?>
 
-    <?php if ( $wp_query->have_posts() ) : ?>
+      <?php
+        $wp_query = new \WP_Query( $args );
+      ?>
 
-    <?php
-    while ( $wp_query->have_posts() ) :
-      $wp_query->the_post();
-    ?>
+        <?php if ( $wp_query->have_posts() ) : ?>
 
-    <?php component('teaser-blog-card'); ?>
+        <?php
+        while ( $wp_query->have_posts() ) :
+          $wp_query->the_post();
+        ?>
 
-    <?php
-      endwhile; // End of the loop.
-    ?>
+        <?php component('teaser-blog-card'); ?>
 
-    <?php endif; ?>
+        <?php
+          endwhile; // End of the loop.
+        ?>
 
-  </div><!-- /row -->
-</div>
+        <?php endif; ?>
+
+    </div><!-- /row -->
+  </div>
 </div>
