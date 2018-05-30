@@ -14,7 +14,7 @@ namespace App\Theme;
 
 <div <?php module_class($data['classes']); ?>>
   <?php if (!empty($data['module-headline'])) : ?>
-    <div class="container">
+    <div class="container module-intro">
       <div class="row">
         <div class="<?= $data['headline-alignment']; ?>">
           <?php if(!empty($data['eyebrow'])) : ?>
