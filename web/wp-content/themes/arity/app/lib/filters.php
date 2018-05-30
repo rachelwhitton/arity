@@ -1067,7 +1067,8 @@ add_action( 'edit_form_after_title', function( $post ) {
 
 add_filter('manage_posts_columns', function ( $columns ) {
   unset(
-    $columns['author']
+    $columns['author'],
+    $columns['comments']
   );
 
   $new_columns = array(
