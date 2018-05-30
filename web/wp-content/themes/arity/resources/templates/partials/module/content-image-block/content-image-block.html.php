@@ -51,7 +51,7 @@ namespace App\Theme;
         </div>
       <?php endif; ?>
       <?php if (!empty($data['url']) && $data['content-chooser'] == "layout__video") : ?>
-        <div class="content-image-block__col wide-- content-image-block__img-box">
+        <div class="content-image-block__col wide--">
           <figure class="video-wrapper">
             <?php the_video($data['url']); ?>
           </figure>
