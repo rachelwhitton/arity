@@ -11,7 +11,7 @@ namespace App\Theme;
   Since:              1.0.0
 */
 ?>
-<div <?php module_class('error-content'); ?>>
+<div <?php module_class('error-content ar-module--no-margin'); ?>>
   <div class="container">
     <div class="row">
       <?php if (!empty($data['headline'])) : ?>
