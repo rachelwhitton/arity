@@ -675,8 +675,9 @@ add_filter('body_class', function (array $classes, array $class=array()) {
         $classes[] = 'template--error404';
     }
 
-    if ( is_user_logged_in() )
-		$classes[] = 'logged-in';
+    if ( is_user_logged_in() ){
+      $classes[] = 'logged-in';
+    }
 
     // Add environment class
     if (WP_ENV && WP_ENV != 'production') {
@@ -1063,3 +1064,29 @@ add_action( 'edit_form_after_title', function( $post ) {
     echo '<br/><h1 style="font-size: 20px;">Post Body</h1>';
   }
 });
+
+add_filter('manage_posts_columns', function ( $columns ) {
+  unset(
+    $columns['author']
+  );
+
+  $new_columns = array(
+    'author' => __('WP Author', 'ThemeName')
+  );
+
+  $columns['custom_author']  = 'Display Author';
+  $columns = array_merge($columns, $new_columns);
+  return $columns;
+});
+
+add_action( 'manage_posts_custom_column', function ( $column_name, $post_id ) {
+    if( $column_name == 'custom_author' ) {
+        $blauthor_id = get_post_meta( $post_id, 'author_override', true );
+        if($blauthor_id){
+          $blost = get_post($blauthor_id);
+          echo $blost->post_title;
+        }else{
+          echo "None Set";
+        }
+    }
+}, 10, 2 );
