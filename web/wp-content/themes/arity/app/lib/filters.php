@@ -1068,16 +1068,17 @@ add_action( 'edit_form_after_title', function( $post ) {
 add_filter('manage_posts_columns', function ( $columns ) {
   unset(
     $columns['author'],
-    $columns['comments']
+    $columns['comments'],
+    $columns['date']
   );
 
   $new_columns = array(
-    'author' => __('WP Author', 'ThemeName')
+    'custom_author' => __('Display Author', 'ThemeName'),
+    'author' => __('WP Author', 'ThemeName'),
+    'date' => __('Date', 'ThemeName'),
   );
 
-  $columns['custom_author']  = 'Display Author';
-  $columns = array_merge($columns, $new_columns);
-  return $columns;
+  return array_merge($columns, $new_columns);
 });
 
 add_action( 'manage_posts_custom_column', function ( $column_name, $post_id ) {
