@@ -114,6 +114,18 @@ add_action('template_redirect', function () {
 });
 
 /**
+ * Without this redirect, weird urls will be indexed
+ * @since 1.0.0
+ * @return void
+ */
+add_action('template_redirect', function () {
+    if ( is_home() && !get_option('page_for_posts') ) {
+      wp_redirect(home_url('/'));
+      exit;
+    }
+});
+
+/**
  * Remove the tools admin link for editors.
  * @since 1.0.0
  * @return void
