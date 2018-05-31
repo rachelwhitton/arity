@@ -18,8 +18,7 @@ namespace App\Theme;
 <div id="main" class="site-content">
 
   <div class="blog-header">
-    <h1><?php echo get_the_title(); ?></h1>
-    <div class="blog-brand">a blog by <span>Arity</span></div>
+    <h1><?php echo get_the_title(); ?> <div class="blog-brand">a blog by <span>Arity</span></div></h1>
   </div>
 
 <?php
@@ -53,7 +52,7 @@ namespace App\Theme;
         <span><?php echo $category_name; ?></span>
       </div>
       <a class="blog-card__link" href="<?php echo get_permalink(); ?>">
-        <?php the_title('<h1 class="feature-card__title">','</h1>'); ?>
+        <?php the_title('<h2 class="feature-card__title">','</h2>'); ?>
       </a>
       <div class="blog-card__excerpt">
        <?php echo $abstract; ?>
@@ -71,10 +70,7 @@ namespace App\Theme;
 
 <?php
   $feature_id = get_the_id();
-
-
-wp_reset_postdata();
-
+  wp_reset_postdata();
 ?>
 
 <div class="container">
