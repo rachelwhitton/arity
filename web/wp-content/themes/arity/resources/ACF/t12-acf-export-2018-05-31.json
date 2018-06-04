@@ -1,0 +1,230 @@
+[
+    {
+        "key": "group_5b103af54d92a",
+        "title": "T12 Privacy Policy",
+        "fields": [
+            {
+                "key": "field_5b103af55bc3b",
+                "label": "Hero C",
+                "name": "module__hero-c",
+                "type": "clone",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "clone": [
+                    "group_module_hero-c"
+                ],
+                "display": "group",
+                "layout": "block",
+                "prefix_label": 0,
+                "prefix_name": 0
+            },
+            {
+                "key": "field_5b103af55bc4d",
+                "label": "Content",
+                "name": "modules",
+                "type": "flexible_content",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layouts": {
+                    "5b103b72fd32f": {
+                        "key": "5b103b72fd32f",
+                        "name": "module__body-inset-ten-col",
+                        "label": "Text: Standard",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_5b103b77fd330",
+                                "label": "",
+                                "name": "module__body-inset-ten-col",
+                                "type": "clone",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "clone": [
+                                    "group_module_body-inset-ten-col"
+                                ],
+                                "display": "seamless",
+                                "layout": "block",
+                                "prefix_label": 0,
+                                "prefix_name": 0
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "598e399b531ad": {
+                        "key": "598e399b531ad",
+                        "name": "module__content-image-block",
+                        "label": "Content Image Block",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_5b103af564756",
+                                "label": "",
+                                "name": "module__content-image-block",
+                                "type": "clone",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "clone": [
+                                    "group_module_content-image-block"
+                                ],
+                                "display": "seamless",
+                                "layout": "block",
+                                "prefix_label": 0,
+                                "prefix_name": 0
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "598e39ed531b0": {
+                        "key": "598e39ed531b0",
+                        "name": "module__contact-form-w-cta",
+                        "label": "Contact Form w\/ CTA",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_5b103af564782",
+                                "label": "",
+                                "name": "module__contact-form-w-cta",
+                                "type": "clone",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "clone": [
+                                    "group_module_contact-form-w-cta"
+                                ],
+                                "display": "seamless",
+                                "layout": "block",
+                                "prefix_label": 0,
+                                "prefix_name": 0
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "5994b6e2b7114": {
+                        "key": "5994b6e2b7114",
+                        "name": "module__module-header",
+                        "label": "Module Header",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_5b103af56479a",
+                                "label": "",
+                                "name": "module__module-header",
+                                "type": "clone",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "clone": [
+                                    "group_module_module-header"
+                                ],
+                                "display": "seamless",
+                                "layout": "block",
+                                "prefix_label": 0,
+                                "prefix_name": 0
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "5a28180a551aa": {
+                        "key": "5a28180a551aa",
+                        "name": "module__action-bar-one-col-cta",
+                        "label": "Action Bar One Column CTA",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_5b103af5647b0",
+                                "label": "",
+                                "name": "module__action-bar-one-col-cta",
+                                "type": "clone",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "clone": [
+                                    "group_module_action-bar-one-col-cta"
+                                ],
+                                "display": "seamless",
+                                "layout": "block",
+                                "prefix_label": 0,
+                                "prefix_name": 0
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    }
+                },
+                "button_label": "Add Module",
+                "min": "",
+                "max": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "page"
+                },
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "t12-privacy-policy"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "acf_after_title",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": [
+            "the_content",
+            "custom_fields",
+            "format",
+            "featured_image"
+        ],
+        "active": 1,
+        "description": ""
+    }
+]

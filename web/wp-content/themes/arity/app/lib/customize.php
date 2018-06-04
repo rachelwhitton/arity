@@ -14,6 +14,7 @@ function registerMenus()
     register_nav_menus([
         'header_primary' => __('Header Primary Navigation', config('textdomain')),
         'footer_copyright' => __('Footer Copyright Navigation', config('textdomain')),
+        'privacy_selector' => __('Multi-Language Privacy Selector', config('textdomain')),
     ]);
 }
 
