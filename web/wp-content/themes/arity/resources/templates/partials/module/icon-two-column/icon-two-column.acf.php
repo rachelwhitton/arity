@@ -153,7 +153,7 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Icon Two Column',
+    'title' => 'Module - Block: Content icon pair: 2 column',
     'name' => 'module__icon-two-column',
     'key' => 'group_module_icon-two-column',
     'fields' => $fields,
