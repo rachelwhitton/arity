@@ -23,6 +23,8 @@ $fields = [
         'name' => 'generic-form-container__description',
         'key' => 'field_content',
         'instructions' => '',
+        'toolbar' => 'basic',
+        'media_upload' => 0,
         'required' => 0,
         'maxlength' => '',
         'wrapper' => array (
@@ -36,6 +38,7 @@ $fields = [
       'instructions' => '',
       'required' => 0,
       'min' => 1,
+      'max' => 1,
       'button_label'    => 'Add Form',
       'layouts' => [
 
