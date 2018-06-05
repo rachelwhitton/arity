@@ -9,7 +9,7 @@ $fields = [
       'label' => 'Headline',
       'name' => 'feature-solution-block__headline',
       'key' => 'field_headline',
-      'instructions' => '',
+      'instructions' => 'Recommended character count max: 100',
       'required' => 1,
       'maxlength' => ''
     ]),

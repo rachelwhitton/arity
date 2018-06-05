@@ -4,10 +4,11 @@ namespace App\Theme;
 // ACF Fields
 $fields = [
   acf_message([
-    'label' => 'Careers RSS Feed',
+    'label' => '',
     'name' => 'career-list__placeholder',
     'key' => 'field_placeholder',
     'message' => '',
+    'instructions' => 'Dynamically generates career list based on an RSS Feed.',
   ]),
 ];
 
