@@ -21,6 +21,8 @@ namespace App\Theme;
     <div class="email-form__content">
       <?= apply_filters('the_content', $data['description']); ?>
     </div>
-    <?php the_partials($data['content']); ?>
+    <div class="ar-module">
+      <?php the_partials($data['content']); ?>
+    </div>
   </div>
 </div>
