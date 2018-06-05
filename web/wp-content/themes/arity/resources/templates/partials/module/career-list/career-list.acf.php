@@ -14,7 +14,7 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Career List',
+    'title' => 'Module - Block: Careers list',
     'name' => 'module__career-list',
     'key' => 'group_module_career-list',
     'fields' => $fields,
