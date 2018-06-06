@@ -8,8 +8,8 @@ $fields = [
     acf_select([
       'label' => 'Category',
       'name' => 'blog-promo__term',
-      'instructions' => '',
-      'required' => 1,
+      'instructions' => 'Select an Author to Display - overrides WP Author',
+      'required' => 0,
       'maxlength' => '',
       'wrapper' => array (
         'width' => '33',

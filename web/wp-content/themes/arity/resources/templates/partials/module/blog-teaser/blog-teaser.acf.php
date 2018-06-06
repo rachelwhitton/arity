@@ -10,7 +10,7 @@ $fields = [
       'label' => 'Eyebrow',
       'name' => 'blog-teaser__eyebrow',
       'key' => 'field_eyebrow',
-      'instructions' => 'Text above the headline',
+      'instructions' => 'Recommended max character count: 42',
       'required' => 0,
       'maxlength' => '',
       'wrapper' => array (
@@ -23,9 +23,20 @@ $fields = [
       'label' => 'Headline',
       'name' => 'blog-teaser__headline',
       'key' => 'field_headline',
-      'instructions' => '&nbsp;',
+      'instructions' => 'Recommended max character count: 70',
       'required' => 1,
       'maxlength' => '',
+      'wrapper' => array (
+        'width' => '33',
+      ),
+    ]),
+
+    // Headline
+    acf_message([
+       'label' => '',//'Three Blog Promos',
+      'name' => 'blog-teaser__message',
+      'instructions' => 'Dynamically generates two most recent, and one featured blog post.',
+      'message' => '',
       'wrapper' => array (
         'width' => '33',
       ),

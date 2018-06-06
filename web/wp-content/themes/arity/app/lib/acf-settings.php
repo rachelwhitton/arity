@@ -178,7 +178,6 @@ $module_builder->includeACFSettings('hero-d', 'module');
 $module_builder->includeACFSettings('block-cards', 'module');
 $module_builder->includeACFSettings('block-highlights', 'module');
 $module_builder->includeACFSettings('promo', 'module');
-$module_builder->includeACFSettings('promo-section', 'module');
 $module_builder->includeACFSettings('location-section', 'module');
 $module_builder->includeACFSettings('vertical-cards-block', 'module');
 $module_builder->includeACFSettings('horizontal-card-split', 'module');
@@ -186,10 +185,14 @@ $module_builder->includeACFSettings('career-list', 'module');
 $module_builder->includeACFSettings('action-bar', 'module');
 $module_builder->includeACFSettings('action-bar-one-col-cta', 'module');
 $module_builder->includeACFSettings('action-bar-w-bkg', 'module');
+$module_builder->includeACFSettings('action-bar-map', 'module');
 $module_builder->includeACFSettings('sub-footer', 'module');
 $module_builder->includeACFSettings('icon-two-column', 'module');
 $module_builder->includeACFSettings('horizontal-rule', 'module');
 $module_builder->includeACFSettings('video', 'module');
+
+//safe to archive?
+//$module_builder->includeACFSettings('promo-section', 'module');
 
 //archived Modules
 // $module_builder->includeACFSettings('body-intro', 'module');

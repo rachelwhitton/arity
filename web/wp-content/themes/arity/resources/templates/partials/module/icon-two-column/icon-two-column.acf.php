@@ -9,7 +9,7 @@ $fields = [
       'label' => 'Headline',
       'name' => 'icon-two-column__headline',
       'key' => 'field_headline',
-      'instructions' => '',
+      'instructions' => 'Recommended character count max: 100',
       'required' => 0,
       'maxlength' => '',
       'wrapper' => array (
@@ -153,7 +153,7 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Icon Two Column',
+    'title' => 'Module - Block: Content icon pair: 2 column',
     'name' => 'module__icon-two-column',
     'key' => 'group_module_icon-two-column',
     'fields' => $fields,

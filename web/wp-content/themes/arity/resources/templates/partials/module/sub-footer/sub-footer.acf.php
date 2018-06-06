@@ -9,6 +9,7 @@ $fields = [
     'name' => 'sub-footer__content',
     'key' => 'field_content',
     'instructions' => '',
+    'media_upload' => 0,
     'required' => 1,
     'maxlength' => '',
     'wrapper' => array (

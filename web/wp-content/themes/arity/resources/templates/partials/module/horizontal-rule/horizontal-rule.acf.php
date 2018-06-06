@@ -3,7 +3,13 @@ namespace App\Theme;
 
 // ACF Fields
 $fields = [
-
+  acf_message([
+    'label' => '',
+    'name' => 'horizontal-rule__placeholder',
+    'key' => 'field_placeholder',
+    'message' => '',
+    'instructions' => 'Inserts a line separator.',
+  ]),
 ];
 
 // ACF Field Group

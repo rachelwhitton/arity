@@ -114,6 +114,18 @@ add_action('template_redirect', function () {
 });
 
 /**
+ * Without this redirect, weird urls will be indexed
+ * @since 1.0.0
+ * @return void
+ */
+add_action('template_redirect', function () {
+    if ( is_home() && !get_option('page_for_posts') ) {
+      wp_redirect(home_url('/'));
+      exit;
+    }
+});
+
+/**
  * Remove the tools admin link for editors.
  * @since 1.0.0
  * @return void
@@ -1025,13 +1037,13 @@ EOD;
 // custom WYSIWYG filter
 add_filter( 'acf/fields/wysiwyg/toolbars' , function( $toolbars )
 {
-    // Simple toolbar with basic text formatting
-    $toolbars['Simple' ] = array();
-    $toolbars['Simple' ][1] = array('bold' , 'italic' , 'link' , 'bullist' , 'numlist' );
+    // Limited toolbar with limited text formatting
+    $toolbars['Limited' ] = array();
+    $toolbars['Limited' ][1] = array('bold' , 'italic' , 'link' , 'bullist' , 'numlist' );
 
-    // Toolbar for centered text blocks
-    $toolbars['Center' ] = array();
-    $toolbars['Center' ][1] = array('bold' , 'italic' , 'link' );
+    // Basic Toolbar with three text formatting options
+    $toolbars['Basic' ] = array();
+    $toolbars['Basic' ][1] = array('bold' , 'italic' , 'link' );
 
     // return $toolbars - IMPORTANT!
     return $toolbars;

@@ -1,6 +1,15 @@
 <?php
 namespace App\Theme;
-
+// ACF Fields
+$fields = [
+  acf_message([
+    'label' => '',
+    'name' => 'email-form__placeholder',
+    'key' => 'field_placeholder',
+    'message' => '',
+    'instructions' => 'Generates form fields.',
+  ]),
+];
 
 // ACF Field Group
 acf_field_group([

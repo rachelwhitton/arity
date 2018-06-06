@@ -19,7 +19,7 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Video',
+    'title' => 'Module - Block: Video',
     'name' => 'module__video',
     'key' => 'group_module_video',
     'fields' => $fields,

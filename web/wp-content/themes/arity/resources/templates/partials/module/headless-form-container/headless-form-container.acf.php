@@ -17,6 +17,7 @@ $fields = [
       'instructions' => '',
       'required' => 0,
       'min' => 1,
+      'max' => 1,
       'button_label'    => 'Add Form',
       'layouts' => [
 

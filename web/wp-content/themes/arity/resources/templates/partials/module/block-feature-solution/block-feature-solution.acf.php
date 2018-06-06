@@ -7,7 +7,7 @@ $fields = [
     // Headline
     acf_text([
       'label' => 'Headline',
-      'name' => 'feature-solution-block__headline',
+      'name' => 'block-feature-solution__headline',
       'key' => 'field_headline',
       'instructions' => 'Recommended character count max: 100',
       'required' => 1,
@@ -17,7 +17,7 @@ $fields = [
     // Repeater: Component Feature Solution Blocks
     acf_repeater([
       'label' => '',
-      'name' => 'feature-solution-block__blocks',
+      'name' => 'block-feature-solution__blocks',
       'sub_fields' => [
         [
           // Headline
@@ -40,9 +40,9 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Feature Solution Block',
-    'name' => 'module__feature-solution-block',
-    'key' => 'group_module_feature-solution-block',
+    'title' => 'Module - Block: Feature Solution',
+    'name' => 'module__block-feature-solution',
+    'key' => 'group_module_block-feature-solution',
     'fields' => $fields,
     'location' => [
         [

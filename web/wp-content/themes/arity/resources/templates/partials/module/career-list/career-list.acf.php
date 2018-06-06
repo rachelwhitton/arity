@@ -4,16 +4,17 @@ namespace App\Theme;
 // ACF Fields
 $fields = [
   acf_message([
-    'label' => 'Careers RSS Feed',
+    'label' => '',
     'name' => 'career-list__placeholder',
     'key' => 'field_placeholder',
     'message' => '',
+    'instructions' => 'Dynamically generates career list based on an RSS Feed.',
   ]),
 ];
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Career List',
+    'title' => 'Module - Block: Careers list',
     'name' => 'module__career-list',
     'key' => 'group_module_career-list',
     'fields' => $fields,
