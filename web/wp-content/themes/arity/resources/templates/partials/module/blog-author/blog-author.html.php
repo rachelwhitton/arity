@@ -18,7 +18,7 @@ namespace App\Theme;
     <span class="author-name"><?= $data['author-name']; ?> </span>
 
     <?php if(!empty($data['twitter'])) : ?>
-      <a class="author-twitter" href="https://twitter.com/<?= $data['twitter']; ?>">@<?= $data['twitter']; ?></a>
+      <a class="author-twitter" target="_blank" href="https://twitter.com/<?= $data['twitter']; ?>">@<?= $data['twitter']; ?></a>
     <?php endif; ?>
 
     <?php if(!empty($data['description'])) : ?>
