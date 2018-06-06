@@ -109,7 +109,7 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Headless Form Container',
+    'title' => 'Module - Form: Container (Headless)',
     'name' => 'module__headless-form-container',
     'key' => 'group_module_headless-form-container',
     'fields' => $fields,

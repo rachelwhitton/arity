@@ -170,15 +170,15 @@ $module_builder->includeACFSettings('blog-teaser', 'module');
 $module_builder->includeACFSettings('generic-form-container', 'module');
 $module_builder->includeACFSettings('headless-form-container', 'module');
 $module_builder->includeACFSettings('content-image-block', 'module');
-$module_builder->includeACFSettings('feature-solution-block', 'module');
 $module_builder->includeACFSettings('hero-a', 'module');
 $module_builder->includeACFSettings('hero-b', 'module');
 $module_builder->includeACFSettings('hero-c', 'module');
 $module_builder->includeACFSettings('hero-d', 'module');
 $module_builder->includeACFSettings('block-cards', 'module');
+$module_builder->includeACFSettings('block-feature-solution', 'module');
 $module_builder->includeACFSettings('block-highlights', 'module');
+$module_builder->includeACFSettings('block-video', 'module');
 $module_builder->includeACFSettings('promo', 'module');
-$module_builder->includeACFSettings('location-section', 'module');
 $module_builder->includeACFSettings('vertical-cards-block', 'module');
 $module_builder->includeACFSettings('horizontal-card-split', 'module');
 $module_builder->includeACFSettings('career-list', 'module');
@@ -189,10 +189,11 @@ $module_builder->includeACFSettings('action-bar-map', 'module');
 $module_builder->includeACFSettings('sub-footer', 'module');
 $module_builder->includeACFSettings('icon-two-column', 'module');
 $module_builder->includeACFSettings('horizontal-rule', 'module');
-$module_builder->includeACFSettings('video', 'module');
 
-//safe to archive?
-//$module_builder->includeACFSettings('promo-section', 'module');
+//archive candidate
+$module_builder->includeACFSettings('video', 'module');
+$module_builder->includeACFSettings('location-section', 'module');
+$module_builder->includeACFSettings('feature-solution-block', 'module');
 
 //archived Modules
 // $module_builder->includeACFSettings('body-intro', 'module');
@@ -211,6 +212,7 @@ $module_builder->includeACFSettings('video', 'module');
 // $module_builder->includeACFSettings('highlights', 'module');
 // $module_builder->includeACFSettings('promo-strip', 'module');
 // $module_builder->includeACFSettings('module-header', 'module');
+//$module_builder->includeACFSettings('promo-section', 'module');
 
 
 /*

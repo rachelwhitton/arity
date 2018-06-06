@@ -131,7 +131,7 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Form Container',
+    'title' => 'Module - Form: Container',
     'name' => 'module__generic-form-container',
     'key' => 'group_module_generic-form-container',
     'fields' => $fields,

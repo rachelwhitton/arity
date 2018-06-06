@@ -41,7 +41,7 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Accordion',
+    'title' => 'Module - Block: Accordion',
     'name' => 'module__accordion',
     'key' => 'group_module_accordion',
     'fields' => $fields,

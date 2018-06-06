@@ -7,7 +7,7 @@ $fields = [
     // Video Url
     acf_text([
       'label' => 'Video Url',
-      'name' => 'video__url',
+      'name' => 'block-video__url',
       'instructions' => 'Supports Vimeo or Youtube',
       'required' => 1,
       'maxlength' => '',
@@ -19,9 +19,9 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - zz: Video',
-    'name' => 'module__video',
-    'key' => 'group_module_video',
+    'title' => 'Module - Block: Video',
+    'name' => 'module__block-video',
+    'key' => 'group_module_block-video',
     'fields' => $fields,
     'location' => [
         [
