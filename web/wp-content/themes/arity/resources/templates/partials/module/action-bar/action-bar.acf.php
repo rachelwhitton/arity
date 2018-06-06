@@ -50,40 +50,6 @@ $fields = [
     ),
   ]),
 
-  // Center Tab
-  acf_tab([
-    'label' => 'Center Column',
-    'name' => 'action-bar__center_column_tab',
-  ]),
-
-  // Center Headline
-  acf_text([
-    'label' => 'Headline',
-    'name' => 'action-bar__center_headline',
-    'key' => 'field_center_headline',
-    'instructions' => 'Recommended character count max: 70',
-    'required' => 0,
-    'maxlength' => '',
-    'wrapper' => array (
-      'width' => '100',
-    ),
-  ]),
-
-  // Center Content
-  acf_wysiwyg([
-    'label' => 'Content',
-    'name' => 'action-bar__center_content',
-    'key' => 'field_center_content',
-    'instructions' => 'Recommended character count max: 200',
-    'toolbar' => 'basic',
-    'media_upload' => 0,
-    'required' => 0,
-    'maxlength' => '',
-    'wrapper' => array (
-      'width' => '100',
-    ),
-  ]),
-
   acf_tab([
     'label' => 'Right Column',
     'name' => 'action-bar__right_column_tab',
