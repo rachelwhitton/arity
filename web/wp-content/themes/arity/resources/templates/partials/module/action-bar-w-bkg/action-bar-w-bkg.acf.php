@@ -24,6 +24,7 @@ $fields = [
     'key' => 'field_left_content',
     'instructions' => 'Recommended character count max: 200',
     'media_upload' => 0,
+    'toolbar' => 'basic',
     'required' => 0,
     'maxlength' => '',
     'wrapper' => array (
