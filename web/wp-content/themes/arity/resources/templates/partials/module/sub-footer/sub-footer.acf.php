@@ -10,6 +10,7 @@ $fields = [
     'key' => 'field_content',
     'instructions' => '',
     'media_upload' => 0,
+    'toolbar' => 'basic',
     'required' => 1,
     'maxlength' => '',
     'wrapper' => array (
