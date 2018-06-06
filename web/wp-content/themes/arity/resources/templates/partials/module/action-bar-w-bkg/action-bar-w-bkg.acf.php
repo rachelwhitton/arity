@@ -23,6 +23,7 @@ $fields = [
     'name' => 'action-bar-w-bkg__left_content',
     'key' => 'field_left_content',
     'instructions' => 'Recommended character count max: 200',
+    'media_upload' => 0,
     'required' => 0,
     'maxlength' => '',
     'wrapper' => array (
