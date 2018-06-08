@@ -38,17 +38,81 @@ $fields = [
     ),
   ]),
 
-  // Left Email CTA
-  acf_link([
-    'label' => 'CTA Link (Email or External)',
-    'name' => 'action-bar__left_cta',
-    'key' => 'field_cta',
-    'instructions' => 'Recommended character count max: 30',
-    'required' => 0,
-    'wrapper' => array (
-      'width' => '33',
-    ),
+  acf_repeater([
+    'label' => '',
+    'name' => 'action-bar__left_link_groups',
+    'sub_fields' => [
+      [
+        // Headline
+        'type' => 'group',
+        'label' => 'CTA Block',
+        'name' => 'group_l',
+        'required' => 0,
+        'sub_fields' => [
+          [
+            'type' => 'link',
+            'label' => 'Link',
+            'name' => 'link_l',
+            'instructions' => 'Recommended character count max: 30',
+            'required' => 0,
+            'maxlength' => '',
+            'wrapper' => array (
+              'width' => '40',
+            ),
+          ],
+          [
+            'type' => 'radio',
+            'label' => 'Type',
+            'name' => 'type_l',
+            'instructions' => '',
+            'required' => 0,
+            'maxlength' => '',
+            'choices' => array(
+              'button' => 'Button',
+              'link' => 'Link',
+            ),
+            'wrapper' => array (
+              'width' => '30',
+            ),
+          ],
+          [
+            'type' => 'select',
+            'label' => 'Icon',
+            'name' => 'icon_l',
+            'instructions' => 'Note: mailto urls will always get a mailto icon unless you specify none.',
+            'required' => 0,
+            'maxlength' => '',
+            'choices' => array(
+              'default' => 'Default',
+              'mailto' => 'Mailto',
+              'external' => 'External',
+              'download' => 'Download',
+              'none' => 'None',
+            ),
+            'wrapper' => array (
+              'width' => '30',
+            ),
+          ]
+        ],
+      ]
+    ],
+    'min'         => 0,
+    'max'         => 2,
+    'layout'      => 'block',
+    'button_label'  => 'Add CTA Block',
   ]),
+//TODO UNCOMMENT BEFORE PUSH TO PANTH AND PROD
+  // Left Email CTA
+  // acf_link([
+  //   'label' => 'CTA Link (Email or External)',
+  //   'name' => 'action-bar__left_cta',
+  //   'key' => 'field_cta',
+  //   'instructions' => 'Recommended character count max: 30',
+  //   'required' => 0,
+  //   'wrapper' => array (
+  //     'width' => '33',
+  //   ),
+  // ]),
 
   acf_tab([
     'label' => 'Right Column',
@@ -68,7 +132,7 @@ $fields = [
     ),
   ]),
 
-  // Center Content
+  // Right Content
   acf_wysiwyg([
     'label' => 'Content',
     'name' => 'action-bar__right_content',
@@ -81,6 +145,71 @@ $fields = [
     'wrapper' => array (
       'width' => '100',
     ),
+  ]),
+
+  // Right CTA
+  acf_repeater([
+    'label' => '',
+    'name' => 'action-bar__right_link_groups',
+    'sub_fields' => [
+      [
+        // Headline
+        'type' => 'group',
+        'label' => 'CTA',
+        'name' => 'group_r',
+        'required' => 0,
+        'sub_fields' => [
+          [
+            'type' => 'link',
+            'label' => 'Link',
+            'name' => 'link_r',
+            'instructions' => 'Recommended character count max: 30',
+            'required' => 0,
+            'maxlength' => '',
+            'wrapper' => array (
+              'width' => '40',
+            ),
+          ],
+          [
+            'type' => 'radio',
+            'label' => 'Type',
+            'name' => 'type_r',
+            'instructions' => '',
+            'required' => 0,
+            'maxlength' => '',
+            'choices' => array(
+              'button' => 'Button',
+              'link' => 'Link',
+            ),
+            'wrapper' => array (
+              'width' => '30',
+            ),
+          ],
+          [
+            'type' => 'select',
+            'label' => 'Icon',
+            'name' => 'icon_r',
+            'instructions' => 'Note: mailto urls will always get a mailto icon unless you specify none.',
+            'required' => 0,
+            'maxlength' => '',
+            'choices' => array(
+              'default' => 'Default',
+              'mailto' => 'Mailto',
+              'external' => 'External',
+              'download' => 'Download',
+              'none' => 'None',
+            ),
+            'wrapper' => array (
+              'width' => '30',
+            ),
+          ]
+        ],
+      ]
+    ],
+    'min'         => 0,
+    'max'         => 2,
+    'layout'      => 'block',
+    'button_label'  => 'Add Link',
   ]),
 ];
 
