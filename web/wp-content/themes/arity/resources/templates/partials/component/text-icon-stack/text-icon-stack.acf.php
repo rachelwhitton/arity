@@ -36,7 +36,7 @@ $fields = [
       'min'         => 1,
       'max'         => 100,
       'layout'      => 'block',
-            'button_label'  => 'Add Icon Stack',
+      'button_label'  => 'Add Icon Stack',
     ])
 ];
 
