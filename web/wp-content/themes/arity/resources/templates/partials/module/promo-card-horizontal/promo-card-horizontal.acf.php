@@ -7,7 +7,7 @@ $fields = [
     // Eyebrow
     acf_text([
       'label' => 'Eyebrow',
-      'name' => 'horizontal-card-split__eyebrow',
+      'name' => 'promo-card-horizontal__eyebrow',
       'key' => 'field_eyebrow',
       'instructions' => 'Recommended character count max: 42',
       'required' => 0,
@@ -20,7 +20,7 @@ $fields = [
     // Headline
     acf_text([
       'label' => 'Headline',
-      'name' => 'horizontal-card-split__headline',
+      'name' => 'promo-card-horizontal__headline',
       'instructions' => 'Recommended character count max: 100',
       'required' => 1,
       'maxlength' => '',
@@ -29,7 +29,7 @@ $fields = [
     // Textarea
     acf_textarea([
       'label' => 'Body Copy',
-      'name' => 'horizontal-card-split__body-copy',
+      'name' => 'promo-card-horizontal__body-copy',
       'key' => 'field_body_copy',
       'instructions' => 'Recommended character count max: 200',
       'required' => 0,
@@ -39,7 +39,7 @@ $fields = [
     // CTA
     acf_link([
       'label' => 'CTA Button',
-      'name' => 'horizontal-card-split__cta',
+      'name' => 'promo-card-horizontal__cta',
       'key' => 'field_cta',
       'instructions' => 'Recommended character count max: 30',
       'required' => 1,
@@ -51,7 +51,7 @@ $fields = [
     // Image
     acf_image([
       'label' => 'Image',
-      'name' => 'horizontal-card-split__image_id',
+      'name' => 'promo-card-horizontal__image_id',
       'key' => 'field_image',
       'return_format' => 'id',
       'instructions' => 'Suggested image size: 1024 x 700 px ',
@@ -66,7 +66,7 @@ $fields = [
     // Split Background Top
     acf_select([
       'label' => 'Background Color -- Top',
-      'name' => 'horizontal-card-split__bg-color_top',
+      'name' => 'promo-card-horizontal__bg-color_top',
       'key' => 'field_bg-color_top',
       'instructions' => '',
       'required' => 0,
@@ -87,7 +87,7 @@ $fields = [
     // Split Background Top
     acf_select([
       'label' => 'Background Color -- Bottom',
-      'name' => 'horizontal-card-split__bg-color_bot',
+      'name' => 'promo-card-horizontal__bg-color_bot',
       'key' => 'field_bg-color_bot',
       'instructions' => '',
       'required' => 0,
@@ -108,9 +108,9 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - zz: Horizontal Card Split',
-    'name' => 'module__horizontal-card-split',
-    'key' => 'group_module_horizontal-card-split',
+    'title' => 'Module - Promo: Card horizontal',
+    'name' => 'module__promo-card-horizontal',
+    'key' => 'group_module_promo-card-horizontal',
     'fields' => $fields,
     'location' => [
         [
