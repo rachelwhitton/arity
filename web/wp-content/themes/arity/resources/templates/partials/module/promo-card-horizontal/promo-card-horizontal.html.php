@@ -5,8 +5,8 @@ namespace App\Theme;
   Template Name:      Horizontal Card with Split Background
   Template Type:      Module
   Description:        A horizontal 2 col card with a split background
-  Last Updated:       3/01/2017
-  Since:              1.6.4
+  Last Updated:       06/12/2018
+  Since:              2.2.1
 */
 ?>
 <div <?php module_class('promo-card-horizontal'); ?> style="background-color: <?= $data['bg-color_top']; ?>">
