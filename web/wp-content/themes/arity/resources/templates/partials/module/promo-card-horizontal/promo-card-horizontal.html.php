@@ -8,8 +8,9 @@ namespace App\Theme;
   Last Updated:       06/12/2018
   Since:              2.2.1
 */
+
 ?>
-<div <?php module_class('promo-card-horizontal'); ?> style="background-color: <?= $data['bg-color_top']; ?>">
+<div <?php module_class($data['classes']); ?>>
   <div class="container">
     <div class="row">
 
@@ -23,13 +24,6 @@ namespace App\Theme;
             </div>
           <?php endif; ?>
           <div class="card__bottom">
-            <?php if(!empty($data['eyebrow'])) : ?>
-              <?php element('eyebrow', array(
-                'classes' => 'eyebrow',
-                'label' => $data['eyebrow']
-              )); ?>
-            <?php endif; ?>
-
             <?php if (!empty($data['headline'])) : ?>
               <?php element('headline', array(
               'classes' => 'promo-card-horizontal__title',
@@ -49,7 +43,12 @@ namespace App\Theme;
 
             <?php if (!empty($data['cta'])) : ?>
                 <?php
-                  $data['cta']['classes'] = array('button--primary', 'blue-button--');
+                  $data['cta']['classes'] = array('button--link');
+                  if(!empty($data['cta']['target'])) {
+                    $data['cta']['icon'] = 'external';
+                  }else{
+                    $data['cta']['icon'] = 'arrow-right';
+                  }
                   element('button', $data['cta']);
                 ?>
             <?php endif; ?>
