@@ -8,7 +8,6 @@ namespace App\Theme;
   Last Updated:       3/01/2017
   Since:              1.6.4
 */
-
 ?>
 <div <?php module_class('promo-card-horizontal'); ?> style="background-color: <?= $data['bg-color_top']; ?>">
   <div class="container">
@@ -38,6 +37,10 @@ namespace App\Theme;
             )); ?>
             <?php endif; ?>
 
+            <?php if (!empty($data['location'])) : ?>
+              <?= $data['location']; ?>
+            <?php endif; ?>
+
             <?php if(!empty($data['body-copy'])) : ?>
               <div class="promo-card-horizontal__body-copy">
                 <?= $data['body-copy']; ?>
@@ -50,6 +53,59 @@ namespace App\Theme;
                   element('button', $data['cta']);
                 ?>
             <?php endif; ?>
+
+            <div class="promo-card-horizontal__ctas">
+              <?php
+                if (!empty($data['link_groups'])) :
+              ?>
+              <?php $i=0; foreach ($data['link_groups'] as $cta) : $i++; if(empty($cta['group']['link'])) continue; ?>
+                <?php
+                  if ($cta['group']['type'] == 'link'){
+                    $a_classes = 'button button--link';
+                    $b_classes = 'block_link__text';
+                  }else{
+                    $a_classes = 'button button--primary blue-button--';
+                    $b_classes = '__text';
+                  }
+
+                  if (($cta['group']['type'] == 'button') && ($cta['group']['icon'] != 'none')) {
+                    $a_classes .= ' has-icon--';
+                  }
+
+                  if(isLinkEmail($cta['group']['link']['url']) || $cta['group']['icon'] == "mailto") {
+                    $cta['group']['icon'] = 'email';
+                  }
+
+                  if (($cta['group']['icon'] != 'external') && ($cta['group']['type'] == 'link')) {
+                    $c_classes = 'button__icon';
+                  }else{
+                    $c_classes = 'button__icon';
+                  }
+
+                  if ($cta['group']['type'] == 'link' && $cta['group']['icon'] == 'default'){
+                    $cta['group']['icon'] = 'arrow-right';
+                  }
+
+                  // if (($cta['group']['icon'] != 'none') && ($cta['group']['icon'] != 'external') && ($cta['group']['icon'] != 'link')) {
+                  //   $a_classes .= ' block_link__icon';
+                  // }
+                ?>
+                <p>
+                  <a class="<?= $a_classes;?>" href="<?= $cta['group']['link']['url']; ?>"<?php if (!empty($cta['group']['link']['target'])) : ?> target="<?= $cta['group']['link']['target']; ?>"<?php endif; ?>>
+                    <?php if($cta['group']['icon'] !='none') : ?>
+                      <span class="<?= $c_classes;?>">
+                        <svg class="icon-svg" title="" role="img">
+                            <use xlink:href="#<?= $cta['group']['icon']; ?>"></use>
+                        </svg>
+                      </span>
+                    <?php endif; ?>
+                    <span class="<?= $b_classes;?>"><?= $cta['group']['link']['title']; ?></span>
+                  </a>
+                </p>
+              <?php endforeach; ?>
+              <?php endif; ?>
+            </div>
+
           </div>
         </div>
       </div>

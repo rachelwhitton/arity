@@ -62,17 +62,17 @@ $fields = [
   ]),
 
     // Eyebrow
-    acf_text([
-      'label' => 'Eyebrow',
-      'name' => 'promo-card-horizontal__eyebrow',
-      'key' => 'field_eyebrow',
-      'instructions' => 'Recommended character count max: 42',
-      'required' => 0,
-      'maxlength' => '',
-      'wrapper' => array (
-        'width' => '100',
-      )
-    ]),
+    // acf_text([
+    //   'label' => 'Eyebrow',
+    //   'name' => 'promo-card-horizontal__eyebrow',
+    //   'key' => 'field_eyebrow',
+    //   'instructions' => 'Recommended character count max: 42',
+    //   'required' => 0,
+    //   'maxlength' => '',
+    //   'wrapper' => array (
+    //     'width' => '100',
+    //   )
+    // ]),
 
     // Headline
     acf_text([
@@ -81,6 +81,18 @@ $fields = [
       'instructions' => 'Recommended character count max: 100',
       'required' => 1,
       'maxlength' => '',
+    ]),
+
+    // Location
+    acf_text([
+      'label' => 'Date / Location',
+      'name' => 'promo-card-horizontal__location',
+      'instructions' => 'Recommended character count max: 100',
+      'required' => 0,
+      'maxlength' => '',
+      'wrapper' => array (
+        'width' => '100',
+      )
     ]),
 
     // Textarea
