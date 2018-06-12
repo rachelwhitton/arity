@@ -29,7 +29,7 @@ $fields = [
       'label' => 'Headline',
       'name' => 'promo-card-horizontal__headline',
       'instructions' => 'Recommended character count max: 100',
-      'required' => 1,
+      'required' => 0,
       'maxlength' => '',
     ]),
 
@@ -61,7 +61,7 @@ $fields = [
       'name' => 'promo-card-horizontal__cta',
       'key' => 'field_cta',
       'instructions' => 'Recommended character count max: 30',
-      'required' => 1,
+      'required' => 0,
       'wrapper' => array (
         'width' => '100',
       ),
