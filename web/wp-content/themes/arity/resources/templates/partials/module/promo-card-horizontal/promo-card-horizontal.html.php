@@ -8,6 +8,7 @@ namespace App\Theme;
   Last Updated:       06/12/2018
   Since:              2.2.1
 */
+
 ?>
 <div <?php module_class($data['classes']); ?>>
   <div class="container">
@@ -31,7 +32,9 @@ namespace App\Theme;
             <?php endif; ?>
 
             <?php if (!empty($data['location'])) : ?>
-              <?= $data['location']; ?>
+              <div class="promo-card-horizontal__subhead">
+                <?= $data['location']; ?>
+              </div>
             <?php endif; ?>
 
             <?php if(!empty($data['body-copy'])) : ?>
