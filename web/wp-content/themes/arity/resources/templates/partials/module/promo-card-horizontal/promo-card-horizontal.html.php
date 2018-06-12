@@ -8,7 +8,6 @@ namespace App\Theme;
   Last Updated:       06/12/2018
   Since:              2.2.1
 */
-
 ?>
 <div <?php module_class($data['classes']); ?>>
   <div class="container">
@@ -112,5 +111,7 @@ namespace App\Theme;
     </div>
   </div>
 
-  <div class="split-bg__bottom" style="background-color: <?= $data['bg-color_bot']; ?>"></div>
+  <?php if($data['--settings_alignment']=="layout__half-bg") : ?>
+    <div <?php module_class($data['bottom-classes']); ?>></div>
+  <?php endif; ?>
 </div>
