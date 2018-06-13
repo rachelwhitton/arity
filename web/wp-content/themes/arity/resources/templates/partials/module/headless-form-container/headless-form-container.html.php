@@ -18,7 +18,7 @@ namespace App\Theme;
       <span class="required">*</span> indicates required field
     </div>
     <div class="contact-form__wrap">
-      <?php the_partials($data['content']); ?>
+      <?php component('form'); ?>
     </div>
   </div>
 </div>

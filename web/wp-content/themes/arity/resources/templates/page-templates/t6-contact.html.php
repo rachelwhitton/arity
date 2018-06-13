@@ -18,6 +18,7 @@ $hero = get_field('module__hero-d');
 <?php do_action('theme/before_content') ?>
 <div id="main" class="site-content">
   <?php module('hero-d', $hero); ?>
+  <?php module('headless-form-container'); ?>
   <?php the_acf_content(); ?>
 </div>
 <?php do_action('theme/after_content') ?>

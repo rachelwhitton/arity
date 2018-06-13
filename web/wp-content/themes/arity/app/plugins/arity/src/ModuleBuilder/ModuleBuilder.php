@@ -302,6 +302,8 @@ class ModuleBuilder
         $layouts = [];
         foreach($GLOBALS['acf']->local->temp_groups as $group) {
             if(strpos($group['name'], 'module__') !== false) {
+              //removing these from ALL Modules Listing
+              if(!in_array($group['name'], ['module__headless-form-container','module__hero-d'])) {
                 $title = str_replace('Module - ', '', $group['title']);
                 $layouts[] = [
                     'label' => $title,
@@ -319,6 +321,7 @@ class ModuleBuilder
                         ]
                     ]
                 ];
+              }
             }
         }
 
