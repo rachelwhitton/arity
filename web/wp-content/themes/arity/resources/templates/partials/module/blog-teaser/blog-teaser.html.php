@@ -40,7 +40,8 @@ namespace App\Theme;
               'post__not_in' => array($feature_id)
             );
 
-            component('teaser-blog-card');
+            $data['featured']=true;
+            component('teaser-blog-card', $data);
         }
       ?>
 
