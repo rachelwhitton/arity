@@ -181,7 +181,6 @@ $module_builder->includeACFSettings('block-video', 'module');
 $module_builder->includeACFSettings('promo', 'module');
 $module_builder->includeACFSettings('promo-card-horizontal', 'module');
 $module_builder->includeACFSettings('vertical-cards-block', 'module');
-
 $module_builder->includeACFSettings('career-list', 'module');
 $module_builder->includeACFSettings('action-bar', 'module');
 $module_builder->includeACFSettings('action-bar-one-col-cta', 'module');
@@ -192,8 +191,6 @@ $module_builder->includeACFSettings('icon-two-column', 'module');
 $module_builder->includeACFSettings('horizontal-rule', 'module');
 
 //archive candidate
-$module_builder->includeACFSettings('video', 'module');
-$module_builder->includeACFSettings('location-section', 'module');
 $module_builder->includeACFSettings('feature-solution-block', 'module');
 $module_builder->includeACFSettings('horizontal-card-split', 'module');
 
@@ -214,7 +211,9 @@ $module_builder->includeACFSettings('horizontal-card-split', 'module');
 // $module_builder->includeACFSettings('highlights', 'module');
 // $module_builder->includeACFSettings('promo-strip', 'module');
 // $module_builder->includeACFSettings('module-header', 'module');
-//$module_builder->includeACFSettings('promo-section', 'module');
+// $module_builder->includeACFSettings('promo-section', 'module');
+// $module_builder->includeACFSettings('video', 'module');
+// $module_builder->includeACFSettings('location-section', 'module');
 
 
 /*
