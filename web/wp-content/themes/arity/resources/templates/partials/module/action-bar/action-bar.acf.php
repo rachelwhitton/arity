@@ -67,6 +67,7 @@ $fields = [
             'instructions' => '',
             'required' => 0,
             'maxlength' => '',
+            'default_value' => 'button',
             'choices' => array(
               'button' => 'Button',
               'link' => 'Link',
@@ -78,17 +79,54 @@ $fields = [
           [
             'type' => 'select',
             'label' => 'Icon',
-            'name' => 'icon_l',
+            'name' => 'icon_l_button',
             'instructions' => 'Note: mailto urls will always get a mailto icon unless you specify none.',
             'required' => 0,
             'maxlength' => '',
+            'default_value' => 'default',
             'choices' => array(
-              'default' => 'Default',
-              'mailto' => 'Mailto',
-              'external' => 'External',
-              'download' => 'Download',
-              'none' => 'None',
+              'none' => 'none (default)',
+              'external' => 'external',
+              'download' => 'download',
+              'mailto' => 'mailto'
             ),
+            'conditional_logic' => [
+              [
+                [
+                  'name' => 'type_l',
+                  'operator' => '==',
+                  'value' => 'button'
+                ]
+              ]
+            ],
+            'wrapper' => array (
+              'width' => '30',
+            ),
+          ],
+          [
+            'type' => 'select',
+            'label' => 'Icon',
+            'name' => 'icon_l_link',
+            'instructions' => 'Note: mailto urls will always get a mailto icon unless you specify none.',
+            'required' => 0,
+            'maxlength' => '',
+            'default_value' => 'default',
+            'choices' => array(
+              'arrow' => 'arrow (default)',
+              'external' => 'external',
+              'download' => 'download',
+              'mailto' => 'mailto',
+              'none' => 'none',
+            ),
+            'conditional_logic' => [
+              [
+                [
+                  'name' => 'type_l',
+                  'operator' => '==',
+                  'value' => 'link'
+                ]
+              ]
+            ],
             'wrapper' => array (
               'width' => '30',
             ),
