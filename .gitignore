@@ -60,6 +60,7 @@ web/wp-content/uploads/*
 web/wp-content/plugins/*
 !web/wp-content/plugins/index.php
 !web/wp-content/plugins/.gitkeep
+!web/wp-content/plugins/real-media-library
 
 # WordPress mu-plugins
 !web/wp-content/mu-plugins/

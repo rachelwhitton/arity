@@ -108,7 +108,7 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Promo: Card horizontal',
+    'title' => 'Module - zz: Horizontal Card Split',
     'name' => 'module__horizontal-card-split',
     'key' => 'group_module_horizontal-card-split',
     'fields' => $fields,

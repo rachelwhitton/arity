@@ -1,6 +1,6 @@
 {
     "name": "arity",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "title": "Arity Wordpress Theme",
     "description": "Arity Wordpress Theme created in 2017.",
     "author": {
@@ -35,7 +35,7 @@
         "node": ">= 6.9.4"
     },
     "config": {
-        "arity": "2.2.0"
+        "arity": "2.2.1"
     },
     "devDependencies": {
         "access-sniff": "^3.0.1",

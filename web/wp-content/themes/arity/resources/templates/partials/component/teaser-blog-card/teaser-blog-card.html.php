@@ -7,6 +7,12 @@ namespace App\Theme;
   <div class="row">
   <div class="teaser-blog-card__col">
     <div class="teaser-blog-card__inner">
+      <?php if(!empty($data['featured'])) : ?>
+        <?php element('eyebrow', array(
+          'classes' => 'eyebrow',
+          'label' => 'Featured'
+        )); ?>
+      <?php endif; ?>
       <a class="teaser-blog-card__link" href="<?php echo get_permalink(); ?>">
         <?php the_title( '<h2 class="teaser-blog-card__title">', '</h2>' ); ?>
       </a>

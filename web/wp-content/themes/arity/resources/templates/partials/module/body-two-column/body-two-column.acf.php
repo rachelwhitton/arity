@@ -28,7 +28,7 @@ $fields = [
       'name' => 'body-two-column__left_column',
       'key' => 'field_left_column',
       'instructions' => '',
-      'required' => 0,
+      'required' => 1,
       'button_label'    => 'Add Component',
       'layouts' => [
         [
@@ -109,7 +109,7 @@ $fields = [
       'name' => 'body-two-column__right_column',
       'key' => 'field_right_column',
       'instructions' => '',
-      'required' => 0,
+      'required' => 1,
       'button_label'    => 'Add Component',
       'layouts' => [
         [
