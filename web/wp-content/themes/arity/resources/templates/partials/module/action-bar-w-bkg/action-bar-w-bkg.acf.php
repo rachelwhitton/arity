@@ -34,11 +34,11 @@ $fields = [
 
   // Image
   acf_image([
-    'label' => 'Bkg Image',
+    'label' => 'Image',
     'name' => 'action-bar-w-bkg__bkg_image_id',
     'key' => 'field_bkg_image_id',
     'return_format' => 'id',
-    'instructions' => 'Suggested image size: 1000 x 700 px ',
+    'instructions' => 'Suggested image size: 1080 x 700 px<br/> Note: Ideal image height is dependent on content ',
     'required' => 0,
     'preview_size'  => 'thumbnail',
     'wrapper' => array (
