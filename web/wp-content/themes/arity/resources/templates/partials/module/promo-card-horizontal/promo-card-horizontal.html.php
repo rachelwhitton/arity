@@ -21,8 +21,12 @@ namespace App\Theme;
               <?php template('partials/element/image/image', array(
                 'id' => $data['image_id']
               )); ?>
+              <?php if(!empty($data['bkg_image'])) : ?>
+                <div class="promo-card-horizontal__bkg" style="background-image:url('<?= $data['bkg_image']; ?>');"></div>
+              <?php endif; ?>
             </div>
           <?php endif; ?>
+
           <div class="card__bottom">
             <?php if (!empty($data['headline'])) : ?>
               <?php element('headline', array(
