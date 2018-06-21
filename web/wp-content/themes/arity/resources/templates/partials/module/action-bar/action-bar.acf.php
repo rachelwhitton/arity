@@ -38,6 +38,7 @@ $fields = [
     ),
   ]),
 
+  //left links
   acf_repeater([
     'label' => '',
     'name' => 'action-bar__left_link_groups',
@@ -185,7 +186,7 @@ $fields = [
     ),
   ]),
 
-  // Right CTA
+  // Right links
   acf_repeater([
     'label' => '',
     'name' => 'action-bar__right_link_groups',
