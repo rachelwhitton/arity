@@ -103,9 +103,44 @@ namespace App\Theme;
             if (!empty($data['right_link_groups'])) :
           ?>
           <?php $i=0; foreach ($data['right_link_groups'] as $cta) : $i++; if(empty($cta['group_r']['link_r'])) continue; ?>
+            <?php
+              if ($cta['group_r']['type_r'] == 'link'){
+                $classes = 'button block_link';
+
+                if ($cta['group_r']['icon_r_link'] != 'none') {
+                  $cta['group_r']['link_r']['icon'] = 'arrow-right';
+                }
+
+                if((isLinkEmail($cta['group_r']['link_r']['url']) || ($cta['group_r']['icon_r_link'] == "mailto")) && ($cta['group_r']['icon_r_link'] != 'none')) {
+                  $cta['group_r']['link_r']['icon'] = 'email';
+                }
+
+                if(($cta['group_r']['icon_r_link'] == "download") && $cta['group_r']['icon_r_link'] != 'none') {
+                  $cta['group_r']['link_r']['icon'] = 'download';
+                }
+
+                if(($cta['group_r']['icon_r_link'] == "external") && $cta['group_r']['icon_r_link'] != 'none') {
+                  $cta['group_r']['link_r']['icon'] = 'external';
+                }
+              }else{
+                $classes = 'button button--primary white-blue-border-button--';
+
+                if(isLinkEmail($cta['group_r']['link_r']['url']) || $cta['group_r']['icon_r_button'] == "mailto" && $cta['group_r']['icon_r_button'] != 'none') {
+                  $cta['group_r']['link_r']['icon'] = 'email';
+                }
+
+                if(($cta['group_r']['icon_r_button'] == "download") && $cta['group_r']['icon_r_button'] != 'none') {
+                  $cta['group_r']['link_r']['icon'] = 'download';
+                }
+
+                if(($cta['group_r']['icon_r_button'] == "external") && $cta['group_r']['icon_r_button'] != 'none') {
+                  $cta['group_r']['link_r']['icon'] = 'external';
+                }
+              }
+            ?>
             <p>
               <?php element('button', array_merge($cta['group_r']['link_r'], [
-                'classes' => 'button--primary white-blue-border-button--'
+                'classes' => $classes
               ])); ?>
             </p>
           <?php endforeach; ?>

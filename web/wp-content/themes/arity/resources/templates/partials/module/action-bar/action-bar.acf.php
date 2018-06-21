@@ -215,6 +215,7 @@ $fields = [
             'instructions' => '',
             'required' => 0,
             'maxlength' => '',
+            'default_value' => 'button',
             'choices' => array(
               'button' => 'Button',
               'link' => 'Link',
@@ -226,17 +227,54 @@ $fields = [
           [
             'type' => 'select',
             'label' => 'Icon',
-            'name' => 'icon_r',
+            'name' => 'icon_r_button',
             'instructions' => 'Note: links with a checked new tab url will always get an \'external\' icon no matter what you select here.',
             'required' => 0,
             'maxlength' => '',
+            'default_value' => 'default',
             'choices' => array(
-              'default' => 'Default',
-              'mailto' => 'Mailto',
-              'external' => 'External',
-              'download' => 'Download',
-              'none' => 'None',
+              'none' => 'none (default)',
+              'external' => 'external',
+              'download' => 'download',
+              'mailto' => 'mailto'
             ),
+            'conditional_logic' => [
+              [
+                [
+                  'name' => 'type_r',
+                  'operator' => '==',
+                  'value' => 'button'
+                ]
+              ]
+            ],
+            'wrapper' => array (
+              'width' => '30',
+            ),
+          ],
+          [
+            'type' => 'select',
+            'label' => 'Icon',
+            'name' => 'icon_r_link',
+            'instructions' => 'Note: links with a checked new tab url will always get an \'external\' icon no matter what you select here.',
+            'required' => 0,
+            'maxlength' => '',
+            'default_value' => 'default',
+            'choices' => array(
+              'arrow' => 'arrow (default)',
+              'external' => 'external',
+              'download' => 'download',
+              'mailto' => 'mailto',
+              'none' => 'none',
+            ),
+            'conditional_logic' => [
+              [
+                [
+                  'name' => 'type_r',
+                  'operator' => '==',
+                  'value' => 'link'
+                ]
+              ]
+            ],
             'wrapper' => array (
               'width' => '30',
             ),
