@@ -10,9 +10,9 @@ namespace App\Theme;
   Last Updated:       09/15/2017
   Since:              1.0.0
 */
-var_dump($data);
-var_dump($data['left_link_groups']);
-var_dump($data['right_link_groups']);
+// var_dump($data);
+// var_dump($data['left_link_groups']);
+// var_dump($data['right_link_groups']);
 ?>
 <div id="action-bar" <?php module_class($data['classes']); ?>>
   <div class="container">
@@ -52,51 +52,43 @@ var_dump($data['right_link_groups']);
           <?php $i=0; foreach ($data['left_link_groups'] as $cta) : $i++; if(empty($cta['group_l']['link_l'])) continue; ?>
             <?php
               if ($cta['group_l']['type_l'] == 'link'){
-                $a_classes = 'button block_link';
-                $b_classes = 'block_link__text';
+                $classes = 'button block_link';
+
+                if ($cta['group_l']['icon_l_link'] != 'none') {
+                  $cta['group_l']['link_l']['icon'] = 'arrow-right';
+                }
+
+                if((isLinkEmail($cta['group_l']['link_l']['url']) || ($cta['group_l']['icon_l_link'] == "mailto")) && ($cta['group_l']['icon_l_link'] != 'none')) {
+                  $cta['group_l']['link_l']['icon'] = 'email';
+                }
+
+                if(($cta['group_l']['icon_l_link'] == "download") && $cta['group_l']['icon_l_link'] != 'none') {
+                  $cta['group_l']['link_l']['icon'] = 'download';
+                }
+
+                if(($cta['group_l']['icon_l_link'] == "external") && $cta['group_l']['icon_l_link'] != 'none') {
+                  $cta['group_l']['link_l']['icon'] = 'external';
+                }
               }else{
-                $a_classes = 'button button--primary white-blue-border-button--';
-                $b_classes = '__text';
+                $classes = 'button button--primary white-blue-border-button--';
+
+                if(isLinkEmail($cta['group_l']['link_l']['url']) || $cta['group_l']['icon_l_button'] == "mailto" && $cta['group_l']['icon_l_button'] != 'none') {
+                  $cta['group_l']['link_l']['icon'] = 'email';
+                }
+
+                if(($cta['group_l']['icon_l_button'] == "download") && $cta['group_l']['icon_l_button'] != 'none') {
+                  $cta['group_l']['link_l']['icon'] = 'download';
+                }
+
+                if(($cta['group_l']['icon_l_button'] == "external") && $cta['group_l']['icon_l_button'] != 'none') {
+                  $cta['group_l']['link_l']['icon'] = 'external';
+                }
               }
-
-              if (($cta['group_l']['type_l'] == 'button') && ($cta['group_l']['icon_l'] != 'none')) {
-                $a_classes .= ' has-icon--';
-              }
-
-              if(isLinkEmail($cta['group_l']['link_l']['url']) || $cta['group_l']['icon_l'] == "mailto") {
-                $cta['group_l']['icon_l'] = 'email';
-              }
-
-              if (($cta['group_l']['icon_l'] != 'external') && ($cta['group_l']['type_l'] == 'link')) {
-                $c_classes = 'icon-svg button--circle blue-bg--';
-              }else{
-                $c_classes = 'icon-svg action-bar-icon';
-              }
-
-              if ($cta['group_l']['type_l'] == 'link' && $cta['group_l']['icon_l'] == 'default'){
-                $cta['group_l']['icon_l'] = 'arrow-right';
-              }
-
-
-
-
-
-
-              // if (($cta['group_l']['icon_l'] != 'none') && ($cta['group_l']['icon_l'] != 'external') && ($cta['group_l']['icon_l'] != 'link')) {
-              //   $a_classes .= ' block_link__icon';
-              // }
             ?>
             <p>
-              <a class="<?= $a_classes;?>" href="<?= $cta['group_l']['link_l']['url']; ?>"<?php if (!empty($cta['group_l']['link_l']['target'])) : ?> target="<?= $cta['group_l']['link_l']['target']; ?>"<?php endif; ?>>
-                <?php if($cta['group_l']['icon_l'] !='none') : ?>
-                  <span class="<?= $c_classes;?>">
-                    <svg class="icon-svg" title="" role="img">
-                        <use xlink:href="#<?= $cta['group_l']['icon_l']; ?>"></use>
-                    </svg>
-                  </span>
-                <?php endif; ?>
-                <span class="<?= $b_classes;?>"><?= $cta['group_l']['link_l']['title']; ?></span>
-              </a>
+              <?php element('button', array_merge($cta['group_l']['link_l'], [
+                'classes' => $classes
+              ])); ?>
             </p>
           <?php endforeach; ?>
           <?php endif; ?>
