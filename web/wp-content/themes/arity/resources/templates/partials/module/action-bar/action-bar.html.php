@@ -49,6 +49,7 @@ namespace App\Theme;
           <?php
             if (!empty($data['left_link_groups'])) :
           ?>
+          <div class="buttons">
           <?php $i=0; foreach ($data['left_link_groups'] as $cta) : $i++; if(empty($cta['group_l']['link_l'])) continue; ?>
             <?php
               if ($cta['group_l']['type_l'] == 'link'){
@@ -91,6 +92,7 @@ namespace App\Theme;
               ])); ?>
             </p>
           <?php endforeach; ?>
+          </div>
           <?php endif; ?>
         </div>
       <?php endif; ?>
@@ -102,6 +104,7 @@ namespace App\Theme;
           <?php
             if (!empty($data['right_link_groups'])) :
           ?>
+          <div class="buttons">
           <?php $i=0; foreach ($data['right_link_groups'] as $cta) : $i++; if(empty($cta['group_r']['link_r'])) continue; ?>
             <?php
               if ($cta['group_r']['type_r'] == 'link'){
@@ -144,6 +147,7 @@ namespace App\Theme;
               ])); ?>
             </p>
           <?php endforeach; ?>
+          </div>
           <?php endif; ?>
         </div>
       <?php endif; ?>

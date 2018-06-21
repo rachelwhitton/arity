@@ -14,7 +14,7 @@ namespace App\Theme;
 <a href="<?= $data['url']; ?>" <?php element_class($data['classes']); ?><?php if (!empty($data['target'])) : ?> target="<?= $data['target']; ?>"<?php endif; ?> data-analytics="<?= $data['analytics']; ?>">
   <?php if (!empty($data['icon'])) : ?>
     <span class="button__icon">
-      <svg class="icon-svg" title="" role="img">
+      <svg class="icon-svg <?= $data['icon']; ?>" title="" role="img">
         <use xlink:href="#<?= $data['icon']; ?>"></use>
       </svg>
     </span>
