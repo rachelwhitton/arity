@@ -45,7 +45,7 @@ $fields = [
       [
         // Headline
         'type' => 'group',
-        'label' => 'CTA Block',
+        'label' => 'CTA',
         'name' => 'group_l',
         'required' => 0,
         'sub_fields' => [
@@ -137,7 +137,7 @@ $fields = [
     'min'         => 0,
     'max'         => 2,
     'layout'      => 'block',
-    'button_label'  => 'Add CTA Block',
+    'button_label'  => 'Add CTA',
   ]),
 //TODO UNCOMMENT BEFORE PUSH TO PANTH AND PROD
   // Left Email CTA
@@ -285,7 +285,7 @@ $fields = [
     'min'         => 0,
     'max'         => 2,
     'layout'      => 'block',
-    'button_label'  => 'Add Link',
+    'button_label'  => 'Add CTA',
   ]),
 ];
 
