@@ -191,8 +191,6 @@ $module_builder->includeACFSettings('icon-two-column', 'module');
 $module_builder->includeACFSettings('horizontal-rule', 'module');
 
 //archive candidate
-$module_builder->includeACFSettings('feature-solution-block', 'module');
-
 
 //archived Modules
 // $module_builder->includeACFSettings('body-intro', 'module');
@@ -215,6 +213,7 @@ $module_builder->includeACFSettings('feature-solution-block', 'module');
 // $module_builder->includeACFSettings('video', 'module');
 // $module_builder->includeACFSettings('location-section', 'module');
 // $module_builder->includeACFSettings('horizontal-card-split', 'module');
+// $module_builder->includeACFSettings('feature-solution-block', 'module');
 
 
 /*

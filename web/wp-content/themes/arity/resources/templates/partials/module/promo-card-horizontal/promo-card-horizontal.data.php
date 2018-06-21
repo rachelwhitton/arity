@@ -17,4 +17,9 @@ if (!empty($data['layout'])) {
   $data['classes'][] = 'promo-card-horizontal--'.$data['layout'];
 }
 
+if(!empty($data['image_id']) && empty($data['bkg_image'])) {
+  $data['bkg_image'] = wp_get_attachment_image_src($data['image_id'], 'full');
+  $data['bkg_image'] = $data['bkg_image'][0];
+}
+
 return $data;

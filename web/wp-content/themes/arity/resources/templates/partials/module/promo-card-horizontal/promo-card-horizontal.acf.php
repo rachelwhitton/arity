@@ -16,7 +16,7 @@ $fields = [
       'name' => 'promo-card-horizontal__image_id',
       'key' => 'field_image',
       'return_format' => 'id',
-      'instructions' => 'Suggested image size: 1110 x 760 px',
+      'instructions' => 'Suggested image size: 1110 x 760px<br/> Note: Ideal image height is dependent on content',
       'required' => 1,
       'preview_size'  => 'thumbnail',
       'wrapper' => array (
@@ -269,7 +269,7 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - zz: DEV Promo: Card horizontal',
+    'title' => 'Module - Promo: Card horizontal',
     'name' => 'module__promo-card-horizontal',
     'key' => 'group_module_promo-card-horizontal',
     'fields' => $fields,
