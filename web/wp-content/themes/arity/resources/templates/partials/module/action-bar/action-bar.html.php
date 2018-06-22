@@ -10,7 +10,7 @@ namespace App\Theme;
   Last Updated:       09/15/2017
   Since:              1.0.0
 */
-// var_dump($data);
+//var_dump($data);
 // var_dump($data['left_link_groups']);
 // var_dump($data['right_link_groups']);
 ?>
@@ -22,8 +22,8 @@ namespace App\Theme;
           <<?= $data['h_el']; ?> class="action-bar__headline"><?= $data['left_headline']; ?></<?= $data['h_el']; ?>>
           <?= $data['left_content']; ?>
           <?php
-            //if (!empty($cta = $data['left_cta'])) :
-            if (!empty($data['left_cta'])) :
+            if (!empty($cta = $data['left_cta'])) :
+            //if (!empty($data['left_cta'])) :
 
               if(!empty($cta['target'])) {
                 $cta['icon'] = 'external';
