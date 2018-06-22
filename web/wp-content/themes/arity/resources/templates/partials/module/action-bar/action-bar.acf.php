@@ -142,7 +142,7 @@ $fields = [
   ]),
 //TODO UNCOMMENT BEFORE PUSH TO PANTH AND PROD
 //TODO DELETE after we update to new link
-  Left Email CTA
+//Left Email CTA
   acf_link([
     'label' => 'CTA Link (Email or External)',
     'name' => 'action-bar__left_cta',
