@@ -141,17 +141,18 @@ $fields = [
     'button_label'  => 'Add CTA',
   ]),
 //TODO UNCOMMENT BEFORE PUSH TO PANTH AND PROD
-  // Left Email CTA
-  // acf_link([
-  //   'label' => 'CTA Link (Email or External)',
-  //   'name' => 'action-bar__left_cta',
-  //   'key' => 'field_cta',
-  //   'instructions' => 'Recommended character count max: 30',
-  //   'required' => 0,
-  //   'wrapper' => array (
-  //     'width' => '33',
-  //   ),
-  // ]),
+//TODO DELETE after we update to new link
+  Left Email CTA
+  acf_link([
+    'label' => 'CTA Link (Email or External)',
+    'name' => 'action-bar__left_cta',
+    'key' => 'field_cta',
+    'instructions' => 'Recommended character count max: 30',
+    'required' => 0,
+    'wrapper' => array (
+      'width' => '33',
+    ),
+  ]),
 
   acf_tab([
     'label' => 'Right Column',
