@@ -52,42 +52,43 @@ namespace App\Theme;
           <div class="buttons">
           <?php $i=0; foreach ($data['left_link_groups'] as $cta) : $i++; if(empty($cta['group_l']['link_l'])) continue; ?>
             <?php
-              if ($cta['group_l']['type_l'] == 'link'){
+              $cta = $cta['group_l'];
+              if ($cta['type_l'] == 'link'){
                 $classes = 'button block_link';
 
-                if ($cta['group_l']['icon_l_link'] != 'none') {
-                  $cta['group_l']['link_l']['icon'] = 'arrow-right';
+                if ($cta['icon_l_link'] != 'none') {
+                  $cta['link_l']['icon'] = 'arrow-right';
                 }
 
-                if((isLinkEmail($cta['group_l']['link_l']['url']) || ($cta['group_l']['icon_l_link'] == "mailto")) && ($cta['group_l']['icon_l_link'] != 'none')) {
-                  $cta['group_l']['link_l']['icon'] = 'email';
+                if((isLinkEmail($cta['link_l']['url']) || ($cta['icon_l_link'] == "mailto")) && ($cta['icon_l_link'] != 'none')) {
+                  $cta['link_l']['icon'] = 'email';
                 }
 
-                if(($cta['group_l']['icon_l_link'] == "download") && $cta['group_l']['icon_l_link'] != 'none') {
-                  $cta['group_l']['link_l']['icon'] = 'download';
+                if(($cta['icon_l_link'] == "download") && $cta['icon_l_link'] != 'none') {
+                  $cta['link_l']['icon'] = 'download';
                 }
 
-                if(($cta['group_l']['icon_l_link'] == "external") && $cta['group_l']['icon_l_link'] != 'none') {
-                  $cta['group_l']['link_l']['icon'] = 'external';
+                if(($cta['icon_l_link'] == "external") && $cta['icon_l_link'] != 'none') {
+                  $cta['link_l']['icon'] = 'external';
                 }
               }else{
                 $classes = 'button button--primary white-blue-border-button--';
 
-                if(isLinkEmail($cta['group_l']['link_l']['url']) || $cta['group_l']['icon_l_button'] == "mailto" && $cta['group_l']['icon_l_button'] != 'none') {
-                  $cta['group_l']['link_l']['icon'] = 'email';
+                if(isLinkEmail($cta['link_l']['url']) || $cta['icon_l_button'] == "mailto" && $cta['icon_l_button'] != 'none') {
+                  $cta['link_l']['icon'] = 'email';
                 }
 
-                if(($cta['group_l']['icon_l_button'] == "download") && $cta['group_l']['icon_l_button'] != 'none') {
-                  $cta['group_l']['link_l']['icon'] = 'download';
+                if(($cta['icon_l_button'] == "download") && $cta['icon_l_button'] != 'none') {
+                  $cta['link_l']['icon'] = 'download';
                 }
 
-                if(($cta['group_l']['icon_l_button'] == "external") && $cta['group_l']['icon_l_button'] != 'none') {
-                  $cta['group_l']['link_l']['icon'] = 'external';
+                if(($cta['icon_l_button'] == "external") && $cta['icon_l_button'] != 'none') {
+                  $cta['link_l']['icon'] = 'external';
                 }
               }
             ?>
             <p>
-              <?php element('button', array_merge($cta['group_l']['link_l'], [
+              <?php element('button', array_merge($cta['link_l'], [
                 'classes' => $classes
               ])); ?>
             </p>
@@ -107,42 +108,43 @@ namespace App\Theme;
           <div class="buttons">
           <?php $i=0; foreach ($data['right_link_groups'] as $cta) : $i++; if(empty($cta['group_r']['link_r'])) continue; ?>
             <?php
-              if ($cta['group_r']['type_r'] == 'link'){
+              $cta = $cta['group_r'];
+              if ($cta['type_r'] == 'link'){
                 $classes = 'button block_link';
 
-                if ($cta['group_r']['icon_r_link'] != 'none') {
-                  $cta['group_r']['link_r']['icon'] = 'arrow-right';
+                if ($cta['icon_r_link'] != 'none') {
+                  $cta['link_r']['icon'] = 'arrow-right';
                 }
 
-                if((isLinkEmail($cta['group_r']['link_r']['url']) || ($cta['group_r']['icon_r_link'] == "mailto")) && ($cta['group_r']['icon_r_link'] != 'none')) {
-                  $cta['group_r']['link_r']['icon'] = 'email';
+                if((isLinkEmail($cta['link_r']['url']) || ($cta['icon_r_link'] == "mailto")) && ($cta['icon_r_link'] != 'none')) {
+                  $cta['link_r']['icon'] = 'email';
                 }
 
-                if(($cta['group_r']['icon_r_link'] == "download") && $cta['group_r']['icon_r_link'] != 'none') {
-                  $cta['group_r']['link_r']['icon'] = 'download';
+                if(($cta['icon_r_link'] == "download") && $cta['icon_r_link'] != 'none') {
+                  $cta['link_r']['icon'] = 'download';
                 }
 
-                if(($cta['group_r']['icon_r_link'] == "external") && $cta['group_r']['icon_r_link'] != 'none') {
-                  $cta['group_r']['link_r']['icon'] = 'external';
+                if(($cta['icon_r_link'] == "external") && $cta['icon_r_link'] != 'none') {
+                  $cta['link_r']['icon'] = 'external';
                 }
               }else{
                 $classes = 'button button--primary white-blue-border-button--';
 
-                if(isLinkEmail($cta['group_r']['link_r']['url']) || $cta['group_r']['icon_r_button'] == "mailto" && $cta['group_r']['icon_r_button'] != 'none') {
-                  $cta['group_r']['link_r']['icon'] = 'email';
+                if(isLinkEmail($cta['link_r']['url']) || $cta['icon_r_button'] == "mailto" && $cta['icon_r_button'] != 'none') {
+                  $cta['link_r']['icon'] = 'email';
                 }
 
-                if(($cta['group_r']['icon_r_button'] == "download") && $cta['group_r']['icon_r_button'] != 'none') {
-                  $cta['group_r']['link_r']['icon'] = 'download';
+                if(($cta['icon_r_button'] == "download") && $cta['icon_r_button'] != 'none') {
+                  $cta['link_r']['icon'] = 'download';
                 }
 
-                if(($cta['group_r']['icon_r_button'] == "external") && $cta['group_r']['icon_r_button'] != 'none') {
-                  $cta['group_r']['link_r']['icon'] = 'external';
+                if(($cta['icon_r_button'] == "external") && $cta['icon_r_button'] != 'none') {
+                  $cta['link_r']['icon'] = 'external';
                 }
               }
             ?>
             <p>
-              <?php element('button', array_merge($cta['group_r']['link_r'], [
+              <?php element('button', array_merge($cta['link_r'], [
                 'classes' => $classes
               ])); ?>
             </p>
