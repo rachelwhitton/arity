@@ -33,7 +33,7 @@ namespace App\Theme;
                 $cta['icon'] = 'email';
               }
           ?>
-          <p>
+          <!-- <p>
             <a class="button block_link <?php if (!empty($cta['icon']) && $cta['icon'] != 'external') : ?>block_link__icon <?php endif; ?>" href="<?= $cta['url']; ?>"<?php if (!empty($cta['target'])) : ?> target="<?= $cta['target']; ?>"<?php endif; ?>>
               <?php if(!empty($cta['icon'])) : ?>
                 <span class="icon-svg <?php if ($cta['icon'] !== 'external') { echo 'button--circle blue-bg--';} else {echo 'action-bar-icon';}?>">
@@ -44,6 +44,11 @@ namespace App\Theme;
               <?php endif; ?>
               <span class="block_link__text"><?= $cta['title']; ?></span>
             </a>
+          </p> -->
+          <p>
+            <?php element('button', array_merge($cta, [
+              'classes' => 'button block_link'
+            ])); ?>
           </p>
           <?php endif; ?>
           <?php
