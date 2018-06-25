@@ -10,7 +10,6 @@ namespace App\Theme;
   Last Updated:       12/01/2017
   Since:              1.2.0-alpha.1
 */
-
 ?>
 <div id="action-bar-one-col-cta" <?php module_class($data['classes']); ?>>
   <div class="container action-bar-one-col-cta__block">
@@ -19,6 +18,59 @@ namespace App\Theme;
         <div class="action-bar-one-col-cta__content">
           <<?= $data['h_el']; ?> class="action-bar-one-col-cta__headline"><?= $data['center_headline']; ?></<?= $data['h_el']; ?>>
           <?= $data['center_content']; ?>
+          <?php
+            if (!empty($data['link_groups'])) :
+          ?>
+            <div class="buttons">
+            <?php $i=0; foreach ($data['link_groups'] as $cta) : $i++; if(empty($cta['group']['cta__link'])) continue; ?>
+              <?php
+                $cta = $cta['group'];
+                if ($cta['cta__type'] == 'link'){
+                  $classes = 'button block_link';
+
+                  if ($cta['cta__icon_link'] != 'none') {
+                    $cta['cta__link']['icon'] = 'arrow-right';
+                  }
+
+                  if((isLinkEmail($cta['cta__link']['url']) || ($cta['cta__icon_link'] == "mailto")) && ($cta['cta__icon_link'] != 'none')) {
+                    $cta['cta__link']['icon'] = 'email';
+                  }
+
+                  if(($cta['cta__icon_link'] == "download") && $cta['cta__icon_link'] != 'none') {
+                    $cta['cta__link']['icon'] = 'download';
+                  }
+
+                  if(($cta['cta__icon_link'] == "external") && $cta['cta__icon_link'] != 'none') {
+                    $cta['cta__link']['icon'] = 'external';
+                  }
+                }else{
+                  $classes = 'button button--primary white-blue-border-button--';
+
+                  if(isLinkEmail($cta['cta__link']['url']) || $cta['cta__icon_button'] == "mailto" && $cta['cta__icon_button'] != 'none') {
+                    $cta['cta__link']['icon'] = 'email';
+                  }
+
+                  if(($cta['cta__icon_button'] == "download") && $cta['cta__icon_button'] != 'none') {
+                    $cta['cta__link']['icon'] = 'download';
+                  }
+
+                  if(($cta['cta__icon_button'] == "external") && $cta['cta__icon_button'] != 'none') {
+                    $cta['cta__link']['icon'] = 'external';
+                  }
+                }
+              ?>
+              <p>
+                <?php element('button', array_merge($cta['cta__link'], [
+                  'classes' => $classes
+                ])); ?>
+              </p>
+            <?php endforeach; ?>
+            </div>
+          <?php endif; ?>
+
+          <?php
+            if (!empty($data['center_links'])) :
+          ?>
           <?php $i=0; foreach ($data['center_links'] as $cta) : $i++; if(empty($cta['link'])) continue; ?>
             <p>
               <?php element('button', array_merge($cta['link'], [
@@ -26,6 +78,7 @@ namespace App\Theme;
               ])); ?>
             </p>
           <?php endforeach; ?>
+          <?php endif; ?>
         </div>
       <?php endif; ?>
     </div>

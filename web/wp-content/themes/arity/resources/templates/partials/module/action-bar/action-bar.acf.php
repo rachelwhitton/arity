@@ -150,7 +150,7 @@ $fields = [
     'instructions' => 'Recommended character count max: 30',
     'required' => 0,
     'wrapper' => array (
-      'width' => '33',
+      'width' => '100',
     ),
   ]),
 

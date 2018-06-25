@@ -58,7 +58,7 @@ $fields = [
         ]
       ],
       'wrapper' => array (
-        'width' => '50',
+        'width' => '25',
       ),
     ]),
 
@@ -96,6 +96,109 @@ $fields = [
       ),
     ]),
 
+    // Choose your own CTA
+    acf_repeater([
+      'label' => '',
+      'name' => 'content-image-block__link_groups',
+      'sub_fields' => [
+        [
+          // Headline
+          'type' => 'group',
+          'label' => 'CTA',
+          'name' => 'group',
+          'required' => 0,
+          'sub_fields' => [
+            [
+              'type' => 'link',
+              'label' => 'Link',
+              'name' => 'cta__link',
+              'instructions' => 'Recommended character count max: 30',
+              'required' => 0,
+              'maxlength' => '',
+              'wrapper' => array (
+                'width' => '40',
+              ),
+            ],
+            [
+              'type' => 'radio',
+              'label' => 'Type',
+              'name' => 'cta__type',
+              'instructions' => '',
+              'required' => 0,
+              'maxlength' => '',
+              'default_value' => 'button',
+              'choices' => array(
+                'button' => 'Button',
+                'link' => 'Link',
+              ),
+              'wrapper' => array (
+                'width' => '30',
+              ),
+            ],
+            [
+              'type' => 'select',
+              'label' => 'Icon',
+              'name' => 'cta__icon_button',
+              'instructions' => 'Note: links with a checked new tab url will always get an \'external\' icon no matter what you select here.',
+              'required' => 0,
+              'maxlength' => '',
+              'default_value' => 'default',
+              'choices' => array(
+                'none' => 'none (default)',
+                'external' => 'external',
+                'download' => 'download',
+                'mailto' => 'mailto'
+              ),
+              'conditional_logic' => [
+                [
+                  [
+                    'name' => 'cta__type',
+                    'operator' => '==',
+                    'value' => 'button'
+                  ]
+                ]
+              ],
+              'wrapper' => array (
+                'width' => '30',
+              ),
+            ],
+            [
+              'type' => 'select',
+              'label' => 'Icon',
+              'name' => 'cta__icon_link',
+              'instructions' => 'Note: links with a checked new tab url will always get an \'external\' icon no matter what you select here.',
+              'required' => 0,
+              'maxlength' => '',
+              'default_value' => 'default',
+              'choices' => array(
+                'arrow' => 'arrow (default)',
+                'external' => 'external',
+                'download' => 'download',
+                'mailto' => 'mailto',
+                'none' => 'none',
+              ),
+              'conditional_logic' => [
+                [
+                  [
+                    'name' => 'cta__type',
+                    'operator' => '==',
+                    'value' => 'link'
+                  ]
+                ]
+              ],
+              'wrapper' => array (
+                'width' => '30',
+              ),
+            ]
+          ],
+        ]
+      ],
+      'min'         => 0,
+      'max'         => 2,
+      'layout'      => 'block',
+      'button_label'  => 'Add CTA',
+    ]),
+
     // CTA
     acf_link([
       'label' => 'CTA Button',
@@ -104,7 +207,7 @@ $fields = [
       'instructions' => 'Recommended character count max: 80',
       'required' => 0,
       'wrapper' => array (
-        'width' => '50',
+        'width' => '100',
       ),
     ]),
 
