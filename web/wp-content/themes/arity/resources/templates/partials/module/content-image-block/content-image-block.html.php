@@ -93,7 +93,7 @@ namespace App\Theme;
                     $cta['cta__link']['icon'] = 'external';
                   }
                 }else{
-                  $classes = 'button button--primary blue-button--';
+                  $classes = 'button button--primary blue-button-- blue-hover-border';
 
                   if(isLinkEmail($cta['cta__link']['url']) || $cta['cta__icon_button'] == "mailto" && $cta['cta__icon_button'] != 'none') {
                     $cta['cta__link']['icon'] = 'email';
