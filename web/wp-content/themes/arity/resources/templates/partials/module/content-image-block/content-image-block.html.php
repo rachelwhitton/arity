@@ -46,7 +46,7 @@ namespace App\Theme;
         <div class="content-image-block__col wide-- content-image-block__img-box">
           <?php element('image', [
             'id' => $data['image_id'],
-            'classes' => 'img-shadow'
+            'classes' => $data['img-classes']
           ]); ?>
         </div>
       <?php endif; ?>

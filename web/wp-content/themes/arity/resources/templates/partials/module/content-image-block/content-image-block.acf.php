@@ -62,6 +62,22 @@ $fields = [
       ),
     ]),
 
+    // Images has shadow?
+    acf_radio([
+      'label' => 'Image Shadow',
+      'name' => 'content-image-block__shadow',
+      'instructions' => '',
+      'default_value' => '1',
+      'choices' => [
+        '1' => 'Enabled (default)',
+        '0' => 'Disabled'
+      ],
+      // 'return_format' => 'id',
+      'wrapper' => array (
+        'width' => '25',
+      ),
+    ]),
+
     // Video Url
     acf_text([
       'label' => 'Video Url',

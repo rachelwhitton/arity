@@ -17,6 +17,12 @@ if (empty($data['headline-alignment'])) {
   $data['headline-alignment'] = '';
 }
 
+if(!empty($data['shadow'])){
+  $data['img-classes'] = 'img-shadow';
+}else{
+  $data['img-classes'] = '';
+}
+
 $data['headline'] = App\Theme\wrapSymbols($data['headline']);
 
 if(empty($data['h_el'])) {
