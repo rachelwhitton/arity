@@ -76,6 +76,15 @@ $fields = [
       'wrapper' => array (
         'width' => '25',
       ),
+      'conditional_logic' => [
+        [
+          [
+            'name' => 'content-image-block__content-chooser',
+            'operator' => '==',
+            'value' => 'layout__image'
+          ]
+        ]
+      ],
     ]),
 
     // Video Url
