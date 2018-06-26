@@ -8,7 +8,7 @@ if (empty($data['url'])) {
 $data['classes'][] = 'button';
 
 // If external link, add external icon
-if (!empty($data['target']) && $data['target'] == '_blank') {
+if (empty($data['icon']) && !empty($data['target']) && $data['target'] == '_blank') {
   $data['icon'] = 'external';
 }
 
