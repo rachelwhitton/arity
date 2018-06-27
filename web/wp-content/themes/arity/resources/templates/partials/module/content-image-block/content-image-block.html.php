@@ -117,15 +117,7 @@ namespace App\Theme;
             <?php endforeach; ?>
             </div>
           <?php endif; ?>
-          <?php if (!empty($data['cta'])) : ?>
-          <?php $data['cta']['analytics'] = $data['headline']; ?>
-          <p>
-            <?php element('button', array_merge($data['cta'], [
-              'classes' => 'blue-link content-image-block__arrow-link' ,
-              'icon' => 'arrow-right'
-            ])); ?>
-          </p>
-          <?php endif; ?>
+
         </div>
       </div>
     </div>

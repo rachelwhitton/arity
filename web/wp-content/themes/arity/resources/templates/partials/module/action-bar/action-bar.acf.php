@@ -81,7 +81,7 @@ $fields = [
             'type' => 'select',
             'label' => 'Icon',
             'name' => 'icon_l_button',
-            'instructions' => 'Note: links with a checked new tab url will always get an \'external\' icon no matter what you select here.',
+            'instructions' => 'Note: links with a mailto url will always get an \'mailto\' icon no matter what you select here.',
             'required' => 0,
             'maxlength' => '',
             'default_value' => 'default',
@@ -108,7 +108,7 @@ $fields = [
             'type' => 'select',
             'label' => 'Icon',
             'name' => 'icon_l_link',
-            'instructions' => 'Note: links with a checked new tab url will always get an \'external\' icon no matter what you select here.',
+            'instructions' => 'Note: links with a mailto url will always get an \'mailto\' icon no matter what you select here.',
             'required' => 0,
             'maxlength' => '',
             'default_value' => 'default',
@@ -139,19 +139,6 @@ $fields = [
     'max'         => 2,
     'layout'      => 'block',
     'button_label'  => 'Add CTA',
-  ]),
-//TODO UNCOMMENT BEFORE PUSH TO PANTH AND PROD
-//TODO DELETE after we update to new link
-//Left Email CTA
-  acf_link([
-    'label' => 'CTA Link (Email or External)',
-    'name' => 'action-bar__left_cta',
-    'key' => 'field_cta',
-    'instructions' => 'Recommended character count max: 25',
-    'required' => 0,
-    'wrapper' => array (
-      'width' => '100',
-    ),
   ]),
 
   acf_tab([
@@ -230,7 +217,7 @@ $fields = [
             'type' => 'select',
             'label' => 'Icon',
             'name' => 'icon_r_button',
-            'instructions' => 'Note: links with a checked new tab url will always get an \'external\' icon no matter what you select here.',
+            'instructions' => 'Note: links with a mailto url will always get an \'mailto\' icon no matter what you select here.',
             'required' => 0,
             'maxlength' => '',
             'default_value' => 'default',
@@ -257,7 +244,7 @@ $fields = [
             'type' => 'select',
             'label' => 'Icon',
             'name' => 'icon_r_link',
-            'instructions' => 'Note: links with a checked new tab url will always get an \'external\' icon no matter what you select here.',
+            'instructions' => 'Note: links with a mailto url will always get an \'mailto\' icon no matter what you select here.',
             'required' => 0,
             'maxlength' => '',
             'default_value' => 'default',

@@ -81,7 +81,7 @@ $fields = [
             'type' => 'select',
             'label' => 'Icon',
             'name' => 'cta__icon_button',
-            'instructions' => 'Note: links with a checked new tab url will always get an \'external\' icon no matter what you select here.',
+            'instructions' => 'Note: links with a mailto url will always get an \'mailto\' icon no matter what you select here.',
             'required' => 0,
             'maxlength' => '',
             'default_value' => 'default',
@@ -108,7 +108,7 @@ $fields = [
             'type' => 'select',
             'label' => 'Icon',
             'name' => 'cta__icon_link',
-            'instructions' => 'Note: links with a checked new tab url will always get an \'external\' icon no matter what you select here.',
+            'instructions' => 'Note: links with a mailto url will always get an \'mailto\' icon no matter what you select here.',
             'required' => 0,
             'maxlength' => '',
             'default_value' => 'default',
@@ -141,26 +141,6 @@ $fields = [
     'button_label'  => 'Add CTA',
   ]),
 
-  // Center Content CTA Repeater
-  acf_repeater([
-    'label' => '',
-    'name' => 'action-bar-one-col-cta__center_links',
-    'sub_fields' => [
-      [
-        // Headline
-        'type' => 'link',
-        'label' => 'CTA Button',
-        'name' => 'link',
-        'instructions' => 'Recommended character count max: 30',
-        'required' => 0,
-        'maxlength' => ''
-      ]
-    ],
-    'min'         => 0,
-    'max'         => 2,
-    'layout'      => 'block',
-    'button_label'  => 'Add Link',
-  ])
 ];
 
 // ACF Field Group

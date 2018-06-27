@@ -164,7 +164,7 @@ $fields = [
               'type' => 'select',
               'label' => 'Icon',
               'name' => 'cta__icon_button',
-              'instructions' => 'Note: links with a checked new tab url will always get an \'external\' icon no matter what you select here.',
+              'instructions' => 'Note: links with a mailto url will always get an \'mailto\' icon no matter what you select here.',
               'required' => 0,
               'maxlength' => '',
               'default_value' => 'default',
@@ -191,7 +191,7 @@ $fields = [
               'type' => 'select',
               'label' => 'Icon',
               'name' => 'cta__icon_link',
-              'instructions' => 'Note: links with a checked new tab url will always get an \'external\' icon no matter what you select here.',
+              'instructions' => 'Note: links with a mailto url will always get an \'mailto\' icon no matter what you select here.',
               'required' => 0,
               'maxlength' => '',
               'default_value' => 'default',
@@ -222,18 +222,6 @@ $fields = [
       'max'         => 2,
       'layout'      => 'block',
       'button_label'  => 'Add CTA',
-    ]),
-
-    // CTA
-    acf_link([
-      'label' => 'CTA Button',
-      'name' => 'content-image-block__cta',
-      'key' => 'field_cta',
-      'instructions' => 'Recommended character count max: 80',
-      'required' => 0,
-      'wrapper' => array (
-        'width' => '100',
-      ),
     ]),
 
     acf_tab([

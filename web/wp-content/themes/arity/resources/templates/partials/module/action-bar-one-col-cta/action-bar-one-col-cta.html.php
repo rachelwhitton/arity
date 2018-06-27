@@ -68,17 +68,6 @@ namespace App\Theme;
             </div>
           <?php endif; ?>
 
-          <?php
-            if (!empty($data['center_links'])) :
-          ?>
-          <?php $i=0; foreach ($data['center_links'] as $cta) : $i++; if(empty($cta['link'])) continue; ?>
-            <p>
-              <?php element('button', array_merge($cta['link'], [
-                'classes' => 'button--primary white-blue-border-button--'
-              ])); ?>
-            </p>
-          <?php endforeach; ?>
-          <?php endif; ?>
         </div>
       <?php endif; ?>
     </div>
