@@ -17,7 +17,6 @@
 
         "wpackagist-plugin/aryo-activity-log": "^2.3",
         "advanced-custom-fields/advanced-custom-fields-pro": "*",
-        "wpackagist-plugin/disable-blog": "^0.4",
         "wpackagist-plugin/disable-comments": "^1.6",
         "wpackagist-plugin/enable-media-replace": "^3.0",
         "wpackagist-plugin/ewww-image-optimizer": "^4.0",
