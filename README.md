@@ -3,7 +3,9 @@
 
 Authors: [Ryan Powszok](mailto:rpowszok@vsapartners.com), [Andrew Falconer](mailto:afalconer@vsapartners.com)
 
-Last Updated: 08/18/2017 Created: 05/15/2017
+Editors: [Alberto Cristancho](mailto:acristancho@vsapartners.com)
+
+Last Updated: 07/24/2018 Created: 05/15/2017
 
 ---
 ## Helpful URLs
@@ -11,7 +13,7 @@ Last Updated: 08/18/2017 Created: 05/15/2017
 ### Arity Site Environments
 - [Arity Production - https://www.arity.com/](https://www.arity.com/)
 - [Arity VSA Development - http://dev.site.arity.vsadev.com/](http://dev.site.arity.vsadev.com/)
-- [Arity VSA Stage - http://stage.site.arity.vsadev.com/](http://stage.site.arity.vsadev.com/)
+- [Arity VSA Stage - http://stage.site.arity.vsadev.com/](http://stage.site.arity.vsadev.com/) `DEPRECATED`
 
 ### Arity Sites
 - [Arity - https://www.arity.com/](https://www.arity.com/)
@@ -65,7 +67,7 @@ Add this line -> export PATH="/Applications/MAMP/bin/php/php{{php_version}}/bin:
 Or somehow install PHP so it doesn't use your machine's default version. Homebrew is one option. PHP 7.0.x or higher is required for Composer.
 
 ### Add Host
-* Go to Hosts and add 'arity.dev' as the Host name and choose the "web" directory in this project as the document root.
+* Go to Hosts and add 'arity.dev' as the Host name and choose the `web` directory in this project as the document root.
 * Navigate to the SSL tab and enable SSL by adding the crt and key files located in this repo. Be sure to check the SSL checkbox as well.
 * Restart servers.
 
@@ -75,7 +77,7 @@ Follow the readme instructions here: https://bitbucket.org/vsapartners/vsadev-ca
 
 ### Using external images from localhost for local development environment
 
-Instead of having to migrate WP uploads from the dev environment to your local environment, its much easier to add this trick to your MAMP setup. In MAMP, click on the Apache tab and add the following to "Additional Parameters for <VirtualHost> directive:"
+Instead of having to migrate WP uploads from the dev environment to your local environment, its much easier to add this trick to your MAMP setup. In MAMP, click on the Apache tab and add the following to "Additional Parameters for \<VirtualHost\> directive:"
 
 ```
 RewriteEngine on
@@ -105,12 +107,12 @@ $ wp --info # Double check everything looks good
 * Open Sequel Pro and make a connection to your localhost MYSQL.
 * Create a new Database, enter your database name (arity_dev), choose "utf8mb4" as the Database Encoding, choose "utf8mb4_unicode_ci" as the Database Collation.
 * Download a database export by going to the vsadev.com development site, logging into Wordpress, and navigating to "Migrate DB Pro".
-* Choose "Initial Export" and customize the "Find & Replace" settings.
+* Choose "Initial Export" and customize the "Find & Replace" settings to match your local environment configuration.
 * Using Sequel Pro, import the database dump into the newly created database.
 
 ### Create .env file
 
-If you are special, you'll have access - https://docs.google.com/document/d/1vzUD5ecXFGPZw4M18rkfnAMEnhTMJA7-vdQZu1tW6Gc/view
+If you are special, you'll have access - [https://docs.google.com/document/d/1vzUD5ecXFGPZw4M18rkfnAMEnhTMJA7-vdQZu1tW6Gc/view](https://docs.google.com/document/d/1vzUD5ecXFGPZw4M18rkfnAMEnhTMJA7-vdQZu1tW6Gc/view)
 
 ```
 $ vi .env
@@ -120,27 +122,33 @@ Update database settings if needed.
 
 ### Theme Setup
 
-Visit the theme readme for further instructions. The theme is stubborn if its not built first. WP Admin should always work however.
+Navigate to `/web/wp-content/themes/arity` in your shell. Refer to the theme README and follow the installation instructions. The theme is stubborn if its not built first. WP Admin should always work however.
+
+### Return to project root folder
+
+```
+composer install
+```
 
 ### WP Admin
 
-Visit https://arity.dev/wp-admin
+Visit https://arity.dev/wp-admin Login with your admin credentials — refer to LastPass Shared-Arity Site folder if you don’t have credentials.
 
 ### Migrate DB Pro
 
-Connection Info Secret: https://docs.google.com/document/d/1H2xJGu5TJ1fkHr8DbZjDzeo_uwtEnMCdVT6ulXF5sFY/
+[Connection Info Secret](https://docs.google.com/document/d/1H2xJGu5TJ1fkHr8DbZjDzeo_uwtEnMCdVT6ulXF5sFY/)
 
 ### Licenses
 
-ACF Pro - https://docs.google.com/document/d/1GBwvOP2YCT7Fw06j0DkNOlCEYtnj4bU1Mefu0CrI0j4/view
-Migrate DB Pro - https://docs.google.com/document/d/1PF6eci8T-2dyWRBV7gG_3GRVfhz58eEIdWXP6QOtL4k/view
+[ACF Pro](https://docs.google.com/document/d/1GBwvOP2YCT7Fw06j0DkNOlCEYtnj4bU1Mefu0CrI0j4/view)<br> 
+[Migrate DB Pro](https://docs.google.com/document/d/1PF6eci8T-2dyWRBV7gG_3GRVfhz58eEIdWXP6QOtL4k/view)
 
 ---
 ## Deployments
 
 ### Pantheon
 
-#### Install Terminus - https://pantheon.io/docs/terminus/
+#### Install Terminus - [https://pantheon.io/docs/terminus/](https://pantheon.io/docs/terminus/)
 
 You will need to create a machine-token:
 * Login to your pantheon account
@@ -158,7 +166,7 @@ $ terminus auth:login --machine-token=‹machine-token›
 
 Once you've authenticated with your machine token, you can authenticate again just using `terminus auth:login --email=<you@domain.com>`
 
-#### Install Terminus Composer - https://github.com/pantheon-systems/terminus-composer-plugin
+#### Install Terminus Composer - [https://github.com/pantheon-systems/terminus-composer-plugin](https://github.com/pantheon-systems/terminus-composer-plugin)
 
 This Terminus Plugin is required to run Composer commands on the Pantheon server. On your local machine run the following:
 
@@ -176,11 +184,11 @@ $ terminus connection:set arity.dev git
 
 #### Pantheon Sample Project
 
-https://github.com/pantheon-systems/example-wordpress-composer
+[https://github.com/pantheon-systems/example-wordpress-composer](https://github.com/pantheon-systems/example-wordpress-composer)
 
 #### Adding Pantheon Env Variables to wp-config
 
-See https://github.com/pantheon-systems/example-wordpress-composer/blob/master/web/wp-config.php
+See [https://github.com/pantheon-systems/example-wordpress-composer/blob/master/web/wp-config.php](https://github.com/pantheon-systems/example-wordpress-composer/blob/master/web/wp-config.php)
 
 
 #### References
