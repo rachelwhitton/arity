@@ -16,7 +16,7 @@ if(empty($data)) {
       <div class="site-footer-generic-copy">
         <small class="site-footer-generic__copyright">
           <span><?= do_shortcode('[copyright]'); ?></span>
-          <span>|</span>
+          <span class="separator">|</span>
           <?php
             if (has_nav_menu('footer_copyright')) :
           ?>
