@@ -620,31 +620,30 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
 
 /* global transitionEvent */
 
-;(function ($, window, document) {
-
+(function ($, window, document) {
   var cookieBanner = {
     defaults: {
       debug: false, // Dont leave this as true
-      cookiePath: '/',
+      cookiePath: "/",
       cookieDomain: null,
       cookieSecure: false,
       expires: Infinity,
-      message: ''
+      message: ""
     },
     init: function init(opts) {
-      if (!$('.template--t1-homepage').length) {
+      if (!$(".page--home-v2").length) {
         return;
       }
 
       this._options = jQuery.extend(this.defaults, opts);
 
-      if (app.env(['development', 'staging']) && getParam('debug')) {
+      if (app.env(["development", "staging"]) && getParam("debug")) {
         this._options.debug = true;
       }
 
-      debug('cookieBanner.init: start', this._options);
+      debug("cookieBanner.init: start", this._options);
 
-      var default_text = 'We use cookies to enhance your experience. ' + 'By continuing to visit this site you agree to our use of cookies.';
+      var default_text = "We use cookies to enhance your experience. " + "By continuing to visit this site you agree to our use of cookies.";
 
       this._ = {};
       this.cookie = window.cookies;
@@ -661,12 +660,12 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
         }.bind(this), 450);
       }
 
-      debug('cookieBanner.init: complete', this);
+      debug("cookieBanner.init: complete", this);
     },
     render: function render() {
       this.$el = $(this._.el);
-      $('body').append(this.$el);
-      this.$close = $('.close', this.$el);
+      $("body").append(this.$el);
+      this.$close = $(".close", this.$el);
 
       this.eventListeners();
     },
@@ -675,11 +674,11 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
         return false;
       }
 
-      if (!this._.cookies['agreed']) {
-        this._.cookies['agreed'] = this.cookie.get('cookieBanner-agreed') || false;
+      if (!this._.cookies["agreed"]) {
+        this._.cookies["agreed"] = this.cookie.get("cookieBanner-agreed") || false;
       }
 
-      return this._.cookies['agreed'];
+      return this._.cookies["agreed"];
     },
     setAgree: function setAgree(bool) {
       if (!bool) {
@@ -687,17 +686,17 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
       }
       var boolNum = bool ? 1 : 0;
 
-      debug('cookieBanner.setAgree:', bool);
+      debug("cookieBanner.setAgree:", bool);
 
-      this._.cookies['agreed'] = bool;
-      this.cookie.set('cookieBanner-agreed', boolNum, this._options.expires, this._options.cookiePath, this._options.cookieDomain !== '' ? this._options.cookieDomain : '', this._options.cookieSecure ? true : false);
+      this._.cookies["agreed"] = bool;
+      this.cookie.set("cookieBanner-agreed", boolNum, this._options.expires, this._options.cookiePath, this._options.cookieDomain !== "" ? this._options.cookieDomain : "", this._options.cookieSecure ? true : false);
     },
     getSeen: function getSeen() {
-      if (!this._.cookies['seen']) {
-        this._.cookies['seen'] = this.cookie.get('cookieBanner-seen') || false;
+      if (!this._.cookies["seen"]) {
+        this._.cookies["seen"] = this.cookie.get("cookieBanner-seen") || false;
       }
 
-      return this._.cookies['seen'];
+      return this._.cookies["seen"];
     },
     setSeen: function setSeen(bool) {
       if (!bool) {
@@ -705,48 +704,48 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
       }
       var boolNum = bool ? 1 : 0;
 
-      debug('cookieBanner.setSeen:', bool);
+      debug("cookieBanner.setSeen:", bool);
 
-      this._.cookies['seen'] = bool;
-      this.cookie.set('cookieBanner-seen', boolNum, this._options.expires, this._options.cookiePath, this._options.cookieDomain !== '' ? this._options.cookieDomain : '', this._options.cookieSecure ? true : false);
+      this._.cookies["seen"] = bool;
+      this.cookie.set("cookieBanner-seen", boolNum, this._options.expires, this._options.cookiePath, this._options.cookieDomain !== "" ? this._options.cookieDomain : "", this._options.cookieSecure ? true : false);
     },
     open: function open() {
-      debug('cookieBanner.open: start');
-      this.$el.removeClass('animate-out');
+      debug("cookieBanner.open: start");
+      this.$el.removeClass("animate-out");
       this.$el.one(transitionEvent, function () {
         this._.rendered = true;
-        debug('cookieBanner.open: complete');
-        this.$el.addClass('active');
+        debug("cookieBanner.open: complete");
+        this.$el.addClass("active");
         this.setSeen();
       }.bind(this));
     },
     close: function close() {
-      debug('cookieBanner.close: start');
-      this.$el.addClass('animate-out');
+      debug("cookieBanner.close: start");
+      this.$el.addClass("animate-out");
       this.$el.one(transitionEvent, function () {
         this._.closed = true;
-        debug('cookieBanner.close: complete');
+        debug("cookieBanner.close: complete");
         this.remove();
       }.bind(this));
     },
     remove: function remove() {
-      debug('cookieBanner.remove:');
+      debug("cookieBanner.remove:");
       this.$el.remove();
       window.cookieBanner = undefined;
     },
     agreeAndClose: function agreeAndClose() {
-      debug('cookieBanner.agreeAndClose:');
+      debug("cookieBanner.agreeAndClose:");
       this.setAgree(true);
       this.close();
     },
     template: function template() {
       var baseUrl = window.location.origin;
-      var html = '' + '<div class="cookie-banner animate-out">' + '  <div class="cookie-banner__close close" role="button"><svg class="icon-svg" title="" role="img"><use xlink:href="#close"></use></svg></div>' + '  <div class="cookie-banner__message">Arity.com uses cookies to improve your site experience. If you would like to know more, please read our <a href="' + baseUrl + '/privacy/">privacy policy</a>.</div>' + '</div>';
+      var html = "" + '<div class="cookie-banner animate-out">' + '  <div class="cookie-banner__close close" role="button"><svg class="icon-svg" title="" role="img"><use xlink:href="#close"></use></svg></div>' + '  <div class="cookie-banner__message">Arity.com uses cookies to improve your site experience. If you would like to know more, please read our <a href="' + baseUrl + '/privacy/">privacy policy</a>.</div>' + "</div>";
 
       return html;
     },
     eventListeners: function eventListeners() {
-      this.$close.on('click', this.onCloseTrigger.bind(this));
+      this.$close.on("click", this.onCloseTrigger.bind(this));
     },
     onCloseTrigger: function onCloseTrigger(evt) {
       evt.preventDefault();

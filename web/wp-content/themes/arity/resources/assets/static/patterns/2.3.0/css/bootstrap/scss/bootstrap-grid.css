@@ -19,7 +19,8 @@ html {
           box-sizing: inherit;
 }
 
-/*------------------------------------*# CUSTOM TYPE VARIABLES
+/*------------------------------------*\
+# CUSTOM TYPE VARIABLES
 \*------------------------------------*/
 .container {
   position: relative;
