@@ -11291,7 +11291,7 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
     display: inline-block;
   }
   .site-footer-generic__copyright ul li:not(:first-child)::before {
-    content: "|";
+    content: '|';
     margin-right: 15px;
     margin-left: 15px;
   }
