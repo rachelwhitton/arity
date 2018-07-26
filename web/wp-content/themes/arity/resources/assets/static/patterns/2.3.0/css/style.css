@@ -11248,6 +11248,10 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
     margin-right: 0px;
     margin-left: 0px;
   }
+  .site-footer-generic__copyright ul li a {
+    display: block;
+    margin-bottom: 10px;
+  }
 }
 
 @media screen and (min-width: 480px) {
@@ -11270,6 +11274,10 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
     content: '';
     margin-right: 0px;
     margin-left: 0px;
+  }
+  .site-footer-generic__copyright ul li a {
+    display: block;
+    margin-bottom: 10px;
   }
 }
 
@@ -11297,6 +11305,7 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   }
   .site-footer-generic__copyright ul li a {
     display: inline !important;
+    margin-bottom: 0;
   }
 }
 
