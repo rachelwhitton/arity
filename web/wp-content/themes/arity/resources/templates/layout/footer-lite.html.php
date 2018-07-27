@@ -7,9 +7,7 @@ if(empty($data)) {
     return false;
   }
 }
-
 ?>
-
 <footer class="site-footer-generic">
   <div class="container">
     <div class="row">
@@ -18,56 +16,24 @@ if(empty($data)) {
           <span><?= do_shortcode('[copyright]'); ?></span>
           <span class="separator">|</span>
           <?php
-            if (has_nav_menu('footer_copyright')) :
-          ?>
-            <?php
+            if(get_field('custom_footer_menu_name')!=''){
               wp_nav_menu([
-                'menu'            => 'nav_menu',
+                'menu'            => get_field('custom_footer_menu_name'),
                 'theme_location'  => 'footer_copyright',
                 'menu_class'      => '',
                 'menu_role'       => ''
               ]);
-            ?>
-          <?php
-            endif;
+            }else{
+              if (has_nav_menu('footer_copyright')){
+                wp_nav_menu([
+                  'menu'            => 'nav_menu',
+                  'theme_location'  => 'footer_copyright',
+                  'menu_class'      => '',
+                  'menu_role'       => ''
+                ]);
+              }
+            }
           ?>
-          <?php if(!empty($data['menu'])) : ?>
-
-            <span class="separator">|</span>
-
-            <ul class="" role="menubar">
-              <?php
-                $i=0; foreach($data['menu'] as $item) :
-                  $i++;
-
-                  if(empty($item['menu_item']['title'])) {
-                    continue;
-                  }
-
-                  if(empty($item['menu_item']['id'])) {
-                    $item['menu_item']['id'] = sanitize_title($item['menu_item']['title']);
-                  }
-
-                  $item['menu_item']['link_attrs'] = '';
-                  if($i!=1) {
-                    $item['menu_item']['link_attrs'] .= ' tabindex="-1"';
-                  }
-
-                  if(!empty($item['menu_item']['target'])) {
-                    $item['menu_item']['link_attrs'] .= ' target="' . $item['menu_item']['target'] . '"';
-                  }
-
-                  if(empty($item['menu_item']['url'])) {
-                    $item['menu_item']['url'] = '#'.$item['menu_item']['id'];
-                  }
-                ?>
-                <li class="menu-item menu-extras">
-                  <a href="<?= $item['menu_item']['url']; ?>" role="menuitem"<?= $item['menu_item']['link_attrs']; ?>><?= $item['menu_item']['title']; ?></a>
-                </li>
-              <?php endforeach; ?>
-            </ul>
-            
-          <?php endif; ?>
         </small>
       </div>
     </div>
