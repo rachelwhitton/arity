@@ -33,6 +33,8 @@ if(empty($data)) {
           ?>
           <?php if(!empty($data['menu'])) : ?>
 
+            <span class="separator">|</span>
+
             <ul class="" role="menubar">
               <?php
                 $i=0; foreach($data['menu'] as $item) :
@@ -59,7 +61,9 @@ if(empty($data)) {
                     $item['menu_item']['url'] = '#'.$item['menu_item']['id'];
                   }
                 ?>
-                <li class="menu-item menu-extras"><span>&nbsp;&nbsp; |</span><a href="<?= $item['menu_item']['url']; ?>" role="menuitem"<?= $item['menu_item']['link_attrs']; ?>><?= $item['menu_item']['title']; ?></a>
+                <li class="menu-item menu-extras">
+                  <a href="<?= $item['menu_item']['url']; ?>" role="menuitem"<?= $item['menu_item']['link_attrs']; ?>><?= $item['menu_item']['title']; ?></a>
+                </li>
               <?php endforeach; ?>
             </ul>
             

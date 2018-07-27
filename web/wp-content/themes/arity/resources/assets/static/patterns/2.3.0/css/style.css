@@ -11025,11 +11025,12 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   }
   .site-footer__copyright ul li {
     display: block;
+    margin-right: 0;
   }
   .site-footer__copyright ul li:not(:first-child)::before {
     content: '';
-    margin-right: 0px;
-    margin-left: 0px;
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 
@@ -11048,11 +11049,12 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   }
   .site-footer__copyright ul li {
     display: block;
+    margin-right: 0;
   }
   .site-footer__copyright ul li:not(:first-child)::before {
     content: '';
-    margin-right: 0px;
-    margin-left: 0px;
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 
@@ -11072,11 +11074,12 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   .site-footer__copyright ul li {
     list-style: none;
     display: inline-block;
+    margin-right: 15px;
   }
   .site-footer__copyright ul li:not(:first-child)::before {
     content: "|";
     margin-right: 15px;
-    margin-left: 15px;
+    margin-left: 0;
   }
   .site-footer__copyright ul li a {
     display: inline !important;
@@ -11297,11 +11300,12 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   .site-footer-generic__copyright ul li {
     list-style: none;
     display: inline-block;
+    margin-right: 15px;
   }
   .site-footer-generic__copyright ul li:not(:first-child)::before {
     content: '|';
     margin-right: 15px;
-    margin-left: 15px;
+    margin-left: 0px;
   }
   .site-footer-generic__copyright ul li a {
     display: inline !important;
