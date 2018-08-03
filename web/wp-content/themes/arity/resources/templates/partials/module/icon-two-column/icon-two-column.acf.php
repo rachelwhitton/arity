@@ -47,7 +47,7 @@ $fields = [
               ]
             ]
           ]
-        ],
+        ]/*, // Content types with dropdown Icon are disabled 2018-08-03
         [
           'label' => 'Text Icon Stack',
           'name' => 'component__text-icon-stack',
@@ -79,7 +79,7 @@ $fields = [
               ]
             ]
           ]
-        ]
+        ]*/
       ]
     ]),
 
@@ -113,7 +113,7 @@ $fields = [
               ]
             ]
           ]
-        ],
+        ]/*, // Content types with dropdown Icon are disabled 2018-08-03
         [
           'label' => 'Text Icon Stack',
           'name' => 'component__text-icon-stack',
@@ -145,7 +145,7 @@ $fields = [
               ]
             ]
           ]
-        ]
+        ]*/
       ]
     ])
 
