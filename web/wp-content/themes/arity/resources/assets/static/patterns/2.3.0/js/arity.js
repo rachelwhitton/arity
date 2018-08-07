@@ -631,10 +631,11 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
       message: ""
     },
     init: function init(opts) {
-      if (!$(".page--home-v2").length) {
-        return;
-      }
-
+      /*  Commented to show on every page
+        if (!$(".page--home-v2").length) {
+          return;
+        }
+      */
       this._options = jQuery.extend(this.defaults, opts);
 
       if (app.env(["development", "staging"]) && getParam("debug")) {
