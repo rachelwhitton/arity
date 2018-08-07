@@ -189,6 +189,7 @@ $module_builder->includeACFSettings('action-bar-map', 'module');
 $module_builder->includeACFSettings('sub-footer', 'module');
 $module_builder->includeACFSettings('icon-two-column', 'module');
 $module_builder->includeACFSettings('horizontal-rule', 'module');
+$module_builder->includeACFSettings('nav-jump-link', 'module');
 
 //archive candidate
 

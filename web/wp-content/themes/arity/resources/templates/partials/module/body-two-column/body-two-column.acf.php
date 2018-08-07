@@ -63,6 +63,7 @@ $fields = [
             ]
           ]
         ],
+        /*
         [
           'label' => 'Text Icon Stack',
           'name' => 'component__text-icon-stack',
@@ -78,7 +79,7 @@ $fields = [
               ]
             ]
           ]
-        ],
+        ],*/
         [
           'label' => 'Product CTA',
           'name' => 'component__product-cta',
