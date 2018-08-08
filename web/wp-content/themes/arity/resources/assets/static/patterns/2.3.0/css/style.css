@@ -10047,8 +10047,9 @@ form .email-only-button-group {
   .site-header .navbar__nav {
     padding: 1px 40px;
     display: block;
-    -ms-flex-negative: 0;
-        flex-shrink: 0;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     overflow: hidden;
   }
   .site-header .navbar__nav a {
