@@ -11,31 +11,37 @@ $fields = [
         acf_text([
             'name' => 'headline',
             'label' => 'Headline',
-            'instructions' => 'Add the item\'s headline.',
+            'instructions' => 'Add the item’s headline',
             'required' => true,
         ]),
         acf_text([
           'name' => 'link',
           'label' => 'Link to news item',
-          'instructions' => 'Add the item\'s URL.',
+          'instructions' => 'Add the item’s URL',
           'required' => true,
+        ]),
+        acf_text([
+          'name' => 'article_id',
+          'label' => 'Article ID (optional)',
+          'instructions' => 'Add the item’s article ID',
+          'required' => false,
         ]),
         acf_textarea([
             'name' => 'description',
             'label' => 'Description',
-            'instructions' => 'Add the item\'s description text.',
+            'instructions' => 'Add the item’s description text',
             'required' => true,
         ]),
         acf_text([
           'name' => 'publication',
           'label' => 'Publication',
-          'instructions' => 'Add the item\'s publication source.',
+          'instructions' => 'Add the item’s publication source',
           'required' => true,
         ]),
         acf_date_picker([
-          'name' => 'publication-date',
+          'name' => 'publication_date',
           'label' => 'Publication Date',
-          'instructions' => 'Add the publication date.',
+          'instructions' => 'Add the publication date',
           'required' => true,
           'display_format' => 'F d, Y',
           'return_format' => 'F d, Y',
@@ -49,7 +55,7 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Newsroom Item',
+    'title' => 'Module - Newsroom Items',
     'name' => 'module__newsroom-item',
     'key' => 'group_module_newsroom-item',
     'fields' => $fields,
