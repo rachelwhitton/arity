@@ -77,6 +77,21 @@ $ npm install -g yarn
 $ yarn
 ```
 
+**Troubleshooting note:** If the `yarn` command generates a lot of errors related to nvm, check your node version:
+
+```
+node --version
+```
+
+`yarn` errors have been reported from node v10^ users. Try using node v9.3.0 instead:
+
+```
+# if necessary
+nvm install 9.3.0
+# -or-
+nvm use 9.3.0
+```
+
 ### Run dev gulp task
 
 ```
@@ -142,3 +157,4 @@ See README.md in root directory.
 ---
 
 Project repo [Arity CMS](https://vsapartners.beanstalkapp.com/1274-009-05-arity-cms-wordpress).
+ 	

@@ -105,7 +105,7 @@ $ wp --info # Double check everything looks good
 ### Create Database
 
 * Open Sequel Pro and make a connection to your localhost MYSQL.
-* Create a new Database, enter your database name (arity_dev), choose "utf8mb4" as the Database Encoding, choose "utf8mb4_unicode_ci" as the Database Collation.
+* Create a new Database, enter your database name (arity\_dev), choose "utf8mb4" as the Database Encoding, choose "utf8mb4\_unicode\_ci" as the Database Collation.
 * Download a database export by going to the vsadev.com development site, logging into Wordpress, and navigating to "Migrate DB Pro".
 * Choose "Initial Export" and customize the "Find & Replace" settings to match your local environment configuration.
 * Using Sequel Pro, import the database dump into the newly created database.
