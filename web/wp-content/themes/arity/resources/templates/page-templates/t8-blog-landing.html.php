@@ -40,6 +40,11 @@ namespace App\Theme;
 <div class="feature-card__image">
 <?php
   $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+  
+  if ($url==''){
+    $url = get_template_directory_uri().'/dist/patterns/2.3.0/images/blog_default_image.jpg';
+  }
+  
   echo '<div class="feature-card__bg-image" style="background: url('. $url.') no-repeat center center; background-size: cover;"></div>';
 ?>
 </div>

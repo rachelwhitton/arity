@@ -654,11 +654,29 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
       this._.el = this.template();
 
       if (!this.getAgreed()) {
-        this.render();
+        var that = this;
+        var url = "/geoip/";
+        $.ajax({
+          url: url
+        }).done(function (data) {
+          var countryList = ["AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IE", "LV", "LT", "LU", "MT", "NL", "PL", "PT", "RO", "SK", "SI", "ES", "SE", "GB"];
+          console.log("done", data);
 
-        setTimeout(function () {
-          this.open();
-        }.bind(this), 450);
+          var currentCountry = data.trim();
+          // console.log('Header found country: ' + currentCountry);
+          if (countryList.indexOf(currentCountry) !== -1) {
+            console.log("GDPR COUNTRY");
+          } else {
+            // console.log('Not in array');
+            console.log("NOT A GDPR COUNTRY");
+          }
+
+          that.render();
+
+          setTimeout(function () {
+            that.open();
+          }.bind(that), 450);
+        });
       }
 
       debug("cookieBanner.init: complete", this);
