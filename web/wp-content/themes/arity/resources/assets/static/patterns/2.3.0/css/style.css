@@ -7440,7 +7440,7 @@ a.blue-link:focus [class^="icon-"] {
 .hero-image__overlay .overlay-inner {
   width: 1058px;
   height: 157px;
-  background: url("../images/hero-dot-dash@2x.png") no-repeat 0 0 transparent;
+  background: url("../images/dotdash-2.png") no-repeat 0 0 transparent;
   background-size: contain;
   background-position: -90px 0;
   display: none;
@@ -7448,7 +7448,7 @@ a.blue-link:focus [class^="icon-"] {
 
 @media screen and (min-width: 480px) {
   .hero-image__overlay .overlay-inner {
-    background: url("../images/hero-dot-dash@2x.png") no-repeat center center transparent;
+    background: url("../images/dotdash-2.png") no-repeat center center transparent;
     background-size: contain;
     display: block;
   }
@@ -7456,7 +7456,7 @@ a.blue-link:focus [class^="icon-"] {
 
 @media screen and (min-width: 768px) {
   .hero-image__overlay .overlay-inner {
-    background: url("../images/hero-dot-dash@2x.png") no-repeat center center transparent;
+    background: url("../images/dotdash-2.png") no-repeat center center transparent;
     background-size: contain;
     display: block;
   }
@@ -7464,7 +7464,7 @@ a.blue-link:focus [class^="icon-"] {
 
 @media screen and (min-width: 961px) {
   .hero-image__overlay .overlay-inner {
-    background: url("../images/hero-dot-dash@2x.png") no-repeat top center transparent;
+    background: url("../images/dotdash-2.png") no-repeat top center transparent;
     background-size: cover;
     display: block;
   }
