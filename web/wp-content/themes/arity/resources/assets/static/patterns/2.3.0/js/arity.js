@@ -652,10 +652,13 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
       this._.rendered = false;
       this._.closed = false;
       this._.el = this.template();
+      this._.elGDPR = this.templateGDPR();
+      this._.isGDPR = false;
 
       if (!this.getAgreed()) {
         var that = this;
         var url = "/geoip/";
+        //var url = "https://dev.arity/geoip/";
         $.ajax({
           url: url
         }).done(function (data) {
@@ -666,13 +669,19 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
           // console.log('Header found country: ' + currentCountry);
           if (countryList.indexOf(currentCountry) !== -1) {
             console.log("GDPR COUNTRY");
+            that._.isGDPR = true;
+            that.render();
           } else {
             // console.log('Not in array');
             console.log("NOT A GDPR COUNTRY");
+            that.render();
           }
 
+          setTimeout(function () {
+            that.open();
+          }.bind(that), 450);
+        }).fail(function () {
           that.render();
-
           setTimeout(function () {
             that.open();
           }.bind(that), 450);
@@ -682,7 +691,16 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
       debug("cookieBanner.init: complete", this);
     },
     render: function render() {
-      this.$el = $(this._.el);
+      //console.log(this._.isGDPR);
+
+      //this.$el = $(this._.el);
+
+      if (this._.isGDPR) {
+        this.$el = $(this._.elGDPR);
+      } else {
+        this.$el = $(this._.el);
+      }
+
       $("body").append(this.$el);
       this.$close = $(".close", this.$el);
 
@@ -760,6 +778,12 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
     template: function template() {
       var baseUrl = window.location.origin;
       var html = "" + '<div class="cookie-banner animate-out">' + '  <div class="cookie-banner__close close" role="button"><svg class="icon-svg" title="" role="img"><use xlink:href="#close"></use></svg></div>' + '  <div class="cookie-banner__message">Arity.com uses cookies to improve your site experience. If you would like to know more, please read our <a href="' + baseUrl + '/privacy/">privacy policy</a>.</div>' + "</div>";
+
+      return html;
+    },
+    templateGDPR: function templateGDPR() {
+      var baseUrl = window.location.origin;
+      var html = "" + '<div class="cookie-banner animate-out">' + '  <div class="cookie-banner__message GDPR"><div class="container">' + '          <div class="row">' + '               <div class="col-md-8">' + "                 <strong>Arity.com uses cookies to improve your site experience. </strong><br/><br/>" + '                We use cookies to improve your experience on the Arity website. If you want to learn more about how we use cookies and how you can control them, read our <a href="' + baseUrl + '/privacy/">Cookie Policy</a>. If you consent to our use of cookies, please click the button to continue to arity.com.' + "                </div>" + '               <div class="col-md-4">' + '                  <div class="close" role="button"><br/><br/><button type="button" class="button button--primary">I accept cookies</button></div>' + "                </div>" + "          </div>" + "      </div>" + "  </div>" + "</div>";
 
       return html;
     },

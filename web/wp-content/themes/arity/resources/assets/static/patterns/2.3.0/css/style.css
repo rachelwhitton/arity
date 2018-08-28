@@ -7408,13 +7408,14 @@ a.blue-link:focus [class^="icon-"] {
 .hero-image__overlay {
   position: absolute;
   z-index: 0;
-  width: 1058px;
-  height: 157px;
-  top: 115px;
+  width: 100%;
+  height: 100%;
+  top: 0;
   left: 0;
   max-width: 100%;
   overflow: hidden;
   display: none;
+  z-index: -1;
 }
 
 @media screen and (min-width: 768px) {
@@ -7438,9 +7439,9 @@ a.blue-link:focus [class^="icon-"] {
 }
 
 .hero-image__overlay .overlay-inner {
-  width: 1058px;
-  height: 157px;
-  background: url("../images/dotdash-2.png") no-repeat 0 0 transparent;
+  width: 100%;
+  height: 100%;
+  background: url("../images/dotdash-1200@2x.png") no-repeat 0 0 transparent;
   background-size: contain;
   background-position: -90px 0;
   display: none;
@@ -7448,7 +7449,7 @@ a.blue-link:focus [class^="icon-"] {
 
 @media screen and (min-width: 480px) {
   .hero-image__overlay .overlay-inner {
-    background: url("../images/dotdash-2.png") no-repeat center center transparent;
+    background: url("../images/dotdash-768@2x.png") no-repeat center center transparent;
     background-size: contain;
     display: block;
   }
@@ -7456,7 +7457,7 @@ a.blue-link:focus [class^="icon-"] {
 
 @media screen and (min-width: 768px) {
   .hero-image__overlay .overlay-inner {
-    background: url("../images/dotdash-2.png") no-repeat center center transparent;
+    background: url("../images/dotdash-768@2x.png") no-repeat center center transparent;
     background-size: contain;
     display: block;
   }
@@ -7464,14 +7465,15 @@ a.blue-link:focus [class^="icon-"] {
 
 @media screen and (min-width: 961px) {
   .hero-image__overlay .overlay-inner {
-    background: url("../images/dotdash-2.png") no-repeat top center transparent;
-    background-size: cover;
+    background: url("../images/dotdash-961@2x.png") no-repeat top center transparent;
+    background-size: contain;
     display: block;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .hero-image__overlay .overlay-inner {
+    background: url("../images/dotdash-1200@2x.png") no-repeat 0 0 transparent;
     background-position: center center;
   }
 }
@@ -8781,7 +8783,8 @@ form .email-only-button-group {
 }
 
 .cookie-banner {
-  background: #000;
+  background: #011C2C;
+  opacity: 0.9;
   position: fixed;
   top: auto;
   bottom: 0;
@@ -8852,6 +8855,17 @@ form .email-only-button-group {
   .cookie-banner__close.active [class^="icon-"], .cookie-banner__close:active [class*=" icon-"],
   .cookie-banner__close:active [class^="icon-"] {
     fill: #0070D6;
+  }
+}
+
+.cookie-banner .GDPR {
+  padding: 40px !important;
+  text-align: left !important;
+}
+
+@media screen and (min-width: 768px) {
+  .cookie-banner .GDPR {
+    padding: 100px !important;
   }
 }
 
