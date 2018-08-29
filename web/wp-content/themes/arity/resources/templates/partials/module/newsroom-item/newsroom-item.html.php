@@ -27,7 +27,7 @@ namespace App\Theme;
         // Variables
         $page_name        = 'newsroom-beta'; // change this 
         $row              = 0;
-        $items_per_page   = 2; // How many items to display on each page
+        $items_per_page   = 12; // How many items to display on each page
         $items            = array_reverse($data['items']);
         $total            = count( $items);
         $pages            = ceil( $total / $items_per_page );
@@ -64,11 +64,13 @@ namespace App\Theme;
             'format' => '?page=%#%',
             'current' => $paged,
             'total' => $pages,
+            'show_all' => true, 
             'type' => 'array'
-          ));          
+          ));
+          $display_none = $pages < 2 ? ' display: none;' : '';
           ?>
 
-          <div class="blog-pagination" style="padding-top: 30px;">
+          <div class="blog-pagination" style="padding-top: 30px;<?php echo $display_none; ?>">
             <div class="blog-pagination__inner">
               <?php if( get_previous_posts_link() ) : ?>
                 <div class="blog-pagination__arrow-link prev-link">
@@ -86,10 +88,9 @@ namespace App\Theme;
                 Page
                 <select id="blog-pagination">
                     <?php
-
                     foreach ( $links as $pgl ) {
                         //Skip Prev and Next.
-                        if(strpos($pgl, 'class="prev') || strpos($pgl, 'class="next')){
+                        if(strpos($pgl, 'class="prev') || strpos($pgl, 'class="next') || strpos($pgl, 'class="page-numbers dots')){
                             continue;
                         }
                         $option = str_replace('<a','<option', $pgl);
