@@ -6639,13 +6639,22 @@ body {
   }
 }
 
+.block_link .button__label {
+  padding-left: 30px;
+  display: block;
+}
+
 .block_link .button__icon {
-  margin-top: 2px;
+  position: absolute;
+}
+
+.block_link .button__icon svg {
+  top: 0px;
 }
 
 .block_link .button__icon [class*=" icon-"],
 .block_link .button__icon [class^="icon-"] {
-  top: 5px;
+  top: 0px;
   fill: #0070D6;
 }
 

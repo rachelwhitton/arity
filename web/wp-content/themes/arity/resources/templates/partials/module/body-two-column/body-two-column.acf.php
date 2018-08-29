@@ -95,7 +95,23 @@ $fields = [
               ]
             ]
           ]
-        ]
+        ],
+        [
+          'label' => 'Custom CTA',
+          'name' => 'component__custom-cta',
+          'sub_fields' => [
+            [
+              'type' => 'clone',
+              'label' => 'Custom CTA',
+              'name' => 'component__custom-cta',
+              'key' => 'field_component_custom-cta',
+              'display' => 'seamless',
+              'clone' => [
+                  'group_component_custom-cta'
+              ]
+            ]
+          ]
+        ],
       ]
     ]),
 

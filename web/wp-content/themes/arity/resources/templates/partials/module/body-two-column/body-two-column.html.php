@@ -10,7 +10,6 @@ namespace App\Theme;
   Last Updated:       08/01/2017
   Since:              1.0.0
 */
-
 ?>
 <div id="body-two-column" <?php module_class('body-column body-two-column body-two-column-sidebar'); ?>>
   <div class="container">

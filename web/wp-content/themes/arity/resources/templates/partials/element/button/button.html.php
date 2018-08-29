@@ -8,7 +8,7 @@ namespace App\Theme;
   Last Updated:       08/15/2017
   Since:              1.0.0
 */
-
+//echo 'Custom CTA <pre>';print_r($data);echo '</pre>';
 ?>
 
 <a href="<?= $data['url']; ?>" <?php element_class($data['classes']); ?><?php if (!empty($data['target'])) : ?> target="<?= $data['target']; ?>"<?php endif; ?> data-analytics="<?= $data['analytics']; ?>">
