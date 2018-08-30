@@ -47,8 +47,8 @@ $fields = [
           'return_format' => 'F j, Y',
       ]),
     ],
-      'layout'      => 'block',
-            'button_label'  => 'Add Item',
+      'layout' => 'block',
+      'button_label' => 'Add Item',
     ]),
 
 ];
