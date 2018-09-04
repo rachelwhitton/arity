@@ -25,7 +25,7 @@ namespace App\Theme;
         }
 
         // Variables
-        $page_name        = 'newsroom-beta'; // change this 
+        $page_name        = 'newsroom';
         $row              = 0;
         $items_per_page   = 12; // How many items to display on each page
         $items            = array_reverse($data['items']);
