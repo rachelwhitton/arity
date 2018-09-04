@@ -84,7 +84,7 @@ $fields = [
       'choices' => [
         'bg-white' => 'White',
         'bg-gray' => 'Light Gray',
-        'bg-darkblue' => 'Dark Blue'
+        'bg-darkblue' => 'Navy'
       ]
     ]),
 
