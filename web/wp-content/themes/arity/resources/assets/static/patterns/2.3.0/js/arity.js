@@ -777,7 +777,7 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
     },
     template: function template() {
       var baseUrl = window.location.origin;
-      var html = "" + '<div class="cookie-banner animate-out">' + '  <div class="cookie-banner__close close" role="button"><svg class="icon-svg" title="" role="img"><use xlink:href="#close"></use></svg></div>' + '  <div class="cookie-banner__message">Arity.com uses cookies to improve your site experience. If you would like to know more, please read our <a href="' + baseUrl + '/privacy/">privacy policy</a>.</div>' + "</div>";
+      var html = "" + '<div class="cookie-banner animate-out">' + '  <div class="cookie-banner__close close" role="button"><svg class="icon-svg" title="" role="img"><use xlink:href="#close"></use></svg></div>' + '  <div class="cookie-banner__message">Arity.com uses cookies to improve your site experience. If you would like to know more, please read our <a href="' + baseUrl + '/privacy/">privacy statement</a>.</div>' + "</div>";
 
       return html;
     },

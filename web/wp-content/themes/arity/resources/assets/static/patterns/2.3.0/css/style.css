@@ -10615,6 +10615,42 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   height: auto;
 }
 
+.site-header.is-white {
+  background-color: #fff;
+}
+
+.site-header.is-white .navbar__nav a[role="menuitem"] {
+  color: #011C2C;
+}
+
+.site-header.is-white .navbar__nav a[role="menuitem"]:hover {
+  color: #0070D6;
+}
+
+.site-header.is-white .dark_logo {
+  display: block;
+}
+
+.site-header.is-white .white_logo {
+  display: none;
+}
+
+.site-header.animate-in .navbar__nav a[role="menuitem"] {
+  color: #FFFFFF;
+}
+
+.site-header.animate-in .navbar__nav a[role="menuitem"]:hover {
+  color: #E2EF1C;
+}
+
+.site-header.animate-in .dark_logo {
+  display: none;
+}
+
+.site-header.animate-in .white_logo {
+  display: block;
+}
+
 .site-footer {
   background: #FFFFFF;
   padding: 50px calc((100% - 1200px)/2 + 30px) 32px;

@@ -17,6 +17,13 @@ if(empty($data)) {
   }
 }
 
+//echo '<pre>';echo get_field('header_lite_white_header');print_r($GLOBALS['THEME_SITE_HEADER_LITE']);echo '</pre>';
+
+$is_white = "";
+if(get_field('header_lite_white_header')){
+  $is_white = "is-white";
+}
+
 if(!isset($data['brand']['link'])) {
   $data['brand']['link'] = home_url('/');
 }
@@ -38,7 +45,7 @@ if(!isset($data['brand']['logo'])) {
 }
 
 ?>
-<div class="site-header lite--">
+<div class="site-header lite-- <?=$is_white?>">
   <nav class="navbar" role="navigation">
     <div class="container">
       <div class="navbar__header">
@@ -47,7 +54,8 @@ if(!isset($data['brand']['logo'])) {
         <?php else : ?>
           <div class="navbar__brand">
         <?php endif; ?>
-          <?php if(!empty($data['brand']['logo'])) : ?><img src="<?= $data['brand']['logo']; ?>" alt="" class="navbar__logo"><?php endif; ?>
+          <?php if(!empty($data['brand']['logo'])) : ?><img src="<?= $data['brand']['logo']; ?>" alt="" class="navbar__logo dark_logo"><?php endif; ?>
+          <?php if(!empty(get_field('header_lite_brand_white_logo'))) : ?><img src="<?= get_field('header_lite_brand_white_logo') ?>" alt="" class="navbar__logo white_logo"><?php endif; ?>
           <?php if(!empty($data['brand']['name'])) : ?><span class="sr-only"><?= $data['brand']['name']; ?></span><?php endif; ?>
           <?php if(!empty($data['brand']['link'])) : ?>
             </a>
