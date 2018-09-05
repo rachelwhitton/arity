@@ -55,7 +55,7 @@ if(!isset($data['brand']['logo'])) {
           <div class="navbar__brand">
         <?php endif; ?>
           <?php if(!empty($data['brand']['logo'])) : ?><img src="<?= $data['brand']['logo']; ?>" alt="" class="navbar__logo dark_logo"><?php endif; ?>
-          <?php if(!empty(get_field('header_lite_brand_white_logo'))) : ?><img src="<?= get_field('header_lite_brand_white_logo') ?>" alt="" class="navbar__logo white_logo"><?php endif; ?>
+          <?php if(!empty(get_field('header_lite_brand_white_logo'))) : ?><img src="<?= get_field('header_lite_brand_white_logo') ?>" alt="" class="navbar__logo white_logo"><?php else :?><img src="<?= $data['brand']['logo']; ?>" alt="" class="navbar__logo white_logo"><?php endif; ?>
           <?php if(!empty($data['brand']['name'])) : ?><span class="sr-only"><?= $data['brand']['name']; ?></span><?php endif; ?>
           <?php if(!empty($data['brand']['link'])) : ?>
             </a>
