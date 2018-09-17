@@ -23,6 +23,7 @@ $fields = [
       'choices' => [
         'layout__image' => 'Image',
         'layout__video' => 'Video',
+        'layout__datavis' => 'Data Visualization',
       ]
     ]),
 
@@ -105,6 +106,67 @@ $fields = [
       ],
       'wrapper' => array (
         'width' => '50',
+      )
+    ]),
+
+    // datavis Url
+    acf_file([
+      'name' => 'visualization',
+      'label' => 'Upload visualization',
+      'instructions' => 'Add the <strong>zip</strong> file. Zip file should not exceed 2MB.',
+      'required' => 0,
+      'library' => 'all',
+      'mime_types' => 'zip',
+      'return_format' => 'array',
+      'conditional_logic' => [
+        [
+          [
+            'name' => 'content-image-block__content-chooser',
+            'operator' => '==',
+            'value' => 'layout__datavis'
+          ]
+        ]
+      ],
+      //'min_size' => '400 KB',
+      //'max_size' => 5, // MB if entered as int
+    ]),
+    acf_text([
+      'label' => 'iframe URL',
+      'name' => 'content-image-block__url-iframe',
+      'instructions' => 'iframe URL will overwrite zip file.',
+      'required' => 0,
+      'maxlength' => '',
+      'conditional_logic' => [
+        [
+          [
+            'name' => 'content-image-block__content-chooser',
+            'operator' => '==',
+            'value' => 'layout__datavis'
+          ]
+        ]
+      ],
+      'wrapper' => array (
+        'width' => '1000',
+      )
+    ]),
+    //iframe hright
+    acf_text([
+      'label' => 'Iframe height',
+      'name' => 'content-image-block__url-height',
+      'instructions' => 'Specify iframe height',
+      'required' => 0,
+      'maxlength' => '',
+      'conditional_logic' => [
+        [
+          [
+            'name' => 'content-image-block__content-chooser',
+            'operator' => '==',
+            'value' => 'layout__datavis'
+          ]
+        ]
+      ],
+      'wrapper' => array (
+        'width' => '1000',
       )
     ]),
 

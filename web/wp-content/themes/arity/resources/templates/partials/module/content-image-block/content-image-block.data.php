@@ -1,7 +1,12 @@
 <?php
 
-$data['classes'][] = 'content-image-block';
 $data['classes'][] = 'block-two-column';
+
+if($data['content-chooser']=='layout__datavis'){
+  $data['classes'][] = 'content-datavis-block';
+}else{
+  $data['classes'][] = 'content-image-block';
+}
 
 // Background Color Class
 if (!empty($data['bkg_color'])) {
@@ -10,7 +15,11 @@ if (!empty($data['bkg_color'])) {
 
 // Layout Class
 if (!empty($data['layout'])) {
-  $data['classes'][] = 'content-image-block--'.$data['layout'];
+  if($data['content-chooser']=='layout__datavis'){
+    $data['classes'][] = 'content-datavis-block--'.$data['layout'];
+  }else{
+    $data['classes'][] = 'content-image-block--'.$data['layout'];
+  }
 }
 
 if (empty($data['headline-alignment'])) {

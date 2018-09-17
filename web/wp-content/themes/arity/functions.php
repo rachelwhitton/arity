@@ -61,3 +61,33 @@ if ($ok) {
     // they must be under the same dir path.
     (new \Arity\Autoloader($theme->get('config')))->register();
 }
+
+function my_datavis_save_post($post_id){
+    // bail early if no ACF data
+    if (empty($_POST['acf'])) {
+        return;
+    }
+    $arr = $_POST['acf']['field_modules_modules'];
+    $mainArr = $_POST['acf']['field_modules_modules'];
+    //echo 'Before <pre>'; print_r($mainArr);
+    foreach ($arr as $key => $value) {
+        $attachment_id = $arr[$key]['field_module_content-image-block_field_module_content-image-block_visualization'];
+        //echo '<pre>'; print_r(get_attached_file($attachment_id)); echo '</pre>';
+        echo get_attached_file($attachment_id);
+        $path = get_attached_file($attachment_id);
+        $fileWithExt = basename($path);
+        $file = basename($path, ".zip");
+
+        WP_Filesystem();
+        $destination = wp_upload_dir();
+        $destination_path = $destination['path'];
+        $unzipfile = unzip_file( $destination_path.'/'.$fileWithExt, $destination_path.'/'.$file);
+        
+        if (is_wp_error( $unzipfile )) {
+            echo 'There was an error unzipping the file.';
+        } else {
+            echo 'Successfully unzipped the file!';
+        }
+    }
+}
+add_action('acf/save_post', 'my_datavis_save_post', 1);

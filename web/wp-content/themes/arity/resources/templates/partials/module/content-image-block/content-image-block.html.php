@@ -10,6 +10,23 @@ namespace App\Theme;
   Last Updated:       08/01/2017
   Since:              1.0.0
 */
+//echo '<pre>'; print_r($data); echo '</pre>';
+$class = 'content-image-block';
+if($data['content-chooser']=='layout__datavis'){
+  $class = 'content-datavis-block';
+
+  if (!empty($data['visualization'])){
+    $ext = pathinfo($data['visualization']['url'], PATHINFO_EXTENSION);
+    $newUrl =  str_replace('.'.$ext,'',$data['visualization']['url']);
+    $newUrl .= '/index.html'; 
+    $iframeUrl = $newUrl;
+  }
+
+  if (!empty($data['url-iframe'])){
+    $iframeUrl = $data['url-iframe'];
+  }
+
+}
 ?>
 
 <div <?php module_class($data['classes']); ?>>
@@ -26,7 +43,7 @@ namespace App\Theme;
 
           <?php if (!empty($data['module-headline'])) : ?>
             <?php element('headline', array(
-            'classes' => 'content-image-block__title',
+            'classes' => $class.'__title',
             'headline' => $data['module-headline']
           )); ?>
           <?php endif; ?>
@@ -43,7 +60,7 @@ namespace App\Theme;
   <div class="container">
     <div class="row">
       <?php if (!empty($data['image_id']) && $data['content-chooser'] == "layout__image") : ?>
-        <div class="content-image-block__col wide-- content-image-block__img-box">
+        <div class="<?=$class?>__col wide-- <?=$class?>__img-box">
           <?php element('image', [
             'id' => $data['image_id'],
             'classes' => $data['img-classes']
@@ -51,16 +68,21 @@ namespace App\Theme;
         </div>
       <?php endif; ?>
       <?php if (!empty($data['url']) && $data['content-chooser'] == "layout__video") : ?>
-        <div class="content-image-block__col wide-- content-image-block__video-box">
+        <div class="<?=$class?>__col wide-- <?=$class?>__video-box">
           <figure class="video-wrapper">
             <?php the_video($data['url']); ?>
           </figure>
         </div>
       <?php endif; ?>
-      <div class="content-image-block__col narrow--">
-        <div class="content-image-block__col-group">
+      <?php if ((!empty($data['url-iframe']) || !empty($data['visualization'])) && $data['content-chooser'] == "layout__datavis") : ?>
+        <div class="<?=$class?>__col wide-- <?=$class?>__img-box">
+          <iframe class="dataVis" style="border: 0px solid transparent; width:100%; height:<?=$data['url-height']?>px" src="<?=$iframeUrl?>"></iframe>
+        </div>
+      <?php endif; ?>
+      <div class="<?=$class?>__col narrow--">
+        <div class="<?=$class?>__col-group">
           <?php if (!empty($data['headline'])) : ?>
-            <<?= $data['h_el']; ?> class="content-image-block__headline type3"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
+            <<?= $data['h_el']; ?> class="<?=$class?>__headline type3"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
           <?php endif; ?>
           <?php if (!empty($data['body_copy'])) : ?>
           <div class="type0">

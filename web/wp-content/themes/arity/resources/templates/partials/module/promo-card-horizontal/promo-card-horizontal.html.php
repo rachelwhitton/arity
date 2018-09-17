@@ -8,7 +8,7 @@ namespace App\Theme;
   Last Updated:       06/12/2018
   Since:              2.2.1
 */
-
+// echo '<pre>';print_r($data);echo '</pre>';
 ?>
 <div <?php module_class($data['classes']); ?>>
   <div class="container">
@@ -58,6 +58,31 @@ namespace App\Theme;
                   element('button', $data['cta']);
                 ?>
             <?php endif; ?>
+
+            <?php 
+              for($i=0; $i<sizeof($data['custom-cta__link_groups']); $i++){ 
+                $data['cta']['title']= $data['custom-cta__link_groups'][$i]['group']['cta__link']['title'];
+                $data['cta']['url']= $data['custom-cta__link_groups'][$i]['group']['cta__link']['url'];
+                $data['cta']['target']= $data['custom-cta__link_groups'][$i]['group']['cta__link']['target'];
+                
+              ?>
+              <?php if (!empty($data['cta'])) : ?>
+                <?php
+                    if ($data['custom-cta__link_groups'][$i]['group']['cta__type']=='link'){
+                      $data['cta']['classes'] = 'button block_link';
+                      $data['cta']['icon']= $data['custom-cta__link_groups'][$i]['group']['cta__icon_link'];
+                    }else{
+                      $data['cta']['classes'] = 'button--primary blue-hover-border blue-button--';
+                      $data['cta']['icon']= $data['custom-cta__link_groups'][$i]['group']['cta__icon_button'];
+                    }
+                    
+                    //echo $i.'type: '.$data['link_groups'][$i]['group']['cta__type'];
+                ?>
+                  <p>
+                    <?php element('button', $data['cta']); ?>
+                  </p>
+              <?php endif; ?>
+          <?php } ?> 
 
             <div class="promo-card-horizontal__ctas">
               <?php

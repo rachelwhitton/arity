@@ -36,7 +36,7 @@ namespace App\Theme;
     </div>
   </a>
 
-  <div id="collapse-<?= $data['aid']; ?>" class="collapse item" role="tabpanel" aria-hidden="true" aria-labelledby="heading-<?= $data['aid']; ?>" data-parent="#items-wrapper">
+  <div id="collapse-<?= $data['aid']; ?>" class="collapse item col-md-9" role="tabpanel" aria-hidden="true" aria-labelledby="heading-<?= $data['aid']; ?>" data-parent="#items-wrapper">
     <div class="item-row-body">
       <?= apply_filters('the_content', $data['content']); ?>
     </div>
