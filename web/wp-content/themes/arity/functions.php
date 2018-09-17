@@ -94,7 +94,7 @@ function my_datavis_save_post($post_id){
         echo '<br/>';
         echo $new_destination_path.'/'.$file;
 
-
+        var_dump($unzipfile);
 
         if (is_wp_error($unzipfile)) {
             echo 'There was an error unzipping the file.';
