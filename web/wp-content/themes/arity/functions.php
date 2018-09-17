@@ -104,6 +104,16 @@ function my_datavis_save_post($post_id){
             echo 'Successfully unzipped the file!';
         }
 
+        $zip = new ZipArchive;
+        $res = $zip->open($new_destination_path.'/'.$fileWithExt);
+        if ($res === TRUE) {
+            $zip->extractTo($new_destination_path.'/'.$file);
+            $zip->close();
+            echo 'woot!';   
+        } else {
+            echo 'doh!';
+        }
+
         exit;
     }
 }
