@@ -78,6 +78,8 @@ function my_datavis_save_post($post_id){
         echo $fileWithExt = basename($path);
         $file = basename($path, ".zip");
 
+        phpinfo();
+
 // Read this for more info 
 // https://pantheon.io/docs/private-paths/
 
