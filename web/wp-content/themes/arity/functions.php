@@ -75,12 +75,12 @@ function my_datavis_save_post($post_id){
         //echo '<pre>'; print_r(get_attached_file($attachment_id)); echo '</pre>';
         echo get_attached_file($attachment_id);
         $path = get_attached_file($attachment_id);
-        $fileWithExt = basename($path);
+        echo $fileWithExt = basename($path);
         $file = basename($path, ".zip");
 
         WP_Filesystem();
-        $destination = wp_upload_dir();
-        $destination_path = $destination['path'];
+        echo $destination = wp_upload_dir();
+        echo $destination_path = $destination['path'];
         $unzipfile = unzip_file( $destination_path.'/'.$fileWithExt, $destination_path.'/'.$file);
         
         if (is_wp_error( $unzipfile )) {
@@ -88,6 +88,8 @@ function my_datavis_save_post($post_id){
         } else {
             echo 'Successfully unzipped the file!';
         }
+
+        exit;
     }
 }
 add_action('acf/save_post', 'my_datavis_save_post', 1);
