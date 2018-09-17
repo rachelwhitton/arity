@@ -85,8 +85,17 @@ function my_datavis_save_post($post_id){
         echo $destination = wp_upload_dir();
         echo $destination_path = $destination['path'];
         echo $new_destination_path = str_replace('code/web/wp-content/uploads','files',$destination_path);
-        $unzipfile = unzip_file( $new_destination_path.'/'.$fileWithExt, $new_destination_path.'/'.$file);
+        $unzipfile = unzip_file($new_destination_path.'/'.$fileWithExt, $new_destination_path.'/'.$file);
         
+        echo '<br/><pre>';
+        print_r($destination);
+        echo '</pre><br/>';
+        echo $new_destination_path.'/'.$fileWithExt;
+        echo '<br/>';
+        echo $new_destination_path.'/'.$file;
+
+
+
         if (is_wp_error($unzipfile)) {
             echo 'There was an error unzipping the file.';
         } else {
