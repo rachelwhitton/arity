@@ -944,26 +944,33 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
       debug: false // Dont leave this as true
     },
     init: function init(opts) {
-      $(document).ready(function () {
+      $(window).resize(function () {
+        changeIframeWidth();
+      });
+      function changeIframeWidth() {
+        var nwidth = $(".container").css("width").replace("px", "");
+
         $(".dataVis").each(function (index) {
-          console.log(index);
-          $(this).attr("src", $(this).attr("data-src"));
-          /*
-          var currentIframe = $(this);
-          if (navigator.userAgent.indexOf("MSIE") > -1 && !window.opera) {
-            console.log("in True");
-            currentIframe.on("readystatechange", function() {
-              currentIframe.ready(function() {
-                currentIframe.height(currentIframe.contents().height());
-              });
-            });
+          if (nwidth >= 1140) {
+            console.log("xlarge");
+            $(this).css("height", $(this).attr("data-height-xlarge"));
+          } else if (nwidth >= 960) {
+            console.log("large");
+            $(this).css("height", $(this).attr("data-height-large"));
+          } else if (nwidth >= 720) {
+            console.log("medium");
+            $(this).css("height", $(this).attr("data-height-medium"));
+          } else if (nwidth >= 540) {
+            console.log("small");
+            $(this).css("height", $(this).attr("data-height-small"));
           } else {
-            currentIframe.on("load", function() {
-              currentIframe.height(currentIframe.contents().height());
-            });
+            console.log("xsmall");
+            $(this).css("height", $(this).attr("data-height-small"));
           }
-          */
         });
+      }
+      $(document).ready(function () {
+        changeIframeWidth();
       });
     },
     render: function render() {
@@ -5624,7 +5631,7 @@ var Util = function ($) {
       app.initScrollToButtons();
       app.initScrollMagic();
 
-      //dataVis.init();
+      dataVis.init();
 
       smartOutline.init();
       mainNavigation.init();

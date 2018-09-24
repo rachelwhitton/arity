@@ -149,11 +149,71 @@ $fields = [
         'width' => '1000',
       )
     ]),
-    //iframe hright
+    //iframe hright at Xlarge
     acf_text([
-      'label' => 'Iframe height',
-      'name' => 'content-image-block__url-height',
-      'instructions' => 'Specify iframe height',
+      'label' => 'Iframe height at xlarge devices',
+      'name' => 'content-image-block__url-height-xlarge',
+      'instructions' => 'Specify iframe height in pixels',
+      'required' => 0,
+      'maxlength' => '',
+      'conditional_logic' => [
+        [
+          [
+            'name' => 'content-image-block__content-chooser',
+            'operator' => '==',
+            'value' => 'layout__datavis'
+          ]
+        ]
+      ],
+      'wrapper' => array (
+        'width' => '1000',
+      )
+    ]),
+     //iframe hright at large
+     acf_text([
+      'label' => 'Iframe height at large devices',
+      'name' => 'content-image-block__url-height-large',
+      'instructions' => 'Specify iframe height in pixels',
+      'required' => 0,
+      'maxlength' => '',
+      'conditional_logic' => [
+        [
+          [
+            'name' => 'content-image-block__content-chooser',
+            'operator' => '==',
+            'value' => 'layout__datavis'
+          ]
+        ]
+      ],
+      'wrapper' => array (
+        'width' => '1000',
+      )
+    ]),
+     //iframe hright at medium
+     acf_text([
+      'label' => 'Iframe height at medium devices',
+      'name' => 'content-image-block__url-height-medium',
+      'instructions' => 'Specify iframe height in pixels',
+      'required' => 0,
+      'maxlength' => '',
+      'conditional_logic' => [
+        [
+          [
+            'name' => 'content-image-block__content-chooser',
+            'operator' => '==',
+            'value' => 'layout__datavis'
+          ]
+        ]
+      ],
+      'wrapper' => array (
+        'width' => '1000',
+      )
+    ]),
+     //iframe hright at small
+     acf_text([
+      'label' => 'Iframe height at small devices',
+      'name' => 'content-image-block__url-height-small',
+      'instructions' => 'Specify iframe height in pixels',
       'required' => 0,
       'maxlength' => '',
       'conditional_logic' => [

@@ -10,7 +10,7 @@ namespace App\Theme;
   Last Updated:       08/01/2017
   Since:              1.0.0
 */
-//echo '<pre>'; print_r($data); echo '</pre>';
+echo '<pre>'; print_r($data); echo '</pre>';
 $class = 'content-image-block';
 if($data['content-chooser']=='layout__datavis'){
   $class = 'content-datavis-block';
@@ -76,7 +76,13 @@ if($data['content-chooser']=='layout__datavis'){
       <?php endif; ?>
       <?php if ((!empty($data['url-iframe']) || !empty($data['visualization'])) && $data['content-chooser'] == "layout__datavis") : ?>
         <div class="<?=$class?>__col wide-- <?=$class?>__img-box">
-          <iframe class="dataVis" style="border: 0px solid transparent; width:100%; height:<?=$data['url-height']?>px" src="<?=$iframeUrl?>"></iframe>
+          <iframe class="dataVis" style="border: 0px solid transparent; width:100%; height:<?=$data['url-height-xlarge']?>px" 
+                  src="<?=$iframeUrl?>"
+                  data-height-xlarge="<?=$data['url-height-xlarge']?>"
+                  data-height-large="<?=$data['url-height-large']?>"
+                  data-height-medium="<?=$data['url-height-medium']?>"
+                  data-height-small="<?=$data['url-height-small']?>"
+          ></iframe>
         </div>
       <?php endif; ?>
       <div class="<?=$class?>__col narrow--">
