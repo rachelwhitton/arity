@@ -10,6 +10,7 @@ namespace App\Theme;
   Last Updated:       12/01/2017
   Since:              1.2.0-alpha.1
 */
+// echo '<pre>';print_r($data); echo '</pre>';
 ?>
 <div id="action-bar-one-col-cta" <?php module_class($data['classes']); ?>>
   <div class="container action-bar-one-col-cta__block">

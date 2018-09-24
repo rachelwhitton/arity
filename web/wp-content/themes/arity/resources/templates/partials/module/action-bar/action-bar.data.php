@@ -10,8 +10,14 @@ if (empty($data['left_headline']) &&
   return false;
 }
 
+if (empty($data['bkg_color'])){
+  $bgcolor = 'colors__bg--blue';
+}else{
+  $bgcolor = $data['bkg_color'];
+}
+
 $data['classes'][] = 'action-bar';
-$data['classes'][] = 'colors__bg--blue';
+$data['classes'][] = $bgcolor;
 $data['classes'][] = 'ar-module--no-margin';
 
 if ($data['right_headline'] || $data['right_content']) {

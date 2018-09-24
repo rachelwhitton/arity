@@ -41,6 +41,16 @@ $fields = [
         'width' => '33',
       ),
     ]),
+    // Content
+    acf_text([
+      'label' => 'Content',
+      'name' => 'blog-teaser__content',
+      'key' => 'field_content',
+      'instructions' => 'Recommended max character count: 42',
+      'required' => 0,
+      'maxlength' => ''
+    ]),
+    
 ];
 
 // ACF Field Group

@@ -85,7 +85,7 @@ if($data['content-chooser']=='layout__datavis'){
             <<?= $data['h_el']; ?> class="<?=$class?>__headline type3"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
           <?php endif; ?>
           <?php if (!empty($data['body_copy'])) : ?>
-          <div class="type0">
+          <div class="content-image-block__content type0">
             <?= apply_filters('the_content', $data['body_copy']); ?>
           </div>
           <?php endif; ?>

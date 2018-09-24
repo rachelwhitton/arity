@@ -325,7 +325,8 @@ $fields = [
       'default_value' => 'white',
       'choices' => [
         'white' => 'White',
-        'lightgray' => 'Light Gray'
+        'lightgray' => 'Light Gray',
+        'navy' => 'Navy'
       ]
     ]),
 

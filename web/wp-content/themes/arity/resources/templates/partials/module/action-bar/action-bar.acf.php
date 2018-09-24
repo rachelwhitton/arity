@@ -4,6 +4,26 @@ namespace App\Theme;
 // ACF Fields
 $fields = [
 
+  acf_select([
+    'label' => 'Background Color',
+    'name' => 'action-bar__bkg_color',
+    'key' => 'field_bkg_color',
+    'instructions' => '',
+    'required' => 0,
+    'maxlength' => '',
+    'allow_null' => 1,
+    'ui' => 1,
+    'wrapper' => array (
+      'width' => '33',
+    ),
+    'default_value' => 'bg-gray',
+    'choices' => [
+      'colors__bg--blue' => 'Blue',
+      'bg-white' => 'White',
+      'bg-gray' => 'Light Gray',
+      'bg-darkblue' => 'Navy'
+    ]
+  ]),
   // Left Tab
   acf_tab([
     'label' => 'Left Column',

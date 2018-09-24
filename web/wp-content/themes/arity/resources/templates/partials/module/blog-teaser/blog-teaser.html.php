@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Theme;
+
+// echo '<pre>';print_r($data);echo '</pre>';
 ?>
 <div class="ar-module blog-teaser">
   <div class="container">
@@ -19,6 +21,11 @@ namespace App\Theme;
             'headline' => $data['headline']
           )); ?>
         <?php endif; ?>
+
+        <?php if (!empty($data['content'])) : ?>
+          <a class="blog-teaser__link" href="move"><?=$data['content']?></a>
+        <?php endif; ?>
+
       </div>
     </div>
 

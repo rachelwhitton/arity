@@ -81,6 +81,7 @@ function my_datavis_save_post($post_id){
         WP_Filesystem();
         $destination = wp_upload_dir();
         $destination_path = $destination['path'];
+        //$new_destination_path = $destination['path'];
         $new_destination_path = str_replace('code/web/wp-content/uploads','files',$destination_path);
         
 

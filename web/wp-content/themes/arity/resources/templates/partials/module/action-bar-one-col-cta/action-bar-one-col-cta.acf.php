@@ -9,7 +9,26 @@ $fields = [
     'label' => 'Center Column',
     'name' => 'action-bar-one-col-cta__center_column_tab',
   ]),
-
+  acf_select([
+    'label' => 'Background Color',
+    'name' => 'content-image-block__bkg_color',
+    'key' => 'field_bkg_color',
+    'instructions' => '',
+    'required' => 0,
+    'maxlength' => '',
+    'allow_null' => 1,
+    'ui' => 1,
+    'wrapper' => array (
+      'width' => '25',
+    ),
+    'default_value' => 'colors__bg--blue',
+    'choices' => [
+      'colors__bg--blue' => 'Blue',
+      'colors__bg--lightgray' => 'Light Gray',
+      'colors__bg--navy' => 'Navy',
+      'colors__bg--white' => 'White'
+    ]
+  ]),
   // Center Headline
   acf_text([
     'label' => 'Headline',

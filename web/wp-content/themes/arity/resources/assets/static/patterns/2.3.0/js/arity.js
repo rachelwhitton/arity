@@ -5644,7 +5644,7 @@ var Util = function ($) {
       matchHeight.init();
       blogNav.init();
       accordion.init();
-      actionBar.init();
+      // actionBar.init();
     },
     initConfigs: function initConfigs() {
       app._settings = {};
