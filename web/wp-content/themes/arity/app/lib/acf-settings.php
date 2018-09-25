@@ -192,6 +192,7 @@ $module_builder->includeACFSettings('icon-two-column', 'module');
 $module_builder->includeACFSettings('horizontal-rule', 'module');
 $module_builder->includeACFSettings('nav-jump-link', 'module');
 $module_builder->includeACFSettings('newsroom-item', 'module');
+$module_builder->includeACFSettings('data-vis', 'module');
 
 //archive candidate
 
