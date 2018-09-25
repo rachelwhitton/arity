@@ -15,7 +15,7 @@ namespace App\Theme;
 <div <?php module_class('block-feature-solution'); ?>>
   <div class="container">
     <?php if (!empty($data['headline'])) : ?>
-      <<?= $data['h_el']; ?> class="block-feature-solution__headline"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
+      <<?= $data['h_el']; ?> class="block-feature-solution__headline" style="text-align: <?= $data['text_alignment']; ?>;"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
     <?php endif; ?>
     <div class="row">
       <?php foreach ($data['blocks'] as $block) : ?>

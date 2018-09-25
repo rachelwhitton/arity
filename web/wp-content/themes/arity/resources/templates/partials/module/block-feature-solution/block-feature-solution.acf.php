@@ -10,8 +10,27 @@ $fields = [
       'name' => 'block-feature-solution__headline',
       'key' => 'field_headline',
       'instructions' => 'Recommended character count max: 100',
-      'required' => 1,
-      'maxlength' => ''
+      'required' => 0,
+      'maxlength' => '',
+      'display' => 'seamless' 
+    ]),
+
+    // Headline Text Alignment
+    acf_select([
+      'label' => 'Headline Alignment',
+      'name' => 'block-feature-solution__text_alignment',
+      'key' => 'field_select',
+      'required' => 0,
+      'maxlength' => '',
+      'display' => 'seamless',
+      'default_value' => 'left',
+      'choices' => array (
+        'left' => 'Align Left',
+        'center' => 'Align Center'
+      ),
+      'wrapper' => array (
+        'width' => '50'
+      )
     ]),
 
     // Repeater: Component Feature Solution Blocks
