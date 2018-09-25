@@ -76,7 +76,13 @@ if($data['content-chooser']=='layout__datavis'){
       <?php endif; ?>
       <?php if ((!empty($data['url-iframe']) || !empty($data['visualization'])) && $data['content-chooser'] == "layout__datavis") : ?>
         <div class="<?=$class?>__col wide-- <?=$class?>__img-box">
-          <iframe class="dataVis" style="border: 0px solid transparent; width:100%; height:<?=$data['url-height']?>px" src="<?=$iframeUrl?>"></iframe>
+          <iframe class="dataVis" style="border: 0px solid transparent; width:100%; height:<?=$data['url-height-xlarge']?>px" 
+                  src="<?=$iframeUrl?>"
+                  data-height-xlarge="<?=$data['url-height-xlarge']?>"
+                  data-height-large="<?=$data['url-height-large']?>"
+                  data-height-medium="<?=$data['url-height-medium']?>"
+                  data-height-small="<?=$data['url-height-small']?>"
+          ></iframe>
         </div>
       <?php endif; ?>
       <div class="<?=$class?>__col narrow--">
@@ -85,7 +91,7 @@ if($data['content-chooser']=='layout__datavis'){
             <<?= $data['h_el']; ?> class="<?=$class?>__headline type3"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
           <?php endif; ?>
           <?php if (!empty($data['body_copy'])) : ?>
-          <div class="type0">
+          <div class="content-image-block__content type0">
             <?= apply_filters('the_content', $data['body_copy']); ?>
           </div>
           <?php endif; ?>

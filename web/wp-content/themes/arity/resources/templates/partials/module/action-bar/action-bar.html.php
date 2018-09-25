@@ -10,9 +10,10 @@ namespace App\Theme;
   Last Updated:       09/15/2017
   Since:              1.0.0
 */
-//var_dump($data);
+// var_dump($data);
 // var_dump($data['left_link_groups']);
 // var_dump($data['right_link_groups']);
+// echo '<pre>'; print_r($data); echo '</pre>';
 ?>
 <div id="action-bar" <?php module_class($data['classes']); ?>>
   <div class="container">

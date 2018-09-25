@@ -10,7 +10,7 @@ namespace App\Theme;
   Last Updated:       09/15/2017
   Since:              1.1.0
 */
-
+// echo '<pre>';print_r($data);echo '</pre>';
 ?>
 <!-- <div id="action-bar-w-bkg" <?php module_class($data['classes']); ?>>
   <div class="action-bar-w-bkg__block container">
