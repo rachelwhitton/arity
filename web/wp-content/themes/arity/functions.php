@@ -81,45 +81,22 @@ function my_datavis_save_post($post_id){
         WP_Filesystem();
         $destination = wp_upload_dir();
         $destination_path = $destination['path'];
-        //$new_destination_path = $destination['path'];
-        $new_destination_path = str_replace('code/web/wp-content/uploads','files',$destination_path);
         
-
-        /*
-        phpinfo();
-
-// Read this for more info 
-// https://pantheon.io/docs/private-paths/
-
-        WP_Filesystem();
-        echo $destination = wp_upload_dir();
-        echo $destination_path = $destination['path'];
-        echo $new_destination_path = str_replace('code/web/wp-content/uploads','files',$destination_path);
-        $unzipfile = unzip_file($new_destination_path.'/'.$fileWithExt, $new_destination_path.'/'.$file);
-        
-        echo '<br/><pre>';
-        print_r($destination);
-        echo '</pre><br/>';
-        echo $new_destination_path.'/'.$fileWithExt;
-        echo '<br/>';
-        echo $new_destination_path.'/'.$file;
-
-        var_dump($unzipfile);
-
-        if (is_wp_error($unzipfile)) {
-            echo 'There was an error unzipping the file.';
+        if ($_ENV["LOCAL"]=='true') {
+            //echo 'true';
+            $new_destination_path = $destination_path;
+            $unzipfile = unzip_file($new_destination_path.'/'.$fileWithExt, $new_destination_path.'/'.$file);
+            return;
         } else {
-            echo 'Successfully unzipped the file!';
-        }
-        */
-
-        $zip = new ZipArchive;
-        $res = $zip->open($new_destination_path.'/'.$fileWithExt);
-        if ($res === TRUE) {
-            $zip->extractTo($new_destination_path.'/'.$file);
-            $zip->close();  
-        } else {
-            //echo 'error';
+            $new_destination_path = str_replace('code/web/wp-content/uploads', 'files', $destination_path);
+            $zip = new ZipArchive;
+            $res = $zip->open($new_destination_path.'/'.$fileWithExt);
+            if ($res === TRUE) {
+                $zip->extractTo($new_destination_path.'/'.$file);
+                $zip->close();
+            } else {
+                //echo 'error';
+            }
         }
     }
 }
