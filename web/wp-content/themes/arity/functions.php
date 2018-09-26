@@ -123,4 +123,14 @@ function my_datavis_save_post($post_id){
         }
     }
 }
-// add_action('acf/save_post', 'my_datavis_save_post', 1);
+//add_action('acf/save_post', 'my_datavis_save_post', 1);
+
+
+function multiKeyExists( Array $array, $key ) {
+    if (array_key_exists($key, $array)) return ($array[$key]==''?false:$array[$key]);
+    foreach ($array as $k=>$v) {
+        if (!is_array($v)) continue;
+        if (array_key_exists($key, $v)) return ($v[$key]==''?false:$v[$key]);
+    }
+    return false;
+}

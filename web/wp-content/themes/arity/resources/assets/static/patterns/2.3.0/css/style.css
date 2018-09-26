@@ -10659,6 +10659,13 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   overflow-x: hidden;
 }
 
+.site-footer .disclaimer p {
+  font-size: 14px;
+  line-height: 19px;
+  margin-top: 0px;
+  padding-bottom: 1em;
+}
+
 @media screen and (min-width: 961px) {
   .site-footer {
     padding: 60px calc((100% - 1200px)/2 + 27px) 50px;
