@@ -21347,7 +21347,6 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   margin: 0;
   padding-top: 48px;
   padding-bottom: 48px;
-  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -21358,6 +21357,7 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
 }
 
 .blog-teaser__intro {
+  text-align: center;
   position: relative;
   width: 100%;
   min-height: 1px;
@@ -21400,6 +21400,10 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
     padding-right: 15px;
     padding-left: 15px;
   }
+}
+
+.blog-teaser__link {
+  font-size: 21px;
 }
 
 .blog-teaser__title {
