@@ -140,6 +140,7 @@ array_multisort($acf_choices_icon);
 |
 */
 $module_builder->includeACFSettings('accordion-item', 'component');
+$module_builder->includeACFSettings('block-two-col-component', 'component');
 $module_builder->includeACFSettings('feature-solution', 'component');
 $module_builder->includeACFSettings('horizontal-card', 'component');
 $module_builder->includeACFSettings('vertical-card', 'component');
@@ -178,6 +179,7 @@ $module_builder->includeACFSettings('hero-d', 'module');
 $module_builder->includeACFSettings('block-cards', 'module');
 $module_builder->includeACFSettings('block-feature-solution', 'module');
 $module_builder->includeACFSettings('block-highlights', 'module');
+$module_builder->includeACFSettings('block-two-col-repeater', 'module');
 $module_builder->includeACFSettings('block-video', 'module');
 $module_builder->includeACFSettings('promo', 'module');
 $module_builder->includeACFSettings('promo-card-horizontal', 'module');

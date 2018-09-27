@@ -6,7 +6,7 @@ namespace App\Theme;
 /*
   Template Name:      Feature Content
   Template Type:      Component
-  Description:        Eyebrown, Headline, Copy, CTA Stack
+  Description:        Eyebrow, Headline, Copy, CTA Stack
   Last Updated:       08/01/2017
   Since:              1.0.0
 */
