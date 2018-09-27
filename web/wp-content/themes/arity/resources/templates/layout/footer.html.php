@@ -82,6 +82,21 @@ namespace App\Theme;
         </nav>
       </div>
     </div>
+    <?php
+    $all_fields = get_fields($post_id);
+    for($j=0; $j<sizeof($all_fields['modules']);$j++){
+      if($all_fields['modules'][$j]['acf_fc_layout']=='module__disclaimer'){ ?>
+        <div class="row">
+          <div class="site-footer__col col5-- disclaimer">
+            <?=$all_fields['modules'][$j]['disclaimer__content']?>
+          </div>
+        </div>
+    <?php
+      }
+    }
+    ?>
+   
+    
     <div class="row">
       <div class="site-footer__col col5--">
         <a href="<?= home_url('/'); ?>" rel="home">

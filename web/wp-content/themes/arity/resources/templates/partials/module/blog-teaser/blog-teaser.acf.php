@@ -43,9 +43,18 @@ $fields = [
     ]),
     // Content
     acf_text([
-      'label' => 'Content',
+      'label' => 'Content before link',
       'name' => 'blog-teaser__content',
       'key' => 'field_content',
+      'instructions' => 'Recommended max character count: 42',
+      'required' => 0,
+      'maxlength' => ''
+    ]),
+    // Link
+    acf_text([
+      'label' => 'Link Copy',
+      'name' => 'blog-teaser__link',
+      'key' => 'field_link',
       'instructions' => 'Recommended max character count: 42',
       'required' => 0,
       'maxlength' => ''

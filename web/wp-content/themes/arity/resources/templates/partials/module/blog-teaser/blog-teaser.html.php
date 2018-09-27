@@ -22,8 +22,8 @@ namespace App\Theme;
           )); ?>
         <?php endif; ?>
 
-        <?php if (!empty($data['content'])) : ?>
-          <a class="blog-teaser__link" href="move"><?=$data['content']?></a>
+        <?php if (!empty($data['link'])) : ?>
+          <span class="blog-teaser__link"><?=$data['content']?> <a class="blog-teaser__link" href="move"><?=$data['link']?></a></span>
         <?php endif; ?>
 
       </div>
