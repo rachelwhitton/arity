@@ -10,24 +10,27 @@ namespace App\Theme;
   Since:              2.3.0
 */
   
-//echo '<pre>'; print_r($data); echo '</pre>';
+// echo '<pre>'; print_r($data); echo '</pre>';
+// echo 'i am here';
 
 $class = 'content-image-block';
-if($data['content-chooser']=='layout__datavis'){
+if ($data['content-chooser']=='layout__datavis') {
   $class = 'content-datavis-block';
-
-  if (!empty($data['visualization'])){
+  if (!empty($data['visualization'])) {
     $ext = pathinfo($data['visualization']['url'], PATHINFO_EXTENSION);
     $newUrl =  str_replace('.'.$ext,'',$data['visualization']['url']);
     $newUrl .= '/index.html'; 
     $iframeUrl = $newUrl;
   }
-
-  if (!empty($data['url-iframe'])){
+  if (!empty($data['url-iframe'])) {
     $iframeUrl = $data['url-iframe'];
   }
-
 }
+
+if (empty($data['h_el'])) {
+  $data['h_el'] = 'h2';
+}
+
 ?>
 
 <div <?php module_class($data['classes']); ?>>

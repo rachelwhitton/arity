@@ -58,7 +58,7 @@ if($data['content-chooser']=='layout__datavis'){
   </div>
   <?php
   foreach ($data['blocks'] as $block) {
-    component('block-two-col-component', $block['component__block-two-col-component']);
+    component('block-two-col-component', $block);
   }
   ?>
 </div>
