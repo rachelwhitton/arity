@@ -1,6 +1,6 @@
 #SSL Certificates
 
-Date: August 18, 2018<br>
+Date: August 18, 2018  
 Author: [Alberto Cristancho](acristancho@vsapartners.com)
 
 ### _Important: Certs should be used for development environments only_
