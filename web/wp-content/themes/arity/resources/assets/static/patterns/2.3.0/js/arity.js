@@ -398,24 +398,76 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
   window.accordion = accordion;
 })(jQuery, window, document);
 
-;(function ($, window, document) {
+(function ($, window, document) {
   var actionBar = {
     init: function init() {
-      // const s = '480px';
-      var m = '768px';
-      var actionBarEl = document.getElementById('action-bar');
-      if (!actionBarEl) {
-        return;
+      $(document).ready(function () {
+        changeRulePosition();
+      });
+
+      $(window).resize(function () {
+        changeRulePosition();
+      });
+
+      function changeRulePosition() {
+        var nwidth = $(".container").css("width").replace("px", "");
+
+        $(".action-bar").each(function (i) {
+          if (nwidth <= 540) {
+            $(this).addClass("action-bar_" + i);
+            var h = $(this).find(".action-bar__left").height() + 40 + 50;
+            var nHeight = h + "px";
+            addStylesheetRules([[".action-bar_" + i + ":before", ["top", nHeight, true]]], true);
+          }
+        });
       }
-      if (actionBarEl.classList.contains('has-divider')) {
-        var lh = $('.action-bar__left').height();
-        var medQ = window.matchMedia('@media screen and (min-width: 768px)');
-        var computed = lh + 48 + 40 + 6;
-        $('<style>.has-divider:before{ top:' + computed + 'px; } @media screen and (min-width: ' + m + ') { .has-divider:before { top: 64px; } }</style>').appendTo('head');
-        // document.styleSheets[0].addRule('.has-divider:before', 'top: ' + computed + 'px;');
-        // if (medQ.matches) {
-        //   document.styleSheets[0].addRule('.has-divider:before', 'top: 64px;');
-        // }
+
+      /*
+      addStylesheetRules([
+        ['h2', // Also accepts a second argument as an array of arrays instead
+          ['color', 'red'],
+          ['background-color', 'green', true] // 'true' for !important rules 
+        ], 
+        ['.myClass', 
+          ['background-color', 'yellow']
+        ]
+      ]);
+      */
+      function addStylesheetRules(rules, isMobile) {
+        var styleEl = document.createElement("style");
+        var isMobilePre = "";
+        var isMobilePost = "";
+
+        if (isMobile) {
+          isMobilePre = "@media only screen and (max-width: 768px) {";
+          isMobilePost = "}";
+        }
+
+        // Append <style> element to <head>
+        document.head.appendChild(styleEl);
+
+        // Grab style element's sheet
+        var styleSheet = styleEl.sheet;
+
+        for (var i = 0; i < rules.length; i++) {
+          var j = 1,
+              rule = rules[i],
+              selector = rule[0],
+              propStr = "";
+          // If the second argument of a rule is an array of arrays, correct our variables.
+          if (Array.isArray(rule[1][0])) {
+            rule = rule[1];
+            j = 0;
+          }
+
+          for (var pl = rule.length; j < pl; j++) {
+            var prop = rule[j];
+            propStr += prop[0] + ": " + prop[1] + (prop[2] ? " !important" : "") + ";\n";
+          }
+
+          // Insert CSS Rule
+          styleSheet.insertRule(isMobilePre + selector + "{" + propStr + "}" + isMobilePost, styleSheet.cssRules.length);
+        }
       }
     }
   };
@@ -5651,7 +5703,7 @@ var Util = function ($) {
       matchHeight.init();
       blogNav.init();
       accordion.init();
-      // actionBar.init();
+      actionBar.init();
     },
     initConfigs: function initConfigs() {
       app._settings = {};
