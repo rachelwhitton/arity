@@ -13677,6 +13677,7 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
     right: 0;
   }
   .dots-animate-modified #loader li:nth-child(1) {
+    background-color: rgba(255, 255, 255, 0.5);
     top: 468px;
     left: auto;
     right: 0;
@@ -13687,6 +13688,7 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
     animation-fill-mode: forwards;
   }
   .dots-animate-modified #loader li:nth-child(2) {
+    background-color: rgba(255, 255, 255, 0.5);
     top: 168px;
     -webkit-animation: sequence4-modified 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0s;
             animation: sequence4-modified 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0s;
@@ -13716,6 +13718,7 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
     background-size: 116px;
   }
   .dots-animate-modified #loader li:nth-child(5) {
+    background-color: white;
     top: 218px;
     -webkit-animation: sequence10-modified 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0s;
             animation: sequence10-modified 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0s;
@@ -13724,13 +13727,13 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
     animation-fill-mode: forwards;
   }
   .dots-animate-modified #loader li:nth-child(6) {
+    background-color: rgba(255, 255, 255, 0.3);
     top: 318px;
     -webkit-animation: sequence12-modified 1.4s cubic-bezier(1, 0.27, 0.25, 1) 1 0s;
             animation: sequence12-modified 1.4s cubic-bezier(1, 0.27, 0.25, 1) 1 0s;
     -webkit-animation-fill-mode: forwards;
     /* Safari 4.0 - 8.0 */
     animation-fill-mode: forwards;
-    background-color: rgba(118, 134, 147, 0.2);
   }
   .dots-animate-modified #loader li:nth-child(7) {
     top: 418px;
@@ -13769,13 +13772,13 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
     display: none;
   }
   .dots-animate-modified #loader li:nth-child(10) {
+    background-color: rgba(255, 255, 255, 0.5);
     top: 318px;
     -webkit-animation: sequence9-modified 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0s;
             animation: sequence9-modified 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0s;
     -webkit-animation-fill-mode: forwards;
     /* Safari 4.0 - 8.0 */
     animation-fill-mode: forwards;
-    background-color: rgba(118, 134, 147, 0.2);
   }
   .dots-animate-modified #loader li:nth-child(11) {
     top: 518px;
@@ -13787,6 +13790,7 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
     animation-fill-mode: forwards;
   }
   .dots-animate-modified #loader li:nth-child(12) {
+    background-color: rgba(255, 255, 255, 0.5);
     top: 68px;
     width: 18px;
     -webkit-animation: sequence3-modified 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0s;
@@ -13861,6 +13865,7 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
     background-size: 116px;
   }
   .dots-animate-modified #loader li:nth-child(19) {
+    background-color: rgba(255, 255, 255, 0.3);
     top: 268px;
     left: auto;
     right: 0;
@@ -13869,7 +13874,6 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
     -webkit-animation-fill-mode: forwards;
     /* Safari 4.0 - 8.0 */
     animation-fill-mode: forwards;
-    background-color: rgba(118, 134, 147, 0.2);
   }
   .dots-animate-modified #loader li:nth-child(20) {
     top: 468px;
