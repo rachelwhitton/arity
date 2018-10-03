@@ -19164,7 +19164,6 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
 
 .action-bar__left p, .action-bar__right p, .action-bar__center p {
   margin-bottom: 15px;
-  max-width: 310px;
 }
 
 @media screen and (min-width: 768px) {
