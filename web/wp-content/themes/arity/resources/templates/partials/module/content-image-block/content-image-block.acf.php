@@ -229,7 +229,31 @@ $fields = [
         'width' => '1000',
       )
     ]),
-
+    // body Vertical alignment
+    acf_select([
+      'label' => 'Body copy Vertical Align',
+      'name' => 'content-image-block__vertial-align',
+      'key' => 'content-image-block_vertial-align',
+      'instructions' => '',
+      'required' => 0,
+      'maxlength' => '',
+      'allow_null' => 0,
+      'ui' => 1,
+      'default_value' => 'Center',
+      'choices' => [
+        'Top' => 'Top',
+        'Center' => 'Center'
+      ],
+      'conditional_logic' => [
+        [
+          [
+            'name' => 'content-image-block__content-chooser',
+            'operator' => '==',
+            'value' => 'layout__datavis'
+          ]
+        ]
+      ],
+    ]),
     // Body Copy
     acf_textarea([
       'label' => 'Body Copy',

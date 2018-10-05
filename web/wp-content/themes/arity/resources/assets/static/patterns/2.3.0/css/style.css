@@ -6089,6 +6089,8 @@ body {
 
 .default-styles a {
   color: #0070D6;
+  -webkit-transition: all 0.12s;
+  transition: all 0.12s;
 }
 
 .default-styles a:hover {
@@ -16919,6 +16921,11 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
     padding-top: 64px;
     padding-bottom: 64px;
   }
+}
+
+.content-datavis-block.alignTop .narrow-- {
+  -ms-flex-item-align: start;
+      align-self: start;
 }
 
 .content-datavis-block__title {

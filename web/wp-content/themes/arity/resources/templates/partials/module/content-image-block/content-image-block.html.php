@@ -11,6 +11,7 @@ namespace App\Theme;
   Since:              1.0.0
 */
 //echo '<pre>'; print_r($data); echo '</pre>';
+
 $class = 'content-image-block';
 if($data['content-chooser']=='layout__datavis'){
   $class = 'content-datavis-block';
@@ -24,6 +25,10 @@ if($data['content-chooser']=='layout__datavis'){
 
   if (!empty($data['url-iframe'])){
     $iframeUrl = $data['url-iframe'];
+  }
+
+  if($data['vertial-align']=='Top'){
+    $data['classes'][] = 'alignTop';
   }
 
 }
