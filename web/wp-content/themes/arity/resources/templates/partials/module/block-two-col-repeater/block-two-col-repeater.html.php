@@ -6,11 +6,11 @@ namespace App\Theme;
   Template Name:      Block Two Column Repeater
   Template Type:      Module
   Description:        Product or feature highlight ("River")
-  Last Updated:       09/26/2018
+  Last Updated:       10/05/2018
   Since:              2.3.0
 */
 
-//echo '<pre>'; print_r($data); echo '</pre>';
+// echo '<pre>'; print_r($data); echo '</pre>';
 
 $class = 'content-image-block';
 if($data['content-chooser']=='layout__datavis'){

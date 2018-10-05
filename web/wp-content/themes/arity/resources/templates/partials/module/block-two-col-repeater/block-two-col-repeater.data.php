@@ -2,12 +2,6 @@
 
 $data['classes'][] = 'block-two-column-repeater';
 
-if($data['content-chooser']=='layout__datavis'){
-  $data['classes'][] = 'content-datavis-block';
-}else{
-  $data['classes'][] = 'content-image-block';
-}
-
 // Background Color Class
 if (!empty($data['bkg_color'])) {
   $data['classes'][] = 'colors__bg--'.$data['bkg_color'];

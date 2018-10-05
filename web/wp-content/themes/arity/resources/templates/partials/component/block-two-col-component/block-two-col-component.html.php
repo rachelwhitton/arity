@@ -6,14 +6,23 @@ namespace App\Theme;
   Template Name:      Block Two Column Component
   Template Type:      Module
   Description:        Product or feature highlight ("River")
-  Last Updated:       09/26/2018
+  Last Updated:       10/05/2018
   Since:              2.3.0
 */
   
-// echo '<pre>'; print_r($data); echo '</pre>';
+echo '<pre>'; print_r($data); echo '</pre>';
 // echo 'i am here';
 
+$data['classes'][] = 'block-two-col-component';
+
+if ($data['content-chooser']=='layout__datavis') {
+  $data['classes'][] = 'content-datavis-block';
+} else {
+  $data['classes'][] = 'content-image-block';
+}
+
 $class = 'content-image-block';
+
 if ($data['content-chooser']=='layout__datavis') {
   $class = 'content-datavis-block';
   if (!empty($data['visualization'])) {
@@ -33,7 +42,7 @@ if (empty($data['h_el'])) {
 
 ?>
 
-<div <?php module_class($data['classes']); ?>>
+<div <?php component_class($data['classes']); ?>>
   <div class="container">
     <div class="row">
       <?php if (!empty($data['image_id']) && $data['content-chooser'] == "layout__image") : ?>
