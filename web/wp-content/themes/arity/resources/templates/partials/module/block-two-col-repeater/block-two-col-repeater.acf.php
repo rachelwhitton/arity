@@ -45,7 +45,7 @@ $fields = [
 
     // Repeater: Block Two Column Components
     acf_repeater([
-      'label' => '',
+      'label' => '2-Column Blocks',
       'name' => 'block-two-col-repeater__blocks',
       'sub_fields' => [
         acf_tab([
@@ -73,7 +73,7 @@ $fields = [
 
     // Headline
     acf_text([
-      'label' => 'Headline',
+      'label' => 'Block Headline',
       'name' => 'block-two-col-component__headline',
       'key' => 'field_headline',
       'instructions' => 'Recommended character count max: 60',
