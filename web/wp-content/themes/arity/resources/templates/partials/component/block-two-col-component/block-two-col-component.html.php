@@ -10,7 +10,7 @@ namespace App\Theme;
   Since:              2.3.0
 */
   
-echo '<pre>'; print_r($data); echo '</pre>';
+// echo '<pre>'; print_r($data); echo '</pre>';
 // echo 'i am here';
 
 $data['classes'][] = 'block-two-col-component';
@@ -22,6 +22,7 @@ if ($data['content-chooser']=='layout__datavis') {
 }
 
 $class = 'content-image-block';
+$color_prefix = 'colors__';
 
 if ($data['content-chooser']=='layout__datavis') {
   $class = 'content-datavis-block';
@@ -35,6 +36,22 @@ if ($data['content-chooser']=='layout__datavis') {
     $iframeUrl = $data['url-iframe'];
   }
 }
+
+if(!empty($data['shadow'])){
+  $data['img-classes'] = 'img-shadow';
+}else{
+  $data['img-classes'] = '';
+}
+
+if ($data['layout'] == 'right') {
+  $data['classes'][] = $class . '--right';
+} elseif ($data['layout'] == 'left') {
+  $data['classes'][] = $class . '--left';
+}
+
+if ($data['bkg_color'] && $data['bkg_color'] != 'default') {
+  $data['classes'][] = $color_prefix . 'bg--' . $data['bkg_color'];
+} 
 
 if (empty($data['h_el'])) {
   $data['h_el'] = 'h2';

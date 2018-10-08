@@ -12048,7 +12048,25 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   }
 }
 
+.block-two-column-repeater .module-intro {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .block-two-column-repeater .module-intro {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .block-two-column-repeater .module-intro {
+    margin-bottom: 16px;
+  }
+}
+
 .block-two-column-repeater .module-intro .center {
+  padding-left: 15px;
+  padding-right: 15px;
   text-align: center;
 }
 
