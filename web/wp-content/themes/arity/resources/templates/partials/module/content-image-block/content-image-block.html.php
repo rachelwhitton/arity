@@ -27,11 +27,12 @@ if($data['content-chooser']=='layout__datavis'){
     $iframeUrl = $data['url-iframe'];
   }
 
-  if($data['vertial-align']=='Top'){
-    $data['classes'][] = 'alignTop';
-  }
-
 }
+
+if($data['vertial-align']=='Top'){
+  $data['classes'][] = 'alignTop';
+}
+
 ?>
 
 <div <?php module_class($data['classes']); ?>>
