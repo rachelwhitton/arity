@@ -16535,6 +16535,11 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   }
 }
 
+.content-image-block.alignTop .narrow-- {
+  -ms-flex-item-align: start;
+      align-self: start;
+}
+
 .content-image-block__title {
   font-size: 30px;
   line-height: 36px;

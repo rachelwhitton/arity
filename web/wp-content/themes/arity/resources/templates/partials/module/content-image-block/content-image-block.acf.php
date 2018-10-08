@@ -244,15 +244,6 @@ $fields = [
         'Top' => 'Top',
         'Center' => 'Center'
       ],
-      'conditional_logic' => [
-        [
-          [
-            'name' => 'content-image-block__content-chooser',
-            'operator' => '==',
-            'value' => 'layout__datavis'
-          ]
-        ]
-      ],
     ]),
     // Body Copy
     acf_textarea([
