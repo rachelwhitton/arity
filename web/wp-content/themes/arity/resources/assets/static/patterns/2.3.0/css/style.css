@@ -11693,7 +11693,19 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   }
 }
 
+.block-two-column-repeater .module-intro {
+  margin-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .block-two-column-repeater .module-intro {
+    margin-bottom: 48px;
+  }
+}
+
 .block-two-column-repeater .module-intro .center {
+  padding-left: 15px;
+  padding-right: 15px;
   text-align: center;
 }
 
@@ -13394,7 +13406,7 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
     background-size: 116px;
   }
   .dots-animate #loader li:nth-child(5) {
-    top: 218px;
+    top: 142px;
     -webkit-animation: sequence10 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0.5s;
             animation: sequence10 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0.5s;
     -webkit-animation-fill-mode: forwards;
@@ -13903,7 +13915,7 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   .dots-animate-wo-image #loader {
     display: block;
     position: absolute;
-    height: 650px;
+    height: 525px;
     width: 100%;
     left: 0;
     top: 0;
@@ -13974,7 +13986,7 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   }
   .dots-animate-wo-image #loader li:nth-child(5) {
     background-color: white;
-    top: 218px;
+    top: 142px;
     -webkit-animation: sequence10-modified-wo-image 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0s;
             animation: sequence10-modified-wo-image 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0s;
     -webkit-animation-fill-mode: forwards;
@@ -14002,7 +14014,7 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
     background-size: 116px;
   }
   .dots-animate-wo-image #loader li:nth-child(8) {
-    top: 300px;
+    top: 220px;
     -webkit-animation: sequence6-modified-wo-image 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0s;
             animation: sequence6-modified-wo-image 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0s;
     -webkit-animation-fill-mode: forwards;
@@ -14083,7 +14095,7 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   .dots-animate-wo-image #loader li:nth-child(15) {
     /* left: auto;
     right: 0; */
-    top: 260px;
+    top: 185px;
     -webkit-animation: sequence7-modified-wo-image 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0s;
             animation: sequence7-modified-wo-image 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0s;
     -webkit-animation-fill-mode: forwards;
@@ -14104,7 +14116,7 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
     animation-fill-mode: forwards;
   }
   .dots-animate-wo-image #loader li:nth-child(17) {
-    top: 217px;
+    top: 142px;
     -webkit-animation: sequence6-modified-wo-image1 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0s;
             animation: sequence6-modified-wo-image1 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0s;
     -webkit-animation-fill-mode: forwards;
@@ -14140,7 +14152,7 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
     animation-fill-mode: forwards;
   }
   .dots-animate-wo-image #loader li:nth-child(20) {
-    top: 260px;
+    top: 185px;
     left: auto;
     right: 0;
     -webkit-animation: bsequence1-modified-wo-image 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 1 0s;
