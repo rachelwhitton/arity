@@ -15,18 +15,6 @@ namespace App\Theme;
 $class = 'content-image-block';
 if($data['content-chooser']=='layout__datavis'){
   $class = 'content-datavis-block';
-
-  if (!empty($data['visualization'])){
-    $ext = pathinfo($data['visualization']['url'], PATHINFO_EXTENSION);
-    $newUrl =  str_replace('.'.$ext,'',$data['visualization']['url']);
-    $newUrl .= '/index.html'; 
-    $iframeUrl = $newUrl;
-  }
-
-  if (!empty($data['url-iframe'])){
-    $iframeUrl = $data['url-iframe'];
-  }
-
 }
 ?>
 
@@ -43,7 +31,7 @@ if($data['content-chooser']=='layout__datavis'){
 
         <?php if (!empty($data['main_headline'])) : ?>
           <?php element('headline', array(
-          'classes' => $class.'__title',
+          'classes' => $class .'__title',
           'headline' => $data['main_headline']
         )); ?>
         <?php endif; ?>
