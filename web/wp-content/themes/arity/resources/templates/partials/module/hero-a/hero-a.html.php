@@ -45,28 +45,4 @@ namespace App\Theme;
       <?php endif; ?>
     </div>
   </div>
-  <div class="hero-image__overlay hero-elaborated dots-animate-wo-image">
-        <ul id="loader">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
 </div>

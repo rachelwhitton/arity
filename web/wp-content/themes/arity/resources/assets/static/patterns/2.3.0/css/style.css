@@ -12528,8 +12528,8 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
 }
 
 .hero-a--wo-image {
-  background: url("../images/hero-dots.png") no-repeat center center #011C2C;
-  background: #011C2C;
+  background: url("../images/hero-dots-modified.png") no-repeat center center #011C2C;
+  background-position: right center;
   background-size: 1200px 480px;
   padding-top: 110px;
 }
