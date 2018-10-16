@@ -209,7 +209,7 @@ $fields = [
           'label' => 'CTA Button',
           'name' => 'link',
           'instructions' => 'Recommended character count max: 30',
-          'required' => 1,
+          'required' => 0,
           'maxlength' => ''
         ]
       ],
