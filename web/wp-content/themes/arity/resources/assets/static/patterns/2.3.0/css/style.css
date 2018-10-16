@@ -17685,6 +17685,16 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   padding-bottom: 48px;
 }
 
+.content-datavis-block iframe {
+  width: 345px;
+}
+
+@media screen and (min-width: 768px) {
+  .content-datavis-block iframe {
+    width: 100%;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .content-datavis-block {
     padding-top: 64px;
@@ -17904,6 +17914,10 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
 .content-datavis-block .content-datavis-block__img-box,
 .content-datavis-block .content-datavis-block__video-box {
   padding-bottom: 40px;
+}
+
+.content-datavis-block .content-datavis-block__img-box {
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
