@@ -83,7 +83,7 @@ if($data['vertial-align']=='Top'){
       <?php if ((!empty($data['url-iframe']) || !empty($data['visualization'])) && $data['content-chooser'] == "layout__datavis") : ?>
         <div class="<?=$class?>__col wide-- <?=$class?>__img-box">
           <iframe scrolling="no" class="dataVis" style="border: 0px solid transparent; height:<?=$data['url-height-xlarge']?>px" 
-                  src="<?=$iframeUrl?>"
+                  src="<?=$iframeUrl?>?rand=<?=time()?>"
                   data-height-xlarge="<?=$data['url-height-xlarge']?>"
                   data-height-large="<?=$data['url-height-large']?>"
                   data-height-medium="<?=$data['url-height-medium']?>"
