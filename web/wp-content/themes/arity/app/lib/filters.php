@@ -437,6 +437,35 @@ _qevents.push({qacct: "p-CT9p1As87v16a"});
 EOD;
 }, 101);
 
+
+/**
+ * Add Hot Jar Tracking Code.
+ * @since 2.3.0
+ * @return void
+ */
+// $hotjar_tracking_code = '426469';
+$visitor_track_code = true;
+add_action('theme/after_wphead', function () use($visitor_track_code) {
+    if(empty($visitor_track_code)) {
+        return;
+    }
+
+    if(!empty(WP_ENV) && WP_ENV != 'production') {
+        return;
+    }
+
+    echo <<<EOD
+<script type="text/javascript">
+    (function(){
+    vtid = 111458;var a = document.createElement('script'); a.async=true;    
+    a.src=('https:'==document.location.protocol ? 'https://' : 'http://') + 'code.visitor-track.com/VisitorTrack2.js';
+    var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(a,s);
+    })();
+</script>
+
+EOD;
+});
+
 /**
  * Add Simplifi Tag for Footer.
  * @since 1.1.0
