@@ -437,6 +437,7 @@ _qevents.push({qacct: "p-CT9p1As87v16a"});
 EOD;
 }, 101);
 
+<<<<<<< HEAD
 
 /**
  * Add Hot Jar Tracking Code.
@@ -466,6 +467,8 @@ add_action('theme/after_wphead', function () use($visitor_track_code) {
 EOD;
 });
 
+=======
+>>>>>>> master
 /**
  * Add Simplifi Tag for Footer.
  * @since 1.1.0
