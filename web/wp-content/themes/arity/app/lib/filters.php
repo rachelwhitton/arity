@@ -443,8 +443,8 @@ EOD;
  * @since 2.3.0
  * @return void
  */
-// $hotjar_tracking_code = '426469';
-$visitor_track_code = true;
+// $visitor_track_code = '426469';
+$visitor_track_code = false;
 add_action('theme/after_wphead', function () use($visitor_track_code) {
     if(empty($visitor_track_code)) {
         return;
