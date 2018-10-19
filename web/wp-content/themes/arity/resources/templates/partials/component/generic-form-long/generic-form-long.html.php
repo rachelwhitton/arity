@@ -671,6 +671,7 @@ namespace App\Theme;
         <option value="OEM">OEM</option>
         <option value="Shared Mobility">Shared Mobility</option>
         <option value="Smart Cities">Smart Cities</option>
+        <option value="Financial Services">Financial Services</option>
         <option value="Other">Other</option>
       </select>
     </div>
