@@ -74,6 +74,7 @@
       <option value="Gig Economy">Gig Economy</option>
       <option value="Auto Aftermarket">Auto Aftermarket</option>
       <option value="Government">Government</option>
+      <option value="Financial Services">Financial Services</option>
       <option value="Other">Other</option>
     </select>
     <div class="form-control-feedback" data-error="required">Please select an industry</div>

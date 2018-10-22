@@ -101,6 +101,10 @@ Since:              1.0.0
             </span>
           </div>
           <div class="col leadgen-form-inner__check-col">
+            <span class="checkbox-li"><input id="cb8" name="00N1600000F4WrJ" type="checkbox" value="Financial Services"><label class="checkradio" for="cb8"><span></span> Financial Services</label>
+            </span>
+          </div>
+          <div class="col leadgen-form-inner__check-col">
             <span class="checkbox-li"><input id="cb7" name="00N1600000F4WrJ" type="checkbox" value="Other"><label class="checkradio" for="cb7"><span></span> Other</label>
             </span>
           </div>
