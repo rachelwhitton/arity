@@ -6090,8 +6090,8 @@ body {
 
 .default-styles a {
   color: #0070D6;
-  -webkit-transition: all 0.12s;
-  transition: all 0.12s;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .default-styles a:hover {
@@ -6180,8 +6180,8 @@ body {
 }
 
 .button {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .button [class*=" icon-"],
@@ -6191,8 +6191,8 @@ body {
   position: relative;
   top: 1px;
   margin-right: 4px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .button--primary, .app__home #contact .lite-form .button, .contact-form-with-cta.dark-- .button.blue-button--, .contact-form-with-cta.dark-- .promo-section.bg-gray .button, .promo-section.bg-gray .contact-form-with-cta.dark-- .button, .contact-form-with-cta.dark-- .promo-section.bg-white .button, .promo-section.bg-white .contact-form-with-cta.dark-- .button, .contact-form-with-cta.dark-- .location-section.bg-gray .button, .location-section.bg-gray .contact-form-with-cta.dark-- .button, .contact-form-with-cta.dark-- .location-section.bg-white .button, .location-section.bg-white .contact-form-with-cta.dark-- .button, .contact-form-with-cta.dark-- .content-image-block.colors__bg--navy .button, .content-image-block.colors__bg--navy .contact-form-with-cta.dark-- .button, .contact-form-with-cta.dark-- .action-bar.bg-darkblue .button, .action-bar.bg-darkblue .contact-form-with-cta.dark-- .button, .contact-form-with-cta.dark-- .action-bar.bg-gray .button, .action-bar.bg-gray .contact-form-with-cta.dark-- .button, .contact-form-with-cta.dark-- .action-bar.bg-white .button, .action-bar.bg-white .contact-form-with-cta.dark-- .button, .contact-form-with-cta.dark-- .action-bar-map.bg-gray .button, .action-bar-map.bg-gray .contact-form-with-cta.dark-- .button, .contact-form-with-cta.dark-- .action-bar-map.bg-white .button, .action-bar-map.bg-white .contact-form-with-cta.dark-- .button, .contact-form-with-cta.dark-- .action-bar-one-col-cta.colors__bg--white .button, .action-bar-one-col-cta.colors__bg--white .contact-form-with-cta.dark-- .button, .contact-form-with-cta.dark-- .action-bar-one-col-cta.content-image-block:nth-child(odd) .button, .action-bar-one-col-cta.content-image-block:nth-child(odd) .contact-form-with-cta.dark-- .button, .contact-form-with-cta.dark-- .action-bar-one-col-cta.content-datavis-block:nth-child(odd) .button, .action-bar-one-col-cta.content-datavis-block:nth-child(odd) .contact-form-with-cta.dark-- .button, .contact-form-with-cta.dark-- .action-bar-one-col-cta.colors__bg--lightgray .button, .action-bar-one-col-cta.colors__bg--lightgray .contact-form-with-cta.dark-- .button, .contact-form-with-cta.dark-- .action-bar-one-col-cta.content-image-block:nth-child(even) .button, .action-bar-one-col-cta.content-image-block:nth-child(even) .contact-form-with-cta.dark-- .button, .contact-form-with-cta.dark-- .action-bar-one-col-cta.content-datavis-block:nth-child(even) .button, .action-bar-one-col-cta.content-datavis-block:nth-child(even) .contact-form-with-cta.dark-- .button, .contact-form-with-cta.dark-- .action-bar-one-col-cta.colors__bg--navy .button, .action-bar-one-col-cta.colors__bg--navy .contact-form-with-cta.dark-- .button, .contact-form-with-cta.dark-- .button.blue-button--:hover {
@@ -6204,8 +6204,8 @@ body {
   max-height: 44px;
   width: auto;
   color: #E2EF1C;
-  -webkit-transition: all 0.12s;
-  transition: all 0.12s;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
   padding: 0 25px;
   white-space: nowrap;
 }
@@ -6774,8 +6774,8 @@ body {
   height: 50px;
   width: 50px;
   max-width: 50px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
   width: 160px;
   max-width: 100%;
   left: auto;
@@ -6832,8 +6832,8 @@ body {
   height: 44px;
   width: 44px;
   max-width: 44px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
   margin-right: 0;
 }
 
@@ -6882,8 +6882,8 @@ body {
   height: 44px;
   width: 44px;
   max-width: 44px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
   margin-right: 0;
 }
 
@@ -7059,6 +7059,8 @@ body {
 
 a {
   text-decoration: none;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
   color: #0070D6;
 }
 
@@ -8415,8 +8417,8 @@ a.blue-link:focus [class^="icon-"] {
   padding: 0px 3px;
   white-space: nowrap;
   color: transparent;
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
 }
 
 .in-page-nav__link:hover {
@@ -8429,8 +8431,8 @@ a.blue-link:focus [class^="icon-"] {
   width: 10px;
   height: 10px;
   border: solid 1px rgba(255, 255, 255, 0.6);
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
   border-radius: 50%;
   margin-right: 8px;
   -webkit-transform: translateY(1px);
@@ -10715,6 +10717,8 @@ form .email-only-button-group {
   line-height: 1.2;
   font-weight: bold;
   margin-bottom: 15px;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .site-header .dropmenu__primary p:last-child {
@@ -11419,8 +11423,8 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   height: 30px;
   width: 30px;
   fill: #0070D6;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 @media screen and (min-width: 961px) {
@@ -13641,6 +13645,81 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   .page--home-v3 .hero-a--image .hero-a__image .image img {
     max-width: 100%;
   }
+}
+
+.page--home .hero-a .button.blue-button--, .page--home .hero-a .promo-section.bg-gray .button, .promo-section.bg-gray .page--home .hero-a .button, .page--home .hero-a .promo-section.bg-white .button, .promo-section.bg-white .page--home .hero-a .button, .page--home .hero-a .location-section.bg-gray .button, .location-section.bg-gray .page--home .hero-a .button, .page--home .hero-a .location-section.bg-white .button, .location-section.bg-white .page--home .hero-a .button, .page--home .hero-a .content-image-block.colors__bg--navy .button, .content-image-block.colors__bg--navy .page--home .hero-a .button, .page--home .hero-a .action-bar.bg-darkblue .button, .action-bar.bg-darkblue .page--home .hero-a .button, .page--home .hero-a .action-bar.bg-gray .button, .action-bar.bg-gray .page--home .hero-a .button, .page--home .hero-a .action-bar.bg-white .button, .action-bar.bg-white .page--home .hero-a .button, .page--home .hero-a .action-bar-map.bg-gray .button, .action-bar-map.bg-gray .page--home .hero-a .button, .page--home .hero-a .action-bar-map.bg-white .button, .action-bar-map.bg-white .page--home .hero-a .button, .page--home .hero-a .action-bar-one-col-cta.colors__bg--white .button, .action-bar-one-col-cta.colors__bg--white .page--home .hero-a .button, .page--home .hero-a .action-bar-one-col-cta.content-image-block:nth-child(odd) .button, .action-bar-one-col-cta.content-image-block:nth-child(odd) .page--home .hero-a .button, .page--home .hero-a .action-bar-one-col-cta.content-datavis-block:nth-child(odd) .button, .action-bar-one-col-cta.content-datavis-block:nth-child(odd) .page--home .hero-a .button, .page--home .hero-a .action-bar-one-col-cta.colors__bg--lightgray .button, .action-bar-one-col-cta.colors__bg--lightgray .page--home .hero-a .button, .page--home .hero-a .action-bar-one-col-cta.content-image-block:nth-child(even) .button, .action-bar-one-col-cta.content-image-block:nth-child(even) .page--home .hero-a .button, .page--home .hero-a .action-bar-one-col-cta.content-datavis-block:nth-child(even) .button, .action-bar-one-col-cta.content-datavis-block:nth-child(even) .page--home .hero-a .button, .page--home .hero-a .action-bar-one-col-cta.colors__bg--navy .button, .action-bar-one-col-cta.colors__bg--navy .page--home .hero-a .button,
+.page--home-v2 .hero-a .button.blue-button--,
+.page--home-v2 .hero-a .promo-section.bg-gray .button,
+.promo-section.bg-gray .page--home-v2 .hero-a .button,
+.page--home-v2 .hero-a .promo-section.bg-white .button,
+.promo-section.bg-white .page--home-v2 .hero-a .button,
+.page--home-v2 .hero-a .location-section.bg-gray .button,
+.location-section.bg-gray .page--home-v2 .hero-a .button,
+.page--home-v2 .hero-a .location-section.bg-white .button,
+.location-section.bg-white .page--home-v2 .hero-a .button,
+.page--home-v2 .hero-a .content-image-block.colors__bg--navy .button,
+.content-image-block.colors__bg--navy .page--home-v2 .hero-a .button,
+.page--home-v2 .hero-a .action-bar.bg-darkblue .button,
+.action-bar.bg-darkblue .page--home-v2 .hero-a .button,
+.page--home-v2 .hero-a .action-bar.bg-gray .button,
+.action-bar.bg-gray .page--home-v2 .hero-a .button,
+.page--home-v2 .hero-a .action-bar.bg-white .button,
+.action-bar.bg-white .page--home-v2 .hero-a .button,
+.page--home-v2 .hero-a .action-bar-map.bg-gray .button,
+.action-bar-map.bg-gray .page--home-v2 .hero-a .button,
+.page--home-v2 .hero-a .action-bar-map.bg-white .button,
+.action-bar-map.bg-white .page--home-v2 .hero-a .button,
+.page--home-v2 .hero-a .action-bar-one-col-cta.colors__bg--white .button,
+.action-bar-one-col-cta.colors__bg--white .page--home-v2 .hero-a .button,
+.page--home-v2 .hero-a .action-bar-one-col-cta.content-image-block:nth-child(odd) .button,
+.action-bar-one-col-cta.content-image-block:nth-child(odd) .page--home-v2 .hero-a .button,
+.page--home-v2 .hero-a .action-bar-one-col-cta.content-datavis-block:nth-child(odd) .button,
+.action-bar-one-col-cta.content-datavis-block:nth-child(odd) .page--home-v2 .hero-a .button,
+.page--home-v2 .hero-a .action-bar-one-col-cta.colors__bg--lightgray .button,
+.action-bar-one-col-cta.colors__bg--lightgray .page--home-v2 .hero-a .button,
+.page--home-v2 .hero-a .action-bar-one-col-cta.content-image-block:nth-child(even) .button,
+.action-bar-one-col-cta.content-image-block:nth-child(even) .page--home-v2 .hero-a .button,
+.page--home-v2 .hero-a .action-bar-one-col-cta.content-datavis-block:nth-child(even) .button,
+.action-bar-one-col-cta.content-datavis-block:nth-child(even) .page--home-v2 .hero-a .button,
+.page--home-v2 .hero-a .action-bar-one-col-cta.colors__bg--navy .button,
+.action-bar-one-col-cta.colors__bg--navy .page--home-v2 .hero-a .button,
+.page--home-v3 .hero-a .button.blue-button--,
+.page--home-v3 .hero-a .promo-section.bg-gray .button,
+.promo-section.bg-gray .page--home-v3 .hero-a .button,
+.page--home-v3 .hero-a .promo-section.bg-white .button,
+.promo-section.bg-white .page--home-v3 .hero-a .button,
+.page--home-v3 .hero-a .location-section.bg-gray .button,
+.location-section.bg-gray .page--home-v3 .hero-a .button,
+.page--home-v3 .hero-a .location-section.bg-white .button,
+.location-section.bg-white .page--home-v3 .hero-a .button,
+.page--home-v3 .hero-a .content-image-block.colors__bg--navy .button,
+.content-image-block.colors__bg--navy .page--home-v3 .hero-a .button,
+.page--home-v3 .hero-a .action-bar.bg-darkblue .button,
+.action-bar.bg-darkblue .page--home-v3 .hero-a .button,
+.page--home-v3 .hero-a .action-bar.bg-gray .button,
+.action-bar.bg-gray .page--home-v3 .hero-a .button,
+.page--home-v3 .hero-a .action-bar.bg-white .button,
+.action-bar.bg-white .page--home-v3 .hero-a .button,
+.page--home-v3 .hero-a .action-bar-map.bg-gray .button,
+.action-bar-map.bg-gray .page--home-v3 .hero-a .button,
+.page--home-v3 .hero-a .action-bar-map.bg-white .button,
+.action-bar-map.bg-white .page--home-v3 .hero-a .button,
+.page--home-v3 .hero-a .action-bar-one-col-cta.colors__bg--white .button,
+.action-bar-one-col-cta.colors__bg--white .page--home-v3 .hero-a .button,
+.page--home-v3 .hero-a .action-bar-one-col-cta.content-image-block:nth-child(odd) .button,
+.action-bar-one-col-cta.content-image-block:nth-child(odd) .page--home-v3 .hero-a .button,
+.page--home-v3 .hero-a .action-bar-one-col-cta.content-datavis-block:nth-child(odd) .button,
+.action-bar-one-col-cta.content-datavis-block:nth-child(odd) .page--home-v3 .hero-a .button,
+.page--home-v3 .hero-a .action-bar-one-col-cta.colors__bg--lightgray .button,
+.action-bar-one-col-cta.colors__bg--lightgray .page--home-v3 .hero-a .button,
+.page--home-v3 .hero-a .action-bar-one-col-cta.content-image-block:nth-child(even) .button,
+.action-bar-one-col-cta.content-image-block:nth-child(even) .page--home-v3 .hero-a .button,
+.page--home-v3 .hero-a .action-bar-one-col-cta.content-datavis-block:nth-child(even) .button,
+.action-bar-one-col-cta.content-datavis-block:nth-child(even) .page--home-v3 .hero-a .button,
+.page--home-v3 .hero-a .action-bar-one-col-cta.colors__bg--navy .button,
+.action-bar-one-col-cta.colors__bg--navy .page--home-v3 .hero-a .button {
+  -webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 .page--home .hero-a .button.blue-button--:hover, .page--home .hero-a .promo-section.bg-gray .button:hover, .promo-section.bg-gray .page--home .hero-a .button:hover, .page--home .hero-a .promo-section.bg-white .button:hover, .promo-section.bg-white .page--home .hero-a .button:hover, .page--home .hero-a .location-section.bg-gray .button:hover, .location-section.bg-gray .page--home .hero-a .button:hover, .page--home .hero-a .location-section.bg-white .button:hover, .location-section.bg-white .page--home .hero-a .button:hover, .page--home .hero-a .content-image-block.colors__bg--navy .button:hover, .content-image-block.colors__bg--navy .page--home .hero-a .button:hover, .page--home .hero-a .action-bar.bg-darkblue .button:hover, .action-bar.bg-darkblue .page--home .hero-a .button:hover, .page--home .hero-a .action-bar.bg-gray .button:hover, .action-bar.bg-gray .page--home .hero-a .button:hover, .page--home .hero-a .action-bar.bg-white .button:hover, .action-bar.bg-white .page--home .hero-a .button:hover, .page--home .hero-a .action-bar-map.bg-gray .button:hover, .action-bar-map.bg-gray .page--home .hero-a .button:hover, .page--home .hero-a .action-bar-map.bg-white .button:hover, .action-bar-map.bg-white .page--home .hero-a .button:hover, .page--home .hero-a .action-bar-one-col-cta.colors__bg--white .button:hover, .action-bar-one-col-cta.colors__bg--white .page--home .hero-a .button:hover, .page--home .hero-a .action-bar-one-col-cta.content-image-block:nth-child(odd) .button:hover, .action-bar-one-col-cta.content-image-block:nth-child(odd) .page--home .hero-a .button:hover, .page--home .hero-a .action-bar-one-col-cta.content-datavis-block:nth-child(odd) .button:hover, .action-bar-one-col-cta.content-datavis-block:nth-child(odd) .page--home .hero-a .button:hover, .page--home .hero-a .action-bar-one-col-cta.colors__bg--lightgray .button:hover, .action-bar-one-col-cta.colors__bg--lightgray .page--home .hero-a .button:hover, .page--home .hero-a .action-bar-one-col-cta.content-image-block:nth-child(even) .button:hover, .action-bar-one-col-cta.content-image-block:nth-child(even) .page--home .hero-a .button:hover, .page--home .hero-a .action-bar-one-col-cta.content-datavis-block:nth-child(even) .button:hover, .action-bar-one-col-cta.content-datavis-block:nth-child(even) .page--home .hero-a .button:hover, .page--home .hero-a .action-bar-one-col-cta.colors__bg--navy .button:hover, .action-bar-one-col-cta.colors__bg--navy .page--home .hero-a .button:hover,
@@ -17128,8 +17207,8 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   border: solid 2px #E2EF1C;
   color: #E2EF1C;
   background-color: transparent;
-  -webkit-transition: all 0.12s;
-  transition: all 0.12s;
+  -webkit-transition: all 0.08s;
+  transition: all 0.08s;
 }
 
 .content-image-block.colors__bg--navy .button [class*=" icon-"],
@@ -18776,8 +18855,8 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
 .career-list .careers-table__row:hover,
 .career-list .job-section__row:hover {
   background: #F1F2F4;
-  -webkit-transition: all 0.12s;
-  transition: all 0.12s;
+  -webkit-transition: all 0.08s;
+  transition: all 0.08s;
 }
 
 .career-list .careers-table__row:hover .button--circle,
@@ -18813,8 +18892,8 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   .career-list .job-section__row.active,
   .career-list .job-section__row:active {
     background: #F1F2F4;
-    -webkit-transition: all 0.12s;
-    transition: all 0.12s;
+    -webkit-transition: all 0.08s;
+    transition: all 0.08s;
   }
   .career-list .careers-table__row.active .button--circle, .career-list .careers-table__row:active .button--circle,
   .career-list .job-section__row.active .button--circle,
@@ -19738,8 +19817,8 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   border: solid 2px #E2EF1C;
   color: #E2EF1C;
   background-color: transparent;
-  -webkit-transition: all 0.12s;
-  transition: all 0.12s;
+  -webkit-transition: all 0.08s;
+  transition: all 0.08s;
 }
 
 .action-bar.bg-darkblue .button [class*=" icon-"],
@@ -20931,8 +21010,8 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   border: solid 2px #E2EF1C;
   color: #E2EF1C;
   background-color: transparent;
-  -webkit-transition: all 0.12s;
-  transition: all 0.12s;
+  -webkit-transition: all 0.08s;
+  transition: all 0.08s;
 }
 
 .action-bar-one-col-cta.colors__bg--navy .button [class*=" icon-"],
@@ -21650,6 +21729,13 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   color: #63727E;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+.feature-card__link h1, .feature-card__link h2,
+.blog-card__link h1,
+.blog-card__link h2 {
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .feature-card__link:hover h1, .feature-card__link:hover h2,
