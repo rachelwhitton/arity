@@ -9519,6 +9519,11 @@ form .email-only-button-group {
   text-transform: uppercase;
 }
 
+.teaser-blog-card__link h1, .teaser-blog-card__link h2 {
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+
 .teaser-blog-card__link:hover h1, .teaser-blog-card__link:hover h2, .teaser-blog-card__link:focus h1, .teaser-blog-card__link:focus h2 {
   color: #0070D6;
 }
