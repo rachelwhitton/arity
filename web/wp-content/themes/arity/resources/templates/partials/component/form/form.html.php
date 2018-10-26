@@ -95,10 +95,10 @@
     }
     ?>
 
-  <label class="checkbox_container">I’d like to be contacted with the latest news and offers from Arity
+  <!-- label class="checkbox_container">I’d like to be contacted with the latest news and offers from Arity
     <input type="checkbox" id="<?=$arity_contact_id?>" name="<?=$arity_contact_id?>" checked="checked">
       <span class="checkmark"></span>
-</label>
+  </label-->
   
   <button type="submit" class="btn btn-primary">Submit</button>
 
