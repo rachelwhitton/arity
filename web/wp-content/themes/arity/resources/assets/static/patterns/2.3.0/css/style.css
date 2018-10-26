@@ -8423,6 +8423,13 @@ form {
   /**
    * Email-Only Button - Primary
    */
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
 }
 
 form .form-group {
@@ -8826,6 +8833,65 @@ form .button--primary.email-only-button--, form .app__home #contact .lite-form .
 form .email-only-button-group {
   text-align: center;
   width: 100%;
+}
+
+form .checkbox_container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding-top: 5px;
+}
+
+form .checkbox_container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+form .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+form .checkbox_container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+form .checkbox_container input:checked ~ .checkmark {
+  background-color: #0070D6;
+}
+
+form .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+form .checkbox_container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+form .checkbox_container .checkmark:after {
+  left: 9px;
+  top: 3px;
+  width: 7px;
+  height: 15px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .cookie-banner {

@@ -68,14 +68,16 @@
     <label class="form-group-label" for="input_<?=$industry_id; ?>">What industry do you work in?</label>
     <select class="form-control custom-select" name="<?=$industry_id; ?>" id="input_<?=$industry_id; ?>" required>
       <option value="">Select an industry</option>
-      <option value="Insurance">Insurance</option>
-      <option value="OEM">OEM</option>
-      <option value="Shared Mobility">Shared Mobility</option>
-      <option value="Gig Economy">Gig Economy</option>
-      <option value="Auto Aftermarket">Auto Aftermarket</option>
-      <option value="Government">Government</option>
-      <option value="Financial Services">Financial Services</option>
-      <option value="Other">Other</option>
+      <option value="Auto Aftermarket" <?=strtolower($_GET['industry'])=='auto aftermarket'?'selected':''?>>Auto Aftermarket</option>
+      <option value="Automotive Solutions" <?=strtolower($_GET['industry'])=='automotive solutions'?'selected':''?>>Automotive Solutions</option>
+      <option value="Financial Services" <?=strtolower($_GET['industry'])=='financial services'?'selected':''?>>Financial Services</option>
+      <option value="Gig Economy" <?=strtolower($_GET['industry'])=='gig economy'?'selected':''?>>Gig Economy</option>
+      <option value="Government" <?=strtolower($_GET['industry'])=='government'?'selected':''?>>Government</option>
+      <option value="Insurance" <?=strtolower($_GET['industry'])=='insurance'?'selected':''?>>Insurance</option>
+      <option value="OEM" <?=strtolower($_GET['industry'])=='oem'?'selected':''?>>OEM</option>
+      <option value="Shared Mobility" <?=strtolower($_GET['industry'])=='shared mobility'?'selected':''?>>Shared Mobility</option>
+      <option value="Smart Cities" <?=strtolower($_GET['industry'])=='smart cities'?'selected':''?>>Smart Cities</option>
+      <option value="Other" <?=strtolower($_GET['industry'])=='other'?'selected':''?>>Other</option>
     </select>
     <div class="form-control-feedback" data-error="required">Please select an industry</div>
   </div>
@@ -85,6 +87,19 @@
     <textarea class="form-control" name="description" id="input_description" rows="3"></textarea>
   </div>
 
+    <?php
+    $arity_contact_id = '00Nf4000009v5NK';
+    if(!empty(WP_ENV) && WP_ENV != 'production') {
+        // Testing
+        $arity_contact_id = '00N3B000001I8yV';
+    }
+    ?>
+
+  <label class="checkbox_container">I’d like to be contacted with the latest news and offers from Arity
+    <input type="checkbox" id="<?=$arity_contact_id?>" name="<?=$arity_contact_id?>" checked="checked">
+      <span class="checkmark"></span>
+</label>
+  
   <button type="submit" class="btn btn-primary">Submit</button>
 
   <?php if(!empty($data['use_captcha'])) : ?>
