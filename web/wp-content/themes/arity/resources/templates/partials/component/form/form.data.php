@@ -16,6 +16,10 @@ if(empty($data['form_url'])) {
     $data['form_url'] = 'https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8';
     $data['form_oid'] = '00D3B000000DYQX';
   }
+
+  // override for test
+  $data['form_url'] = 'https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8';
+  $data['form_oid'] = '00Df4000001TyK5';
 }
 
 $data['use_captcha'] = true;
