@@ -88,17 +88,17 @@
   </div>
 
     <?php
-    $arity_contact_id = '00Nf4000009v5NK';
+    $arity_contact_id = 'Opt_in_Notification';
     if(!empty(WP_ENV) && WP_ENV != 'production') {
         // Testing
-        $arity_contact_id = '00N3B000001I8yV';
+        $arity_contact_id = 'Opt_in_Notification';
     }
     ?>
 
-  <!-- label class="checkbox_container">I’d like to be contacted with the latest news and offers from Arity
+  <label class="checkbox_container">I’d like to be contacted with the latest news and offers from Arity
     <input type="checkbox" id="<?=$arity_contact_id?>" name="<?=$arity_contact_id?>" checked="checked">
       <span class="checkmark"></span>
-  </label-->
+  </label>
   
   <button type="submit" class="btn btn-primary">Submit</button>
 
