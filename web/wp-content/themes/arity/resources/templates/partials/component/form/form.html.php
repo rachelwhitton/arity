@@ -87,16 +87,8 @@
     <textarea class="form-control" name="description" id="input_description" rows="3"></textarea>
   </div>
 
-    <?php
-    $arity_contact_id = 'Opt_in_Notification';
-    if(!empty(WP_ENV) && WP_ENV != 'production') {
-        // Testing
-        $arity_contact_id = 'Opt_in_Notification';
-    }
-    ?>
-
   <label class="checkbox_container">I’d like to be contacted with the latest news and offers from Arity
-    <input type="checkbox" id="<?=$arity_contact_id?>" name="<?=$arity_contact_id?>" checked="checked">
+  <input  id="00Nf400000RFoMR" name="00Nf400000RFoMR" type="checkbox" value="1" checked="checked"/>
       <span class="checkmark"></span>
   </label>
   
