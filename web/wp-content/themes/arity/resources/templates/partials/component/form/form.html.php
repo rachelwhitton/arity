@@ -87,10 +87,10 @@
     <textarea class="form-control" name="description" id="input_description" rows="3"></textarea>
   </div>
 
-  <label class="checkbox_container">I’d like to be contacted with the latest news and offers from Arity
+  <!-- label class="checkbox_container">I’d like to be contacted with the latest news and offers from Arity
   <input  id="00Nf400000RFoMR" name="00Nf400000RFoMR" type="checkbox" value="1" checked="checked"/>
       <span class="checkmark"></span>
-  </label>
+  </label-->
   
   <button type="submit" class="btn btn-primary">Submit</button>
 
