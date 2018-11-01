@@ -365,6 +365,10 @@ EOD;
  */
 // $adobe_dtm_tracking_code = '0893390c40d93db48cc0d98a10c4fe9f90b72e2c';
 add_action('theme/after_wphead', function () use($adobe_dtm_tracking_code) {
+
+    if( empty($adobe_dtm_tracking_code) ) {
+        return;
+    }
     
     if( !empty(WP_ENV) && !in_array(WP_ENV, array('production','staging'))) {
         return;
@@ -389,6 +393,11 @@ EOD;
  * @return void
  */
 add_action('theme/after_wpfooter', function () {
+
+    if( empty($adobe_dtm_tracking_code) ) {
+        return;
+    }
+    
     if( !empty(WP_ENV) && !in_array(WP_ENV, array('production','staging'))) {
         return;
     }
