@@ -239,7 +239,7 @@ EOD;
  * @since 1.0.0
  * @return void
  */
-$google_analytics_id = 'UA-90423861-1';
+// $google_analytics_id = 'UA-90423861-1';
 add_action('theme/after_wphead', function () use ($google_analytics_id) {
 
     if( empty($google_analytics_id) ) {
@@ -281,7 +281,8 @@ EOD;
  * @since 1.0.0
  * @return void
  */
-$gtag_id = 'GTM-KH6GQ88';
+//$gtag_id = 'GTM-KH6GQ88';
+
 add_action('theme/after_wphead', function () use ($gtag_id) {
 
     if( empty($gtag_id) ) {
@@ -362,8 +363,9 @@ EOD;
  * @since 1.0.0
  * @return void
  */
-$adobe_dtm_tracking_code = '0893390c40d93db48cc0d98a10c4fe9f90b72e2c';
+// $adobe_dtm_tracking_code = '0893390c40d93db48cc0d98a10c4fe9f90b72e2c';
 add_action('theme/after_wphead', function () use($adobe_dtm_tracking_code) {
+    
     if( !empty(WP_ENV) && !in_array(WP_ENV, array('production','staging'))) {
         return;
     }
@@ -371,7 +373,7 @@ add_action('theme/after_wphead', function () use($adobe_dtm_tracking_code) {
     if( WP_ENV == 'staging' ) {
         $adobe_dtm_tracking_code .= '-staging';
     }
-
+    
     echo <<<EOD
 
 <!-- Adobe DTM -->
@@ -405,12 +407,13 @@ EOD;
  * @since 1.1.0
  * @return void
  */
-add_action('theme/after_wphead', function () {
 
+add_action('theme/after_wphead', function () {
+    /*
     if( !empty(WP_ENV) && WP_ENV != 'production' ) {
         return;
     }
-
+    */
     echo <<<EOD
 
 <!-- Start Quantcast Tag -->
@@ -436,6 +439,7 @@ _qevents.push({qacct: "p-CT9p1As87v16a"});
 
 EOD;
 }, 101);
+
 
 /**
  * Add Simplifi Tag for Footer.

@@ -734,7 +734,7 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
       if (!this.getAgreed()) {
         var that = this;
         var url = "/geoip/";
-        //var url = "https://dev.arity/geoip/";
+        var url = "https://dev.arity/geoip/";
         $.ajax({
           url: url
         }).done(function (data) {
@@ -750,6 +750,7 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
           } else {
             // console.log('Not in array');
             console.log("NOT A GDPR COUNTRY");
+            that.initGTag();
             that.render();
           }
 
@@ -782,6 +783,61 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
 
       this.eventListeners();
     },
+    loadScript: function loadScript(url, callback) {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+
+      if (script.readyState) {
+        //IE
+        script.onreadystatechange = function () {
+          if (script.readyState == "loaded" || script.readyState == "complete") {
+            script.onreadystatechange = null;
+            callback();
+          }
+        };
+      } else {
+        //Others
+        script.onload = function () {
+          callback();
+        };
+      }
+
+      script.src = url;
+      document.getElementsByTagName("head")[0].appendChild(script);
+    },
+    initGTag: function initGTag() {
+      console.log("initGTag");
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js"
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-KH6GQ88");
+      console.log("Adobe DTM Header Start");
+      this.loadScript("//assets.adobedtm.com/b46e318d845250834eda10c5a20827c045a4d76f/satelliteLib-0893390c40d93db48cc0d98a10c4fe9f90b72e2c.js", function () {
+        //initialization code
+        var my_awesome_script1 = document.createElement("script");
+        my_awesome_script1.innerHTML = "_satellite.pageBottom();";
+        document.body.appendChild(my_awesome_script1);
+        console.log("Adobe DTM Footer Stop", document.body);
+      });
+
+      var my_awesome_script = document.createElement("noscript");
+      var iframe = document.createElement("iframe");
+      iframe.setAttribute("src", "https://www.googletagmanager.com/ns.html?id=GTM-KH6GQ88");
+      iframe.setAttribute("height", 0);
+      iframe.setAttribute("width", 0);
+      iframe.setAttribute("style", "display:none;visibility:hidden");
+      my_awesome_script.appendChild(iframe);
+      document.body.appendChild(my_awesome_script);
+    },
     getAgreed: function getAgreed() {
       if (this._options.debug) {
         return false;
@@ -789,6 +845,10 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
 
       if (!this._.cookies["agreed"]) {
         this._.cookies["agreed"] = this.cookie.get("cookieBanner-agreed") || false;
+      }
+
+      if (this._.cookies["agreed"]) {
+        this.initGTag();
       }
 
       return this._.cookies["agreed"];
@@ -803,6 +863,7 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
 
       this._.cookies["agreed"] = bool;
       this.cookie.set("cookieBanner-agreed", boolNum, this._options.expires, this._options.cookiePath, this._options.cookieDomain !== "" ? this._options.cookieDomain : "", this._options.cookieSecure ? true : false);
+      this.initGTag();
     },
     getSeen: function getSeen() {
       if (!this._.cookies["seen"]) {
@@ -829,7 +890,7 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
         this._.rendered = true;
         debug("cookieBanner.open: complete");
         this.$el.addClass("active");
-        this.setSeen();
+        // this.setSeen();  // Updated to disable placing cookies before accepting it
       }.bind(this));
     },
     close: function close() {
