@@ -88,7 +88,7 @@
   </div>
 
   <label class="checkbox_container">By checking this box, I am providing express consent to receive marketing communications from Arity at the email address provided.
-  <input  id="00Nf400000RFoMR" name="00Nf400000RFoMR" type="checkbox" value="1"/>
+  <input id="00Nf400000RFoMR" name="00Nf400000RFoMR" type="checkbox" value="1" checked="checked" />
       <span class="checkmark"></span>
   </label>
   
