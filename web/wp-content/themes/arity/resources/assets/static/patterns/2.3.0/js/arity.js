@@ -734,7 +734,7 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
       if (!this.getAgreed()) {
         var that = this;
         var url = "/geoip/";
-        var url = "https://dev.arity/geoip/";
+        //var url = "https://dev.arity/geoip/";
         $.ajax({
           url: url
         }).done(function (data) {
