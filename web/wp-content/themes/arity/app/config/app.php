@@ -105,6 +105,7 @@ return [
         't6-contact' => 'T6 - Contact',
         't8-blog-landing' => 'T8 - Blog Landing',
         't12-privacy-policy' => 'T12 - Privacy Policy (Lang)',
+        't13-smart-cities-usdot' => 'T13 - Smart Cities USDot',
         't20-campaign-landing' => 'T20 - Campaign Landing'
     ],
 
