@@ -13,6 +13,17 @@ namespace App\Theme;
 //echo '<pre>'; print_r($data); echo '</pre>';
 
 $class = 'content-image-block';
+if($data['content-chooser']=='layout__form'){
+  global $wp;
+
+  $data['is_salesforce'] = true;
+  $data['use_captcha'] = true;
+  
+  $data['form_return_url'] = home_url( $wp->request );
+  $data['form_return_url'] = trailingslashit($data['form_return_url']) . '#thank-you';
+
+}
+
 if($data['content-chooser']=='layout__datavis'){
   $class = 'content-datavis-block';
 
@@ -65,6 +76,98 @@ if($data['vertial-align']=='Top'){
   <?php endif; ?>
   <div class="container">
     <div class="row">
+    <?php if (!empty($data['image_id']) && $data['content-chooser'] == "layout__form") : ?>
+        <div class="<?=$class?>__col wide-- <?=$class?>__img-box">
+        <div class="contact-form__indicates">
+          <span class="required">*</span> indicates required field
+        </div>
+        <form action="<?= $data['form-posturl']; ?>" method="POST">
+            <?php if(!empty($data['is_salesforce'])) : ?>
+              <input type=hidden name="oid" value="<?= $data['form-oid']; ?>">
+              <input type=hidden name="retURL" value="<?= $data['form_return_url']; ?>">
+              <input type="hidden" name="lead_source" id="input_lead_source" value="<?= $data['form-leadsource']; ?>">
+            <?php endif; ?>
+
+            <div class="form-group form-group--required">
+              <label class="form-group-label" for="<?=$data['form-fname']?>">First name</label>
+              <input type="text" class="form-control" name="<?=$data['form-fname']?>" id="<?=$data['form-fname']?>" placeholder="" required>
+              <div class="form-control-feedback" data-error="required">Please enter first name</div>
+              <div class="form-control-feedback" data-error="invalid">Please enter a valid name</div>
+            </div>
+
+            <div class="form-group form-group--required">
+              <label class="form-group-label" for="<?=$data['form-lname']?>">Last name</label>
+              <input type="text" class="form-control" name="<?=$data['form-lname']?>" id="<?=$data['form-lname']?>" placeholder="" required>
+              <div class="form-control-feedback" data-error="required">Please enter last name</div>
+              <div class="form-control-feedback" data-error="invalid">Please enter a valid name</div>
+            </div>
+
+            <div class="form-group form-group--required">
+              <label class="form-group-label" for="<?=$data['form-email']?>">Email</label>
+              <input type="email" class="form-control" name="<?=$data['form-email']?>" id="<?=$data['form-email']?>" placeholder="" required>
+              <div class="form-control-feedback" data-error="required">Please enter email</div>
+              <div class="form-control-feedback" data-error="invalid">Please enter a valid email</div>
+            </div>
+
+
+            <div class="form-group form-group--required">
+              <label class="form-group-label" for="<?=$data['form-industry']?>">What industry do you work in?</label>
+              <select class="form-control custom-select" name="<?=$data['form-industry']?>" id="<?=$data['form-industry']?>" required>
+                <option value="">Select an industry</option>
+                <option value="Auto Aftermarket" <?=strtolower($_GET['industry'])=='auto aftermarket'?'selected':''?>>Auto Aftermarket</option>
+                <option value="Automotive Solutions" <?=strtolower($_GET['industry'])=='automotive solutions'?'selected':''?>>Automotive Solutions</option>
+                <option value="Financial Services" <?=strtolower($_GET['industry'])=='financial services'?'selected':''?>>Financial Services</option>
+                <option value="Gig Economy" <?=strtolower($_GET['industry'])=='gig economy'?'selected':''?>>Gig Economy</option>
+                <option value="Government" <?=strtolower($_GET['industry'])=='government'?'selected':''?>>Government</option>
+                <option value="Insurance" <?=strtolower($_GET['industry'])=='insurance'?'selected':''?>>Insurance</option>
+                <option value="OEM" <?=strtolower($_GET['industry'])=='oem'?'selected':''?>>OEM</option>
+                <option value="Shared Mobility" <?=strtolower($_GET['industry'])=='shared mobility'?'selected':''?>>Shared Mobility</option>
+                <option value="Smart Cities" <?=strtolower($_GET['industry'])=='smart cities'?'selected':''?>>Smart Cities</option>
+                <option value="Other" <?=strtolower($_GET['industry'])=='other'?'selected':''?>>Other</option>
+              </select>
+              <div class="form-control-feedback" data-error="required">Please select an industry</div>
+            </div>
+
+            <label class="checkbox_container">By checking this box, I am providing express consent to receive marketing communications from Arity at the email address provided.
+            <input id="<?=$data['form-contactme']?>" name="<?=$data['form-contactme']?>" type="checkbox" value="1" checked="checked" />
+                <span class="checkmark"></span>
+            </label>
+
+            <button type="submit" class="btn btn-primary"><?=$data['form-btntext']?></button>
+
+            <?php if(!empty($data['use_captcha'])) : ?>
+              <div class="g-recaptcha" data-size="invisible" data-badge="inline"></div>
+            <?php endif; ?>
+            </form>
+        </div>
+        <div id="emailform_modal" class="modal" role="dialog">
+          <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-body">
+                  <div class="modal-body--left">
+                    <div class="align-vertical-middle">
+                      <h2>Thank You</h2>
+                    </div>
+                  </div>
+                <div class="modal-body--right">
+                  <p><?=$data['form-thankyou']?></p>
+                  <a href="<?=$data['form-downloadurl']?>" class="ar-element button button--primary blue-button--">
+                    <span class="button__label">Download</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="close" data-dismiss="modal">
+              <svg class="icon-svg" title="" role="img">
+                  <use xlink:href="#close"></use>
+              </svg>
+            </button>
+          </div>
+
+        </div>
+      <?php endif; ?>
       <?php if (!empty($data['image_id']) && $data['content-chooser'] == "layout__image") : ?>
         <div class="<?=$class?>__col wide-- <?=$class?>__img-box">
           <?php element('image', [

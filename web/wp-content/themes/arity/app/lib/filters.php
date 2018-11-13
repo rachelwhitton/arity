@@ -955,7 +955,10 @@ add_filter('theme/before_wpfooter', function() {
     $home_url = home_url('/');
     $url = get_permalink($post->ID);
 
-    if(!in_array($post->post_name, ['contact','smart-cities','mobility-planning','astronaut'])) {
+    if (is_page_template('t20-campaign-landing')){
+       // do nothing so that the dynamic link can be handeled in the acf posts.
+    }
+    else if(!in_array($post->post_name, ['contact','smart-cities','mobility-planning','astronaut'])) {
 echo <<<EOD
       <div id="thankyou_modal" class="modal" role="dialog">
         <div class="modal-dialog modal-lg">

@@ -24,6 +24,7 @@ $fields = [
         'layout__image' => 'Image',
         'layout__video' => 'Video',
         'layout__datavis' => 'Data Visualization',
+        'layout__form' => 'Form',
       ]
     ]),
 
@@ -106,6 +107,227 @@ $fields = [
       ],
       'wrapper' => array (
         'width' => '50',
+      )
+    ]),
+
+    // Form URL
+    acf_text([
+      'label' => 'Form Fields',
+      'name' => 'content-image-block__form-posturl',
+      'instructions' => 'URL form is posted to',
+      'required' => 0,
+      'maxlength' => '',
+      'default_value' => 'https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8',
+      'conditional_logic' => [
+        [
+          [
+            'name' => 'content-image-block__content-chooser',
+            'operator' => '==',
+            'value' => 'layout__form'
+          ]
+        ]
+      ],
+      'wrapper' => array (
+        'width' => '1000',
+      )
+    ]),
+    // Form OID
+    acf_text([
+      'label' => 'Form OID',
+      'name' => 'content-image-block__form-oid',
+      'required' => 0,
+      'maxlength' => '',
+      'default_value' => '00Df4000001TyK5',
+      'conditional_logic' => [
+        [
+          [
+            'name' => 'content-image-block__content-chooser',
+            'operator' => '==',
+            'value' => 'layout__form'
+          ]
+        ]
+      ],
+      'wrapper' => array (
+        'width' => '1000',
+      )
+    ]),
+    // Form Lead Source
+    acf_text([
+      'label' => 'Lead Source',
+      'name' => 'content-image-block__form-leadsource',
+      'required' => 0,
+      'maxlength' => '',
+      'default_value' => 'Arity.com',
+      'conditional_logic' => [
+        [
+          [
+            'name' => 'content-image-block__content-chooser',
+            'operator' => '==',
+            'value' => 'layout__form'
+          ]
+        ]
+      ],
+      'wrapper' => array (
+        'width' => '1000',
+      )
+    ]),
+    // Form Fname
+    acf_text([
+      'label' => 'First name field id',
+      'name' => 'content-image-block__form-fname',
+      'required' => 0,
+      'maxlength' => '',
+      'default_value' => 'input_first_name',
+      'conditional_logic' => [
+        [
+          [
+            'name' => 'content-image-block__content-chooser',
+            'operator' => '==',
+            'value' => 'layout__form'
+          ]
+        ]
+      ],
+      'wrapper' => array (
+        'width' => '1000',
+      )
+    ]),
+    // Form Lname
+    acf_text([
+      'label' => 'Last name field id',
+      'name' => 'content-image-block__form-lname',
+      'required' => 0,
+      'maxlength' => '',
+      'default_value' => 'input_last_name',
+      'conditional_logic' => [
+        [
+          [
+            'name' => 'content-image-block__content-chooser',
+            'operator' => '==',
+            'value' => 'layout__form'
+          ]
+        ]
+      ],
+      'wrapper' => array (
+        'width' => '1000',
+      )
+    ]),
+    // Form Email
+    acf_text([
+      'label' => 'Email field id',
+      'name' => 'content-image-block__form-email',
+      'required' => 0,
+      'maxlength' => '',
+      'default_value' => 'input_email',
+      'conditional_logic' => [
+        [
+          [
+            'name' => 'content-image-block__content-chooser',
+            'operator' => '==',
+            'value' => 'layout__form'
+          ]
+        ]
+      ],
+      'wrapper' => array (
+        'width' => '1000',
+      )
+    ]),
+    // Form Industry
+    acf_text([
+      'label' => 'Industry field id',
+      'name' => 'content-image-block__form-industry',
+      'required' => 0,
+      'maxlength' => '',
+      'default_value' => 'input_00Nf4000009v5NK',
+      'conditional_logic' => [
+        [
+          [
+            'name' => 'content-image-block__content-chooser',
+            'operator' => '==',
+            'value' => 'layout__form'
+          ]
+        ]
+      ],
+      'wrapper' => array (
+        'width' => '1000',
+      )
+    ]),
+    // Form contactme
+    acf_text([
+      'label' => 'Contact Me field id',
+      'name' => 'content-image-block__form-contactme',
+      'required' => 0,
+      'maxlength' => '',
+      'default_value' => '00Nf400000RFoMR',
+      'conditional_logic' => [
+        [
+          [
+            'name' => 'content-image-block__content-chooser',
+            'operator' => '==',
+            'value' => 'layout__form'
+          ]
+        ]
+      ],
+      'wrapper' => array (
+        'width' => '1000',
+      )
+    ]),
+    // Form button text
+    acf_text([
+      'label' => 'Button Text field id',
+      'name' => 'content-image-block__form-btntext',
+      'required' => 0,
+      'maxlength' => '',
+      'default_value' => 'Download',
+      'conditional_logic' => [
+        [
+          [
+            'name' => 'content-image-block__content-chooser',
+            'operator' => '==',
+            'value' => 'layout__form'
+          ]
+        ]
+      ],
+      'wrapper' => array (
+        'width' => '1000',
+      )
+    ]),
+    // Form Download URL
+    acf_text([
+      'label' => 'Download URL',
+      'name' => 'content-image-block__form-downloadurl',
+      'required' => 0,
+      'maxlength' => '',
+      'conditional_logic' => [
+        [
+          [
+            'name' => 'content-image-block__content-chooser',
+            'operator' => '==',
+            'value' => 'layout__form'
+          ]
+        ]
+      ],
+      'wrapper' => array (
+        'width' => '1000',
+      )
+    ]),
+    // Form thankyou msg
+    acf_text([
+      'label' => 'Thankyou message',
+      'name' => 'content-image-block__form-thankyou',
+      'required' => 0,
+      'maxlength' => '',
+      'default_value' => 'Click on the button to download whitepaper.',
+      'conditional_logic' => [
+        [
+          [
+            'name' => 'content-image-block__content-chooser',
+            'operator' => '==',
+            'value' => 'layout__form'
+          ]
+        ]
+      ],
+      'wrapper' => array (
+        'width' => '1000',
       )
     ]),
 
@@ -351,7 +573,16 @@ $fields = [
               'wrapper' => array (
                 'width' => '30',
               ),
-            ]
+            ],
+            [
+              'type' => 'checkbox',
+              'name' => 'optIn',
+              'label' => '',
+              'required' => false,
+              'choices' => [
+                  'optIn' => 'Show Opt-In Form.'
+              ],
+            ],
           ],
         ]
       ],
