@@ -21,7 +21,7 @@ if($data['content-chooser']=='layout__form'){
   
   $data['form_return_url'] = home_url( $wp->request );
   $data['form_return_url'] = trailingslashit($data['form_return_url']) . '#thank-you';
-  echo '<pre>'; print_r($data); echo '</pre>'; 
+  // echo '<pre>'; print_r($data); echo '</pre>'; 
 }
 
 if($data['content-chooser']=='layout__datavis'){
@@ -76,7 +76,7 @@ if($data['vertial-align']=='Top'){
   <?php endif; ?>
   <div class="container">
     <div class="row">
-    <?php if (!empty($data['image_id']) && $data['content-chooser'] == "layout__form") : ?>
+    <?php if ($data['content-chooser'] == "layout__form") : ?>
         <div class="<?=$class?>__col wide-- <?=$class?>__img-box">
         <div class="contact-form__indicates">
           <span class="required">*</span> indicates required field
