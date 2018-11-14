@@ -21,7 +21,7 @@ if($data['content-chooser']=='layout__form'){
   
   $data['form_return_url'] = home_url( $wp->request );
   $data['form_return_url'] = trailingslashit($data['form_return_url']) . '#thank-you';
-
+  echo '<pre>'; print_r($data); echo '</pre>'; 
 }
 
 if($data['content-chooser']=='layout__datavis'){
