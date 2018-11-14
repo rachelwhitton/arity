@@ -174,7 +174,16 @@ $fields = [
             'wrapper' => array (
               'width' => '30',
             ),
-          ]
+          ],
+          [
+            'type' => 'checkbox',
+            'name' => 'optIn',
+            'label' => '',
+            'required' => false,
+            'choices' => [
+                'optIn' => 'Show Opt-In Form.'
+            ],
+          ],
         ],
       ]
     ],

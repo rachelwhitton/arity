@@ -231,7 +231,7 @@ $module_builder->includeACFSettings('image-full-width', 'module');
 |
 */
 $module_builder->buildModulesFieldGroup(array(
-    'page_template' => 't0-modules'
+    'page_template' => 't0-modules',
 ));
 
 /*

@@ -107,6 +107,7 @@ if($data['content-chooser']=='layout__datavis'){
                   data-height-large="<?=$data['url-height-large']?>"
                   data-height-medium="<?=$data['url-height-medium']?>"
                   data-height-small="<?=$data['url-height-small']?>"
+                  name="myframe"
           ></iframe>
         </div>
       <?php endif; ?>

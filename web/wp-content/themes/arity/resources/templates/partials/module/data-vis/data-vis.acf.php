@@ -189,7 +189,7 @@ $fields = [
       'name' => 'data-vis__body_copy',
       'key' => 'field_body_copy',
       'instructions' => 'Recommended character count max: 300',
-      'required' => 1,
+      'required' => 0,
       'new_lines' => 'wpautop',
       'wrapper' => array (
         'width' => '100',
@@ -289,7 +289,16 @@ $fields = [
               'wrapper' => array (
                 'width' => '30',
               ),
-            ]
+            ],
+            [
+              'type' => 'checkbox',
+              'name' => 'optIn',
+              'label' => '',
+              'required' => false,
+              'choices' => [
+                  'optIn' => 'Show Opt-In Form.'
+              ],
+            ],
           ],
         ]
       ],

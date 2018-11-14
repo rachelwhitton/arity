@@ -2371,6 +2371,30 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
   window.matchHeight = matchHeight;
 })(jQuery, window, document);
 
+/* global transitionEvent */
+
+(function ($, window, document) {
+  var optIn = {
+    defaults: {
+      debug: false // Dont leave this as true
+    },
+    init: function init(opts) {
+      $(document).ready(function () {
+        console.log("optIn init");
+        $(".optIn").on("click", function (e) {
+          e.preventDefault();
+          console.log("optIn click");
+        });
+      });
+    },
+    render: function render() {
+      console.log("optIn");
+    }
+  };
+
+  window.optIn = optIn;
+})(jQuery, window, document);
+
 ;(function ($, window, document) {
 
   var scrim = {
@@ -5765,6 +5789,7 @@ var Util = function ($) {
       blogNav.init();
       accordion.init();
       actionBar.init();
+      optIn.init();
     },
     initConfigs: function initConfigs() {
       app._settings = {};
