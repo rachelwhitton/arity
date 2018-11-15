@@ -15,11 +15,20 @@ namespace App\Theme;
 <?php get_header() ?>
 
 <style>
+  #action-bar {
+    padding-bottom: 0 !important;
+  }
+  .content-datavis-block {
+    padding-top: 0 !important;
+  }
+  .dataVis {
+    width: 1040px !important;
+  }
   .hero-elaborated{
     padding-bottom:150px;
   } 
   .block-video{
-    margin-top:-200px;
+    margin-top:-152px;
   }
   .video-wrapper{
     border:5px solid #fff;
@@ -30,6 +39,10 @@ namespace App\Theme;
   }
   .action-bar:before{
     width:0px !important
+  }
+  .action-bar__left p {
+    font-size: 1.25rem !important;
+    line-height: 1.3 !important;
   }
   .sc-panel-num a{
     margin-top:-15px;
@@ -191,7 +204,7 @@ namespace App\Theme;
     this.firstElementChild.style.color = mouseoutColor;
     targetNum.firstElementChild.style.backgroundColor = mouseoutColor;
   }
-  
+
   scNums.forEach(function(num) {
     num.addEventListener("mouseover", mouseoverNumber, true);
     num.addEventListener("mouseout", mouseoutNumber, true);
