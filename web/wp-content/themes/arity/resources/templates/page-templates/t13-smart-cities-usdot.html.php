@@ -15,44 +15,42 @@ namespace App\Theme;
 <?php get_header() ?>
 
 <style>
-    .hero-elaborated{
-        padding-bottom:150px;
-    }
-    .block-video{
-        margin-top:-200px;
-    }
-    .video-wrapper{
-        border:5px solid #fff;
-    }
-    .block-video .container{ 
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-    .action-bar:before{
-        width:0px !important
-    }
-    .sc-panel-num a{
-        margin-top:-15px;
-    }
-
-
-    #sc-nav-panel-container {
-		font-family: 'Roboto', sans-serif;
-		font-size: 1rem;
-		position: relative;
-		width: 100%;
-		max-width: 430px;
-		height: 315px;
-		margin: 2rem auto;
+  .hero-elaborated{
+    padding-bottom:150px;
+  } 
+  .block-video{
+    margin-top:-200px;
+  }
+  .video-wrapper{
+    border:5px solid #fff;
+  }
+  .block-video .container{ 
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .action-bar:before{
+    width:0px !important
+  }
+  .sc-panel-num a{
+    margin-top:-15px;
+  }
+  #sc-nav-panel-container {
+  	font-family: 'Roboto', sans-serif;
+  	font-size: 1rem;
+  	position: relative;
+  	width: 100%;
+  	max-width: 430px;
+  	height: 315px;
+  	margin: 2rem auto;
 	}
 	#sc-nav-panel-bg {
 		position: absolute;
 		width: 100%;
 		height: 100%;
-        background-color: #F7F7F7;
+    background-color: #F7F7F7;
 	}
 	#sc-nav-timeline {
-		position: absolute;
+	 position: absolute;
 		left: 0;
 		top: 0;
 		width: 37px;
@@ -90,12 +88,6 @@ namespace App\Theme;
 		position: absolute;
 		text-decoration: none;
 	}
-/*	.sc-panel-num:hover .opaque-circle {
-		background-color: #0070d6;
-	}
-	#sc-nav-timeline #sc-num-1:hover + #sc-nav-panel-text #sc-panel-text-1 h5 {
-		color: #0070d6;
-	}*/
 	#sc-nav-panel-text {
 		position: absolute;
 		top: 0;
@@ -117,9 +109,6 @@ namespace App\Theme;
 		text-decoration: none;
 		transition: color 0.2s ease;
 	}
-	/*.sc-nav-panel-header a:hover {
-		color: #0070d6;
-	}*/
 	.sc-nav-panel-body {
 		font-weight: 400;
 		color: #63727e;
@@ -155,8 +144,6 @@ namespace App\Theme;
 </style>
 
 
-
-
 <?php do_action('theme/before_content') ?>
 
 <div id="main" class="site-content">
@@ -169,46 +156,48 @@ namespace App\Theme;
 
 
 <script>
-        var scNums = Array.prototype.slice.call(document.querySelectorAll(".sc-panel-num"));
-        var scPanelHeaders = Array.prototype.slice.call(document.querySelectorAll(".sc-nav-panel-header"));
-        function extractNum(string, charIndex) {
-            var num = string.substring(charIndex);
-            return num;
-        }
-        function mouseoverNumber(event) {
-            var num = extractNum(this.id, 7);
-            var mouseoverColor = "#0070d6";
-            var targetHeader = document.getElementById("sc-panel-text-" + num).firstElementChild;
-            this.firstElementChild.style.backgroundColor = mouseoverColor;
-            targetHeader.firstElementChild.style.color = mouseoverColor;
-        }
-        function mouseoutNumber(event) {
-            var num = extractNum(this.id, 7);
-            var mouseoutColor = "#011c2c";
-            var targetHeader = document.getElementById("sc-panel-text-" + num).firstElementChild;
-            this.firstElementChild.style.backgroundColor = mouseoutColor;
-            targetHeader.firstElementChild.style.color = mouseoutColor;
-        }
-        function mouseoverHeader(event) {
-            var num = extractNum(this.parentElement.id, 14);
-            var mouseoverColor = "#0070d6";
-            var targetNum = document.getElementById("sc-num-" + num)
-            this.firstElementChild.style.color = mouseoverColor;
-            targetNum.firstElementChild.style.backgroundColor = mouseoverColor;
-        }
-        function mouseoutHeader(event) {
-            var num = extractNum(this.parentElement.id, 14);
-            var mouseoutColor = "#011c2c";
-            var targetNum = document.getElementById("sc-num-" + num)
-            this.firstElementChild.style.color = mouseoutColor;
-            targetNum.firstElementChild.style.backgroundColor = mouseoutColor;
-        }
-        scNums.forEach(function(num) {
-            num.addEventListener("mouseover", mouseoverNumber, true);
-            num.addEventListener("mouseout", mouseoutNumber, true);
-        });
-        scPanelHeaders.forEach(function(header) {
-            header.addEventListener("mouseover", mouseoverHeader, true);
-            header.addEventListener("mouseout", mouseoutHeader, true);
-        })
+  var scNums = Array.prototype.slice.call(document.querySelectorAll(".sc-panel-num"));
+  var scPanelHeaders = Array.prototype.slice.call(document.querySelectorAll(".sc-nav-panel-header"));
+
+  function extractNum(string, charIndex) {
+    var num = string.substring(charIndex);
+    return num;
+  }
+  function mouseoverNumber(event) {
+    var num = extractNum(this.id, 7);
+    var mouseoverColor = "#0070d6";
+    var targetHeader = document.getElementById("sc-panel-text-" + num).firstElementChild;
+    this.firstElementChild.style.backgroundColor = mouseoverColor;
+    targetHeader.firstElementChild.style.color = mouseoverColor;
+  }
+  function mouseoutNumber(event) {
+    var num = extractNum(this.id, 7);
+    var mouseoutColor = "#011c2c";
+    var targetHeader = document.getElementById("sc-panel-text-" + num).firstElementChild;
+    this.firstElementChild.style.backgroundColor = mouseoutColor;
+    targetHeader.firstElementChild.style.color = mouseoutColor;
+  }
+  function mouseoverHeader(event) {
+    var num = extractNum(this.parentElement.id, 14);
+    var mouseoverColor = "#0070d6";
+    var targetNum = document.getElementById("sc-num-" + num)
+    this.firstElementChild.style.color = mouseoverColor;
+    targetNum.firstElementChild.style.backgroundColor = mouseoverColor;
+  }
+  function mouseoutHeader(event) {
+    var num = extractNum(this.parentElement.id, 14);
+    var mouseoutColor = "#011c2c";
+    var targetNum = document.getElementById("sc-num-" + num)
+    this.firstElementChild.style.color = mouseoutColor;
+    targetNum.firstElementChild.style.backgroundColor = mouseoutColor;
+  }
+  
+  scNums.forEach(function(num) {
+    num.addEventListener("mouseover", mouseoverNumber, true);
+    num.addEventListener("mouseout", mouseoutNumber, true);
+  });
+  scPanelHeaders.forEach(function(header) {
+    header.addEventListener("mouseover", mouseoverHeader, true);
+    header.addEventListener("mouseout", mouseoutHeader, true);
+  });
 </script>
