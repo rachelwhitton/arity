@@ -173,7 +173,7 @@ namespace App\Theme;
   var indentDiv = document.querySelector(".body-inset-ten-col__col");
   indentDiv.removeAttribute("class");
 
-  // build external data viz
+  // build external data viz nav
   var scNums = Array.prototype.slice.call(document.querySelectorAll(".sc-panel-num"));
   var scPanelHeaders = Array.prototype.slice.call(document.querySelectorAll(".sc-nav-panel-header"));
 
