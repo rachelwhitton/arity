@@ -169,6 +169,11 @@ namespace App\Theme;
 
 
 <script>
+  // remove data disclaimer indent
+  var indentDiv = document.querySelector(".body-inset-ten-col__col");
+  indentDiv.removeAttribute("class");
+
+  // build external data viz
   var scNums = Array.prototype.slice.call(document.querySelectorAll(".sc-panel-num"));
   var scPanelHeaders = Array.prototype.slice.call(document.querySelectorAll(".sc-nav-panel-header"));
 
