@@ -23,6 +23,7 @@ namespace App\Theme;
   }
   .dataVis {
     width: 1040px !important;
+    overflow: scroll;
   }
   .hero-elaborated{
     padding-bottom:150px;
@@ -175,6 +176,10 @@ namespace App\Theme;
   // remove data disclaimer indent
   var indentDiv = document.querySelector(".body-inset-ten-col__col");
   indentDiv.removeAttribute("class");
+
+  // remove scrollable attribute in iframe
+  var iframe = document.querySelector(".dataVis");
+  iframe.setAttribute("scrolling", "auto");
 
   // build external data viz nav
   var scNums = Array.prototype.slice.call(document.querySelectorAll(".sc-panel-num"));
