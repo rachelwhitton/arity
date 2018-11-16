@@ -26,25 +26,28 @@ namespace App\Theme;
   }
   .hero-elaborated{
     padding-bottom:150px;
-  } 
-  .block-video{
+  }
+  .right--.hero-a__image {
+    opacity: 0.6;
+  }
+  .block-video {
     margin-top:-152px;
   }
-  .video-wrapper{
+  .video-wrapper {
     border:5px solid #fff;
   }
-  .block-video .container{ 
+  .block-video .container { 
     padding-left: 50px;
     padding-right: 50px;
   }
-  .action-bar:before{
+  .action-bar:before {
     width:0px !important
   }
   .action-bar__left p {
     font-size: 1.25rem !important;
     line-height: 1.3 !important;
   }
-  .sc-panel-num a{
+  .sc-panel-num a {
     margin-top:-15px;
   }
   #sc-nav-panel-container {
@@ -77,19 +80,19 @@ namespace App\Theme;
 		height: 314px;
 	}
 	#sc-num-1 {
-		top: 9px;
+		top: 10px;
 	}
 	#sc-num-2 {
-		top: 78px;
+		top: 68px;
 	}
 	#sc-num-3 {
-		top: 148px;
+		top: 138px;
 	}
 	#sc-num-4 {
-		top: 206px;
+		top: 205px;
 	}
 	#sc-num-5 {
-		top: 269px;
+		top: 266px;
 	}
 	.sc-panel-num {
 		position: absolute;
@@ -130,19 +133,19 @@ namespace App\Theme;
 		margin: 0;
 	}
 	#sc-panel-text-1 {
-		top: 9px;
+		top: 10px;
 	}
 	#sc-panel-text-2 {
 		top: 68px;
 	}
 	#sc-panel-text-3 {
-		top: 148px;
+		top: 128px;
 	}
 	#sc-panel-text-4 {
-		top: 206px;
+		top: 205px;
 	}
 	#sc-panel-text-5 {
-		top: 269px;
+		top: 266px;
 	}
 	.opaque-circle {
 		position: absolute;
