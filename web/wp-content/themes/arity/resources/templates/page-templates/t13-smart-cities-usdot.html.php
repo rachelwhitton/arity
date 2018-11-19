@@ -179,7 +179,12 @@ namespace App\Theme;
 
   // remove scrollable attribute in iframe
   var iframe = document.querySelector(".dataVis");
-  iframe.setAttribute("scrolling", "auto");
+	iframe.setAttribute("scrolling", "auto");
+	
+	// trying to do the above same thing with jQuery
+	jQuery(document),ready(function(){
+		jQuery('.dataVis').attr("scrolling", "auto");
+	});
 
   // build external data viz nav
   var scNums = Array.prototype.slice.call(document.querySelectorAll(".sc-panel-num"));
