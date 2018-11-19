@@ -183,8 +183,7 @@ namespace App\Theme;
 	
 	// trying to do the above same thing with jQuery
 	jQuery(document).ready(function(){
-		jQuery('.dataVis').attr("scrolling", "auto");
-		jQuery('.dataVis').css('overflow', 'scroll');
+		jQuery('.dataVis').attr("scrolling", "yes");
 	});
 
   // build external data viz nav
