@@ -186,7 +186,14 @@ namespace App\Theme;
 		var myURL = jQuery('.dataVis').attr('src');
 		jQuery('.dataVis').attr("scrolling", "yes");
 		jQuery('.dataVis').attr('src','');
-		jQuery('.dataVis').attr('src',myURL);
+		console.log('myURL outer',myURL);
+		setTimeout(function () {
+			console.log('myURL Inner',myURL);
+			jQuery('.dataVis').attr('src',myURL);
+			
+		}, 1000);
+		
+		
 	});
 
   // build external data viz nav
