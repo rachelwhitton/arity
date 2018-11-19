@@ -182,7 +182,7 @@ namespace App\Theme;
 	iframe.setAttribute("scrolling", "auto");
 	
 	// trying to do the above same thing with jQuery
-	jQuery(document),ready(function(){
+	jQuery(document).ready(function(){
 		jQuery('.dataVis').attr("scrolling", "auto");
 	});
 
