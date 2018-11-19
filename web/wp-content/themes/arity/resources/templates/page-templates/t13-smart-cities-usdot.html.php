@@ -24,6 +24,7 @@ namespace App\Theme;
   .dataVis {
     width: 1040px !important;
     overflow: scroll;
+		transform: translate3d(0, 0, 0);
   }
   .hero-elaborated{
     padding-bottom:150px;
