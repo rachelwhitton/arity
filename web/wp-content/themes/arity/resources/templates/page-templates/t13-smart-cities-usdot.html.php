@@ -24,7 +24,6 @@ namespace App\Theme;
   .dataVis {
     width: 1040px !important;
     overflow: scroll;
-		transform: translate3d(0, 0, 0);
   }
   .hero-elaborated{
     padding-bottom:150px;
@@ -184,7 +183,10 @@ namespace App\Theme;
 	
 	// trying to do the above same thing with jQuery
 	jQuery(document).ready(function(){
+		var myURL = jQuery('.dataVis').attr('src');
 		jQuery('.dataVis').attr("scrolling", "yes");
+		jQuery('.dataVis').attr('src','');
+		jQuery('.dataVis').attr('src',myURL);
 	});
 
   // build external data viz nav
