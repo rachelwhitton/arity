@@ -23,7 +23,8 @@ namespace App\Theme;
   }
   .dataVis {
     width: 1040px !important;
-    overflow: scroll;
+    overflow:auto;
+		-ms-overflow-style: scrollbar;
   }
   .hero-elaborated{
     padding-bottom:150px;
@@ -179,10 +180,17 @@ namespace App\Theme;
 
   // remove scrollable attribute in iframe
   var iframe = document.querySelector(".dataVis");
-	iframe.setAttribute("scrolling", "auto");
+	//iframe.setAttribute("scrolling", "auto");
 	
 	// trying to do the above same thing with jQuery
+		
+		var myURL = jQuery('.dataVis').attr('src');
+		jQuery('.content-datavis-block__img-box').html('');
+		jQuery('.content-datavis-block__img-box').html('<iframe scrolling="yes" class="dataVis" style="border: 0px solid transparent; width:100%; height:780px" src="'+myURL+'" data-height-xlarge="780" data-height-large="780" data-height-medium="780" data-height-small="780" name="myframe" verticalscrolling="yes" data-gtm-yt-inspected-7996625_40="true"></iframe>');
+		
+
 	jQuery(document).ready(function(){
+		/*
 		var myURL = jQuery('.dataVis').attr('src');
 		jQuery('.dataVis').attr("verticalscrolling","yes");
 		jQuery('.dataVis').attr("scrolling", "yes");
@@ -190,8 +198,10 @@ namespace App\Theme;
 		console.log('myURL outer',myURL);
 		setTimeout(function () {
 			console.log('myURL Inner',myURL);
-			jQuery('.dataVis').attr('src',myURL);
+			
+			//jQuery('.dataVis').attr('src',myURL);
 		}, 1000);
+		*/
 	});
 
   // build external data viz nav
