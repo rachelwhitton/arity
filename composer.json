@@ -36,7 +36,8 @@
         "wpackagist-plugin/wp-native-php-sessions": "^0.6.0",
         "wpackagist-plugin/pantheon-advanced-page-cache": "^0.3.0",
         "wpackagist-plugin/wp-redis": "^0.7.0",
-        "wpackagist-plugin/geoip-detect":"2.9.0"
+        "wpackagist-plugin/geoip-detect":"2.9.0",
+        "wpackagist-plugin/wp-file-manager":"3.2"
     },
     "require-dev": {
         "roave/security-advisories": "dev-master",
