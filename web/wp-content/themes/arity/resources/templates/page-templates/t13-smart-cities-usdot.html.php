@@ -23,8 +23,10 @@ namespace App\Theme;
   }
   .dataVis {
     width: 1040px !important;
-    overflow:auto;
-		-ms-overflow-style: scrollbar;
+    /*overflow: auto;*/
+    overflow-y: auto;
+    overflow-x: hidden;
+		/*-ms-overflow-style: scrollbar;*/
   }
   .hero-elaborated{
     padding-bottom:150px;
