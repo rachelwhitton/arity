@@ -746,6 +746,7 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
           if (countryList.indexOf(currentCountry) !== -1) {
             console.log("GDPR COUNTRY");
             that._.isGDPR = true;
+            document.getElementById("00Nf400000RFoMR").checked = false;
             that.render();
           } else {
             // console.log('Not in array');
