@@ -130,7 +130,7 @@ function pullData($projectId){
                 echo $isFile = false;
             }
             
-            echo '<br/><br/>--------------------------------------------------<br/><br/>';
+            echo '<br/><br/>---------------------------------------------------<br/><br/>';
             
             echo '<br/>'.$url.'/'.$fileName;
             //The resource that we want to download.
