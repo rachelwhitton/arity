@@ -111,7 +111,7 @@ function pullData($projectId){
 
     // echo $output;
     echo getcwd();
-    mkdir('../wp-content/uploads/dataviz/'.$project.'/');
+    echo mkdir('../wp-content/uploads/dataviz/'.$project);
 
     foreach(preg_split("/((\r?\n)|(\r\n?))/", $output) as $line){
         if ($line != '.' && $line !='./output.txt' && $line !=''){
