@@ -179,14 +179,13 @@ namespace App\Theme;
   indentDiv.removeAttribute("class");
 
   // remove scrollable attribute in iframe
-  var iframe = document.querySelector(".dataVis");
-	//iframe.setAttribute("scrolling", "auto");
+  // var iframe = document.querySelector(".dataVis");
+	// iframe.setAttribute("scrolling", "auto");
 	
-	// trying to do the above same thing with jQuery
-		
-		var myURL = jQuery('.dataVis').attr('src');
-		jQuery('.content-datavis-block__img-box').html('');
-		jQuery('.content-datavis-block__img-box').html('<iframe scrolling="yes" class="dataVis" style="border: 0px solid transparent; width:100%; height:780px" src="'+myURL+'" data-height-xlarge="780" data-height-large="780" data-height-medium="780" data-height-small="780" name="myframe" verticalscrolling="yes" data-gtm-yt-inspected-7996625_40="true"></iframe>');
+	// NEW IE 11 scrolling bug fix: reinject iframe element into container with undocumented MSDN attributes
+	var myURL = jQuery('.dataVis').attr('src');
+	jQuery('.content-datavis-block__img-box').html('');
+	jQuery('.content-datavis-block__img-box').html('<iframe class="dataVis" style="border: 0px solid transparent; width:100%; height:780px" src="' + myURL + '" data-height-xlarge="780" data-height-large="780" data-height-medium="780" data-height-small="780" name="myframe" scrolling="yes" verticalscrolling="yes" horizontalscrolling="no" data-gtm-yt-inspected-7996625_40="true"></iframe>');
 		
 
 	jQuery(document).ready(function(){
