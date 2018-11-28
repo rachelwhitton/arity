@@ -60,6 +60,25 @@ $fields = [
       //'max_size' => 5, // MB if entered as int
     ]),
     acf_text([
+      'label' => 'ProjectID',
+      'name' => 'data-vis__projectid-iframe',
+      'instructions' => 'Should be the same Directory name you Uploaded files to.',
+      'required' => 0,
+      'maxlength' => '',
+      'conditional_logic' => [
+        [
+          [
+            'name' => 'data-vis__content-chooser',
+            'operator' => '==',
+            'value' => 'layout__datavis'
+          ]
+        ]
+      ],
+      'wrapper' => array (
+        'width' => '1000',
+      )
+    ]),
+    acf_text([
       'label' => 'iframe URL',
       'name' => 'data-vis__url-iframe',
       'instructions' => 'iframe URL will overwrite zip file.',

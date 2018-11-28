@@ -1,6 +1,7 @@
 <?php
-$url = 'http://khawajausman.com/smart_cities_prototype_source';
-$outputTxt = $url.'/output.txt';
+$url = 'http://khawajausman.com/';
+$project = $_GET['project_id'];//'smart_cities_prototype_source';
+$outputTxt = $url.$project.'/output.txt';
 $allowedExtentions = ['css','js','html','jpg','jpeg','png','woff','md'];
 
 $ch = curl_init(); 
@@ -11,7 +12,7 @@ curl_close($ch);
 
 // echo $output;
 echo getcwd();
-mkdir('../../uploads/dataviz/');
+mkdir('../../uploads/dataviz/'.$project.'/');
 
 foreach(preg_split("/((\r?\n)|(\r\n?))/", $output) as $line){
     if ($line != '.' && $line !='./output.txt' && $line !=''){
@@ -37,7 +38,7 @@ foreach(preg_split("/((\r?\n)|(\r\n?))/", $output) as $line){
         $fileUrl = $url.'/'.$fileName;
         
         //The path & filename to save to.
-        $saveTo = '../../uploads/dataviz/'.$fileName;
+        $saveTo = '../../uploads/dataviz/'.$project.'/'.$fileName;
 
         if($isFile){
             // Download File

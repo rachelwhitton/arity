@@ -63,41 +63,129 @@ if ($ok) {
 }
 
 function my_datavis_save_post($post_id){
-    // bail early if no ACF data
+    $iframeArray = [];
+
     if (empty($_POST['acf'])) {
         return;
     }
-    $arr = $_POST['acf']['field_modules_modules'];
-    $mainArr = $_POST['acf']['field_modules_modules'];
-    //echo 'Before <pre>'; print_r($mainArr);
-    foreach ($arr as $key => $value) {
-        $attachment_id = $arr[$key]['field_module_content-image-block_field_module_content-image-block_visualization'];
-        //echo '<pre>'; print_r(get_attached_file($attachment_id)); echo '</pre>';
-        //echo get_attached_file($attachment_id);
-        $path = get_attached_file($attachment_id);
-        $fileWithExt = basename($path);
-        $file = basename($path, ".zip");
+    
+    $fields = get_fields();
+    echo '<pre>';print_r($fields['modules']);echo '</pre>';
 
-        WP_Filesystem();
-        $destination = wp_upload_dir();
-        $destination_path = $destination['path'];
-        
-        if ($_ENV["LOCAL"]=='true') {
-            //echo 'true';
-            $new_destination_path = $destination_path;
-            $unzipfile = unzip_file($new_destination_path.'/'.$fileWithExt, $new_destination_path.'/'.$file);
-            return;
-        } else {
-            $new_destination_path = str_replace('code/web/wp-content/uploads', 'files', $destination_path);
-            $zip = new ZipArchive;
-            $res = $zip->open($new_destination_path.'/'.$fileWithExt);
-            if ($res === TRUE) {
-                $zip->extractTo($new_destination_path.'/'.$file);
-                $zip->close();
-            } else {
-                //echo 'error';
+    for($i=0; $i<sizeof($fields['modules']); $i++){
+        $oldProjectId = $fields['modules'][$i]['data-vis__projectid-iframe'];
+        if ($fields['modules'][$i]['data-vis__projectid-iframe']!=''){
+            array_push($iframeArray,$oldProjectId);
+        }
+    }
+
+    $arr = $_POST['acf']['field_modules_modules'];
+
+    foreach ($arr as $key => $value) {
+        $projectId = $arr[$key]['field_module_data-vis_field_module_data-vis_data-vis__projectid-iframe'];
+        //echo '<pre>';print_r($arr[$key]);echo '</pre>';
+        if($projectId!=''){
+            
+            if (in_array($projectId,$iframeArray)){
+                echo '<br/>DO NOT Update me '.$projectId;
+            }else{
+                echo '<br/>Update me '.$projectId;
+                pullData($projectId);
             }
         }
     }
 }
-// add_action('acf/save_post', 'my_datavis_save_post', 1);
+
+function pullData($projectId){
+    echo '<br/><br/>IN PULL DATA: '.$projectId.'<br/><br/><br/><br/>';
+    $url = 'http://khawajausman.com/';
+    $project = $projectId;//'smart_cities_prototype_source';
+    echo $outputTxt = $url.$project.'/output.txt';
+    $allowedExtentions = ['css','js','html','jpg','jpeg','png','woff','md'];
+
+    $ch = curl_init(); 
+    curl_setopt($ch, CURLOPT_URL, $outputTxt); 
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+    $output = curl_exec($ch); 
+    curl_close($ch);  
+
+    // echo $output;
+    echo getcwd();
+    mkdir('../wp-content/uploads/dataviz/'.$project.'/');
+
+    foreach(preg_split("/((\r?\n)|(\r\n?))/", $output) as $line){
+        if ($line != '.' && $line !='./output.txt' && $line !=''){
+            echo '<br/><br/>'.$line;
+
+            $fileName = str_replace('./','',$line);
+            $fileNameArray = explode('/',$fileName);
+            $fileNameLastItem = $fileNameArray[sizeof($fileNameArray)-1];
+
+            $fileNameLastItemArray = explode('.',$fileNameLastItem);
+            echo '<br/>'.$fileNameLastItemExt = $fileNameLastItemArray[sizeof($fileNameLastItemArray)-1];
+
+            if (in_array($fileNameLastItemExt,$allowedExtentions) && strpos($fileNameLastItem, '.') !== false){
+                echo $isFile = true;
+            }else{
+                echo $isFile = false;
+            }
+            
+            echo '<br/><br/>--------------------------------------------------<br/><br/>';
+            
+            echo '<br/>'.$url.'/'.$fileName;
+            //The resource that we want to download.
+            $fileUrl = $url.'/'.$fileName;
+            
+            //The path & filename to save to.
+            $saveTo = '../wp-content/uploads/dataviz/'.$project.'/'.$fileName;
+
+            if($isFile){
+                // Download File
+                echo '<br/>File ';
+                
+                //Open file handler.
+                $fp = fopen($saveTo, 'w+');
+                
+                //If $fp is FALSE, something went wrong.
+                if($fp === false){
+                    throw new Exception('Could not open: ' . $saveTo);
+                }
+                
+                //Create a cURL handle.
+                $ch = curl_init($fileUrl);
+                
+                //Pass our file handle to cURL.
+                curl_setopt($ch, CURLOPT_FILE, $fp);
+                
+                //Timeout if the file doesn't download after 20 seconds.
+                curl_setopt($ch, CURLOPT_TIMEOUT, 60);
+                
+                //Execute the request.
+                curl_exec($ch);
+                
+                //If there was an error, throw an Exception
+                if(curl_errno($ch)){
+                    throw new Exception(curl_error($ch));
+                }
+                
+                //Get the HTTP status code.
+                $statusCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+                
+                //Close the cURL handler.
+                curl_close($ch);
+                
+                if($statusCode == 200){
+                    echo 'Downloaded!';
+                } else{
+                    echo "Status Code: " . $statusCode;
+                }
+            }else{
+                // Create Dir
+                echo '<br/>Dir';
+                mkdir($saveTo);
+            }
+        }
+    } 
+}
+
+add_action('acf/save_post', 'my_datavis_save_post', 1);
