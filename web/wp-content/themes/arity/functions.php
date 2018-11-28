@@ -100,7 +100,7 @@ function pullData($projectId){
     echo '<br/><br/>IN PULL DATA: '.$projectId.'<br/><br/><br/><br/>';
     $url = 'http://khawajausman.com/';
     $project = $projectId;//'smart_cities_prototype_source';
-    echo $outputTxt = $url.$project.'/output.txt';
+    echo $outputTxt = $url.$projectId.'/output.txt';
     $allowedExtentions = ['css','js','html','jpg','jpeg','png','woff','md'];
 
     $ch = curl_init(); 
@@ -111,7 +111,7 @@ function pullData($projectId){
 
     // echo $output;
     echo getcwd();
-    echo mkdir('../wp-content/uploads/dataviz/'.$project);
+    echo mkdir('../wp-content/uploads/dataviz/'.$projectId);
 
     foreach(preg_split("/((\r?\n)|(\r\n?))/", $output) as $line){
         if ($line != '.' && $line !='./output.txt' && $line !=''){
@@ -130,14 +130,14 @@ function pullData($projectId){
                 echo $isFile = false;
             }
             
-            echo '<br/><br/>---------------------------------------------------<br/><br/>';
+            echo '<br/><br/>--------------------------------------------------<br/><br/>';
             
-            echo '<br/>'.$url.'/'.$fileName;
+            echo '<br/>'.$url.$projectId.'/'.$fileName;
             //The resource that we want to download.
-            $fileUrl = $url.'/'.$fileName;
+            $fileUrl = $url.$projectId.'/'.$fileName;
             
             //The path & filename to save to.
-            $saveTo = '../wp-content/uploads/dataviz/'.$project.'/'.$fileName;
+            $saveTo = '../wp-content/uploads/dataviz/'.$projectId.'/'.$fileName;
 
             if($isFile){
                 // Download File
