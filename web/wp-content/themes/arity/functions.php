@@ -109,6 +109,7 @@ function pullData($projectId){
     $ch = curl_init(); 
     curl_setopt($ch, CURLOPT_URL, $outputTxt); 
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+    curl_setopt($ch, CURLOPT_USERPWD, "arity:dr1v1ng");
     $output = curl_exec($ch); 
     curl_close($ch);  
 
@@ -160,6 +161,7 @@ function pullData($projectId){
                     //Pass our file handle to cURL.
                     curl_setopt($ch, CURLOPT_FILE, $fp);
                     
+                    curl_setopt($ch, CURLOPT_USERPWD, "arity:dr1v1ng");
                     //Timeout if the file doesn't download after 20 seconds.
                     curl_setopt($ch, CURLOPT_TIMEOUT, 60);
                     
