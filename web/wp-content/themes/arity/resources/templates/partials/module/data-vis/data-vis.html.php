@@ -10,7 +10,7 @@ namespace App\Theme;
   Last Updated:       08/01/2017
   Since:              1.0.0
 */
-//echo '<pre>'; print_r($data); echo '</pre>';
+// echo '<pre>'; print_r($data); echo '</pre>';
 $class = 'content-image-block';
 if($data['content-chooser']=='layout__datavis'){
   $class = 'content-datavis-block';
@@ -22,6 +22,12 @@ if($data['content-chooser']=='layout__datavis'){
     $iframeUrl = $newUrl;
   }
 
+  if (!empty($data['projectid-iframe'])){
+    $newUrl = 'https://' . $_SERVER['SERVER_NAME'].'/wp-content/uploads/dataviz/'.$data['projectid-iframe'].'/index.html'; 
+    $iframeUrl = $newUrl;
+  }
+
+
   if (!empty($data['url-iframe'])){
     $iframeUrl = $data['url-iframe'];
   }
@@ -29,7 +35,6 @@ if($data['content-chooser']=='layout__datavis'){
   if($data['vertial-align']=='Top'){
     $data['classes'][] = 'alignTop';
   }
-
 }
 ?>
 
@@ -99,7 +104,7 @@ if($data['content-chooser']=='layout__datavis'){
 
         </div>
       </div>
-      <?php if ((!empty($data['url-iframe']) || !empty($data['visualization'])) && $data['content-chooser'] == "layout__datavis") : ?>
+      <?php if ((!empty($data['url-iframe']) || !empty($data['visualization'])|| !empty($data['projectid-iframe'])) && $data['content-chooser'] == "layout__datavis") : ?>
         <div class="<?=$class?>__img-box" style="width:96% !important; flex: 0 0 96% !important; max-width: 0 0 96% !important;">
           <iframe scrolling="no" class="dataVis" style="border: 0px solid transparent; width:100%; height:<?=$data['url-height-xlarge']?>px" 
                   src="<?=$iframeUrl?>?rand=<?=time()?>"

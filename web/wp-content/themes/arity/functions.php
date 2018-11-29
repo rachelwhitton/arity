@@ -97,6 +97,9 @@ function my_datavis_save_post($post_id){
 }
 
 function pullData($projectId){
+    if($_ENV['LOCAL']){
+        return;
+    }
     echo '<br/><br/>IN PULL DATA: '.$projectId.'<br/><br/><br/><br/>';
     $url = 'http://khawajausman.com/';
     $project = $projectId;//'smart_cities_prototype_source';
@@ -145,40 +148,41 @@ function pullData($projectId){
                 
                 //Open file handler.
                 $fp = fopen($saveTo, 'w+');
-                
+                echo '<br/>File 1';
                 //If $fp is FALSE, something went wrong.
-                if($fp === false){
-                    throw new Exception('Could not open: ' . $saveTo);
-                }
+                    if($fp === false){
+                        throw new Exception('Could not open: ' . $saveTo);
+                    }
+                    echo '<br/>File 2';
+                    //Create a cURL handle.
+                    $ch = curl_init($fileUrl);
+                    
+                    //Pass our file handle to cURL.
+                    curl_setopt($ch, CURLOPT_FILE, $fp);
+                    
+                    //Timeout if the file doesn't download after 20 seconds.
+                    curl_setopt($ch, CURLOPT_TIMEOUT, 60);
+                    
+                    //Execute the request.
+                    curl_exec($ch);
+                    
+                    //If there was an error, throw an Exception
+                    if(curl_errno($ch)){
+                        throw new Exception(curl_error($ch));
+                    }
+                    
+                    //Get the HTTP status code.
+                    $statusCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+                    
+                    //Close the cURL handler.
+                    curl_close($ch);
+                    
+                    if($statusCode == 200){
+                        echo 'Downloaded!';
+                    } else{
+                        echo "Status Code: " . $statusCode;
+                    }
                 
-                //Create a cURL handle.
-                $ch = curl_init($fileUrl);
-                
-                //Pass our file handle to cURL.
-                curl_setopt($ch, CURLOPT_FILE, $fp);
-                
-                //Timeout if the file doesn't download after 20 seconds.
-                curl_setopt($ch, CURLOPT_TIMEOUT, 60);
-                
-                //Execute the request.
-                curl_exec($ch);
-                
-                //If there was an error, throw an Exception
-                if(curl_errno($ch)){
-                    throw new Exception(curl_error($ch));
-                }
-                
-                //Get the HTTP status code.
-                $statusCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-                
-                //Close the cURL handler.
-                curl_close($ch);
-                
-                if($statusCode == 200){
-                    echo 'Downloaded!';
-                } else{
-                    echo "Status Code: " . $statusCode;
-                }
             }else{
                 // Create Dir
                 echo '<br/>Dir';
