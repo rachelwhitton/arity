@@ -18,12 +18,12 @@ if($data['content-chooser']=='layout__datavis'){
   if (!empty($data['visualization'])){
     $ext = pathinfo($data['visualization']['url'], PATHINFO_EXTENSION);
     $newUrl =  str_replace('.'.$ext,'',$data['visualization']['url']);
-    $newUrl .= '/index.html'; 
+    $newUrl .= '/index.html';
     $iframeUrl = $newUrl;
   }
 
   if (!empty($data['projectid-iframe'])){
-    $newUrl = 'https://' . $_SERVER['SERVER_NAME'].'/wp-content/uploads/dataviz/'.$data['projectid-iframe'].'/index.html'; 
+    $newUrl = site_url().'/wp-content/uploads/dataviz/'.$data['projectid-iframe'].'/index.html'; 
     $iframeUrl = $newUrl;
   }
 
