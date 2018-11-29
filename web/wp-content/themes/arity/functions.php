@@ -101,9 +101,9 @@ function pullData($projectId){
         return;
     }
     echo '<br/><br/>IN PULL DATA: '.$projectId.'<br/><br/><br/><br/>';
-    $url = 'http://khawajausman.com/';
+    $url = 'http://dataviz.arity.vsadev.com/filemanager';
     $project = $projectId;//'smart_cities_prototype_source';
-    echo $outputTxt = $url.$projectId.'/output.txt';
+    $outputTxt = 'http://dataviz.arity.vsadev.com/dir.php?projectId='.$projectId;
     $allowedExtentions = ['css','js','html','jpg','jpeg','png','woff','md'];
 
     $ch = curl_init(); 
