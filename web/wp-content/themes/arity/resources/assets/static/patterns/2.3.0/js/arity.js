@@ -679,6 +679,49 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
   window.careers = careers;
 })(jQuery, window, document);
 
+/* global transitionEvent */
+
+(function ($, window, document) {
+  var checkGDPR = {
+    defaults: {
+      debug: false // Dont leave this as true
+    },
+    init: function init(opts) {
+      $(document).ready(function () {
+        console.log("checkGDPR init");
+
+        //page--contact
+        if (!$(".page--contact").length) {
+          return;
+        }
+
+        var that = this;
+        //var url = "/geoip/";
+        var url = "https://dev.arity/geoip/";
+        $.ajax({
+          url: url
+        }).done(function (data) {
+          var countryList = ["AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IE", "LV", "LT", "LU", "MT", "NL", "PL", "PT", "RO", "SK", "SI", "ES", "SE", "GB"];
+          console.log("GDPR done", data);
+
+          var currentCountry = data.trim();
+          // console.log('Header found country: ' + currentCountry);
+          if (countryList.indexOf(currentCountry) !== -1) {
+            console.log("GDPR COUNTRY");
+
+            var element = document.getElementById("00Nf400000RFoMR");
+            if (typeof element != "undefined" && element != null) {
+              document.getElementById("00Nf400000RFoMR").checked = false;
+            }
+          }
+        });
+      });
+    }
+  };
+
+  window.checkGDPR = checkGDPR;
+})(jQuery, window, document);
+
 ;(function ($, window, document) {
 
   var contact = {
@@ -5775,6 +5818,7 @@ var Util = function ($) {
       app.initScrollMagic();
 
       dataVis.init();
+      checkGDPR.init();
 
       smartOutline.init();
       mainNavigation.init();
