@@ -100,6 +100,13 @@ function pullData($projectId){
     if($_ENV['LOCAL']){
         return;
     }
+
+    if ((isset($_ENV['PANTHEON_ENVIRONMENT']) && $_ENV['PANTHEON_ENVIRONMENT'] == 'live') ||(isset($_ENV['PANTHEON_ENVIRONMENT']) && $_ENV['PANTHEON_ENVIRONMENT'] == 'dev')) {
+        $json_text = file_get_contents('../../wp-content/uploads/private/dev.json');
+        $data = json_decode($json_text, TRUE);
+        $userpwd = $data['user'].':'.$data['password']; 
+    }
+
     echo '<br/><br/>IN PULL DATA: '.$projectId.'<br/><br/><br/><br/>';
     $url = 'http://dataviz.arity.vsadev.com/filemanager';
     $project = $projectId;//'smart_cities_prototype_source';
@@ -109,7 +116,7 @@ function pullData($projectId){
     $ch = curl_init(); 
     curl_setopt($ch, CURLOPT_URL, $outputTxt); 
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
-    curl_setopt($ch, CURLOPT_USERPWD, "arity:dr1v1ng");
+    curl_setopt($ch, CURLOPT_USERPWD, $userpwd);
     $output = curl_exec($ch); 
     curl_close($ch);  
 
@@ -161,7 +168,7 @@ function pullData($projectId){
                     //Pass our file handle to cURL.
                     curl_setopt($ch, CURLOPT_FILE, $fp);
                     
-                    curl_setopt($ch, CURLOPT_USERPWD, "arity:dr1v1ng");
+                    curl_setopt($ch, CURLOPT_USERPWD, $userpwd);
                     //Timeout if the file doesn't download after 20 seconds.
                     curl_setopt($ch, CURLOPT_TIMEOUT, 60);
                     
