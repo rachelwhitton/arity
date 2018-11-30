@@ -23,7 +23,7 @@ if($data['content-chooser']=='layout__datavis'){
   }
 
   if (!empty($data['projectid-iframe'])){
-    $newUrl = site_url().'/wp-content/uploads/dataviz/'.$data['projectid-iframe'].'/index.html'; 
+    $newUrl = home_url().'/wp-content/uploads/dataviz/'.$data['projectid-iframe'].'/index.html'; 
     $iframeUrl = $newUrl;
   }
 
