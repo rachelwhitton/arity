@@ -138,7 +138,7 @@ function pullData($projectId){
             
             echo '<br/>'.$url.$projectId.'/'.$fileName;
             //The resource that we want to download.
-            $fileUrl = $url.$projectId.'/'.$fileName;
+            $fileUrl = $url.'/'.$projectId.'/'.$fileName;
             
             //The path & filename to save to.
             echo $saveTo = '../../wp-content/uploads/dataviz/'.$projectId.'/'.$fileName;
