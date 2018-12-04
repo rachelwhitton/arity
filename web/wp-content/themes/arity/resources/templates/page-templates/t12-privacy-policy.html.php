@@ -18,10 +18,9 @@ namespace App\Theme;
 
 <div id="main" class="site-content">
   <?php
-
-    $hero = get_field('module__hero-c');
+    $hero['headline'] = get_the_title();
     module('hero-c', $hero);
-
+    
     module('privacy-selector');
 
     the_acf_content();
