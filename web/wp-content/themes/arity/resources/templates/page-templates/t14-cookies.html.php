@@ -4,7 +4,7 @@ namespace App\Theme;
 ?>
 <?php
 /*
-  Template Name:      T12 Privacy Selector
+  Template Name:      T12 Cookies Selector
   Template Type:      Page Template
   Description:
   Last Updated:       12/05/2018
@@ -21,15 +21,15 @@ namespace App\Theme;
     $hero['headline'] = get_the_title();
     module('hero-c', $hero);
     
-    module('privacy-selector');
+    module('cookies-selector');
 
     the_acf_content();
 
     //for google and screen readers?
-    if (has_nav_menu('privacy_selector')) {
+    if (has_nav_menu('cookies_selector')) {
       wp_nav_menu([
         'menu'            => 'hidden_menu',
-        'theme_location'  => 'privacy_selector',
+        'theme_location'  => 'cookies_selector',
         'menu_class'      => 'sr-only visibility-hidden',
         'menu_role'       => ''
       ]);
