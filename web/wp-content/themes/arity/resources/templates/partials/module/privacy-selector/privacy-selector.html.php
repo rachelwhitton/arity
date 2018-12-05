@@ -18,6 +18,7 @@ namespace App\Theme;
       <div class="privacy-selector__col">
         <form class="">
           <div class="form-group">
+          Select a language<br/><br/>
           <?= $data['menu_list']; ?>
           </div>
         </form>
