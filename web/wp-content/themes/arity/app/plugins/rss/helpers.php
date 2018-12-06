@@ -36,5 +36,8 @@ function rss($id)
  */
 function get_rss($id)
 {
-    return rss($id)->output();
+    // changed to parse new careers RSS feed
+    $xml_array = (array) simplexml_load_file($id);
+    return $xml_array;
+    // return rss($id)->output();
 }
