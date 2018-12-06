@@ -10,8 +10,9 @@ namespace App\Theme;
   Last Updated:       01/24/2018
   Since:              1.5.0
 */
+//echo'<pre>';print_r($data);echo'</pre>';
 ?>
-<a class="career-link" href="<?= $data['link']; ?>" target="_blank">
+<a class="career-link" href="<?= $data['link'][0]; ?>" target="_blank">
   <div class="careers-table__row">
     <div class="careers-table__cell careers-table__job-title"><?= $data['title']; ?></div>
     <div class="careers-table__cell careers-table__link-button">
