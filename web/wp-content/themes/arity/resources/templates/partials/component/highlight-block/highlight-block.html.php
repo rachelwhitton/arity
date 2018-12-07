@@ -31,8 +31,10 @@ namespace App\Theme;
 
         <?php if (!empty($data['cta'])) : ?>
           <?php
-            $data['cta']['classes'] = array('button', 'button--link', 'arrow-right--');
-            $data['cta']['icon'] = 'arrow-right';
+            $data['cta']['classes'] = array('button', 'button--link', $data['cta-icon'] . '--');
+            // $data['cta']['classes'] = array('button', 'button--link', 'arrow-right--');
+            $data['cta']['icon'] = $data['cta-icon'];
+            // $data['cta']['icon'] = 'arrow-right';
             element('button', $data['cta']);
           ?>
         <?php endif; ?>
