@@ -50,6 +50,22 @@ $fields = [
       'instructions' => '',
       'required' => 0
     ]),
+    acf_select([
+      'label' => 'CTA Icon',
+      'name' => 'highlight-block__cta-icon',
+      'key' => 'field_cta-icon',
+      'instructions' => '',
+      'required' => 0,
+      'maxlength' => '',
+      'allow_null' => 0,
+      'ui' => 1,
+      'default_value' => 'arrow-right',
+      'choices' => [
+        'arrow-right' => 'Link',
+        'download' => 'Download',
+        'external' => 'External'
+      ]
+    ])
 ];
 
 // ACF Field Group
