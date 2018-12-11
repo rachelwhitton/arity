@@ -10339,7 +10339,7 @@ form .checkbox_container .checkmark:after {
   left: -99999px;
   z-index: 1010;
   width: 100%;
-  max-width: 800px;
+  max-width: 350px;
   opacity: 0;
   max-height: 10%;
   -webkit-transition: opacity 0.6s ease, max-height 0.6s ease;
@@ -10361,7 +10361,7 @@ form .checkbox_container .checkmark:after {
 }
 
 .site-header .dropmenu__container::after {
-  display: block;
+  display: none;
   content: '';
   position: absolute;
   top: 40px;
@@ -10436,7 +10436,7 @@ form .checkbox_container .checkmark:after {
 }
 
 .site-header .dropmenu__primary {
-  display: table-cell;
+  display: none;
   vertical-align: middle;
   padding: 30px 0;
   padding-right: 60px;
@@ -10496,7 +10496,7 @@ form .checkbox_container .checkmark:after {
 
 .site-header .dropmenu__secondary {
   display: table-cell;
-  width: 50%;
+  width: 100%;
   padding: 15px 0;
   padding-right: 40px;
 }
@@ -10524,6 +10524,7 @@ form .checkbox_container .checkmark:after {
 }
 
 .site-header .dropmenu__secondary p {
+  display: none;
   color: #63727E;
   font-size: 0.875rem;
   line-height: 1.28;
@@ -10541,9 +10542,13 @@ form .checkbox_container .checkmark:after {
 }
 
 @media (hover: none) {
+  .site-header .dropmenu__secondary a:hover h2,
+  .site-header .dropmenu__secondary a:hover h3 {
+    color: #0070D6;
+  }
   .site-header .dropmenu__secondary a:hover h2 .icon-svg,
   .site-header .dropmenu__secondary a:hover h3 .icon-svg {
-    fill: #011C2C;
+    fill: #0070D6;
   }
   .site-header .dropmenu__secondary a:hover p {
     color: #011C2C;
@@ -10555,15 +10560,27 @@ form .checkbox_container .checkmark:after {
   }
   .site-header .dropmenu__secondary a.active p, .site-header .dropmenu__secondary a:active p {
     color: #0070D6;
+    display: none;
   }
 }
 
 .site-header .dropmenu__item {
   margin-bottom: 20px;
+  color: #63727E;
+  font-size: 14px;
 }
 
 .site-header .dropmenu__item:last-child {
   margin-bottom: 0;
+}
+
+.site-header .dropmenu__item:last-child h2 {
+  font-size: 14px;
+}
+
+.site-header .dropmenu__item:last-child h2 .icon-svg {
+  height: 10px;
+  width: 10px;
 }
 
 .site-header .navbar__nav li.menu-item-has-children.hover .dropmenu,
@@ -21442,8 +21459,8 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   border: solid 2px #E2EF1C;
   color: #E2EF1C;
   background-color: transparent;
-  -webkit-transition: all 0.08s;
-  transition: all 0.08s;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .action-bar-one-col-cta.colors__bg--navy .button [class*=" icon-"],
