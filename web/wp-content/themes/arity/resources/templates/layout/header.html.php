@@ -64,7 +64,7 @@ $last_nav_item->post_slug = sanitize_title($last_nav_item->title);
     <div class="dropmenu__container">
       <div class="dropmenu__arrow"></div>
       <div class="dropmenu__wrap">
-        <div class="dropmenu__primary">
+        <div class="dropmenu__primary" style="display:none">
           <a href="<?= $nav_items[0]->url; ?>" title="Learn more about <?= $nav_items[0]->title; ?>" tabindex="-1" aria-label="<?= $nav_items[0]->title; ?>">
             <?php if(!empty($nav_items[0]->description)) : ?><p><?= $nav_items[0]->description; ?></p><?php endif; ?>
             <p>
@@ -81,7 +81,7 @@ $last_nav_item->post_slug = sanitize_title($last_nav_item->title);
             <div class="dropmenu__item">
               <a href="<?= $nav_item->url; ?>" title="Learn more about <?= $nav_item->title; ?>" tabindex="-1" aria-label="<?= $nav_item->title; ?>">
                 <h2><?= $nav_item->title; ?> <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#caret"></use></svg></h2>
-                <?php if(!empty($nav_item->description)) : ?><p><?= $nav_item->description; ?></p><?php endif; ?>
+                <?php if(!empty($nav_item->description)) : ?><!-- p><?= $nav_item->description; ?></p--><?php endif; ?>
               </a>
             </div>
           <?php endforeach; ?>
@@ -90,3 +90,32 @@ $last_nav_item->post_slug = sanitize_title($last_nav_item->title);
     </div>
   </div>
 </div>
+
+<style>
+/*
+  .dropmenu {
+    max-width:350px !important;
+  }
+  .site-header .dropmenu__secondary {
+    width:100% !important;
+  }
+  .site-header .dropmenu__container::after {
+    display: none;
+  }
+  .site-header .dropmenu__item:last-child a h2 {
+    color:#63727E;
+    font-size:14px;
+  }
+  .site-header .dropmenu__item:last-child a:hover h2 {
+    color: #0070D6;
+  }
+  .site-header .dropmenu__item:last-child a h2 .icon-svg {
+    height:10px;
+    width:10px;
+    fill: #63727E;
+  }
+  .site-header .dropmenu__item:last-child a:hover h2 .icon-svg {
+    fill: #0070D6;
+  }
+  */
+</style>

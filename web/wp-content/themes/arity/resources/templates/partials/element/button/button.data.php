@@ -7,8 +7,8 @@ if (empty($data['url'])) {
 // Default Class
 $data['classes'][] = 'button';
 
-// If external link, add external icon
-if (empty($data['icon']) && !empty($data['target']) && $data['target'] == '_blank') {
+// If external link, force external icon (will override download icon)
+if (!empty($data['icon']) && !empty($data['target']) && $data['target'] == '_blank') {
   $data['icon'] = 'external';
 }
 
