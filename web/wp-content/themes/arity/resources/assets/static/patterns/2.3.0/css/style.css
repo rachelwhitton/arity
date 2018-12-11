@@ -10575,12 +10575,18 @@ form .checkbox_container .checkmark:after {
 }
 
 .site-header .dropmenu__item:last-child h2 {
+  color: #63727E;
   font-size: 14px;
 }
 
 .site-header .dropmenu__item:last-child h2 .icon-svg {
+  fill: #63727E;
   height: 10px;
   width: 10px;
+}
+
+.site-header .dropmenu__item:last-child h2:hover {
+  color: #0070D6;
 }
 
 .site-header .navbar__nav li.menu-item-has-children.hover .dropmenu,
