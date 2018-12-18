@@ -92,6 +92,7 @@ $last_nav_item->post_slug = sanitize_title($last_nav_item->title);
 </div>
 
 <style>
+/*
   .dropmenu {
     max-width:350px !important;
   }
@@ -108,7 +109,6 @@ $last_nav_item->post_slug = sanitize_title($last_nav_item->title);
   .site-header .dropmenu__item:last-child a:hover h2 {
     color: #0070D6;
   }
-
   .site-header .dropmenu__item:last-child a h2 .icon-svg {
     height:10px;
     width:10px;
@@ -117,5 +117,5 @@ $last_nav_item->post_slug = sanitize_title($last_nav_item->title);
   .site-header .dropmenu__item:last-child a:hover h2 .icon-svg {
     fill: #0070D6;
   }
-
+  */
 </style>
