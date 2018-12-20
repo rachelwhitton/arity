@@ -309,7 +309,7 @@ $fields = [
     ]),
     // Form post submit CTA
     acf_text([
-      'label' => 'Post-submit CTA button label',
+      'label' => 'Post-submit CTA message',
       'instructions' => 'The call-to-action that is shown once the user submits the form',
       'name' => 'content-image-block__form-thankyou',
       'required' => 0,

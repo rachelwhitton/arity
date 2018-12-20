@@ -16,6 +16,7 @@ if($data['content-chooser']=='layout__form'){
   global $wp;
 
   $data['is_salesforce'] = false;
+  $data['is_pardot'] = true;
   $data['use_captcha'] = true;
   
   $data['form_return_url'] = home_url( $wp->request );
@@ -84,6 +85,8 @@ if($data['vertical-align']=='Top'){
             <?php if(!empty($data['is_salesforce'])) : ?>
               <input type=hidden name="oid" value="<?= $data['form-oid']; ?>">
               <input type=hidden name="retURL" value="<?= $data['form_return_url']; ?>">
+              <input type="hidden" name="lead_source" id="input_lead_source" value="<?= $data['form-leadsource']; ?>">
+            <?php elseif(!empty($data['is_pardot'])) : ?>
               <input type="hidden" name="lead_source" id="input_lead_source" value="<?= $data['form-leadsource']; ?>">
             <?php endif; ?>
 
