@@ -139,7 +139,6 @@ $fields = [
         'width' => '1000',
       )
     ]),
-    */
     // Form lead source
     acf_text([
       'label' => 'Lead source',
@@ -161,6 +160,7 @@ $fields = [
         'width' => '1000',
       )
     ]),
+    */
     // Form first name
     acf_text([
       'label' => 'First name field ID',
@@ -314,7 +314,7 @@ $fields = [
       'name' => 'content-image-block__form-thankyou',
       'required' => 0,
       'maxlength' => '',
-      'default_value' => 'Click on this button to download your document.',
+      'default_value' => 'Click on this button to download your document',
       'conditional_logic' => [
         [
           [

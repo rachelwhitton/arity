@@ -86,8 +86,6 @@ if($data['vertical-align']=='Top'){
               <input type=hidden name="oid" value="<?= $data['form-oid']; ?>">
               <input type=hidden name="retURL" value="<?= $data['form_return_url']; ?>">
               <input type="hidden" name="lead_source" id="input_lead_source" value="<?= $data['form-leadsource']; ?>">
-            <?php elseif(!empty($data['is_pardot'])) : ?>
-              <input type="hidden" name="lead_source" id="input_lead_source" value="<?= $data['form-leadsource']; ?>">
             <?php endif; ?>
 
             <div class="form-group form-group--required">
