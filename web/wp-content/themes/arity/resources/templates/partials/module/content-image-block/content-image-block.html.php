@@ -6,17 +6,16 @@ namespace App\Theme;
 /*
   Template Name:      Content and Image Block
   Template Type:      Module
-  Description:        Product or feature highlight ("River")
+  Description:        Product or feature highlight ("River"). Template name has been updated to Block: 2 column
   Last Updated:       08/01/2017
   Since:              1.0.0
 */
-//echo '<pre>'; print_r($data); echo '</pre>'; 
 
 $class = 'content-image-block';
 if($data['content-chooser']=='layout__form'){
   global $wp;
 
-  $data['is_salesforce'] = true;
+  $data['is_salesforce'] = false;
   $data['use_captcha'] = true;
   
   $data['form_return_url'] = home_url( $wp->request );
