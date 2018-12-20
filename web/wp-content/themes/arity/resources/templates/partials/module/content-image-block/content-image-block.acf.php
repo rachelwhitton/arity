@@ -28,19 +28,6 @@ $fields = [
       ]
     ]),
 
-    // Headline
-    acf_text([
-      'label' => 'Headline',
-      'name' => 'content-image-block__headline',
-      'key' => 'field_headline',
-      'instructions' => 'Recommended character count max: 60',
-      'required' => 0,
-      'maxlength' => '',
-      'wrapper' => array (
-        'width' => '50',
-      ),
-    ]),
-
     // Image
     acf_image([
       'label' => 'Image',
@@ -66,7 +53,7 @@ $fields = [
 
     // Images has shadow?
     acf_radio([
-      'label' => 'Image Shadow',
+      'label' => 'Image shadow',
       'name' => 'content-image-block__shadow',
       'instructions' => '',
       'default_value' => '1',
@@ -91,7 +78,7 @@ $fields = [
 
     // Video Url
     acf_text([
-      'label' => 'Video Url',
+      'label' => 'Video URL',
       'name' => 'content-image-block__url',
       'instructions' => 'Supports Vimeo or Youtube',
       'required' => 1,
@@ -112,12 +99,12 @@ $fields = [
 
     // Form URL
     acf_text([
-      'label' => 'Form Fields',
+      'label' => 'Endpoint URL',
       'name' => 'content-image-block__form-posturl',
-      'instructions' => 'URL form is posted to',
+      'instructions' => 'Pardot form handler: Form submission posts to this URL',
       'required' => 0,
       'maxlength' => '',
-      'default_value' => 'https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8',
+      'default_value' => '',
       'conditional_logic' => [
         [
           [
@@ -132,6 +119,7 @@ $fields = [
       )
     ]),
     // Form OID
+    /*
     acf_text([
       'label' => 'Form OID',
       'name' => 'content-image-block__form-oid',
@@ -151,9 +139,11 @@ $fields = [
         'width' => '1000',
       )
     ]),
-    // Form Lead Source
+    */
+    // Form lead source
     acf_text([
-      'label' => 'Lead Source',
+      'label' => 'Lead source',
+      'instructions' => 'The website from where the form submission originates (almost always ‘Arity.com’)',
       'name' => 'content-image-block__form-leadsource',
       'required' => 0,
       'maxlength' => '',
@@ -171,13 +161,14 @@ $fields = [
         'width' => '1000',
       )
     ]),
-    // Form Fname
+    // Form first name
     acf_text([
-      'label' => 'First name field id',
+      'label' => 'First name field ID',
+      'instructions' => 'Pardot form handler: ID maps to Default: ‘First Name’',
       'name' => 'content-image-block__form-fname',
       'required' => 0,
       'maxlength' => '',
-      'default_value' => 'input_first_name',
+      'default_value' => '',
       'conditional_logic' => [
         [
           [
@@ -191,13 +182,14 @@ $fields = [
         'width' => '1000',
       )
     ]),
-    // Form Lname
+    // Form last name
     acf_text([
-      'label' => 'Last name field id',
+      'label' => 'Last name field ID',
+      'instructions' => 'Pardot form handler: ID maps to Default: ‘Last Name’',
       'name' => 'content-image-block__form-lname',
       'required' => 0,
       'maxlength' => '',
-      'default_value' => 'input_last_name',
+      'default_value' => '',
       'conditional_logic' => [
         [
           [
@@ -211,13 +203,14 @@ $fields = [
         'width' => '1000',
       )
     ]),
-    // Form Email
+    // Form email
     acf_text([
-      'label' => 'Email field id',
+      'label' => 'Email field ID',
+      'instructions' => 'Pardot form handler: ID maps to Default: ‘Email’',
       'name' => 'content-image-block__form-email',
       'required' => 0,
       'maxlength' => '',
-      'default_value' => 'input_email',
+      'default_value' => '',
       'conditional_logic' => [
         [
           [
@@ -231,13 +224,14 @@ $fields = [
         'width' => '1000',
       )
     ]),
-    // Form Industry
+    // Form industry
     acf_text([
-      'label' => 'Industry field id',
+      'label' => 'Industry field ID',
+      'instructions' => 'Pardot form handler: ID maps to Custom: ‘What industry do you work in’',
       'name' => 'content-image-block__form-industry',
       'required' => 0,
       'maxlength' => '',
-      'default_value' => 'input_00Nf4000009v5NK',
+      'default_value' => '',
       'conditional_logic' => [
         [
           [
@@ -251,13 +245,14 @@ $fields = [
         'width' => '1000',
       )
     ]),
-    // Form contactme
+    // Form contact by email consent
     acf_text([
-      'label' => 'Contact Me field id',
+      'label' => 'Contact by email consent field ID',
+      'instructions' => 'Pardot form handler: ID maps to Custom: ‘I would like to get emails from Arity’',
       'name' => 'content-image-block__form-contactme',
       'required' => 0,
       'maxlength' => '',
-      'default_value' => '00Nf400000RFoMR',
+      'default_value' => '',
       'conditional_logic' => [
         [
           [
@@ -273,7 +268,8 @@ $fields = [
     ]),
     // Form button text
     acf_text([
-      'label' => 'Button Text field id',
+      'label' => 'CTA button label',
+      'instructions' => 'Typically the CTA will be labelled ‘Download’',
       'name' => 'content-image-block__form-btntext',
       'required' => 0,
       'maxlength' => '',
@@ -294,6 +290,7 @@ $fields = [
     // Form Download URL
     acf_text([
       'label' => 'Download URL',
+      'instructions' => 'The URL to the downloadable content',
       'name' => 'content-image-block__form-downloadurl',
       'required' => 0,
       'maxlength' => '',
@@ -310,13 +307,14 @@ $fields = [
         'width' => '1000',
       )
     ]),
-    // Form thankyou msg
+    // Form post submit CTA
     acf_text([
-      'label' => 'Thankyou message',
+      'label' => 'Post-submit CTA button label',
+      'instructions' => 'The call-to-action that is shown once the user submits the form',
       'name' => 'content-image-block__form-thankyou',
       'required' => 0,
       'maxlength' => '',
-      'default_value' => 'Click on the button to download whitepaper.',
+      'default_value' => 'Click on this button to download your document.',
       'conditional_logic' => [
         [
           [
@@ -331,7 +329,7 @@ $fields = [
       )
     ]),
 
-    // datavis Url
+    // Dat viz URL
     acf_file([
       'name' => 'visualization',
       'label' => 'Upload visualization',
@@ -371,7 +369,7 @@ $fields = [
         'width' => '1000',
       )
     ]),
-    //iframe hright at Xlarge
+    //iframe height at Xlarge
     acf_text([
       'label' => 'Iframe height at xlarge devices',
       'name' => 'content-image-block__url-height-xlarge',
@@ -391,7 +389,7 @@ $fields = [
         'width' => '1000',
       )
     ]),
-     //iframe hright at large
+     //iframe height at large
      acf_text([
       'label' => 'Iframe height at large devices',
       'name' => 'content-image-block__url-height-large',
@@ -411,7 +409,7 @@ $fields = [
         'width' => '1000',
       )
     ]),
-     //iframe hright at medium
+     //iframe height at medium
      acf_text([
       'label' => 'Iframe height at medium devices',
       'name' => 'content-image-block__url-height-medium',
@@ -431,7 +429,7 @@ $fields = [
         'width' => '1000',
       )
     ]),
-     //iframe hright at small
+     //iframe height at small
      acf_text([
       'label' => 'Iframe height at small devices',
       'name' => 'content-image-block__url-height-small',
@@ -453,19 +451,31 @@ $fields = [
     ]),
     // body Vertical alignment
     acf_select([
-      'label' => 'Body copy Vertical Align',
-      'name' => 'content-image-block__vertial-align',
-      'key' => 'content-image-block_vertial-align',
+      'label' => 'Body copy vertical align',
+      'name' => 'content-image-block__vertical-align',
+      'key' => 'content-image-block_vertical-align',
       'instructions' => '',
       'required' => 0,
       'maxlength' => '',
       'allow_null' => 0,
       'ui' => 1,
-      'default_value' => 'Center',
+      'default_value' => 'Top',
       'choices' => [
         'Top' => 'Top',
         'Center' => 'Center'
       ],
+    ]),
+    // Headline
+    acf_text([
+      'label' => 'Headline',
+      'name' => 'content-image-block__headline',
+      'key' => 'field_headline',
+      'instructions' => 'Recommended character count max: 60',
+      'required' => 0,
+      'maxlength' => '',
+      'wrapper' => array (
+        'width' => '50',
+      ),
     ]),
     // Body Copy
     acf_textarea([

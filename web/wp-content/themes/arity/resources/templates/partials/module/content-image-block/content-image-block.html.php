@@ -40,7 +40,7 @@ if($data['content-chooser']=='layout__datavis'){
 
 }
 
-if($data['vertial-align']=='Top'){
+if($data['vertical-align']=='Top'){
   $data['classes'][] = 'alignTop';
 }
 
