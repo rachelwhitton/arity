@@ -6,17 +6,17 @@ namespace App\Theme;
 /*
   Template Name:      Content and Image Block
   Template Type:      Module
-  Description:        Product or feature highlight ("River")
+  Description:        Product or feature highlight ("River"). Template name has been updated to Block: 2 column
   Last Updated:       08/01/2017
   Since:              1.0.0
 */
-//echo '<pre>'; print_r($data); echo '</pre>'; 
 
 $class = 'content-image-block';
 if($data['content-chooser']=='layout__form'){
   global $wp;
 
-  $data['is_salesforce'] = true;
+  $data['is_salesforce'] = false;
+  $data['is_pardot'] = true;
   $data['use_captcha'] = true;
   
   $data['form_return_url'] = home_url( $wp->request );
@@ -40,7 +40,7 @@ if($data['content-chooser']=='layout__datavis'){
 
 }
 
-if($data['vertial-align']=='Top'){
+if($data['vertical-align']=='Top'){
   $data['classes'][] = 'alignTop';
 }
 
@@ -85,6 +85,8 @@ if($data['vertial-align']=='Top'){
             <?php if(!empty($data['is_salesforce'])) : ?>
               <input type=hidden name="oid" value="<?= $data['form-oid']; ?>">
               <input type=hidden name="retURL" value="<?= $data['form_return_url']; ?>">
+              <input type="hidden" name="lead_source" id="input_lead_source" value="<?= $data['form-leadsource']; ?>">
+            <?php elseif(!empty($data['is_pardot'])) : ?>
               <input type="hidden" name="lead_source" id="input_lead_source" value="<?= $data['form-leadsource']; ?>">
             <?php endif; ?>
 
