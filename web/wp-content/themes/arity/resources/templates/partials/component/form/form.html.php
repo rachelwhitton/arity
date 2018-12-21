@@ -1,6 +1,7 @@
 <form action="<?= $data['form_url']; ?>" method="POST">
 
-  <?php if(!empty($data['is_salesforce'])) : ?>
+  <?php // if(!empty($data['is_salesforce'])) : ?>
+  <?php if(!empty($data['is_pardot'])) : ?>
     <input type=hidden name="oid" value="<?= $data['form_oid']; ?>">
     <input type=hidden name="retURL" value="<?= $data['form_return_url']; ?>">
     <input type="hidden" name="lead_source" id="input_lead_source" value="Arity.com">
