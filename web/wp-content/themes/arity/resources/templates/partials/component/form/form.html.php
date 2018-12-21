@@ -41,8 +41,7 @@
       $preferred_id = '00Nf4000009v5NO';
       if(!empty(WP_ENV) && WP_ENV != 'production') {
         // Testing
-        // $preferred_id = '00N3B000001I8ya';
-        $preferred_id = '00Nf4000009v5NO';
+        $preferred_id = '00N3B000001I8ya';
       }
     ?>
     <div class="form-conditional" aria-hidden="true" data-conditional="phone" data-conditional-logic="not-empty">
@@ -62,8 +61,7 @@
     $industry_id = '00Nf4000009v5NK';
     if(!empty(WP_ENV) && WP_ENV != 'production') {
       // Testing
-      // $industry_id = '00N3B000001I8yV';
-      $industry_id = '00Nf4000009v5NK';
+      $industry_id = '00N3B000001I8yV';
     }
   ?>
   <div class="form-group form-group--required">
