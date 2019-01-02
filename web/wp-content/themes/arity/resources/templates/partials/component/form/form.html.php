@@ -90,6 +90,11 @@
     <textarea class="form-control" name="description" id="input_description" rows="3"></textarea>
   </div>
 
+  <div class="form-group" style="position:absolute; left:-9999px; top: -9999px;">
+    <label class="form-group-label" for="pardot_extra_field">Comments</label>
+    <input type="text" class="form-control" id="pardot_extra_field" name="pardot_extra_field">
+  </div>
+
   <label class="checkbox_container">By checking this box, I am providing express consent to receive marketing communications from Arity at the email address provided.
   <input id="00Nf400000RFoMR" name="00Nf400000RFoMR" type="checkbox" value="1" checked="checked" />
       <span class="checkmark"></span>
