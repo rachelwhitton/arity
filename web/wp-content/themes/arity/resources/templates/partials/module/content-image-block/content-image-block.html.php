@@ -109,6 +109,10 @@ if($data['vertical-align']=='Top'){
               <div class="form-control-feedback" data-error="invalid">Please enter a valid email</div>
             </div>
 
+            <div class="form-group" style="position:absolute; left:-9999px; top: -9999px;">
+              <label class="form-group-label" for="pardot_extra_field">Comments</label>
+              <input type="text" class="form-control" id="pardot_extra_field" name="pardot_extra_field">
+            </div>
 
             <div class="form-group form-group--required">
               <label class="form-group-label" for="<?=$data['form-industry']?>">What industry do you work in?</label>
@@ -128,10 +132,9 @@ if($data['vertical-align']=='Top'){
               <div class="form-control-feedback" data-error="required">Please select an industry</div>
             </div>
 
-            <label class="checkbox_container">By checking this box, I am providing express consent to receive marketing communications from Arity at the email address provided.
-            <input id="<?=$data['form-contactme']?>" name="<?=$data['form-contactme']?>" type="checkbox" value="1" checked="checked" />
-                <span class="checkmark"></span>
-            </label>
+            <div class="form-group">
+              <label class="form-group-label">At Arity, we take data privacy very seriously. We collect your data to use for our subscription services and will not share your data with third parties. By providing your information for this download and checking the consent box, you agree to allow us to email you information about products and services that we think may be of interest to you. By registering, you agree to our Privacy Policy.</label>
+            </div>
 
             <button type="submit" class="btn btn-primary"><?=$data['form-btntext']?></button>
 
