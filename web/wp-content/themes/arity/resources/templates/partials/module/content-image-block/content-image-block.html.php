@@ -137,7 +137,7 @@ if($data['vertical-align']=='Top'){
               <input id="<?=$data['form-contactme']?>" name="<?=$data['form-contactme']?>" type="checkbox" value="1" />
                   <span class="checkmark"></span>
               </label>
-              <p style="margin: 4px 0 0 0;">At Arity, we take data privacy very seriously. We collect your data to use for our subscription services and will not share your data with third parties. By providing your information for this download and checking the consent box, you agree to allow us to email you information about products and services that we think may be of interest to you. By registering, you agree to our <a href="/privacy/" target="_blank">Privacy Policy.</a></p>
+              <p style="margin: 5px 0 0 0; font-size: 88%; line-height: 1.2352">At Arity, we take data privacy very seriously. We collect your data to use for our subscription services and will not share your data with third parties. By providing your information for this download and checking the consent box, you agree to allow us to email you information about products and services that we think may be of interest to you. By registering, you agree to our <a href="/privacy/" target="_blank">Privacy Policy.</a></p>
             </div>
 
             <button type="submit" class="btn btn-primary"><?=$data['form-btntext']?></button>
