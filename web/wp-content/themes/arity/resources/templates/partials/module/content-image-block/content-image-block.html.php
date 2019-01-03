@@ -132,10 +132,13 @@ if($data['vertical-align']=='Top'){
               <div class="form-control-feedback" data-error="required">Please select an industry</div>
             </div>
 
-            <label class="checkbox_container">At Arity, we take data privacy very seriously. We collect your data to use for our subscription services and will not share your data with third parties. By providing your information for this download and checking the consent box, you agree to allow us to email you information about products and services that we think may be of interest to you. By registering, you agree to our Privacy Policy.
-            <input id="<?=$data['form-contactme']?>" name="<?=$data['form-contactme']?>" type="checkbox" value="1" checked="checked" />
-                <span class="checkmark"></span>
-            </label>
+            <div class="form-group" style="display:flex; align-items: flex-start;">
+              <label class="checkbox_container">
+              <input id="<?=$data['form-contactme']?>" name="<?=$data['form-contactme']?>" type="checkbox" value="1" />
+                  <span class="checkmark"></span>
+              </label>
+              <p style="margin: 4px 0 0 0;">At Arity, we take data privacy very seriously. We collect your data to use for our subscription services and will not share your data with third parties. By providing your information for this download and checking the consent box, you agree to allow us to email you information about products and services that we think may be of interest to you. By registering, you agree to our <a href="/privacy/" target="_blank">Privacy Policy.</a></p>
+            </div>
 
             <button type="submit" class="btn btn-primary"><?=$data['form-btntext']?></button>
 
