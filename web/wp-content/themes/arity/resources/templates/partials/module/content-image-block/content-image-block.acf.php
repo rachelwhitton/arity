@@ -224,6 +224,27 @@ $fields = [
         'width' => '1000',
       )
     ]),
+    // Form company
+    acf_text([
+      'label' => 'Company field ID',
+      'instructions' => 'Pardot form handler: ID maps to Default: ‘Company’',
+      'name' => 'content-image-block__form-company',
+      'required' => 0,
+      'maxlength' => '',
+      'default_value' => '',
+      'conditional_logic' => [
+        [
+          [
+            'name' => 'content-image-block__content-chooser',
+            'operator' => '==',
+            'value' => 'layout__form'
+          ]
+        ]
+      ],
+      'wrapper' => array (
+        'width' => '1000'
+      )
+    ]),
     // Form industry
     acf_text([
       'label' => 'Industry field ID',

@@ -89,24 +89,31 @@ if($data['vertical-align']=='Top'){
             <?php endif; ?>
 
             <div class="form-group form-group--required">
-              <label class="form-group-label" for="<?=$data['form-fname']?>">First name</label>
-              <input type="text" class="form-control" name="<?=$data['form-fname']?>" id="<?=$data['form-fname']?>" placeholder="" required>
+              <label class="form-group-label" for="<?=$data['form-fname'];?>">First name</label>
+              <input type="text" class="form-control" name="<?=$data['form-fname'];?>" id="<?=$data['form-fname'];?>" placeholder="" required>
               <div class="form-control-feedback" data-error="required">Please enter first name</div>
               <div class="form-control-feedback" data-error="invalid">Please enter a valid name</div>
             </div>
 
             <div class="form-group form-group--required">
-              <label class="form-group-label" for="<?=$data['form-lname']?>">Last name</label>
-              <input type="text" class="form-control" name="<?=$data['form-lname']?>" id="<?=$data['form-lname']?>" placeholder="" required>
+              <label class="form-group-label" for="<?=$data['form-lname'];?>">Last name</label>
+              <input type="text" class="form-control" name="<?=$data['form-lname'];?>" id="<?=$data['form-lname'];?>" placeholder="" required>
               <div class="form-control-feedback" data-error="required">Please enter last name</div>
               <div class="form-control-feedback" data-error="invalid">Please enter a valid name</div>
             </div>
 
             <div class="form-group form-group--required">
               <label class="form-group-label" for="<?=$data['form-email']?>">Email</label>
-              <input type="email" class="form-control" name="<?=$data['form-email']?>" id="<?=$data['form-email']?>" placeholder="" required>
+              <input type="email" class="form-control" name="<?=$data['form-email'];?>" id="<?=$data['form-email'];?>" placeholder="" required>
               <div class="form-control-feedback" data-error="required">Please enter email</div>
               <div class="form-control-feedback" data-error="invalid">Please enter a valid email</div>
+            </div>
+
+            <div class="form-group form-group--required">
+              <label class="form-group-label" for="<?=$data['form-company'];?>">Company</label>
+              <input type="text" class="form-control" name="<?=$data['form-company'];?>" id="<?=$data['form-company'];?>" placeholder="" required>
+              <div class="form-control-feedback" data-error="required">Please enter company</div>
+              <div class="form-control-feedback" data-error="invalid">Please enter a valid company</div>
             </div>
 
             <div class="form-group" style="position:absolute; left:-9999px; top: -9999px;">
@@ -115,32 +122,32 @@ if($data['vertical-align']=='Top'){
             </div>
 
             <div class="form-group form-group--required">
-              <label class="form-group-label" for="<?=$data['form-industry']?>">What industry do you work in?</label>
-              <select class="form-control custom-select" name="<?=$data['form-industry']?>" id="<?=$data['form-industry']?>" required>
+              <label class="form-group-label" for="<?=$data['form-industry'];?>">What industry do you work in?</label>
+              <select class="form-control custom-select" name="<?=$data['form-industry'];?>" id="<?=$data['form-industry'];?>" required>
                 <option value="">Select an industry</option>
-                <option value="Auto Aftermarket" <?=strtolower($_GET['industry'])=='auto aftermarket'?'selected':''?>>Auto Aftermarket</option>
-                <option value="Automotive Solutions" <?=strtolower($_GET['industry'])=='automotive solutions'?'selected':''?>>Automotive Solutions</option>
-                <option value="Financial Services" <?=strtolower($_GET['industry'])=='financial services'?'selected':''?>>Financial Services</option>
-                <option value="Gig Economy" <?=strtolower($_GET['industry'])=='gig economy'?'selected':''?>>Gig Economy</option>
-                <option value="Government" <?=strtolower($_GET['industry'])=='government'?'selected':''?>>Government</option>
-                <option value="Insurance" <?=strtolower($_GET['industry'])=='insurance'?'selected':''?>>Insurance</option>
-                <option value="OEM" <?=strtolower($_GET['industry'])=='oem'?'selected':''?>>OEM</option>
-                <option value="Shared Mobility" <?=strtolower($_GET['industry'])=='shared mobility'?'selected':''?>>Shared Mobility</option>
-                <option value="Smart Cities" <?=strtolower($_GET['industry'])=='smart cities'?'selected':''?>>Smart Cities</option>
-                <option value="Other" <?=strtolower($_GET['industry'])=='other'?'selected':''?>>Other</option>
+                <option value="Auto Aftermarket" <?=strtolower($_GET['industry'])=='auto aftermarket'?'selected':'';?>>Auto Aftermarket</option>
+                <option value="Automotive Solutions" <?=strtolower($_GET['industry'])=='automotive solutions'?'selected':'';?>>Automotive Solutions</option>
+                <option value="Financial Services" <?=strtolower($_GET['industry'])=='financial services'?'selected':'';?>>Financial Services</option>
+                <option value="Gig Economy" <?=strtolower($_GET['industry'])=='gig economy'?'selected':'';?>>Gig Economy</option>
+                <option value="Government" <?=strtolower($_GET['industry'])=='government'?'selected':'';?>>Government</option>
+                <option value="Insurance" <?=strtolower($_GET['industry'])=='insurance'?'selected':'';?>>Insurance</option>
+                <option value="OEM" <?=strtolower($_GET['industry'])=='oem'?'selected':'';?>>OEM</option>
+                <option value="Shared Mobility" <?=strtolower($_GET['industry'])=='shared mobility'?'selected':'';?>>Shared Mobility</option>
+                <option value="Smart Cities" <?=strtolower($_GET['industry'])=='smart cities'?'selected':'';?>>Smart Cities</option>
+                <option value="Other" <?=strtolower($_GET['industry'])=='other'?'selected':'';?>>Other</option>
               </select>
               <div class="form-control-feedback" data-error="required">Please select an industry</div>
             </div>
 
             <div class="form-group" style="display:flex; align-items: flex-start;">
               <label class="checkbox_container">
-              <input id="<?=$data['form-contactme']?>" name="<?=$data['form-contactme']?>" type="checkbox" value="1" />
+              <input id="<?=$data['form-contactme'];?>" name="<?=$data['form-contactme'];?>" type="checkbox" value="1" />
                   <span class="checkmark"></span>
               </label>
               <p style="margin: 5px 0 0 0; font-size: 88%; line-height: 1.2352">At Arity, we take data privacy very seriously. We collect your data to use for our subscription services and will not share your data with third parties. By providing your information for this download and checking the consent box, you agree to allow us to email you information about products and services that we think may be of interest to you. By registering, you agree to our <a href="/privacy/" target="_blank">Privacy Policy.</a></p>
             </div>
 
-            <button type="submit" class="btn btn-primary"><?=$data['form-btntext']?></button>
+            <button type="submit" class="btn btn-primary"><?=$data['form-btntext'];?></button>
 
             <?php if(!empty($data['use_captcha'])) : ?>
               <div class="g-recaptcha" data-size="invisible" data-badge="inline"></div>
@@ -159,8 +166,8 @@ if($data['vertical-align']=='Top'){
                     </div>
                   </div>
                 <div class="modal-body--right">
-                  <p><?=$data['form-thankyou']?></p>
-                  <a href="<?=$data['form-downloadurl']?>" class="ar-element button button--primary blue-button--">
+                  <p><?=$data['form-thankyou'];?></p>
+                  <a href="<?=$data['form-downloadurl'];?>" class="ar-element button button--primary blue-button--">
                     <span class="button__label">Download</span>
                   </a>
                 </div>
@@ -176,7 +183,7 @@ if($data['vertical-align']=='Top'){
         </div>
       <?php endif; ?>
       <?php if (!empty($data['image_id']) && $data['content-chooser'] == "layout__image") : ?>
-        <div class="<?=$class?>__col wide-- <?=$class?>__img-box">
+        <div class="<?=$class;?>__col wide-- <?=$class;?>__img-box">
           <?php element('image', [
             'id' => $data['image_id'],
             'classes' => $data['img-classes']
@@ -184,27 +191,27 @@ if($data['vertical-align']=='Top'){
         </div>
       <?php endif; ?>
       <?php if (!empty($data['url']) && $data['content-chooser'] == "layout__video") : ?>
-        <div class="<?=$class?>__col wide-- <?=$class?>__video-box">
+        <div class="<?=$class;?>__col wide-- <?=$class;?>__video-box">
           <figure class="video-wrapper">
             <?php the_video($data['url']); ?>
           </figure>
         </div>
       <?php endif; ?>
       <?php if ((!empty($data['url-iframe']) || !empty($data['visualization'])) && $data['content-chooser'] == "layout__datavis") : ?>
-        <div class="<?=$class?>__col wide-- <?=$class?>__img-box">
-          <iframe scrolling="no" class="dataVis" style="border: 0px solid transparent; height:<?=$data['url-height-xlarge']?>px" 
-                  src="<?=$iframeUrl?>?rand=<?=time()?>"
-                  data-height-xlarge="<?=$data['url-height-xlarge']?>"
-                  data-height-large="<?=$data['url-height-large']?>"
-                  data-height-medium="<?=$data['url-height-medium']?>"
-                  data-height-small="<?=$data['url-height-small']?>"
+        <div class="<?=$class;?>__col wide-- <?=$class;?>__img-box">
+          <iframe scrolling="no" class="dataVis" style="border: 0px solid transparent; height:<?=$data['url-height-xlarge'];?>px" 
+                  src="<?=$iframeUrl;?>?rand=<?=time();?>"
+                  data-height-xlarge="<?=$data['url-height-xlarge'];?>"
+                  data-height-large="<?=$data['url-height-large'];?>"
+                  data-height-medium="<?=$data['url-height-medium'];?>"
+                  data-height-small="<?=$data['url-height-small'];?>"
           ></iframe>
         </div>
       <?php endif; ?>
-      <div class="<?=$class?>__col narrow--">
-        <div class="<?=$class?>__col-group">
+      <div class="<?=$class;?>__col narrow--">
+        <div class="<?=$class;?>__col-group">
           <?php if (!empty($data['headline'])) : ?>
-            <<?= $data['h_el']; ?> class="<?=$class?>__headline type3"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
+            <<?= $data['h_el']; ?> class="<?=$class;?>__headline type3"><?= $data['headline']; ?></<?= $data['h_el']; ?>>
           <?php endif; ?>
           <?php if (!empty($data['body_copy'])) : ?>
           <div class="content-image-block__content type0">
