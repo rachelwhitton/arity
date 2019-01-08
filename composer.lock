@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
     "content-hash": "ce223aa898bf841023c2bbd4c146cdb7",
@@ -745,7 +745,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/acf-content-analysis-for-yoast-seo.2.1.0.zip",
-                "reference": null,
+                "reference": "tags/2.1.0",
                 "shasum": null
             },
             "require": {
@@ -765,7 +765,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields-nav-menu-field.2.0.0.zip",
-                "reference": null,
+                "reference": "tags/2.0.0",
                 "shasum": null
             },
             "require": {
@@ -785,7 +785,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/aryo-activity-log.2.5.1.zip",
-                "reference": null,
+                "reference": "tags/2.5.1",
                 "shasum": null
             },
             "require": {
@@ -805,7 +805,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/capability-manager-enhanced.1.5.7.zip",
-                "reference": null,
+                "reference": "tags/1.5.7",
                 "shasum": null
             },
             "require": {
@@ -825,7 +825,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/disable-comments.1.8.0.zip",
-                "reference": null,
+                "reference": "tags/1.8.0",
                 "shasum": null
             },
             "require": {
@@ -845,7 +845,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/disable-embeds.zip?timestamp=1468245586",
-                "reference": null,
+                "reference": "trunk",
                 "shasum": null
             },
             "require": {
@@ -865,7 +865,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/disable-xml-rpc.1.0.1.zip",
-                "reference": null,
+                "reference": "tags/1.0.1",
                 "shasum": null
             },
             "require": {
@@ -885,7 +885,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/duplicate-post.3.2.2.zip",
-                "reference": null,
+                "reference": "tags/3.2.2",
                 "shasum": null
             },
             "require": {
@@ -905,7 +905,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/enable-media-replace.3.2.7.zip",
-                "reference": null,
+                "reference": "tags/3.2.7",
                 "shasum": null
             },
             "require": {
@@ -925,7 +925,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/ewww-image-optimizer.4.5.1.zip",
-                "reference": null,
+                "reference": "tags/4.5.1",
                 "shasum": null
             },
             "require": {
@@ -945,7 +945,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/force-regenerate-thumbnails.2.0.6.zip",
-                "reference": null,
+                "reference": "tags/2.0.6",
                 "shasum": null
             },
             "require": {
@@ -965,7 +965,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/force-strong-passwords.zip?timestamp=1510259124",
-                "reference": null,
+                "reference": "trunk",
                 "shasum": null
             },
             "require": {
@@ -985,7 +985,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/geoip-detect.2.9.0.zip",
-                "reference": null,
+                "reference": "tags/2.9.0",
                 "shasum": null
             },
             "require": {
@@ -1005,7 +1005,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/login-lockdown.zip?timestamp=1473805989",
-                "reference": null,
+                "reference": "trunk",
                 "shasum": null
             },
             "require": {
@@ -1025,7 +1025,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/pantheon-advanced-page-cache.0.3.0.zip",
-                "reference": null,
+                "reference": "tags/0.3.0",
                 "shasum": null
             },
             "require": {
@@ -1045,7 +1045,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/redirection.2.10.1.zip",
-                "reference": null,
+                "reference": "tags/2.10.1",
                 "shasum": null
             },
             "require": {
@@ -1065,7 +1065,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/safe-svg.1.6.0.zip",
-                "reference": null,
+                "reference": "tags/1.6.0",
                 "shasum": null
             },
             "require": {
@@ -1125,7 +1125,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/wp-native-php-sessions.0.6.9.zip",
-                "reference": null,
+                "reference": "tags/0.6.9",
                 "shasum": null
             },
             "require": {
@@ -1145,7 +1145,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/wp-redis.0.7.0.zip",
-                "reference": null,
+                "reference": "tags/0.7.0",
                 "shasum": null
             },
             "require": {
