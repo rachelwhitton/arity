@@ -11308,19 +11308,7 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
 }
 
 .site-footer__col.col3-- {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
-  max-width: 100%;
-}
-
-@media screen and (min-width: 480px) {
-  .site-footer__col.col3-- {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 66.66667%;
-            flex: 0 0 66.66667%;
-    max-width: 66.66667%;
-  }
+  display: none;
 }
 
 @media screen and (min-width: 961px) {
@@ -11329,6 +11317,7 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
         -ms-flex: 0 0 33.33333%;
             flex: 0 0 33.33333%;
     max-width: 33.33333%;
+    display: block;
   }
 }
 

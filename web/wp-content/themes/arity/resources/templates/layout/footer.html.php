@@ -14,7 +14,7 @@ namespace App\Theme;
           </svg>
         </a>
       </div>
-      <div class="site-footer__col col2--">
+      <!-- <div class="site-footer__col col2--">
         <h2 class="site-footer__header">Developer portal</h2>
         <p>Sign up for an account on the Arity developer portal and try our APIs.</p>
         <p>
@@ -24,8 +24,8 @@ namespace App\Theme;
           </svg> Visit the portal
         </a>
         </p>
-      </div>
-      <div class="site-footer__col col3--">
+      </div> -->
+      <div class="site-footer__col col2--">
         <h2 class="site-footer__header">Press</h2>
         <p>Get in touch with an Arity rep or visit our newsroom.</p>
         <p>
@@ -45,6 +45,8 @@ namespace App\Theme;
             </svg> Visit the Newsroom
           </a>
         </p>
+      </div>
+      <div class="site-footer__col col3--">
       </div>
       <div class="site-footer__col col4--">
         <h2 class="site-footer__header">Follow us</h2>
