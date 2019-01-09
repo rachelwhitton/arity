@@ -83,7 +83,7 @@ if($data['vertical-align']=='Top'){
     ?>
       
     <?php if ($data['content-chooser'] == "layout__form") : ?>
-        <div class="<?=$class?>__col wide-- <?=$class?>__img-box">
+        <div class="<?=$class;?>__col wide-- <?=$class;?>__img-box">
         <div class="contact-form__indicates">
           <span class="required">*</span> indicates required field
         </div>
@@ -109,7 +109,7 @@ if($data['vertical-align']=='Top'){
             </div>
 
             <div class="form-group form-group--required">
-              <label class="form-group-label" for="<?=$data['form-email']?>">Email</label>
+              <label class="form-group-label" for="<?=$data['form-email'];?>">Email</label>
               <input type="email" class="form-control" name="<?=$data['form-email'];?>" id="<?=$data['form-email'];?>" placeholder="" required>
               <div class="form-control-feedback" data-error="required">Please enter email</div>
               <div class="form-control-feedback" data-error="invalid">Please enter a valid email</div>

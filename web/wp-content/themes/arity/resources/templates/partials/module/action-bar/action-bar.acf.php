@@ -156,7 +156,7 @@ $fields = [
       ]
     ],
     'min'         => 0,
-    'max'         => 2,
+    'max'         => 100,
     'layout'      => 'block',
     'button_label'  => 'Add CTA',
   ]),
@@ -292,7 +292,7 @@ $fields = [
       ]
     ],
     'min'         => 0,
-    'max'         => 2,
+    'max'         => 100,
     'layout'      => 'block',
     'button_label'  => 'Add CTA',
   ]),
