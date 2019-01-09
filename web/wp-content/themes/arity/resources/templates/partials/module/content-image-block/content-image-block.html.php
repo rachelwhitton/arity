@@ -76,6 +76,12 @@ if($data['vertical-align']=='Top'){
   <?php endif; ?>
   <div class="container">
     <div class="row">
+    <?php 
+      if ($data['content-chooser'] == "layout__pardot-form") :
+          require_once('layout__pardot-form.php');
+      endif; 
+    ?>
+      
     <?php if ($data['content-chooser'] == "layout__form") : ?>
         <div class="<?=$class?>__col wide-- <?=$class?>__img-box">
         <div class="contact-form__indicates">

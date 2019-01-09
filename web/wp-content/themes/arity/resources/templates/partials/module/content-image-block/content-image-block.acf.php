@@ -25,9 +25,268 @@ $fields = [
         'layout__video' => 'Video',
         'layout__datavis' => 'Data Visualization',
         'layout__form' => 'Form',
+        'layout__pardot-form' => 'Pardot Form',
       ]
     ]),
+    acf_text([
+      'name' => 'pardot-form-post',
+      'label' => 'pardot-form-post',
+      //'instructions' => 'Add the employee name.',
+      'conditional_logic' => [
+        [
+          [
+            'name' => 'content-image-block__content-chooser',
+            'operator' => '==',
+            'value' => 'layout__pardot-form'
+          ]
+        ]
+      ],
+    ]),
+    acf_repeater([
+        'name' => 'pardot-form',
+        'label' => 'Form Fields',
+        //'instructions' => 'Add the employees.',
+        'min' => 0,
+        'max' => 100,
+        'layout' => 'block', // block, row or table
+        'sub_fields' => [
+            acf_select([
+              'name' => 'field_type',
+              'label' => 'Field Type',
+              //'instructions' => 'Select the background color.',
+              'choices' => [
+                  'textbox' => 'textbox',
+                  'textarea' => 'textarea',
+                  'hidden' => 'hidden',
+                  'select' => 'select',
+                  'radio' => 'radio',
+                  'check' => 'check',
+              ],
+              'default_value' => [
+                  'textbox',
+              ],
+            ]),
+            // pardot-form-check
+            acf_text([
+              'name' => 'pardot-form-check-body',
+              'label' => 'pardot-form-check-body',
+              //'instructions' => 'Add the employee name.',
+              'conditional_logic' => [
+                [
+                  [
+                    'name' => 'field_type',
+                    'operator' => '==',
+                    'value' => 'check'
+                  ]
+                ]
+              ],
+            ]),
+            acf_repeater([
+              'name' => 'pardot-form-check',
+              'label' => 'check Fields',
+              //'instructions' => 'Add the employees.',
+              'min' => 0,
+              'max' => 1000,
+              'layout' => 'block', // block, row or table
+              'sub_fields' => [
+                  acf_checkbox([
+                      'name' => 'check-by-default',
+                      'label' => 'Select by Default',
+                      //'instructions' => 'Select the border color.',
+                      'choices' => [
+                          '1' => ''
+                      ],
+                  ]),
+                  acf_text([
+                      'name' => 'check-label',
+                      'label' => 'check-label',
+                      //'instructions' => 'Add the employee name.',
+                  ]),
+                  acf_text([
+                    'name' => 'check-value',
+                    'label' => 'check-value',
+                    //'instructions' => 'Add the employee name.',
+                  ]),
+              ],
+              'conditional_logic' => [
+                [
+                  [
+                    'name' => 'field_type',
+                    'operator' => '==',
+                    'value' => 'check'
+                  ]
+                ]
+              ],
+            ]),
+            // pardot-form-radio
+            acf_text([
+              'name' => 'pardot-form-radio-body',
+              'label' => 'pardot-form-radio-body',
+              //'instructions' => 'Add the employee name.',
+              'conditional_logic' => [
+                [
+                  [
+                    'name' => 'field_type',
+                    'operator' => '==',
+                    'value' => 'radio'
+                  ]
+                ]
+              ],
+            ]),
+            acf_repeater([
+              'name' => 'pardot-form-radio',
+              'label' => 'Select Fields',
+              //'instructions' => 'Add the employees.',
+              'min' => 0,
+              'max' => 1000,
+              'layout' => 'block', // block, row or table
+              'sub_fields' => [
+                    acf_checkbox([
+                      'name' => 'radio-by-default',
+                      'label' => 'Select by Default',
+                      //'instructions' => 'Select the border color.',
+                      'choices' => [
+                          '1' => ''
+                      ],
+                  ]),
+                  acf_text([
+                      'name' => 'radio-label',
+                      'label' => 'radio-label',
+                      //'instructions' => 'Add the employee name.',
+                  ]),
+                  acf_text([
+                    'name' => 'radio-value',
+                    'label' => 'radio-value',
+                    //'instructions' => 'Add the employee name.',
+                  ]),
+              ],
+              'conditional_logic' => [
+                [
+                  [
+                    'name' => 'field_type',
+                    'operator' => '==',
+                    'value' => 'radio'
+                  ]
+                ]
+              ],
+            ]),
+            // pardot-form-select
+            acf_repeater([
+                'name' => 'pardot-form-select',
+                'label' => 'Select Fields',
+                //'instructions' => 'Add the employees.',
 
+                'min' => 0,
+                'max' => 1000,
+                'layout' => 'block', // block, row or table
+                'sub_fields' => [
+                      acf_checkbox([
+                        'name' => 'select-by-default',
+                        'label' => 'Select by Default',
+                        //'instructions' => 'Select the border color.',
+                        'choices' => [
+                            '1' => ''
+                        ],
+                    ]),
+                    acf_text([
+                        'name' => 'select-label',
+                        'label' => 'select-label',
+                        //'instructions' => 'Add the employee name.',
+                    ]),
+                    acf_text([
+                      'name' => 'select-value',
+                      'label' => 'select-value',
+                      //'instructions' => 'Add the employee name.',
+                    ]),
+                ],
+                'conditional_logic' => [
+                  [
+                    [
+                      'name' => 'field_type',
+                      'operator' => '==',
+                      'value' => 'select'
+                    ]
+                  ]
+                ],
+            ]),
+            
+            acf_text([
+                'name' => 'field_label',
+                'label' => 'Field label',
+                //'instructions' => 'Add the employee name.',
+            ]),
+            acf_text([
+              'name' => 'field_id',
+              'label' => 'Field id',
+              //'instructions' => 'Add the employee name.',
+            ]),
+            acf_text([
+              'name' => 'field_value',
+              'label' => 'Field value',
+              //'instructions' => 'Add the employee name.',
+            ]),
+            acf_checkbox([
+              'name' => 'field_required',
+              'label' => 'field_required',
+              //'instructions' => 'Select the border color.',
+              'choices' => [
+                  '1' => ''
+              ],
+            ]),
+            acf_text([
+              'name' => 'field_error_required',
+              'label' => 'field_error_required',
+              //'instructions' => 'Add the employee name.',
+              'conditional_logic' => [
+                [
+                  [
+                    'name' => 'field_required',
+                    'operator' => '==',
+                    'value' => '1'
+                  ]
+                ]
+              ],
+            ]),
+            acf_text([
+              'name' => 'field_error_invalid',
+              'label' => 'field_error_invalid',
+              //'instructions' => 'Add the employee name.',
+              'conditional_logic' => [
+                [
+                  [
+                    'name' => 'field_required',
+                    'operator' => '==',
+                    'value' => '1'
+                  ]
+                ]
+              ],
+            ]),
+        ],
+        'conditional_logic' => [
+          [
+            [
+              'name' => 'content-image-block__content-chooser',
+              'operator' => '==',
+              'value' => 'layout__pardot-form'
+            ]
+          ]
+        ],
+    ]),
+    acf_text([
+      'name' => 'pardot-form-btntext',
+      'label' => 'pardot-form-btntext',
+      //'instructions' => 'Add the employee name.',
+      'conditional_logic' => [
+        [
+          [
+            'name' => 'content-image-block__content-chooser',
+            'operator' => '==',
+            'value' => 'layout__pardot-form'
+          ]
+        ]
+      ],
+    ]),
+    
     // Image
     acf_image([
       'label' => 'Image',
