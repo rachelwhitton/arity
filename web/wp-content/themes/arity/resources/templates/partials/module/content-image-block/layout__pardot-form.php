@@ -1,6 +1,6 @@
 <?php ?>
 <div class="<?=$class;?>__col wide-- <?=$class;?>__img-box">
-    <form action="<?= $data['pardot-form-post']; ?>" method="POST">
+    <form action="<?= $data['pardot-form-post']; ?>" method="POST" class="needs-validation">
         <?php 
         $fields = $data['pardot-form'];
         for($f=0; $f<sizeof($fields); $f++){
@@ -52,15 +52,14 @@
             <?php }
             if ($fields[$f]['field_type']=='check'){?>
                 <div class="form-group <?=($fields[$f]['field_required'][0]=='1')?'form-group--required':''?>" >
-                    <?=$fields[$f]['pardot-form-check-body']?>
+                    <label class="form-group-label"><?=$fields[$f]['pardot-form-check-body']?></label>
                     <?php for($g=0; $g<sizeof($fields[$f]['pardot-form-check']); $g++){ ?>
-                        
                         <div style="display:flex; align-items: flex-start;" >
                             <label class="checkbox_container">
-                            <input id="<?=$fields[$f]['field_id'];?>" name="<?=$fields[$f]['field_id'];?>" type="checkbox" value="<?=$fields[$f]['pardot-form-check'][$g]['check-value']?>" <?=($fields[$f]['pardot-form-check'][$g]['check-by-default'][0]=='1')?'checked':''?> />
+                            <input class="form-control" id="<?=$fields[$f]['field_id'];?>" name="<?=$fields[$f]['field_id'];?>[]" type="checkbox" value="<?=$fields[$f]['pardot-form-check'][$g]['check-value']?>" <?=($fields[$f]['pardot-form-check'][$g]['check-by-default'][0]=='1')?'checked':''?> <?=($fields[$f]['field_required'][0]=='1')?'required':''?> />
                                 <span class="checkmark"></span>
                             </label>
-                            <p style="margin: 5px 0 0 0; font-size: 88%; line-height: 1.2352"><?=$fields[$f]['pardot-form-check'][$g]['check-label']?></p>
+                            <p style="margin: 5px 0 0 0; font-size: 88%; line-height: 1.2352; padding-bottom: 10px;"><?=$fields[$f]['pardot-form-check'][$g]['check-label']?></p>
                         </div>
                     <?php }?>
                     <?php if($fields[$f]['field_required'][0]=='1'){?>
@@ -71,10 +70,10 @@
             <?php }
             if ($fields[$f]['field_type']=='radio'){?>
                 <div class="form-group <?=($fields[$f]['field_required'][0]=='1')?'form-group--required':''?>" >
-                    <?=$fields[$f]['pardot-form-radio-body']?>
+                    <label class="form-group-label"><?=$fields[$f]['pardot-form-radio-body']?></label>
                     <?php for($g=0; $g<sizeof($fields[$f]['pardot-form-radio']); $g++){ ?>
                         <label class="container radio-container"><?=$fields[$f]['pardot-form-radio'][$g]['check-label']?>
-                            <input type="radio" name="<?=$fields[$f]['field_id'];?>" value="<?=$fields[$f]['pardot-form-radio'][$g]['radio-value']?>" <?=($fields[$f]['pardot-form-radio'][$g]['radio-by-default'][0]=='1')?'checked':''?> /><?=$fields[$f]['pardot-form-radio'][$g]['radio-label']?>
+                            <input class="form-control" type="radio" name="<?=$fields[$f]['field_id'];?>[]" value="<?=$fields[$f]['pardot-form-radio'][$g]['radio-value']?>" <?=($fields[$f]['pardot-form-radio'][$g]['radio-by-default'][0]=='1')?'checked':''?> <?=($fields[$f]['field_required'][0]=='1')?'required':''?> /><?=$fields[$f]['pardot-form-radio'][$g]['radio-label']?>
                             <span class="radio-checkmark"></span>
                         </label>
                     <?php }?>
@@ -88,6 +87,74 @@
         }
         ?>
         <button type="submit" class="btn btn-primary"><?=$data['pardot-form-btntext'];?></button>   
+        
+        <div class="form-group" style="position:absolute; left:-9999px; top: -9999px;">
+            <label class="form-group-label" for="pardot_extra_field">Comments</label>
+            <input type="text" class="form-control" id="pardot_extra_field" name="pardot_extra_field">
+        </div>
+
+        <?php if(!empty($data['pardot-form-use_captcha'])) : ?>
+            <div class="g-recaptcha" data-size="invisible" data-badge="inline"></div>
+        <?php endif; ?>
     </form>
 </div>
+<div id="emailform_modal" class="modal" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-body--left">
+                <div class="align-vertical-middle">
+                    <h2><?=$data['pardot-form-thankyou-title'];?></h2>
+                </div>
+                </div>
+            <div class="modal-body--right">
+                <p><?=$data['pardot-form-thankyou-copy'];?></p>
+                <a href="<?=$data['pardot-form-thankyou-url'];?>" class="ar-element button button--primary blue-button--">
+                <span class="button__label"><?=$data['pardot-form-thankyou-btncopy'];?></span>
+                </a>
+            </div>
+            </div>
+        </div>
+        <button type="button" class="close" data-dismiss="modal">
+            <svg class="icon-svg" title="" role="img">
+                <use xlink:href="#close"></use>
+            </svg>
+        </button>
+    </div>
+</div>
 <?php ?>
+<script>
+(function () {
+        'use strict';
+        window.addEventListener('load', function () {
+            $('.needs-validation').submit(function(){
+                console.log('needs-validation 4');
+                var requiredCheckboxes = $('.form-group--required :radio[required]');
+                console.log('needs-validation 5', requiredCheckboxes);
+                
+                var name_map = {};
+                $(".form-group--required :checkbox[required], .form-group--required :radio[required]")  // for all checkboxes
+                .each(function() {  // first pass, create name mapping
+                    var name = this.name;
+                    name_map[name] = (name_map[name]) ? name + "[]" : name;
+                })
+                .each(function() {  // replace name based on mapping
+                    this.name = name_map[this.name];
+                });
+               
+               console.log(name_map);
+                $.each(name_map,function( index, value ){
+                    var checked = $('input[name="' + value + '"]:checked');
+                    
+                    if (checked.length == 0){
+                        $('input[name="' + value + '"]').closest('.form-group--required').addClass('has-error--').attr('data-error','required');
+                    }
+
+                });
+               
+
+            });
+        }, false);
+    })();
+</script>

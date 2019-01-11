@@ -11,6 +11,8 @@ namespace App\Theme;
   Since:              1.0.0
 */
 
+//echo '<pre>'; print_r($data); echo '</pre>'; 
+
 $class = 'content-image-block';
 if($data['content-chooser']=='layout__form'){
   global $wp;
@@ -21,7 +23,6 @@ if($data['content-chooser']=='layout__form'){
   
   $data['form_return_url'] = home_url( $wp->request );
   $data['form_return_url'] = trailingslashit($data['form_return_url']) . '#thank-you';
-  // echo '<pre>'; print_r($data); echo '</pre>'; 
 }
 
 if($data['content-chooser']=='layout__datavis'){

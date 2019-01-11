@@ -272,9 +272,83 @@ $fields = [
           ]
         ],
     ]),
+    
+    acf_checkbox([
+      'name' => 'pardot-form-use_captcha',
+      'label' => 'pardot-form-use_captcha',
+      //'instructions' => 'Select the border color.',
+      'choices' => [
+          '1' => ''
+      ],
+      'conditional_logic' => [
+        [
+          [
+            'name' => 'content-image-block__content-chooser',
+            'operator' => '==',
+            'value' => 'layout__pardot-form'
+          ]
+        ]
+      ],
+    ]),
     acf_text([
       'name' => 'pardot-form-btntext',
       'label' => 'pardot-form-btntext',
+      //'instructions' => 'Add the employee name.',
+      'conditional_logic' => [
+        [
+          [
+            'name' => 'content-image-block__content-chooser',
+            'operator' => '==',
+            'value' => 'layout__pardot-form'
+          ]
+        ]
+      ],
+    ]),
+    acf_text([
+      'name' => 'pardot-form-thankyou-title',
+      'label' => 'pardot-form-thankyou-title',
+      //'instructions' => 'Add the employee name.',
+      'conditional_logic' => [
+        [
+          [
+            'name' => 'content-image-block__content-chooser',
+            'operator' => '==',
+            'value' => 'layout__pardot-form'
+          ]
+        ]
+      ],
+    ]),
+    acf_text([
+      'name' => 'pardot-form-thankyou-copy',
+      'label' => 'pardot-form-thankyou-copy',
+      //'instructions' => 'Add the employee name.',
+      'conditional_logic' => [
+        [
+          [
+            'name' => 'content-image-block__content-chooser',
+            'operator' => '==',
+            'value' => 'layout__pardot-form'
+          ]
+        ]
+      ],
+    ]),
+    acf_text([
+      'name' => 'pardot-form-thankyou-url',
+      'label' => 'pardot-form-thankyou-url',
+      //'instructions' => 'Add the employee name.',
+      'conditional_logic' => [
+        [
+          [
+            'name' => 'content-image-block__content-chooser',
+            'operator' => '==',
+            'value' => 'layout__pardot-form'
+          ]
+        ]
+      ],
+    ]),
+    acf_text([
+      'name' => 'pardot-form-thankyou-btncopy',
+      'label' => 'pardot-form-thankyou-btncopy',
       //'instructions' => 'Add the employee name.',
       'conditional_logic' => [
         [

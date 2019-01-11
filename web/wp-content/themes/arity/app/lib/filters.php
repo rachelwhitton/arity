@@ -955,9 +955,19 @@ add_filter('theme/before_wpfooter', function() {
 
     $home_url = home_url('/');
     $url = get_permalink($post->ID);
+    // find all the acf fields and see if if it contains
+        
+        $allFields = json_encode(get_fields($post->ID));
 
+        
+    /*
     if (is_page_template('t20-campaign-landing')){
        // do nothing so that the dynamic link can be handeled in the acf posts.
+    }
+    */
+    if ((strpos($allFields, 'layout__pardot-form') !== false) || (strpos($allFields, 'layout__form') !== false)) {
+        // echo 'true';
+        // do nothing so that the dynamic link can be handeled in the acf posts.
     }
     else if(!in_array($post->post_name, ['contact','smart-cities','mobility-planning','astronaut'])) {
 echo <<<EOD
