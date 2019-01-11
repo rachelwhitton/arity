@@ -4,7 +4,6 @@
         <?php 
         $fields = $data['pardot-form'];
         for($f=0; $f<sizeof($fields); $f++){
-            //echo '<br/>'.$fields[$f]['field_type'];
 
             if ($fields[$f]['field_type']=='textbox'){?>
                 <div class="form-group <?=($fields[$f]['field_required'][0]=='1')?'form-group--required':''?>">
@@ -50,6 +49,7 @@
                 </div>
 
             <?php }
+
             if ($fields[$f]['field_type']=='check'){?>
                 <div class="form-group <?=($fields[$f]['field_required'][0]=='1')?'form-group--required':''?>" >
                     <label class="form-group-label"><?=$fields[$f]['pardot-form-check-body']?></label>
@@ -68,6 +68,7 @@
                     <?php }?>
                 </div>
             <?php }
+
             if ($fields[$f]['field_type']=='radio'){?>
                 <div class="form-group <?=($fields[$f]['field_required'][0]=='1')?'form-group--required':''?>" >
                     <label class="form-group-label"><?=$fields[$f]['pardot-form-radio-body']?></label>
@@ -94,7 +95,7 @@
         </div>
 
         <?php if(!empty($data['pardot-form-use_captcha'])) : ?>
-            <div class="g-recaptcha" data-size="invisible" data-badge="inline"></div>
+            <!-- div class="g-recaptcha" data-size="invisible" data-badge="inline"></div -->
         <?php endif; ?>
     </form>
 </div>
@@ -129,10 +130,8 @@
         'use strict';
         window.addEventListener('load', function () {
             $('.needs-validation').submit(function(){
-                console.log('needs-validation 4');
+                var err = 0;
                 var requiredCheckboxes = $('.form-group--required :radio[required]');
-                console.log('needs-validation 5', requiredCheckboxes);
-                
                 var name_map = {};
                 $(".form-group--required :checkbox[required], .form-group--required :radio[required]")  // for all checkboxes
                 .each(function() {  // first pass, create name mapping
@@ -143,17 +142,20 @@
                     this.name = name_map[this.name];
                 });
                
-               console.log(name_map);
+               // console.log(name_map);
                 $.each(name_map,function( index, value ){
                     var checked = $('input[name="' + value + '"]:checked');
-                    
                     if (checked.length == 0){
                         $('input[name="' + value + '"]').closest('.form-group--required').addClass('has-error--').attr('data-error','required');
+                        err = 1;
                     }
-
                 });
-               
-
+               if (err){
+                return false;
+               }else{
+                return true;
+               }
+                
             });
         }, false);
     })();
