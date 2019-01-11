@@ -870,7 +870,8 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
         f.parentNode.insertBefore(j, f);
       })(window, document, "script", "dataLayer", "GTM-KH6GQ88");
       console.log("Adobe DTM Header Start");
-      this.loadScript("//assets.adobedtm.com/b46e318d845250834eda10c5a20827c045a4d76f/satelliteLib-0893390c40d93db48cc0d98a10c4fe9f90b72e2c.js", function () {
+      // old script => "//assets.adobedtm.com/b46e318d845250834eda10c5a20827c045a4d76f/satelliteLib-0893390c40d93db48cc0d98a10c4fe9f90b72e2c.js"
+      this.loadScript("//assets.adobedtm.com/launch-ENc4322642c62a433b8800953e029d68b6-staging.min.js", function () {
         //initialization code
         var my_awesome_script1 = document.createElement("script");
         my_awesome_script1.innerHTML = "_satellite.pageBottom();";
