@@ -26,7 +26,7 @@ if(empty($data['form_url'])) {
   $data['form_oid'] = '00Df4000001TyK5';
 }
 
-// $data['use_captcha'] = true;
-$data['use_captcha'] = false;
+$data['use_captcha'] = true;
+// $data['use_captcha'] = false;
 
 return $data;
