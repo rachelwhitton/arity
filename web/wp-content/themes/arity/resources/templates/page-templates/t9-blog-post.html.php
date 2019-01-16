@@ -23,8 +23,7 @@ if($blauthor){
   $author['twitter'] = $bloouthor['author']['twitter'];
   $author['display_image'] = $bloouthor['author']['image'];
 }
-?>
-
+?> 
 <?php get_header(); ?>
 
 <?php do_action('theme/before_content') ?>
