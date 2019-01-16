@@ -23,12 +23,11 @@ if($blauthor){
   $author['twitter'] = $bloouthor['author']['twitter'];
   $author['display_image'] = $bloouthor['author']['image'];
 }
-?>
-
+?> 
 <?php get_header(); ?>
 
 <?php do_action('theme/before_content') ?>
-<div id="main" class="site-content">
+<div id="main" class="site-content <?=$_ENV['PANTHEON_ENVIRONMENT']?>">
   <div class="container">
     <div class="blog-post newco-insights-category-<?php echo strtolower($category_name) ?>">
       <?php /* Start the Loop */

@@ -16,7 +16,7 @@ namespace App\Theme;
 
 <?php do_action('theme/before_content') ?>
 
-<div id="main" class="site-content">
+<div id="main" class="site-content <?=$_ENV['PANTHEON_ENVIRONMENT']?>">
   <?php
     $hero['headline'] = get_the_title();
     module('hero-c', $hero);
