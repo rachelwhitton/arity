@@ -31,8 +31,7 @@ $GLOBALS['h1_used'] = false;
     'links' => $navigation
   ));
 ?>
-
-<div id="main" class="site-content app__wrapper container">
+<div id="main" class="site-content app__wrapper container <?=$_ENV['PANTHEON_ENVIRONMENT']?>">
   <div class="row">
     <div class="app__home">
       <?php

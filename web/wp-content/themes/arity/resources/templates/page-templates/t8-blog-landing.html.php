@@ -15,7 +15,7 @@ namespace App\Theme;
 <?php get_header(); ?>
 
 <?php do_action('theme/before_content') ?>
-<div id="main" class="site-content">
+<div id="main" class="site-content <?=$_ENV['PANTHEON_ENVIRONMENT']?>">
 
   <div class="blog-header">
     <h1><?php echo get_the_title(); ?> <div class="blog-brand">a blog by <span>Arity</span></div></h1>

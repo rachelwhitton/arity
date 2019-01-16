@@ -18,7 +18,7 @@ $GLOBALS['sub-footer'] = get_field('module__sub-footer');
 <?php get_header(); ?>
 
 <?php do_action('theme/before_content') ?>
-<div id="main" class="site-content">
+<div id="main" class="site-content <?=$_ENV['PANTHEON_ENVIRONMENT']?>">
   <?php module('hero-b', $hero); ?>
   <?php the_acf_content(); ?>
 </div>
