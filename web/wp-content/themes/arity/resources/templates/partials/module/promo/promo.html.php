@@ -10,6 +10,7 @@ namespace App\Theme;
   Last Updated:       08/03/2017
   Since:              1.0.0
 */
+  // echo '<pre>'; print_r($data); echo '</pre>';
 ?>
 
 <div <?php module_class($data['classes']); ?>>

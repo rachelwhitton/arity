@@ -61,12 +61,13 @@ $fields = [
     ]),
 
     acf_checkbox([
-      'label' => 'Extra Module Padding',
+      'label' => 'Module Padding',
       'name' => 'promo__padding',
-      'instructions' => 'Do you need some space between modules? (Disabled by default)',
+      'instructions' => 'Do you need to adjust space between modules? (Disabled by default)',
       'choices' => [
-        'top' => 'Yes, top padding &uarr;',
-        'bottom' => 'Yes, bottom padding &darr;'
+        'top' => 'Add top padding &uarr;',
+        'bottom' => 'Add bottom padding &darr;',
+        'none' => 'Remove all padding'
       ],
       'wrapper' => array (
         'width' => '50',
