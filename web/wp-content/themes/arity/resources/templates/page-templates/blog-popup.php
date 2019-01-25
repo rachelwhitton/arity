@@ -52,7 +52,7 @@
 
 
     <button style="width:100%" type="submit" class="btn btn-primary">Join our mailing list</button>
-
+    <div class="g-recaptcha" data-size="invisible" data-badge="inline"></div>
     <button type="button" class="close btnClose" id="" data-dismiss="modal">
       <svg class="icon-svg" title="" role="img">
           <use xlink:href="#close"></use>

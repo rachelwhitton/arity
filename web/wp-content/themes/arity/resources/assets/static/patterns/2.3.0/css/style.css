@@ -9081,7 +9081,7 @@ form .checkbox_container .checkmark:after {
   position: fixed;
   right: -400px;
   color: #000;
-  height: 400px;
+  height: 500px;
   width: 400px;
   top: 25%;
   background: #023c57;
