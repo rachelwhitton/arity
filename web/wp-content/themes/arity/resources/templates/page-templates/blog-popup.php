@@ -13,7 +13,7 @@
 
 <div id="thankyou_modal" class="blogPopup">
     <div class="modal-dialog">
-    <form id="myPopupForm" action="//go.arity.com/l/669483/2018-12-17/6sb" method="POST">
+    <form id="myPopupForm" action="https://go.pardot.com/l/669483/2018-12-17/6sb" method="POST">
     <!-- Modal content-->
       <p>Stay ahead of the mobility curve</p>
       <div style="color:#fff; display:flex">
