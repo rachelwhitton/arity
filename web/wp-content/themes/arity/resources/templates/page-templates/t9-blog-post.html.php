@@ -206,10 +206,11 @@ $link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "htt
 ?>
 
 <script>
-//Split url to check
-var popupTrigger = 1;
 
 <?php
+echo "
+
+var popupTrigger = 1;";
 if($link == $_SERVER["HTTP_REFERER"]){
   echo "console.log('SHOW Conformation and do not trigger scroll thing.');";
   echo "showPopupBox1();";
