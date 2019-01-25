@@ -246,3 +246,5 @@ $wp_query = new \WP_Query( $args );
 <?php do_action('theme/after_content') ?>
 
 <?php get_footer(); ?>
+
+<?php require_once('blog-popup.php');?>

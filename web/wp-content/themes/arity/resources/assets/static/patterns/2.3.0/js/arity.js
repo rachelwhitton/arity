@@ -722,6 +722,148 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
   window.checkGDPR = checkGDPR;
 })(jQuery, window, document);
 
+/* global transitionEvent */
+
+(function ($, window, document) {
+  var checkPopup = {
+    defaults: {
+      debug: false // Dont leave this as true
+    },
+    init: function init(opts) {
+      console.log("checkPopup init");
+      if (!$("div").hasClass("blogPopup1")) {
+        console.log("checkPopup init stop");
+        return;
+      }
+      console.log("checkPopup init Start");
+      var popupTrigger = 1;
+
+      if ($(location).attr("href") == $("#HTTP_REFERER").val()) {
+        console.log("SHOW Conformation and do not trigger scroll thing.");
+        showPopupBox1();
+        popupTrigger = 0;
+      }
+
+      function updatePopupStatus() {
+        console.log("Update POPUP status");
+        var cookieCheck = getCookie("cookieBanner-agreed") ? 1 : 0;
+        if (cookieCheck) {
+          console.log("COOKIE IS AVAILABLE set new status");
+          setCookie("cookie-showPopup", "0");
+          if (!popupTrigger) {
+            showPopupBox1();
+          } else {
+            showPopupBox();
+          }
+        } else {
+          var url = "popup/?a=update&showPopup=0";
+          $.ajax({
+            url: url,
+            success: function success(result) {
+              if (!popupTrigger) {
+                showPopupBox1();
+              } else {
+                showPopupBox();
+              }
+            }
+          });
+        }
+      }
+
+      function showPopupBox() {
+        console.log("Me Clicked");
+        var hidden = $(".blogPopup");
+        if (hidden.hasClass("visible")) {
+          hidden.animate({ right: "-400px" }, "slow").removeClass("visible");
+        } else {
+          hidden.animate({ right: "0" }, "slow").addClass("visible");
+        }
+      }
+      function showPopupBox1() {
+        console.log("Me Clicked");
+        var hidden = $(".blogPopup1");
+        if (hidden.hasClass("visible")) {
+          hidden.animate({ right: "-400px" }, "slow").removeClass("visible");
+        } else {
+          hidden.animate({ right: "0" }, "slow").addClass("visible");
+        }
+      }
+      function getCookie(name) {
+        var value = "; " + document.cookie;
+        var parts = value.split("; " + name + "=");
+        if (parts.length == 2) return parts.pop().split(";").shift();
+      }
+      function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+          var date = new Date();
+          date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+          expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+      }
+
+      $(".btnClose").click(function () {
+        updatePopupStatus();
+      });
+
+      var scrollTrigger = 0;
+      $(document).scroll(function () {
+        if (!popupTrigger) {
+          console.log("Disable scroll");
+          return;
+        }
+        if (!scrollTrigger) {
+          console.log("SCROLL TRIGGER");
+          scrollTrigger = 1;
+          setTimeout(function () {
+            //Step 1: Checks Cookie is enabled or not
+            var cookieCheck = getCookie("cookieBanner-agreed") ? 1 : 0;
+            if (cookieCheck) {
+              console.log("COOKIE IS AVAILABLE");
+
+              if (typeof getCookie("cookie-showPopup") == "undefined") {
+                console.log("cookie-showPopup not defined");
+                setCookie("cookie-showPopup", "1");
+              }
+
+              var showPopup = getCookie("cookie-showPopup");
+              console.log("showPopup", showPopup, getCookie("cookie-showPopup"));
+
+              if (showPopup == 1) {
+                console.log("SHOW POPUP and HANDEL IT in COOKIES");
+                showPopupBox();
+              } else {
+                console.log("DONOT SHOW POPUP and HANDEL IT in COOKIES");
+              }
+            } else {
+              // Cookie is not avaiable handel in PHP Session
+              console.log("COOKIE IS NOT AVAILABLE HANDEL in PHP");
+              var url = "popup/";
+              $.ajax({
+                url: url,
+                success: function success(result) {
+                  console.log(result);
+                  var data = JSON.parse(result);
+                  console.log(data.showPopup);
+                  if (data.showPopup == 1) {
+                    console.log("LAUNCH POPUP");
+                    showPopupBox();
+                  } else {
+                    console.log("STOP POPUP");
+                  }
+                }
+              });
+            }
+          }, 20000); // 20 Second
+        }
+      });
+    }
+  };
+
+  window.checkPopup = checkPopup;
+})(jQuery, window, document);
+
 ;(function ($, window, document) {
 
   var contact = {
@@ -871,7 +1013,17 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
       })(window, document, "script", "dataLayer", "GTM-KH6GQ88");
       console.log("Adobe DTM Header Start");
       // old script => "//assets.adobedtm.com/b46e318d845250834eda10c5a20827c045a4d76f/satelliteLib-0893390c40d93db48cc0d98a10c4fe9f90b72e2c.js"
-      this.loadScript("//assets.adobedtm.com/launch-ENc4322642c62a433b8800953e029d68b6-staging.min.js", function () {
+      var prodUrl = "//assets.adobedtm.com/b46e318d845250834eda10c5a20827c045a4d76f/satelliteLib-0893390c40d93db48cc0d98a10c4fe9f90b72e2c.js";
+      var url = "//assets.adobedtm.com/launch-ENc4322642c62a433b8800953e029d68b6-staging.min.js"; // non Prod URL;
+
+      if ($("#main").hasClass("live")) {
+        console.log("Prod URL");
+        url = prodUrl;
+      } else {
+        console.log("non-Prod URL");
+      }
+
+      this.loadScript(url, function () {
         //initialization code
         var my_awesome_script1 = document.createElement("script");
         my_awesome_script1.innerHTML = "_satellite.pageBottom();";
@@ -5820,6 +5972,7 @@ var Util = function ($) {
 
       dataVis.init();
       checkGDPR.init();
+      checkPopup.init();
 
       smartOutline.init();
       mainNavigation.init();
