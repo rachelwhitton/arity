@@ -1,4 +1,3 @@
-<?php return ?>
 <div id="thankyou_modal" class="blogPopup1">
     <div class="modal-dialog" style="text-align:center; color:#fff">
       <p>Thank you for joining.</p>
