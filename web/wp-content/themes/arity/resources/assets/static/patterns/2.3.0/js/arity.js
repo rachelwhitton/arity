@@ -778,7 +778,7 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
           if (screenWidth > 479) {
             hidden.animate({ right: "-100%" }, "slow").removeClass("visible");
           } else {
-            hidden.animate({ bottom: "-100%" }, "slow").removeClass("visible");
+            hidden.animate({ bottom: "-150%" }, "slow").removeClass("visible");
           }
         } else {
           if (screenWidth > 479) {

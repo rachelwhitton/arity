@@ -9082,9 +9082,9 @@ form .checkbox_container .checkmark:after {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  bottom: -100%;
+  bottom: -150%;
   color: #000;
-  height: 600px;
+  height: 505px;
   width: 310px;
   background: #023c57;
   /* Old browsers */
