@@ -771,21 +771,38 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
       }
 
       function showPopupBox() {
-        console.log("Me Clicked");
+        console.log("showPopupBox Clicked");
         var hidden = $(".blogPopup");
+        var screenWidth = $(window).width();
         if (hidden.hasClass("visible")) {
-          hidden.animate({ right: "-400px" }, "slow").removeClass("visible");
+          if (screenWidth > 479) {
+            hidden.animate({ right: "-100%" }, "slow").removeClass("visible");
+          } else {
+            hidden.animate({ bottom: "-100%" }, "slow").removeClass("visible");
+          }
         } else {
-          hidden.animate({ right: "0" }, "slow").addClass("visible");
+          if (screenWidth > 479) {
+            hidden.animate({ right: "0" }, "slow").addClass("visible");
+          } else {
+            hidden.animate({ bottom: "0" }, "slow").addClass("visible");
+          }
         }
       }
       function showPopupBox1() {
         console.log("Me Clicked");
         var hidden = $(".blogPopup1");
         if (hidden.hasClass("visible")) {
-          hidden.animate({ right: "-400px" }, "slow").removeClass("visible");
+          if (screenWidth > 479) {
+            hidden.animate({ right: "-100%" }, "slow").removeClass("visible");
+          } else {
+            hidden.animate({ bottom: "-100%" }, "slow").removeClass("visible");
+          }
         } else {
-          hidden.animate({ right: "0" }, "slow").addClass("visible");
+          if (screenWidth > 479) {
+            hidden.animate({ right: "0" }, "slow").addClass("visible");
+          } else {
+            hidden.animate({ bottom: "0" }, "slow").addClass("visible");
+          }
         }
       }
       function getCookie(name) {

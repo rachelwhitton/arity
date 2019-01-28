@@ -9079,11 +9079,13 @@ form .checkbox_container .checkmark:after {
 .blogPopup, .blogPopup1 {
   z-index: 300;
   position: fixed;
-  right: -400px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: -100%;
   color: #000;
-  height: 500px;
-  width: 400px;
-  top: 25%;
+  height: 600px;
+  width: 310px;
   background: #023c57;
   /* Old browsers */
   /* FF3.6-15 */
@@ -9093,6 +9095,57 @@ form .checkbox_container .checkmark:after {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#023c57', endColorstr='#011c2c',GradientType=0 );
   /* IE6-9 */
+}
+
+.blogPopup .formFields, .blogPopup1 .formFields {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.blogPopup .formFields .hideDiv, .blogPopup1 .formFields .hideDiv {
+  display: none;
+}
+
+@media screen and (min-width: 480px) {
+  .blogPopup .formFields, .blogPopup1 .formFields {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .blogPopup .formFields .hideDiv, .blogPopup1 .formFields .hideDiv {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .blogPopup, .blogPopup1 {
+    z-index: 300;
+    position: fixed;
+    right: -100%;
+    left: auto;
+    color: #000;
+    height: 500px;
+    width: 400px;
+    top: 25%;
+    -webkit-transform: initial;
+            transform: initial;
+    background: #023c57;
+    /* Old browsers */
+    /* FF3.6-15 */
+    /* Chrome10-25,Safari5.1-6 */
+    background: -webkit-gradient(linear, left top, left bottom, from(#023c57), color-stop(99%, #011c2c));
+    background: linear-gradient(to bottom, #023c57 0%, #011c2c 99%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#023c57', endColorstr='#011c2c',GradientType=0 );
+    /* IE6-9 */
+  }
+}
+
+.blogPopup .close [class^="icon-"], .blogPopup1 .close [class^="icon-"] {
+  fill: #fff !important;
 }
 
 .blogPopup1 {

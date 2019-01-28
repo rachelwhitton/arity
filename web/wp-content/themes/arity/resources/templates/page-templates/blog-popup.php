@@ -16,7 +16,7 @@
     <form id="myPopupForm" action="https://go.pardot.com/l/669483/2018-12-17/6sb" method="POST">
     <!-- Modal content-->
       <p>Stay ahead of the mobility curve</p>
-      <div style="color:#fff; display:flex">
+      <div class="formFields" style="color:#fff; display:flex">
         <div style="flex:1">
           <div class="form-group form-group--required">
             <label class="form-group-label" for="input_first_name">First name</label>
@@ -25,7 +25,7 @@
             <div class="form-control-feedback" data-error="invalid">Invalid</div>
           </div>
         </div>
-        <div>&nbsp;&nbsp;</div>
+        <div class="hideDiv">&nbsp;&nbsp;</div>
         <div style="flex:1">
           <div class="form-group form-group--required">
             <label class="form-group-label" for="input_last_name">Last name</label>
