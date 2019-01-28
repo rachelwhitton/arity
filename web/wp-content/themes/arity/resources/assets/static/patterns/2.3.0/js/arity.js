@@ -791,6 +791,7 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
       function showPopupBox1() {
         console.log("Me Clicked");
         var hidden = $(".blogPopup1");
+        var screenWidth = $(window).width();
         if (hidden.hasClass("visible")) {
           if (screenWidth > 479) {
             hidden.animate({ right: "-100%" }, "slow").removeClass("visible");
