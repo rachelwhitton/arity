@@ -15,7 +15,7 @@
     <div class="modal-dialog">
     <form id="myPopupForm" action="https://go.arity.com/l/669483/2018-12-17/6sb" method="POST">
     <!-- Modal content-->
-      <p>Stay ahead of the mobility curve</p>
+      <p style="font-size:17px;">Stay ahead of the mobility curve</p>
       <div class="formFields" style="color:#fff; display:flex">
         <div style="flex:1">
           <div class="form-group form-group--required">
@@ -43,7 +43,7 @@
         <div class="form-control-feedback" data-error="invalid">Please enter a valid email</div>
       </div>
 
-      <label class="checkbox_container">I’d like to be contacted with the latest news and offers from Arity
+      <label style="font-size:14px;" class="checkbox_container">I’d like to be contacted with the latest news and offers from Arity
       <input id="get_emails_option" name="get_emails_option" type="checkbox" />
           <span class="checkmark"></span>
       </label>
