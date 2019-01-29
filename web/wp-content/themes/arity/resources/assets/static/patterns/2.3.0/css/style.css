@@ -9122,7 +9122,7 @@ form .checkbox_container .checkmark:after {
 
 @media screen and (min-width: 480px) {
   .blogPopup, .blogPopup1 {
-    z-index: 300;
+    z-index: 1000;
     position: fixed;
     right: -100%;
     left: auto;
