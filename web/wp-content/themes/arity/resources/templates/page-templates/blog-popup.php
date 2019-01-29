@@ -37,7 +37,7 @@
       </div>
       
       <div class="form-group form-group--required">
-        <label class="form-group-label" for="input_email">Business Email</label>
+        <label class="form-group-label" for="input_email">Business email</label>
         <input type="email" class="form-control" name="email" id="input_email" placeholder="" required="">
         <div class="form-control-feedback" data-error="required">Please enter email</div>
         <div class="form-control-feedback" data-error="invalid">Please enter a valid email</div>
