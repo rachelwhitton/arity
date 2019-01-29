@@ -9077,7 +9077,7 @@ form .checkbox_container .checkmark:after {
 }
 
 .blogPopup, .blogPopup1 {
-  z-index: 300;
+  z-index: 1000;
   position: fixed;
   left: 50%;
   -webkit-transform: translateX(-50%);
