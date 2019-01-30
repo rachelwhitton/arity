@@ -1,9 +1,8 @@
 <?php
-header( 'Cache-Control: no-cache, must-revalidate, max-age=0' );
 namespace App\Theme;
-
 use function App\Theme\template;
 
+header( 'Cache-Control: no-cache, must-revalidate, max-age=0' );
 session_start();
 $_SESSION['myCookie'] = $_GET['myCookie'];
 $_SESSION['id'] = session_id();
