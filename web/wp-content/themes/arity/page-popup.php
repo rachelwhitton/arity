@@ -1,5 +1,5 @@
 <?php
-
+header( 'Cache-Control: no-cache, must-revalidate, max-age=0' );
 namespace App\Theme;
 
 use function App\Theme\template;
