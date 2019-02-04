@@ -834,6 +834,13 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
         if (!scrollTrigger) {
           console.log("SCROLL TRIGGER");
           scrollTrigger = 1;
+          var showPopupTime = $(".popupTime").attr("data-time");
+          console.log("showPopupTime: ", showPopupTime);
+          if (showPopupTime == 0) {
+            console.log("Stop Timer for showPopupTime: ", showPopupTime);
+            return;
+          }
+          console.log("Start Timer for showPopupTime: ", showPopupTime);
           setTimeout(function () {
             //Step 1: Checks Cookie is enabled or not
             var cookieCheck = getCookie("cookieBanner-agreed") ? 1 : 0;
@@ -873,7 +880,7 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
                 }
               });
             }
-          }, 20000); // 20 Second
+          }, showPopupTime * 1000); // 20 Second
         }
       });
     }

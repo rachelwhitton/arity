@@ -107,7 +107,8 @@ return [
         't12-privacy-policy' => 'T12 - Privacy Policy (Lang)',
         't13-smart-cities-usdot' => 'T13 - Smart Cities USDot',
         't14-cookies' => 'T14 - Cookies (Lang)',
-        't20-campaign-landing' => 'T20 - Campaign Landing'
+        't20-campaign-landing' => 'T20 - Campaign Landing',
+        't9-blog-post' => 'T9 Blog Article'
     ],
 
     /*

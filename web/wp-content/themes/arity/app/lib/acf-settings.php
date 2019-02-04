@@ -198,6 +198,7 @@ $module_builder->includeACFSettings('newsroom-item', 'module');
 $module_builder->includeACFSettings('data-vis', 'module');
 $module_builder->includeACFSettings('image-full-width', 'module');
 $module_builder->includeACFSettings('pardot-form', 'module');
+$module_builder->includeACFSettings('blog-popup', 'module');
 
 //archive candidate
 

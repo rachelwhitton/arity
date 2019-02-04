@@ -14,6 +14,8 @@ namespace App\Theme;
 
 <?php get_header(); ?>
 
+<div class="popupTime" data-time="<?= get_field('time')!=''?get_field('time'):'20'; ?>"></div>
+
 <?php do_action('theme/before_content') ?>
 <div id="main" class="site-content <?=$_ENV['PANTHEON_ENVIRONMENT']?>">
 
@@ -246,5 +248,4 @@ $wp_query = new \WP_Query( $args );
 <?php do_action('theme/after_content') ?>
 
 <?php get_footer(); ?>
-
 <?php require_once('blog-popup.php');?>

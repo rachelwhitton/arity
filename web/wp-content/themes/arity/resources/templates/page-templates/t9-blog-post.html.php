@@ -94,4 +94,5 @@ if($blauthor){
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a6f42f0b4c9f84d"></script>
 <?php get_footer(); ?>
 
+<div class="popupTime" data-time="<?= get_field('time')!=''?get_field('time'):'20'; ?>"></div>
 <?php require_once('blog-popup.php');?>
