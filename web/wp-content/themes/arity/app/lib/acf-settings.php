@@ -165,6 +165,7 @@ $module_builder->includeACFSettings('icon-only-stack', 'component');
 |
 */
 $module_builder->includeACFSettings('accordion', 'module');
+$module_builder->includeACFSettings('addthis-social-sharing', 'module');
 $module_builder->includeACFSettings('body-one-column', 'module');
 $module_builder->includeACFSettings('body-two-column', 'module');
 $module_builder->includeACFSettings('body-inset-ten-col', 'module');
