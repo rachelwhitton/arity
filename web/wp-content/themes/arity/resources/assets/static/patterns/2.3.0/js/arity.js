@@ -922,6 +922,7 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
           return;
         }
       */
+      console.log(this);
       this._options = jQuery.extend(this.defaults, opts);
 
       if (app.env(["development", "staging"]) && getParam("debug")) {
@@ -985,7 +986,6 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
     },
     render: function render() {
       //console.log(this._.isGDPR);
-
       //this.$el = $(this._.el);
 
       if (this._.isGDPR) {
@@ -996,6 +996,10 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
 
       $("body").append(this.$el);
       this.$close = $(".close", this.$el);
+
+      if (this._.isGDPR) {
+        this.$optOut = $(".opt-out", this.$el);
+      }
 
       this.eventListeners();
     },
@@ -1139,24 +1143,50 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
       this.setAgree(true);
       this.close();
     },
+    optOutAndClose: function optOutAndClose() {
+      debug("cookieBanner.optOutAndClose:");
+      this.setAgree(false);
+      this.close();
+    },
+
+    // template() {
+    //   let baseUrl = window.location.origin;
+    //   var html =
+    //     "" +
+    //     '<div class="cookie-banner animate-out">' +
+    //     '  <div class="cookie-banner__close close" role="button"><svg class="icon-svg" title="" role="img"><use xlink:href="#close"></use></svg></div>' +
+    //     '  <div class="cookie-banner__message">Arity.com uses cookies to improve your site experience. If you would like to know more, please read our <a href="' +
+    //     baseUrl +
+    //     '/privacy/">privacy statement</a>.</div>' +
+    //     "</div>";
+
+    //   return html;
+    // },
     template: function template() {
       var baseUrl = window.location.origin;
-      var html = "" + '<div class="cookie-banner animate-out">' + '  <div class="cookie-banner__close close" role="button"><svg class="icon-svg" title="" role="img"><use xlink:href="#close"></use></svg></div>' + '  <div class="cookie-banner__message">Arity.com uses cookies to improve your site experience. If you would like to know more, please read our <a href="' + baseUrl + '/privacy/">privacy statement</a>.</div>' + "</div>";
+      var html = "" + '<div class="cookie-banner animate-out">' + '  <div class="cookie-banner__gdpr-optout opt-out" role="button"><svg class="icon-svg" title="" role="img"><use xlink:href="#close"></use></svg></div>' + '  <div class="cookie-banner__message GDPR">' + '      <div class="container">' + '          <div class="row">' + '               <div class="col-md-8">' + "                   <strong>Arity.com uses cookies to improve your site experience. </strong><br/><br/>" + '                We use cookies to improve your experience on the Arity website. If you want to learn more about how we use cookies and how you can control them, read our <a href="' + baseUrl + '/cookies/">Cookie Statement</a>. If you accept the terms and conditions of the Cookie Statement, please click the button to continue to arity.com' + "                </div>" + '               <div class="col-md-4">' + '                  <div class="close" role="button"><br/><br/><button type="button" class="button button--primary">I accept cookies</button></div>' + "                </div>" + "          </div>" + "      </div>" + "  </div>" + "</div>";
 
       return html;
     },
     templateGDPR: function templateGDPR() {
       var baseUrl = window.location.origin;
-      var html = "" + '<div class="cookie-banner animate-out">' + '  <div class="cookie-banner__message GDPR"><div class="container">' + '          <div class="row">' + '               <div class="col-md-8">' + "                 <strong>Arity.com uses cookies to improve your site experience. </strong><br/><br/>" + '                We use cookies to improve your experience on the Arity website. If you want to learn more about how we use cookies and how you can control them, read our <a href="' + baseUrl + '/cookies/">Cookie Statement</a>. If you accept the terms and conditions of the Cookie Statement, please click the button to continue to arity.com' + "                </div>" + '               <div class="col-md-4">' + '                  <div class="close" role="button"><br/><br/><button type="button" class="button button--primary">I accept cookies</button></div>' + "                </div>" + "          </div>" + "      </div>" + "  </div>" + "</div>";
+      var html = "" + '<div class="cookie-banner animate-out">' + '  <div class="cookie-banner__gdpr-optout opt-out" role="button"><svg class="icon-svg" title="" role="img"><use xlink:href="#close"></use></svg></div>' + '  <div class="cookie-banner__message GDPR"><div class="container">' + '          <div class="row">' + '               <div class="col-md-8">' + "                 <strong>Arity.com uses cookies to improve your site experience. </strong><br/><br/>" + '                We use cookies to improve your experience on the Arity website. If you want to learn more about how we use cookies and how you can control them, read our <a href="' + baseUrl + '/cookies/">Cookie Statement</a>. If you accept the terms and conditions of the Cookie Statement, please click the button to continue to arity.com' + "                </div>" + '               <div class="col-md-4">' + '                  <div class="close" role="button"><br/><br/><button type="button" class="button button--primary">I accept cookies</button></div>' + "                </div>" + "          </div>" + "      </div>" + "  </div>" + "</div>";
 
       return html;
     },
     eventListeners: function eventListeners() {
       this.$close.on("click", this.onCloseTrigger.bind(this));
+      if (this.$optOut) {
+        this.$optOut.on("click", this.onOptOutTrigger.bind(this));
+      }
     },
     onCloseTrigger: function onCloseTrigger(evt) {
       evt.preventDefault();
       this.agreeAndClose();
+    },
+    onOptOutTrigger: function onOptOutTrigger(evt) {
+      evt.preventDefault();
+      this.optOutAndClose();
     }
   };
 

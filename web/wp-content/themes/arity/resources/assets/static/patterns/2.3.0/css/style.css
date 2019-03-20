@@ -8870,7 +8870,7 @@ form .form-control ::-webkit-input-placeholder {
   color: #63727E;
 }
 
-form .form-control ::-ms-input-placeholder {
+form .form-control :-ms-input-placeholder {
   color: #63727E;
 }
 
@@ -9342,7 +9342,7 @@ form .checkbox_container .checkmark:after {
   transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
 }
 
-.cookie-banner__close {
+.cookie-banner__close, .cookie-banner__gdpr-optout {
   position: absolute;
   top: 50%;
   right: 30px;
@@ -9354,7 +9354,7 @@ form .checkbox_container .checkmark:after {
 }
 
 @media screen and (max-width: 960px) {
-  .cookie-banner__close {
+  .cookie-banner__close, .cookie-banner__gdpr-optout {
     right: 15px;
     top: 10px;
     -webkit-transform: translateY(0);
@@ -9363,38 +9363,49 @@ form .checkbox_container .checkmark:after {
 }
 
 .cookie-banner__close [class*=" icon-"],
-.cookie-banner__close [class^="icon-"] {
+.cookie-banner__close [class^="icon-"], .cookie-banner__gdpr-optout [class*=" icon-"],
+.cookie-banner__gdpr-optout [class^="icon-"] {
   display: inline-block;
   width: 18px;
   height: 18px;
   fill: #FFFFFF;
 }
 
-.cookie-banner__close:hover {
+.cookie-banner__close:hover, .cookie-banner__gdpr-optout:hover {
   color: #0070D6;
 }
 
 .cookie-banner__close:hover [class*=" icon-"],
-.cookie-banner__close:hover [class^="icon-"] {
+.cookie-banner__close:hover [class^="icon-"], .cookie-banner__gdpr-optout:hover [class*=" icon-"],
+.cookie-banner__gdpr-optout:hover [class^="icon-"] {
   fill: #0070D6;
 }
 
 @media (hover: none) {
-  .cookie-banner__close:hover {
+  .cookie-banner__close:hover, .cookie-banner__gdpr-optout:hover {
     color: #FFFFFF;
   }
   .cookie-banner__close:hover [class*=" icon-"],
-  .cookie-banner__close:hover [class^="icon-"] {
+  .cookie-banner__close:hover [class^="icon-"], .cookie-banner__gdpr-optout:hover [class*=" icon-"],
+  .cookie-banner__gdpr-optout:hover [class^="icon-"] {
     fill: #FFFFFF;
   }
-  .cookie-banner__close.active, .cookie-banner__close:active {
+  .cookie-banner__close.active, .cookie-banner__close:active, .cookie-banner__gdpr-optout.active, .cookie-banner__gdpr-optout:active {
     color: #0070D6;
   }
   .cookie-banner__close.active [class*=" icon-"],
   .cookie-banner__close.active [class^="icon-"], .cookie-banner__close:active [class*=" icon-"],
-  .cookie-banner__close:active [class^="icon-"] {
+  .cookie-banner__close:active [class^="icon-"], .cookie-banner__gdpr-optout.active [class*=" icon-"],
+  .cookie-banner__gdpr-optout.active [class^="icon-"], .cookie-banner__gdpr-optout:active [class*=" icon-"],
+  .cookie-banner__gdpr-optout:active [class^="icon-"] {
     fill: #0070D6;
   }
+}
+
+.cookie-banner__gdpr-optout {
+  top: 20px !important;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .cookie-banner .GDPR {
