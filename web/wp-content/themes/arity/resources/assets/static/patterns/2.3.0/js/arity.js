@@ -788,6 +788,7 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
           }
         }
       }
+
       function showPopupBox1() {
         console.log("Me Clicked");
         var hidden = $(".blogPopup1");
@@ -806,11 +807,13 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
           }
         }
       }
+
       function getCookie(name) {
         var value = "; " + document.cookie;
         var parts = value.split("; " + name + "=");
         if (parts.length == 2) return parts.pop().split(";").shift();
       }
+
       function setCookie(name, value, days) {
         var expires = "";
         if (days) {
@@ -856,14 +859,14 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
               console.log("showPopup", showPopup, getCookie("cookie-showPopup"));
 
               if (showPopup == 1) {
-                console.log("SHOW POPUP and HANDEL IT in COOKIES");
+                console.log("SHOW POPUP and HANDLE IT in COOKIES");
                 showPopupBox();
               } else {
-                console.log("DONOT SHOW POPUP and HANDEL IT in COOKIES");
+                console.log("DO NOT SHOW POPUP and HANDLE IT in COOKIES");
               }
             } else {
-              // Cookie is not avaiable handel in PHP Session
-              console.log("COOKIE IS NOT AVAILABLE HANDEL in PHP");
+              // Cookie is not avaiable handle in PHP Session
+              console.log("COOKIE IS NOT AVAILABLE HANDLE in PHP");
               var url = "popup/";
               $.ajax({
                 url: url,
@@ -922,7 +925,6 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
           return;
         }
       */
-      console.log(this);
       this._options = jQuery.extend(this.defaults, opts);
 
       if (app.env(["development", "staging"]) && getParam("debug")) {
@@ -1145,32 +1147,18 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
     },
     optOutAndClose: function optOutAndClose() {
       debug("cookieBanner.optOutAndClose:");
-      this.setAgree(false);
+      this.setSeen(true);
       this.close();
     },
-
-    // template() {
-    //   let baseUrl = window.location.origin;
-    //   var html =
-    //     "" +
-    //     '<div class="cookie-banner animate-out">' +
-    //     '  <div class="cookie-banner__close close" role="button"><svg class="icon-svg" title="" role="img"><use xlink:href="#close"></use></svg></div>' +
-    //     '  <div class="cookie-banner__message">Arity.com uses cookies to improve your site experience. If you would like to know more, please read our <a href="' +
-    //     baseUrl +
-    //     '/privacy/">privacy statement</a>.</div>' +
-    //     "</div>";
-
-    //   return html;
-    // },
     template: function template() {
       var baseUrl = window.location.origin;
-      var html = "" + '<div class="cookie-banner animate-out">' + '  <div class="cookie-banner__gdpr-optout opt-out" role="button"><svg class="icon-svg" title="" role="img"><use xlink:href="#close"></use></svg></div>' + '  <div class="cookie-banner__message GDPR">' + '      <div class="container">' + '          <div class="row">' + '               <div class="col-md-8">' + "                   <strong>Arity.com uses cookies to improve your site experience. </strong><br/><br/>" + '                We use cookies to improve your experience on the Arity website. If you want to learn more about how we use cookies and how you can control them, read our <a href="' + baseUrl + '/cookies/">Cookie Statement</a>. If you accept the terms and conditions of the Cookie Statement, please click the button to continue to arity.com' + "                </div>" + '               <div class="col-md-4">' + '                  <div class="close" role="button"><br/><br/><button type="button" class="button button--primary">I accept cookies</button></div>' + "                </div>" + "          </div>" + "      </div>" + "  </div>" + "</div>";
+      var html = "" + '<div class="cookie-banner animate-out">' + '  <div class="cookie-banner__close close" role="button"><svg class="icon-svg" title="" role="img"><use xlink:href="#close"></use></svg></div>' + '  <div class="cookie-banner__message">Arity.com uses cookies to improve your site experience. If you would like to know more, please read our <a href="' + baseUrl + '/privacy/">privacy statement</a>.</div>' + "</div>";
 
       return html;
     },
     templateGDPR: function templateGDPR() {
       var baseUrl = window.location.origin;
-      var html = "" + '<div class="cookie-banner animate-out">' + '  <div class="cookie-banner__gdpr-optout opt-out" role="button"><svg class="icon-svg" title="" role="img"><use xlink:href="#close"></use></svg></div>' + '  <div class="cookie-banner__message GDPR"><div class="container">' + '          <div class="row">' + '               <div class="col-md-8">' + "                 <strong>Arity.com uses cookies to improve your site experience. </strong><br/><br/>" + '                We use cookies to improve your experience on the Arity website. If you want to learn more about how we use cookies and how you can control them, read our <a href="' + baseUrl + '/cookies/">Cookie Statement</a>. If you accept the terms and conditions of the Cookie Statement, please click the button to continue to arity.com' + "                </div>" + '               <div class="col-md-4">' + '                  <div class="close" role="button"><br/><br/><button type="button" class="button button--primary">I accept cookies</button></div>' + "                </div>" + "          </div>" + "      </div>" + "  </div>" + "</div>";
+      var html = "" + '<div class="cookie-banner animate-out">' + '  <div class="cookie-banner__gdpr-optout opt-out" role="button"><svg class="icon-svg" title="" role="img"><use xlink:href="#close"></use></svg></div>' + '  <div class="cookie-banner__message GDPR">' + '      <div class="container">' + '          <div class="row">' + '               <div class="col-md-8">' + "                   <strong>Arity.com uses cookies to improve your site experience. </strong><br/><br/>" + '                We use cookies to improve your experience on the Arity website. If you want to learn more about how we use cookies and how you can control them, read our <a href="' + baseUrl + '/cookies/">Cookie Statement</a>. If you accept the terms and conditions of the Cookie Statement, please click the button to continue to arity.com' + "                </div>" + '               <div class="col-md-4">' + '                  <div class="close" role="button"><br/><br/><button type="button" class="button button--primary">I accept cookies</button></div>' + "                </div>" + "          </div>" + "      </div>" + "  </div>" + "</div>";
 
       return html;
     },
