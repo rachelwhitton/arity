@@ -1076,7 +1076,7 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
       }
     },
     getOptOut: function getOptOut() {
-      if (this._.options.debug) {
+      if (this._options.debug) {
         return false;
       }
       if (!this._.cookies["optout"]) {
