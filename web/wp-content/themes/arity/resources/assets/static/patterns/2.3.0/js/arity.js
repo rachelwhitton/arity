@@ -925,12 +925,14 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
           return;
         }
       */
-      console.log('ENV URL: ' + window.location.href);
       this._options = jQuery.extend(this.defaults, opts);
 
       if (app.env(["development", "staging"]) && getParam("debug")) {
         this._options.debug = true;
       }
+
+      // SET THIS TO NULL WHEN DEPLOYING TO LIVE
+      this._options.devRegion = null;
 
       debug("cookieBanner.init: start", this._options);
 
@@ -945,6 +947,11 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
       this._.elGDPR = this.templateGDPR();
       this._.isGDPR = false;
 
+      console.log('this._.cookies["agreed"]: ' + this._.cookies["agreed"]);
+      console.log('cookieBanner-agreed: ' + this.cookie.get("cookieBanner-agreed") || null);
+      console.log('this._.cookies["optout"]: ' + this._.cookies["optout"]);
+      console.log('cookieBanner-optout: ' + this.cookie.get("cookieBanner-optout") || null);
+
       if (!this.getAgreed()) {
         var that = this;
         var url = "/geoip/";
@@ -957,7 +964,7 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
 
           var currentCountry = data.trim();
           // console.log('Header found country: ' + currentCountry);
-          if (countryList.indexOf(currentCountry) !== -1) {
+          if (countryList.indexOf(currentCountry) !== -1 || that._options.devRegion == 'GDPR') {
             console.log("GDPR COUNTRY");
             that._.isGDPR = true;
 
@@ -974,6 +981,7 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
           } else {
             // console.log('Not in array');
             console.log("NOT A GDPR COUNTRY");
+            console.log('init() → initGTag()');
             that.initGTag();
             that.render();
           }
@@ -1111,11 +1119,13 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
         return false;
       }
 
-      if (!this._.cookies["agreed"]) {
-        this._.cookies["agreed"] = this.cookie.get("cookieBanner-agreed") || false;
+      if (!this.cookie.get("cookieBanner-agreed") || this.cookie.get("cookieBanner-agreed") == 0) {
+        this._.cookies["agreed"] = false;
       }
-
-      if (this._.cookies["agreed"]) {
+      console.log('EVAL this.cookie.get("cookieBanner-agreed"): ' + this.cookie.get("cookieBanner-agreed"));
+      if (this.cookie.get("cookieBanner-agreed") == 1) {
+        this._.cookies["agreed"] = true;
+        console.log('getAgreed() → initGTag()');
         this.initGTag();
       }
 
@@ -1132,6 +1142,7 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
       this._.cookies["agreed"] = bool;
       this.cookie.set("cookieBanner-agreed", boolNum, this._options.expires, this._options.cookiePath, this._options.cookieDomain !== "" ? this._options.cookieDomain : "", this._options.cookieSecure ? true : false);
       if (bool) {
+        console.log('setAgree() → initGTag()');
         this.initGTag();
       }
     },
