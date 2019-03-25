@@ -969,6 +969,7 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
               that.render();
             } else {
               console.log("GDPR USER HAS OPTED OUT OF COOKIE TRACKING");
+              return;
             }
           } else {
             // console.log('Not in array');
@@ -1103,6 +1104,7 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
 
       this._.cookies["optout"] = bool;
       this.cookie.set("cookieBanner-optout", boolNum, this._options.expires, this._options.cookiePath, this._options.cookieDomain !== "" ? this._options.cookieDomain : "", this._options.cookieSecure ? true : false);
+      this.setAgree(false);
     },
     getAgreed: function getAgreed() {
       if (this._options.debug) {
@@ -1129,7 +1131,9 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
 
       this._.cookies["agreed"] = bool;
       this.cookie.set("cookieBanner-agreed", boolNum, this._options.expires, this._options.cookiePath, this._options.cookieDomain !== "" ? this._options.cookieDomain : "", this._options.cookieSecure ? true : false);
-      this.initGTag();
+      if (bool) {
+        this.initGTag();
+      }
     },
     getSeen: function getSeen() {
       if (!this._.cookies["seen"]) {
