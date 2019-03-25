@@ -965,7 +965,7 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
             if (typeof element != "undefined" && element != null) {
               document.getElementById("00Nf400000RFoMR").checked = false;
             }
-            if (!this.getOptOut()) {
+            if (!that.getOptOut()) {
               that.render();
             } else {
               console.log("GDPR USER HAS OPTED OUT OF COOKIE TRACKING");
