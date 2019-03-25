@@ -925,6 +925,7 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
           return;
         }
       */
+      console.log('ENV URL: ' + window.location.href);
       this._options = jQuery.extend(this.defaults, opts);
 
       if (app.env(["development", "staging"]) && getParam("debug")) {
@@ -944,7 +945,7 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
       this._.elGDPR = this.templateGDPR();
       this._.isGDPR = false;
 
-      if (!this.getAgreed() || !this.getOptOut()) {
+      if (!this.getAgreed()) {
         var that = this;
         var url = "/geoip/";
         //var url = "https://dev.arity/geoip/";
@@ -964,8 +965,11 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
             if (typeof element != "undefined" && element != null) {
               document.getElementById("00Nf400000RFoMR").checked = false;
             }
-
-            that.render();
+            if (!this.getOptOut()) {
+              that.render();
+            } else {
+              console.log("GDPR USER HAS OPTED OUT OF COOKIE TRACKING");
+            }
           } else {
             // console.log('Not in array');
             console.log("NOT A GDPR COUNTRY");
