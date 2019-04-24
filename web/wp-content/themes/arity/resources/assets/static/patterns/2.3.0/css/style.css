@@ -8870,7 +8870,7 @@ form .form-control ::-webkit-input-placeholder {
   color: #63727E;
 }
 
-form .form-control :-ms-input-placeholder {
+form .form-control ::-ms-input-placeholder {
   color: #63727E;
 }
 
@@ -12352,6 +12352,7 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   padding-left: 15px;
   padding-right: 15px;
   text-align: center;
+  margin: auto;
 }
 
 .promo {
