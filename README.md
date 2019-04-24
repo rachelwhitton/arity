@@ -67,13 +67,15 @@ Add this line -> export PATH="/Applications/MAMP/bin/php/php{{php_version}}/bin:
 Or somehow install PHP so it doesn't use your machine's default version. Homebrew is one option. PHP 7.0.x or higher is required for Composer.
 
 ### Add Host
-* Go to Hosts and add 'arity.dev' as the Host name and choose the `web` directory in this project as the document root.
-* Navigate to the SSL tab and enable SSL by adding the crt and key files located in this repo. Be sure to check the SSL checkbox as well.
+* Go to Hosts and add 'local.arity' as the Host name and choose the `web` directory in this project as the document root.
+* Navigate to the SSL tab and enable SSL by adding the crt and key files located in this repo. Be sure to check the SSL checkbox as well. Alternatively, you can have [MAMP PRO install SSL certs](https://documentation.mamp.info/en/MAMP-PRO-Mac/Settings/Hosts/SSL/) as part of the installation
 * Restart servers.
 
 ### Better SSL, Add VSA CA cert
 
-Follow the readme instructions here: https://bitbucket.org/vsapartners/vsadev-ca-cert/. Using a CA Cert allows green certificates for local development, without it your cert will be red and your browser will prompt a security warning. The cert installation is only required once and can be shared across projects if setup properly. Definitely nice to have but not required.
+Follow the README instructions [here](https://bitbucket.org/vsapartners/vsadev-ca-cert/). Using a CA Cert allows green certificates for local development. Without it your cert will be red and your browser will prompt a security warning. The cert installation is only required once and can be shared across projects if setup properly. Definitely nice to have but not required.
+
+MAMP PRO users can install SSL certs through the MAMP interface. [See this page](https://documentation.mamp.info/en/MAMP-PRO-Mac/Settings/Hosts/SSL/) for more information.
 
 ### Using external images from localhost for local development environment
 
@@ -132,7 +134,7 @@ composer install
 
 ### WP Admin
 
-Visit https://arity.dev/wp-admin Login with your admin credentials — refer to LastPass Shared-Arity Site folder if you don’t have credentials.
+Visit https://local.arity/wp-admin Login with your admin credentials — refer to LastPass Shared-Arity Site folder if you don’t have credentials.
 
 ### Migrate DB Pro
 

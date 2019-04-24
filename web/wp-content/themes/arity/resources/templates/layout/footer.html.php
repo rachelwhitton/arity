@@ -34,11 +34,11 @@ namespace App\Theme;
               <use xlink:href="#email"></use>
             </svg> Email press inquiries
           </a>
-          <a href="https://www.arity.com/wp-content/uploads/2018/04/arity-press-kit.zip" class="ar-element button button--footer">
+          <!-- <a href="https://www.arity.com/wp-content/uploads/2018/04/arity-press-kit.zip" class="ar-element button button--footer">
             <svg class="site-footer__icon icon-svg" title="" role="img">
               <use xlink:href="#download"></use>
             </svg> Download the press kit
-          </a>
+          </a> -->
           <a href="<?= home_url('newsroom/'); ?>" class="ar-element button button--footer">
             <svg class="site-footer__icon icon-svg" title="" role="img">
               <use xlink:href="#news"></use>
