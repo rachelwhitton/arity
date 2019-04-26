@@ -5,7 +5,8 @@ Authors: [Ryan Powszok](mailto:rpowszok@vsapartners.com), [Andrew Falconer](mail
 
 Editors: [Alberto Cristancho](mailto:acristancho@vsapartners.com)
 
-Last Updated: 07/24/2018 Created: 05/15/2017
+Last Updated: 04/24/2019  
+Created: 05/15/2017
 
 ---
 ## Helpful URLs
@@ -53,11 +54,11 @@ project/                  # → Root folder for the project.
 ## Installation using MAMP
 
 ### Setup
-* Go to Languages PHP and make sure 7.0.x is the default version. Take note of which version of PHP you chose.
+* Go to Languages PHP and make sure 7.0.x or higher is the default version. Take note of which version of PHP you chose.
 * Optional. Go to Languages PHP and make sure Extensions "Xdebug" is checked. This will provide better options for error debugging.
 
 ### Add MAMP PHP to your path
-See https://indigotree.co.uk/getting-wp-cli-work-mamp
+See [https://indigotree.co.uk/getting-wp-cli-work-mamp](https://indigotree.co.uk/getting-wp-cli-work-mamp)
 
 ```
 $ vi ~/.bash_profile # or vi ~/.profile
@@ -142,7 +143,7 @@ Visit https://local.arity/wp-admin Login with your admin credentials — refer t
 
 ### Licenses
 
-[ACF Pro](https://docs.google.com/document/d/1GBwvOP2YCT7Fw06j0DkNOlCEYtnj4bU1Mefu0CrI0j4/view)<br> 
+[ACF Pro](https://docs.google.com/document/d/1GBwvOP2YCT7Fw06j0DkNOlCEYtnj4bU1Mefu0CrI0j4/view)  
 [Migrate DB Pro](https://docs.google.com/document/d/1PF6eci8T-2dyWRBV7gG_3GRVfhz58eEIdWXP6QOtL4k/view)
 
 ---
@@ -153,7 +154,8 @@ Visit https://local.arity/wp-admin Login with your admin credentials — refer t
 #### Install Terminus - [https://pantheon.io/docs/terminus/](https://pantheon.io/docs/terminus/)
 
 You will need to create a machine-token:
-* Login to your pantheon account
+
+* Login to your Pantheon account
 * Go to "My Dashboard" by first clicking on your profile image in the top right
 * Click on the "Account" tab
 * Click on "Machine Tokens" in the left sidebar navigation
