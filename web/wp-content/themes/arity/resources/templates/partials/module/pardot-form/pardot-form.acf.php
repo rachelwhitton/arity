@@ -11,7 +11,7 @@ $fields = [
 
     // Layout
     acf_select([
-      'label' => 'Media type',
+      'label' => 'Pardot form',
       'name' => 'pardot-form__content-chooser',
       'key' => 'pardot-form_content-chooser',
       'instructions' => '',
