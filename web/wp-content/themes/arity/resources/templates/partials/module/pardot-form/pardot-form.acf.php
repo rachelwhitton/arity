@@ -21,13 +21,13 @@ $fields = [
       'ui' => 1,
       'default_value' => 'layout__image',
       'choices' => [
-        'layout__pardot-form' => 'Pardot Form',
+        'layout__pardot-form' => 'Pardot Form Builder',
       ]
     ]),
     acf_text([
       'name' => 'pardot-form-post',
-      'label' => 'pardot-form-post',
-      //'instructions' => 'Add the employee name.',
+      'label' => 'Endpoint URL',
+      'instructions' => 'Pardot form handler: form submission posts to this URL',
       'conditional_logic' => [
         [
           [
@@ -41,22 +41,23 @@ $fields = [
     acf_repeater([
         'name' => 'pardot-form',
         'label' => 'Form Fields',
-        //'instructions' => 'Add the employees.',
+        // 'instructions' => '',
         'min' => 0,
         'max' => 100,
         'layout' => 'block', // block, row or table
+        'button_label' => 'Add Form Input',
         'sub_fields' => [
             acf_select([
               'name' => 'field_type',
               'label' => 'Field Type',
-              //'instructions' => 'Select the background color.',
+              //'instructions' => '',
               'choices' => [
-                  'textbox' => 'textbox',
-                  'textarea' => 'textarea',
-                  'hidden' => 'hidden',
-                  'select' => 'select',
-                  'radio' => 'radio',
-                  'check' => 'check',
+                  'textbox' => 'Text box',
+                  'textarea' => 'Text area',
+                  'hidden' => 'Hidden field',
+                  'select' => 'Select pulldown',
+                  'radio' => 'Radio button',
+                  'check' => 'Checkbox',
               ],
               'default_value' => [
                   'textbox',
@@ -65,8 +66,8 @@ $fields = [
             // pardot-form-check
             acf_text([
               'name' => 'pardot-form-check-body',
-              'label' => 'pardot-form-check-body',
-              //'instructions' => 'Add the employee name.',
+              'label' => 'Checkbox section title',
+              //'instructions' => '',
               'conditional_logic' => [
                 [
                   [
@@ -79,29 +80,30 @@ $fields = [
             ]),
             acf_repeater([
               'name' => 'pardot-form-check',
-              'label' => 'check Fields',
-              //'instructions' => 'Add the employees.',
+              'label' => 'Checkbox options',
+              //'instructions' => '',
               'min' => 0,
               'max' => 1000,
               'layout' => 'block', // block, row or table
+              'button_label' => 'Add checkbox input',
               'sub_fields' => [
                   acf_checkbox([
                       'name' => 'check-by-default',
-                      'label' => 'Select by Default',
-                      //'instructions' => 'Select the border color.',
+                      'label' => 'Select by default',
+                      //'instructions' => '',
                       'choices' => [
                           '1' => ''
                       ],
                   ]),
                   acf_text([
                       'name' => 'check-label',
-                      'label' => 'check-label',
-                      //'instructions' => 'Add the employee name.',
+                      'label' => 'Checkbox input label',
+                      //'instructions' => '',
                   ]),
                   acf_text([
                     'name' => 'check-value',
-                    'label' => 'check-value',
-                    //'instructions' => 'Add the employee name.',
+                    'label' => 'Checkbox input value',
+                    //'instructions' => '',
                   ]),
               ],
               'conditional_logic' => [
@@ -118,7 +120,7 @@ $fields = [
             acf_text([
               'name' => 'pardot-form-radio-body',
               'label' => 'pardot-form-radio-body',
-              //'instructions' => 'Add the employee name.',
+              //'instructions' => '',
               'conditional_logic' => [
                 [
                   [
@@ -132,7 +134,7 @@ $fields = [
             acf_repeater([
               'name' => 'pardot-form-radio',
               'label' => 'Select Fields',
-              //'instructions' => 'Add the employees.',
+              //'instructions' => '',
               'min' => 0,
               'max' => 1000,
               'layout' => 'block', // block, row or table
@@ -140,7 +142,7 @@ $fields = [
                     acf_checkbox([
                       'name' => 'radio-by-default',
                       'label' => 'Select by Default',
-                      //'instructions' => 'Select the border color.',
+                      //'instructions' => '',
                       'choices' => [
                           '1' => ''
                       ],
@@ -148,12 +150,12 @@ $fields = [
                   acf_text([
                       'name' => 'radio-label',
                       'label' => 'radio-label',
-                      //'instructions' => 'Add the employee name.',
+                      //'instructions' => '',
                   ]),
                   acf_text([
                     'name' => 'radio-value',
                     'label' => 'radio-value',
-                    //'instructions' => 'Add the employee name.',
+                    //'instructions' => '',
                   ]),
               ],
               'conditional_logic' => [
@@ -170,7 +172,7 @@ $fields = [
             acf_repeater([
                 'name' => 'pardot-form-select',
                 'label' => 'Select Fields',
-                //'instructions' => 'Add the employees.',
+                //'instructions' => '',
 
                 'min' => 0,
                 'max' => 1000,
@@ -179,7 +181,7 @@ $fields = [
                       acf_checkbox([
                         'name' => 'select-by-default',
                         'label' => 'Select by Default',
-                        //'instructions' => 'Select the border color.',
+                        //'instructions' => '',
                         'choices' => [
                             '1' => ''
                         ],
@@ -187,12 +189,12 @@ $fields = [
                     acf_text([
                         'name' => 'select-label',
                         'label' => 'select-label',
-                        //'instructions' => 'Add the employee name.',
+                        //'instructions' => '',
                     ]),
                     acf_text([
                       'name' => 'select-value',
                       'label' => 'select-value',
-                      //'instructions' => 'Add the employee name.',
+                      //'instructions' => '',
                     ]),
                 ],
                 'conditional_logic' => [
@@ -209,22 +211,22 @@ $fields = [
             acf_text([
                 'name' => 'field_label',
                 'label' => 'Field label',
-                //'instructions' => 'Add the employee name.',
+                //'instructions' => '',
             ]),
             acf_text([
               'name' => 'field_id',
               'label' => 'Field id',
-              //'instructions' => 'Add the employee name.',
+              //'instructions' => '',
             ]),
             acf_text([
               'name' => 'field_value',
               'label' => 'Field value',
-              //'instructions' => 'Add the employee name.',
+              //'instructions' => '',
             ]),
             acf_checkbox([
               'name' => 'field_required',
               'label' => 'field_required',
-              //'instructions' => 'Select the border color.',
+              //'instructions' => '',
               'choices' => [
                   '1' => ''
               ],
@@ -232,7 +234,7 @@ $fields = [
             acf_text([
               'name' => 'field_error_required',
               'label' => 'field_error_required',
-              //'instructions' => 'Add the employee name.',
+              //'instructions' => '',
               'conditional_logic' => [
                 [
                   [
@@ -246,7 +248,7 @@ $fields = [
             acf_text([
               'name' => 'field_error_invalid',
               'label' => 'field_error_invalid',
-              //'instructions' => 'Add the employee name.',
+              //'instructions' => '',
               'conditional_logic' => [
                 [
                   [
@@ -272,7 +274,7 @@ $fields = [
     acf_checkbox([
       'name' => 'pardot-form-use_captcha',
       'label' => 'pardot-form-use_captcha',
-      //'instructions' => 'Select the border color.',
+      //'instructions' => '',
       'choices' => [
           '1' => ''
       ],
@@ -289,7 +291,7 @@ $fields = [
     acf_text([
       'name' => 'pardot-form-btntext',
       'label' => 'pardot-form-btntext',
-      //'instructions' => 'Add the employee name.',
+      //'instructions' => '',
       'conditional_logic' => [
         [
           [
@@ -303,7 +305,7 @@ $fields = [
     acf_text([
       'name' => 'pardot-form-thankyou-title',
       'label' => 'pardot-form-thankyou-title',
-      //'instructions' => 'Add the employee name.',
+      //'instructions' => '',
       'conditional_logic' => [
         [
           [
@@ -317,7 +319,7 @@ $fields = [
     acf_text([
       'name' => 'pardot-form-thankyou-copy',
       'label' => 'pardot-form-thankyou-copy',
-      //'instructions' => 'Add the employee name.',
+      //'instructions' => '',
       'conditional_logic' => [
         [
           [
@@ -331,7 +333,7 @@ $fields = [
     acf_text([
       'name' => 'pardot-form-thankyou-url',
       'label' => 'pardot-form-thankyou-url',
-      //'instructions' => 'Add the employee name.',
+      //'instructions' => '',
       'conditional_logic' => [
         [
           [
@@ -345,7 +347,7 @@ $fields = [
     acf_text([
       'name' => 'pardot-form-thankyou-btncopy',
       'label' => 'pardot-form-thankyou-btncopy',
-      //'instructions' => 'Add the employee name.',
+      //'instructions' => '',
       'conditional_logic' => [
         [
           [
