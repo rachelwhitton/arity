@@ -99,9 +99,9 @@
         <?php endif; ?>
     </form>
 </div>
-<div id="emailform_modal" class="modal" role="dialog">
+<!-- <div id="thankyou_modal" class="modal" role="dialog">
     <div class="modal-dialog modal-lg">
-        <!-- Modal content-->
+        // Modal content
         <div class="modal-content">
             <div class="modal-body">
                 <div class="modal-body--left">
@@ -123,7 +123,7 @@
             </svg>
         </button>
     </div>
-</div>
+</div> -->
 <?php ?>
 <script>
 (function () {

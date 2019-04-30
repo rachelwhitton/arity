@@ -211,21 +211,21 @@ $fields = [
             acf_text([
                 'name' => 'field_label',
                 'label' => 'Field label',
-                //'instructions' => '',
+                'instructions' => 'Descriptive label that appears above the field',
             ]),
             acf_text([
               'name' => 'field_id',
-              'label' => 'Field id',
-              //'instructions' => '',
+              'label' => 'Field ID',
+              'instructions' => 'Maps to Pardot form handler’s “External Field Name”',
             ]),
             acf_text([
               'name' => 'field_value',
               'label' => 'Field value',
-              //'instructions' => '',
+              'instructions' => 'Optional text that populates your field by default',
             ]),
             acf_checkbox([
               'name' => 'field_required',
-              'label' => 'field_required',
+              'label' => 'Field required',
               //'instructions' => '',
               'choices' => [
                   '1' => ''
@@ -233,8 +233,8 @@ $fields = [
             ]),
             acf_text([
               'name' => 'field_error_required',
-              'label' => 'field_error_required',
-              //'instructions' => '',
+              'label' => 'Required error',
+              'instructions' => 'The error message that appears if field is left empty',
               'conditional_logic' => [
                 [
                   [
@@ -247,8 +247,8 @@ $fields = [
             ]),
             acf_text([
               'name' => 'field_error_invalid',
-              'label' => 'field_error_invalid',
-              //'instructions' => '',
+              'label' => 'Invalid format error',
+              'instructions' => 'The error message that appears if entry is not a valid format (e.g., invalid email, invalid phone number)',
               'conditional_logic' => [
                 [
                   [
@@ -273,8 +273,8 @@ $fields = [
     
     acf_checkbox([
       'name' => 'pardot-form-use_captcha',
-      'label' => 'pardot-form-use_captcha',
-      //'instructions' => '',
+      'label' => 'Use reCAPTCHA',
+      'instructions' => 'Always recommended to prevent spam',
       'choices' => [
           '1' => ''
       ],
@@ -290,8 +290,8 @@ $fields = [
     ]),
     acf_text([
       'name' => 'pardot-form-btntext',
-      'label' => 'pardot-form-btntext',
-      //'instructions' => '',
+      'label' => 'CTA button label',
+      'instructions' => 'Typically, the button will say “Submit”',
       'conditional_logic' => [
         [
           [
@@ -304,8 +304,8 @@ $fields = [
     ]),
     acf_text([
       'name' => 'pardot-form-thankyou-title',
-      'label' => 'pardot-form-thankyou-title',
-      //'instructions' => '',
+      'label' => 'Thank you message: Title',
+      'instructions' => 'Title of the thank you message',
       'conditional_logic' => [
         [
           [
@@ -318,22 +318,8 @@ $fields = [
     ]),
     acf_text([
       'name' => 'pardot-form-thankyou-copy',
-      'label' => 'pardot-form-thankyou-copy',
-      //'instructions' => '',
-      'conditional_logic' => [
-        [
-          [
-            'name' => 'pardot-form__content-chooser',
-            'operator' => '==',
-            'value' => 'layout__pardot-form'
-          ]
-        ]
-      ],
-    ]),
-    acf_text([
-      'name' => 'pardot-form-thankyou-url',
-      'label' => 'pardot-form-thankyou-url',
-      //'instructions' => '',
+      'label' => 'Thank you message: Body copy',
+      'instructions' => 'Main body of the thank you message',
       'conditional_logic' => [
         [
           [
@@ -346,8 +332,8 @@ $fields = [
     ]),
     acf_text([
       'name' => 'pardot-form-thankyou-btncopy',
-      'label' => 'pardot-form-thankyou-btncopy',
-      //'instructions' => '',
+      'label' => 'Thank you message: Button label',
+      'instructions' => 'Button label of the thank you message',
       'conditional_logic' => [
         [
           [
@@ -358,161 +344,181 @@ $fields = [
         ]
       ],
     ]),
-    
-
-
-    // body Vertical alignment
-    acf_select([
-      'label' => 'Body copy vertical align',
-      'name' => 'pardot-form__vertical-align',
-      'key' => 'pardot-form_vertical-align',
-      'instructions' => '',
-      'required' => 0,
-      'maxlength' => '',
-      'allow_null' => 0,
-      'ui' => 1,
-      'default_value' => 'Top',
-      'choices' => [
-        'Top' => 'Top',
-        'Center' => 'Center'
-      ],
-    ]),
-    // Headline
     acf_text([
-      'label' => 'Headline',
-      'name' => 'pardot-form__headline',
-      'key' => 'field_headline',
-      'instructions' => 'Recommended character count max: 60',
-      'required' => 0,
-      'maxlength' => '',
-      'wrapper' => array (
-        'width' => '50',
-      ),
-    ]),
-    // Body Copy
-    acf_textarea([
-      'label' => 'Body Copy',
-      'name' => 'pardot-form__body_copy',
-      'key' => 'field_body_copy',
-      'instructions' => 'Recommended character count max: 300',
-      'required' => 1,
-      'new_lines' => 'wpautop',
-      'wrapper' => array (
-        'width' => '100',
-      ),
-    ]),
-
-    // Choose your own CTA
-    acf_repeater([
-      'label' => '',
-      'name' => 'pardot-form__link_groups',
-      'sub_fields' => [
+      'name' => 'pardot-form-thankyou-url',
+      'label' => 'Thank you message: Button URL',
+      'instructions' => 'URL that thank you message button links to',
+      'conditional_logic' => [
         [
-          // Headline
-          'type' => 'group',
-          'label' => 'CTA',
-          'name' => 'group',
-          'required' => 0,
-          'sub_fields' => [
-            [
-              'type' => 'link',
-              'label' => 'Link',
-              'name' => 'cta__link',
-              'instructions' => 'Recommended character count max: 30',
-              'required' => 1,
-              'maxlength' => '',
-              'wrapper' => array (
-                'width' => '40',
-              ),
-            ],
-            [
-              'type' => 'radio',
-              'label' => 'Type',
-              'name' => 'cta__type',
-              'instructions' => '',
-              'required' => 0,
-              'maxlength' => '',
-              'default_value' => 'button',
-              'choices' => array(
-                'button' => 'Button',
-                'link' => 'Link',
-              ),
-              'wrapper' => array (
-                'width' => '30',
-              ),
-            ],
-            [
-              'type' => 'select',
-              'label' => 'Icon',
-              'name' => 'cta__icon_button',
-              'instructions' => 'Note: links with a mailto url will always get an \'mailto\' icon no matter what you select here.',
-              'required' => 0,
-              'maxlength' => '',
-              'default_value' => 'default',
-              'choices' => array(
-                'none' => 'none (default)',
-                'external' => 'external',
-                'download' => 'download',
-                'mailto' => 'mailto'
-              ),
-              'conditional_logic' => [
-                [
-                  [
-                    'name' => 'cta__type',
-                    'operator' => '==',
-                    'value' => 'button'
-                  ]
-                ]
-              ],
-              'wrapper' => array (
-                'width' => '30',
-              ),
-            ],
-            [
-              'type' => 'select',
-              'label' => 'Icon',
-              'name' => 'cta__icon_link',
-              'instructions' => 'Note: links with a mailto url will always get an \'mailto\' icon no matter what you select here.',
-              'required' => 0,
-              'maxlength' => '',
-              'default_value' => 'default',
-              'choices' => array(
-                'arrow' => 'arrow (default)',
-                'external' => 'external',
-                'download' => 'download',
-                'mailto' => 'mailto',
-                'none' => 'none',
-              ),
-              'conditional_logic' => [
-                [
-                  [
-                    'name' => 'cta__type',
-                    'operator' => '==',
-                    'value' => 'link'
-                  ]
-                ]
-              ],
-              'wrapper' => array (
-                'width' => '30',
-              ),
-            ],
-            [
-              'type' => 'checkbox',
-              'name' => 'optIn',
-              'label' => '',
-              'required' => false,
-              'choices' => [
-                  'optIn' => 'Show Opt-In Form.'
-              ],
-            ],
-          ],
+          [
+            'name' => 'pardot-form__content-chooser',
+            'operator' => '==',
+            'value' => 'layout__pardot-form'
+          ]
         ]
       ],
-      'min'         => 0,
-      'max'         => 2,
-      'layout'      => 'block',
-      'button_label'  => 'Add CTA',
     ]),
+
+    // acf_message([
+    //   'label' => 'Column that describes what the form is for',
+    //   'name' => 'pardot-form__column-description-message',
+    //   'instructions' => '',
+    //   'message' => ''
+    // ]),
+    
+
+    // body Vertical alignment
+    // acf_select([
+    //   'label' => 'Body copy vertical align',
+    //   'name' => 'pardot-form__vertical-align',
+    //   'key' => 'pardot-form_vertical-align',
+    //   'instructions' => '',
+    //   'required' => 0,
+    //   'maxlength' => '',
+    //   'allow_null' => 0,
+    //   'ui' => 1,
+    //   'default_value' => 'Top',
+    //   'choices' => [
+    //     'Top' => 'Top',
+    //     'Center' => 'Center'
+    //   ],
+    // ]),
+    // Headline
+    // acf_text([
+    //   'label' => 'Headline',
+    //   'name' => 'pardot-form__headline',
+    //   'key' => 'field_headline',
+    //   'instructions' => 'Recommended character count max: 60',
+    //   'required' => 0,
+    //   'maxlength' => '',
+    //   'wrapper' => array (
+    //     'width' => '50',
+    //   ),
+    // ]),
+    // Body Copy
+    // acf_textarea([
+    //   'label' => 'Body Copy',
+    //   'name' => 'pardot-form__body_copy',
+    //   'key' => 'field_body_copy',
+    //   'instructions' => 'Recommended character count max: 300',
+    //   'required' => 1,
+    //   'new_lines' => 'wpautop',
+    //   'wrapper' => array (
+    //     'width' => '100',
+    //   ),
+    // ]),
+
+    // Choose your own CTA
+    // acf_repeater([
+    //   'label' => '',
+    //   'name' => 'pardot-form__link_groups',
+    //   'sub_fields' => [
+    //     [
+    //       // Headline
+    //       'type' => 'group',
+    //       'label' => 'CTA',
+    //       'name' => 'group',
+    //       'required' => 0,
+    //       'sub_fields' => [
+    //         [
+    //           'type' => 'link',
+    //           'label' => 'Link',
+    //           'name' => 'cta__link',
+    //           'instructions' => 'Recommended character count max: 30',
+    //           'required' => 1,
+    //           'maxlength' => '',
+    //           'wrapper' => array (
+    //             'width' => '40',
+    //           ),
+    //         ],
+    //         [
+    //           'type' => 'radio',
+    //           'label' => 'Type',
+    //           'name' => 'cta__type',
+    //           'instructions' => '',
+    //           'required' => 0,
+    //           'maxlength' => '',
+    //           'default_value' => 'button',
+    //           'choices' => array(
+    //             'button' => 'Button',
+    //             'link' => 'Link',
+    //           ),
+    //           'wrapper' => array (
+    //             'width' => '30',
+    //           ),
+    //         ],
+    //         [
+    //           'type' => 'select',
+    //           'label' => 'Icon',
+    //           'name' => 'cta__icon_button',
+    //           'instructions' => 'Note: links with a mailto url will always get an \'mailto\' icon no matter what you select here.',
+    //           'required' => 0,
+    //           'maxlength' => '',
+    //           'default_value' => 'default',
+    //           'choices' => array(
+    //             'none' => 'none (default)',
+    //             'external' => 'external',
+    //             'download' => 'download',
+    //             'mailto' => 'mailto'
+    //           ),
+    //           'conditional_logic' => [
+    //             [
+    //               [
+    //                 'name' => 'cta__type',
+    //                 'operator' => '==',
+    //                 'value' => 'button'
+    //               ]
+    //             ]
+    //           ],
+    //           'wrapper' => array (
+    //             'width' => '30',
+    //           ),
+    //         ],
+    //         [
+    //           'type' => 'select',
+    //           'label' => 'Icon',
+    //           'name' => 'cta__icon_link',
+    //           'instructions' => 'Note: links with a mailto url will always get an \'mailto\' icon no matter what you select here.',
+    //           'required' => 0,
+    //           'maxlength' => '',
+    //           'default_value' => 'default',
+    //           'choices' => array(
+    //             'arrow' => 'arrow (default)',
+    //             'external' => 'external',
+    //             'download' => 'download',
+    //             'mailto' => 'mailto',
+    //             'none' => 'none',
+    //           ),
+    //           'conditional_logic' => [
+    //             [
+    //               [
+    //                 'name' => 'cta__type',
+    //                 'operator' => '==',
+    //                 'value' => 'link'
+    //               ]
+    //             ]
+    //           ],
+    //           'wrapper' => array (
+    //             'width' => '30',
+    //           ),
+    //         ],
+    //         [
+    //           'type' => 'checkbox',
+    //           'name' => 'optIn',
+    //           'label' => '',
+    //           'required' => false,
+    //           'choices' => [
+    //               'optIn' => 'Show Opt-In Form.'
+    //           ],
+    //         ],
+    //       ],
+    //     ]
+    //   ],
+    //   'min'         => 0,
+    //   'max'         => 2,
+    //   'layout'      => 'block',
+    //   'button_label'  => 'Add CTA',
+    // ]),
 
     acf_tab([
       'label' => 'Options',
