@@ -2,6 +2,7 @@
 namespace App\Theme;
 
 ?>
+
 <?php
 /*
   Template Name:      Pardot Form
@@ -30,6 +31,7 @@ if($data['vertical-align']=='Top'){
 }
 
 ?>
+
 <div class="contact-form"> 
   <div <?php module_class($data['classes']); ?>>
     <?php if (!empty($data['module-headline'])) : ?>
@@ -45,7 +47,7 @@ if($data['vertical-align']=='Top'){
 
             <?php if (!empty($data['module-headline'])) : ?>
               <?php element('headline', array(
-              'classes' => $class.'__title',
+              'classes' => $class.'__title' . $data['headline_color'],
               'headline' => $data['module-headline']
             )); ?>
             <?php endif; ?>
@@ -66,6 +68,7 @@ if($data['vertical-align']=='Top'){
             require_once('layout__pardot-form.php');
         endif; 
       ?>
+
       </div>
     </div>
   </div>

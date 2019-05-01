@@ -34,6 +34,15 @@ if(!empty($data['shadow'])){
 
 $data['headline'] = App\Theme\wrapSymbols($data['headline']);
 
+// Headline Color Class
+if (!empty($data['bkg_color'])) {
+  if ($data['bkg_color'] == 'navy') {
+    $data['headline_color'] = ' colors__text--'.$data['bkg_color'];
+  } else {
+    $data['headline_color'] = '';
+  }
+}
+
 if(empty($data['h_el'])) {
   $data['h_el'] = 'h2';
 }

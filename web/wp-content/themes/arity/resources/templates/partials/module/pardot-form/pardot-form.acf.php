@@ -19,7 +19,7 @@ $fields = [
       'maxlength' => '',
       'allow_null' => 0,
       'ui' => 1,
-      'default_value' => 'layout__image',
+      'default_value' => 'layout__pardot-form',
       'choices' => [
         'layout__pardot-form' => 'Pardot Form Builder',
       ]
@@ -525,24 +525,24 @@ $fields = [
       'name' => 'pardot-form__options_tab',
     ]),
 
-    acf_select([
-      'label' => 'Layout',
-      'name' => 'pardot-form__layout',
-      'key' => 'field_layout',
-      'instructions' => '',
-      'required' => 0,
-      'maxlength' => '',
-      'allow_null' => 1,
-      'ui' => 1,
-      'wrapper' => array (
-        'width' => '25',
-      ),
-      'default_value' => 'right',
-      'choices' => [
-        'left' => 'Image Left, Content Right',
-        'right' => 'Image Right, Content Left'
-      ]
-    ]),
+    // acf_select([
+    //   'label' => 'Layout',
+    //   'name' => 'pardot-form__layout',
+    //   'key' => 'field_layout',
+    //   'instructions' => '',
+    //   'required' => 0,
+    //   'maxlength' => '',
+    //   'allow_null' => 1,
+    //   'ui' => 1,
+    //   'wrapper' => array (
+    //     'width' => '25',
+    //   ),
+    //   'default_value' => 'right',
+    //   'choices' => [
+    //     'left' => 'Image Left, Content Right',
+    //     'right' => 'Image Right, Content Left'
+    //   ]
+    // ]),
 
     acf_select([
       'label' => 'Background Color',
@@ -554,7 +554,7 @@ $fields = [
       'allow_null' => 1,
       'ui' => 1,
       'wrapper' => array (
-        'width' => '25',
+        'width' => '45',
       ),
       'default_value' => 'white',
       'choices' => [
@@ -565,7 +565,7 @@ $fields = [
     ]),
 
     acf_select([
-      'label' => '"Module" Headline Alignment',
+      'label' => '“Module” Headline Alignment',
       'name' => 'pardot-form__headline-alignment',
       'key' => 'field_headline-alignment',
       'instructions' => '',
@@ -574,7 +574,7 @@ $fields = [
       'allow_null' => 1,
       'ui' => 1,
       'wrapper' => array (
-        'width' => '25',
+        'width' => '45',
       ),
       'default_value' => 'center',
       'choices' => [
@@ -585,12 +585,26 @@ $fields = [
 
     // Headline
     acf_text([
-      'label' => '"Module" Headline',
+      'label' => '“Module” Headline',
       'name' => 'pardot-form__module-headline',
       'key' => 'field_module-headline',
-      'instructions' => 'Recommended character count max: 100',
+      'instructions' => 'Recommended character count max: 60',
       'required' => 0,
       'maxlength' => '',
+    ]),
+
+     // Subheadline
+    acf_textarea([
+      'label' => '“Module” Subhead',
+      'name' => 'pardot-form__subhead',
+      // 'key' => 'field_subhead',
+      'instructions' => 'Recommended character count max: 150',
+      'new_lines' => 'wpautop',
+      'required' => 0,
+      'maxlength' => '',
+      'wrapper' => array (
+        'width' => '100',
+      ),
     ]),
 
 ];

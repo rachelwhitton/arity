@@ -126,7 +126,7 @@
 </div> -->
 <?php ?>
 <script>
-(function () {
+    (function () {
         'use strict';
         window.addEventListener('load', function () {
             $('.needs-validation').submit(function(){
