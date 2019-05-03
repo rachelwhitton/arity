@@ -45,7 +45,7 @@ $fields = [
         'min' => 0,
         'max' => 100,
         'layout' => 'block', // block, row or table
-        'button_label' => 'Add Form Input',
+        'button_label' => 'Add form input',
         'sub_fields' => [
             acf_select([
               'name' => 'field_type',
@@ -119,7 +119,8 @@ $fields = [
             // pardot-form-radio
             acf_text([
               'name' => 'pardot-form-radio-body',
-              'label' => 'pardot-form-radio-body',
+              'label' => 'Radio button group options',
+              'button_label' => 'Add radio button input',
               //'instructions' => '',
               'conditional_logic' => [
                 [
@@ -133,7 +134,7 @@ $fields = [
             ]),
             acf_repeater([
               'name' => 'pardot-form-radio',
-              'label' => 'Select Fields',
+              'label' => 'Radio button group options',
               //'instructions' => '',
               'min' => 0,
               'max' => 1000,
@@ -149,12 +150,12 @@ $fields = [
                   ]),
                   acf_text([
                       'name' => 'radio-label',
-                      'label' => 'radio-label',
+                      'label' => 'Radio button input label',
                       //'instructions' => '',
                   ]),
                   acf_text([
                     'name' => 'radio-value',
-                    'label' => 'radio-value',
+                    'label' => 'Radio button input value',
                     //'instructions' => '',
                   ]),
               ],
