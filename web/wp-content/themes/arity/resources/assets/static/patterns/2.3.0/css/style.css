@@ -9242,8 +9242,12 @@ form .form-group input[type=radio] {
 }
 
 form .form-group .radio-container {
-  padding-left: 30px;
+  width: 100%;
   padding-top: 5px;
+  padding-bottom: 15px !important;
+  padding-left: 30px;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
 }
 
 form .radio-checkmark {
