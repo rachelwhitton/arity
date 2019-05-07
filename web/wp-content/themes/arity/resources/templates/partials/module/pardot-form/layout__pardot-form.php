@@ -29,9 +29,11 @@
             <?php }
 
 
-            if ($fields[$f]['field_type']=='hidden'){?>
-                <input type=hidden name="<?= $fields[$f]['field_id']; ?>" id="<?= $fields[$f]['field_id']; ?>" value="<?= $fields[$f]['field_value']; ?>">
-            <?php }
+            if ($fields[$f]['field_type']=='hidden'){
+                for($g=0; $g<sizeof($fields[$f]['pardot-form-hidden']); $g++){?>
+                <input type="hidden" name="<?= $fields[$f]['pardot-form-hidden'][$g]['hidden_id']; ?>" id="<?= $fields[$f]['pardot-form-hidden'][$g]['hidden_id']; ?>" value="<?= $fields[$f]['pardot-form-hidden'][$g]['hidden_value']; ?>">
+                <?php }
+            }
 
 
             if ($fields[$f]['field_type']=='select'){?>
