@@ -149,7 +149,7 @@ $fields = [
     // pardot-form-radio
       acf_text([
         'name' => 'pardot-form-radio-body',
-        'label' => 'Radio button group options',
+        'label' => 'Radio button section title',
         'button_label' => 'Add radio button input',
       //'instructions' => '',
         'conditional_logic' => [

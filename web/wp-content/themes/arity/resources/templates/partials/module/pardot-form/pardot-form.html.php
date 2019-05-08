@@ -12,7 +12,7 @@ namespace App\Theme;
   Since:              1.0.0
 */
 
-//echo '<pre>'; print_r($data); echo '</pre>'; 
+echo '<pre>'; print_r($data); echo '</pre>'; 
 
 $class = 'content-image-block';
 if($data['content-chooser']=='layout__form'){
