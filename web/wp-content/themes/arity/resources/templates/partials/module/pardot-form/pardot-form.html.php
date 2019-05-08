@@ -53,7 +53,7 @@ if($data['vertical-align']=='Top'){
             <?php endif; ?>
 
             <?php if(!empty($data['subhead'])) : ?>
-              <div class="block-highlights__subhead">
+              <div class="block-highlights__subhead <?='text-'.$data['headline-alignment'];?>">
                 <?= $data['subhead']; ?>
               </div>
             <?php endif; ?>

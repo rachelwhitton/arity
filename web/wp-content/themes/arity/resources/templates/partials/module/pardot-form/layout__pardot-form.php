@@ -1,5 +1,7 @@
 <?php ?>
-<div class="<?=$class;?>__col <?=$class;?>__img-box">
+
+<div class="contact-form__wrap">
+    <div class="contact-form__indicates"><span class="required">*</span> indicates required field</div>
     <form action="<?= $data['pardot-form-post']; ?>" method="POST" class="needs-validation">
         <?php 
         $fields = $data['pardot-form'];
