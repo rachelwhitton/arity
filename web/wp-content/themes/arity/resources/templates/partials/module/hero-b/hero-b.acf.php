@@ -52,6 +52,23 @@ $fields = [
       ]
     ]),
 
+    // Background color
+    acf_select([
+      'label' => 'Background color',
+      'name' => 'hero-b__background-color',
+      'key' => 'field_background-color',
+      'instructions' => '',
+      'required' => 0,
+      'maxlength' => '',
+      'allow_null' => 0,
+      'ui' => 1,
+      'default_value' => 'white',
+      'choices' => [
+        'white' => 'White',
+        'light-gray' => 'Light gray'
+      ]
+    ]),
+
     // One Column Headline
     acf_text([
       'label' => 'Headline',

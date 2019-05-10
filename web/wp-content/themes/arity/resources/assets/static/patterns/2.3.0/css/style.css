@@ -17052,6 +17052,14 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   max-width: 100%;
 }
 
+.hero-b__block__light-gray-bg {
+  background-color: #F7F7F7;
+}
+
+.hero-b__block__white-bg {
+  background-color: #FFFFFF;
+}
+
 .hero-b__block .container, .hero-b__block .action-bar-w-bkg__bkg {
   padding: 0;
 }
@@ -19772,6 +19780,20 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   }
 }
 
+.body-inset-ten-col {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+@media screen and (min-width: 768px) {
+  .body-inset-ten-col {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .body-inset-ten-col__col {
     -webkit-box-flex: 0;
@@ -19780,6 +19802,14 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
     max-width: 83.33333%;
     margin-left: 8.33333%;
   }
+}
+
+.body-inset-ten-col__light-gray-bg {
+  background-color: #F7F7F7;
+}
+
+.body-inset-ten-col__white-bg {
+  background-color: #FFFFFF;
 }
 
 .body-inset-ten-col .text-block:last-child p:last-child {

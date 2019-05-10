@@ -11,8 +11,10 @@ namespace App\Theme;
   Since:              1.6.0
 */
 
+// echo '<pre>'; print_r($data); echo '</pre>'; 
 ?>
-<div <?php module_class('body-column body-inset-ten-col text-module-standard'); ?>>
+
+<div <?php module_class($data['classes']); ?>>
   <div class="container">
     <div class="row">
       <div class="body-inset-ten-col__col">

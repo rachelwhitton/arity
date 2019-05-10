@@ -3,8 +3,22 @@ namespace App\Theme;
 
 // ACF Fields
 $fields = [
+    // Background color
+    acf_select([
+      'label' => 'Background color',
+      'name' => 'body-inset-ten-col__background-color',
+      'key' => 'field_background-color',
+      'required' => 0,
+      'allow_null' => 0,
+      'ui' => 1,
+      'default_value' => 'white',
+      'choices' => [
+        'white' => 'White',
+        'light-gray' => 'Light gray'
+      ]
+    ]),
 
-    // Left Column
+    // Add Component block
     acf_flexible_content([
       'label' => '',
       'name' => 'body-inset-ten-col__content',
