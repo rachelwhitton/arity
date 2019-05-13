@@ -17052,11 +17052,19 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   max-width: 100%;
 }
 
-.hero-b__block__light-gray-bg {
+.hero-b__block.background {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.hero-b__block.background__light-gray-bg {
   background-color: #F7F7F7;
 }
 
-.hero-b__block__white-bg {
+.hero-b__block.background__white-bg {
   background-color: #FFFFFF;
 }
 

@@ -21,6 +21,9 @@ namespace App\Theme;
     <?php endif; ?>
     </div>
   </div>
+  <?php if (!empty($data['background-color']) && $data['background-color'] == 'light-gray') : ?>
+    <div class="hero-b__block background background__light-gray-bg"></div>
+  <?php endif; ?>
   <?php component('hero-image', [
     'image_id' => $data['image_id'],
     'overlay' => $data['dotted']

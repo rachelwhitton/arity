@@ -8,9 +8,9 @@ $data['classes'][] = 'hero-concise';
 $data['classes'][] = 'hero-b';
 $data['classes'][] = 'ar-module--no-margin';
 
-if(!empty($data['background-color'])) {
-	$data['classes'][] = 'hero-b__'.$data['background-color'].'-bg';
-}
+// if(!empty($data['background-color'])) {
+// 	$data['classes'][] = 'hero-b__'.$data['background-color'].'-bg';
+// }
 
 if(empty($data['h_el'])) {
   $data['h_el'] = 'h1';
