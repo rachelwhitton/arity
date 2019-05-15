@@ -10,22 +10,20 @@
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002950', endColorstr='#011c2c',GradientType=0 ); /* IE6-9 */
 	}
 	#mr-analytics-head-graphic {
+		opacity: 0;
 		position: relative;
 		width: 468px;
 		margin: 66px auto 32px;
+		transition: all 0.8s ease-in-out;
+	}
+	#mr-analytics-head-graphic.visible {
+		opacity: 1;
 	}
 	#mr-analytics-body-graphic {
 		position: relative;
 		width: 720px;
 		margin: 0 auto 93px;
 	}
-	/*
-	@keyframes animatedArrowLineOne {
-		to {
-			d: path(M691.25,43.5 L691.25,214);
-		}
-	}
-	*/
 </style>
 
 <!-- Marketplace Risk Analytics Graphic DESKTOP -->
@@ -105,6 +103,13 @@
 				<style type="text/css">
 					#animated-arrow-head-1, #animated-arrow-head-2, #animated-arrow-head-3, #animated-270deg-arc {
 						opacity: 0;
+					}
+					#lozenge-1 {
+						opacity: 0;
+						transition: opacity 0.8s ease-in-out;
+					}
+					#lozenge-1.visible {
+						opacity: 1;
 					}
 				</style>
 				<clipPath id="lineClip1">
@@ -232,7 +237,7 @@
 		} else {
 			var drawSpeed = 1;
 			TweenMax.delayedCall(theDelay, drawPath, ["animated-270deg-arc", drawSpeed]);
-			TweenMax.to(arrowID, 0.4, {css: {opacity: 1}, delay: (theDelay + drawSpeed - 0.2)});
+			TweenMax.to(arrowID, 0.4, {css: {opacity: 1}, delay: (theDelay + drawSpeed)});
 		}
 	}
 
@@ -250,12 +255,31 @@
 	}
 
 	window.onload = function() {
-		TweenMax.delayedCall(1, drawDottedLine, ["#lineRect1","#animated-arrow-head-1", 172]);
-		TweenMax.delayedCall(2.5, drawDottedLine, ["#lineRect2","#animated-arrow-head-2", 166]);
-		TweenMax.delayedCall(4, drawDottedLine, ["#lineRect3","#animated-arrow-head-3", 166]);
-		// TweenMax.to('#lineRect1', 0.75, {attr:{height: 171}, delay: 3});
-		// TweenMax.to('#animated-arrow-head-1', 0.4, {css: {opacity: 1}, delay: 3.55});
-		// TweenMax.to(animatedLine1, 3, {css: {d: path('M691.25,43.5 L691.25,214')}, delay: 3, ease: Power1.easeInOut, onComplete: fadeInArrow, onCompleteParams: ["#animated-arrow-head-1"]});
+		var controller = new ScrollMagic.Controller();
+		// TweenMax.delayedCall(1, drawDottedLine, ["#lineRect1","#animated-arrow-head-1", 172]);
+		// TweenMax.delayedCall(2.5, drawDottedLine, ["#lineRect2","#animated-arrow-head-2", 166]);
+		// TweenMax.delayedCall(4, drawDottedLine, ["#lineRect3","#animated-arrow-head-3", 166]);
+		new ScrollMagic.Scene({
+			triggerElement: "#custom-feature__marketplace-risk-graphic",
+			triggerHook: 0.9,
+			offset: 50,
+			reverse: false
+		})
+		.setClassToggle("#mr-analytics-head-graphic", "visible")
+		.addTo(controller);
+
+		new ScrollMagic.Scene({
+			triggerElement: "#lozenge-1",
+			triggerHook: 0.9,
+			offset: 0,
+			reverse: false
+		})
+		.on('start', function (e) {
+			drawDottedLine("#lineRect1","#animated-arrow-head-1", 172);
+		})
+		.setClassToggle("#lozenge-1", "visible")
+		.addTo(controller);
+
 	}
 
 </script>
