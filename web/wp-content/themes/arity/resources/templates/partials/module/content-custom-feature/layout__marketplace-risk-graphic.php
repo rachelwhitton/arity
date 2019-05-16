@@ -104,11 +104,11 @@
 					#animated-arrow-head-1, #animated-arrow-head-2, #animated-arrow-head-3, #animated-270deg-arc {
 						opacity: 0;
 					}
-					#lozenge-1 {
+					#lozenge-1, .lozenge-1-blurb, #lozenge-2, .lozenge-2-blurb, #lozenge-3, .lozenge-3-blurb, #lozenge-4, .lozenge-4-blurb {
 						opacity: 0;
 						transition: opacity 0.8s ease-in-out;
 					}
-					#lozenge-1.visible {
+					#lozenge-1.visible, .lozenge-1-blurb.visible, #lozenge-2.visible, .lozenge-2-blurb.visible, #lozenge-3.visible, .lozenge-3-blurb.visible, #lozenge-4.visible, .lozenge-4-blurb.visible {
 						opacity: 1;
 					}
 				</style>
@@ -127,11 +127,11 @@
 		    <g id="Pages_2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 		        <g id="Key_Graphic_Desktop_Body" transform="translate(-265.000000, -453.000000)">
 		            <g id="mr-analytics-body" transform="translate(265.000000, 453.000000)">
-		                <text id="New-market-mobility" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
+		                <text id="New-market-mobility" class="lozenge-4-blurb" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
 		                    <tspan x="430" y="709">New market </tspan>
 		                    <tspan x="430" y="737">mobility insights</tspan>
 		                </text>
-		                <text id="Multimodal-demand-pr" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
+		                <text id="Multimodal-demand-pr" class="lozenge-4-blurb" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
 		                    <tspan x="31" y="709">Multimodal demand </tspan>
 		                    <tspan x="31" y="737">predictions</tspan>
 		                </text>
@@ -145,11 +145,11 @@
 		                        <tspan x="29" y="42">Diversify services</tspan>
 		                    </text>
 		                </g>
-		                <text id="Shared-vehicle-suppl" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
+		                <text id="Shared-vehicle-suppl" class="lozenge-3-blurb" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
 		                    <tspan x="430" y="508">Shared vehicle supply </tspan>
 		                    <tspan x="430" y="536">optimization</tspan>
 		                </text>
-		                <text id="Personalized-driver" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
+		                <text id="Personalized-driver" class="lozenge-3-blurb" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
 		                    <tspan x="31" y="508">Personalized driver </tspan>
 		                    <tspan x="31" y="536">and rider incentives</tspan>
 		                </text>
@@ -163,10 +163,10 @@
 		                        <tspan x="29" y="42">Increase adoption</tspan>
 		                    </text>
 		                </g>
-		                <text id="Collision-analytics" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
+		                <text id="Collision-analytics" class="lozenge-2-blurb" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
 		                    <tspan x="430" y="310">Collision analytics</tspan>
 		                </text>
-		                <text id="Driving-behavior-ana" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
+		                <text id="Driving-behavior-ana" class="lozenge-2-blurb" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
 		                    <tspan x="31" y="310">Driving behavior </tspan>
 		                    <tspan x="31" y="338">analytics</tspan>
 		                </text>
@@ -174,17 +174,17 @@
 		                    <path d="M30,0 L690,0 C706.568542,-3.04359188e-15 720,13.4314575 720,30 L720,30 C720,46.5685425 706.568542,60 690,60 L30,60 C13.4314575,60 2.02906125e-15,46.5685425 0,30 L0,30 C-2.02906125e-15,13.4314575 13.4314575,3.04359188e-15 30,0 Z" id="lozenge-2-bg" fill="#098189" fill-rule="nonzero"></path>
 		                    <g id="arrow-oval-2" transform="translate(679.000000, 17.000000)" fill="#FFFFFF" fill-rule="nonzero">
 		                        <circle id="oval-outer-2" opacity="0.466183036" cx="12.5" cy="12.5" r="12.5"></circle>
-		                        <circle id="oval-inner-2" cx="12.5" cy="13.5" r="5.5"></circle>
+		                        <circle id="oval-inner-2" cx="12.5" cy="12.5" r="5.5"></circle>
 		                    </g>
 		                    <text id="lozenge-2-title" font-family="Roboto-Regular, Roboto" font-size="30" font-weight="normal" line-spacing="36" fill="#FFFFFF">
 		                        <tspan x="29" y="42">Reduce loss costs</tspan>
 		                    </text>
 		                </g>
-		                <text id="Predictive-maintenan" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
+		                <text id="Predictive-maintenan" class="lozenge-1-blurb" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
 		                    <tspan x="430" y="108">Predictive </tspan>
 		                    <tspan x="430" y="136">maintenance</tspan>
 		                </text>
-		                <text id="Predict-risk-of-new" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
+		                <text id="Predict-risk-of-new" class="lozenge-1-blurb" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
 		                    <tspan x="31" y="109">Predict risk of new or </tspan>
 		                    <tspan x="31" y="137">like-new members</tspan>
 		                </text>
@@ -222,23 +222,28 @@
 </div>
 <!--  -->
 <script>
-	function showLine(line, interval) {
-		console.log("showLine called");
-		line.setAttribute("class","visible");
-		clearInterval(intervalID);
-		var intID = setInterval(makeVisible, interval)
+	function revealElement(elementIdentifier) {
+		var els = document.querySelectorAll(elementIdentifier);
+		els.forEach(function(el) {
+			el.classList.add("visible");
+		});
+		
 	}
 
-	function drawDottedLine(clipPathID, arrowID, lineHeight) {
+	function drawDottedLine(lineNum, lineHeight) {
+		var clipPathID = "#lineRect" + lineNum;
+		var arrowID = "#animated-arrow-head-" + lineNum;
 		var theDelay = 0.6;
 		TweenMax.to(clipPathID, 0.75, {attr:{height: lineHeight}, ease: Power2.easeInOut});
 		if (clipPathID != "#lineRect3") {
 			TweenMax.to(arrowID, 0.4, {css: {opacity: 1}, delay: theDelay});
-		} else {
-			var drawSpeed = 1;
-			TweenMax.delayedCall(theDelay, drawPath, ["animated-270deg-arc", drawSpeed]);
-			TweenMax.to(arrowID, 0.4, {css: {opacity: 1}, delay: (theDelay + drawSpeed)});
 		}
+		// else {
+		// 	var drawSpeed = 0.75;
+		// 	TweenMax.delayedCall(theDelay, revealElement, ["#lozenge-4"]);
+		// 	TweenMax.delayedCall(theDelay, drawPath, ["animated-270deg-arc", drawSpeed]);
+		// 	TweenMax.to(arrowID, 0.4, {css: {opacity: 1}, delay: (theDelay + drawSpeed), onComplete: revealElement, onCompleteParams: [".lozenge-4-blurb"]});
+		// }
 	}
 
 	function drawPath(pathID, drawSpeed) {
@@ -256,10 +261,8 @@
 
 	window.onload = function() {
 		var controller = new ScrollMagic.Controller();
-		// TweenMax.delayedCall(1, drawDottedLine, ["#lineRect1","#animated-arrow-head-1", 172]);
-		// TweenMax.delayedCall(2.5, drawDottedLine, ["#lineRect2","#animated-arrow-head-2", 166]);
-		// TweenMax.delayedCall(4, drawDottedLine, ["#lineRect3","#animated-arrow-head-3", 166]);
-		new ScrollMagic.Scene({
+
+		var seq0 = new ScrollMagic.Scene({
 			triggerElement: "#custom-feature__marketplace-risk-graphic",
 			triggerHook: 0.9,
 			offset: 50,
@@ -268,18 +271,94 @@
 		.setClassToggle("#mr-analytics-head-graphic", "visible")
 		.addTo(controller);
 
-		new ScrollMagic.Scene({
+		var seq1 = new ScrollMagic.Scene({
 			triggerElement: "#lozenge-1",
 			triggerHook: 0.9,
-			offset: 0,
+			offset: 20,
 			reverse: false
-		})
-		.on('start', function (e) {
-			drawDottedLine("#lineRect1","#animated-arrow-head-1", 172);
 		})
 		.setClassToggle("#lozenge-1", "visible")
 		.addTo(controller);
 
+		var seq1a = new ScrollMagic.Scene({
+			triggerElement: ".lozenge-1-blurb",
+			triggerHook: 0.9,
+			offset: 0,
+			reverse: false
+		})
+		.on("start", function (e) {
+			drawDottedLine(1, 172);
+		})
+		.setClassToggle(".lozenge-1-blurb", "visible")
+		.addTo(controller);
+
+		var seq2 = new ScrollMagic.Scene({
+			triggerElement: "#lozenge-2",
+			triggerHook: 0.9,
+			offset: 20,
+			reverse: false
+		})
+		.setClassToggle("#lozenge-2", "visible")
+		.addTo(controller);
+
+		var seq2a = new ScrollMagic.Scene({
+			triggerElement: ".lozenge-2-blurb",
+			triggerHook: 0.9,
+			offset: 0,
+			reverse: false
+		})
+		.on("start", function (e) {
+			drawDottedLine(2, 166);
+		})
+		.setClassToggle(".lozenge-2-blurb", "visible")
+		.addTo(controller);
+
+		var seq3 = new ScrollMagic.Scene({
+			triggerElement: "#lozenge-3",
+			triggerHook: 0.9,
+			offset: 20,
+			reverse: false
+		})
+		.setClassToggle("#lozenge-3", "visible")
+		.addTo(controller);
+
+		var seq3a = new ScrollMagic.Scene({
+			triggerElement: ".lozenge-3-blurb",
+			triggerHook: 0.9,
+			offset: 0,
+			reverse: false
+		})
+		.on("start", function (e) {
+			drawDottedLine(3, 166);
+		})
+		.setClassToggle(".lozenge-3-blurb", "visible")
+		.addTo(controller);
+
+		var seq4 = new ScrollMagic.Scene({
+			triggerElement: "#lozenge-4",
+			triggerHook: 0.9,
+			offset: 20,
+			reverse: false
+		})
+		.on("start", function (e) {
+			drawPath("animated-270deg-arc", 0.75);
+			TweenMax.to("#animated-arrow-head-3", 0.4, {css: {opacity: 1}, delay: 0.75});
+		})
+		.setClassToggle("#lozenge-4", "visible")
+		.addTo(controller);
+
+		var seq4a = new ScrollMagic.Scene({
+			triggerElement: ".lozenge-4-blurb",
+			triggerHook: 0.9,
+			offset: 0,
+			reverse: false
+		})
+		.setClassToggle(".lozenge-4-blurb", "visible")
+		.addTo(controller);
 	}
+
+	// TweenMax.delayedCall(1, drawDottedLine, ["#lineRect1","#animated-arrow-head-1", 172]);
+	// TweenMax.delayedCall(2.5, drawDottedLine, ["#lineRect2","#animated-arrow-head-2", 166]);
+	// TweenMax.delayedCall(4, drawDottedLine, ["#lineRect3","#animated-arrow-head-3", 166]);
 
 </script>
