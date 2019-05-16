@@ -1,5 +1,6 @@
 <style>
-	#custom-feature__marketplace-risk-graphic {
+	#custom-feature__marketplace-risk-graphic_mobile {
+		display: block;
 		width: 100%;
 		height: auto;
 		/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#002950+0,011c2c+100 */
@@ -8,6 +9,32 @@
 	  background: -o-linear-gradient(#002950 0%, #011c2c 100%);
   	background: linear-gradient(#002950 0%, #011c2c 100%); /* FF3.6-15  |  Chrome10-25,Safari5.1-6  |  W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002950', endColorstr='#011c2c',GradientType=0 ); /* IE6-9 */
+	}
+	#custom-feature__marketplace-risk-graphic {
+		display: none;
+		width: 100%;
+		height: auto;
+		/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#002950+0,011c2c+100 */
+		background: #002950; /* Old browsers */
+	  background: -webkit-linear-gradient(#002950 0%, #011c2c 100%);
+	  background: -o-linear-gradient(#002950 0%, #011c2c 100%);
+  	background: linear-gradient(#002950 0%, #011c2c 100%); /* FF3.6-15  |  Chrome10-25,Safari5.1-6  |  W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002950', endColorstr='#011c2c',GradientType=0 ); /* IE6-9 */
+	}
+	@media screen and (min-width: 768px) {
+		#custom-feature__marketplace-risk-graphic_mobile {
+			display: none;
+		}
+		#custom-feature__marketplace-risk-graphic {
+			display: block;
+		}
+	}
+	#mr-analytics-graphic_mobile {
+		position: relative;
+		width: 480px;
+		max-width: 100%;
+		min-width: 480px;
+		margin: 32px auto 40px;
 	}
 	#mr-analytics-head-graphic {
 		opacity: 0;
@@ -25,6 +52,149 @@
 		margin: 0 auto 93px;
 	}
 </style>
+
+<!-- Marketplace Risk Analytics Graphic MOBILE -->
+
+<div class="container" id="custom-feature__marketplace-risk-graphic_mobile">
+	<div class="row">
+
+		<svg id="mr-analytics-graphic_mobile" width="480px" height="893px" viewBox="0 0 480 893" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+		    <title>mr-analytics-body-graphic_mobile</title>
+		    <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		        <g id="Key_Graphic_Mobile" transform="translate(0.000000, -283.000000)">
+		            <g id="mr-analytics-body-graphic_mobile" transform="translate(0.000000, 284.000000)">
+		                <polygon id="Rectangle-3-Copy-4" fill="#098189" fill-rule="nonzero" points="0 176 480 176 480 236 0 236"></polygon>
+		                <polygon id="Rectangle-3-Copy-5" fill="#098189" fill-rule="nonzero" points="0 369 480 369 480 429 0 429"></polygon>
+		                <polygon id="Rectangle-3-Copy-6" fill="#098189" fill-rule="nonzero" points="0 564 480 564 480 624 0 624"></polygon>
+		                <polygon id="Rectangle-3-Copy-7" fill="#098189" fill-rule="nonzero" points="0 759 480 759 480 819 0 819"></polygon>
+		                <g id="Group-3-Copy-4" transform="translate(437.000000, 194.000000)" fill="#FFFFFF" fill-rule="nonzero">
+		                    <circle id="Oval-2" opacity="0.466183036" cx="12.5" cy="12.5" r="12.5"></circle>
+		                    <circle id="Oval-2" cx="12.5" cy="12.5" r="5.5"></circle>
+		                </g>
+		                <g id="Group-3-Copy-7" transform="translate(437.000000, 387.000000)" fill="#FFFFFF" fill-rule="nonzero">
+		                    <circle id="Oval-2" opacity="0.466183036" cx="12.5" cy="12.5" r="12.5"></circle>
+		                    <circle id="Oval-2" cx="12.5" cy="12.5" r="5.5"></circle>
+		                </g>
+		                <g id="Group-3-Copy-8" transform="translate(437.000000, 582.000000)" fill="#FFFFFF" fill-rule="nonzero">
+		                    <circle id="Oval-2" opacity="0.466183036" cx="12.5" cy="12.5" r="12.5"></circle>
+		                    <circle id="Oval-2" cx="12.5" cy="12.5" r="5.5"></circle>
+		                </g>
+		                <g id="Group-3-Copy-9" transform="translate(437.000000, 778.000000)" fill="#FFFFFF" fill-rule="nonzero">
+		                    <circle id="Oval-2" opacity="0.466183036" cx="12.5" cy="12.5" r="12.5"></circle>
+		                    <circle id="Oval-2" cx="12.5" cy="12.5" r="5.5"></circle>
+		                </g>
+		                <path d="M449.25,222 L449.25,380" id="Line-2-Copy-6" stroke="#FFFFFF" stroke-width="2" fill="#D8D8D8" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1,4"></path>
+		                <path d="M449.25,609 L449.25,772" id="Line-2-Copy-7" stroke="#FFFFFF" stroke-width="2" fill="#D8D8D8" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1,4"></path>
+		                <polyline id="Path-5-Copy-3" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill-rule="nonzero" transform="translate(430.000000, 791.000000) rotate(-180.000000) translate(-430.000000, -791.000000) " points="426 789 430 793 434 789"></polyline>
+		                <path d="M449.25,418 L449.25,572" id="Line-2-Copy-8" stroke="#FFFFFF" stroke-width="2" fill="#D8D8D8" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1,4"></path>
+		                <polyline id="Path-5" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill-rule="nonzero" points="445 379 449.5 384 454 379"></polyline>
+		                <polyline id="Path-5-Copy-2" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill-rule="nonzero" points="445 572 449.5 577 454 572"></polyline>
+		                <text id="Industries-Copy-6" font-family="Roboto-Regular, Roboto" font-size="30" font-weight="normal" line-spacing="36" fill="#FFFFFF">
+		                    <tspan x="31" y="217">Pre-driving risk mitigation</tspan>
+		                </text>
+		                <text id="Industries-Copy-7" font-family="Roboto-Regular, Roboto" font-size="30" font-weight="normal" line-spacing="36" fill="#FFFFFF">
+		                    <tspan x="31" y="410">Reduce loss costs</tspan>
+		                </text>
+		                <text id="Industries-Copy-8" font-family="Roboto-Regular, Roboto" font-size="30" font-weight="normal" line-spacing="36" fill="#FFFFFF">
+		                    <tspan x="31" y="604">Increase adoption</tspan>
+		                </text>
+		                <text id="Industries-Copy-9" font-family="Roboto-Regular, Roboto" font-size="30" font-weight="normal" line-spacing="36" fill="#FFFFFF">
+		                    <tspan x="31" y="799">Diversify services</tspan>
+		                </text>
+		                <path d="M430,791 C430,801.49341 438.50659,810 449,810 L449,810 C459.49341,810 468,801.49341 468,791 C468,780.50659 459.49341,772 449,772" id="Oval-3" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill-rule="nonzero"></path>
+		                <text id="Predictive-maintenan" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
+		                    <tspan x="261" y="274">Predictive </tspan>
+		                    <tspan x="261" y="302">maintenance</tspan>
+		                </text>
+		                <text id="Predict-risk-of-new" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
+		                    <tspan x="31" y="275">Predict risk of new or </tspan>
+		                    <tspan x="31" y="303">like-new members</tspan>
+		                </text>
+		                <text id="Collision-analytics-Copy" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
+		                    <tspan x="261" y="468">Collision analytics</tspan>
+		                </text>
+		                <text id="Driving-behavior-ana-Copy" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
+		                    <tspan x="35" y="468">Driving behavior </tspan>
+		                    <tspan x="35" y="496">analytics</tspan>
+		                </text>
+		                <text id="Shared-vehicle-suppl-Copy" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
+		                    <tspan x="259" y="662">Shared vehicle </tspan>
+		                    <tspan x="259" y="690">supply optimization</tspan>
+		                </text>
+		                <text id="Personalized-driver-Copy" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
+		                    <tspan x="32" y="662">Personalized driver </tspan>
+		                    <tspan x="32" y="690">and rider incentives</tspan>
+		                </text>
+		                <text id="New-market-mobility-Copy" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
+		                    <tspan x="264" y="857">New market </tspan>
+		                    <tspan x="264" y="885">mobility insights</tspan>
+		                </text>
+		                <text id="Multimodal-demand-pr-Copy" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
+		                    <tspan x="31" y="857">Multimodal demand </tspan>
+		                    <tspan x="31" y="885">predictions</tspan>
+		                </text>
+		                <g id="mr-analytics-head-graphic_mobile" transform="translate(39.000000, 0.000000)">
+		                    <g id="plus_mobile" transform="translate(187.000000, 40.000000)" fill-rule="nonzero" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+		                        <g id="Group">
+		                            <path d="M14,0 L14,28" id="Path-4"></path>
+		                            <path d="M28,14.6086957 L0,14.6086957" id="Path-4"></path>
+		                        </g>
+		                    </g>
+		                    <text id="driver-analytics-graphic-text" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="32" fill="#FFFFFF">
+		                        <tspan x="14.5917969" y="126">Driver analytics</tspan>
+		                    </text>
+		                    <g id="driver-analytics-graphic" transform="translate(36.000000, 0.000000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+		                        <path d="M59.0323729,71.0424576 C58.9188136,70.7916102 58.8044068,70.7000847 58.6484746,70.5899153 C57.4933898,69.785678 54.2433898,67.9399153 50.4264407,67.9178814 L50.4264407,67.915339 C50.4154237,67.915339 50.4035593,67.9170339 50.3925424,67.9170339 C50.3815254,67.9170339 50.3705085,67.915339 50.3586441,67.915339 L50.3586441,67.9178814 C46.5425424,67.9399153 43.2925424,69.785678 42.1374576,70.5899153 C41.9798305,70.7000847 41.8671186,70.7916102 41.7527119,71.0424576 C41.660339,71.2483898 41.5738983,71.6661864 41.5738983,71.6661864 L41.5738983,75.1229661 L59.2120339,75.1229661 L59.2120339,71.6661864 C59.2120339,71.6661864 59.1247458,71.2483898 59.0323729,71.0424576 Z M50.1815254,64.2873729 L50.5357627,64.2873729 C52.4967797,64.2873729 54.0857627,62.6975424 54.1722034,60.7382203 L54.1722034,57.8534746 C54.0857627,55.8924576 52.4967797,54.3034746 50.5357627,54.3034746 L50.1815254,54.3034746 C48.2205085,54.3034746 46.630678,55.8933051 46.630678,57.8534746 L46.630678,60.7382203 C46.630678,62.6975424 48.2205085,64.2873729 50.1815254,64.2873729 Z" id="Stroke-1" stroke="#FEFEFE"></path>
+		                        <path d="M37.1805085,71.0424576 C37.0677966,70.7916102 36.9533898,70.7000847 36.7966102,70.5899153 C35.6415254,69.785678 32.3915254,67.9399153 28.5754237,67.9170339 L28.5754237,67.915339 C28.5635593,67.915339 28.5525424,67.9170339 28.540678,67.9170339 C28.529661,67.9170339 28.5186441,67.915339 28.5076271,67.915339 L28.5076271,67.9170339 C24.690678,67.9399153 21.440678,69.785678 20.2855932,70.5899153 C20.1288136,70.7000847 20.0161017,70.7916102 19.9016949,71.0424576 C19.809322,71.2483898 19.7228814,71.6661864 19.7228814,71.6661864 L19.7228814,75.1229661 L37.3601695,75.1229661 L37.3601695,71.6661864 C37.3601695,71.6661864 37.2737288,71.2483898 37.1805085,71.0424576 Z M28.329661,64.2873729 L28.6838983,64.2873729 C30.6449153,64.2873729 32.2338983,62.6975424 32.3211864,60.7382203 L32.3211864,57.8534746 C32.2347458,55.8924576 30.6449153,54.3034746 28.6838983,54.3034746 L28.329661,54.3034746 C26.3686441,54.3034746 24.779661,55.8933051 24.779661,57.8534746 L24.779661,60.7382203 C24.779661,62.6975424 26.3686441,64.2873729 28.329661,64.2873729 Z" id="Stroke-3" stroke="#FEFEFE"></path>
+		                        <path d="M80.8833898,71.0433051 C80.770678,70.7916102 80.6562712,70.7000847 80.4994915,70.5899153 C79.3452542,69.785678 76.0952542,67.9399153 72.2783051,67.9178814 L72.2783051,67.915339 C72.2664407,67.915339 72.2554237,67.9170339 72.2444068,67.9170339 C72.2325424,67.9170339 72.2215254,67.915339 72.2105085,67.915339 L72.2105085,67.9178814 C68.3944068,67.9399153 65.1444068,69.785678 63.9884746,70.5899153 C63.8316949,70.7000847 63.7181356,70.7916102 63.6045763,71.0424576 C63.5122034,71.2483898 63.4257627,71.6661864 63.4257627,71.6661864 L63.4257627,75.1229661 L81.0630508,75.1238136 L81.0630508,71.6661864 C81.0630508,71.6661864 80.9766102,71.2483898 80.8833898,71.0433051 Z M72.0333898,64.2873729 L72.3876271,64.2873729 C74.3477966,64.2873729 75.9367797,62.6975424 76.0240678,60.7382203 L76.0240678,57.8534746 C75.9376271,55.8924576 74.3477966,54.3034746 72.3876271,54.3034746 L72.0333898,54.3034746 C70.0715254,54.3034746 68.4825424,55.8933051 68.4825424,57.8534746 L68.4825424,60.7382203 C68.4825424,62.6975424 70.0715254,64.2873729 72.0333898,64.2873729 Z" id="Stroke-5" stroke="#FEFEFE"></path>
+		                        <path d="M100,50 C100,77.6144068 77.6144068,100 50,100 C22.3855932,100 0,77.6144068 0,50 C0,22.3855932 22.3855932,0 50,0 C77.6144068,0 100,22.3855932 100,50 Z" id="Stroke-7" stroke="#FEFEFE"></path>
+		                        <g id="Group-27" opacity="0.15" transform="translate(20.338983, 21.186441)" stroke="#FEFEFE">
+		                            <path d="M15.0034746,6.61661017 L15.0034746,26.4284746" id="Stroke-9"></path>
+		                            <path d="M0,6.48254237 L0,26.4283051" id="Stroke-11"></path>
+		                            <path d="M7.50177966,0.0972033898 L7.50177966,26.4285593" id="Stroke-13"></path>
+		                            <path d="M60.0130508,6.61661017 L60.0130508,26.4284746" id="Stroke-15"></path>
+		                            <path d="M30.0065254,6.19457627 L30.0065254,26.4284746" id="Stroke-17"></path>
+		                            <path d="M37.5083051,0.724576271 L37.5083051,26.4288136" id="Stroke-19"></path>
+		                            <path d="M45.0095763,6.48254237 L45.0095763,26.4283051" id="Stroke-21"></path>
+		                            <path d="M52.5117797,0.0972033898 L52.5117797,26.4285593" id="Stroke-23"></path>
+		                            <path d="M22.5048305,0.0972033898 L22.5048305,26.4285593" id="Stroke-25"></path>
+		                        </g>
+		                        <polyline id="Stroke-28" stroke="#0070D6" points="24.1525424 42.7966102 36.0169492 34.3220339 42.7966102 42.7966102 58.0508475 27.5423729 65.6779661 36.0169492 78.3898305 25.8474576"></polyline>
+		                    </g>
+		                    <text id="vehicle-analytics-graphic-text" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="32" fill="#FFFFFF">
+		                        <tspan x="236.098633" y="126">Vehicle analytics</tspan>
+		                    </text>
+		                    <g id="vehicle-analytics-graphic" transform="translate(265.000000, 0.000000)" stroke-linejoin="round" stroke-width="2">
+		                        <path d="M100,50 C100,77.6144068 77.6144068,100 50,100 C22.3855932,100 0,77.6144068 0,50 C0,22.3855932 22.3855932,0 50,0 C77.6144068,0 100,22.3855932 100,50 Z" id="Stroke-1" stroke="#FEFEFE" stroke-linecap="round"></path>
+		                        <g id="Group-21" opacity="0.15" transform="translate(20.338983, 21.186441)" stroke="#FEFEFE" stroke-linecap="round">
+		                            <path d="M15.0034746,6.61661017 L15.0034746,26.4284746" id="Stroke-3"></path>
+		                            <path d="M0,6.48254237 L0,26.4283051" id="Stroke-5"></path>
+		                            <path d="M7.50177966,0.0976271186 L7.50177966,26.4281356" id="Stroke-7"></path>
+		                            <path d="M60.0130508,6.61661017 L60.0130508,26.4284746" id="Stroke-9"></path>
+		                            <path d="M30.0065254,6.19457627 L30.0065254,26.4284746" id="Stroke-11"></path>
+		                            <path d="M37.5083051,0.724152542 L37.5083051,26.4283898" id="Stroke-13"></path>
+		                            <path d="M45.0095763,6.48254237 L45.0095763,26.4283051" id="Stroke-15"></path>
+		                            <path d="M52.5117797,0.0976271186 L52.5117797,26.4281356" id="Stroke-17"></path>
+		                            <path d="M22.5048305,0.0976271186 L22.5048305,26.4281356" id="Stroke-19"></path>
+		                        </g>
+		                        <path d="M35.765339,68.695339 L39.0475424,58.2605932 C39.1314407,57.9241525 39.4678814,57.6716102 39.8890678,57.6716102 L59.6899153,57.6716102 C60.1111017,57.6716102 60.4475424,57.9241525 60.5314407,58.345339 L63.8136441,68.695339" id="Stroke-22" stroke="#FEFEFE"></path>
+		                        <path d="M65.74,79.9117797 L34.1679661,79.9117797 L34.1755932,69.5948305 C34.1755932,69.1194068 34.4933898,68.8016102 34.969661,68.8016102 L35.7628814,68.8016102 L64.1688136,68.8016102 L64.9620339,68.8016102 C65.4391525,68.8016102 65.7561017,69.1194068 65.7561017,69.5948305 L65.7561017,79.164322 L65.74,80.0236441" id="Stroke-24" stroke="#FEFEFE"></path>
+		                        <path d="M41.2159322,74.6292373 C41.2159322,75.6512712 40.3871186,76.4800847 39.3659322,76.4800847 C38.3438983,76.4800847 37.5150847,75.6512712 37.5150847,74.6292373 C37.5150847,73.6080508 38.3438983,72.7792373 39.3659322,72.7792373 C40.3871186,72.7792373 41.2159322,73.6080508 41.2159322,74.6292373 Z" id="Stroke-26" stroke="#FEFEFE"></path>
+		                        <path d="M62.8020339,74.6292373 C62.8020339,75.6512712 61.9732203,76.4800847 60.9511864,76.4800847 C59.9291525,76.4800847 59.1011864,75.6512712 59.1011864,74.6292373 C59.1011864,73.6080508 59.9291525,72.7792373 60.9511864,72.7792373 C61.9732203,72.7792373 62.8020339,73.6080508 62.8020339,74.6292373 Z" id="Stroke-28" stroke="#FEFEFE"></path>
+		                        <path d="M37.3564407,80.0119492 L37.3564407,83.485678 C37.3564407,84.3619492 36.6394915,85.0788983 35.7623729,85.0788983 C34.8852542,85.0788983 34.1683051,84.3619492 34.1683051,83.485678 L34.1683051,79.835678" id="Stroke-30" stroke="#FEFEFE"></path>
+		                        <path d="M65.7640678,79.835678 L65.7640678,83.485678 C65.7640678,84.3619492 65.0462712,85.0788983 64.1691525,85.0788983 C63.2928814,85.0788983 62.5750847,84.3619492 62.5750847,83.485678 L62.5750847,80.0119492" id="Stroke-32" stroke="#FEFEFE"></path>
+		                        <polyline id="Stroke-34" stroke="#0070D6" stroke-linecap="round" points="24.1525424 42.7966102 36.0169492 34.3220339 42.7966102 42.7966102 58.0508475 27.5423729 65.6779661 36.0169492 78.3898305 25.8474576"></polyline>
+		                    </g>
+		                </g>
+		            </g>
+		        </g>
+		    </g>
+		</svg>
+
+	</div>
+</div>
+
 
 <!-- Marketplace Risk Analytics Graphic DESKTOP -->
 <div class="container" id="custom-feature__marketplace-risk-graphic">
