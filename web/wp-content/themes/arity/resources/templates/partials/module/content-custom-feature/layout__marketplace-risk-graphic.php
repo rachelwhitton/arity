@@ -1,8 +1,11 @@
 <style>
 	#custom-feature__marketplace-risk-graphic_mobile {
 		display: block;
+		position: relative;
 		width: 100%;
-		height: auto;
+		height: 0;
+		padding: 0;
+		padding-bottom: 100%;
 		/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#002950+0,011c2c+100 */
 		background: #002950; /* Old browsers */
 	  background: -webkit-linear-gradient(#002950 0%, #011c2c 100%);
@@ -30,11 +33,16 @@
 		}
 	}
 	#mr-analytics-graphic_mobile {
-		position: relative;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		left: 0;
+		top: 0;
+		/*position: relative;
 		width: 480px;
 		max-width: 100%;
-		min-width: 480px;
-		margin: 32px auto 48px;
+		min-width: 480px;*/
+		margin: 32px 0 0;
 	}
 	#mr-analytics-head-graphic {
 		opacity: 0;
@@ -54,11 +62,11 @@
 </style>
 
 <!-- Marketplace Risk Analytics Graphic MOBILE -->
+<!-- padding-bottom calculation → 978/480 = 203.75  -->
+<div class="container" id="custom-feature__marketplace-risk-graphic_mobile" style="padding-bottom: 203.75%">
+	<!-- <div class="row"> -->
 
-<div class="container" id="custom-feature__marketplace-risk-graphic_mobile">
-	<div class="row">
-
-		<svg id="mr-analytics-graphic_mobile" width="480px" height="893px" viewBox="0 0 480 893" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<svg id="mr-analytics-graphic_mobile" width="480px" height="978px" viewBox="0 0 480 978" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 			<defs>
 				<style>
 					#arrow-head-1_mobile, #arrow-head-2_mobile, #arrow-head-3_mobile, #animated-270deg-arc_mobile {
@@ -238,7 +246,7 @@
 		    </g>
 		</svg>
 
-	</div>
+	<!-- </div> -->
 </div>
 
 
