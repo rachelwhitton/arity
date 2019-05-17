@@ -17,12 +17,11 @@
 		display: none;
 		width: 100%;
 		height: auto;
-		/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#002950+0,011c2c+100 */
-		background: #002950; /* Old browsers */
+		background: #002950;
 	  background: -webkit-linear-gradient(#002950 0%, #011c2c 100%);
 	  background: -o-linear-gradient(#002950 0%, #011c2c 100%);
-  	background: linear-gradient(#002950 0%, #011c2c 100%); /* FF3.6-15  |  Chrome10-25,Safari5.1-6  |  W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002950', endColorstr='#011c2c',GradientType=0 ); /* IE6-9 */
+  	background: linear-gradient(#002950 0%, #011c2c 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002950', endColorstr='#011c2c',GradientType=0 );
 	}
 	@media screen and (min-width: 768px) {
 		#custom-feature__marketplace-risk-graphic_mobile {
@@ -62,6 +61,7 @@
 </style>
 
 <!-- Marketplace Risk Analytics Graphic MOBILE -->
+<!-- For mobile SVG placement, used padding-bottom "hack" → https://css-tricks.com/scale-svg/#article-header-id-10 -->
 <!-- padding-bottom calculation → 978/480 = 203.75  -->
 <div class="container" id="custom-feature__marketplace-risk-graphic_mobile" style="padding-bottom: 203.75%">
 	<!-- <div class="row"> -->
