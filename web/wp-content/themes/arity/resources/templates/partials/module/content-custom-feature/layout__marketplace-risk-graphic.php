@@ -34,7 +34,7 @@
 		width: 480px;
 		max-width: 100%;
 		min-width: 480px;
-		margin: 32px auto 40px;
+		margin: 32px auto 48px;
 	}
 	#mr-analytics-head-graphic {
 		opacity: 0;
@@ -59,81 +59,125 @@
 	<div class="row">
 
 		<svg id="mr-analytics-graphic_mobile" width="480px" height="893px" viewBox="0 0 480 893" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<defs>
+				<style>
+					#arrow-head-1_mobile, #arrow-head-2_mobile, #arrow-head-3_mobile, #animated-270deg-arc_mobile {
+						opacity: 0;
+					}
+					#mr-analytics-head-graphic_mobile, #rectangle-1-group_mobile, #rectangle-2-group_mobile, #rectangle-3-group_mobile, #rectangle-4-group_mobile, .rectangle-1-blurb, .rectangle-2-blurb, .rectangle-3-blurb, .rectangle-4-blurb {
+						opacity: 0;
+						transition: all 0.8s ease-in-out;
+					}
+					#mr-analytics-head-graphic_mobile.visible, #rectangle-1-group_mobile.visible, #rectangle-2-group_mobile.visible, #rectangle-3-group_mobile.visible, #rectangle-4-group_mobile.visible, .rectangle-1-blurb.visible, .rectangle-2-blurb.visible, .rectangle-3-blurb.visible, .rectangle-4-blurb.visible {
+						opacity: 1;
+					}
+				</style>
+
+				<clipPath id="lineClip1_mobile">
+					<rect id="lineRect1_mobile" width="4" height="0" x="448" y="222">
+				</clipPath>
+				<clipPath id="lineClip2_mobile">
+					<rect id="lineRect2_mobile" width="4" height="0" x="448" y="418">
+				</clipPath>
+				<clipPath id="lineClip3_mobile">
+					<rect id="lineRect3_mobile" width="4" height="0" x="448" y="609">
+				</clipPath>
+			</defs>
 		    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
-		    <title>mr-analytics-body-graphic_mobile</title>
+		    <title>Marketplace Risk Analytics Graphic - Mobile</title>
 		    <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 		        <g id="Key_Graphic_Mobile" transform="translate(0.000000, -283.000000)">
-		            <g id="mr-analytics-body-graphic_mobile" transform="translate(0.000000, 284.000000)">
-		                <polygon id="Rectangle-3-Copy-4" fill="#098189" fill-rule="nonzero" points="0 176 480 176 480 236 0 236"></polygon>
-		                <polygon id="Rectangle-3-Copy-5" fill="#098189" fill-rule="nonzero" points="0 369 480 369 480 429 0 429"></polygon>
-		                <polygon id="Rectangle-3-Copy-6" fill="#098189" fill-rule="nonzero" points="0 564 480 564 480 624 0 624"></polygon>
-		                <polygon id="Rectangle-3-Copy-7" fill="#098189" fill-rule="nonzero" points="0 759 480 759 480 819 0 819"></polygon>
-		                <g id="Group-3-Copy-4" transform="translate(437.000000, 194.000000)" fill="#FFFFFF" fill-rule="nonzero">
-		                    <circle id="Oval-2" opacity="0.466183036" cx="12.5" cy="12.5" r="12.5"></circle>
-		                    <circle id="Oval-2" cx="12.5" cy="12.5" r="5.5"></circle>
-		                </g>
-		                <g id="Group-3-Copy-7" transform="translate(437.000000, 387.000000)" fill="#FFFFFF" fill-rule="nonzero">
-		                    <circle id="Oval-2" opacity="0.466183036" cx="12.5" cy="12.5" r="12.5"></circle>
-		                    <circle id="Oval-2" cx="12.5" cy="12.5" r="5.5"></circle>
-		                </g>
-		                <g id="Group-3-Copy-8" transform="translate(437.000000, 582.000000)" fill="#FFFFFF" fill-rule="nonzero">
-		                    <circle id="Oval-2" opacity="0.466183036" cx="12.5" cy="12.5" r="12.5"></circle>
-		                    <circle id="Oval-2" cx="12.5" cy="12.5" r="5.5"></circle>
-		                </g>
-		                <g id="Group-3-Copy-9" transform="translate(437.000000, 778.000000)" fill="#FFFFFF" fill-rule="nonzero">
-		                    <circle id="Oval-2" opacity="0.466183036" cx="12.5" cy="12.5" r="12.5"></circle>
-		                    <circle id="Oval-2" cx="12.5" cy="12.5" r="5.5"></circle>
-		                </g>
-		                <path d="M449.25,222 L449.25,380" id="Line-2-Copy-6" stroke="#FFFFFF" stroke-width="2" fill="#D8D8D8" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1,4"></path>
-		                <path d="M449.25,609 L449.25,772" id="Line-2-Copy-7" stroke="#FFFFFF" stroke-width="2" fill="#D8D8D8" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1,4"></path>
-		                <polyline id="Path-5-Copy-3" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill-rule="nonzero" transform="translate(430.000000, 791.000000) rotate(-180.000000) translate(-430.000000, -791.000000) " points="426 789 430 793 434 789"></polyline>
-		                <path d="M449.25,418 L449.25,572" id="Line-2-Copy-8" stroke="#FFFFFF" stroke-width="2" fill="#D8D8D8" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1,4"></path>
-		                <polyline id="Path-5" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill-rule="nonzero" points="445 379 449.5 384 454 379"></polyline>
-		                <polyline id="Path-5-Copy-2" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill-rule="nonzero" points="445 572 449.5 577 454 572"></polyline>
-		                <text id="Industries-Copy-6" font-family="Roboto-Regular, Roboto" font-size="30" font-weight="normal" line-spacing="36" fill="#FFFFFF">
-		                    <tspan x="31" y="217">Pre-driving risk mitigation</tspan>
-		                </text>
-		                <text id="Industries-Copy-7" font-family="Roboto-Regular, Roboto" font-size="30" font-weight="normal" line-spacing="36" fill="#FFFFFF">
-		                    <tspan x="31" y="410">Reduce loss costs</tspan>
-		                </text>
-		                <text id="Industries-Copy-8" font-family="Roboto-Regular, Roboto" font-size="30" font-weight="normal" line-spacing="36" fill="#FFFFFF">
-		                    <tspan x="31" y="604">Increase adoption</tspan>
-		                </text>
-		                <text id="Industries-Copy-9" font-family="Roboto-Regular, Roboto" font-size="30" font-weight="normal" line-spacing="36" fill="#FFFFFF">
-		                    <tspan x="31" y="799">Diversify services</tspan>
-		                </text>
-		                <path d="M430,791 C430,801.49341 438.50659,810 449,810 L449,810 C459.49341,810 468,801.49341 468,791 C468,780.50659 459.49341,772 449,772" id="Oval-3" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill-rule="nonzero"></path>
-		                <text id="Predictive-maintenan" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
+		            <g id="mr-analytics-graphic_mobile__wrapper" transform="translate(0.000000, 284.000000)">
+
+		            		<!-- RECTANGLES MOBILE -->
+		                <text id="Predictive-maintenan" class="rectangle-1-blurb" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
 		                    <tspan x="261" y="274">Predictive </tspan>
 		                    <tspan x="261" y="302">maintenance</tspan>
 		                </text>
-		                <text id="Predict-risk-of-new" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
+		                <text id="Predict-risk-of-new" class="rectangle-1-blurb" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
 		                    <tspan x="31" y="275">Predict risk of new or </tspan>
 		                    <tspan x="31" y="303">like-new members</tspan>
 		                </text>
-		                <text id="Collision-analytics-Copy" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
+		                <g id="rectangle-1-group_mobile">
+			                <polygon id="rectangle-1_mobile" fill="#098189" fill-rule="nonzero" points="0 176 480 176 480 236 0 236"></polygon>
+			                <g id="arrow-oval-1_mobile" transform="translate(437.000000, 194.000000)" fill="#FFFFFF" fill-rule="nonzero">
+			                    <circle id="Oval-2" opacity="0.466183036" cx="12.5" cy="12.5" r="12.5"></circle>
+			                    <circle id="Oval-2" cx="12.5" cy="12.5" r="5.5"></circle>
+			                </g>
+			                <text id="rectangle-1-title_mobile" font-family="Roboto-Regular, Roboto" font-size="30" font-weight="normal" line-spacing="36" fill="#FFFFFF">
+			                    <tspan x="31" y="217">Pre-driving risk mitigation</tspan>
+			                </text>
+			               </g>
+		                <text id="Collision-analytics-Copy" class="rectangle-2-blurb" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
 		                    <tspan x="261" y="468">Collision analytics</tspan>
 		                </text>
-		                <text id="Driving-behavior-ana-Copy" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
+		                <text id="Driving-behavior-ana-Copy" class="rectangle-2-blurb" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
 		                    <tspan x="35" y="468">Driving behavior </tspan>
 		                    <tspan x="35" y="496">analytics</tspan>
 		                </text>
-		                <text id="Shared-vehicle-suppl-Copy" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
+		                <g id="rectangle-2-group_mobile">
+			                <polygon id="rectangle-2_mobile" fill="#098189" fill-rule="nonzero" points="0 369 480 369 480 429 0 429"></polygon>
+			                <g id="arrow-oval-2_mobile" transform="translate(437.000000, 387.000000)" fill="#FFFFFF" fill-rule="nonzero">
+			                    <circle id="Oval-2" opacity="0.466183036" cx="12.5" cy="12.5" r="12.5"></circle>
+			                    <circle id="Oval-2" cx="12.5" cy="12.5" r="5.5"></circle>
+			                </g>
+		                	<text id="rectangle-2-title_mobile" font-family="Roboto-Regular, Roboto" font-size="30" font-weight="normal" line-spacing="36" fill="#FFFFFF">
+		                    <tspan x="31" y="410">Reduce loss costs</tspan>
+		                	</text>
+			              </g>
+		                <text id="Shared-vehicle-suppl-Copy" class="rectangle-3-blurb" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
 		                    <tspan x="259" y="662">Shared vehicle </tspan>
 		                    <tspan x="259" y="690">supply optimization</tspan>
 		                </text>
-		                <text id="Personalized-driver-Copy" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
+		                <text id="Personalized-driver-Copy" class="rectangle-3-blurb" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
 		                    <tspan x="32" y="662">Personalized driver </tspan>
 		                    <tspan x="32" y="690">and rider incentives</tspan>
 		                </text>
-		                <text id="New-market-mobility-Copy" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
+		                <g id="rectangle-3-group_mobile">
+			                <polygon id="rectangle-3_mobile" fill="#098189" fill-rule="nonzero" points="0 565 480 565 480 625 0 625"></polygon>
+			                <g id="arrow-oval-3_mobile" transform="translate(437.000000, 582.000000)" fill="#FFFFFF" fill-rule="nonzero">
+			                    <circle id="Oval-2" opacity="0.466183036" cx="12.5" cy="12.5" r="12.5"></circle>
+			                    <circle id="Oval-2" cx="12.5" cy="12.5" r="5.5"></circle>
+			                </g>
+			                <text id="rectangle-3-title_mobile" font-family="Roboto-Regular, Roboto" font-size="30" font-weight="normal" line-spacing="36" fill="#FFFFFF">
+			                    <tspan x="31" y="604">Increase adoption</tspan>
+			                </text>
+			              </g>
+		                <text id="New-market-mobility-Copy" class="rectangle-4-blurb" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
 		                    <tspan x="264" y="857">New market </tspan>
 		                    <tspan x="264" y="885">mobility insights</tspan>
 		                </text>
-		                <text id="Multimodal-demand-pr-Copy" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
+		                <text id="Multimodal-demand-pr-Copy" class="rectangle-4-blurb" font-family="Roboto-Regular, Roboto" font-size="21" font-weight="normal" line-spacing="28" fill="#FFFFFF">
 		                    <tspan x="31" y="857">Multimodal demand </tspan>
 		                    <tspan x="31" y="885">predictions</tspan>
 		                </text>
+		                <g id="rectangle-4-group_mobile">
+			                <polygon id="rectangle-4_mobile" fill="#098189" fill-rule="nonzero" points="0 759 480 759 480 819 0 819"></polygon>
+			                <g id="arrow-oval-4_mobile" transform="translate(437.000000, 778.000000)" fill="#FFFFFF" fill-rule="nonzero">
+			                    <circle id="oval-outer-4_mobile" opacity="0.466183036" cx="12.5" cy="12.5" r="12.5"></circle>
+			                    <circle id="oval-inner-4_mobile" cx="12.5" cy="12.5" r="5.5"></circle>
+			                </g>
+			                <text id="rectangle-4-title_mobile" font-family="Roboto-Regular, Roboto" font-size="30" font-weight="normal" line-spacing="36" fill="#FFFFFF">
+			                    <tspan x="31" y="799">Diversify services</tspan>
+			                </text>
+			              </g>
+
+			              <!-- ARROWS MOBILE -->
+		                <polyline id="arrow-head-3_mobile" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill-rule="nonzero" transform="translate(430.000000, 791.000000) rotate(-180.000000) translate(-430.000000, -791.000000) " points="426 789 430 793 434 789"></polyline>
+		                <path d="M430,791 C430,801.49341 438.50659,810 449,810 L449,810 C459.49341,810 468,801.49341 468,791 C468,780.50659 459.49341,772 449,772" id="animated-270deg-arc_mobile" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill-rule="nonzero"></path>
+		                <g id="LineReveal3_mobile" clip-path="url(#lineClip3_mobile)">
+		                	<path d="M449,609 L449,772" id="arrow-line-3_mobile" stroke="#FFFFFF" stroke-width="2" fill="#D8D8D8" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1,4"></path>
+		                </g>
+		                <polyline id="arrow-head-2_mobile" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill-rule="nonzero" points="445 572 449.5 577 454 572"></polyline>
+		                <g id="LineReveal2_mobile" clip-path="url(#lineClip2_mobile)">
+		                	<path d="M449,418 L449,572" id="arrow-line-2_mobile" stroke="#FFFFFF" stroke-width="2" fill="#D8D8D8" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1,4"></path>
+		                </g>
+		                <polyline id="arrow-head-1_mobile" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill-rule="nonzero" points="445 379 449.5 384 454 379"></polyline>
+		                <g id="LineReveal1_mobile" clip-path="url(#lineClip1_mobile)">
+		                	<path d="M449,222 L449,380" id="arrow-line-1_mobile" stroke="#FFFFFF" stroke-width="2" fill="#D8D8D8" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1,4"></path>
+		                </g>
+
+		                <!-- HEADER GRAPHIC - MOBILE -->
 		                <g id="mr-analytics-head-graphic_mobile" transform="translate(39.000000, 0.000000)">
 		                    <g id="plus_mobile" transform="translate(187.000000, 40.000000)" fill-rule="nonzero" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
 		                        <g id="Group">
@@ -187,6 +231,8 @@
 		                        <polyline id="Stroke-34" stroke="#0070D6" stroke-linecap="round" points="24.1525424 42.7966102 36.0169492 34.3220339 42.7966102 42.7966102 58.0508475 27.5423729 65.6779661 36.0169492 78.3898305 25.8474576"></polyline>
 		                    </g>
 		                </g>
+
+
 		            </g>
 		        </g>
 		    </g>
@@ -396,8 +442,7 @@
 		var els = document.querySelectorAll(elementIdentifier);
 		els.forEach(function(el) {
 			el.classList.add("visible");
-		});
-		
+		});		
 	}
 
 	function drawDottedLine(lineNum, lineHeight) {
@@ -408,12 +453,16 @@
 		if (clipPathID != "#lineRect3") {
 			TweenMax.to(arrowID, 0.4, {css: {opacity: 1}, delay: theDelay});
 		}
-		// else {
-		// 	var drawSpeed = 0.75;
-		// 	TweenMax.delayedCall(theDelay, revealElement, ["#lozenge-4"]);
-		// 	TweenMax.delayedCall(theDelay, drawPath, ["animated-270deg-arc", drawSpeed]);
-		// 	TweenMax.to(arrowID, 0.4, {css: {opacity: 1}, delay: (theDelay + drawSpeed), onComplete: revealElement, onCompleteParams: [".lozenge-4-blurb"]});
-		// }
+	}
+
+	function drawMobileDottedLine(lineNum, lineHeight) {
+		var clipPathID = "#lineRect" + lineNum + "_mobile";
+		var arrowID = "#arrow-head-" + lineNum + "_mobile";
+		var theDelay = 0.6;
+		TweenMax.to(clipPathID, 0.75, {attr:{height: lineHeight}, ease: Power2.easeInOut});
+		if (clipPathID != "#lineRect3_mobile") {
+			TweenMax.to(arrowID, 0.4, {css: {opacity: 1}, delay: theDelay});
+		}
 	}
 
 	function drawPath(pathID, drawSpeed) {
@@ -432,6 +481,105 @@
 	window.onload = function() {
 		var controller = new ScrollMagic.Controller();
 
+		// Mobile animation sequences
+		var seq0_mob = new ScrollMagic.Scene({
+			triggerElement: "#custom-feature__marketplace-risk-graphic_mobile",
+			triggerHook: 0.9,
+			offset: 50,
+			reverse: false
+		})
+		.setClassToggle("#mr-analytics-head-graphic_mobile", "visible")
+		.addTo(controller);
+
+		var seq1_mob = new ScrollMagic.Scene({
+			triggerElement: "#rectangle-1-group_mobile",
+			triggerHook: 0.9,
+			offset: 20,
+			reverse: false
+		})
+		.setClassToggle("#rectangle-1-group_mobile", "visible")
+		.addTo(controller);
+
+		var seq1a_mob = new ScrollMagic.Scene({
+			triggerElement: ".rectangle-1-blurb",
+			triggerHook: 0.9,
+			offset: 0,
+			reverse: false
+		})
+		.on("start", function (e) {
+			drawMobileDottedLine(1, 159);
+		})
+		.setClassToggle(".rectangle-1-blurb", "visible")
+		.addTo(controller);
+
+		var seq2_mob = new ScrollMagic.Scene({
+			triggerElement: "#rectangle-2-group_mobile",
+			triggerHook: 0.9,
+			offset: 20,
+			reverse: false
+		})
+		.setClassToggle("#rectangle-2-group_mobile", "visible")
+		.addTo(controller);
+
+		var seq2a_mob = new ScrollMagic.Scene({
+			triggerElement: ".rectangle-2-blurb",
+			triggerHook: 0.9,
+			offset: 0,
+			reverse: false
+		})
+		.on("start", function (e) {
+			drawMobileDottedLine(2, 155);
+		})
+		.setClassToggle(".rectangle-2-blurb", "visible")
+		.addTo(controller);
+
+		var seq3_mob = new ScrollMagic.Scene({
+			triggerElement: "#rectangle-3-group_mobile",
+			triggerHook: 0.9,
+			offset: 20,
+			reverse: false
+		})
+		.setClassToggle("#rectangle-3-group_mobile", "visible")
+		.addTo(controller);
+
+		var seq3a_mob = new ScrollMagic.Scene({
+			triggerElement: ".rectangle-3-blurb",
+			triggerHook: 0.9,
+			offset: 0,
+			reverse: false
+		})
+		.on("start", function (e) {
+			drawMobileDottedLine(3, 164);
+		})
+		.setClassToggle(".rectangle-3-blurb", "visible")
+		.addTo(controller);
+
+		var seq4_mob = new ScrollMagic.Scene({
+			triggerElement: "#rectangle-4-group_mobile",
+			triggerHook: 0.9,
+			offset: 20,
+			reverse: false
+		})
+		.on("start", function (e) {
+			var initDelay = 0.3;
+			TweenMax.delayedCall(initDelay, drawPath, ["animated-270deg-arc_mobile", 0.75]);
+			// drawPath("animated-270deg-arc_mobile", 0.75);
+			TweenMax.to("#arrow-head-3_mobile", 0.4, {css: {opacity: 1}, delay: (initDelay + 0.75)});
+		})
+		.setClassToggle("#rectangle-4-group_mobile", "visible")
+		.addTo(controller);
+
+		var seq4a_mob = new ScrollMagic.Scene({
+			triggerElement: ".rectangle-4-blurb",
+			triggerHook: 0.9,
+			offset: 0,
+			reverse: false
+		})
+		.setClassToggle(".rectangle-4-blurb", "visible")
+		.addTo(controller);
+
+
+		// Desktop animation sequences
 		var seq0 = new ScrollMagic.Scene({
 			triggerElement: "#custom-feature__marketplace-risk-graphic",
 			triggerHook: 0.9,
@@ -526,9 +674,5 @@
 		.setClassToggle(".lozenge-4-blurb", "visible")
 		.addTo(controller);
 	}
-
-	// TweenMax.delayedCall(1, drawDottedLine, ["#lineRect1","#animated-arrow-head-1", 172]);
-	// TweenMax.delayedCall(2.5, drawDottedLine, ["#lineRect2","#animated-arrow-head-2", 166]);
-	// TweenMax.delayedCall(4, drawDottedLine, ["#lineRect3","#animated-arrow-head-3", 166]);
 
 </script>
