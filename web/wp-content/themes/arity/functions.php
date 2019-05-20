@@ -219,7 +219,8 @@ add_action('acf/save_post', 'my_datavis_save_post', 1);
 
 $regex_path_patterns = array(
     '#^/move/?#',
-    '#^/popup/?#'
+    '#^/popup/?#',
+    '#^/marketplace-risk/?#'
   );
   
   // Loop through the patterns.
