@@ -1,3 +1,14 @@
+<?php
+/*
+   marketplace risk form handler url: https://go.arity.com/l/669483/2019-05-20/6qb8
+   blog form handler url: https://go.arity.com/l/669483/2018-12-17/6sb
+*/
+
+// should default to blog form handler URL
+$blog_url = 'https://go.arity.com/l/669483/2018-12-17/6sb';
+$handler_url = $data['handler-url'] != '' ? $data['handler-url'] : $blog_url;
+?>
+
 <div id="thankyou_modal" class="blogPopup1">
     <div class="modal-dialog" style="text-align:center; color:#fff">
       <p>Thank you for joining.</p>
@@ -13,7 +24,7 @@
 
 <div id="thankyou_modal" class="blogPopup">
     <div class="modal-dialog">
-    <form id="myPopupForm" action="https://go.arity.com/l/669483/2018-12-17/6sb" method="POST">
+    <form id="myPopupForm" action="<?=$handler_url?>" method="POST">
     <!-- Modal content-->
       <p style="font-size:17px;">Stay ahead of the mobility curve</p>
       <div class="formFields" style="color:#fff; display:flex">
