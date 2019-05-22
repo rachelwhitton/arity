@@ -154,6 +154,7 @@ $module_builder->includeACFSettings('text-w-icon', 'component');
 $module_builder->includeACFSettings('text-w-image', 'component');
 $module_builder->includeACFSettings('text-block', 'component');
 $module_builder->includeACFSettings('custom-cta', 'component');
+$module_builder->includeACFSettings('carousel-item', 'component');
 
 //to be archived Components
 $module_builder->includeACFSettings('icon-only-stack', 'component');
@@ -201,6 +202,7 @@ $module_builder->includeACFSettings('image-full-width', 'module');
 $module_builder->includeACFSettings('pardot-form', 'module');
 $module_builder->includeACFSettings('blog-popup', 'module');
 $module_builder->includeACFSettings('content-custom-feature', 'module');
+$module_builder->includeACFSettings('carousel', 'module');
 
 //archive candidate
 
