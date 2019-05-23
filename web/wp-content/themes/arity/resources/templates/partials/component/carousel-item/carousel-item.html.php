@@ -8,13 +8,10 @@ namespace App\Theme;
   Last Updated:       05/21/2019
   Since:              2.3.0
 */
+ // echo '<pre>'; print_r($data); echo '</pre>'; 
+
 ?>
 
-<div class="carousel-item">
-<?php
-element('image', [
-	'id' => $data['image_id'],
-	'classes' => $data['img-classes']
-]);
-?>
+<div class="carousel-item<?=$data['active'];?>">
+	<?=wp_get_attachment_image($data['image_id'], $data['size'], null, $data['attrs']);?>
 </div>

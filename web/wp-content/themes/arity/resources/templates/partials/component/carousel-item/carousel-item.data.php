@@ -1,6 +1,12 @@
-<? 
+<?php
 
-$data['img-classes'][] = 'd-block';
-$data['img-classes'][] = 'w-100';
+$data['attrs'] = array(
+	'class' => 'd-block w-100',
+	'alt' => get_post_meta($data['image_id'], '_wp_attachment_image_alt', true)
+);
+// Make full the default image size if nothing is passed
+if (!empty($data['image_id']) && empty($data['size'])) {
+  $data['size'] = 'full';
+}
 
 return $data;

@@ -23,7 +23,7 @@ $fields = [
 			// image
       acf_image([
         'label' => 'Images',
-        'name' => 'carousel__image_id',
+        'name' => 'image_id',
         'key' => 'field_image_id',
         'return_format' => 'id',
         'instructions' => 'Suggested image size: <br>2400 &times; 1286 px',
@@ -36,7 +36,7 @@ $fields = [
       // caption
       acf_text([
     		'label' => 'Captions',
-    		'name' => 'carousel__image-caption',
+    		'name' => 'image_caption',
     		'key' => 'field_image-caption',
     		'instructions' => 'Recommended character count max: 120',
     		'required' => 0,
