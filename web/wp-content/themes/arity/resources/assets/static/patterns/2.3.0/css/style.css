@@ -8870,7 +8870,7 @@ form .form-control ::-webkit-input-placeholder {
   color: #63727E;
 }
 
-form .form-control ::-ms-input-placeholder {
+form .form-control :-ms-input-placeholder {
   color: #63727E;
 }
 
