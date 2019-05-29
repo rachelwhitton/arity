@@ -23,7 +23,8 @@ $fields = [
     'default_value' => 'custom-content-selector',
     'choices' => [
       'custom-content-selector' => 'Custom content selector',
-      'marketplace-risk-graphic' => 'Marketplace risk graphic'
+      'marketplace-risk-graphic' => 'Marketplace risk graphic',
+      'about-us-data-grid' => "About Us data grid"
     ]
 	]),
 	// acf_flexible_content([

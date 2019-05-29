@@ -6587,7 +6587,7 @@ var Util = function ($) {
       blogNav.init();
       accordion.init();
       actionBar.init();
-      arityCarousel.init();
+      // arityCarousel.init();
       optIn.init();
     },
     initConfigs: function initConfigs() {

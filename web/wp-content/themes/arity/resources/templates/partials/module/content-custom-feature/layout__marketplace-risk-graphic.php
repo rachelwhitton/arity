@@ -1,3 +1,12 @@
+<?php
+/*
+  Layout Name:				Marketplace Risk graphic
+  Description:        Custom layout for the Marketplace Risk landing page
+  Last Updated:       05/20/2019
+  Since:              2.3.0
+*/
+ ?>
+ 
 <style>
 	#custom-feature__marketplace-risk-graphic_mobile {
 		display: block;
