@@ -1302,7 +1302,7 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
 
         counter.animDecimal = counter.counterField[i].dataset.animdecimal || '0';
         counter.animElement = counter.counterField[i].id;
-        counter.animDuration = 0.75;
+        counter.animDuration = counter.counterField[i].dataset.animduration || 0.75;
 
         counter.id = "#" + counter.counterField[i].getAttribute('id');
 

@@ -6086,7 +6086,7 @@ html.disable-scroll body {
   background: #0070d6 !important;
 }
 
-.colors__text--yellow {
+.colors__text--yellow, .product-stats__value.yellow-- {
   color: #e2ef1c !important;
 }
 
@@ -6180,6 +6180,22 @@ html.disable-scroll body {
 
 .colors__bg--bordergray {
   background: #c2c8cd !important;
+}
+
+.colors__text--lavender, .product-stats__value.lavender-- {
+  color: #b096f8 !important;
+}
+
+.colors__bg--lavender {
+  background: #b096f8 !important;
+}
+
+.colors__text--sky, .product-stats__value.sky-- {
+  color: #4fa3f3 !important;
+}
+
+.colors__bg--sky {
+  background: #4fa3f3 !important;
 }
 
 .icon {
@@ -7397,6 +7413,14 @@ a.blue-link:focus [class^="icon-"] {
 
 .ar-element.eyebrow--bordergray {
   color: #c2c8cd !important;
+}
+
+.ar-element.eyebrow--lavender {
+  color: #b096f8 !important;
+}
+
+.ar-element.eyebrow--sky {
+  color: #4fa3f3 !important;
 }
 
 .ar-module {

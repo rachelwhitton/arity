@@ -15,6 +15,18 @@ $fields = [
 			'width' => '100',
 		),
 	]),
+	// carousel controls
+	acf_true_false([
+		'label' => 'Add arrow controls',
+		'name' => 'carousel__has-arrows',
+		'key' => 'field_carousel_has-arrows',
+		'instructions' => 'Do you want your carousel to have arrows as controls?',
+		'required' => 0,
+		'default_value' => 1,
+		'wrapper' => array(
+			'width' => '75',
+		),
+	]),
 	// carousel items
 	acf_repeater([
 		'label' => 'Carousel slides',

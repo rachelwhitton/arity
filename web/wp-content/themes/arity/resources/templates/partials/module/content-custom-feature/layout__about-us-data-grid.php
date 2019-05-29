@@ -11,42 +11,42 @@
 $grid_data = array(
 	'grid_unit_1' => array(
 		'stat' => '300',
-		'stat_color' => '#b096f8',
+		'stat_color' => ' lavender--',
 		'label' => 'employees'
 	),
 'grid_unit_2' => array(
 		'stat' => '3',
-		'stat_color' => '#4fa3f3',
+		'stat_color' => ' sky--',
 		'label' => 'locations'
 	),
 'grid_unit_3' => array(
 		'stat' => '17',
-		'stat_color' => '#e2ef1c',
+		'stat_color' => ' yellow--',
 		'label' => 'neighborhoods'
 	),
 'grid_unit_4' => array(
 		'stat' => '40',
-		'stat_color' => '#009ba3',
+		'stat_color' => '',
 		'label' => 'cat parents'
 	),
 'grid_unit_5' => array(
 		'stat' => '163',
-		'stat_color' => '#009ba3',
+		'stat_color' => '',
 		'label' => 'CTA commuters'
 	),
 'grid_unit_6' => array(
 		'stat' => '24',
-		'stat_color' => '#e2ef1c',
+		'stat_color' => ' yellow--',
 		'label' => 'marathon runners'
 	),
 'grid_unit_7' => array(
 		'stat' => '13',
-		'stat_color' => '#b096f8',
+		'stat_color' => ' lavender--',
 		'label' => 'cyclists'
 	),
 'grid_unit_8' => array(
 		'stat' => '4',
-		'stat_color' => '#4fa3f3',
+		'stat_color' => ' sky--',
 		'label' => 'skaters'
 	),
 );
@@ -55,12 +55,13 @@ $grid_data = array(
 
 <style>
 	#custom-feature__about-us-data-grid {
-		margin-top: -188px; /* -96px - 92px */
-		z-index: 100;
+		margin-top: -48px;
+		margin-bottom: 48px;
+		z-index: 3;
 	}
 	.about-us-data-grid {
 		background-color: #011c2c;
-		padding: 60px 57px; /* 42 + 15 = 57px */
+		padding: 32px 16px;
 	}
 	.data-grid-unit {
 		height: 140px;
@@ -80,23 +81,42 @@ $grid_data = array(
 		font-family: 'Roboto Mono', monospace !important;
 		font-weight: 400;
 		letter-spacing: -.1875rem;
-		font-size: 3rem;
+		font-size: 4rem;
 		color: #ffffff;
 		text-align: center;
 		line-height: 0.6375;
-		margin: 54px 0 24px 0;
+		margin: 28px 0 24px 0;
 	}
 	.data-grid-unit p {
 		font-weight: 700;
 		color: #ffffff;
-		font-size: 0.875rem;
+		font-size: 1rem;
 		text-align: center;
 		margin: 0;
 	}
+	.data-grid-unit h2.top-row-data-md {
+		margin-top: 28px;
+	}
+	/*
 	.data-grid-unit h2.top-row-data-sm {
 		margin-top: 0;
 	}
+	*/
+
+	@media screen and (min-width: 360px) {
+		.about-us-data-grid {
+			padding: 40px 32px;
+		}
+		.data-grid-unit h2 {
+			font-size: 4.5625rem;
+		}
+	}
+
 	@media screen and (min-width: 768px) {
+		#custom-feature__about-us-data-grid {
+			margin-top: -106px;
+			margin-bottom: 64px;
+		}
 		.about-us-data-grid {
 			padding: 36px 38px; /* 30 + 15 = 45px */
 		}
@@ -110,6 +130,9 @@ $grid_data = array(
 		.data-grid-unit h2.top-row-data-md {
 			margin-top: 0;
 		}
+		.data-grid-unit p {
+			font-size: 0.875rem;
+		}
 		.bottom-row-md {
 			border-bottom: 0;
 		}
@@ -121,8 +144,12 @@ $grid_data = array(
 		}	
 	}
 	@media screen and (min-width: 961px) {
+		#custom-feature__about-us-data-grid {
+			margin-top: -188px; /* -96px - 92px */
+			margin-bottom: 64px;
+		}
 		.about-us-data-grid {
-			padding: 60px 57px;
+			padding: 60px 57px; /* 42 + 15 = 57px */
 		}
 		.data-grid-unit {
 			height: 140px;
@@ -151,41 +178,95 @@ $grid_data = array(
 
 <div id="custom-feature__about-us-data-grid" class="container">
 	<div class="row justify-content-center">
-		<div class="col-md-10 col-sm-12 about-us-data-grid">
-			<div class="row">
+		<div class="col-md-10 col-12 about-us-data-grid">
+			<div class="row no-gutters">
 
-				<div class="data-grid-unit col-md-3 col-sm-6">
-					<h2 class="top-row-data-md top-row-data-sm" style="color: <?=$grid_data['grid_unit_1']['stat_color']?>"><?=$grid_data['grid_unit_1']['stat']?></h2>
-					<p><?=$grid_data['grid_unit_1']['label']?></p>
-				</div>
-				<div class="data-grid-unit col-md-3 col-sm-6 right-edge-sm">
-					<h2 class="top-row-data-md top-row-data-sm" style="color: <?=$grid_data['grid_unit_2']['stat_color']?>"><?=$grid_data['grid_unit_2']['stat']?></h2>
-					<p><?=$grid_data['grid_unit_2']['label']?></p>
-				</div>
-				<div class="data-grid-unit col-md-3 col-sm-6">
-					<h2 class="top-row-data-md" style="color: <?=$grid_data['grid_unit_3']['stat_color']?>"><?=$grid_data['grid_unit_3']['stat']?></h2>
-					<p><?=$grid_data['grid_unit_3']['label']?></p>
-				</div>
-				<div class="data-grid-unit col-md-3 col-sm-6 right-edge-md right-edge-sm">
-					<h2 class="top-row-data-md" style="color: <?=$grid_data['grid_unit_4']['stat_color']?>"><?=$grid_data['grid_unit_4']['stat']?></h2>
-					<p><?=$grid_data['grid_unit_4']['label']?></p>
+				<div class="data-grid-unit col-md-3 col-6">
+					<h2 class="top-row-data-md">
+							<span class="product-stats__value<?=$grid_data['grid_unit_1']['stat_color'];?>">
+								<span id="product-stats__value_<?=$grid_data['grid_unit_1']['stat'];?>" data-animstart="0" data-animvalue="<?=$grid_data['grid_unit_1']['stat'];?>" data-animdecimal="0">
+									<?=$grid_data['grid_unit_1']['stat'];?>
+								</span>
+						</span>
+						</h2>
+					<p><?=$grid_data['grid_unit_1']['label'];?></p>
 				</div>
 
-				<div class="data-grid-unit col-md-3 col-sm-6 bottom-row-md">
-					<h2 style="color: <?=$grid_data['grid_unit_5']['stat_color']?>"><?=$grid_data['grid_unit_5']['stat']?></h2>
-					<p><?=$grid_data['grid_unit_5']['label']?></p>
+				<div class="data-grid-unit col-md-3 col-6 right-edge-sm">
+					<h2 class="top-row-data-md">
+						<span class="product-stats__value<?=$grid_data['grid_unit_2']['stat_color'];?>">
+							<span id="product-stats__value_<?=$grid_data['grid_unit_2']['stat'];?>" data-animstart="0" data-animvalue="<?=$grid_data['grid_unit_2']['stat'];?>" data-animdecimal="0">
+								<?=$grid_data['grid_unit_2']['stat'];?>
+							</span>
+						</span>						
+					</h2>
+					<p><?=$grid_data['grid_unit_2']['label'];?></p>
 				</div>
-				<div class="data-grid-unit col-md-3 col-sm-6 bottom-row-md right-edge-sm">
-					<h2 style="color: <?=$grid_data['grid_unit_6']['stat_color']?>"><?=$grid_data['grid_unit_6']['stat']?></h2>
-					<p><?=$grid_data['grid_unit_6']['label']?></p>
+
+				<div class="data-grid-unit col-md-3 col-6">
+					<h2 class="top-row-data-md">
+						<span class="product-stats__value<?=$grid_data['grid_unit_3']['stat_color'];?>">
+							<span id="product-stats__value_<?=$grid_data['grid_unit_3']['stat'];?>" data-animstart="0" data-animvalue="<?=$grid_data['grid_unit_3']['stat'];?>" data-animdecimal="0">
+								<?=$grid_data['grid_unit_3']['stat'];?>
+							</span>
+						</span>
+					</h2>
+					<p><?=$grid_data['grid_unit_3']['label'];?></p>
 				</div>
-				<div class="data-grid-unit col-md-3 col-sm-6 bottom-row-sm">
-					<h2 style="color: <?=$grid_data['grid_unit_7']['stat_color']?>"><?=$grid_data['grid_unit_7']['stat']?></h2>
-					<p><?=$grid_data['grid_unit_7']['label']?></p>
+
+				<div class="data-grid-unit col-md-3 col-6 right-edge-md right-edge-sm">
+					<h2 class="top-row-data-md">
+						<span class="product-stats__value<?=$grid_data['grid_unit_4']['stat_color'];?>">
+							<span id="product-stats__value_<?=$grid_data['grid_unit_4']['stat'];?>" data-animstart="0" data-animvalue="<?=$grid_data['grid_unit_4']['stat'];?>" data-animdecimal="0">
+								<?=$grid_data['grid_unit_4']['stat'];?>
+							</span>
+						</span>
+					</h2>
+					<p><?=$grid_data['grid_unit_4']['label'];?></p>
 				</div>
-				<div class="data-grid-unit col-md-3 col-sm-6 bottom-row-sm right-edge-md right-edge-sm">
-					<h2 style="color: <?=$grid_data['grid_unit_8']['stat_color']?>"><?=$grid_data['grid_unit_8']['stat']?></h2>
-					<p><?=$grid_data['grid_unit_8']['label']?></p>
+
+				<div class="data-grid-unit col-md-3 col-6 bottom-row-md">
+					<h2>
+						<span class="product-stats__value<?=$grid_data['grid_unit_5']['stat_color'];?>">
+							<span id="product-stats__value_<?=$grid_data['grid_unit_5']['stat'];?>" data-animstart="0" data-animvalue="<?=$grid_data['grid_unit_5']['stat'];?>" data-animdecimal="0">
+								<?=$grid_data['grid_unit_5']['stat'];?>
+							</span>
+						</span>
+					</h2>
+					<p><?=$grid_data['grid_unit_5']['label'];?></p>
+				</div>
+
+				<div class="data-grid-unit col-md-3 col-6 bottom-row-md right-edge-sm">
+					<h2>
+						<span class="product-stats__value<?=$grid_data['grid_unit_6']['stat_color'];?>">
+							<span id="product-stats__value_<?=$grid_data['grid_unit_6']['stat'];?>" data-animstart="0" data-animvalue="<?=$grid_data['grid_unit_6']['stat'];?>" data-animdecimal="0">
+								<?=$grid_data['grid_unit_6']['stat'];?>
+							</span>
+						</span>
+					</h2>
+					<p><?=$grid_data['grid_unit_6']['label'];?></p>
+				</div>
+
+				<div class="data-grid-unit col-md-3 col-6 bottom-row-sm">
+					<h2>
+						<span class="product-stats__value<?=$grid_data['grid_unit_7']['stat_color'];?>">
+							<span id="product-stats__value_<?=$grid_data['grid_unit_7']['stat'];?>" data-animstart="0" data-animvalue="<?=$grid_data['grid_unit_7']['stat'];?>" data-animdecimal="0">
+								<?=$grid_data['grid_unit_7']['stat'];?>
+							</span>
+						</span>
+					</h2>
+					<p><?=$grid_data['grid_unit_7']['label'];?></p>
+				</div>
+
+				<div class="data-grid-unit col-md-3 col-6 bottom-row-sm right-edge-md right-edge-sm">
+					<h2>
+						<span class="product-stats__value<?=$grid_data['grid_unit_8']['stat_color'];?>">
+							<span id="product-stats__value_<?=$grid_data['grid_unit_8']['stat'];?>" data-animstart="0" data-animvalue="<?=$grid_data['grid_unit_8']['stat'];?>" data-animdecimal="0">
+								<?=$grid_data['grid_unit_8']['stat'];?>
+							</span>
+						</span>
+					</h2>
+					<p><?=$grid_data['grid_unit_8']['label'];?></p>
 				</div>
 
 			</div>
