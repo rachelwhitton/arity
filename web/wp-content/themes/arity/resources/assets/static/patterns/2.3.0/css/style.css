@@ -12391,6 +12391,10 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   opacity: 1;
 }
 
+#block-carousel__prototype-a56tdfcwi4rfoelmejnwk {
+  display: block;
+}
+
 .block-highlights {
   position: relative;
   margin: 0;
