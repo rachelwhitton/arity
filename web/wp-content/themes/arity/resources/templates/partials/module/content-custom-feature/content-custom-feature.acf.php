@@ -24,7 +24,9 @@ $fields = [
     'choices' => [
       'custom-content-selector' => 'Custom content selector',
       'marketplace-risk-graphic' => 'Marketplace risk graphic',
-      'about-us-data-grid' => "About Us data grid"
+      'about-us-data-grid' => 'About Us data grid',
+      'about-us-leadership' => 'About Us leadership',
+      'about-us-locations' => 'About Us locations'
     ]
 	]),
 	// acf_flexible_content([
