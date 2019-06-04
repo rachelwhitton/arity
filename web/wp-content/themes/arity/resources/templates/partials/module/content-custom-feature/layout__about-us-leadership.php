@@ -109,18 +109,22 @@ $leadership_data = array(
 		<div class="row">
 			<div class="container about-us__leadership-grid">
   			<div class="row justify-content-center">
+  				
 	  			<?php
 	  				$i = 0;
 	  				foreach ($leadership_data as $datum) : ?>
-			  			<div class="about-us__leadership-unit<?=$datum['last_row'] ? ' about-us__last-row' : '';?> col-1 col-md-3">
+	  					<!-- <div class="hidden-sm-up col-1"></div> -->
+			  			<div class="about-us__leadership-unit<?=$datum['last_row'] ? ' about-us__last-row' : '';?> col-12 col-md-3">
 			  				<img src="<?=$datum['img_url'];?>" alt="<?=$datum['name'];?> - <?=$datum['title'];?>" class="about-us__leadership-img">
 			  				<p class="about-us__leadership-name"><?=$datum['name'];?></p>
 			  				<p class="about-us__leadership-title"><?=$datum['title'];?></p>
 			  			</div>
+			  			<!-- <div class="hidden-sm-up col-1"></div> -->
 		  				<?=($i % 4 == 3) ? '</div>' . PHP_EOL . '<div class="row justify-content-center">' . PHP_EOL : '';?>
 		  				<?php $i++;
 	  				endforeach;
 					?>
+
 				</div>
 			</div>
 		</div>
