@@ -203,6 +203,7 @@ $module_builder->includeACFSettings('pardot-form', 'module');
 $module_builder->includeACFSettings('blog-popup', 'module');
 $module_builder->includeACFSettings('content-custom-feature', 'module');
 $module_builder->includeACFSettings('carousel', 'module');
+$module_builder->includeACFSettings('about-us-instagram', 'module');
 
 //archive candidate
 

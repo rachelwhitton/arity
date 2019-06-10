@@ -12395,10 +12395,6 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   opacity: 1;
 }
 
-#block-carousel__prototype-a56tdfcwi4rfoelmejnwk {
-  display: block;
-}
-
 .block-highlights {
   position: relative;
   margin: 0;
@@ -18386,6 +18382,12 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   color: white;
 }
 
+.custom-feature {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
 .content-image-block {
   margin: 0;
   padding-top: 48px;
@@ -23606,6 +23608,36 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.ar-module__about-us-instagram {
+  margin-top: 0 !important;
+}
+
+.about-us-instagram {
+  max-width: 1200px;
+  padding: 0 !important;
+}
+
+.instagram-unit__anchor h2 {
+  font-size: 1.5rem;
+  margin: 0 0 48px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .instagram-unit__anchor h2 {
+    font-size: 1.875rem;
+  }
+}
+
+.instagram-unit__anchor-inner {
+  width: 100%;
+  padding: 48px;
+}
+
+.instagram-unit__image {
+  line-height: 0;
+  font-size: 0;
 }
 
 .horizontal-card-split {

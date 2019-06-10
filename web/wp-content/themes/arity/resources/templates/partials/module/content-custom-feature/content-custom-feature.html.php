@@ -16,17 +16,6 @@ namespace App\Theme;
 
 ?>
 
-<style>
-	.custom-feature {
-		position: relative;
-		width: 100%;
-		height: auto;
-	}
-	/*.custom-feature__navy-bg {
-		background-color: #011c2c;
-	}*/
-</style>
-
 <div <?php module_class($data['classes']); ?>>
 	<?php 
 	if (!empty($data['custom-content'])) {

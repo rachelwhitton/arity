@@ -54,8 +54,9 @@ project/                  # → Root folder for the project.
 ## Installation using MAMP
 
 ### Setup
-* Go to Languages PHP and make sure 7.0.x or higher is the default version. Take note of which version of PHP you chose.
-* Optional. Go to Languages PHP and make sure Extensions "Xdebug" is checked. This will provide better options for error debugging.
+* Go to Languages > PHP and make sure 7.0.x or higher is the default version. Take note of which version of PHP you chose.
+* In Languages > PHP, click “Make this version available on the command line”.
+* Optional. Go to Languages > PHP and make sure Extensions "Xdebug" is checked. This will provide better options for error debugging.
 
 ### Add MAMP PHP to your path
 See [https://indigotree.co.uk/getting-wp-cli-work-mamp](https://indigotree.co.uk/getting-wp-cli-work-mamp)
@@ -125,7 +126,7 @@ Update database settings if needed.
 
 ### Theme Setup
 
-Navigate to `/web/wp-content/themes/arity` in your shell. Refer to the theme README and follow the installation instructions. The theme is stubborn if its not built first. WP Admin should always work however.
+From the root of your repo, navigate to `web/wp-content/themes/arity` in your shell. Refer to the theme README and follow the installation instructions. The theme is stubborn if it’s not built first. WP Admin should always work however.
 
 ### Return to project root folder
 
