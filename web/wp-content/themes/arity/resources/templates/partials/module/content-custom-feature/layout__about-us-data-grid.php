@@ -10,44 +10,44 @@
 
 $grid_data = array(
 	'grid_unit_1' => array(
-		'stat' => '300',
-		'stat_color' => ' lavender--',
+		'stat' => '400',
+		'stat_color' => ' purple--',
 		'label' => 'employees'
 	),
 'grid_unit_2' => array(
 		'stat' => '3',
-		'stat_color' => ' sky--',
+		'stat_color' => ' md_blue--',
 		'label' => 'locations'
 	),
 'grid_unit_3' => array(
-		'stat' => '17',
+		'stat' => '55',
 		'stat_color' => ' yellow--',
-		'label' => 'neighborhoods'
+		'label' => 'Green Team members'
 	),
 'grid_unit_4' => array(
-		'stat' => '40',
+		'stat' => '10',
 		'stat_color' => '',
-		'label' => 'cat parents'
+		'label' => 'patent holders'
 	),
 'grid_unit_5' => array(
-		'stat' => '163',
+		'stat' => '20',
 		'stat_color' => '',
-		'label' => 'CTA commuters'
+		'label' => 'trivia captains'
 	),
 'grid_unit_6' => array(
-		'stat' => '24',
+		'stat' => '104',
 		'stat_color' => ' yellow--',
-		'label' => 'marathon runners'
+		'label' => 'CTA commuters'
 	),
 'grid_unit_7' => array(
-		'stat' => '13',
-		'stat_color' => ' lavender--',
-		'label' => 'cyclists'
+		'stat' => '47',
+		'stat_color' => ' purple--',
+		'label' => 'cat parents'
 	),
 'grid_unit_8' => array(
-		'stat' => '4',
-		'stat_color' => ' sky--',
-		'label' => 'skaters'
+		'stat' => '78',
+		'stat_color' => ' md_blue--',
+		'label' => 'dog parents'
 	),
 );
 
