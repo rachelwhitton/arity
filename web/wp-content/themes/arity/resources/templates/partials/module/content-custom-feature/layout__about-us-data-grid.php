@@ -16,7 +16,7 @@ $grid_data = array(
 	),
 'grid_unit_2' => array(
 		'stat' => '3',
-		'stat_color' => ' md_blue--',
+		'stat_color' => ' blue--',
 		'label' => 'locations'
 	),
 'grid_unit_3' => array(
@@ -46,7 +46,7 @@ $grid_data = array(
 	),
 'grid_unit_8' => array(
 		'stat' => '78',
-		'stat_color' => ' md_blue--',
+		'stat_color' => ' blue--',
 		'label' => 'dog parents'
 	),
 );
@@ -54,6 +54,9 @@ $grid_data = array(
 ?>
 
 <style>
+	.block-carousel-cont {
+		margin-top: 0 !important;
+	}
 	#custom-feature__about-us-data-grid {
 		margin-top: -48px;
 		margin-bottom: 48px;
@@ -159,7 +162,7 @@ $grid_data = array(
 			margin: 54px 0 24px 0;
 		}
 		.data-grid-unit p {
-			font-size: 1.0625rem;
+			font-size: 1.125rem;
 		}
 		.data-grid-unit h2.top-row-data-md {
 			margin-top: 0;

@@ -6110,7 +6110,7 @@ html.disable-scroll body {
   background: #00dce6 !important;
 }
 
-.colors__text--purple {
+.colors__text--purple, .product-stats__value.purple-- {
   color: #7d51eb !important;
 }
 
