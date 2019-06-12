@@ -204,6 +204,7 @@ $module_builder->includeACFSettings('blog-popup', 'module');
 $module_builder->includeACFSettings('content-custom-feature', 'module');
 $module_builder->includeACFSettings('carousel', 'module');
 $module_builder->includeACFSettings('about-us-instagram', 'module');
+$module_builder->includeACFSettings('block-two-column-narrow', 'module');
 
 //archive candidate
 

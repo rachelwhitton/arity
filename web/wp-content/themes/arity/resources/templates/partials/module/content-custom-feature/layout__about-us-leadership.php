@@ -87,6 +87,7 @@ $leadership_data = array(
 		margin: 0;
 		color: #63727e;
 	}
+
 </style>
 
 <div class="body-column body-inset-ten-col body-inset-ten-col__white-bg text-module-standard ar-module">
