@@ -11353,15 +11353,34 @@ form .checkbox_container .checkmark:after {
   color: #0070D6;
 }
 
+.site-header .dropmenu__item__no-category-landing-page:last-child {
+  margin-bottom: 0;
+}
+
+.site-header .dropmenu__item__no-category-landing-page:last-child h2 {
+  color: #011c2c;
+  font-size: 1.3125rem;
+}
+
+.site-header .dropmenu__item__no-category-landing-page:last-child h2 .icon-svg {
+  fill: #011c2c;
+  height: 12px;
+  width: 12px;
+}
+
+.site-header .dropmenu__item__no-category-landing-page:last-child h2:hover {
+  color: #0070D6;
+}
+
 .site-header .navbar__nav li.menu-item-has-children.hover .dropmenu,
 html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   top: auto;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
   opacity: 1;
   max-height: none;
   pointer-events: inherit;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .site-header .navbar__toggle {
