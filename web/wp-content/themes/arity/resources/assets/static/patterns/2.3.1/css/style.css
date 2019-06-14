@@ -8510,6 +8510,8 @@ a.blue-link:focus [class^="icon-"] {
 .text-block-two-column__text {
   color: #63727e;
   text-align: left;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .text-block-two-column__text p {
@@ -8523,10 +8525,6 @@ a.blue-link:focus [class^="icon-"] {
 .text-block-two-column__footnote {
   color: #63727e;
   text-align: left;
-}
-
-.text-block-two-column__text-column {
-  position: relative;
 }
 
 @media screen and (min-width: 961px) {

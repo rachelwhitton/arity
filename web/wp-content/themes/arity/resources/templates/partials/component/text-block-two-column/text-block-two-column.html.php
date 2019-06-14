@@ -48,7 +48,7 @@ namespace App\Theme;
         </div>
       </div>
         <?php if(!empty($data['footnote'])) : ?>
-            <div class="text-block-two-column__footnote row">
+            <div class="text-block-two-column__footnote">
             <?= $data['footnote']; ?>
             </div>
         <?php endif; ?>
