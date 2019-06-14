@@ -44,6 +44,22 @@ $fields = [
               ]
             ]
           ]
+        ],
+        [
+          'label' => 'Text Block: 2 Column',
+          'name' => 'component__text-block-two-column',
+          'sub_fields' => [
+            [
+              'type' => 'clone',
+              'label' => 'Text Block: 2 Column',
+              'name' => 'component__text-block-two-column',
+              'key' => 'field_component_text-block-two-column',
+              'display' => 'seamless',
+              'clone' => [
+                  'group_component_text-block-two-column'
+              ]
+            ]
+          ]
         ]
 
       ]

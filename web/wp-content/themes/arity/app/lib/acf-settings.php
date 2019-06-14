@@ -153,6 +153,7 @@ $module_builder->includeACFSettings('text-image-stack', 'component');
 $module_builder->includeACFSettings('text-w-icon', 'component');
 $module_builder->includeACFSettings('text-w-image', 'component');
 $module_builder->includeACFSettings('text-block', 'component');
+$module_builder->includeACFSettings('text-block-two-column', 'component');
 $module_builder->includeACFSettings('custom-cta', 'component');
 $module_builder->includeACFSettings('carousel-item', 'component');
 
