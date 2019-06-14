@@ -46,12 +46,12 @@ namespace App\Theme;
             <?= $data['right_column_body_copy']; ?>
           <?php endif; ?>
         </div>
-      </div>
         <?php if(!empty($data['footnote'])) : ?>
             <div class="text-block-two-column__footnote">
             <?= $data['footnote']; ?>
             </div>
         <?php endif; ?>
+      </div>
     </div>
   </div>
 </div>
