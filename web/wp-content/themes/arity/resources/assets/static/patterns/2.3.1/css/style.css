@@ -24090,6 +24090,12 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   margin-top: 0 !important;
 }
 
+@media screen and (min-width: 1200px) {
+  .ar-module__about-us-instagram {
+    background-color: #000000;
+  }
+}
+
 .about-us-instagram {
   max-width: 1200px;
   padding: 0 !important;
