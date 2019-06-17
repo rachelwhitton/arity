@@ -17702,28 +17702,6 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   position: relative;
 }
 
-.hero-b .center-align {
-  text-align: center;
-}
-
-@media screen and (min-width: 480px) {
-  .hero-b .center-align .hero-block.ar-component {
-    padding: 55px 42px 25px 42px !important;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .hero-b .center-align .hero-block.ar-component {
-    padding: 75px 45px 45px 45px !important;
-  }
-}
-
-@media screen and (min-width: 961px) {
-  .hero-b .center-align .hero-block.ar-component {
-    padding: 45px 200px 15px 200px !important;
-  }
-}
-
 .hero-b__block {
   margin: 0 auto;
   z-index: 2;
