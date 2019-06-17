@@ -89,6 +89,36 @@ $last_nav_item->post_slug = sanitize_title($last_nav_item->title);
       </div>
     </div>
   </div>
+  <div class="dropmenu" data-menu-item="company" tabindex="-1" aria-hidden="true">
+    <div class="dropmenu__container">
+      <div class="dropmenu__arrow"></div>
+      <div class="dropmenu__wrap">
+        <div class="dropmenu__primary" style="display:none">
+          <a href="<?= $nav_items[2]->url; ?>" title="Learn more about <?= $nav_items[2]->title; ?>" tabindex="-1" aria-label="<?= $nav_items[2]->title; ?>">
+            <?php if(!empty($nav_items[2]->description)) : ?><p><?= $nav_items[2]->description; ?></p><?php endif; ?>
+            <p>
+              <span class="button">
+                <span class="button__label">View all <?= strtolower($nav_items[2]->title); ?></span>
+                <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#caret"></use></svg>
+              </span>
+            </p>
+          </a>
+        </div>
+        <div class="dropmenu__secondary">
+          <?php foreach ($nav_items as $nav_item) : ?>
+            <?php if($nav_item->menu_item_parent != $nav_items[7]->ID) { continue; } ?>
+            <div class="dropmenu__item__no-category-landing-page">
+              <a href="<?= $nav_item->url; ?>" title="Learn more about <?= $nav_item->title; ?>" tabindex="-1" aria-label="<?= $nav_item->title; ?>">
+                <h2><?= $nav_item->title; ?> <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#caret"></use></svg></h2>
+                <?php if(!empty($nav_item->description)) : ?><!-- p><?= $nav_item->description; ?></p--><?php endif; ?>
+              </a>
+            </div>
+          <?php endforeach; ?>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <p><?= $nav_items[7]->title; ?></p> -->
 </div>
 
 <style>

@@ -2544,14 +2544,18 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
       };
 
       var start = (settings.windowWidth - settings.dropmenuWidth) / 2;
+      settings.dropmenuLeft = settings.elOffset.left + settings.elWidth / 2;
+      $dropmenu.css('left', settings.dropmenuLeft + 'px');
 
       // Calculate Arrow positioning
-      settings.left = settings.elOffset.left - start - settings.arrowWidth / 2 + settings.elWidth / 2 - 10;
+      // settings.left = settings.elOffset.left - start - (settings.arrowWidth/2) + (settings.elWidth/2) - 10;
+      settings.left = settings.dropmenuWidth / 2 - settings.arrowWidth;
 
+      console.log("settings:", settings);
       debug('mainNavigation.dropmenuArrowPosition: Update arrow position', settings);
 
       // Move Arrow
-      $dropmenuArrow.css({ left: settings.left + "px" });
+      $dropmenuArrow.css('left', settings.left + 'px');
     },
     analytics: function analytics() {
       // NOTE moving to GTM

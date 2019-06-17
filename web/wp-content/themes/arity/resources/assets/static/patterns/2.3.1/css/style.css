@@ -8603,6 +8603,7 @@ a.blue-link:focus [class^="icon-"] {
 
 .text-block-two-column__text-column {
   color: #63727e;
+  text-align: left;
 }
 
 @media screen and (min-width: 961px) {
@@ -8658,7 +8659,6 @@ a.blue-link:focus [class^="icon-"] {
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
     max-width: 50%;
-    text-align: left !important;
   }
 }
 
@@ -8687,18 +8687,6 @@ a.blue-link:focus [class^="icon-"] {
   .text-block-two-column__text-column {
     padding-right: 15px;
     padding-left: 15px;
-  }
-}
-
-@media screen and (min-width: 480px) {
-  .text-block-two-column__text-column {
-    text-align: center;
-  }
-}
-
-@media screen and (min-width: xs) {
-  .text-block-two-column__text-column {
-    text-align: center;
   }
 }
 
@@ -11625,15 +11613,34 @@ form .checkbox_container .checkmark:after {
   color: #0070D6;
 }
 
+.site-header .dropmenu__item__no-category-landing-page:last-child {
+  margin-bottom: 0;
+}
+
+.site-header .dropmenu__item__no-category-landing-page:last-child h2 {
+  color: #011c2c;
+  font-size: 1.3125rem;
+}
+
+.site-header .dropmenu__item__no-category-landing-page:last-child h2 .icon-svg {
+  fill: #011c2c;
+  height: 12px;
+  width: 12px;
+}
+
+.site-header .dropmenu__item__no-category-landing-page:last-child h2:hover {
+  color: #0070D6;
+}
+
 .site-header .navbar__nav li.menu-item-has-children.hover .dropmenu,
 html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   top: auto;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
   opacity: 1;
   max-height: none;
   pointer-events: inherit;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .site-header .navbar__toggle {
@@ -24088,12 +24095,6 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
 
 .ar-module__about-us-instagram {
   margin-top: 0 !important;
-}
-
-@media screen and (min-width: 1200px) {
-  .ar-module__about-us-instagram {
-    background-color: #000000;
-  }
 }
 
 .about-us-instagram {
