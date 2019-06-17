@@ -8603,7 +8603,6 @@ a.blue-link:focus [class^="icon-"] {
 
 .text-block-two-column__text-column {
   color: #63727e;
-  text-align: left;
 }
 
 @media screen and (min-width: 961px) {
@@ -8659,6 +8658,7 @@ a.blue-link:focus [class^="icon-"] {
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
     max-width: 50%;
+    text-align: left !important;
   }
 }
 
@@ -8687,6 +8687,18 @@ a.blue-link:focus [class^="icon-"] {
   .text-block-two-column__text-column {
     padding-right: 15px;
     padding-left: 15px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .text-block-two-column__text-column {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: xs) {
+  .text-block-two-column__text-column {
+    text-align: center;
   }
 }
 
@@ -24095,6 +24107,12 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
 
 .ar-module__about-us-instagram {
   margin-top: 0 !important;
+}
+
+@media screen and (min-width: 1200px) {
+  .ar-module__about-us-instagram {
+    background-color: #000000;
+  }
 }
 
 .about-us-instagram {
