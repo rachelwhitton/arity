@@ -38,6 +38,11 @@
     display: none;
   }
 
+  .content-image-block {
+      padding-bottom: 100px !important;
+  }
+
+
   @media screen and (min-width: 768px) {
     .about-us__locations-container {
       padding: 0 80px;
@@ -167,7 +172,7 @@
                   <div class="card__inner about-us__card__inner__height">
                     <h3 class="card__title">Belfast</h3>
                     <div class="ar-element card__button stack__link">
-                      <a class="button button--link" target="_blank" href="hhttps://www.google.com/maps/place/9+Lanyon+Pl,+Belfast+BT1+3LP,+UK/data=!4m2!3m1!1s0x486108fff1e12d7b:0x9646f586fb07f20b?sa=X&ved=2ahUKEwjkg6jRufHiAhVKPK0KHWFPCqsQ8gEwAHoECAoQAQ" data-analytics="Automotive">
+                      <a class="button button--link" target="_blank" href="https://www.google.com/maps/place/9+Lanyon+Pl,+Belfast+BT1+3LP,+UK/data=!4m2!3m1!1s0x486108fff1e12d7b:0x9646f586fb07f20b?sa=X&ved=2ahUKEwj79d-a5vPiAhULWa0KHW1XCeEQ8gEwAHoECAoQAQ" data-analytics="Automotive">
                         <span class="button__icon arrow-right--" role="presentation">
                           <svg class="icon-svg" title="" role="img">
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
