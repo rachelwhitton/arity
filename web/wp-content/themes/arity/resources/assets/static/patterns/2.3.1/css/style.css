@@ -8607,8 +8607,11 @@ a.blue-link:focus [class^="icon-"] {
 .text-block-two-column__text-column {
   color: #63727e;
 <<<<<<< HEAD
+<<<<<<< HEAD
   text-align: center;
 =======
+=======
+>>>>>>> develop
   text-align: left;
 }
 
@@ -8652,7 +8655,13 @@ a.blue-link:focus [class^="icon-"] {
     padding-right: 15px;
     padding-left: 15px;
   }
+<<<<<<< HEAD
 >>>>>>> 23c681c03ef351b0086e96c313f05601d3c033c3
+=======
+=======
+  text-align: center;
+>>>>>>> lina_dev
+>>>>>>> develop
 }
 
 @media screen and (min-width: 768px) {
