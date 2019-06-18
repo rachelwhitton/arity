@@ -18,35 +18,81 @@
 		padding-bottom: 48px;
 		height: 265px;
 	}
+	.container {
+		height: 100%;
+	}
+
 	#dotdash__left-pos-1 {
 		position: absolute;
 		left: 0;
 		top: 200px;
+		display: none;
+
 	}
 	#dotdash__right-pos-1 {
 		position: absolute;
 		right: 157px;
 		top: 60px;
+		display: none;
 	}
 	#dotdash__right-pos-2 {
 		position: absolute;
 		right: 42px;
 		top: 100px;
+		display: none;
 	}
-	.rotating-headline {
-		font-size: 2.1875rem;
+	.rotating-headline h2 {
+		font-size: 1.625rem;
 		color: #ffffff;
 		text-align: center;
 	}
-	.rotating-headline .rotating {
-		color: #e2ef1c;
+	.row {
+		height: 100%;
 	}
 
+	.rotating {
+		display: none;
+	}
+
+	@media screen and (min-width: 768px) {
+		.rotating-headline h2 {
+			font-size: 2.1875rem;
+		}
+	}
+
+	@media screen and (min-width: 961px) {
+		#dotdash__left-pos-1 {
+			display: block;
+		}
+		#dotdash__right-pos-1 {
+			display: block;
+		}
+		#dotdash__right-pos-2 {
+			display: block;
+		}
+	}
 </style>
 
 <div id="custom-feature__about-us-rotating-headline">
 	<div class="container">
-		<h2 class="rotating-headline">We are <span class="rotating colors__text--yellow">driven by data</span></h2>
+		<div class="rotating-headline row">
+			<h2 class="rotating col align-self-center">
+				We are
+				<span class="colors__text--yellow"> driven by data</span>
+			</h2>
+			<h2 class="rotating col align-self-center">
+				We are
+				<span class="colors__text--purple"> transforming transportation</span>
+			</h2>
+			<h2 class="rotating col align-self-center">
+				We are
+				<span class="colors__text--blue"> a mobility data and analytics company</span>
+			</h2>
+			<h2 class="rotating col align-self-center">
+				We are
+				<span class="colors__text--teal"> compassionate creators</span>
+			</h2>
+		</div>
 	</div>
 	<svg id="dotdash__left-pos-1" width="191px" height="20px" viewBox="0 0 191 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 		<desc>DotDash Left Pos 1</desc>
@@ -271,33 +317,18 @@
 </div>
 
 <script>
+(function() {
 
-// (function($, window, document) {
-// 	var rotatingHeadline = {
-// 		defaults: {
-// 			debug: true,
-// 			headlines: [
-// 				' driven by data',
-// 				'transforming transportation',
-// 				'a mobility data and analytics company',
-// 				'compassionate creators'
-// 			],
-// 			message: ''
-// 		},
-// 		init() {
-// 			var headlineEl = document.querySelector('.rotating-headline');
-// 			console.log('headline content:'. headlineEl.innerHTML);
-// 			headlineEl.children[0].innerHTML = this.defaults.headlines[1];
-// 		},
-// 	};
-// 	window.rotatingHeadline = rotatingHeadline
-// })(jQuery, window, document);
+var headlines = $(".rotating"); 
+var index = -1;
 
-// window.rotatingHeadline.init();
-// window.onLoad = function() {
-// 	debug = true;
-// 	var container = document.getElementById('custom-feature__about-us-rotating-headline');
-// 	var headlineEl = document.querySelector('.rotating-headline');
-// 	debug('headline content:'. headlineEl.innerHTML);
-// }
+function displayHeadline() {
+	++index; 
+	headlines.eq(index % headlines.length) 
+           .fadeIn(800) //fade in time
+           .delay(3000) //time until fade out
+           .fadeOut(800, displayHeadline); //fade out time, recall function
+}
+displayHeadline();  
+})();
 </script>
