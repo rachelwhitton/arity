@@ -42,13 +42,33 @@ $fields = [
       'maxlength' => '',
       'allow_null' => 0,
       'ui' => 1,
-      // 'wrapper' => array (
-      //   'width' => '50',
-      // ),
+      'wrapper' => array (
+        'width' => '50',
+      ),
       'default_value' => 'one-column',
       'choices' => [
         'one-column' => 'One Column',
         'two-column' => 'Two Column',
+      ]
+    ]),
+
+    acf_select([
+      'label' => 'Alignment',
+      'name' => 'hero-b__--settings_alignment',
+      'key' => 'field_--settings_alignment',
+      'instructions' => '',
+      'required' => 0,
+      'maxlength' => '',
+      'allow_null' => 0,
+      'ui' => 1,
+
+      'wrapper' => array (
+        'width' => '50',
+      ),
+      'default_value' => 'left-align',
+      'choices' => [
+        'left-align' => 'Left Align',
+        'center-align' => 'Center Align',
       ]
     ]),
 

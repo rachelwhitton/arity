@@ -11,9 +11,11 @@ namespace App\Theme;
   Since:              1.0.0
 */
 ?>
+
+
 <div <?php module_class($data['classes']); ?>>
   <div class="hero-b__block">
-    <div class="container">
+    <div class="container <?= $data['--settings_alignment']; ?>">
     <?php if ($data['--settings_layout'] == 'one-column') : ?>
       <?php component('hero-block-one-column', $data); ?>
     <?php else : ?>

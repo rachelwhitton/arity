@@ -2176,7 +2176,13 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
             elAttrs = $el.prop("attributes"),
             linkHtml = '',
             attrs = '',
-            $submenu = $el.parent().find('.sub-menu');
+            $submenu = $el.parent().find('.sub-menu'),
+            navtext = $el.text();
+
+        // Don’t add Overview submenu link to Company
+        if (navtext.indexOf('Company') !== -1) {
+          return true;
+        }
 
         // Copy allowed attributes to link el
         var allowedAttrs = ['href', 'title', 'role'];
@@ -2189,7 +2195,7 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
         // Add Tabindex
         attrs += ' tabindex="-1"';
 
-        // Build link el
+        // Build Overview submenu link
         linkHtml = '<a' + attrs + '>Overview</a<>';
 
         $submenu.prepend('<li class="menu-item menu-overview">' + linkHtml + '</li>');
@@ -2551,7 +2557,6 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
       // settings.left = settings.elOffset.left - start - (settings.arrowWidth/2) + (settings.elWidth/2) - 10;
       settings.left = settings.dropmenuWidth / 2 - settings.arrowWidth;
 
-      console.log("settings:", settings);
       debug('mainNavigation.dropmenuArrowPosition: Update arrow position', settings);
 
       // Move Arrow
