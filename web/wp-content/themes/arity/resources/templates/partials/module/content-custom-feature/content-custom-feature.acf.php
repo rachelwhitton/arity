@@ -24,9 +24,10 @@ $fields = [
     'choices' => [
       'custom-content-selector' => 'Custom content selector',
       'marketplace-risk-graphic' => 'Marketplace risk graphic',
-      'about-us-data-grid' => 'About Us data grid',
-      'about-us-leadership' => 'About Us leadership',
-      'about-us-locations' => 'About Us locations',
+      'about-us-rotating-headline' => 'About us rotating headline',
+      'about-us-data-grid' => 'About us data grid',
+      'about-us-leadership' => 'About us leadership',
+      'about-us-locations' => 'About us locations',
       'about-us-instagram' => 'About us Instagram'
     ]
 	]),
