@@ -6,6 +6,14 @@
   Since:				2.3.1
 */
 
+$headline_data = array(
+	array('color' => 'yellow', 'phrase' => 'driven by data'),
+	array('color' => 'purple', 'phrase' => 'transforming transportation'),
+	array('color' => 'blue', 'phrase' => 'a mobility data and analytics company'),
+	array('color' => 'teal', 'phrase' => 'compassionate creators'),
+	array('color' => 'blue', 'phrase' => 'improving the way humanity moves')
+);
+
 ?>
 
 <style>
@@ -76,22 +84,9 @@
 <div id="custom-feature__about-us-rotating-headline">
 	<div class="container">
 		<div class="rotating-headline row">
-			<h2 class="rotating col align-self-center">
-				We are
-				<span class="colors__text--yellow"> driven by data</span>
-			</h2>
-			<h2 class="rotating col align-self-center">
-				We are
-				<span class="colors__text--purple"> transforming transportation</span>
-			</h2>
-			<h2 class="rotating col align-self-center">
-				We are
-				<span class="colors__text--blue"> a mobility data and analytics company</span>
-			</h2>
-			<h2 class="rotating col align-self-center">
-				We are
-				<span class="colors__text--teal"> compassionate creators</span>
-			</h2>
+		<?php foreach ($headline_data as $headline) : ?>
+			<h2 class="rotating col align-self-center">We are <span class="colors__text--<?=$headline['color'];?>"><?=$headline['phrase'];?></span></h2>
+		<?php endforeach; ?>
 		</div>
 	</div>
 	<svg id="dotdash__left-pos-1" width="191px" height="20px" viewBox="0 0 191 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -317,18 +312,18 @@
 </div>
 
 <script>
-(function() {
-
-var headlines = $(".rotating"); 
-var index = -1;
-
-function displayHeadline() {
-	++index; 
-	headlines.eq(index % headlines.length) 
-           .fadeIn(800) //fade in time
-           .delay(3000) //time until fade out
-           .fadeOut(800, displayHeadline); //fade out time, recall function
-}
-displayHeadline();  
-})();
+jQuery(document).ready(function($) {
+	(function() {
+		var headlines = $(".rotating"); 
+		var index = -1;
+		function displayHeadline() {
+			++index; 
+			headlines.eq(index % headlines.length) 
+		           .fadeIn(800) //fade in time
+		           .delay(3000) //time until fade out
+		           .fadeOut(800, displayHeadline); //fade out time, recall function
+		}
+		displayHeadline();  
+	})();
+});
 </script>
