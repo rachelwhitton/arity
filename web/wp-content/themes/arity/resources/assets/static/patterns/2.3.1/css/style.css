@@ -8606,62 +8606,7 @@ a.blue-link:focus [class^="icon-"] {
 
 .text-block-two-column__text-column {
   color: #63727e;
-<<<<<<< HEAD
-<<<<<<< HEAD
   text-align: center;
-=======
-=======
->>>>>>> develop
-  text-align: left;
-}
-
-@media screen and (min-width: 961px) {
-  .text-block-two-column__text-column {
-    position: relative;
-    width: 100%;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
-    max-width: 50%;
-  }
-}
-
-@media screen and (min-width: 961px) and (min-width: 480px) {
-  .text-block-two-column__text-column {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
-
-@media screen and (min-width: 961px) and (min-width: 768px) {
-  .text-block-two-column__text-column {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
-
-@media screen and (min-width: 961px) and (min-width: 961px) {
-  .text-block-two-column__text-column {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
-
-@media screen and (min-width: 961px) and (min-width: 1200px) {
-  .text-block-two-column__text-column {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-<<<<<<< HEAD
->>>>>>> 23c681c03ef351b0086e96c313f05601d3c033c3
-=======
-=======
-  text-align: center;
->>>>>>> lina_dev
->>>>>>> develop
 }
 
 @media screen and (min-width: 768px) {
@@ -8675,6 +8620,7 @@ a.blue-link:focus [class^="icon-"] {
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
     max-width: 50%;
+    text-align: left !important;
   }
 }
 
@@ -17724,6 +17670,28 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   position: relative;
 }
 
+.hero-b .center-align {
+  text-align: center;
+}
+
+@media screen and (min-width: 480px) {
+  .hero-b .center-align .hero-block.ar-component {
+    padding: 55px 42px 25px 42px !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero-b .center-align .hero-block.ar-component {
+    padding: 75px 45px 45px 45px !important;
+  }
+}
+
+@media screen and (min-width: 961px) {
+  .hero-b .center-align .hero-block.ar-component {
+    padding: 45px 200px 15px 200px !important;
+  }
+}
+
 .hero-b__block {
   margin: 0 auto;
   z-index: 2;
@@ -24097,6 +24065,12 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   margin-top: 0 !important;
 }
 
+@media screen and (min-width: 1200px) {
+  .ar-module__about-us-instagram {
+    background-color: #000000;
+  }
+}
+
 .about-us-instagram {
   max-width: 1200px;
   padding: 0 !important;
@@ -24567,6 +24541,79 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
 
 .shared-mobility-solutions .block-two-column-narrow .row {
   padding-bottom: 30px;
+}
+
+#custom-feature__about-us-rotating-headline {
+  position: relative;
+  overflow: hidden;
+  background: #011c2c;
+  margin: 0;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  height: 265px;
+}
+
+.container, .action-bar-w-bkg__bkg {
+  height: 100%;
+}
+
+#dotdash__left-pos-1 {
+  position: absolute;
+  left: 0;
+  top: 200px;
+  display: none;
+}
+
+@media screen and (min-width: 961px) {
+  #dotdash__left-pos-1 {
+    display: block;
+  }
+}
+
+#dotdash__right-pos-1 {
+  position: absolute;
+  right: 157px;
+  top: 60px;
+  display: none;
+}
+
+@media screen and (min-width: 961px) {
+  #dotdash__right-pos-1 {
+    display: block;
+  }
+}
+
+#dotdash__right-pos-2 {
+  position: absolute;
+  right: 42px;
+  top: 100px;
+  display: none;
+}
+
+@media screen and (min-width: 961px) {
+  #dotdash__right-pos-2 {
+    display: block;
+  }
+}
+
+.rotating-headline h2 {
+  font-size: 1.625rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .rotating-headline h2 {
+    font-size: 2.1875rem;
+  }
+}
+
+.row {
+  height: 100%;
+}
+
+.rotating {
+  display: none;
 }
 
 .horizontal-card-split {

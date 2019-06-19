@@ -3,7 +3,7 @@
   Layout Name:			About us rotating headline
   Description:			Custom layout for the About Us page
   Last Updated:			06/18/2019
-  Since:				2.3.1
+  Since:						2.3.1
 */
 
 $headline_data = array(
@@ -15,71 +15,6 @@ $headline_data = array(
 );
 
 ?>
-
-<style>
-	#custom-feature__about-us-rotating-headline {
-		position: relative;
-		overflow: hidden;
-		background: #011c2c;
-		margin: 0;
-		padding-top: 48px;
-		padding-bottom: 48px;
-		height: 265px;
-	}
-	.container {
-		height: 100%;
-	}
-
-	#dotdash__left-pos-1 {
-		position: absolute;
-		left: 0;
-		top: 200px;
-		display: none;
-
-	}
-	#dotdash__right-pos-1 {
-		position: absolute;
-		right: 157px;
-		top: 60px;
-		display: none;
-	}
-	#dotdash__right-pos-2 {
-		position: absolute;
-		right: 42px;
-		top: 100px;
-		display: none;
-	}
-	.rotating-headline h2 {
-		font-size: 1.625rem;
-		color: #ffffff;
-		text-align: center;
-	}
-	.row {
-		height: 100%;
-	}
-
-	.rotating {
-		display: none;
-	}
-
-	@media screen and (min-width: 768px) {
-		.rotating-headline h2 {
-			font-size: 2.1875rem;
-		}
-	}
-
-	@media screen and (min-width: 961px) {
-		#dotdash__left-pos-1 {
-			display: block;
-		}
-		#dotdash__right-pos-1 {
-			display: block;
-		}
-		#dotdash__right-pos-2 {
-			display: block;
-		}
-	}
-</style>
 
 <div id="custom-feature__about-us-rotating-headline">
 	<div class="container">
@@ -311,19 +246,3 @@ $headline_data = array(
 	</svg>
 </div>
 
-<script>
-jQuery(document).ready(function($) {
-	(function() {
-		var headlines = $(".rotating"); 
-		var index = -1;
-		function displayHeadline() {
-			++index; 
-			headlines.eq(index % headlines.length) 
-		           .fadeIn(800) //fade in time
-		           .delay(3000) //time until fade out
-		           .fadeOut(800, displayHeadline); //fade out time, recall function
-		}
-		displayHeadline();  
-	})();
-});
-</script>

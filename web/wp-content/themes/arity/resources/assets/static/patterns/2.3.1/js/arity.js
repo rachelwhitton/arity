@@ -2,6 +2,29 @@
 
 var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
+// For About us page template
+
+;(function ($, window, document) {
+  var aboutUs = {
+    vars: {
+      headlines: $('.rotating'),
+      index: -1,
+      fadeInterval: 800,
+      visibleInterval: 3000
+    },
+    init: function init() {
+      $(document).ready(function () {
+        aboutUs.displayHeadline();
+      });
+    },
+    displayHeadline: function displayHeadline() {
+      ++aboutUs.vars.index;
+      aboutUs.vars.headlines.eq(aboutUs.vars.index % aboutUs.vars.headlines.length).fadeIn(aboutUs.vars.fadeInterval).delay(aboutUs.vars.visibleInterval).fadeOut(aboutUs.vars.fadeInterval, aboutUs.displayHeadline);
+    }
+  };
+
+  window.aboutUs = aboutUs;
+})(jQuery, window, document);
 /*
 
     countUp.js
@@ -6596,7 +6619,7 @@ var Util = function ($) {
       blogNav.init();
       accordion.init();
       actionBar.init();
-      // arityCarousel.init();
+      aboutUs.init();
       optIn.init();
     },
     initConfigs: function initConfigs() {
