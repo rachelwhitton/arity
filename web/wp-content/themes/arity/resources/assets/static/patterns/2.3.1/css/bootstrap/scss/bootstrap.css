@@ -1717,6 +1717,8 @@ template {
 
 .carousel {
   position: relative;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
 }
 
 .carousel.pointer-event {

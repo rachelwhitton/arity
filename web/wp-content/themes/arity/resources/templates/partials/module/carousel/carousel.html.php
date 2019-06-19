@@ -17,7 +17,7 @@ namespace App\Theme;
 	<div <?php module_class($data['classes']); ?>>
 		<div class="container-fluid">
 			<div class="row">
-				<div id="<?=$data['carousel-id'];?>" class="carousel slide carousel-fade" data-ride="carousel">
+				<div id="<?=$data['carousel-id'];?>" class="carousel slide carousel-fade col" data-ride="carousel">
 					<div class="carousel-inner">
 						<?php
 							foreach ($data['carousel-items'] as $key=>$item) {

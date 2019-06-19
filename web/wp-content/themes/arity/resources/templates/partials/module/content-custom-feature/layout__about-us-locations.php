@@ -38,6 +38,11 @@
     display: none;
   }
 
+  .content-image-block {
+      padding-bottom: 100px !important;
+  }
+
+
   @media screen and (min-width: 768px) {
     .about-us__locations-container {
       padding: 0 80px;
@@ -149,7 +154,7 @@
                   <div class="card__inner about-us__card__inner__height">
                     <h3 class="card__title">Chicago</h3>
                     <div class="ar-element card__button stack__link">
-                      <a class="button button--link" href="#" data-analytics="Automotive">
+                      <a class="button button--link" target="_blank" href="https://www.google.com/maps/place/Arity/@41.8884096,-87.6354498,15z/data=!4m2!3m1!1s0x0:0x70e64cd81d16e1bb?sa=X&ved=2ahUKEwi69p7quPHiAhUIEawKHWKnD2cQ_BIwCnoECAoQCA" data-analytics="Automotive">
                         <span class="button__icon arrow-right--" role="presentation">
                           <svg class="icon-svg" title="" role="img">
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
@@ -167,7 +172,7 @@
                   <div class="card__inner about-us__card__inner__height">
                     <h3 class="card__title">Belfast</h3>
                     <div class="ar-element card__button stack__link">
-                      <a class="button button--link" href="#" data-analytics="Automotive">
+                      <a class="button button--link" target="_blank" href="https://www.google.com/maps/place/9+Lanyon+Pl,+Belfast+BT1+3LP,+UK/data=!4m2!3m1!1s0x486108fff1e12d7b:0x9646f586fb07f20b?sa=X&ved=2ahUKEwj79d-a5vPiAhULWa0KHW1XCeEQ8gEwAHoECAoQAQ" data-analytics="Automotive">
                         <span class="button__icon arrow-right--" role="presentation">
                           <svg class="icon-svg" title="" role="img">
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
@@ -185,7 +190,7 @@
                   <div class="card__inner about-us__card__inner__height">
                     <h3 class="card__title">Bangalore</h3>
                     <div class="ar-element card__button stack__link">
-                      <a class="button button--link" href="#" data-analytics="Automotive">
+                      <a class="button button--link" target="_blank" href="https://www.google.com/maps/place/Allstate+Solutions+Private+Limited/@12.9257324,77.6843157,17z/data=!3m1!4b1!4m5!3m4!1s0x3bae13083b8de3f5:0x3125105747d7f652!8m2!3d12.9257324!4d77.6865044" data-analytics="Automotive">
                         <span class="button__icon arrow-right--" role="presentation">
                           <svg class="icon-svg" title="" role="img">
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
