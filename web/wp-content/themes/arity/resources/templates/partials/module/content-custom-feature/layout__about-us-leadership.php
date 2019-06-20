@@ -8,7 +8,7 @@
 
 // echo '<pre>'; print_r($data); echo '</pre>';
 
-$base_img_url = 'https://www.arity.com/wp-content/uploads/2019/05/';
+$base_img_url = 'https://www.arity.com/wp-content/uploads/2019/06/';
 
 $leadership_data = array(
 	'unit_1' => array(
@@ -63,17 +63,16 @@ $leadership_data = array(
 
 <style>
 	.about-us__leadership-grid {
-		padding: 56px 96px 64px;
+		padding: 56px 96px 0px;
 	}
 	.about-us__leadership-unit {
 		padding: 0px 22px 48px;
 	}
-	.about-us__leadership-unit.about-us__last-row {
-		padding-bottom: 0;
-	}
+
 	.about-us__leadership-img {
 		display: block;
 		width: 100%;
+		margin: auto;
 		margin-bottom: 24px;
 	}
 	.about-us__leadership-name {
@@ -86,6 +85,27 @@ $leadership_data = array(
 		font-weight: 400;
 		margin: 0;
 		color: #63727e;
+	}
+
+	@media screen and (min-width: 768px){
+		.about-us__leadership-unit {
+			padding-right: 15px;
+			padding-left: 15px;
+		}	
+	}
+
+	@media screen and (min-width: 961px){
+		.about-us__leadership-unit {
+			padding-right: 40px;
+			padding-left: 40px;
+		}	
+	}
+
+	@media screen and (min-width: 1200px){
+		.about-us__leadership-unit {
+			padding-right: 70px;
+			padding-left: 70px;
+		}	
 	}
 
 </style>
@@ -110,21 +130,19 @@ $leadership_data = array(
 		<div class="row">
 			<div class="container about-us__leadership-grid">
   			<div class="row justify-content-center">
-  				
 	  			<?php
-	  				$i = 0;
-	  				foreach ($leadership_data as $datum) : ?>
-	  					<!-- <div class="hidden-sm-up col-1"></div> -->
-			  			<div class="about-us__leadership-unit<?=$datum['last_row'] ? ' about-us__last-row' : '';?> col-12 col-md-3">
-			  				<img src="<?=$datum['img_url'];?>" alt="<?=$datum['name'];?> - <?=$datum['title'];?>" class="about-us__leadership-img">
-			  				<p class="about-us__leadership-name"><?=$datum['name'];?></p>
-			  				<p class="about-us__leadership-title"><?=$datum['title'];?></p>
-			  			</div>
-			  			<!-- <div class="hidden-sm-up col-1"></div> -->
-		  				<?=($i % 4 == 3) ? '</div>' . PHP_EOL . '<div class="row justify-content-center">' . PHP_EOL : '';?>
-		  				<?php $i++;
+	  				$i = 1;
+					foreach ($leadership_data as $datum) :
+				?>
+			  	<div class="about-us__leadership-unit col-12 col-md-4">
+			  		<img src="<?=$datum['img_url'];?>" alt="<?=$datum['name'];?> - <?=$datum['title'];?>" class="about-us__leadership-img">
+					<p class="about-us__leadership-name"><?=$datum['name'];?></p>
+	  				<p class="about-us__leadership-title"><?=$datum['title'];?></p>
+	  			</div>
+		  		
+		  		<?php $i++;
 	  				endforeach;
-					?>
+				?>
 
 				</div>
 			</div>
