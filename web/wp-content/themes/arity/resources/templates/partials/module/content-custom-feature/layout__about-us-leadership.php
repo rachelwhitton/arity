@@ -24,7 +24,7 @@ $leadership_data = array(
 	'unit_3' => array(
 		'img_url' => $base_img_url . 'leadership_grady-irey.png',
 		'name' => 'Grady Irey',
-		'title' => 'Data Science & Analytics'
+		'title' => 'Analytics'
 	),
 	'unit_4' => array(
 		'img_url' => $base_img_url . 'leadership_emad-issac.png',
@@ -34,7 +34,7 @@ $leadership_data = array(
 	'unit_5' => array(
 		'img_url' => $base_img_url . 'leadership_lisa-jillson.png',
 		'name' => 'Lisa Jillson',
-		'title' => 'Marketing, Research & Design'
+		'title' => 'Marketing, Communications, Research & Design'
 	),
 	'unit_6' => array(
 		'img_url' => $base_img_url . 'leadership_peter-levinson.png',
@@ -44,12 +44,12 @@ $leadership_data = array(
 	'unit_7' => array(
 		'img_url' => $base_img_url . 'leadership_larry-rask.png',
 		'name' => 'Larry Rask',
-		'title' => 'Sales'
+		'title' => 'Sales & Business Development'
 	),
 	'unit_8' => array(
 		'img_url' => $base_img_url . 'leadership_dan-regan.png',
 		'name' => 'Dan Regan',
-		'title' => 'Finance, Planning & Resources'
+		'title' => 'Finance & People'
 	),
 	'unit_9' => array(
 		'img_url' => $base_img_url . 'leadership_joy-thomas.png',
