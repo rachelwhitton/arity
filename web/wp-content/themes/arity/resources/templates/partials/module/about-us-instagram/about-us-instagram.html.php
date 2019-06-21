@@ -74,13 +74,13 @@ namespace App\Theme;
 	</div>
 	<div class="footnote" id="references">
 		<div class="container">
-		<div class="footnote-content row justify-content-center h-100">
-		<div class="col align-self-center">
-		<sup>1</sup> An Allstate estimation</p>
-		<sup>2</sup> https://www.nsc.org/road-safety/safety-topics/fatality-estimates</p>
-		<sup>3</sup> https://www.cnbc.com/2016/08/09/commuters-waste-a-full-week-in-traffic-each-year.html</p>
-		</div>
-		</div>
+			<div class="footnote-content row justify-content-center h-100">
+				<div class="col align-self-center">
+					<sup>1</sup> An Allstate estimation</p>
+					<sup>2</sup> https://www.nsc.org/road-safety/safety-topics/fatality-estimates</p>
+					<sup>3</sup> https://www.cnbc.com/2016/08/09/commuters-waste-a-full-week-in-traffic-each-year.html</p>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
