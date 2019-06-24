@@ -23303,6 +23303,10 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   }
 }
 
+.vertical-cards-block__content .container, .vertical-cards-block__content .action-bar-w-bkg__bkg {
+  height: auto;
+}
+
 .vertical-cards-block--white-bg {
   background-color: #ffffff;
 }

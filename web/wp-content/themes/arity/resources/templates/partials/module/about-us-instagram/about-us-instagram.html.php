@@ -24,7 +24,7 @@ namespace App\Theme;
 	height: 150px;
 }
 
-.container {
+.ar-module__about-us-instagram .footnote .container {
 	height: 100%;
 }
 
@@ -72,7 +72,7 @@ namespace App\Theme;
 			</div>
 		</div> 
 	</div>
-	<div class="footnote" id="references">
+	<dihv class="footnote" id="references">
 		<div class="container">
 			<div class="footnote-content row justify-content-center h-100">
 				<div class="col align-self-center">
