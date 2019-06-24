@@ -42,7 +42,7 @@ namespace App\Theme;
 							<h2 class="colors__text--white"><?=$data['anchor-text'];?></h2>
 							<div class="buttons">
 								<p>
-									<a href="https://www.instagram.com/arityofficial/?hl=en" class="button button--primary navy-button-- yellow-hover-border has-icon-- ar-element">
+									<a href="https://www.instagram.com/arityofficial/?hl=en" target="_blank" class="button button--primary navy-button-- yellow-hover-border has-icon-- ar-element">
 										<span class="button__icon"><svg class="icon-svg" title="" role="img"><use xlink:href="#external"></use></svg></span>
 										<span class="button__label">Follow us @arityofficial</span>
 									</a>
