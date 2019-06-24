@@ -72,7 +72,7 @@ namespace App\Theme;
 			</div>
 		</div> 
 	</div>
-	<dihv class="footnote" id="references">
+	<div class="footnote" id="references">
 		<div class="container">
 			<div class="footnote-content row justify-content-center h-100">
 				<div class="col align-self-center">
