@@ -27,7 +27,6 @@ namespace App\Theme;
 .ar-module__about-us-instagram .footnote .container {
 	height: 100%;
 }
-
 </style>
 
 <div <?php module_class($data['classes']); ?>>
@@ -42,7 +41,7 @@ namespace App\Theme;
 							<h2 class="colors__text--white"><?=$data['anchor-text'];?></h2>
 							<div class="buttons">
 								<p>
-									<a href="https://www.instagram.com/arityofficial/?hl=en" target="_blank" class="button button--primary navy-button-- yellow-hover-border has-icon-- ar-element">
+									<a href="https://www.instagram.com/arityofficial/?hl=en" class="button button--primary navy-button-- yellow-hover-border has-icon-- ar-element">
 										<span class="button__icon"><svg class="icon-svg" title="" role="img"><use xlink:href="#external"></use></svg></span>
 										<span class="button__label">Follow us @arityofficial</span>
 									</a>
@@ -72,15 +71,16 @@ namespace App\Theme;
 			</div>
 		</div> 
 	</div>
-	<div class="footnote" id="references">
+	<div class="footnote">
 		<div class="container">
 			<div class="footnote-content row justify-content-center h-100">
 				<div class="col align-self-center">
-					<sup>1</sup> An Allstate estimation</p>
-					<sup>2</sup> https://www.nsc.org/road-safety/safety-topics/fatality-estimates</p>
-					<sup>3</sup> https://www.cnbc.com/2016/08/09/commuters-waste-a-full-week-in-traffic-each-year.html</p>
+					<p id="allstate-ref"><sup>1</sup> An Allstate estimation</p>
+					<p id="nsc-ref"><sup>2</sup> https://www.nsc.org/road-safety/safety-topics/fatality-estimates</p>
+					<p id="cnbc-ref"><sup>3</sup> https://www.cnbc.com/2016/08/09/commuters-waste-a-full-week-in-traffic-each-year.html</p>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+
