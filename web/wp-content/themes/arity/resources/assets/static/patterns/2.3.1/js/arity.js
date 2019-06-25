@@ -10,16 +10,34 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
       headlines: $('.rotating'),
       index: -1,
       fadeInterval: 800,
-      visibleInterval: 3000
+      visibleInterval: 3000,
+      time: 1000
     },
     init: function init() {
       $(document).ready(function () {
         aboutUs.displayHeadline();
+        aboutUs.jumpToLink();
       });
     },
     displayHeadline: function displayHeadline() {
       ++aboutUs.vars.index;
       aboutUs.vars.headlines.eq(aboutUs.vars.index % aboutUs.vars.headlines.length).fadeIn(aboutUs.vars.fadeInterval).delay(aboutUs.vars.visibleInterval).fadeOut(aboutUs.vars.fadeInterval, aboutUs.displayHeadline);
+    },
+    jumpToLink: function jumpToLink() {
+      $('.reference-jumplink').click(function () {
+        var target = $(this.hash);
+        $('html, body').animate({
+          scrollTop: $('.about-us-instagram').offset().top - 75
+        }, {
+          duration: aboutUs.vars.time,
+
+          // check if the location has moved, if so, set the new offset
+          step: function step(now, fx) {
+            var newOffset = target.offset().top + 75;
+            if (fx.end !== newOffset) fx.end = newOffset;
+          }
+        });
+      });
     }
   };
 
@@ -254,6 +272,33 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
   window.disableScroll = disableScroll;
 })(jQuery, window, document);
 
+;(function ($, window, document) {
+  var jumplink = {
+    vars: {
+      time: 1000
+    },
+    init: function init() {
+      $(document).ready(function () {
+        $('.reference-jumplink').click(function () {
+          var target = $(this.hash);
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, {
+            duration: jumplink.vars.time,
+
+            // check if the location has moved, if so, set the new offset
+            step: function step(now, fx) {
+              var newOffset = target.offset().top;
+              if (fx.end !== newOffset) fx.end = newOffset;
+            }
+          });
+        });
+      });
+    }
+  };
+
+  window.jumplink = jumplink;
+})(jQuery, window, document);
 ;(function ($, window, document) {
 
   var log = {
