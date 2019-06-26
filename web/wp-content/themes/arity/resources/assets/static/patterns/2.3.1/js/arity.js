@@ -26,14 +26,16 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
     jumpToLink: function jumpToLink() {
       $('.reference-jumplink').click(function () {
         var target = $(this.hash);
-        $('html, body').animate({
-          scrollTop: $('.about-us-instagram').offset().top - 75
+        var doc = $('html, body');
+        var calc = $(document).height() - $('.site-footer').outerHeight() - $('.footnote').height() + $('.site-header').height();
+        $('html, body').stop().animate({
+          scrollTop: $(document).height()
         }, {
-          duration: aboutUs.vars.time,
+          duration: 2000,
 
           // check if the location has moved, if so, set the new offset
           step: function step(now, fx) {
-            var newOffset = target.offset().top + 75;
+            var newOffset = $(document).height() - $('.site-footer').outerHeight() - $('.footnote').height() - $('.site-header').height();
             if (fx.end !== newOffset) fx.end = newOffset;
           }
         });
