@@ -24146,6 +24146,22 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   }
 }
 
+@media screen and (min-width: 961px) {
+  .instagram-unit__anchor h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .instagram-unit__anchor h2 {
+    font-size: 1.875rem;
+  }
+}
+
+.instagram-unit .buttons {
+  width: 360px;
+}
+
 .instagram-unit__anchor-inner {
   width: 100%;
   padding: 48px;

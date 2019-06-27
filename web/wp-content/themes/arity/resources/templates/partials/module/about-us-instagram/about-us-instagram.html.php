@@ -8,7 +8,7 @@ namespace App\Theme;
   Template Name:      About Us Instagram
   Template Type:      Module
   Description:        Module to manually showcase #WeAreArityWednesday Instagram posts
-  Last Updated:       06/07/2019
+  Last Updated:       06/27/2019
   Since:              2.3.1
 */
 
@@ -34,24 +34,39 @@ namespace App\Theme;
 		<div class="row justify-content-center">
 		  <div class="col-12 about-us-instagram">
 		  	<div class="row no-gutters">
-
-
 					<div class="instagram-unit instagram-unit__anchor colors__bg--navy col-md-6 col-lg-4 col-12">
 						<div class="instagram-unit__anchor-inner">
 							<h2 class="colors__text--white"><?=$data['anchor-text'];?></h2>
-							
-						
-							<div class="buttons">
-								<p>
-									<a href="https://www.instagram.com/arityofficial/?hl=en" class="button button--primary navy-button-- yellow-hover-border has-icon-- ar-element">
-										<span class="button__icon"><svg class="icon-svg" title="" role="img"><use xlink:href="#external"></use></svg></span>
-										<span class="button__label">Follow us @arityofficial</span>
-									</a>
+							<?php
+								if (!empty($data['link_groups'])) :
+							?>
+								<div class="buttons">
+								<?php $i=0; foreach ($data['link_groups'] as $cta) : $i++; if(empty($cta['group']['cta__link'])) continue; ?>
+								<?php
+									$cta = $cta['group'];
+									if ($cta['cta__type'] == 'link'){
+										$classes = 'button block_link';
+
+										if(($cta['cta__icon_link'] == "external") && $cta['cta__icon_link'] != 'none') {
+											$cta['cta__link']['icon'] = 'external';
+										}
+									}else{
+										$classes = 'button button--primary navy-button-- yellow-hover-border has-icon-- ';
+										if(($cta['cta__icon_button'] == "external") && $cta['cta__icon_button'] != 'none') {
+											$cta['cta__link']['icon'] = 'external';
+										}
+									}
+								?>
+								<p>				
+									<?php element('button', array_merge($cta['cta__link'], [
+									'classes' => $classes
+									])); ?>
 								</p>
-							</div>
+								<?php endforeach; ?>
+								</div>
+							<?php endif; ?>
 						</div>
 					</div>
-
 					<?php
 					// $i = 0;
 					foreach ($data['images'] as $image) :
