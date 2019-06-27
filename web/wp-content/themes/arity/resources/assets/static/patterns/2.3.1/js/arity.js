@@ -25,9 +25,6 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
     },
     jumpToLink: function jumpToLink() {
       $('.reference-jumplink').click(function () {
-        var target = $(this.hash);
-        var doc = $('html, body');
-        var calc = $(document).height() - $('.site-footer').outerHeight() - $('.footnote').height() + $('.site-header').height();
         $('html, body').stop().animate({
           scrollTop: $(document).height()
         }, {
