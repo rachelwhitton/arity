@@ -2354,9 +2354,11 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
         }
       }.bind(this));
 
-      // Open the first parent. @DD#287
+      // Open menu item parent. @DD#287
+      // Note: Each item in menuItemParent has to be called to set the height of submenu respective to the parent
       if (this.$menuItemsParents.length) {
-        this.parentOpen(this.$menuItemsParents.first()[0], true);
+        this.parentOpen(this.$menuItemsParents[0], true);
+        this.parentOpen(this.$menuItemsParents[1], true);
       }
 
       if (this.$menuItemsParents.length) {
