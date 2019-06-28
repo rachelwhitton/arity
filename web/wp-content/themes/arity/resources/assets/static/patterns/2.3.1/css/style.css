@@ -10751,12 +10751,21 @@ form .checkbox_container .checkmark:after {
 }
 
 .page--blog .site-header a .site-header__logo,
-.page--about-us .site-header a .site-header__logo,
 .page--move .site-header a .site-header__logo,
 .post .site-header a .site-header__logo,
 .page--home-v2 .site-header a .site-header__logo,
 .page--home-v3 .site-header a .site-header__logo {
   fill: #011c2c;
+}
+
+.page--about-us .site-header .site-header__logo {
+  fill: #ffffff;
+}
+
+@media screen and (min-width: 480px) {
+  .page--about-us .site-header .site-header__logo {
+    fill: #011c2c;
+  }
 }
 
 .site-header {
@@ -11716,9 +11725,6 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
 .page--move .site-header .navbar__toggle__inner,
 .page--move .site-header .navbar__toggle__inner::before,
 .page--move .site-header .navbar__toggle__inner::after,
-.page--about-us .site-header .navbar__toggle__inner,
-.page--about-us .site-header .navbar__toggle__inner::before,
-.page--about-us .site-header .navbar__toggle__inner::after,
 .post .site-header .navbar__toggle__inner,
 .post .site-header .navbar__toggle__inner::before,
 .post .site-header .navbar__toggle__inner::after,
@@ -11729,6 +11735,12 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
 .page--home-v3 .site-header .navbar__toggle__inner::before,
 .page--home-v3 .site-header .navbar__toggle__inner::after {
   background-color: #011c2c;
+}
+
+@media screen and (min-width: 480px) {
+  .page--about-us .site-header .navbar__toggle__inner, .page--about-us .site-header .navbar__toggle__inner::before, .page--about-us .site-header .navbar__toggle__inner::after {
+    background-color: #011c2c;
+  }
 }
 
 .site-header .navbar__toggle__inner {
@@ -11771,6 +11783,9 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
 .page--move .site-header .navbar__toggle.is-active .navbar__toggle__inner,
 .page--move .site-header .navbar__toggle.is-active .navbar__toggle__inner::before,
 .page--move .site-header .navbar__toggle.is-active .navbar__toggle__inner::after,
+.page--about-us .site-header .navbar__toggle.is-active .navbar__toggle__inner,
+.page--about-us .site-header .navbar__toggle.is-active .navbar__toggle__inner::before,
+.page--about-us .site-header .navbar__toggle.is-active .navbar__toggle__inner::after,
 .post .site-header .navbar__toggle.is-active .navbar__toggle__inner,
 .post .site-header .navbar__toggle.is-active .navbar__toggle__inner::before,
 .post .site-header .navbar__toggle.is-active .navbar__toggle__inner::after,
