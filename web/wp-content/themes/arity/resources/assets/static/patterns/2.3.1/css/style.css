@@ -10841,6 +10841,7 @@ form .checkbox_container .checkmark:after {
   margin: 0;
   position: relative;
   z-index: 2;
+  overflow-x: hidden;
 }
 
 .site-header .navbar__nav a {
