@@ -9305,6 +9305,10 @@ form .form-control ::-webkit-input-placeholder {
   color: #63727e;
 }
 
+form .form-control ::-moz-placeholder {
+  color: #63727e;
+}
+
 form .form-control ::-ms-input-placeholder {
   color: #63727e;
 }
@@ -10841,6 +10845,7 @@ form .checkbox_container .checkmark:after {
   margin: 0;
   position: relative;
   z-index: 2;
+  overflow-x: hidden;
 }
 
 .site-header .navbar__nav a {
