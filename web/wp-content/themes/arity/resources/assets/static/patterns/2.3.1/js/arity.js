@@ -11,7 +11,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
       index: -1,
       fadeInterval: 800,
       visibleInterval: 3000,
-      time: 2000
+      time: 1000
     },
     init: function init() {
       $(document).ready(function () {
