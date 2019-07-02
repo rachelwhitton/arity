@@ -10845,6 +10845,7 @@ form .checkbox_container .checkmark:after {
   margin: 0;
   position: relative;
   z-index: 2;
+  overflow-x: hidden;
 }
 
 .site-header .navbar__nav a {
@@ -24144,6 +24145,17 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   }
 }
 
+.ar-module__about-us-instagram .footnote {
+  background-color: #63727E;
+  color: #fff;
+  font-size: 14px;
+  height: 150px;
+}
+
+.ar-module__about-us-instagram .footnote .container, .ar-module__about-us-instagram .footnote .action-bar-w-bkg__bkg {
+  height: 100%;
+}
+
 .about-us-instagram {
   max-width: 1200px;
   padding: 0 !important;
@@ -24173,7 +24185,9 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
 }
 
 .instagram-unit .buttons {
-  width: 360px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .instagram-unit__anchor-inner {

@@ -16,18 +16,6 @@ namespace App\Theme;
 
 ?>
 
-<style>
-.footnote {
-	background-color: #63727E;
-	color: #fff;
-	font-size: 14px;
-	height: 150px;
-}
-
-.ar-module__about-us-instagram .footnote .container {
-	height: 100%;
-}
-</style>
 
 <div <?php module_class($data['classes']); ?>>
 	<div class="container-fluid">
