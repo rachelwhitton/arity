@@ -10848,6 +10848,12 @@ form .checkbox_container .checkmark:after {
   overflow-x: hidden;
 }
 
+@media screen and (min-width: 961px) {
+  .site-header .navbar__nav {
+    overflow-x: visible !important;
+  }
+}
+
 .site-header .navbar__nav a {
   display: block;
   color: #ffffff;
