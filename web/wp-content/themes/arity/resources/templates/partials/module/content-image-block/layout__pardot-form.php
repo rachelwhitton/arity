@@ -95,7 +95,7 @@
         </div>
 
         <?php if(!empty($data['pardot-form-use_captcha'])) : ?>
-            <!-- div class="g-recaptcha" data-size="invisible" data-badge="inline"></div -->
+            <div class="g-recaptcha" data-size="invisible" data-badge="inline"></div>
         <?php endif; ?>
     </form>
 </div>
