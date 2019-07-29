@@ -24,7 +24,6 @@ vendor/*
 
 # WordPress & Core Files
 !web/
-!web/api/
 web/*
 !web/index.php
 !web/wp-cli.yml
@@ -92,6 +91,11 @@ web/wp-content/mu-plugins/*
 !web/wp-content/mu-plugins/wp-migrate-db-pro-compatibility.php
 !web/wp-content/mu-plugins/disable-wp-admin.php
 !web/wp-content/mu-plugins/disable-plugins-for-development.php
+
+# API for Test Life360 Landing Page
+# ----------------------------------------------------------------------------------------------
+!web/api/
+!web/api/*
 
 # Pantheon
 # ----------------------------------------------------------------------------------------------
