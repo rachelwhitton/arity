@@ -94,8 +94,8 @@ web/wp-content/mu-plugins/*
 
 # Web Service for Life360 Offers Landing Page
 # ----------------------------------------------------------------------------------------------
-!web/service/
-!web/service/*
+!web/services/
+!web/services/*
 
 # Pantheon
 # ----------------------------------------------------------------------------------------------
