@@ -92,10 +92,10 @@ web/wp-content/mu-plugins/*
 !web/wp-content/mu-plugins/disable-wp-admin.php
 !web/wp-content/mu-plugins/disable-plugins-for-development.php
 
-# API for Test Life360 Landing Page
+# Web Service for Life360 Offers Landing Page
 # ----------------------------------------------------------------------------------------------
-!web/api/
-!web/api/*
+!web/service/
+!web/service/*
 
 # Pantheon
 # ----------------------------------------------------------------------------------------------
