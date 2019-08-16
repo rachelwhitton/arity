@@ -60,6 +60,28 @@ $last_nav_item->post_slug = sanitize_title($last_nav_item->title);
     </div>
   </nav>
 
+  <!--
+  ******************************************
+  COUNTING MENU ITEMS WHEN EDITING THE MENUS
+
+  $nav_items:
+  0 => Industries
+  1 => Insurance
+  2 => Shared Mobility
+  3 => View all industries
+  4 => Understand your drivers
+  5 => Company
+  6 => About us
+  7 => Join the team
+  8 => Blog
+  9 => Get In touch
+
+  The $nav_items variable emcompasses all primary and secondary nav items
+  For nav items with dropmenus, the parent determine whether a submenu item renders in the dropmenu.
+  Ex: Industries resolves to $nav_items[0]->ID so any children of that item will render in the dropmenu and all others will not.
+  ******************************************
+  -->
+
   <div class="dropmenu" data-menu-item="industries" tabindex="-1" aria-hidden="true">
     <div class="dropmenu__container">
       <div class="dropmenu__arrow"></div>
@@ -106,7 +128,7 @@ $last_nav_item->post_slug = sanitize_title($last_nav_item->title);
         </div>
         <div class="dropmenu__secondary">
           <?php foreach ($nav_items as $nav_item) : ?>
-            <?php if($nav_item->menu_item_parent != $nav_items[7]->ID) { continue; } ?>
+            <?php if($nav_item->menu_item_parent != $nav_items[5]->ID) { continue; } ?>
             <div class="dropmenu__item__no-category-landing-page">
               <a href="<?= $nav_item->url; ?>" title="Learn more about <?= $nav_item->title; ?>" tabindex="-1" aria-label="<?= $nav_item->title; ?>">
                 <h2><?= $nav_item->title; ?> <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#caret"></use></svg></h2>
@@ -122,7 +144,7 @@ $last_nav_item->post_slug = sanitize_title($last_nav_item->title);
 </div>
 
 <style>
-/*
+  /*
   .dropmenu {
     max-width:350px !important;
   }

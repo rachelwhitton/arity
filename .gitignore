@@ -19,7 +19,6 @@ config/certs/*
 vendor/*
 !vendor/.gitkeep
 
-
 # Wordpress Files
 # ----------------------------------------------------------------------------------------------
 
@@ -83,7 +82,6 @@ web/wp-content/mu-plugins/*
 !web/wp-content/themes/index.php
 !web/wp-content/themes/.gitkeep
 
-
 # Custom Development for Wordpress Files
 # Add Wordpress plugins that require files to be checked into the repo
 # ----------------------------------------------------------------------------------------------
@@ -94,6 +92,10 @@ web/wp-content/mu-plugins/*
 !web/wp-content/mu-plugins/disable-wp-admin.php
 !web/wp-content/mu-plugins/disable-plugins-for-development.php
 
+# Web Service for Life360 Offers Landing Page
+# ----------------------------------------------------------------------------------------------
+!web/services/
+!web/services/*
 
 # Pantheon
 # ----------------------------------------------------------------------------------------------
@@ -104,7 +106,6 @@ pantheon.upstream.yml
 web/private/*
 !web/private/scripts/
 web/private/scripts/quicksilver
-
 
 # Bower / Node / Grunt / SASS
 # @see - http://stackoverflow.com/questions/39990017/should-i-commit-the-yarn-lock-file-and-what-is-it-for
@@ -122,12 +123,10 @@ web/private/scripts/quicksilver
 *.pid
 *.swp
 
-
 # Vagrant
 # ----------------------------------------------------------------------------------------------
 .vagrant
 vagrant.local.yml
-
 
 # OSX
 # ----------------------------------------------------------------------------------------------
@@ -140,11 +139,9 @@ vagrant.local.yml
 .Trashes
 .com.apple.timemachine.supported
 
-
 # Windows
 # ----------------------------------------------------------------------------------------------
 Thumbs.db
-
 
 # Packages
 # ----------------------------------------------------------------------------------------------
@@ -160,13 +157,11 @@ Thumbs.db
 *.tgz
 *.tar.gz
 
-
 # Logs and databases
 # ----------------------------------------------------------------------------------------------
 *.log
 *.sql
 *.htpasswd
-
 
 # Sublime / Other Editors
 # ----------------------------------------------------------------------------------------------
@@ -177,7 +172,6 @@ Thumbs.db
 .idea
 *.iml
 
-
 # workspace files are user-specific
 # ----------------------------------------------------------------------------------------------
 *.sublime-workspace
@@ -187,13 +181,11 @@ Thumbs.db
 # proportion of contributors will probably not be using SublimeText
 *.sublime-project
 
-
 # Tags
 # ----------------------------------------------------------------------------------------------
 # Ignore tags created by etags and ctags
 TAGS
 tags
-
 
 # Vim
 # ----------------------------------------------------------------------------------------------
