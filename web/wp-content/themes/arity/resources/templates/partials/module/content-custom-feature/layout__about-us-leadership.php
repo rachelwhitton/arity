@@ -28,7 +28,7 @@ $leadership_data = array(
 	),
 	'unit_4' => array(
 		'img_url' => $base_img_url . 'leadership_emad-issac.png',
-		'name' => 'Emad Issac',
+		'name' => 'Emad Isaac',
 		'title' => 'Engineering'
 	),
 	'unit_5' => array(
