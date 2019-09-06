@@ -9,7 +9,7 @@ namespace App\Theme;
   Last Updated:       08/01/2017
   Since:              1.0.0
 */
-//echo '<pre>';print_r($data);echo '</pre>';
+// echo '<pre>';print_r($data['raw_feed']['job']);echo '</pre>';
 ?>
 <div <?php module_class('career-list'); ?>>
   <div class="container">
