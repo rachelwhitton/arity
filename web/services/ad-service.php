@@ -19,16 +19,22 @@
 
   <!-- Content Security Policy -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'
-    script-src: 'unsafe-inline' https://www.google-analytics.com/analytics.js
-    script-src: https://tagmanager.google.com
+
     font-src: https://fonts.gstatic.com data:
     font-src: https://use.typekit.net data:
     font-src: https://p.typekit.net data:
-    script-src: 'unsafe-inline' https://www.googletagmanager.com
+
     style-src: https://tagmanager.google.com https://fonts.googleapis.com
+
+    script-src: 'unsafe-inline' https://www.google-analytics.com/analytics.js
+    script-src: https://tagmanager.google.com
+    script-src: https://js-agent.newrelic.com/nr-1130.min.js
+    script-src: 'unsafe-inline' https://www.googletagmanager.com
+
     img-src: https://ssl.gstatic.com https://www.gstatic.com
     img-src: https://www.google-analytics.com
     img-src: https://www.googletagmanager.com
+
   ;">
 
   <!-- Google Tag Manager -->
@@ -43,7 +49,7 @@
   <!-- End Google Tag Manager -->
 
   <link rel="stylesheet" href="https://use.typekit.net/kwz3nzr.css">
-  <meta charset=" UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>AnswerMarketplace Offers Test Service</title>
