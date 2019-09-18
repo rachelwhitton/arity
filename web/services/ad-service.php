@@ -69,14 +69,34 @@
   <style>
     body {
       margin: 0;
-      color: #fff;
+      color: #212121;
       font-family: futura-pt, sans-serif;
       font-weight: 400;
       font-style: normal;
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    .header {
+      height: 56px;
+      bottom: 90.69%;
+      background: #7875EB;
+      color: #fff;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .page-heading {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 22px;
+      margin-left: 8px;
     }
 
     .webview {
-      background: linear-gradient(130deg, rgba(241, 88, 42, 1) 0%, rgba(128, 39, 193, 1) 85%, rgba(128, 39, 193, 1) 100%);
+      background: #fff;
       height: 100vh;
       width: 100%;
       display: flex;
@@ -86,9 +106,8 @@
     }
 
     .inner-wrap {
-      max-width: 400px;
-      margin-top: 20px;
-      padding: 0;
+      max-width: 300px;
+      padding: 0 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -99,27 +118,55 @@
     h1,
     .h1 {
       font-size: 22px;
-      margin-top: 40px;
-      font-weight: 400;
+      margin: 16px 0 0;
+      font-weight: 700;
+      max-width: 300px;
+    }
+
+    .desc {
+      margin: 8px 0 0;
+    }
+
+    h3,
+    .h3 {
+      font-weight: 700;
+      margin: 16px 0 0;
     }
 
     .ad {
       box-sizing: border-box;
-      max-width: 320px;
-      max-height: 270px;
-      padding: 10px;
+      max-width: 300px;
+      max-height: 250px;
+      margin: 24px 0 0;
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+
+    .cta {
+      margin: 24px 0 0;
+      color: #fff;
+      background: #7875EB;
+      border-radius: 27px;
+      width: 300px;
+      height: 54px;
+      font-size: 16px;
     }
   </style>
 
   <body>
 
     <!-- The Page -->
+    <div class="header" role="header">
+      <img src="./img/life360-logo-light.svg" alt="The Life360 Logo">
+      <p class="page-heading">Welcome Life360 member</p>
+    </div>
     <div class="webview" role="main">
       <div class="inner-wrap">
-        <h1>Etiam Tortor Cras Ligula Parturient?</h1>
+        <h1>Here are 2 insurance picks just for you</h1>
+        <p class="desc">We want your family to be safe and protected on the road. We think these insurance carries could
+          be a good
+          fit.</p>
         <div class="row ad">
           <a aria-label="Save on car insurance with Answer Financial"
             href="http://event-stg.ansmp.net/w/503251/p/2c90808a6ac7a71c016c019d74cc0013/click?c=2c90808a6121f7350161255ee03c0000&cost=5.00&share=0.00&model=A6&asset=8b3e69be69824c14a22eb33bdbb2054a&istat=1&uid=cQV88N3RsHs4PDIoi6fUKQ%3D%3D&st=DC&rte=1&org=1234&idfa=6D92078A-8246-4BA4-AE5B-76104861E7DC&zc=20012&rspn=html&did=Tester01&targeturl=238675B9CA4EDC252D8EA61286AC860458C8FFDC20572E13D2503BBBEFA5EE067CE610DE5D184ADF988D0CB03AE81E767070DC343D99B79858B3359B2B239332E484BB5C4D29D4F232E4AEBD6B4040D0D416172747385FCBBDD01FF4B2897F11472BA4A36A228B0FD9E77B8403B930D5ED712019D65F8BDDADAB9C3FE2B56565"><img
@@ -127,6 +174,13 @@
               alt="A car insurance offer from Answer Financial - customers save an average of $484 a year." width="100%"
               height="100%" /></a>
         </div>
+        <h3>What we like about Answer Financial</h3>
+        <ul>
+          <li>Low base rate</li>
+          <li>Designed for low-mileage drivers</li>
+          <li>All miles over 250/day are free</li>
+        </ul>
+        <button class="cta">Get a quote</button>
       </div>
     </div>
 
