@@ -28,9 +28,22 @@
     <div class="form-control-feedback" data-error="invalid">Please enter a valid email</div>
   </div>
 
-  <div class="form-group">
-    <label class="form-group-label" for="input_company">Company</label>
-    <input type="text" class="form-control" name="company" id="input_company" placeholder="">
+  <div class="form-group form-group--required">
+    <label class="form-group-label" for="input_<?=$industry_id; ?>">What industry do you work in?</label>
+    <select class="form-control custom-select" name="<?=$industry_id; ?>" id="input_<?=$industry_id; ?>" required>
+      <option value="">Select an industry</option>
+      <option value="Auto Aftermarket" <?=strtolower($_GET['industry'])=='auto aftermarket'?'selected':''?>>Auto Aftermarket</option>
+      <option value="Automotive Solutions" <?=strtolower($_GET['industry'])=='automotive solutions'?'selected':''?>>Automotive Solutions</option>
+      <option value="Financial Services" <?=strtolower($_GET['industry'])=='financial services'?'selected':''?>>Financial Services</option>
+      <option value="Gig Economy" <?=strtolower($_GET['industry'])=='gig economy'?'selected':''?>>Gig Economy</option>
+      <option value="Government" <?=strtolower($_GET['industry'])=='government'?'selected':''?>>Government</option>
+      <option value="Insurance" <?=strtolower($_GET['industry'])=='insurance'?'selected':''?>>Insurance</option>
+      <option value="OEM" <?=strtolower($_GET['industry'])=='oem'?'selected':''?>>OEM</option>
+      <option value="Shared Mobility" <?=strtolower($_GET['industry'])=='shared mobility'?'selected':''?>>Shared Mobility</option>
+      <option value="Smart Cities" <?=strtolower($_GET['industry'])=='smart cities'?'selected':''?>>Smart Cities</option>
+      <option value="Other" <?=strtolower($_GET['industry'])=='other'?'selected':''?>>Other</option>
+    </select>
+    <div class="form-control-feedback" data-error="required">Please select an industry</div>
   </div>
 
   <div class="form-group">
@@ -58,6 +71,11 @@
       </div>
     </div>
   </div>
+  
+  <div class="form-group">
+    <label class="form-group-label" for="input_company">Company</label>
+    <input type="text" class="form-control" name="company" id="input_company" placeholder="">
+  </div>
 
   <?php
     $industry_id = '00Nf4000009v5NK';
@@ -67,23 +85,6 @@
       $industry_id = '00Nf4000009v5NK';
     }
   ?>
-  <div class="form-group form-group--required">
-    <label class="form-group-label" for="input_<?=$industry_id; ?>">What industry do you work in?</label>
-    <select class="form-control custom-select" name="<?=$industry_id; ?>" id="input_<?=$industry_id; ?>" required>
-      <option value="">Select an industry</option>
-      <option value="Auto Aftermarket" <?=strtolower($_GET['industry'])=='auto aftermarket'?'selected':''?>>Auto Aftermarket</option>
-      <option value="Automotive Solutions" <?=strtolower($_GET['industry'])=='automotive solutions'?'selected':''?>>Automotive Solutions</option>
-      <option value="Financial Services" <?=strtolower($_GET['industry'])=='financial services'?'selected':''?>>Financial Services</option>
-      <option value="Gig Economy" <?=strtolower($_GET['industry'])=='gig economy'?'selected':''?>>Gig Economy</option>
-      <option value="Government" <?=strtolower($_GET['industry'])=='government'?'selected':''?>>Government</option>
-      <option value="Insurance" <?=strtolower($_GET['industry'])=='insurance'?'selected':''?>>Insurance</option>
-      <option value="OEM" <?=strtolower($_GET['industry'])=='oem'?'selected':''?>>OEM</option>
-      <option value="Shared Mobility" <?=strtolower($_GET['industry'])=='shared mobility'?'selected':''?>>Shared Mobility</option>
-      <option value="Smart Cities" <?=strtolower($_GET['industry'])=='smart cities'?'selected':''?>>Smart Cities</option>
-      <option value="Other" <?=strtolower($_GET['industry'])=='other'?'selected':''?>>Other</option>
-    </select>
-    <div class="form-control-feedback" data-error="required">Please select an industry</div>
-  </div>
 
   <div class="form-group">
     <label class="form-group-label" for="input_description">Comments</label>
