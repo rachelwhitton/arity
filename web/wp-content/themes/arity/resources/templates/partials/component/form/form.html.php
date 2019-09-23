@@ -28,6 +28,15 @@
     <div class="form-control-feedback" data-error="invalid">Please enter a valid email</div>
   </div>
 
+  <?php
+    $industry_id = '00Nf4000009v5NK';
+    if(!empty(WP_ENV) && WP_ENV != 'production') {
+      // Testing
+      // $industry_id = '00N3B000001I8yV';
+      $industry_id = '00Nf4000009v5NK';
+    }
+  ?>
+
   <div class="form-group form-group--required">
     <label class="form-group-label" for="input_<?=$industry_id; ?>">What industry do you work in?</label>
     <select class="form-control custom-select" name="<?=$industry_id; ?>" id="input_<?=$industry_id; ?>" required>
@@ -76,15 +85,6 @@
     <label class="form-group-label" for="input_company">Company</label>
     <input type="text" class="form-control" name="company" id="input_company" placeholder="">
   </div>
-
-  <?php
-    $industry_id = '00Nf4000009v5NK';
-    if(!empty(WP_ENV) && WP_ENV != 'production') {
-      // Testing
-      // $industry_id = '00N3B000001I8yV';
-      $industry_id = '00Nf4000009v5NK';
-    }
-  ?>
 
   <div class="form-group">
     <label class="form-group-label" for="input_description">Comments</label>
