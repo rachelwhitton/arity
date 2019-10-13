@@ -8,7 +8,7 @@ if(empty($data['h_el'])) {
 $data['feed'] = false;
 $data['feed_cached'] = false;
 
-$feed = get_rss('https://careers.allstate.com/feed/285400');
+$feed = get_rss('https://careers.allstate.com/feed/297200');
 
 $data['raw_feed'] = $feed;
 $data['feed'] = [];
@@ -46,6 +46,7 @@ $data['feedCount'] = count($data['feed']);
 return $data;
 
 
+// FEED UNTIL 09-20-2019: https://careers.allstate.com/feed/285400
 
 // FEED UNTIL 09-06-2019 => https://careers.allstate.com/services/rss/job/?keywords=Arity&campaign=Arity%20Careers%20Portal&date=created&rows=500&sort=created
 /* FEED UNTIL 09-06-2019 PARSING LOOP */ 

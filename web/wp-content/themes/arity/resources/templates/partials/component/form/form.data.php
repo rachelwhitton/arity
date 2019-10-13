@@ -21,7 +21,6 @@ if(empty($data['form_url'])) {
   }
 
   // Override for test
-  // $data['form_url'] = 'http://go.pardot.com/l/669483/2018-12-12/5j4';
   $data['form_url'] = 'http://go.arity.com/l/669483/2018-12-12/5j4';
   $data['form_oid'] = '00Df4000001TyK5';
 }
