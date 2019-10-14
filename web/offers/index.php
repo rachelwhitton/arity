@@ -29,11 +29,12 @@ error_log('Offers page requested from ' . $line);
     font-src: https://p.typekit.net data:
 
     style-src: https://tagmanager.google.com https://fonts.googleapis.com
-
     script-src: 'unsafe-inline' https://www.google-analytics.com/analytics.js
     script-src: https://tagmanager.google.com
     script-src: https://js-agent.newrelic.com/nr-1130.min.js
     script-src: 'unsafe-inline' https://www.googletagmanager.com
+    script-src: https://js-agent.newrelic.com 
+    script-src: https://bam.nr-data.net
 
     img-src: https://ssl.gstatic.com https://www.gstatic.com
     img-src: https://www.google-analytics.com
