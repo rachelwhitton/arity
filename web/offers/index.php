@@ -10,7 +10,8 @@
  * @license    https://www.php.net/license/3_01.txt PHP License 3.0
  */
 
-error_log("Page requested.");
+$line = "$_SERVER[REMOTE_ADDR] ";
+error_log('Offers page requested from ' . $line);
 
 ?>
 
