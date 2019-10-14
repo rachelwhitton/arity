@@ -19294,8 +19294,28 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   top: -3px;
 }
 
-.content-image-block__col-group p {
+.content-image-block__col-group p, .content-image-block__col-group ul, .content-image-block__col-group ol {
   color: #63727e;
+}
+
+.content-image-block__col-group ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.content-image-block__col-group ul li {
+  text-indent: -1rem;
+  margin-left: 1rem;
+  margin-bottom: 0.6875rem;
+}
+
+.content-image-block__col-group ul li:before {
+  content: ":\00a0\00a0";
+  font-weight: 700;
+}
+
+.content-image-block__col-group ol li {
+  margin-bottom: 0.6875rem;
 }
 
 @media screen and (min-width: 961px) {
