@@ -57,7 +57,7 @@ error_log('Offers page requested from ' . $line);
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>AnswerMarketplace Offers Test Service</title>
+  <title>Marketplace Offers</title>
   <link rel="stylesheet" href="https://use.typekit.net/kwz3nzr.css">
   <link rel="shortcut icon" href="favicon.ico">
 
