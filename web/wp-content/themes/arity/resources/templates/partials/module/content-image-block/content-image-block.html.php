@@ -219,7 +219,7 @@ if($data['vertical-align']=='Top'){
         <div class="<?=$class;?>__col-group">
           <?php  if (!empty($data['block-eyebrow'])) : ?>
             <?php element('eyebrow', array(
-                'classes' => 'colors__text--gray',
+                'classes' => 'content-image-block__eyebrow',
                 'label' => $data['block-eyebrow']
               )); ?>
             <?php endif; ?>
