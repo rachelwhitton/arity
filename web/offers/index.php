@@ -22,7 +22,7 @@ error_log('Offers page requested from ' . $line);
 <head>
 
   <!-- Content Security Policy -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'
 
     font-src: https://fonts.gstatic.com data:
     font-src: https://use.typekit.net data:
@@ -40,7 +40,7 @@ error_log('Offers page requested from ' . $line);
     img-src: https://www.google-analytics.com
     img-src: https://www.googletagmanager.com
 
-  ;">
+  ;"> -->
 
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
