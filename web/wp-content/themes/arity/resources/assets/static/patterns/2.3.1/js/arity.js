@@ -2275,8 +2275,12 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
             $submenu = $el.parent().find('.sub-menu'),
             navtext = $el.text();
 
-        // Don’t add Overview submenu link to Company
-        if (navtext.indexOf('Company') !== -1) {
+        // Inject eyebrow before Solutions subnav
+        if (navtext.indexOf('Solutions') !== -1) {
+          $submenu.prepend('<li class="menu-item" style="margin-top: 1rem;"><span class="eyebrow type5 ar-element colors__text--gray" style="padding-left: 24px;">Industries</span></li>');
+        }
+        // Don’t add Overview submenu link to Solutions or Company
+        if (navtext.indexOf('Company') !== -1 || navtext.indexOf('Solutions') !== -1) {
           return true;
         }
 
@@ -2287,16 +2291,12 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
             attrs += ' ' + this.name + '="' + this.value + '"';
           }
         });
-
         // Add Tabindex
         attrs += ' tabindex="-1"';
-
         // Build Overview submenu link
         linkHtml = '<a' + attrs + '>Overview</a<>';
-
         $submenu.prepend('<li class="menu-item menu-overview">' + linkHtml + '</li>');
       });
-
       // This need to be redone now. Jerk.
       this.$menuItems = $('.navbar__nav a', this.$el);
     },
@@ -2662,90 +2662,6 @@ var CountUp = function CountUp(target, startVal, endVal, decimals, duration, opt
     },
     analytics: function analytics() {
       // NOTE moving to GTM
-      // var linkClicked = false;
-      // 
-      //  // Logo
-      // $('a[rel="home"]', this.$el).on('click', function() {
-      //   analytics.globalEvent('event', 'Navigation', 'event_headerID', 'Header Logo');
-      // });
-      //
-      // $('.navbar__nav a', this.$el).each(function(i, el) {
-      //   var $el = $(el);
-      //   $el.on('click', function(evt) {
-      //
-      //     var $el = $(evt.currentTarget),
-      //       label = $el.attr('aria-label') || $el.text(),
-      //       parentLabel = '';
-      //
-      //     // Menu Links
-      //     var $parent = $el.parent('li');
-      //     if($parent.length && $parent.is('.menu-item-has-children')) {
-      //       if(!this.isNavbarOpen()) {
-      //         linkClicked = true;
-      //         analytics.globalEvent('event', 'Navigation', 'event_ClickedNavLink', label + ' Dropdown -  Label clickthrough');
-      //       }
-      //     } else if($parent.length && $parent.parent().is('.sub-menu')) {
-      //       parentLabel = $el.parents('.menu-item-has-children').find('a').first().text();
-      //       if(label === parentLabel) {
-      //         label = 'Overview';
-      //       }
-      //       linkClicked = true;
-      //       analytics.globalEvent('event', 'Navigation', 'event_ClickedNavLink', parentLabel + ' Dropdown - ' + label + ' clickthrough');
-      //     } else if($parent.length && $parent.is('.menu-item:last-child')) {
-      //       linkClicked = true;
-      //       analytics.globalEvent('event', 'Navigation', 'event_ClickCTA', 'Navigation - ' + label + ' CTA clickthrough');
-      //     } else if($parent.length && $parent.is('.menu-item')) {
-      //       linkClicked = true;
-      //       analytics.globalEvent('event', 'Navigation', 'event_ClickedNavLink', 'Navigation - ' + label + ' Clickthrough');
-      //     }
-      //
-      //     // Dropdown
-      //     var $dropdown = $el.parents('.dropmenu');
-      //     if($dropdown.length) {
-      //       parentLabel = $el.parents('.menu-item-has-children').find('a').first().text();
-      //       if(label === parentLabel) {
-      //         label = 'Overview';
-      //       }
-      //       linkClicked = true;
-      //       analytics.globalEvent('event', 'Navigation', 'event_ClickedNavLink', parentLabel + ' Dropdown - ' + label + ' clickthrough');
-      //     }
-      //   }.bind(this));
-      // }.bind(this));
-      //
-      // $('.navbar__toolbar-bottom a', this.$el).each(function(i, el) {
-      //   var $el = $(el);
-      //   $el.on('click', function(evt) {
-      //
-      //     var $el = $(evt.currentTarget),
-      //       label = $el.attr('aria-label') || $el.text();
-      //
-      //     linkClicked = true;
-      //     analytics.globalEvent('event', 'Navigation', 'event_ClickCTA', 'Navigation - ' + label + ' CTA clickthrough');
-      //   });
-      // });
-      //
-      // $('.navbar__nav .menu-item-has-children', this.$el).each(function(i, el) {
-      //   var $el = $(el);
-      //   $el.on('dropmenuOpen', function(evt) {
-      //
-      //     var $el = $(evt.currentTarget),
-      //       label = $el.find('a').first().attr('aria-label') || $el.find('a').first().text();
-      //
-      //     if(!linkClicked) {
-      //       analytics.globalEvent( 'event', 'Navigation', 'event_HoverNavLabel', label + ' Nav Label - hover' );
-      //     }
-      //   });
-      // });
-      //
-      // $(window).on('navbarOpen', function() {
-      //   analytics.globalEvent( 'event', 'Navigation', 'event_ExposedNav', 'Open Menu' );
-      // });
-      //
-      // $(window).on('navbarClose', function() {
-      //   if(!linkClicked) {
-      //     analytics.globalEvent( 'event', 'Navigation', 'event_ExposedNav', 'Close Menu' );
-      //   }
-      // });
     }
   };
 

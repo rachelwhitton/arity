@@ -11632,8 +11632,16 @@ form .checkbox_container .checkmark:after {
   }
 }
 
+.site-header .dropmenu__secondary .eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #63727e;
+  padding-left: 6px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
 .site-header .dropmenu__item {
-  margin-bottom: 20px;
   color: #63727E;
   font-size: 14px;
 }
