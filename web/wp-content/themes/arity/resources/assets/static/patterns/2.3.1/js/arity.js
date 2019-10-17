@@ -42,6 +42,35 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
   window.aboutUs = aboutUs;
 })(jQuery, window, document);
+// For Arity platform page
+
+;(function ($, window, document) {
+
+  var arityPlatform = {
+    vars: {},
+    init: function init() {
+      // cool stuff goes in here
+    },
+    jumpToLink: function jumpToLink() {
+      $('.reference-jumplink').click(function () {
+        $('html, body').stop().animate({
+          scrollTop: $(document).height()
+        }, {
+          duration: 2000,
+          // check if the location has moved, if so, set the new offset
+          step: function step(now, fx) {
+            var newOffset = $(document).height() - $('.site-footer').outerHeight() - $('.footnote').height() - $('.site-header').height();
+            if (fx.end !== newOffset) {
+              fx.end = newOffset;
+            }
+          }
+        });
+      });
+    }
+  };
+
+  window.arityPlatform = arityPlatform;
+})(jQuery, window, document);
 /*
 
     countUp.js
@@ -6666,6 +6695,7 @@ var Util = function ($) {
       accordion.init();
       actionBar.init();
       aboutUs.init();
+      arityPlatform.init();
       optIn.init();
     },
     initConfigs: function initConfigs() {
