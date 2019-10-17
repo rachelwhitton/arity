@@ -10,7 +10,8 @@
  * @license    https://www.php.net/license/3_01.txt PHP License 3.0
  */
 
-error_log("Page requested.");
+$line = "$_SERVER[REMOTE_ADDR] ";
+error_log('Offers page requested from ' . $line);
 
 ?>
 
@@ -20,42 +21,19 @@ error_log("Page requested.");
 
 <head>
 
-  <!-- Content Security Policy -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'
-
-    font-src: https://fonts.gstatic.com data:
-    font-src: https://use.typekit.net data:
-    font-src: https://p.typekit.net data:
-
-    style-src: https://tagmanager.google.com https://fonts.googleapis.com
-
-    script-src: 'unsafe-inline' https://www.google-analytics.com/analytics.js
-    script-src: https://tagmanager.google.com
-    script-src: https://js-agent.newrelic.com/nr-1130.min.js
-    script-src: 'unsafe-inline' https://www.googletagmanager.com
-
-    img-src: https://ssl.gstatic.com https://www.gstatic.com
-    img-src: https://www.google-analytics.com
-    img-src: https://www.googletagmanager.com
-
-  ;">
-
   <!-- Google Tag Manager -->
-  <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl + '&gtm_auth=YbVjed4dvuQxNy4cgKyjYA&gtm_preview=env-11&gtm_cookies_win=x'; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-KJ7TQGD');</script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-W2858P2');</script>
   <!-- End Google Tag Manager -->
 
   <meta name="robots" content="noindex">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>AnswerMarketplace Offers Test Service</title>
+  <title>Marketplace Offers</title>
   <link rel="stylesheet" href="https://use.typekit.net/kwz3nzr.css">
   <link rel="shortcut icon" href="favicon.ico">
 
@@ -64,9 +42,8 @@ error_log("Page requested.");
 <body>
 
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe
-      src="https://www.googletagmanager.com/ns.html?id=GTM-KJ7TQGD&gtm_auth=YbVjed4dvuQxNy4cgKyjYA&gtm_preview=env-11&gtm_cookies_win=x"
-      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W2858P2"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
   <!-- Inline Stylesheet -->
