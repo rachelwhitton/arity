@@ -60,7 +60,8 @@ function register_vendor_scripts()
     wp_register_script('ScrollMagic-tweenMax', '//cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js', null, null, true);
     wp_register_script('ScrollMagic', '//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js', null, null, true);
     wp_register_script('ScrollMagic-animation', '//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js', null, null, true);
-}
+    wp_register_script('lottie-web', '//cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.7/lottie.min.js', array(), null, true);
+  }
 add_action('wp_enqueue_scripts', __namespace__ . '\\register_vendor_scripts');
 
 /**
