@@ -61,24 +61,24 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
         return;
       }
       var mobileScrollController = new ScrollMagic.Controller();
-
+      // .addIndicators()
       new ScrollMagic.Scene({
         triggerElement: '#mobile-scroll-element-1',
         duration: '170%',
         triggerHook: 'onLeave'
-      }).setPin('#custom-feature__arity-platform-graphic').addIndicators().addTo(mobileScrollController);
+      }).setPin('#custom-feature__arity-platform-graphic').addTo(mobileScrollController);
 
       new ScrollMagic.Scene({
         triggerElement: '#mobile-scroll-element-3',
         duration: '160%',
         triggerHook: 'onEnter'
-      }).setPin('#custom-feature__arity-platform-graphic').addIndicators().addTo(mobileScrollController);
+      }).setPin('#custom-feature__arity-platform-graphic').addTo(mobileScrollController);
 
       new ScrollMagic.Scene({
         triggerElement: '#mobile-scroll-element-4',
         duration: '100%',
         triggerHook: 'onEnter'
-      }).setPin('#custom-feature__arity-platform-graphic').addIndicators().addTo(mobileScrollController);
+      }).setPin('#custom-feature__arity-platform-graphic').addTo(mobileScrollController);
     },
     detectSmallBreakpoint: function detectSmallBreakpoint() {
       if (this.vars.detSmall.matches) {

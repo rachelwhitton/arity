@@ -33,7 +33,7 @@ endif;
 <style type="text/css">
   .mobile-scroll-content {
     padding: 32px 15px;
-    opacity: 0.9;
+    opacity: 0.94;
   }
   .mobile-scroll-spacer {
     height: 100vh;
@@ -203,7 +203,7 @@ endif;
 
 </div>
 
-<div id="mobile-scroll-element-1" class="mobile-scroll-content colors__bg--teal">
+<div id="mobile-scroll-element-1" class="mobile-scroll-content colors__bg--navy">
   <div class="container">
     <div class="row">
       <h2 class="col-12 arity-platform__section-headline"><?=$data['arity-platform_section-headline'];?></h2>
@@ -211,7 +211,7 @@ endif;
   </div>
 </div>
 
-<div id="mobile-scroll-element-2" class="mobile-scroll-content colors__bg--teal">
+<div id="mobile-scroll-element-2" class="mobile-scroll-content colors__bg--navy">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -223,7 +223,7 @@ endif;
   </div>
 </div>
 
-<div id="mobile-scroll-element-3" class="mobile-scroll-content colors__bg--teal">
+<div id="mobile-scroll-element-3" class="mobile-scroll-content colors__bg--navy">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -235,7 +235,7 @@ endif;
   </div>
 </div>
 
-<div id="mobile-scroll-element-4" class="mobile-scroll-content colors__bg--teal">
+<div id="mobile-scroll-element-4" class="mobile-scroll-content colors__bg--navy">
   <div class="container">
     <div class="row">
       <div class="col-12">

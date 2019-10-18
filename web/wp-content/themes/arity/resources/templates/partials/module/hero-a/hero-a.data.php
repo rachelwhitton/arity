@@ -21,10 +21,21 @@ $data['classes'][] = 'hero-a';
 if (empty($data['image_id'])) {
   $data['classes'][] = 'hero-a--wo-image';
 } else {
-    $data['classes'][] = 'hero-a--image';
+  $data['classes'][] = 'hero-a--image';
 }
 
-if($data['dotted'] || empty($data['image_id'])){
+if (empty($data['background-video'])) {
+  $data['classes'][] = 'hero-a--wo-bg-video';
+} else {
+  $data['classes'][] = 'hero-a--bg-video';
+}
+
+if(!empty($data['video-aspect-ratio'])) {
+  $ar = explode('x', $data['video-aspect-ratio']);
+  $data['aspect_ratio'] = array('width' => (int)$ar[0], 'height' => (int)$ar[1]);
+}
+
+if( $data['dotted'] || (empty($data['image_id']) && empty($data['background-video'])) ){
   $data['classes'][] = 'hero-a--dotted';
 }else{
   $data['classes'][] = 'hero-a--no-dots';

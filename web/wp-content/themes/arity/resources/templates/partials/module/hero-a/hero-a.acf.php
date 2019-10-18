@@ -35,7 +35,32 @@ $fields = [
         'width' => '50',
       )
     ]),
-
+    // Background video
+    acf_file([
+      'label' => 'Background Video',
+      'name' => 'hero-a__background-video',
+      'key' => 'field_hero-a_background-video',
+      'instructions' => 'Videos should be short seamless sequences, 16:9 aspect ratio or close, accommodate title and subtitle overlay visibility, and have at least 1280x720 resolution. Optimize files to keep download sizes as small as possible',
+      'required' => 0,
+      'return_format' => 'url',
+      'library' => 'all',
+      'mime_types' => 'mp4,ogg,webm',
+      'wrapper' => array(
+        'width' => '50'
+      ),
+    ]),
+    // Background video aspect ratio
+    acf_text([
+      'label' => 'Video aspect ratio',
+      'name' => 'hero-a__video-aspect-ratio',
+      'key' => 'field_hero-a_video-aspect-ratio',
+      'instructions' => 'Enter width x height in this format: e.g., 1200x720',
+      'required' => 0,
+      'maxlength' => '',
+      'wrapper' => array (
+        'width' => '50',
+      ),
+    ]),
     // Body Copy
     acf_textarea([
       'label' => 'Body Copy',

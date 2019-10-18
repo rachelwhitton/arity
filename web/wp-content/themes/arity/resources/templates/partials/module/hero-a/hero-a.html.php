@@ -11,6 +11,19 @@ namespace App\Theme;
 */
 
 ?>
+<style>
+.hero-a__background-video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  /* transform: translateY(-50%); */
+}
+</style>
+
 <div <?php module_class($data['classes']); ?>>
 
   <?php if ($data['animation']) : ?>
@@ -20,6 +33,12 @@ namespace App\Theme;
       <li></li><li></li><li></li><li></li><li></li>
       <li></li><li></li><li></li><li></li><li></li>
     </ul>
+  <?php endif; ?>
+
+  <?php if (!empty($data['background-video'])) : ?>
+    <video class="hero-a__background-video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+      <source src="<?=$data['background-video'];?>" type="video/mp4">
+    </video>
   <?php endif; ?>
 
   <div class="container">
