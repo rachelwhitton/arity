@@ -47,9 +47,44 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 ;(function ($, window, document) {
 
   var arityPlatform = {
-    vars: {},
+    vars: {
+      mobileScrollIsActive: false,
+      detSmall: window.matchMedia('(max-width: 767px)')
+    },
     init: function init() {
-      // cool stuff goes in here
+      this.detectSmallBreakpoint();
+      this.mobileScrollAnimation();
+      this.vars.detSmall.addListener(this.detectSmallBreakpoint);
+    },
+    mobileScrollAnimation: function mobileScrollAnimation() {
+      if (!this.vars.mobileScrollIsActive) {
+        return;
+      }
+      var mobileScrollController = new ScrollMagic.Controller();
+      new ScrollMagic.Scene({
+        triggerElement: '#mobile-scroll-element-1',
+        duration: '180%',
+        triggerHook: 'onLeave'
+      }).setPin('#custom-feature__arity-platform-graphic').addIndicators().addTo(mobileScrollController);
+      new ScrollMagic.Scene({
+        triggerElement: '#mobile-scroll-element-2',
+        duration: '180%',
+        triggerHook: 'onLeave'
+      }).setPin('#custom-feature__arity-platform-graphic').addIndicators().addTo(mobileScrollController);
+      new ScrollMagic.Scene({
+        triggerElement: '#mobile-scroll-element-3',
+        duration: '280%',
+        triggerHook: 'onLeave'
+      }).setPin('#custom-feature__arity-platform-graphic').addIndicators().addTo(mobileScrollController);
+    },
+    detectSmallBreakpoint: function detectSmallBreakpoint() {
+      if (this.vars.detSmall.matches) {
+        console.log("Small breakpoint in effect");
+        this.vars.mobileScrollIsActive = true;
+      } else {
+        console.log("Small breakpoint not in effect");
+        this.vars.mobileScrollIsActive = false;
+      }
     },
     jumpToLink: function jumpToLink() {
       $('.reference-jumplink').click(function () {
