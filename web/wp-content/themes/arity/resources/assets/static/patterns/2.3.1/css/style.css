@@ -18190,6 +18190,204 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   background: url("../images/t3-header-bg-pattern.png") #011c2c;
 }
 
+.hero-f {
+  color: #ffffff;
+  min-height: 450px;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-f {
+    height: 817px;
+    max-height: 58.33333vw;
+  }
+}
+
+.hero-f__background-video {
+  background-color: #011c2c;
+  margin-bottom: -8.5vw;
+}
+
+.hero-f__background-video video {
+  display: block;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-f__background-video {
+    height: 100%;
+    left: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+  }
+  .hero-f__background-video video {
+    left: 50%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 771.42857px) {
+  .hero-f__background-video video {
+    height: 100%;
+    width: auto;
+  }
+}
+
+.hero-f__background-flood {
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.hero-f__background-flood::before, .hero-f__background-flood::after {
+  border-radius: 100%;
+  content: '';
+  display: block;
+  position: absolute;
+}
+
+.hero-f__background-flood::before {
+  background: -webkit-gradient(linear, left top, right top, from(#011C2C), to(#003E77));
+  background: linear-gradient(to right, #011C2C, #003E77);
+}
+
+.hero-f__background-flood::after {
+  background: -webkit-gradient(linear, left top, left bottom, from(#008DFF), to(#00F1FD));
+  background: linear-gradient(to bottom, #008DFF, #00F1FD);
+  opacity: 0.3;
+}
+
+.hero-f__background-flood.--mobile::before, .hero-f__background-flood.--mobile::after {
+  left: 50%;
+  padding-top: 312.5%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 312.5%;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-f__background-flood.--mobile {
+    display: none;
+  }
+}
+
+.hero-f__background-flood.--desktop {
+  display: none;
+  position: absolute;
+  z-index: 0;
+}
+
+.hero-f__background-flood.--desktop::before, .hero-f__background-flood.--desktop::after {
+  left: -75%;
+  padding-top: 142.85714%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 142.85714%;
+}
+
+.hero-f__background-flood.--desktop::before {
+  opacity: 0.84;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-f__background-flood.--desktop {
+    display: block;
+  }
+}
+
+.hero-f__content-wrapper {
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-f__content-wrapper {
+    height: 100%;
+  }
+}
+
+.hero-f__title {
+  font-weight: bold;
+}
+
+.hero-f__col {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  max-width: 100%;
+}
+
+@media (min-width: 480px) {
+  .hero-f__col {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-f__col {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 961px) {
+  .hero-f__col {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-f__col {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.hero-f__col.left-- {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-f__col.left-- {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 58.33333%;
+            flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+}
+
 .leadgen-form-inner,
 .lite-form-inner {
   font-size: 18px;

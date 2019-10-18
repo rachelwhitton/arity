@@ -64,7 +64,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
       // .addIndicators()
       new ScrollMagic.Scene({
         triggerElement: '#mobile-scroll-element-1',
-        duration: '125%',
+        duration: '115%',
         triggerHook: 'onLeave'
       }).setPin('#custom-feature__arity-platform-graphic').addIndicators({ name: '1st trigger: Capture' }).addTo(mobileScrollController);
 
@@ -76,7 +76,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
 
       new ScrollMagic.Scene({
         triggerElement: '#mobile-scroll-element-4',
-        duration: '75%',
+        duration: '90%',
         triggerHook: 'onEnter'
       }).setPin('#custom-feature__arity-platform-graphic').addIndicators({ name: '3rd trigger: Construct' }).addTo(mobileScrollController);
     },

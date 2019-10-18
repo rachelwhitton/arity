@@ -43,6 +43,20 @@ $fields = [
       ]
     ],
   ]),
+    // Feature video
+    acf_file([
+      'label' => 'Feature Video',
+      'name' => 'content-custom-feature__feature-video',
+      'key' => 'field_content-custom-feature_feature-video',
+      'instructions' => 'Videos should be short seamless sequences, and the equivalent of HD resolution in the odd aspect ratio. Optimize files to keep download sizes as small as possible',
+      'required' => 0,
+      'return_format' => 'url',
+      'library' => 'all',
+      'mime_types' => 'mp4,ogg,webm',
+      'wrapper' => array(
+        'width' => '100'
+      ),
+    ]),
   // Content blocks
   acf_repeater([
     'label' => 'Arity Platform Content Blocks',
