@@ -14,7 +14,9 @@ $fields = [
       'default_value' => 'white',
       'choices' => [
         'white' => 'White',
-        'lightgray' => 'Light gray'
+        'lightgray' => 'Light gray',
+        'navy' => 'Navy',
+        'gradient-blue-left' => 'Gradient'
       ]
     ]),
 

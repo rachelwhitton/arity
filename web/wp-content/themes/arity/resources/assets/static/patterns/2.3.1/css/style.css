@@ -6200,6 +6200,15 @@ html.disable-scroll body {
   background: #4fa3f3 !important;
 }
 
+.colors__text--gradient-blue-left {
+  color: linear-gradient(to right, #023c5e, #098189) !important;
+}
+
+.colors__bg--gradient-blue-left {
+  background: -webkit-gradient(linear, left top, right top, from(#023c5e), to(#098189)) !important;
+  background: linear-gradient(to right, #023c5e, #098189) !important;
+}
+
 .icon {
   width: 3rem;
   height: 3rem;
@@ -7483,6 +7492,10 @@ a.blue-link:focus [class^="icon-"] {
 
 .ar-element.eyebrow--sky {
   color: #4fa3f3 !important;
+}
+
+.ar-element.eyebrow--gradient-blue-left {
+  color: linear-gradient(to right, #023c5e, #098189) !important;
 }
 
 .ar-module {
@@ -20821,6 +20834,12 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
 
 .body-inset-ten-col .text-block:last-child p:last-child {
   margin-bottom: 0;
+}
+
+.body-inset-ten-col.colors__bg--navy .text-block__title,
+.body-inset-ten-col.colors__bg--navy .text-block__text, .body-inset-ten-col.colors__bg--gradient-blue-left .text-block__title,
+.body-inset-ten-col.colors__bg--gradient-blue-left .text-block__text {
+  color: #ffffff;
 }
 
 .module-header {
