@@ -55,7 +55,7 @@ endif;
     top: calc(300vh - 78px);
   }
   #mobile-scroll-element-4 {
-    position: relative;
+    position: absolute;
     height: 100vh;
     top: calc(500vh - 78px);
 
