@@ -64,21 +64,21 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
       // .addIndicators()
       new ScrollMagic.Scene({
         triggerElement: '#mobile-scroll-element-1',
-        duration: '170%',
+        duration: '125%',
         triggerHook: 'onLeave'
-      }).setPin('#custom-feature__arity-platform-graphic').addTo(mobileScrollController);
+      }).setPin('#custom-feature__arity-platform-graphic').addIndicators({ name: '1st trigger: Capture' }).addTo(mobileScrollController);
 
       new ScrollMagic.Scene({
         triggerElement: '#mobile-scroll-element-3',
-        duration: '160%',
+        duration: '100%',
         triggerHook: 'onEnter'
-      }).setPin('#custom-feature__arity-platform-graphic').addTo(mobileScrollController);
+      }).setPin('#custom-feature__arity-platform-graphic').addIndicators({ name: '2nd trigger: Process' }).addTo(mobileScrollController);
 
       new ScrollMagic.Scene({
         triggerElement: '#mobile-scroll-element-4',
-        duration: '100%',
+        duration: '75%',
         triggerHook: 'onEnter'
-      }).setPin('#custom-feature__arity-platform-graphic').addTo(mobileScrollController);
+      }).setPin('#custom-feature__arity-platform-graphic').addIndicators({ name: '3rd trigger: Construct' }).addTo(mobileScrollController);
     },
     detectSmallBreakpoint: function detectSmallBreakpoint() {
       if (this.vars.detSmall.matches) {

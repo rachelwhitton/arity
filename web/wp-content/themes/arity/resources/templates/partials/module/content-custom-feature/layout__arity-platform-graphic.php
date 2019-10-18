@@ -31,14 +31,12 @@ endif;
 ?>
 
 <style type="text/css">
+  body {
+    background-color: <?=$navy;?> !important;
+  }
   .mobile-scroll-content {
     padding: 32px 15px;
     opacity: 0.94;
-  }
-  .mobile-scroll-spacer {
-    height: 100vh;
-    background-color: #ff0000;
-    opacity: 0.25;
   }
   #mobile-scroll-element-1 {
     position: absolute;
@@ -46,18 +44,18 @@ endif;
   }
   #mobile-scroll-element-2 {
     position: absolute;
-    height: 100vh;
+    height: 75vh;
     top: calc(100vh - 78px);
   }
   #mobile-scroll-element-3 {
     position: absolute;
-    height: 100vh;
-    top: calc(300vh - 78px);
+    height: 75vh;
+    top: calc(250vh - 78px);
   }
   #mobile-scroll-element-4 {
     position: absolute;
-    height: 100vh;
-    top: calc(500vh - 78px);
+    height: 75vh;
+    top: calc(400vh - 78px);
 
   }
   #custom-feature__arity-platform-graphic {
@@ -98,8 +96,8 @@ endif;
     margin: 0 0 0.75rem 0;
   }
   .arity-platform__block-body-copy {
-    font-size: 1.0625rem;
-    line-height: 1.3125;
+    font-size: 1.3125rem;
+    line-height: 1.33;
     color: <?=$white;?>;
     margin: 0 0 3rem 0;
   }
@@ -124,6 +122,8 @@ endif;
     .arity-platform__img-col-container {
       display: block;
       width: 75%;
+      padding-top: 0;
+      padding-bottom: 0;
     }
     .arity-platform__content-col {
       display: flex;
@@ -136,6 +136,10 @@ endif;
     .arity-platform__section-headline {
       margin: 0 0 3rem 0;
       padding: 0;
+    }
+    .arity-platform__block-body-copy {
+      font-size: 1.0625rem;
+      line-height: 1.3125;
     }
     .mobile-scroll-content {
       display: none;

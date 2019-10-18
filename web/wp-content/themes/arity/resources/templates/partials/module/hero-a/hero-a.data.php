@@ -30,11 +30,6 @@ if (empty($data['background-video'])) {
   $data['classes'][] = 'hero-a--bg-video';
 }
 
-if(!empty($data['video-aspect-ratio'])) {
-  $ar = explode('x', $data['video-aspect-ratio']);
-  $data['aspect_ratio'] = array('width' => (int)$ar[0], 'height' => (int)$ar[1]);
-}
-
 if( $data['dotted'] || (empty($data['image_id']) && empty($data['background-video'])) ){
   $data['classes'][] = 'hero-a--dotted';
 }else{

@@ -10,9 +10,19 @@ namespace App\Theme;
   Since:              1.0.0
 */
 
+$ls_aspect_ratio = 1200/700;
+$ls_height = 1 / $ls_aspect_ratio * 100;
+
 ?>
 <style>
+  .hero-a--bg-video {
+    display: block;
+  }
+  .hero-a--bg-video .container {
+    height: 100%;
+  }
 .hero-a__background-video {
+  display: none;
   position: absolute;
   top: 0;
   right: 0;
@@ -20,7 +30,23 @@ namespace App\Theme;
   width: auto;
   height: auto;
   z-index: 0;
-  /* transform: translateY(-50%); */
+}
+@media (min-width: 768px) {
+  .hero-a--bg-video {
+    display: flex;
+    padding-top: 76px;
+    align-items: center;
+    width: 100vw;
+    height: <?=$ls_height;?>vw !important;
+    max-width: 1400px;
+    max-height: 817px;
+  }
+  .hero-a--bg-video .container {
+    height: auto !important;
+  }
+  .hero-a__background-video {
+    display: block;
+  }
 }
 </style>
 
