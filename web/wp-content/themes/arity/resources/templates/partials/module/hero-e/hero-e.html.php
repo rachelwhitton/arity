@@ -49,7 +49,7 @@ namespace App\Theme;
             <?php if (!empty($data['cta-2'])) : ?>
               <span class="button-wrapper">
                 <?php
-                  $data['cta2']['classes'] = array('button--primary', 'blue-button--');
+                  $data['cta-2']['classes'] = array('button--primary', 'blue-button--');
                   element('button', $data['cta-2']);
                 ?>
               </span>
