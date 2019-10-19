@@ -61,24 +61,30 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
         return;
       }
       var mobileScrollController = new ScrollMagic.Controller();
-      // .addIndicators()
+
+      /**************************
+      .addIndicators({name: '1st trigger: Capture'})
+      .addIndicators({name: '2nd trigger: Process'})
+      .addIndicators({name: '3rd trigger: Construct'})
+       *************************/
+
       new ScrollMagic.Scene({
         triggerElement: '#mobile-scroll-element-1',
         duration: '115%',
         triggerHook: 'onLeave'
-      }).setPin('#custom-feature__arity-platform-graphic').addIndicators({ name: '1st trigger: Capture' }).addTo(mobileScrollController);
+      }).setPin('#custom-feature__arity-platform-graphic').addTo(mobileScrollController);
 
       new ScrollMagic.Scene({
         triggerElement: '#mobile-scroll-element-3',
         duration: '100%',
         triggerHook: 'onEnter'
-      }).setPin('#custom-feature__arity-platform-graphic').addIndicators({ name: '2nd trigger: Process' }).addTo(mobileScrollController);
+      }).setPin('#custom-feature__arity-platform-graphic').addTo(mobileScrollController);
 
       new ScrollMagic.Scene({
         triggerElement: '#mobile-scroll-element-4',
         duration: '90%',
         triggerHook: 'onEnter'
-      }).setPin('#custom-feature__arity-platform-graphic').addIndicators({ name: '3rd trigger: Construct' }).addTo(mobileScrollController);
+      }).setPin('#custom-feature__arity-platform-graphic').addTo(mobileScrollController);
     },
     detectSmallBreakpoint: function detectSmallBreakpoint() {
       if (this.vars.detSmall.matches) {

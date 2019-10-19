@@ -18253,6 +18253,8 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
 
 .hero-f__background-flood::before, .hero-f__background-flood::after {
   border-radius: 100%;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   content: '';
   display: block;
   position: absolute;
@@ -18261,6 +18263,9 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
 .hero-f__background-flood::before {
   background: -webkit-gradient(linear, left top, right top, from(#011C2C), to(#003E77));
   background: linear-gradient(to right, #011C2C, #003E77);
+  border: #009BA3 24px solid;
+  -webkit-transform: translateX(-24px);
+          transform: translateX(-24px);
 }
 
 .hero-f__background-flood::after {
@@ -18290,7 +18295,7 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
 }
 
 .hero-f__background-flood.--desktop::before, .hero-f__background-flood.--desktop::after {
-  left: -75%;
+  left: -85%;
   padding-top: 142.85714%;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -18300,6 +18305,8 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
 
 .hero-f__background-flood.--desktop::before {
   opacity: 0.84;
+  -webkit-transform: translate(-24px, -50%);
+          transform: translate(-24px, -50%);
 }
 
 @media screen and (min-width: 768px) {
@@ -18380,9 +18387,9 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
 @media screen and (min-width: 768px) {
   .hero-f__col.left-- {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 58.33333%;
-            flex: 0 0 58.33333%;
-    max-width: 58.33333%;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%;
     padding-bottom: 0;
     padding-top: 0;
   }
