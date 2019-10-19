@@ -49,6 +49,19 @@ $fields = [
         'width' => '100'
       ),
     ]),
+    // Background video backup image
+    acf_image([
+      'label' => 'Background Video Backup Image',
+      'name' => 'hero-a__bg-video-backup-image',
+      'key' => 'field_hero-a_bg-video-backup-image',
+      'return_format' => 'url',
+      'instructions' => 'Image dimensions should be the same as the native dimensions of the background video',
+      'required' => 0,
+      'preview_size'  => 'thumbnail',
+      'wrapper' => array (
+        'width' => '100',
+      )
+    ]),
     // Body Copy
     acf_textarea([
       'label' => 'Body Copy',

@@ -107,20 +107,20 @@ endif;
   #arity-platform-graphic__static {
     display: block;
   }
-  #arity-platform-graphic__video {
+  /* #arity-platform-graphic__video {
     display: none;
-  }
+  } */
   @media (min-width: 768px) {
     #custom-feature__arity-platform-graphic {
       padding-top: 6rem;
       padding-bottom: 6rem;
     }
-    #arity-platform-graphic__static {
+    /* #arity-platform-graphic__static {
       display: none;
     }
     #arity-platform-graphic__video {
       display: block;
-    }
+    } */
     .arity-platform__img-col {
       display: flex;
       -ms-flex: 0 0 58.33333%;
@@ -193,9 +193,9 @@ endif;
           <?php
             get_template_part('dist/arity', 'platform-graphic-static.svg');
           ?>
-          <video id="arity-platform-graphic__video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+          <!-- <video id="arity-platform-graphic__video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
             <source src="<?=$data['feature-video'];?>" type="video/mp4">
-          </video>
+          </video> -->
         </div>
       </div>
 

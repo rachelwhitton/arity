@@ -5,23 +5,23 @@ namespace App\Theme;
 /*
   Template Name:      Hero A - No Image
   Template Type:      Module
-  Description:        Hero module with wo inline image.
-  Last Updated:       08/01/2017
+  Description:        Hero module with an inline image or a background videl.
+  Last Updated:       10/18/2019
   Since:              1.0.0
 */
 
-$ls_aspect_ratio = 1200/700;
-$ls_height = 1 / $ls_aspect_ratio * 100;
+// $ls_aspect_ratio = 1200/700;
+// $ls_height = 1 / $ls_aspect_ratio * 100;
 
 ?>
 <style>
-  .hero-a--bg-video {
+  /* .hero-a--bg-video {
     display: block;
   }
   .hero-a--bg-video .container {
     height: 100%;
-  }
-.hero-a__background-video {
+  } */
+/* .hero-a__background-video {
   display: none;
   position: absolute;
   top: 0;
@@ -30,9 +30,9 @@ $ls_height = 1 / $ls_aspect_ratio * 100;
   width: auto;
   height: auto;
   z-index: 0;
-}
+} */
 @media (min-width: 768px) {
-  .hero-a--bg-video {
+  /* .hero-a--bg-video {
     display: flex;
     padding-top: 76px;
     align-items: center;
@@ -40,13 +40,13 @@ $ls_height = 1 / $ls_aspect_ratio * 100;
     height: <?=$ls_height;?>vw !important;
     max-width: 1400px;
     max-height: 817px;
-  }
-  .hero-a--bg-video .container {
+  } */
+  /* .hero-a--bg-video .container {
     height: auto !important;
-  }
-  .hero-a__background-video {
+  } */
+  /* .hero-a__background-video {
     display: block;
-  }
+  } */
 }
 </style>
 
@@ -62,9 +62,11 @@ $ls_height = 1 / $ls_aspect_ratio * 100;
   <?php endif; ?>
 
   <?php if (!empty($data['background-video'])) : ?>
-    <video class="hero-a__background-video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-      <source src="<?=$data['background-video'];?>" type="video/mp4">
-    </video>
+    <div class="hero-a__background-video">
+      <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop"<?php !empty($data['bg-video-backup-image']) ? ' poster="'.$data["bg-video-backup-image"].'"': '';?>>
+        <source src="<?=$data['background-video'];?>" type="video/mp4">
+      </video>
+    </div>
   <?php endif; ?>
 
   <div class="container">
