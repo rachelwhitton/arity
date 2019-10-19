@@ -17,14 +17,20 @@ namespace App\Theme;
     <?php if (!empty($data['background-video-url'])) : ?>
       <video
         src="<?= $data['background-video-url'] ?>"
-        <?php if (!empty($data['image_url'])) : ?>
-          poster="<?= $data['image_url'] ?>"
+        <?php if (!empty($data['image_id'])) : ?>
+          poster="<?= home_url() ?><?= wp_get_attachment_image_src($data['image_id'], '')[0] ?>"
         <?php endif ?>
         autoplay
         loop
         muted
         playsinline />
     <?php endif; ?>
+
+    <?php if(empty($data['background-video-url']) && !empty($data['image_id'])) {
+      element('image', [
+        'id' => $data['image_id']
+      ]);
+    } ?>
   </div>
 
   <?php if ($data['gradient-flood-active'] !== '0') : ?>

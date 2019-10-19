@@ -13628,6 +13628,57 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .hero-a--bg-video {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 817px;
+    max-height: 58.33333vw;
+    min-height: 450px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .hero-a--bg-video .container, .hero-a--bg-video .action-bar-w-bkg__bkg {
+    height: auto;
+  }
+}
+
+.hero-a__background-video {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-a__background-video {
+    display: block;
+    height: 100%;
+    left: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+  }
+  .hero-a__background-video video {
+    display: block;
+    width: 100%;
+    left: 0;
+    -o-object-fit: cover;
+       object-fit: cover;
+    position: absolute;
+    top: 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 771.42857px) {
+  .hero-a__background-video video {
+    height: 100%;
+    width: auto;
+  }
+}
+
 .hero-a__title {
   font-weight: 300;
   margin: 0;
@@ -18209,7 +18260,13 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   margin-bottom: -8.5vw;
 }
 
-.hero-f__background-video video {
+.hero-f__background-video .image img {
+  height: auto;
+  width: 100%;
+}
+
+.hero-f__background-video video,
+.hero-f__background-video .image {
   display: block;
   width: 100%;
 }
@@ -18225,7 +18282,8 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
     width: 100%;
     z-index: 0;
   }
-  .hero-f__background-video video {
+  .hero-f__background-video video,
+  .hero-f__background-video .image {
     left: 50%;
     -o-object-fit: cover;
        object-fit: cover;
@@ -18237,7 +18295,8 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
 }
 
 @media screen and (min-width: 768px) and (max-width: 771.42857px) {
-  .hero-f__background-video video {
+  .hero-f__background-video video,
+  .hero-f__background-video .image {
     height: 100%;
     width: auto;
   }
