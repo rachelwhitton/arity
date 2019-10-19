@@ -18242,6 +18242,7 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
 }
 
 .hero-f {
+  background-color: #011c2c;
   color: #ffffff;
   min-height: 450px;
   position: relative;
@@ -18302,7 +18303,8 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   width: 100%;
 }
 
-.hero-f__background-flood::before, .hero-f__background-flood::after {
+.hero-f__background-flood::before {
+  background: #011c2c;
   border-radius: 100%;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
@@ -18311,21 +18313,7 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   position: absolute;
 }
 
-.hero-f__background-flood::before {
-  background: -webkit-gradient(linear, left top, right top, from(#011C2C), to(#003E77));
-  background: linear-gradient(to right, #011C2C, #003E77);
-  border: #009BA3 24px solid;
-  -webkit-transform: translateX(-24px);
-          transform: translateX(-24px);
-}
-
-.hero-f__background-flood::after {
-  background: -webkit-gradient(linear, left top, left bottom, from(#008DFF), to(#00F1FD));
-  background: linear-gradient(to bottom, #008DFF, #00F1FD);
-  opacity: 0.3;
-}
-
-.hero-f__background-flood.--mobile::before, .hero-f__background-flood.--mobile::after {
+.hero-f__background-flood.--mobile::before {
   left: 50%;
   padding-top: 312.5%;
   -webkit-transform: translateX(-50%);
@@ -18345,19 +18333,15 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   z-index: 0;
 }
 
-.hero-f__background-flood.--desktop::before, .hero-f__background-flood.--desktop::after {
+.hero-f__background-flood.--desktop::before {
+  background: -webkit-gradient(linear, left top, right top, color-stop(40.34%, rgba(32, 154, 199, 0.69)), to(rgba(17, 29, 60, 1)));
+  background: linear-gradient(to right, rgba(32, 154, 199, 0.69) 40.34%, rgba(17, 29, 60, 1));
   left: -85%;
   padding-top: 142.85714%;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   width: 142.85714%;
-}
-
-.hero-f__background-flood.--desktop::before {
-  opacity: 0.84;
-  -webkit-transform: translate(-24px, -50%);
-          transform: translate(-24px, -50%);
 }
 
 @media screen and (min-width: 768px) {
