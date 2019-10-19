@@ -180,6 +180,7 @@ $module_builder->includeACFSettings('hero-b', 'module');
 $module_builder->includeACFSettings('hero-c', 'module');
 $module_builder->includeACFSettings('hero-d', 'module');
 $module_builder->includeACFSettings('hero-e', 'module');
+$module_builder->includeACFSettings('hero-f', 'module');
 $module_builder->includeACFSettings('block-cards', 'module');
 $module_builder->includeACFSettings('block-feature-solution', 'module');
 $module_builder->includeACFSettings('block-highlights', 'module');
