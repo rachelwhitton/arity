@@ -40,9 +40,9 @@ $fields = [
     // Image
     acf_image([
       'label' => 'Video Backup Image',
-      'name' => 'hero-f__image_url',
+      'name' => 'hero-f__image_id',
       'key' => 'field_image',
-      'return_format' => 'url',
+      'return_format' => 'id',
       'instructions' => 'Suggested image size: 1400 x 817 px',
       'required' => 0,
       'preview_size'  => 'thumbnail',
