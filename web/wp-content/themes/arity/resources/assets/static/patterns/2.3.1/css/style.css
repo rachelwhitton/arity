@@ -18334,8 +18334,7 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
 }
 
 .hero-f__background-flood.--desktop::before {
-  background: -webkit-gradient(linear, left top, right top, color-stop(40.34%, rgba(32, 154, 199, 0.69)), to(rgba(17, 29, 60, 1)));
-  background: linear-gradient(to right, rgba(32, 154, 199, 0.69) 40.34%, rgba(17, 29, 60, 1));
+  background: linear-gradient(106deg, #001147 58.4%, rgba(32, 154, 199, 0.69));
   left: -85%;
   padding-top: 142.85714%;
   top: 50%;
