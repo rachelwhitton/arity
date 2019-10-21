@@ -7,6 +7,7 @@
 */
 
 /* ARITY COLORS */
+$body_bg = '#0e222f';
 $navy = '#011c2c';
 $blue = '#0070d6';
 $yellow = '#e2ef1c';
@@ -107,20 +108,23 @@ endif;
   #arity-platform-graphic__static {
     display: block;
   }
-  /* #arity-platform-graphic__video {
+  #arity-platform-graphic__animation {
     display: none;
-  } */
+  }
   @media (min-width: 768px) {
     #custom-feature__arity-platform-graphic {
       padding-top: 6rem;
       padding-bottom: 6rem;
     }
-    /* #arity-platform-graphic__static {
+    #arity-platform-graphic__static {
       display: none;
     }
-    #arity-platform-graphic__video {
+    #arity-platform-graphic__static.visible__md-and-greater {
       display: block;
-    } */
+    }
+    #arity-platform-graphic__animation {
+      display: block;
+    }
     .arity-platform__img-col {
       display: flex;
       -ms-flex: 0 0 58.33333%;
@@ -182,6 +186,11 @@ endif;
       padding-right: 0.9375rem;
     }
   }
+  @media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .ie-11-svg {
+      width: 100%;
+    }
+  }
 </style>
 
 <div id="custom-feature__arity-platform-graphic">
@@ -191,11 +200,16 @@ endif;
       <div class="arity-platform__img-col">
         <div class="arity-platform__img-col-container">
           <?php
-            get_template_part('dist/arity', 'platform-graphic-static.svg');
+            // get_template_part('dist/arity', 'platform-graphic-static.svg');
+            $mobile_img_data = wp_get_attachment_image_src($data['static-image-mobile-id'], 'full');
+            $visibility_class = empty($data['feature-animation']) ? ' visible__md-and-greater' : '';
           ?>
-          <!-- <video id="arity-platform-graphic__video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-            <source src="<?=$data['feature-video'];?>" type="video/mp4">
-          </video> -->
+          <img id="arity-platform-graphic__static" src="<?=$mobile_img_data[0];?>" width="100%" alt="Arity Platform Feature Illustration" class="ie-11-svg<?=$visibility_class;?>">
+          <?php if (!empty($data['feature-animation'])) : ?>
+            <video id="arity-platform-graphic__animation" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+              <source src="<?=$data['feature-animation'];?>" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+            </video>
+          <?php endif; ?>
         </div>
       </div>
 

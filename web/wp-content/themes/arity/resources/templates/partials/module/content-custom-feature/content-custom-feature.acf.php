@@ -43,20 +43,51 @@ $fields = [
       ]
     ],
   ]),
-    // Feature video
-    acf_file([
-      'label' => 'Feature Video',
-      'name' => 'content-custom-feature__feature-video',
-      'key' => 'field_content-custom-feature_feature-video',
-      'instructions' => 'Videos should be short seamless sequences, and the equivalent of HD resolution in the odd aspect ratio. Optimize files to keep download sizes as small as possible',
-      'required' => 0,
-      'return_format' => 'url',
-      'library' => 'all',
-      'mime_types' => 'mp4,ogg,webm',
-      'wrapper' => array(
-        'width' => '100'
-      ),
-    ]),
+  // Feature video
+  acf_file([
+    'label' => 'Feature Animation (Video)',
+    'name' => 'content-custom-feature__feature-animation',
+    'key' => 'field_content-custom-feature_feature-animation',
+    'instructions' => 'Videos should be short seamless sequences, and the equivalent of HD resolution in the odd aspect ratio. Optimize files to keep download sizes as small as possible',
+    'required' => 0,
+    'return_format' => 'url',
+    'library' => 'all',
+    'mime_types' => 'mp4,ogg,webm',
+    'wrapper' => array(
+      'width' => '100'
+    ),
+    'conditional_logic' => [
+      [
+        [
+          'name' => 'content-custom-feature__custom-content',
+          'operator' => '==',
+          'value' => 'arity-platform-graphic',
+        ]
+      ]
+    ],
+  ]),
+  // Static image for mobile / feature backup
+  acf_image([
+    'label' => 'Static Feature Image for Mobile',
+    'name' => 'content-custom-feature__static-image-mobile-id',
+    'key' => 'field_content-custom-feature_static-image-mobile-id',
+    'instructions' => 'Image should support transparency, so use PNG or SVG formats. Dimensions should be the same as the native dimensions of the feature animation. This image also acts as a poster image for ',
+    'return_format' => 'id',
+    'required' => 0,
+    'preview_size'  => 'thumbnail',
+    'wrapper' => array(
+      'width' => '100',
+    ),
+    'conditional_logic' => [
+      [
+        [
+          'name' => 'content-custom-feature__custom-content',
+          'operator' => '==',
+          'value' => 'arity-platform-graphic',
+        ]
+      ]
+    ],
+  ]),
   // Content blocks
   acf_repeater([
     'label' => 'Arity Platform Content Blocks',
