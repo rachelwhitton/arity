@@ -34,13 +34,13 @@ namespace App\Theme;
   </div>
 
   <?php if ($data['gradient-flood-active'] !== '0') : ?>
-    <div class="hero-f__background-flood --desktop"></div>
+    <div class="hero-f__background-flood hero-f-desktop"></div>
   <?php endif; ?>
 
   <div class="hero-f__content-wrapper">
     
     <?php if ($data['gradient-flood-active'] !== '0') : ?>
-      <div class="hero-f__background-flood --mobile"></div>
+      <div class="hero-f__background-flood hero-f-mobile"></div>
     <?php endif; ?>
 
     <div class="container">
