@@ -30,7 +30,7 @@ namespace App\Theme;
         <p>Get in touch with an Arity rep or visit our newsroom.</p>
         <p>
           <a href="mailto:media@arity.com" target="_blank" class="ar-element button button--footer">
-            <svg class="site-footer__icon icon-svg" title="" role="img">
+            <svg class="site-footer__icon icon-svg arrow-right" title="" role="img">
               <use xlink:href="#email"></use>
             </svg> Email press inquiries
           </a>
@@ -40,7 +40,7 @@ namespace App\Theme;
             </svg> Download the press kit
           </a> -->
           <a href="<?= home_url('newsroom/'); ?>" class="ar-element button button--footer">
-            <svg class="site-footer__icon icon-svg" title="" role="img">
+            <svg class="site-footer__icon icon-svg news" title="" role="img">
               <use xlink:href="#news"></use>
             </svg> Visit the Newsroom
           </a>

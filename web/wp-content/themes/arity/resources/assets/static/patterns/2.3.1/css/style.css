@@ -7210,10 +7210,10 @@ body {
   top: 2px;
 }
 
-.button--footer .external, .button--link .external {
+.button--footer .external, .button--footer .download, .button--link .external, .button--link .download {
   width: 22px;
   height: 22px;
-  top: 0px;
+  top: 5px;
 }
 
 .button--footer:hover, .button--footer:focus, .button--link:hover, .button--link:focus {
@@ -18321,7 +18321,7 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   position: absolute;
 }
 
-.hero-f__background-flood.--mobile::before {
+.hero-f__background-flood.hero-f-mobile::before {
   left: 50%;
   padding-top: 312.5%;
   -webkit-transform: translateX(-50%);
@@ -18330,18 +18330,18 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
 }
 
 @media screen and (min-width: 768px) {
-  .hero-f__background-flood.--mobile {
+  .hero-f__background-flood.hero-f-mobile {
     display: none;
   }
 }
 
-.hero-f__background-flood.--desktop {
+.hero-f__background-flood.hero-f-desktop {
   display: none;
   position: absolute;
   z-index: 0;
 }
 
-.hero-f__background-flood.--desktop::before {
+.hero-f__background-flood.hero-f-desktop::before {
   background: -webkit-gradient(linear, left top, right top, color-stop(40.34%, rgba(32, 154, 199, 0.69)), to(rgba(17, 29, 60, 1)));
   background: linear-gradient(to right, rgba(32, 154, 199, 0.69) 40.34%, rgba(17, 29, 60, 1));
   left: -85%;
@@ -18353,7 +18353,7 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
 }
 
 @media screen and (min-width: 768px) {
-  .hero-f__background-flood.--desktop {
+  .hero-f__background-flood.hero-f-desktop {
     display: block;
   }
 }
