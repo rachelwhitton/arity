@@ -5,8 +5,8 @@ namespace App\Theme;
   Template Name:      Button
   Template Type:      Element
   Description:
-  Last Updated:       08/15/2017
-  Since:              1.0.0
+  Last Updated:       10/23/2019
+  Since:              2.3.1
 */
 // echo 'Custom CTA <pre>';print_r($data);echo '</pre>';
 ?>
