@@ -12889,41 +12889,13 @@ html.no-js .site-header .navbar__nav li.menu-item-has-children:hover .dropmenu {
   }
 }
 
-.block-highlights__col .button {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.block-highlights__col.left-align {
-  text-align: left;
-}
-
-.block-highlights__col.left-align .button {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-}
-
 .block-highlights .button {
   margin-top: 12px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 22px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
 }
 
 .block-highlights .button svg {
   width: 16px;
   top: -1px;
-}
-
-.block-highlights .button svg.external {
-  top: 1px;
 }
 
 .block-highlights--white-bg {
