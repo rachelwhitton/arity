@@ -7210,10 +7210,10 @@ body {
   top: 2px;
 }
 
-.button--footer .external, .button--link .external {
+.button--footer .external, .button--footer .download, .button--link .external, .button--link .download {
   width: 22px;
   height: 22px;
-  top: 0px;
+  top: 5px;
 }
 
 .button--footer:hover, .button--footer:focus, .button--link:hover, .button--link:focus {
