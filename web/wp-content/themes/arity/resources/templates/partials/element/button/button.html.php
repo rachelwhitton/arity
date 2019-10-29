@@ -4,14 +4,9 @@ namespace App\Theme;
 /*
   Template Name:      Button
   Template Type:      Element
-<<<<<<< Updated upstream
-  Description:
-  Last Updated:       08/15/2017
-=======
   Description:        Design system buttons come as round rect 'pills' or links.
                       Both types have icon options.
   Last Updated:       11/29/2019
->>>>>>> Stashed changes
   Since:              1.0.0
 */
 // echo 'Custom CTA <pre>';print_r($data);echo '</pre>';
