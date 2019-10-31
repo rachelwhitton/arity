@@ -19,13 +19,33 @@ namespace App\Theme;
     <?php if ($data['icon'] != 'none') : ?>
       <span class="button__icon">
         <?php
-        if (in_array('block_link', $data['classes']) || in_array('button--link', $data['classes'])) {
+        if ( in_array('block_link', $data['classes']) ) {
           switch($data['icon']) {
             case 'arrow-right':
               $inline = '';
               break;
             case 'arrow-left':
               $inline = '';
+              break;
+            case 'download':
+              $inline = ' style="width: 22px; height: 22px; top: -1px;"';
+              break;
+            case 'email':
+              $inline = '';
+              break;
+            case 'external':
+              $inline = ' style="width: 22px; height: 22px; top: -1px;"';
+              break;
+            default:
+              $inline = '';
+          }
+        } else if ( in_array('button--link', $data['classes']) ) {
+          switch($data['icon']) {
+            case 'arrow-right':
+              $inline = ' style="top: -2px;"';
+              break;
+            case 'arrow-left':
+              $inline = ' style="top: -2px;"';
               break;
             case 'download':
               $inline = ' style="width: 22px; height: 22px; top: -2px;"';
