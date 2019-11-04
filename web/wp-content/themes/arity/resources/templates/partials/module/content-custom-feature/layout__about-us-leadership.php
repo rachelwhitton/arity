@@ -49,7 +49,7 @@ $leadership_data = array(
 	'unit_8' => array(
 		'img_url' => $base_img_url . 'leadership_dan-regan.png',
 		'name' => 'Dan Regan',
-		'title' => 'Finance & People'
+		'title' => 'Finance, People & Culture'
 	),
 	'unit_9' => array(
 		'img_url' => $base_img_url . 'leadership_joy-thomas.png',
