@@ -63,7 +63,7 @@ namespace App\Theme;
 
   <?php if (!empty($data['background-video'])) : ?>
     <div class="hero-a__background-video">
-      <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop"<?php !empty($data['bg-video-backup-image']) ? ' poster="'.$data["bg-video-backup-image"].'"': '';?>>
+      <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop"<?php echo !empty($data['bg-video-backup-image']) ? ' poster="'.$data["bg-video-backup-image"].'"': '';?>>
         <source src="<?=$data['background-video'];?>" type="video/mp4">
       </video>
     </div>
