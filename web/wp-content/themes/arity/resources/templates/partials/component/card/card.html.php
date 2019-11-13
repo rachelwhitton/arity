@@ -30,14 +30,14 @@ namespace App\Theme;
           ?>
 
           <div class="ar-element card__button stack__link">
-            <a class="button button--link" href="<?= $data['cta']['url']; ?>"<?php if (!empty($data['cta']['target'])) : ?> target="<?= $data['cta']['target']; ?>"<?php endif; ?>
-              data-analytics="<?= $data['subhead']; ?>">
-              <span class="button__icon <?= $data['cta']['icon']; ?>--" role="presentation">
-                <svg class="icon-svg" title="" role="img">
-                    <use xlink:href="#<?= $data['cta']['icon']; ?>"></use>
+            <a class="button button--link" href="<?=$data['cta']['url'];?>"<?php if (!empty($data['cta']['target'])) : ?> target="<?=$data['cta']['target'];?>"<?php endif; ?>
+              data-analytics="<?=$data['subhead'];?>">
+              <span class="button__icon <?=$data['cta']['icon'];?>--" role="presentation">
+                <svg class="icon-svg <?=$data['cta']['icon'];?>" title="" role="img">
+                    <use xlink:href="#<?=$data['cta']['icon'];?>"></use>
                 </svg>
               </span>
-              <span class="button__label <?= $data['cta']['icon']; ?>--"><?= $data['cta']['title']; ?></span>
+              <span class="button__label <?=$data['cta']['icon'];?>--"><?=$data['cta']['title'];?></span>
             </a>
           </div>
         <?php endif; ?>
