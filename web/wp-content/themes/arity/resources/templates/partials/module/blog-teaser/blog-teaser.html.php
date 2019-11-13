@@ -31,12 +31,13 @@ namespace App\Theme;
 
     <div class="row">
       <?php
-        $page = get_page_by_path("move");
-        $feature_id = 0;
-        $args = array(
-          'posts_per_page' => 3
-        );
-        if ($page) {
+        if (empty($data['categories'])) {
+          $page = get_page_by_path("move");
+          $feature_id = 0;
+          $args = array(
+            'posts_per_page' => 3
+          );
+          if ($page) {
             $test = get_field('featured_blog_post', $page->ID);//747);
             $feature_id = $test->ID;
             $post = $test;
@@ -49,6 +50,12 @@ namespace App\Theme;
 
             $data['featured']=true;
             component('teaser-blog-card', $data);
+          }
+        } else {
+          $args = array(
+            'posts_per_page' => 3,
+            'category__and' => $data['categories'],
+          );
         }
       ?>
 
