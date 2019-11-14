@@ -18,7 +18,28 @@ $fields = [
         'block-highlights--white-bg' => 'White',
         'block-highlights--light-gray-bg' => 'Light Gray',
         'block-highlights--navy-bg' => 'Navy'
-      ]
+      ],
+      'wrapper' => array(
+        'width' => '100',
+      ),
+    ]),
+
+    // Block alignment
+    acf_select([
+      'label' => 'Block Alignment',
+      'name' => 'block-highlights__block-alignment',
+      'key' => 'field_block-highlights_block-alignment',
+      'instructions' => 'Center align (default) or left align content in the blocks',
+      'required' => 0,
+      'ui' => 1,
+      'wrapper' => array(
+        'width' => '100',
+      ),
+      'default_value' => 'center-align',
+      'choices' => array(
+        'center-align' => 'Center align',
+        'left-align' => 'Left align',
+      ),
     ]),
 
     // Headline

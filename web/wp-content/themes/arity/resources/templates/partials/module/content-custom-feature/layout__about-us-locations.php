@@ -172,7 +172,7 @@
                   <div class="card__inner about-us__card__inner__height">
                     <h3 class="card__title">Belfast</h3>
                     <div class="ar-element card__button stack__link">
-                      <a class="button button--link" target="_blank" href="https://www.google.com/maps/place/9+Lanyon+Pl,+Belfast+BT1+3LP,+UK/data=!4m2!3m1!1s0x486108fff1e12d7b:0x9646f586fb07f20b?sa=X&ved=2ahUKEwj79d-a5vPiAhULWa0KHW1XCeEQ8gEwAHoECAoQAQ" data-analytics="Automotive">
+                      <a class="button button--link" target="_blank" href="https://www.google.com/maps/place/10+Mays+Meadow,+Belfast+BT7+2DS,+UK/@54.5942395,-5.9183921,17z/data=!3m1!4b1!4m5!3m4!1s0x486109d9d2b30c03:0xe290102749bda1f6!8m2!3d54.5942395!4d-5.9162034" data-analytics="Automotive">
                         <span class="button__icon arrow-right--" role="presentation">
                           <svg class="icon-svg" title="" role="img">
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>

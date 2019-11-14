@@ -6,13 +6,13 @@ $fields = [
 
     acf_tab([
       'label' => 'Content',
-      'name' => 'hero-a__content_tab',
+      'name' => 'hero-f__content_tab',
     ]),
 
     // Headline
     acf_text([
       'label' => 'Headline',
-      'name' => 'hero-a__headline',
+      'name' => 'hero-f__headline',
       'key' => 'field_headline',
       'instructions' => 'Recommended character count max: 100 <br/>(For homepage: limit characters to 60)',
       'required' => 1,
@@ -22,24 +22,11 @@ $fields = [
       ),
     ]),
 
-    // Image
-    acf_image([
-      'label' => 'Image',
-      'name' => 'hero-a__image_id',
-      'key' => 'field_image',
-      'return_format' => 'id',
-      'instructions' => 'Suggested image size: 890 x 890 px<br/>(For homepage: suggested Image size: 940 x 600 px<br/>Note: The copy will determine where the image is cut off. Make the image shorter or taller to achieve different effects.)',
-      'required' => 0,
-      'preview_size'  => 'thumbnail',
-      'wrapper' => array (
-        'width' => '50',
-      )
-    ]),
     // Background video
     acf_file([
       'label' => 'Background Video',
-      'name' => 'hero-a__background-video',
-      'key' => 'field_hero-a_background-video',
+      'name' => 'hero-f__background-video-url',
+      'key' => 'field_hero-f_background-video-url',
       'instructions' => 'Videos should be short seamless sequences, 12:7 aspect ratio or close, accommodate title and subtitle overlay visibility, and have at least 1200x700 resolution. Optimize files to keep download sizes as small as possible',
       'required' => 0,
       'return_format' => 'url',
@@ -49,23 +36,25 @@ $fields = [
         'width' => '100'
       ),
     ]),
-    // Background video backup image
+
+    // Image
     acf_image([
-      'label' => 'Background Video Backup Image',
-      'name' => 'hero-a__bg-video-backup-image',
-      'key' => 'field_hero-a_bg-video-backup-image',
-      'return_format' => 'url',
-      'instructions' => 'Image dimensions should be the same as the native dimensions of the background video',
+      'label' => 'Video Backup Image',
+      'name' => 'hero-f__image_id',
+      'key' => 'field_image',
+      'return_format' => 'id',
+      'instructions' => 'Suggested image size: 1400 x 817 px',
       'required' => 0,
       'preview_size'  => 'thumbnail',
       'wrapper' => array (
-        'width' => '100',
+        'width' => '50',
       )
     ]),
+
     // Body Copy
     acf_textarea([
       'label' => 'Body Copy',
-      'name' => 'hero-a__body_copy',
+      'name' => 'hero-f__body_copy',
     'instructions' => 'Recommended character count max: 280',
       'required' => 1,
       'new_lines' => 'wpautop'
@@ -74,7 +63,7 @@ $fields = [
     // CTA
     acf_link([
       'label' => 'CTA Button',
-      'name' => 'hero-a__cta',
+      'name' => 'hero-f__cta',
       'instructions' => 'Recommended character count max: 30',
       'required' => 0,
       'maxlength' => '',
@@ -85,31 +74,15 @@ $fields = [
 
     acf_tab([
       'label' => 'Options',
-      'name' => 'hero-a__options_tab',
+      'name' => 'hero-f__options_tab',
     ]),
 
     acf_radio([
-      'label' => 'Textured Dot Background',
-      'name' => 'hero-a__dotted',
-      'instructions' => '(Does not apply to homepage or when no image is selected)',
+      'label' => 'Gradient Flood Background',
+      'name' => 'hero-f__gradient-flood-active',
       'choices' => [
         '1' => 'Enabled (default)',
         '0' => 'Disabled'
-      ],
-      // 'return_format' => 'id',
-      'wrapper' => array (
-        'width' => '50',
-      ),
-    ]),
-
-    acf_radio([
-      'label' => 'Animation (Homepage only)',
-      'name' => 'hero-a__animation',
-      'instructions' => '(This will replace the static image with animated dots and dashes)',
-      'default_value' => '0',
-      'choices' => [
-        '1' => 'Enabled',
-        '0' => 'Disabled (default)'
       ],
       // 'return_format' => 'id',
       'wrapper' => array (
@@ -120,9 +93,9 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Hero: Elaborated',
-    'name' => 'module__hero-a',
-    'key' => 'group_module_hero-a',
+    'title' => 'Module - Hero: Featured with video',
+    'name' => 'module__hero-f',
+    'key' => 'group_module_hero-f',
     'fields' => $fields,
     'location' => [
         [

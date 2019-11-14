@@ -821,6 +821,18 @@ $fields = [
       'Center' => 'Center'
     ],
   ]),
+  // Eyebrow
+  acf_text([
+    'label' => 'Eyebrow',
+    'name' => 'content-image-block__block-eyebrow',
+    'key' => 'field_content-image-block_block-eyebrow',
+    'instructions' => 'Recommended character count max: 42',
+    'required' => 0,
+    'maxlength' => '',
+    'wrapper' => array(
+      'width' => '50',
+    ),
+  ]),
   // Headline
   acf_text([
     'label' => 'Headline',
@@ -830,7 +842,7 @@ $fields = [
     'required' => 0,
     'maxlength' => '',
     'wrapper' => array (
-      'width' => '50',
+      'width' => '75',
     ),
   ]),
   // Body Copy

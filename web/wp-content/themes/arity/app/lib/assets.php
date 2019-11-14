@@ -58,9 +58,11 @@ add_action('wp_enqueue_scripts', __namespace__ . '\\register_stylesheets');
 function register_vendor_scripts()
 {
     wp_register_script('ScrollMagic-tweenMax', '//cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js', null, null, true);
-    wp_register_script('ScrollMagic', '//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js', null, null, true);
-    wp_register_script('ScrollMagic-animation', '//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js', null, null, true);
-}
+    wp_register_script('ScrollMagic', '//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js', null, null, true);
+    wp_register_script('ScrollMagic-animation', '//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js', null, null, true);
+    wp_register_script('ScrollMagic-indicators', '//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.js', null, null, true);
+    wp_register_script('bodymovin-js', '//cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.7/lottie.min.js', array(), null, true);
+  }
 add_action('wp_enqueue_scripts', __namespace__ . '\\register_vendor_scripts');
 
 /**
@@ -83,7 +85,7 @@ function register_scripts()
         $arity = "https://localhost:3000/js/arity.js";
     }
 
-    wp_enqueue_script('arity', $arity, array( 'jquery', 'ScrollMagic-tweenMax', 'ScrollMagic', 'ScrollMagic-animation' ), $arity_version, true);
+    wp_enqueue_script('arity', $arity, array( 'jquery', 'ScrollMagic-tweenMax', 'ScrollMagic', 'ScrollMagic-animation', 'ScrollMagic-indicators', 'bodymovin-js' ), $arity_version, true);
     wp_enqueue_script('lazysizes', asset_path('js/lazysizes.js'), '4.0.1', true);
     wp_enqueue_script('main', asset_path('js/main.js'), array( 'jquery', 'arity' ), config('version'), true);
 }

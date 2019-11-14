@@ -124,7 +124,7 @@ namespace App\Theme;
                   <a class="<?= $a_classes;?>" href="<?= $cta['group']['link']['url']; ?>"<?php if (!empty($cta['group']['link']['target'])) : ?> target="<?= $cta['group']['link']['target']; ?>"<?php endif; ?>>
                     <?php if($cta['group']['icon'] !='none') : ?>
                       <span class="<?= $c_classes;?>">
-                        <svg class="icon-svg" title="" role="img">
+                        <svg class="icon-svg <?=$cta['group']['icon'];?>" title="" role="img">
                             <use xlink:href="#<?= $cta['group']['icon']; ?>"></use>
                         </svg>
                       </span>

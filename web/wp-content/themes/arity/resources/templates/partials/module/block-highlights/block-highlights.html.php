@@ -5,9 +5,14 @@ namespace App\Theme;
   Template Name:      Block Highlights
   Template Type:      Module
   Description:        List of highlights
-  Last Updated:       4/20/2018
-  Since:              1.8.0
+  Last Updated:       10/24/2019
+  Since:              2.3.1
 */
+
+// echo '<pre>' . PHP_EOL;
+// var_dump($data);
+// echo '</pre>' . PHP_EOL;
+// echo '<br>' . PHP_EOL;
 
 ?>
 <div <?php module_class($data['classes']); ?> >
@@ -75,11 +80,13 @@ namespace App\Theme;
             $classes = "col-md-6";
             break;
         }
+        $alignment = $data['block-alignment'] == 'left-align' ? ' ' . $data['block-alignment'] : '';
+        $classes .= $alignment;
       ?>
       <?php foreach ($data['highlight-block'] as $block) : ?>
         <?php $block['component__highlight-block']['highlight-block__classes'] = $data['highlights-classes']; ?>
-        <?php $count++;?>
-        <div class="block-highlights__col anim-ready anim-block-<?php echo $count; ?> <?php echo $classes; ?>">
+        <?php $count++; ?>
+        <div class="block-highlights__col anim-ready anim-block-<?=$count;?> <?=$classes;?>">
           <?php the_partial($block); ?>
         </div>
       <?php endforeach; ?>

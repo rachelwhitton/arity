@@ -65,6 +65,18 @@ $last_nav_item->post_slug = sanitize_title($last_nav_item->title);
   COUNTING MENU ITEMS WHEN EDITING THE MENUS
 
   $nav_items:
+  0 => Platform
+  1 => Solutions
+  2 => Insurance
+  3 => Shared Mobility
+  4 => See All Insurance
+  5 => Company
+  6 => About us
+  7 => Join the team
+  8 => Blog
+  9 => Get In Touch
+
+  OLD $nav_items:
   0 => Industries
   1 => Insurance
   2 => Shared Mobility
@@ -82,24 +94,26 @@ $last_nav_item->post_slug = sanitize_title($last_nav_item->title);
   ******************************************
   -->
 
-  <div class="dropmenu" data-menu-item="industries" tabindex="-1" aria-hidden="true">
+  <div class="dropmenu" data-menu-item="solutions" tabindex="-1" aria-hidden="true">
     <div class="dropmenu__container">
       <div class="dropmenu__arrow"></div>
       <div class="dropmenu__wrap">
-        <div class="dropmenu__primary" style="display:none">
-          <a href="<?= $nav_items[0]->url; ?>" title="Learn more about <?= $nav_items[0]->title; ?>" tabindex="-1" aria-label="<?= $nav_items[0]->title; ?>">
-            <?php if(!empty($nav_items[0]->description)) : ?><p><?= $nav_items[0]->description; ?></p><?php endif; ?>
+        <div class="dropmenu__primary" style="display: none;">
+          <a href="<?= $nav_items[1]->url; ?>" title="Learn more about <?= $nav_items[1]->title; ?>" tabindex="-1" aria-label="<?= $nav_items[1]->title; ?>">
+            <?php if(!empty($nav_items[1]->description)) : ?><p><?= $nav_items[1]->description; ?></p><?php endif; ?>
             <p>
               <span class="button">
-                <span class="button__label">View all <?= strtolower($nav_items[0]->title); ?></span>
+                <span class="button__label">See all <?=strtolower($nav_items[2]->title);?></span>
                 <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#caret"></use></svg>
               </span>
             </p>
           </a>
         </div>
         <div class="dropmenu__secondary">
-          <?php foreach ($nav_items as $nav_item) : ?>
-            <?php if($nav_item->menu_item_parent != $nav_items[0]->ID) { continue; } ?>
+          <div class="eyebrow">Industries</div>
+
+        <?php foreach ($nav_items as $nav_item) : ?>
+            <?php if($nav_item->menu_item_parent != $nav_items[1]->ID) { continue; } ?>
             <div class="dropmenu__item">
               <a href="<?= $nav_item->url; ?>" title="Learn more about <?= $nav_item->title; ?>" tabindex="-1" aria-label="<?= $nav_item->title; ?>">
                 <h2><?= $nav_item->title; ?> <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#caret"></use></svg></h2>
@@ -116,11 +130,11 @@ $last_nav_item->post_slug = sanitize_title($last_nav_item->title);
       <div class="dropmenu__arrow"></div>
       <div class="dropmenu__wrap">
         <div class="dropmenu__primary" style="display:none">
-          <a href="<?= $nav_items[2]->url; ?>" title="Learn more about <?= $nav_items[2]->title; ?>" tabindex="-1" aria-label="<?= $nav_items[2]->title; ?>">
-            <?php if(!empty($nav_items[2]->description)) : ?><p><?= $nav_items[2]->description; ?></p><?php endif; ?>
+          <a href="<?= $nav_items[6]->url; ?>" title="Learn more about <?= $nav_items[5]->title; ?>" tabindex="-1" aria-label="<?= $nav_items[5]->title; ?>">
+            <?php if(!empty($nav_items[5]->description)) : ?><p><?= $nav_items[5]->description; ?></p><?php endif; ?>
             <p>
               <span class="button">
-                <span class="button__label">View all <?= strtolower($nav_items[2]->title); ?></span>
+                <span class="button__label">View all <?= strtolower($nav_items[5]->title); ?></span>
                 <svg class="icon-svg" title="" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#caret"></use></svg>
               </span>
             </p>

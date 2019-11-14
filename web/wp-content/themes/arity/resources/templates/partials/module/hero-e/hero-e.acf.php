@@ -6,13 +6,13 @@ $fields = [
 
     acf_tab([
       'label' => 'Content',
-      'name' => 'hero-a__content_tab',
+      'name' => 'hero-e__content_tab',
     ]),
 
     // Headline
     acf_text([
       'label' => 'Headline',
-      'name' => 'hero-a__headline',
+      'name' => 'hero-e__headline',
       'key' => 'field_headline',
       'instructions' => 'Recommended character count max: 100 <br/>(For homepage: limit characters to 60)',
       'required' => 1,
@@ -25,7 +25,7 @@ $fields = [
     // Image
     acf_image([
       'label' => 'Image',
-      'name' => 'hero-a__image_id',
+      'name' => 'hero-e__image_id',
       'key' => 'field_image',
       'return_format' => 'id',
       'instructions' => 'Suggested image size: 890 x 890 px<br/>(For homepage: suggested Image size: 940 x 600 px<br/>Note: The copy will determine where the image is cut off. Make the image shorter or taller to achieve different effects.)',
@@ -35,37 +35,11 @@ $fields = [
         'width' => '50',
       )
     ]),
-    // Background video
-    acf_file([
-      'label' => 'Background Video',
-      'name' => 'hero-a__background-video',
-      'key' => 'field_hero-a_background-video',
-      'instructions' => 'Videos should be short seamless sequences, 12:7 aspect ratio or close, accommodate title and subtitle overlay visibility, and have at least 1200x700 resolution. Optimize files to keep download sizes as small as possible',
-      'required' => 0,
-      'return_format' => 'url',
-      'library' => 'all',
-      'mime_types' => 'mp4,ogg,webm',
-      'wrapper' => array(
-        'width' => '100'
-      ),
-    ]),
-    // Background video backup image
-    acf_image([
-      'label' => 'Background Video Backup Image',
-      'name' => 'hero-a__bg-video-backup-image',
-      'key' => 'field_hero-a_bg-video-backup-image',
-      'return_format' => 'url',
-      'instructions' => 'Image dimensions should be the same as the native dimensions of the background video',
-      'required' => 0,
-      'preview_size'  => 'thumbnail',
-      'wrapper' => array (
-        'width' => '100',
-      )
-    ]),
+
     // Body Copy
     acf_textarea([
       'label' => 'Body Copy',
-      'name' => 'hero-a__body_copy',
+      'name' => 'hero-e__body_copy',
     'instructions' => 'Recommended character count max: 280',
       'required' => 1,
       'new_lines' => 'wpautop'
@@ -74,7 +48,18 @@ $fields = [
     // CTA
     acf_link([
       'label' => 'CTA Button',
-      'name' => 'hero-a__cta',
+      'name' => 'hero-e__cta',
+      'instructions' => 'Recommended character count max: 30',
+      'required' => 0,
+      'maxlength' => '',
+      'wrapper' => array (
+        'width' => '50',
+      ),
+    ]),
+
+    acf_link([
+      'label' => 'CTA Button 2',
+      'name' => 'hero-e__cta-2',
       'instructions' => 'Recommended character count max: 30',
       'required' => 0,
       'maxlength' => '',
@@ -85,12 +70,12 @@ $fields = [
 
     acf_tab([
       'label' => 'Options',
-      'name' => 'hero-a__options_tab',
+      'name' => 'hero-e__options_tab',
     ]),
 
     acf_radio([
       'label' => 'Textured Dot Background',
-      'name' => 'hero-a__dotted',
+      'name' => 'hero-e__dotted',
       'instructions' => '(Does not apply to homepage or when no image is selected)',
       'choices' => [
         '1' => 'Enabled (default)',
@@ -104,7 +89,7 @@ $fields = [
 
     acf_radio([
       'label' => 'Animation (Homepage only)',
-      'name' => 'hero-a__animation',
+      'name' => 'hero-e__animation',
       'instructions' => '(This will replace the static image with animated dots and dashes)',
       'default_value' => '0',
       'choices' => [
@@ -120,9 +105,9 @@ $fields = [
 
 // ACF Field Group
 acf_field_group([
-    'title' => 'Module - Hero: Elaborated',
-    'name' => 'module__hero-a',
-    'key' => 'group_module_hero-a',
+    'title' => 'Module - Hero: Elaborated: Half-half with CTAs',
+    'name' => 'module__hero-e',
+    'key' => 'group_module_hero-e',
     'fields' => $fields,
     'location' => [
         [
