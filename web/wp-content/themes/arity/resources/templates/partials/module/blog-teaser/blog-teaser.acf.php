@@ -43,6 +43,15 @@ $fields = [
       'return_format' => 'id',
       'multiple' => 0,      
     ]),
+    // Select blog custom taxonomies
+    acf_taxonomy([
+      'label' => 'Industry categories',
+      'name' => 'blog-teaser__industry-categories',
+      'key' => 'field_blog-teaser_industry-categories',
+      'instructions' => 'Select an industry category to further filter the most recent posts returned by this module.',
+      'taxonomy' => 'industries',
+      'field_type' => 'checkbox',
+    ]),
     // Headline
     // acf_message([
     //    'label' => '',//'Three Blog Promos',
