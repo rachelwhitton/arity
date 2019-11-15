@@ -31,7 +31,7 @@ namespace App\Theme;
 
     <div class="row">
       <?php
-        if (empty($data['categories']) && empty($data['industries'])) {
+        if (empty($data['industries'])) {
           $page = get_page_by_path("move");
           $feature_id = 0;
           $args = array(
@@ -48,28 +48,22 @@ namespace App\Theme;
               'post__not_in' => array($feature_id)
             );
 
-            $data['featured']=true;
+            $data['featured'] = true;
             component('teaser-blog-card', $data);
           }
         } else {
           $args = array(
             'posts_per_page' => 3,
             'tax_query' => array(
-              'relation' => 'AND',
-              array(
-                'taxonomy'  => 'category',
-                'field' => 'term_id',
-                'terms' => $data['categories'],
-              ),
               array(
                 'taxonomy' => 'industry',
                 'field' => 'term_id',
                 'terms' => $data['industries'],
+                'operator' => 'AND',
               ),
             ),
           );
         }
-        // 'category__and' => $data['categories'],
       ?>
 
       <?php
