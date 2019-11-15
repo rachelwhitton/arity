@@ -31,7 +31,7 @@ namespace App\Theme;
 
     <div class="row">
       <?php
-        if (empty($data['categories'])) {
+        if (empty($data['categories']) && empty($data['industries'])) {
           $page = get_page_by_path("move");
           $feature_id = 0;
           $args = array(
@@ -54,9 +54,22 @@ namespace App\Theme;
         } else {
           $args = array(
             'posts_per_page' => 3,
-            'category__and' => $data['categories'],
+            'tax_query' => array(
+              'relation' => 'AND',
+              array(
+                'taxonomy'  => 'category',
+                'field' => 'term_id',
+                'terms' => $data['categories'],
+              ),
+              array(
+                'taxonomy' => 'industry',
+                'field' => 'term_id',
+                'terms' => $data['industries'],
+              ),
+            ),
           );
         }
+        // 'category__and' => $data['categories'],
       ?>
 
       <?php
