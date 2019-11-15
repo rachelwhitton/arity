@@ -9386,10 +9386,6 @@ form .form-control ::-webkit-input-placeholder {
   color: #63727e;
 }
 
-form .form-control ::-moz-placeholder {
-  color: #63727e;
-}
-
 form .form-control ::-ms-input-placeholder {
   color: #63727e;
 }

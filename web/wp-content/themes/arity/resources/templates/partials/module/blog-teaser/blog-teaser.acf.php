@@ -29,28 +29,48 @@ $fields = [
         'width' => '50',
       ),
     ]),
-    // Select blog categories
+    // Headline
+    acf_message([
+      'label' => 'Taxonomy Selector',
+      'name' => 'blog-teaser__message',
+      'instructions' => '',
+      'message' => 'By default, this module dynamically returns one featured, and the two most recent, blog posts. Select industries below to filter the generated posts.',
+      'wrapper' => array (
+        'width' => '100',
+      ),
+    ]),
+    // Select blog industries
     acf_taxonomy([
-      'label' => 'Blog post categories',
-      'name' => 'blog-teaser__categories',
-      'key' => 'field_blog-teaser_categories',
-      'instructions' => 'This module returns the three most recent posts in a selected category. Selecting more than one category returns posts that are tagged with all of the selected categories. If no categories are selected, this module dynamically returns one featured, and the two most recent, blog posts.',
-      'taxonomy' => 'category',
+      'label' => 'Industries',
+      'name' => 'blog-teaser__industries',
+      'key' => 'field_blog-teaser_industries',
+      'instructions' => 'Select industries to filter the most recent posts returned by this module. Selecting more than one industry returns posts tagged with all selected industries. Filtering will not occur if no industries are selected.',
+      'taxonomy' => 'industry',
       'field_type' => 'checkbox',
       'allow_null' => 1,
       'save_terms' => 0,
       'load_terms' => 0,
       'return_format' => 'id',
-      'multiple' => 0,      
+      'multiple' => 0,
+      'wrapper' => array(
+        'width' => '100',
+      ),
     ]),
-    // Headline
-    // acf_message([
-    //    'label' => '',//'Three Blog Promos',
-    //   'name' => 'blog-teaser__message',
-    //   'instructions' => 'By default, this module dynamically generates two most recent, and one featured blog post.',
-    //   'message' => '',
-    //   'wrapper' => array (
-    //     'width' => '33',
+    // Select blog categories
+    // acf_taxonomy([
+    //   'label' => 'Categories',
+    //   'name' => 'blog-teaser__categories',
+    //   'key' => 'field_blog-teaser_categories',
+    //   'instructions' => 'Selecting a category further filters the most recent posts returned by the module. Selecting more than one category returns posts that are tagged with all of the selected categories.',
+    //   'taxonomy' => 'category',
+    //   'field_type' => 'checkbox',
+    //   'allow_null' => 1,
+    //   'save_terms' => 0,
+    //   'load_terms' => 0,
+    //   'return_format' => 'id',
+    //   'multiple' => 0,
+    //   'wrapper' => array(
+    //     'width' => '50',
     //   ),
     // ]),
     // Content
