@@ -83,6 +83,6 @@
     "dependencies": {
         "gulp-header": "^2.0.1",
         "jquery": "3.2.1",
-        "lazysizes": "^4.0.1"
+        "lazysizes": "^5.2.1"
     }
 }
