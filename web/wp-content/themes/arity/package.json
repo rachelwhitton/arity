@@ -70,7 +70,7 @@
         "gulp-uglify": "~2.0.1",
         "gulp-util": "~3.0.8",
         "imagemin-pngquant": "~5.0.0",
-        "merge": "^1.2.0",
+        "merge": "^2.1.1",
         "merge-deep": "^3.0.0",
         "merge-stream": "~1.0.1",
         "prettyjson": "^1.2.1",
