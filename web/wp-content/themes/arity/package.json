@@ -71,7 +71,7 @@
         "gulp-util": "~3.0.8",
         "imagemin-pngquant": "~5.0.0",
         "merge": "^1.2.0",
-        "merge-deep": "^3.0.0",
+        "merge-deep": "^3.0.3",
         "merge-stream": "~1.0.1",
         "prettyjson": "^1.2.1",
         "psi": "^3.0.0",
